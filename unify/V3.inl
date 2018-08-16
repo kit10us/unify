@@ -375,7 +375,20 @@ V3< T > V3< T >::V3Inverse( const V3< T > & in )
 }
 
 template< typename T >
-T V3< T >::V3Dot( const V3< T > & l, const V3< T > &  r )
+V3< T > V3< T >::V3RotateAbout(V3< T > position, float distance, unify::Angle rotation, V3< T > pivot )
 {
-	return l.Dot( r );
+	float rx = rotation.ToRadians() * pivot.x;
+	float ry = rotation.ToRadians() * pivot.y;
+	float rz = rotation.ToRadians() * pivot.z;
+
+	float rotationMatrix[9] = 
+	{ 
+		 cos( ry ) *  cos( rz ), -cos( rx ) *  sin( rz ) +  sin( rx ) *  sin( ry ) *  cos( rz ),   sin( rx ) *  sin( rx ) +  cos( rz ) *  sin( ry ) * sin( rz ),
+		 cos( ry ) *  sin( rz ),  cos( rx ) *  cos( rz ) +  sin( rx ) *  sin( ry ) *  sin( rz ),  -sin( rx ) *  cos( rz ) +  cos( rz ) +  sin( rx ) * sin( ry ), 
+		-sin( ry ),               sin( rx ) *  cos( ry ),                                           cos( rx ) *  cos( ry ) 
+	};
+
+	auto finalPosition = position + pivot * distance;
+	return finalPosition;
 }
+

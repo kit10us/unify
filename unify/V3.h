@@ -86,7 +86,7 @@ namespace unify
         static V3< T > V3Z( T z );
 		static V3< T > V3Normalized( const V3< T > & in );
 		static V3< T > V3Inverse( const V3< T > & v3 );
-		static T V3Dot( const V3< T > & l, const V3< T > &  r );
+		static V3< T > V3RotateAbout( V3< T > position, float distance, unify::Angle rotation, V3< T > pivot );
 	};
 	#include <unify/V3.inl>
 }

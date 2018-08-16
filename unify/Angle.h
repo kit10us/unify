@@ -19,6 +19,7 @@ namespace unify
 		friend Angle AnglePI();
 		friend Angle AnglePI2();
 		friend Angle AnglePIHalf();
+		friend Angle AngleZero();
 		
 		float m_radians;
         Angle( float radians );
@@ -63,7 +64,7 @@ namespace unify
 		/// Ensures our value is within 360 degrees, without loss of precision (if we are 367, then we become 7, etc.).
 		/// Returns the change in magnitude relative to 360 (367 returns 1, -728 returns -2, etc.).
         ///</summary>
-        int Fix360();
+        int Normalize();
 
 		/// <summary>
 		/// Returns the sine of this angle.
@@ -83,4 +84,5 @@ namespace unify
 	Angle AnglePI();
 	Angle AnglePI2();
 	Angle AnglePIHalf();
+	Angle AngleZero();
 }

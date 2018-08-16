@@ -34,6 +34,11 @@ Angle unify::AnglePIHalf()
 	return AngleInRadians( 3.14159265f * 0.5f );
 }
 
+Angle unify::AngleZero()
+{
+	return AngleInRadians( 0.0f );
+}
+
 
 Angle::Angle( float radians )
 : m_radians( radians )
@@ -128,6 +133,11 @@ bool Angle::operator == ( const Angle & angle ) const
     return m_radians == angle.m_radians;
 }
 
+bool Angle::operator != (const Angle & angle) const
+{
+	return !(*this == angle);
+}
+
 Angle & Angle::operator *= ( float scalar )
 {
     m_radians *= scalar;
@@ -184,7 +194,7 @@ float Angle::ToDegrees() const
     return m_radians * (180.0f / 3.14159265f);
 }
 
-int Angle::Fix360()
+int Angle::Normalize()
 {
     const float pi2 = (3.14159265f * 2.0f);
 	int magnitude = 0;
@@ -226,3 +236,4 @@ std::string Angle::ToString( bool radians ) const
 	}
 	return out;
 }
+
