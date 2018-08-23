@@ -5,6 +5,7 @@
 
 #include <unify/Unify.h>
 #include <unify/Path.h>
+#include <unify/TimeDelta.h>
 #include <string>
 #include <typeinfo>
 #include <cassert>
@@ -33,6 +34,7 @@ namespace unify
 	template<> std::string Cast( const short in );
 	template<> std::string Cast( const unsigned long in );
 	template<> std::string Cast( const long in );
+	template<> std::string Cast( const TimeDelta in );
 
 	// From std::string to X...
 	template<> bool Cast( const std::string text );

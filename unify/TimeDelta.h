@@ -11,6 +11,8 @@ namespace unify
 
     class TimeDelta
     {
+	public:
+		friend TimeDelta TimeDeltaInMicros( float micros );
 		friend TimeDelta TimeDeltaInMS( float ms );
 		friend TimeDelta TimeDeltaInSeconds( float seconds );
 		friend TimeDelta TimeDeltaInMinutes( float seconds );
@@ -20,11 +22,13 @@ namespace unify
 		friend TimeDelta TimeDeltaInYears( float years );
 		friend TimeDelta TimeDeltaZero();
 		friend TimeDelta TimeDeltaOne();
-
 		
 		TimeDelta( float ms );
-    public:
 
+    public:
+		TimeDelta();
+
+		float GetMicros() const;
         float GetMS() const;
         float GetSeconds() const;
 		float GetMinutes() const;
@@ -35,13 +39,21 @@ namespace unify
 
 		TimeDelta operator+( TimeDelta delta ) const;
 		TimeDelta operator-( TimeDelta delta ) const;
-		TimeDelta & operator+=( TimeDelta );
-		TimeDelta & operator-=( TimeDelta );
+		float operator/( TimeDelta delta ) const;
+		TimeDelta & operator+=( TimeDelta delta );
+		TimeDelta & operator-=( TimeDelta delta );
 
 		TimeDelta operator * ( float times ) const;
 		TimeDelta operator / ( float times ) const;
 		TimeDelta & operator *= ( float times );
 		TimeDelta & operator /= ( float times );
+
+		bool operator == ( TimeDelta delta ) const;
+		bool operator != ( TimeDelta delta ) const;
+		bool operator > ( TimeDelta delta ) const;
+		bool operator < ( TimeDelta delta ) const;
+		bool operator >= ( TimeDelta delta ) const;
+		bool operator <= ( TimeDelta delta ) const;
 
 	private:
 		float m_ms;

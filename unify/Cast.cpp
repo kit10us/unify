@@ -95,6 +95,13 @@ std::string unify::Cast( const long in )
 	return std::string( _cast_buffer );
 }
 
+template<>
+std::string unify::Cast( const TimeDelta in )
+{
+	sprintf_s( _cast_buffer, 30, "%f", in.GetMS() );
+	return std::string( _cast_buffer );
+}
+
 template<> 
 bool unify::Cast( const std::string text )
 {
