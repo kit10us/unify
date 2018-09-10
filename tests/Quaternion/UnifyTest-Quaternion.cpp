@@ -1,3 +1,6 @@
+// Copyright (c) 2002 - 2018, Evil Quail LLC
+// All Rights Reserved
+
 #include <unify/Quaternion.h>
 #include <unify/Matrix.h>
 #include <iostream>
@@ -30,8 +33,7 @@ int main( int argc, char ** argv )
 	cout << "\nQuaternion tests passed!\n";
 	cout << "Press any key to finish...\n";
 
-	cout << std::endl << std::endl;
-	while ( !_getch() );
+	std::cin.ignore();
 
 	return 0;
 }

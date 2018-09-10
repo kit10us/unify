@@ -1,123 +1,128 @@
+// Copyright (c) 2002 - 2018, Evil Quail LLC
+// All Rights Reserved
+
 #include <unify/Path.h>
 #include <iostream>
 #include <conio.h>
 #include <string>
 #include <fstream>
 
-int main( const int argc, const char ** argv )
+int main( int argc, char ** argv )
 {
-	std::string tempString;
+	using namespace std;
+
+	string tempString;
 	unify::Path tempPath;
 	bool testBool;
 
-	std::cout << "Begin Unify File Tests:" << std::endl;
+	cout << "Begin Unify File Tests:" << endl;
 	
-	std::cout << "Test case: file::ToString...:" << std::endl;
+	cout << "Test case: file::ToString...:" << endl;
 	const unify::Path path( "c:\\directory\\sub_directory\\file_name.ext" );
-	std::cout << "result: \"" << path.ToString() << "\"." << std::endl << std::endl;
+	cout << "result: \"" << path.ToString() << "\"." << endl << endl;
 
-	std::cout << "Test case: ostream operator<<(Path)...:" << std::endl;
-	std::cout << "result: \"" << path << "\"." << std::endl << std::endl;
+	cout << "Test case: ostream operator<<(Path)...:" << endl;
+	cout << "result: \"" << path << "\"." << endl << endl;
 
-	std::cout << "Test case: file::ExtensionOnly( \"" << path << "\" )" << std::endl;
+	cout << "Test case: file::ExtensionOnly( \"" << path << "\" )" << endl;
 	tempString = path.ExtensionOnly();
-	std::cout << "result: \"" << tempString << "\"." << std::endl << std::endl;
+	cout << "result: \"" << tempString << "\"." << endl << endl;
 
-	std::cout << "Test case: file::ExtensionOnly( \"c:\\directory\\sub_directory\\\" )" << std::endl;
+	cout << "Test case: file::ExtensionOnly( \"c:\\directory\\sub_directory\\\" )" << endl;
 	tempString = unify::Path( "c:\\directory\\sub_directory\\" ).ExtensionOnly();
-	std::cout << "result: \"" << tempString << "\"." << std::endl << std::endl;
+	cout << "result: \"" << tempString << "\"." << endl << endl;
 
-	std::cout << "Test case: file::DirectoryOnly( \"" << path << "\" )" << std::endl;
+	cout << "Test case: file::DirectoryOnly( \"" << path << "\" )" << endl;
 	tempPath = path.DirectoryOnly();
-	std::cout << "result: \"" << tempPath << "\"." << std::endl << std::endl;
+	cout << "result: \"" << tempPath << "\"." << endl << endl;
 
-	std::cout << "Test case: file::Filename( \"" << path << "\" )" << std::endl;
+	cout << "Test case: file::Filename( \"" << path << "\" )" << endl;
 	tempPath = unify::Path( path.Filename() );
-	std::cout << "result: \"" << tempPath << "\"." << std::endl << std::endl;
+	cout << "result: \"" << tempPath << "\"." << endl << endl;
 
-	std::cout << "Test case: file::FilenameNoExtension - 1. Full path." << std::endl;
+	cout << "Test case: file::FilenameNoExtension - 1. Full path." << endl;
 	tempPath = unify::Path(  path.FilenameNoExtension() );
-	std::cout << "result: \"" << tempPath << "\"." << std::endl << std::endl;
+	cout << "result: \"" << tempPath << "\"." << endl << endl;
 
-	std::cout << "Test case: file::Combine - 1. Complete L (without ending slash) and R (with leading slash)." << std::endl;
+	cout << "Test case: file::Combine - 1. Complete L (without ending slash) and R (with leading slash)." << endl;
 	tempPath.Combine( unify::Path( "c:\\directory\\subdirectory" ) , unify::Path( "/file_name.ext" ) );
-	std::cout << "result: \"" << tempPath << "\"." << std::endl << std::endl;
+	cout << "result: \"" << tempPath << "\"." << endl << endl;
 
-	std::cout << "Test case: file::Combine - 2. Complete L (with ending slash) and R (with leading slash)." << std::endl;
+	cout << "Test case: file::Combine - 2. Complete L (with ending slash) and R (with leading slash)." << endl;
 	tempPath.Combine( unify::Path( "c:\\directory\\subdirectory\\" ) , unify::Path( "/file_name.ext" ) );
-	std::cout << "result: \"" << tempPath << "\"." << std::endl << std::endl;
+	cout << "result: \"" << tempPath << "\"." << endl << endl;
 
-	std::cout << "Test case: file::Combine - 3. Complete L (without ending slash) and R (without leading slash)." << std::endl;
+	cout << "Test case: file::Combine - 3. Complete L (without ending slash) and R (without leading slash)." << endl;
 	tempPath.Combine( unify::Path( "c:\\directory\\subdirectory" ), unify::Path( "file_name.ext" ) );
-	std::cout << "result: \"" << tempPath << "\"." << std::endl << std::endl;
+	cout << "result: \"" << tempPath << "\"." << endl << endl;
 
 	const unify::Path pathInputA( "c:\\directory\\subdirectory/..\\test\\file_name.ext" );
-	std::cout << "Test case: file::Split( \"" << pathInputA << "\" )" << std::endl;
-	std::vector< std::string > partsOutput = pathInputA.Split();
-	std::cout << "results: ";
+	cout << "Test case: file::Split( \"" << pathInputA << "\" )" << endl;
+	vector< string > partsOutput = pathInputA.Split();
+	cout << "results: ";
 	//for ( const auto itr = partsOutput.begin(), end = partsOutput.end(); itr != end; ++itr )
 	for( const auto i : pathInputA.Split() )
 	{
-		std::cout << "[" << i << "]";
+		cout << "[" << i << "]";
 	}
-	std::cout << std::endl << std::endl;
+	cout << endl << endl;
 
-	std::cout << "Test case: file::Join( file::Split( \"" << pathInputA << "\" ) )" << std::endl;
-	std::cout << "result: \"" << unify::Path( partsOutput ) << std::endl << std::endl;
+	cout << "Test case: file::Join( file::Split( \"" << pathInputA << "\" ) )" << endl;
+	cout << "result: \"" << unify::Path( partsOutput ) << endl << endl;
 
-	std::cout << "Test case: file::Normalize( \"" << pathInputA << "\" )" << std::endl;
-	std::cout << "result: \"" << unify::Path( pathInputA ).Normalize() << std::endl << std::endl;
+	cout << "Test case: file::Normalize( \"" << pathInputA << "\" )" << endl;
+	cout << "result: \"" << unify::Path( pathInputA ).Normalize() << endl << endl;
 
-	std::cout << "Test case: file::Combine( \"c:\\directory\\subdirectory\", \"..\\test\\file_name.ext\" )" << std::endl;
+	cout << "Test case: file::Combine( \"c:\\directory\\subdirectory\", \"..\\test\\file_name.ext\" )" << endl;
 	tempPath.Combine( unify::Path( "c:\\directory\\subdirectory" ) , unify::Path( "..\\test\\file_name.ext" ) );
-	std::cout << "result: \"" << tempPath << "\"." << std::endl << std::endl;
+	cout << "result: \"" << tempPath << "\"." << endl << endl;
 
-	std::cout << "Test case: file::IsExtension - 1. Path has extension, ext has no dot (.)." << std::endl;
+	cout << "Test case: file::IsExtension - 1. Path has extension, ext has no dot (.)." << endl;
 	testBool = path.IsExtension( "ext" );
-	std::cout << "result: " << ( testBool ? "true" : "false" ) << "." << std::endl << std::endl;
+	cout << "result: " << ( testBool ? "true" : "false" ) << "." << endl << endl;
 
-	std::cout << "Test case: file::IsExtension - 2. Path has extension, ext has dot(.)." << std::endl;
+	cout << "Test case: file::IsExtension - 2. Path has extension, ext has dot(.)." << endl;
 	testBool = path.IsExtension( ".ext" );
-	std::cout << "result: " << ( testBool ? "true" : "false" ) << "." << std::endl << std::endl;
+	cout << "result: " << ( testBool ? "true" : "false" ) << "." << endl << endl;
 
-	std::cout << "Test case: file::IsExtension - 1. Not match." << std::endl;
+	cout << "Test case: file::IsExtension - 1. Not match." << endl;
 	testBool = path.IsExtension( "etx" );
-	std::cout << "result: " << ( testBool ? "true" : "false" ) << "." << std::endl << std::endl;
+	cout << "result: " << ( testBool ? "true" : "false" ) << "." << endl << endl;
 
 	{
-		std::cout << "Test case: file::Exists." << std::endl;
+		cout << "Test case: file::Exists." << endl;
 
 		unify::Path file( "test.txt" );
-		std::ofstream stream;
+		ofstream stream;
 		stream.open( file.ToString() );
 		stream << "Hello, world!";
 		stream.close();
-		std::cout << "result: " << ( file.Exists() ? "pass" : "failed" ) << std::endl;
+		cout << "result: " << ( file.Exists() ? "pass" : "failed" ) << endl;
 		
-		std::cout << "Test case: file::Rename." << std::endl;
+		cout << "Test case: file::Rename." << endl;
 		unify::Path fileTo( "test_renamed.txt" );
 		if( ! unify::Path::Rename( file, fileTo ) || ! fileTo.Exists() )
 		{
-			std::cout << "  result: fail" << std::endl;
+			cout << "  result: fail" << endl;
 		}
 		else
 		{
-			std::cout << "  result: pass" << std::endl;
+			cout << "  result: pass" << endl;
 		}
 
-		std::cout << "Test case: file::Delete." << std::endl;
+		cout << "Test case: file::Delete." << endl;
 		if( !unify::Path::Delete( fileTo ) || fileTo.Exists() )
 		{
-			std::cout << "  result: fail" << std::endl;
+			cout << "  result: fail" << endl;
 		}
 		else
 		{
-			std::cout << "  result: pass" << std::endl;
+			cout << "  result: pass" << endl;
 		}
 
 	}
 
-	while( ! _getch() );
+	cin.ignore();
 
 	return 0;
 }

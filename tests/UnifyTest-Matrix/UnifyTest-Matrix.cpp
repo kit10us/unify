@@ -1,3 +1,6 @@
+// Copyright (c) 2002 - 2018, Evil Quail LLC
+// All Rights Reserved
+
 #include <unify/Matrix.h>
 #include <iostream>
 #include <conio.h>
@@ -5,8 +8,7 @@
 int main( int argc, char ** argv )
 {
 	using namespace unify;
-	using std::cout;
-	using std::endl;
+	using namespace std;
 
 	Matrix m( MatrixIdentity() );
 	assert( m.IsIdentity() );
@@ -55,8 +57,7 @@ int main( int argc, char ** argv )
 	cout << "\nMatrix tests passed!\n";
 	cout << "Press any key to finish...\n";
 
-	cout << std::endl << std::endl;
-	while( ! _getch() );
+	cin.ignore();
 
     return 0;
 }
