@@ -133,7 +133,6 @@ namespace unify
 	
 		Ray TransformRay( Ray ray ) const;
 		BBox< float > TransformBBox( BBox< float > bbox ) const;
-		BSphere< float > TransformBSphere( BSphere< float > bsphere ) const;
 
 		void RotateAboutAxis( const V3< float > & axis, Angle angle );
 

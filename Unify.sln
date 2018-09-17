@@ -8,16 +8,34 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B5BC9CEA-9C61-411A-B3D0-D8770E0DE5B5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnityTest-TimeDelta", "tests\UnityTest-TimeDelta\UnityTest-TimeDelta.vcxproj", "{BAB4ED4C-CE2D-472B-91E1-73C1A7046894}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AD285766-AD5F-4006-91AA-4919F27EF77B} = {AD285766-AD5F-4006-91AA-4919F27EF77B}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnifyTest-Any", "tests\UnifyTest-Any\UnifyTest-Any.vcxproj", "{FC9FA046-7306-4EB5-9847-B377A8AFBFFA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AD285766-AD5F-4006-91AA-4919F27EF77B} = {AD285766-AD5F-4006-91AA-4919F27EF77B}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnifyTest-General", "tests\UnifyTest-General\UnifyTest-General.vcxproj", "{334B3E02-C447-4B0D-8B60-6F95EE422565}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AD285766-AD5F-4006-91AA-4919F27EF77B} = {AD285766-AD5F-4006-91AA-4919F27EF77B}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnifyTest-Geometry", "tests\UnifyTest-Geometry\UnifyTest-Geometry.vcxproj", "{6C6921A7-3EE8-48FB-A9CF-F477AF566D20}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AD285766-AD5F-4006-91AA-4919F27EF77B} = {AD285766-AD5F-4006-91AA-4919F27EF77B}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnifyTest-String", "tests\UnifyTest-String\String.vcxproj", "{00668733-5A76-40D1-A681-FE427045FF66}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AD285766-AD5F-4006-91AA-4919F27EF77B} = {AD285766-AD5F-4006-91AA-4919F27EF77B}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnifyTest-Path", "tests\UnityTest-Path\UnityTest-Path.vcxproj", "{BFDFDDD1-219C-475A-A0C4-FCEC03D4AA2E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AD285766-AD5F-4006-91AA-4919F27EF77B} = {AD285766-AD5F-4006-91AA-4919F27EF77B}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

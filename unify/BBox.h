@@ -5,6 +5,7 @@
 
 #include <unify/Unify.h>
 #include <unify/V3.h>
+#include <unify/Size3.h>
 #include <unify/Ray.h>
 #include <unify/BSphere.h>
 
@@ -47,7 +48,14 @@ namespace unify
 		BBox< T > operator + ( const BBox< T > & bbox ) const;
 		BBox< T > & operator += ( const BBox< T > & bbox );
 
+		/// <summary>
+		/// Populates an array of vectors the vertices of the bounding box's corners.
+		/// </summary>
 		void GenerateCorners( V3< T > * bounds );
+
+		/// <summary>
+		/// Reduces the bounding box to empty/zeros.
+		/// </summary>
 		void Clear();
 
 		/// <summary>
@@ -55,19 +63,41 @@ namespace unify
 		/// </summary>
 		BBox & AddBBoxWithPosition( const BBox< T > & boundingBox, const V3< T > & position );  
 
+		/// <summary>
+		/// Ensure points are within the bounding box, else increase the bounding box to encompass them.
+		/// </summary>
 		void AddPoints( const unify::V3< T > * const points, size_t size );
 
+		/// <summary>
+		/// Test if a point is withing the bounding box.
+		/// </summary>
 		bool ContainsPoint( const V3< T > & point );
-		const V3< T > Size() const;
+		
+		/// <summary>
+		/// Returns the dimensions of the bounding box.
+		/// </summary>
+		const Size3< T > Size() const;
 
-        // Perform a hit test, return true if hit...
+		/// <summary>
+        /// Tests if a ray intersects with the bounding box.
+		/// </summary>
         bool Intersects( const Ray & ray, float t0, float t1 ) const;
         
-		// ... this version sets hitPoint to the first point of collision.
+		/// <summary>
+		/// Tests if a ray intersects with the bounding box.
+		/// Sets hitPoint to the first point of collision.
+		/// </summary>
         bool Intersects( const Ray & ray, V3< float > & hitPoint ) const;
 
+		/// <summary>
+		/// Tests if a ray intersects with the bounding box.
+		/// Sets distance to the distance from the ray to the bounding box.
+		/// </summary>		
 		bool Intersects( const Ray & ray, float & distance ) const;
 
+		/// <summary>
+		/// Tests if a ray intersects with the bounding box.
+		/// </summary>		
 		bool Intersects( const Ray & ray ) const;
 
 		/// <description>
@@ -75,10 +105,14 @@ namespace unify
 		/// </description>
 		V3< T > ToBarrycentric( const V3< T > & point ) const;
 
+		/// <summary>
+		/// Returns a bounding sphere that encompases the boundinh box.
+		/// </summary>		
 		BSphere< T > MakeBSphere() const;
 
 	private:
 		void Fix(); // Ensures our sup is superior and our inf, inferior.
 	};
+
 	#include <unify/BBox.inl>
 }

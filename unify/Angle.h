@@ -21,8 +21,8 @@ namespace unify
 		friend Angle AnglePIHalf();
 		friend Angle AngleZero();
 		
-		float m_radians;
         Angle( float radians );
+		float m_radians; // We store in radians, and convert what ever time delta format.
 
     public:
 
@@ -30,9 +30,7 @@ namespace unify
 		Angle( const Angle & angle );
 		Angle( std::string angle );
 
-		// binary operators
 		Angle & operator = ( const Angle & angle );
-
 		Angle & operator += ( const Angle & angle );
 		Angle & operator -= ( const Angle & angle );
 		Angle & operator *= ( const Angle & angle );
@@ -57,7 +55,14 @@ namespace unify
 		bool operator < ( const Angle & angle );
 		bool operator <= ( const Angle & angle );
 
+		/// <summary>
+		/// Returns angle in radians.
+		/// </summary>
 		float ToRadians() const;
+
+		/// <summary>
+		/// Returns angle in degress.
+		/// </summary>
         float ToDegrees() const;
 
 		///<summary>
@@ -76,6 +81,8 @@ namespace unify
 		/// </summary>
 		float CosOf() const;
 
+		/// <summary>
+		/// Convert from radians to a string.
 		std::string ToString( bool radians = true ) const;
     };
 

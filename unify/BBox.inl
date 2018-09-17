@@ -142,7 +142,7 @@ void BBox< T >::AddPoints( const unify::V3< T > * const points, size_t size )
 }
 
 template< typename T >
-const V3< T > BBox< T >::Size() const
+const Size3< T > BBox< T >::Size() const
 {
 	return V3< T >( sup - inf );
 }

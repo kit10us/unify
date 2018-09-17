@@ -11,25 +11,45 @@
 
 namespace unify
 {
-	// An accumilated radius (from center).
+	/// <summary>
+	/// A sphere used to track a volume, typically of an object.
+	/// </summary>
 	template< typename T = float >
 	class BSphere
 	{
+		float m_radius;
+		float m_center;
 	public:
 		BSphere();
 		BSphere( V3< T > center );
 		BSphere( V3< T > center, T radius );
 
-		V3< T > center;
-		T radius;
-
-		V3< T > GetCenter() const;
-		T GetRadius() const;
-
 		BSphere & operator+=( const BSphere< T > & sphere );
 		BSphere & operator+=( V3< T > point );
 
+		/// <summary>
+		/// Returns the center of the bounding sphere.
+		/// </summary>
+		V3< T > GetCenter() const;
+
+		/// <summary>
+		/// Retruns the radius of the sphere.
+		/// </summary>
+		T GetRadius() const;
+
+		/// <summary>
+		/// Retruns the diameter of the sphere.
+		/// </summary>
+		T GetDiameter() const;
+
+		/// <summary>
+		/// Returns true if point lies within the bounding sphere.
+		/// </summary>
 		bool Contains( V3< T > point ) const;
+
+		/// <summary>
+		/// Returns true if a sphere overlaps/collides with another sphere.
+		/// </summary>
 		bool Collides( BSphere< T > sphere ) const;
 	};
 

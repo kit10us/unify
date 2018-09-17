@@ -10,17 +10,23 @@ namespace unify
 {
 	class ColorUnit;
 
+	/// <summary>
+	/// Order of color components.
+	/// </summary>
+	enum Order {
+		RGBA,
+		ARGB,
+		BGRA,
+		ABGR,
+	};
+
+	/// <summary>
+	/// A 32 bit color, 8 bits per component.
+	/// </summary>
 	class Color
 	{
 	public:
 		typedef unsigned char Component;
-
-		enum Order {
-			RGBA,
-			ARGB,
-			BGRA,
-			ABGR,
-		};
 
         union {
 		    unsigned int c;
@@ -63,22 +69,58 @@ namespace unify
 		bool operator == ( const Color & col ) const;
 		bool operator != ( const Color & col ) const;
 
+		/// <summary>
+		/// Set all color components.
+		/// </summary>
         void SetRGBA( Component r, Component g, Component b, Component a );
 
+		/// <summary>
+		/// Returns the red color component.
+		/// </summary>
 		Component GetRed() const;
+
+		/// <summary>
+		/// Returns the green color component.
+		/// </summary>
 		Component GetGreen() const;
+
+		/// <summary>
+		/// Returns the blue color component.
+		/// </summary>
 		Component GetBlue() const;
+
+		/// <summary>
+		/// Returns the alpha color component.
+		/// </summary>
 		Component GetAlpha() const;
 
+		/// <summary>
+		/// Sets the red component of the color.
+		/// </summary>
 		void SetRed( Component r );
+
+		/// <summary>
+		/// Sets the green component of the color.
+		/// </summary>		
 		void SetGreen( Component g );
+
+		/// <summary>
+		/// Sets the blue component of the color.
+		/// </summary>		
 		void SetBlue( Component b );
+
+		/// <summary>
+		/// Sets the alpha component of the color.
+		/// </summary>
 		void SetAlpha( Component a );
 
-		void Modulate( const Color in1, const Color in2 );
-		void ModulateByRatio( const Color in1, const Color in2, const float ratio );
-		void Modulate4( const Color in1, const Color in2, const Color in3, const Color in4 );
+		/// <summary>
+		/// Interpulate between two colors colors. 
+		void Interpulate( const Color colorA, const Color colorB, const float ratio );
 
+		/// <summary>
+		/// Returns a string representation fo a color.
+		/// </summary>
 		std::string ToString( Order order = RGBA ) const;
 
 		// Named constructors...
@@ -98,4 +140,4 @@ namespace unify
 		static Color ColorBlack( Component a = 255);
 		static Color ColorZero();
 	};
-}  // namespace unify
+}

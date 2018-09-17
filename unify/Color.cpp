@@ -117,7 +117,7 @@ Color::Color( const ColorUnit & colorUnit )
 		);
 }
 
-Color::Color( std::string text, Color::Order order, Color::Component defaultAlpha )
+Color::Color( std::string text, Order order, Color::Component defaultAlpha )
 {
 	component.r = 0;
 	component.g = 0;
@@ -436,37 +436,17 @@ void Color::SetBlue( Color::Component b )
 	((Color::Component*)&c)[0] = b;
 }
 
-void Color::Modulate( const Color in1, const Color in2 )
-{
-	Color::Component a, r, g, b;
-	a = (Color::Component)((in1.GetAlpha())	+ in2.GetAlpha())	/ 2;
-	r = (Color::Component)((in1.GetRed())	+ in2.GetRed())	/ 2;
-	g = (Color::Component)((in1.GetGreen())	+ in2.GetGreen())	/ 2;
-	b = (Color::Component)((in1.GetBlue())	+ in2.GetBlue())	/ 2;
-	SetRGBA( r, g, b, a );
-}
-
-// modulates (1.0 - ratio) of the first color with (ratio) of the second color
-
-void Color::ModulateByRatio( const Color in1, const Color in2, const float ratio )
+void Color::Interpulate( const Color colorA, const Color colorB, const float ratio )
 {
 	float a, r, g, b;
-	a = (in1.GetAlpha() * (1.0f - ratio))	+ ( in2.GetAlpha() * ratio );
-	r = (in1.GetRed() * (1.0f - ratio))	+ ( in2.GetRed() * ratio );
-	g = (in1.GetGreen() * (1.0f - ratio))	+ ( in2.GetGreen() * ratio );
-	b = (in1.GetBlue() * (1.0f - ratio))	+ ( in2.GetBlue() * ratio );
+	a = (colorA.GetAlpha() * (1.0f - ratio))	+ (colorB.GetAlpha() * ratio);
+	r = (colorA.GetRed() * (1.0f - ratio))	+ (colorB.GetRed() * ratio);
+	g = (colorA.GetGreen() * (1.0f - ratio))	+ (colorB.GetGreen() * ratio);
+	b = (colorA.GetBlue() * (1.0f - ratio))	+ (colorB.GetBlue() * ratio);
 	SetRGBA( (char)r, (char)g, (char)b, (char)a );
 }
 
-void Color::Modulate4( const Color in1, const Color in2, const Color in3, const Color in4 )
-{
-	Color col1, col2;
-	col1.Modulate( in1, in2 );
-	col2.Modulate( in3, in4 );
-	Modulate( col1, col2 );
-}
-
-std::string Color::ToString( Color::Order order ) const
+std::string Color::ToString( Order order ) const
 {
 	switch( order )
 	{

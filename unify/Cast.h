@@ -10,17 +10,12 @@
 #include <typeinfo>
 #include <cassert>
 
-///<summary>
-/// Parsing relies heavily on the ability to cast to-and-from strings. This
-/// library helps facilitate such a feature.
-///</summary>
-
 namespace unify
 {
 	// The default cast will throw (not a supported cast).
 	template< typename TTo, typename TFrom > TTo Cast( const TFrom in );
 
-	// From X to std::string...
+	// Casts from one type to std::string.
 	template<> std::string Cast( const std::string in );
 	template<> std::string Cast( const std::wstring in );
 	template<> std::string Cast( const bool in );
@@ -36,7 +31,7 @@ namespace unify
 	template<> std::string Cast( const long in );
 	template<> std::string Cast( const TimeDelta in );
 
-	// From std::string to X...
+	// Casts from std::string to another type.
 	template<> bool Cast( const std::string text );
 	template<> char Cast( const std::string text );
 	template<> unsigned char Cast( const std::string text );

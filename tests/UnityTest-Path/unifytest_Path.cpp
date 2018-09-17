@@ -7,6 +7,11 @@
 #include <unify/Path.h>
 #include <unify/TestSuite.h>
 
+//
+// Purpose of test...
+//    Test unify::Path.
+//
+
 int main( int argc, char ** argv )
 {
 	using namespace std;

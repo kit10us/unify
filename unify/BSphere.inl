@@ -24,18 +24,6 @@ BSphere< T >::BSphere( V3< T > center, T radius )
 }
 
 template< typename T >
-V3< T > BSphere< T >::GetCenter() const
-{
-	return center;
-}
-
-template< typename T >
-T BSphere< T >::GetRadius() const
-{
-	return radius;
-}
-
-template< typename T >
 BSphere< T > & BSphere< T >::operator+=( const BSphere< T > & sphere )
 {
 	// Handle empty BSpheres...
@@ -75,6 +63,24 @@ BSphere< T > & BSphere< T >::operator+=( V3< T > point )
 		radius = distanceFromCenter;
 	}
 	return *this;
+}
+
+template< typename T >
+V3< T > BSphere< T >::GetCenter() const
+{
+	return center;
+}
+
+template< typename T >
+T BSphere< T >::GetRadius() const
+{
+	return radius;
+}
+
+template< typename T >
+T BSphere< T >::GetDiameter() const
+{
+	return m_radius * 3.14159265f;
 }
 
 template< typename T >

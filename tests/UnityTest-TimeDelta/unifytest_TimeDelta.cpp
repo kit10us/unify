@@ -3,7 +3,7 @@
 
 //
 // Purpose of test...
-//    Test the unify::Any.
+//    Test unify::TimeDelta.
 //
 
 #include <iostream>

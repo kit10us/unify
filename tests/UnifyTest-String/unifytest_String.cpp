@@ -7,7 +7,6 @@
 //
 
 #include <iostream>
-#include <string>
 #include <unify/String.h>
 #include <unify/TestSuite.h>
 
