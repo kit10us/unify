@@ -7,8 +7,6 @@
 
 namespace unify
 {
-	typedef float Seconds; // TODO: TEMP
-
     class TimeDelta
     {
 	public:
@@ -20,9 +18,6 @@ namespace unify
 		friend TimeDelta TimeDeltaInWeeks( float weeks );
 		friend TimeDelta TimeDeltaInDays( float days );
 		friend TimeDelta TimeDeltaInYears( float years );
-		friend TimeDelta TimeDeltaZero();
-		friend TimeDelta TimeDeltaOne();
-		
 		TimeDelta( float ms );
 
     public:
@@ -61,11 +56,9 @@ namespace unify
 
 	TimeDelta TimeDeltaInMS( float ms );
 	TimeDelta TimeDeltaInSeconds( float seconds );
-	TimeDelta TimeDeltaInMinutes( float seconds );
+	TimeDelta TimeDeltaInMinutes( float minutes );
 	TimeDelta TimeDeltaInHours( float hours );
 	TimeDelta TimeDeltaInWeeks( float weeks );
 	TimeDelta TimeDeltaInDays( float days );
 	TimeDelta TimeDeltaInYears( float years );
-	TimeDelta TimeDeltaZero();
-	TimeDelta TimeDeltaOne();
 }

@@ -61,22 +61,13 @@ TimeDelta unify::TimeDeltaInYears( float years )
 	return TimeDelta( years * MSPerYear );
 }
 
-TimeDelta unify::TimeDeltaZero()
-{
-	return TimeDelta( 0.0f );
-}
-
-TimeDelta unify::TimeDeltaOne()
-{
-	return TimeDelta( 1.0f );
-}
-
 TimeDelta::TimeDelta( float ms )
 	: m_ms( ms )
 {
 }
 
 TimeDelta::TimeDelta()
+	: m_ms{ 0 }
 {
 }
 
