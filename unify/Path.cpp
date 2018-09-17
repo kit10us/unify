@@ -33,6 +33,61 @@ Path::Path( const std::vector< std::string > & pathParts )
 	Join( pathParts );
 }
 
+
+Path & Path::operator=( const Path & path )
+{
+	m_path = path.m_path;
+	return *this;
+}
+
+bool Path::operator==( const Path & path ) const
+{
+	if ( m_path.length() != path.m_path.length() )
+	{
+		return false;
+	}
+
+	unsigned int i = 0;
+	while( i < m_path.length()  )
+	{
+		char l = m_path[ i ];
+		char r = path.m_path[ i ];
+		if ( l == '\\' )
+		{
+			l = '/';
+		}
+		if ( r == '\\' )
+		{
+			r = '/';
+		}
+
+		if ( l != r )
+		{
+			return false;
+		}
+		++i;
+	}
+
+	return true;
+}
+
+bool Path::operator!=( const Path & path ) const
+{
+	return !( *this == path );
+}
+
+Path Path::operator+( const Path & path )
+{
+	Path newPath( *this, path );
+	return newPath;
+}
+
+Path & Path::operator+=( const Path & path )
+{
+	Combine( *this, path );
+	return *this;
+}
+
 bool Path::Empty() const
 {
 	return m_path.empty();
@@ -272,24 +327,6 @@ Path & Path::ChangeFilename( const Path & newFilename )
 	return Combine( DirectoryOnly(), unify::Path( newFilename.Filename() ) );
 }
 
-Path & Path::operator=( const Path & path )
-{
-	m_path = path.m_path;
-	return *this;
-}
-
-Path Path::operator+( const Path & path )
-{
-	Path newPath( *this, path );
-	return newPath;
-}
-
-Path & Path::operator+=( const Path & path )
-{
-	Combine( *this, path );
-	return *this;
-}
-
 std::string Path::ToString() const
 {
 	return m_path;
@@ -298,6 +335,28 @@ std::string Path::ToString() const
 std::wstring Path::ToWString() const
 {
 	return std::wstring( m_path.begin(), m_path.end() );
+}
+
+std::string Path::ToString( Slash direction ) const
+{
+	std::string temp;
+
+	switch( direction )
+	{
+	case Slash::Foward:
+		temp = StringReplace( ToString(),  "/", "\\" );
+		break;
+	case Slash::Backward:
+		temp = StringReplace( ToString(), "\\", "/" );
+		break;
+	}
+	return temp;
+}
+
+std::wstring Path::ToWString( Slash direction ) const
+{
+	std::string temp( ToString( direction ) );
+	return std::wstring( temp.begin(), temp.end() );
 }
 
 std::ostream & operator<<( std::ostream & os, const Path & path )

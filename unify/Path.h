@@ -9,6 +9,12 @@
 
 namespace unify
 {
+	enum Slash
+	{
+		Foward,
+		Backward
+	};
+
 	class Path	
 	{
 		std::string m_path;
@@ -18,6 +24,12 @@ namespace unify
 		explicit Path( const char * const path );
 		Path( const Path & left, const Path & right );
 		Path( const std::vector< std::string > & pathParts );
+
+		Path & operator=( const Path & path );
+		bool operator==( const Path & path ) const;
+		bool operator!=( const Path & path ) const;
+		Path operator+( const Path & path );
+		Path & operator+=( const Path & path );
 
 		bool Empty() const;
 
@@ -69,12 +81,25 @@ namespace unify
 		// Equivalent to Combine( DirectoryOnly( pathIn ), Filename( newFilename ) )
 		Path & ChangeFilename( const Path & newFilename );
 
-		Path & operator=( const Path & path );
-		Path operator+( const Path & path );
-		Path & operator+=( const Path & path );
-
+		/// <summary>
+		/// Returns a string representation of the path maintaining the original slash directions."
+		/// </summary?
 		std::string ToString() const;
+
+		/// <summary>
+		/// Returns a wide string representation of the path maintaining the original slash directions."
+		/// </summary?
 		std::wstring ToWString() const;
+
+		/// <summary>
+		/// Returns a string with all slashes in a uniform direction.
+		/// </summary>
+		std::string ToString( Slash direction ) const;
+
+		/// <summary>
+		/// Returns a wide string with all slashes in a uniform direction.
+		/// </summary>
+		std::wstring ToWString( Slash direction ) const;
 
 		/// <summary>
 		/// Delete a path.

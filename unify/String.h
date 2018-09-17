@@ -42,7 +42,7 @@ namespace unify
 	std::string CleanWhitespace( std::string sIn );
 
 	std::string ToLower( std::string in );
-
+	std::string ToUpper( std::string in );
 	
 	// Considers a string as a part of a segmented list by a character, returns that part of the list...
 	// Returns ASAP.

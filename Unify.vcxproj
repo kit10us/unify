@@ -33,6 +33,7 @@
     <ClCompile Include="unify\Ray.cpp" />
     <ClCompile Include="unify\Stream.cpp" />
     <ClCompile Include="unify\String.cpp" />
+    <ClCompile Include="unify\TestSuite.cpp" />
     <ClCompile Include="unify\TexArea.cpp" />
     <ClCompile Include="unify\TexCoords.cpp" />
     <ClCompile Include="unify\TimeDelta.cpp" />
@@ -77,6 +78,7 @@
     <ClInclude Include="unify\Size3.h" />
     <ClInclude Include="unify\Stream.h" />
     <ClInclude Include="unify\String.h" />
+    <ClInclude Include="unify\TestSuite.h" />
     <ClInclude Include="unify\TexArea.h" />
     <ClInclude Include="unify\TexCoords.h" />
     <ClInclude Include="unify\TimeDelta.h" />

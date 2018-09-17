@@ -133,16 +133,31 @@ std::string unify::StringMinusRight( std::string sStringIn, unsigned int uLessLe
 
 std::string unify::StringReplace( const std::string in, std::string find, std::string replace )
 {
+	if ( find.length() == 0 )
+	{
+		return in;
+	}
+
 	std::string out;
 
-	size_t left = 0;
-	size_t right = 0;
+	size_t left = 0; // Our search starting index.
+	size_t right = 0; // Our right, found/not found, end index.
 	do
 	{
 		right = in.find( find, left );
+
+		// Break out of loop as soon as we can't find any more instances of the string.
+		if( right == std::string::npos )
+		{
+			// Append the rest of the left over string.
+			out += in.substr( left, std::string::npos );
+			break;
+		}
+
+		// Replace instance of found value with replacement value.
 		out += in.substr( left, right - left )  + replace;
-		left = right + 1;
-	} while ( right != std::string::npos );
+		left = right + find.length();
+	} while ( right != std::string::npos ); // Just an arbitrary catch all to ensure we don't loop infinitly, even if just to be clear.
 	return out;	
 }
 
@@ -183,7 +198,18 @@ std::string unify::ToLower( std::string in )
 	for( std::size_t i = 0; i < in.length(); ++i )
 	{
 		char c = in[ i ];
-		out[ i ] = (c >= 'A' && c <= 'Z') ? ( c + ('a' - 'A') ) : c;
+		out[ i ] = (c >= 'A' && c <= 'Z') ? ( 'a' + (c - 'A') ) : c;
+	}
+	return out;
+}
+
+std::string unify::ToUpper( std::string in )
+{
+	std::string out( in );
+	for (std::size_t i = 0; i < in.length(); ++i)
+	{
+		char c = in[i];
+		out[i] = (c >= 'a' && c <= 'z') ? ('A' + (c - 'a')) : c;
 	}
 	return out;
 }

@@ -79,6 +79,9 @@
     <ClCompile Include="unify\Ray.cpp">
       <Filter>unify</Filter>
     </ClCompile>
+    <ClCompile Include="unify\TestSuite.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="unify\Angle.h">
@@ -229,6 +232,9 @@
       <Filter>unify</Filter>
     </ClInclude>
     <ClInclude Include="unify\TLink.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="unify\TestSuite.h">
       <Filter>unify</Filter>
     </ClInclude>
   </ItemGroup>
