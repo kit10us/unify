@@ -17,8 +17,8 @@ namespace unify
 	template< typename T = float >
 	class BSphere
 	{
-		float m_radius;
-		float m_center;
+		V3< T > m_center;
+		T m_radius;
 	public:
 		BSphere();
 		BSphere( V3< T > center );

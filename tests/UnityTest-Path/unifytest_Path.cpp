@@ -5,7 +5,7 @@
 #include <string>
 #include <fstream>
 #include <unify/Path.h>
-#include <unify/TestSuite.h>
+#include <unify/test/Suite.h>
 
 //
 // Purpose of test...
@@ -16,69 +16,70 @@ int main( int argc, char ** argv )
 {
 	using namespace std;
 	using namespace unify;
+	using namespace test;
 
-	TestSuite testSuite( "Path", "   " );
+	Suite suite;
 
-	testSuite.BeginSuite();
+	suite.BeginSuite( "Path" );
 
 	{
 		string tempString;
 		Path tempPath;
 		bool testBool;
 
-		testSuite.BeginCase( "Convert to string" );
+		suite.BeginCase( "Convert to string" );
 		const Path path( "c:\\directory\\sub_directory\\file_name.ext" );
-		testSuite.Assert( "Forward", path.ToString( Slash::Foward ) == "c:\\directory\\sub_directory\\file_name.ext" );
-		testSuite.Assert( "Backward", path.ToString( Slash::Backward ) == "c:/directory/sub_directory/file_name.ext" );
-		testSuite.EndCase();
+		suite.Assert( "Forward", path.ToString( Slash::Foward ) == "c:\\directory\\sub_directory\\file_name.ext" );
+		suite.Assert( "Backward", path.ToString( Slash::Backward ) == "c:/directory/sub_directory/file_name.ext" );
+		suite.EndCase();
 
-		testSuite.BeginCase( "ostream operator<<" );
+		suite.BeginCase( "ostream operator<<" );
 		cout << "result: \"" << path << "\"." << endl << endl;
-		testSuite.EndCase();
+		suite.EndCase();
 
-		testSuite.BeginCase( "ExtensionOnly" );
+		suite.BeginCase( "ExtensionOnly" );
 		tempString = path.ExtensionOnly();
-		testSuite.Assert( "Extenion only", tempString == ".ext" );
-		testSuite.EndCase();
+		suite.Assert( "Extenion only", tempString == ".ext" );
+		suite.EndCase();
 
-		testSuite.BeginCase( "ExtensionOnly with no extension on path" );
+		suite.BeginCase( "ExtensionOnly with no extension on path" );
 		tempString = Path( "c:\\directory\\sub_directory\\" ).ExtensionOnly();
-		testSuite.Assert( "ExtionOnly with no extention on path", tempString == "" );
-		testSuite.EndCase();
+		suite.Assert( "ExtionOnly with no extention on path", tempString == "" );
+		suite.EndCase();
 
-		testSuite.BeginCase( "DirectoryOnly" );
+		suite.BeginCase( "DirectoryOnly" );
 		tempPath = path.DirectoryOnly();
-		testSuite.Assert( "DirectoryOnly", tempPath == Path( "c:\\directory\\sub_directory\\" ) );
-		testSuite.EndCase();
+		suite.Assert( "DirectoryOnly", tempPath == Path( "c:\\directory\\sub_directory\\" ) );
+		suite.EndCase();
 
-		testSuite.BeginCase( "Filename" );
+		suite.BeginCase( "Filename" );
 		tempPath = Path( path.Filename() );
-		testSuite.Assert( "Filename", tempPath == Path( "file_name.ext" ) );
-		testSuite.EndCase();
+		suite.Assert( "Filename", tempPath == Path( "file_name.ext" ) );
+		suite.EndCase();
 
-		testSuite.BeginCase( "FilenameNoExtension - 1. Full path." );
+		suite.BeginCase( "FilenameNoExtension - 1. Full path." );
 		tempPath = Path(  path.FilenameNoExtension() );
-		testSuite.Assert( "FilenameNoExt", tempPath.ToString() == "file_name" );
-		testSuite.EndCase();
+		suite.Assert( "FilenameNoExt", tempPath.ToString() == "file_name" );
+		suite.EndCase();
 
-		testSuite.BeginCase( "Path slashs equivalency" );
-		testSuite.Assert( "\"\\file\" == \"/file\"", Path( "\\file" ) == Path( "/file" ) );
-		testSuite.EndCase();
+		suite.BeginCase( "Path slashs equivalency" );
+		suite.Assert( "\"\\file\" == \"/file\"", Path( "\\file" ) == Path( "/file" ) );
+		suite.EndCase();
 
-		testSuite.BeginCase( "Combine" );
+		suite.BeginCase( "Combine" );
 		{
 			tempPath.Combine( Path( "c:\\directory\\subdirectory" ) , unify::Path( "/file_name.ext" ) );
-			testSuite.Assert( "Complete L (without ending slash) and R (with leading slash)", tempPath == Path( "c:\\directory\\subdirectory\\file_name.ext" ) );
+			suite.Assert( "Complete L (without ending slash) and R (with leading slash)", tempPath == Path( "c:\\directory\\subdirectory\\file_name.ext" ) );
 		
 			tempPath.Combine( Path( "c:\\directory\\subdirectory\\" ) , unify::Path( "/file_name.ext" ) );
-			testSuite.Assert( "Complete L (with ending slash) and R (with leading slash)", tempPath == Path( "c:\\directory\\subdirectory\\file_name.ext" ) );
+			suite.Assert( "Complete L (with ending slash) and R (with leading slash)", tempPath == Path( "c:\\directory\\subdirectory\\file_name.ext" ) );
 
 			tempPath.Combine( Path( "c:\\directory\\subdirectory" ), unify::Path( "file_name.ext" ) );
-			testSuite.Assert( "Complete L( without ending slash ) and R( without leading slash )", tempPath == Path( "c:\\directory\\subdirectory\\file_name.ext" ) );
+			suite.Assert( "Complete L( without ending slash ) and R( without leading slash )", tempPath == Path( "c:\\directory\\subdirectory\\file_name.ext" ) );
 		}
-		testSuite.EndCase();
+		suite.EndCase();
 
-		testSuite.BeginCase( "Split" );
+		suite.BeginCase( "Split" );
 		const Path pathInputA( "c:\\directory\\subdirectory/..\\test\\file_name.ext" );
 		vector< string > partsOutput = pathInputA.Split();
 		cout << "results: ";
@@ -87,47 +88,47 @@ int main( int argc, char ** argv )
 		{
 			cout << "[" << i << "]";
 		}
-		testSuite.EndCase();
+		suite.EndCase();
 
-		testSuite.BeginCase( "Join()" );
+		suite.BeginCase( "Join" );
 		cout << "result: \"" << Path( partsOutput ) << endl << endl;
-		testSuite.EndCase();
+		suite.EndCase();
 
-		testSuite.BeginCase( "Normalize" );
+		suite.BeginCase( "Normalize" );
 		cout << "result: \"" << Path( pathInputA ).Normalize() << endl << endl;
-		testSuite.EndCase();
+		suite.EndCase();
 
-		testSuite.BeginCase( "Combine" );
+		suite.BeginCase( "Combine" );
 		tempPath.Combine( Path( "c:\\directory\\subdirectory" ) , Path( "..\\test\\file_name.ext" ) );
 		cout << "result: \"" << tempPath << "\"." << endl << endl;
-		testSuite.EndCase();
+		suite.EndCase();
 
-		testSuite.BeginCase( "IsExtension - 1. Path has extension, ext has no dot (.)." );
+		suite.BeginCase( "IsExtension - 1. Path has extension, ext has no dot (.)." );
 		testBool = path.IsExtension( "ext" );
 		cout << "result: " << ( testBool ? "true" : "false" ) << "." << endl << endl;
-		testSuite.EndCase();
+		suite.EndCase();
 
-		testSuite.BeginCase( "IsExtension - 2. Path has extension, ext has dot(.)." );
+		suite.BeginCase( "IsExtension - 2. Path has extension, ext has dot(.)." );
 		testBool = path.IsExtension( ".ext" );
 		cout << "result: " << ( testBool ? "true" : "false" ) << "." << endl << endl;
-		testSuite.EndCase();
+		suite.EndCase();
 
-		testSuite.BeginCase( "IsExtension - 1. Not match." );
+		suite.BeginCase( "IsExtension - 1. Not match." );
 		testBool = path.IsExtension( "etx" );
 		cout << "result: " << ( testBool ? "true" : "false" ) << "." << endl << endl;
-		testSuite.EndCase();
+		suite.EndCase();
 
 		{
-			testSuite.BeginCase( "Exists" );
+			suite.BeginCase( "Exists" );
 			Path file( "test.txt" );
 			ofstream stream;
 			stream.open( file.ToString() );
 			stream << "Hello, world!";
 			stream.close();
 			cout << "result: " << ( file.Exists() ? "pass" : "failed" ) << endl;
-			testSuite.EndCase();
+			suite.EndCase();
 
-			testSuite.BeginCase( "Rename" );
+			suite.BeginCase( "Rename" );
 			Path fileTo( "test_renamed.txt" );
 			if( ! Path::Rename( file, fileTo ) || ! fileTo.Exists() )
 			{
@@ -137,9 +138,9 @@ int main( int argc, char ** argv )
 			{
 				cout << "  result: pass" << endl;
 			}
-			testSuite.EndCase();
+			suite.EndCase();
 
-			testSuite.BeginCase( "Delete" );
+			suite.BeginCase( "Delete" );
 			if( !Path::Delete( fileTo ) || fileTo.Exists() )
 			{
 				cout << "  result: fail" << endl;
@@ -148,10 +149,10 @@ int main( int argc, char ** argv )
 			{
 				cout << "  result: pass" << endl;
 			}
-			testSuite.EndCase();
+			suite.EndCase();
 		}
 	}
-	testSuite.EndSuite();
+	suite.EndSuite();
 
 	cout << "Press any Enter to finish...\n";
 	cin.ignore();

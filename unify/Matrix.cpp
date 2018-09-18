@@ -863,6 +863,14 @@ BBox< float > Matrix::TransformBBox( BBox< float > bbox ) const
 	return out;
 }
 
+BSphere< float > Matrix::TransformBSphere( BSphere< float > bsphere ) const
+{
+	V3< float > center{ bsphere.GetCenter() };
+	TransformCoord( center );
+	BSphere< float > out{ center, bsphere.GetRadius() };
+	return out;
+}
+
 void Matrix::RotateAboutAxis( const V3< float > & axis, Angle angle )
 {
 	Matrix rotation = MatrixRotationAboutAxis( axis, angle );

@@ -33,7 +33,10 @@
     <ClCompile Include="unify\Ray.cpp" />
     <ClCompile Include="unify\Stream.cpp" />
     <ClCompile Include="unify\String.cpp" />
-    <ClCompile Include="unify\TestSuite.cpp" />
+    <ClCompile Include="unify\test\DefaultEventHandlers.cpp" />
+    <ClCompile Include="unify\test\DefaultAssertHandler.cpp" />
+    <ClCompile Include="unify\test\DefaultOutputHandlers.cpp" />
+    <ClCompile Include="unify\test\Suite.cpp" />
     <ClCompile Include="unify\TexArea.cpp" />
     <ClCompile Include="unify\TexCoords.cpp" />
     <ClCompile Include="unify\TimeDelta.cpp" />
@@ -78,7 +81,13 @@
     <ClInclude Include="unify\Size3.h" />
     <ClInclude Include="unify\Stream.h" />
     <ClInclude Include="unify\String.h" />
-    <ClInclude Include="unify\TestSuite.h" />
+    <ClInclude Include="unify\test\DefaultAssertHandler.h" />
+    <ClInclude Include="unify\test\DefaultEventHandlers.h" />
+    <ClInclude Include="unify\test\DefaultOutputHandlers.h" />
+    <ClInclude Include="unify\test\IAssertHandler.h" />
+    <ClInclude Include="unify\test\IEventHandler.h" />
+    <ClInclude Include="unify\test\IOutputHandler.h" />
+    <ClInclude Include="unify\test\Suite.h" />
     <ClInclude Include="unify\TexArea.h" />
     <ClInclude Include="unify\TexCoords.h" />
     <ClInclude Include="unify\TimeDelta.h" />

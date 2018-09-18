@@ -79,8 +79,17 @@
     <ClCompile Include="unify\Ray.cpp">
       <Filter>unify</Filter>
     </ClCompile>
-    <ClCompile Include="unify\TestSuite.cpp">
-      <Filter>unify</Filter>
+    <ClCompile Include="unify\test\DefaultAssertHandler.cpp">
+      <Filter>unify\test</Filter>
+    </ClCompile>
+    <ClCompile Include="unify\test\Suite.cpp">
+      <Filter>unify\test</Filter>
+    </ClCompile>
+    <ClCompile Include="unify\test\DefaultEventHandlers.cpp">
+      <Filter>unify\test</Filter>
+    </ClCompile>
+    <ClCompile Include="unify\test\DefaultOutputHandlers.cpp">
+      <Filter>unify\test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -234,8 +243,26 @@
     <ClInclude Include="unify\TLink.h">
       <Filter>unify</Filter>
     </ClInclude>
-    <ClInclude Include="unify\TestSuite.h">
-      <Filter>unify</Filter>
+    <ClInclude Include="unify\test\IAssertHandler.h">
+      <Filter>unify\test</Filter>
+    </ClInclude>
+    <ClInclude Include="unify\test\IEventHandler.h">
+      <Filter>unify\test</Filter>
+    </ClInclude>
+    <ClInclude Include="unify\test\Suite.h">
+      <Filter>unify\test</Filter>
+    </ClInclude>
+    <ClInclude Include="unify\test\IOutputHandler.h">
+      <Filter>unify\test</Filter>
+    </ClInclude>
+    <ClInclude Include="unify\test\DefaultAssertHandler.h">
+      <Filter>unify\test</Filter>
+    </ClInclude>
+    <ClInclude Include="unify\test\DefaultEventHandlers.h">
+      <Filter>unify\test</Filter>
+    </ClInclude>
+    <ClInclude Include="unify\test\DefaultOutputHandlers.h">
+      <Filter>unify\test</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -312,6 +339,9 @@
   <ItemGroup>
     <Filter Include="unify">
       <UniqueIdentifier>{e6aa8063-da46-4613-8087-269f0d73ae8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unify\test">
+      <UniqueIdentifier>{a60ab5db-ade3-47b1-ab64-1c71cd6354cc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

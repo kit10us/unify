@@ -9,26 +9,27 @@
 #include <iostream>
 #include <string>
 #include <unify/Any.h>
-#include <unify/TestSuite.h>
+#include <unify/test/Suite.h>
 
 int main( int argc, char ** argv )
 {
 	using namespace unify;
+	using namespace test;
 
-	TestSuite testSuite( "Any", "   " );
+	Suite suite;
 
-	testSuite.BeginSuite();
+	suite.BeginSuite( "unify::Any" );
 	{
-		testSuite.BeginCase( "Any not empty" );
+		suite.BeginCase( "Any not empty" );
 		Any anyInt12 = 12;
-		testSuite.Assert( "Any not empty", ! anyInt12.empty() );
-		testSuite.EndCase();
+		suite.Assert( "Any not empty", ! anyInt12.empty() );
+		suite.EndCase();
 
-		testSuite.BeginCase( "Int match" );
-		testSuite.Assert( "Int match", unify::any_cast< int >( anyInt12 ) == 12 );
-		testSuite.EndCase();
+		suite.BeginCase( "Int match" );
+		suite.Assert( "Int match", unify::any_cast< int >( anyInt12 ) == 12 );
+		suite.EndCase();
 	}
-	testSuite.EndSuite();
+	suite.EndSuite();
 
 	std::cout << "Press any Enter to finish...\n";
 	std::cin.ignore();

@@ -4,22 +4,22 @@
 
 template< typename T >
 BSphere< T >::BSphere()
-	: center{ T(), T(), T() }
-	, radius{ T() }
+	: m_center{ T(), T(), T() }
+	, m_radius{ T() }
 {
 }
 
 template< typename T >
 BSphere< T >::BSphere( V3< T > center )
-	: center{ center }
-	, radius{ T() }
+	: m_center{ center }
+	, m_radius{ T() }
 {
 }
 
 template< typename T >
 BSphere< T >::BSphere( V3< T > center, T radius )
-	: center{ center }
-	, radius{ radius }
+	: m_center{ center }
+	, m_radius{ radius }
 {
 }
 
@@ -27,29 +27,28 @@ template< typename T >
 BSphere< T > & BSphere< T >::operator+=( const BSphere< T > & sphere )
 {
 	// Handle empty BSpheres...
-	if( sphere.GetRadius() < std::numeric_limits< T >::epsilon() )
+	if( sphere.m_Radius < std::numeric_limits< T >::epsilon() )
 	{
 		return;
 	}
 
-	if( GetRadius() < std::numeric_limits< T >::epsilon() )
+	if( m_radius < std::numeric_limits< T >::epsilon() )
 	{
-		radius = sphere.GetRadius();
+		m_radius = sphere.m_radius;
 	}
 
 	// Create extents and add them...
 
 	unify::V3< T > a{ GetCenter() - sphere.GetCenter() };
 	a.Normalize();
-	a = GetCenter() += a * GetRadius();
+	a = m_center += a * m_radius;
 	
-	unify::V3< T > b{ sphere.GetCenter() - GetCenter() };
+	unify::V3< T > b{ sphere.m_center - m_center };
 	b.Normalize();
-	b = sphere.GetCenter() += b * sphere.GetRadius();
+	b = sphere.m_center += b * sphere.m_radius;
 
 	( *this ) += b;
 	( *this ) += a;
-
 
 	return *this;
 }
@@ -57,10 +56,10 @@ BSphere< T > & BSphere< T >::operator+=( const BSphere< T > & sphere )
 template< typename T >
 BSphere< T > & BSphere< T >::operator+=( V3< T > point )
 {
-	T distanceFromCenter = center.DistanceTo( point );
-	if( distanceFromCenter > radius )
+	T distanceFromCenter = m_center.DistanceTo( point );
+	if( distanceFromCenter > m_radius )
 	{
-		radius = distanceFromCenter;
+		m_radius = distanceFromCenter;
 	}
 	return *this;
 }
@@ -68,13 +67,13 @@ BSphere< T > & BSphere< T >::operator+=( V3< T > point )
 template< typename T >
 V3< T > BSphere< T >::GetCenter() const
 {
-	return center;
+	return m_center;
 }
 
 template< typename T >
 T BSphere< T >::GetRadius() const
 {
-	return radius;
+	return m_radius;
 }
 
 template< typename T >
@@ -87,14 +86,14 @@ template< typename T >
 bool BSphere< T >::Contains( V3< T > point ) const
 {
 	T distanceFromCenter = center.DistanceTo( point );
-	return distanceFromCenter <= radius;
+	return distanceFromCenter <= m_radius;
 }
 
 template< typename T >
 bool BSphere< T >::Collides( BSphere< T > sphere ) const
 {
-	float d = GetCenter().DistanceTo( sphere.GetCenter() );
-	float rt = radius + sphere.radius;
+	float d = m_center.DistanceTo( sphere.m_center );
+	float rt = m_radius + sphere.m_radius;
 	bool collides = d < rt;
 	return collides;
 }
