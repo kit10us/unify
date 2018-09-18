@@ -70,9 +70,9 @@ namespace unify
 		unify::V4< float > & operator()( unsigned int row );
 		const unify::V4< float > & operator()( unsigned int row ) const;
 
-		Matrix & SetRotation( const Quaternion & quaternion );
-		Matrix & Translate( const V3< float > & vector );
-		Matrix & Scale( const V3< float > & vector );
+		Matrix & SetRotation( Quaternion quaternion );
+		Matrix & Translate( V3< float > vector );
+		Matrix & Scale( V3< float > vector );
 		Matrix & Scale( float scale );
 
 		void Set( unsigned int row, unsigned int column, float value );

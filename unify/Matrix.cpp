@@ -384,7 +384,7 @@ const unify::V4< float > & Matrix::operator()( unsigned int row ) const
 }
 
 
-Matrix & Matrix::SetRotation( const Quaternion & quaternion )
+Matrix & Matrix::SetRotation( Quaternion quaternion )
 {
 	// Store values to restore them after rotation.
 	V3< float > scale = GetScale();
@@ -394,14 +394,14 @@ Matrix & Matrix::SetRotation( const Quaternion & quaternion )
 	return *this;
 }
 
-Matrix & Matrix::Translate( const V3< float > & vector )
+Matrix & Matrix::Translate( V3< float > vector )
 {
 	Matrix translation( MatrixTranslate( vector ) );
 	*this *= translation;
 	return *this;
 }
 
-Matrix & Matrix::Scale( const V3< float > & vector )
+Matrix & Matrix::Scale( V3< float > vector )
 {
 	Matrix scale( unify::MatrixScale( vector ) );
 	*this *= scale;
