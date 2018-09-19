@@ -24,10 +24,11 @@ namespace unify
 	template< typename T = float >
 	class BBox
 	{
-		V3< T > m_sup;
-		V3< T > m_inf;
-
 	public:
+		// Public members to reduce possible speed issues.
+		V3< T > sup;
+		V3< T > inf;
+
 		/// <summary>
 		/// construct an empty bounding box.
 		/// </summary>
@@ -54,16 +55,6 @@ namespace unify
 
 		BBox< T > operator + ( const BBox< T > & bbox ) const;
 		BBox< T > & operator += ( const BBox< T > & bbox );
-
-		/// <summary>
-		/// Get the inferior position of the bounding box (smallest).
-		/// </summary>
-		V3< T > GetInf() const;
-
-		/// <summary>
-		/// Get the superior position of the bounding box (largest).
-		/// </summary>
-		V3< T > GetSup() const;
 
 		/// <summary>
 		/// Populates an array of vectors the vertices of the bounding box's corners.

@@ -852,7 +852,7 @@ Ray Matrix::TransformRay( Ray ray ) const
 
 BBox< float > Matrix::TransformBBox( BBox< float > bbox ) const
 {
-	BBox< float > out= { TransformCoord( bbox.GetInf() ), TransformCoord( bbox.GetSup() ) };
+	BBox< float > out= { TransformCoord( bbox.inf ), TransformCoord( bbox.sup ) };
 	return out;
 }
 

@@ -17,9 +17,11 @@ namespace unify
 	template< typename T = float >
 	class BSphere
 	{
-		V3< T > m_center;
-		T m_radius;
 	public:
+		// Public members to reduce possible speed issues.
+		V3< T > center;
+		T radius;
+
 		BSphere();
 		BSphere( V3< T > center );
 		BSphere( V3< T > center, T radius );
