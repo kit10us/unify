@@ -12,7 +12,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="unify\Angle.cpp" />
-    <ClCompile Include="unify\AssetPaths.cpp" />
     <ClCompile Include="unify\Cast.cpp" />
     <ClCompile Include="unify\Color.cpp" />
     <ClCompile Include="unify\ColorUnit.cpp" />
@@ -45,7 +44,6 @@
   <ItemGroup>
     <ClInclude Include="unify\Angle.h" />
     <ClInclude Include="unify\Any.h" />
-    <ClInclude Include="unify\AssetPaths.h" />
     <ClInclude Include="unify\BBox.h" />
     <ClInclude Include="unify\BSphere.h" />
     <ClInclude Include="unify\BSquare.h" />
