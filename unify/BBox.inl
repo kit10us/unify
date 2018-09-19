@@ -4,9 +4,18 @@
 
 template< typename T >
 BBox< T >::BBox()
-	: inf { V3< T >::V3Zero() }
-	, sup { V3< T >::V3Zero() }
+	: m_inf { V3< T >::V3Zero() }
+	, m_sup { V3< T >::V3Zero() }
 {
+}
+
+
+template< typename T >
+BBox< T >::BBox( const V3< T > & inf, const V3< T > & sup )
+	: m_inf{ inf }
+	, m_sup{ sup }
+{
+	Fix();
 }
 
 template< typename T >
@@ -15,14 +24,6 @@ BBox< T >::BBox( T squareSize )
 	T halfSquareSize = squareSize / 2;
 	inf = V3< T >{ -squareSize / 2, -squareSize / 2, -squareSize / 2 };
 	sup = V3< T >{ squareSize / 2, squareSize / 2, squareSize / 2 };
-}
-
-template< typename T >
-BBox< T >::BBox( const V3< T > & inInf, const V3< T > & inSup )
-	: BBox()
-{
-	*this += inInf;
-	*this += inSup;
 }
 
 template< typename T >
@@ -64,14 +65,14 @@ BBox< T > BBox< T >::operator + ( const V3< T > & point ) const
 template< typename T >
 BBox< T > & BBox< T >::operator += ( const V3< T > & point )
 {
-	if ( point.x > sup.x ) sup.x = point.x;
-	else if ( point.x < inf.x ) inf.x = point.x;
+	if ( point.x > m_sup.x ) m_sup.x = point.x;
+	else if ( point.x < m_inf.x ) m_inf.x = point.x;
 
-	if ( point.y > sup.y ) sup.y = point.y;
-	else if ( point.y < inf.y ) inf.y = point.y;
+	if ( point.y > m_sup.y ) m_sup.y = point.y;
+	else if ( point.y < m_inf.y ) m_inf.y = point.y;
 
-	if ( point.z > sup.z ) sup.z = point.z;
-	else if ( point.z < inf.z ) inf.z = point.z;
+	if ( point.z > m_sup.z ) m_sup.z = point.z;
+	else if ( point.z < m_inf.z ) m_inf.z = point.z;
 	return *this;
 }
 
@@ -86,35 +87,46 @@ BBox< T > BBox< T >::operator + ( const BBox< T > & bbox ) const
 template< typename T >
 BBox< T > & BBox< T >::operator += ( const BBox< T > & bbox )
 {
-	*this += bbox.inf;
-	*this += bbox.sup;
+	*this += bbox.m_inf;
+	*this += bbox.m_sup;
 	return *this;
 }
 
-// Generate the 8 vertices that make up the bounding box...
+template< typename T >
+V3< T > BBox< T >::GetInf() const
+{
+	return m_inf;
+}
+
+template< typename T >
+V3< T > BBox< T >::GetSup() const
+{
+	return m_sup;
+}
+
 template< typename T >
 void BBox< T >::GenerateCorners( V3< T > * bounds )
 {
-	bounds[ 0 ] = V3< T >( inf.x, inf.y, inf.z );
-	bounds[ 1 ] = V3< T >( sup.x, inf.y, inf.z );
-	bounds[ 2 ] = V3< T >( inf.x, sup.y, inf.z );
-	bounds[ 3 ] = V3< T >( sup.x, sup.y, inf.z );
-	bounds[ 4 ] = V3< T >( inf.x, inf.y, sup.z );
-	bounds[ 5 ] = V3< T >( sup.x, inf.y, sup.z );
-	bounds[ 6 ] = V3< T >( inf.x, sup.y, sup.z );
-	bounds[ 7 ] = V3< T >( sup.x, sup.y, sup.z );
+	bounds[ 0 ] = { m_inf.x, m_inf.y, m_inf.z };
+	bounds[ 1 ] = { m_sup.x, m_inf.y, m_inf.z };
+	bounds[ 2 ] = { m_inf.x, m_sup.y, m_inf.z };
+	bounds[ 3 ] = { m_sup.x, m_sup.y, m_inf.z };
+	bounds[ 4 ] = { m_inf.x, m_inf.y, m_sup.z };
+	bounds[ 5 ] = { m_sup.x, m_inf.y, m_sup.z };
+	bounds[ 6 ] = { m_inf.x, m_sup.y, m_sup.z };
+	bounds[ 7 ] = { m_sup.x, m_sup.y, m_sup.z };
 }
 
 template< typename T >
 void BBox< T >::Clear()
 {
-	inf = sup = unify::V3< T >( T{}, T{}, T{} );
+	m_inf = m_sup = unify::V3< T >( T{}, T{}, T{} );
 }
 
 template< typename T >
 bool BBox< T >::ContainsPoint( const V3< T > & point )
 {
-	if( ( point.x <= sup.x && point.x >= inf.x ) && ( point.y <= sup.y && point.y >= inf.y ) && ( point.z <= sup.z && point.z >= inf.z ) )
+	if( ( point.x <= m_sup.x && point.x >= m_inf.x ) && ( point.y <= m_sup.y && point.y >= m_inf.y ) && ( point.z <= m_sup.z && point.z >= m_inf.z ) )
 	{
 		return true;
 	}
@@ -125,8 +137,8 @@ bool BBox< T >::ContainsPoint( const V3< T > & point )
 template< typename T >
 BBox< T > & BBox< T >::AddBBoxWithPosition( const BBox< T > & boundingBox, const V3< T > & position )
 {
-	*this += boundingBox.sup + position;
-	*this += boundingBox.inf + position;
+	*this += boundingBox.m_sup + position;
+	*this += boundingBox.m_inf + position;
 
 	return *this;
 }
@@ -144,24 +156,24 @@ void BBox< T >::AddPoints( const unify::V3< T > * const points, size_t size )
 template< typename T >
 const Size3< T > BBox< T >::Size() const
 {
-	V3< T > sizeV3( sup - inf );
+	V3< T > sizeV3( m_sup - m_inf );
 	return Size3< T >( sizeV3.x, sizeV3.y, sizeV3.z );
 }
 
 template< typename T >
 void BBox< T >::Fix()
 {
-	if( sup.x < inf.x )
+	if(m_sup.x < m_inf.x )
 	{
-		std::swap( sup.x, inf.x );
+		std::swap( m_sup.x, m_inf.x );
 	}
-	if( sup.y < inf.y )
+	if(m_sup.y < m_inf.y )
 	{
-		std::swap( sup.y, inf.y );
+		std::swap( m_sup.y, m_inf.y );
 	}
-	if( sup.z < inf.z )
+	if(m_sup.z < m_inf.z )
 	{
-		std::swap( sup.z, inf.z );
+		std::swap( m_sup.z, m_inf.z );
 	}
 }
 
@@ -169,8 +181,8 @@ template< typename T >
 bool BBox< T >::Intersects( const Ray & ray ) const
 {
 	V3< float > d = ( ray.direction + 6 - ray.origin ) * 0.5f;
-	V3< float > e = ( sup - inf ) * 0.5f;
-	V3< float > c = ray.origin + d - ( inf + sup ) * 0.5f;
+	V3< float > e = (m_sup - m_inf ) * 0.5f;
+	V3< float > c = ray.origin + d - ( m_inf + m_sup ) * 0.5f;
 	V3< float > ad = d.Absolute();
 
 	const float EPSILON = std::numeric_limits< float >::epsilon();
@@ -193,10 +205,10 @@ bool BBox< T >::Intersects( const Ray & ray, float distanceBegin, float distance
 	V3< float > invDirection = ray.InvDirection();
 	V3< int > raySign = ray.Sign();
 
-	tmin = ( (raySign.x == 0 ? inf.x : sup.x) - ray.origin.x) * invDirection.x;
-	tmax = ( (raySign.x != 0 ? inf.x : sup.x) - ray.origin.x) * invDirection.x;
-	tymin = ( (raySign.y == 0 ? inf.y : sup.y) - ray.origin.y) * invDirection.y;
-	tymax = ( (raySign.y != 0 ? inf.y : sup.y) - ray.origin.y) * invDirection.y;
+	tmin = ( (raySign.x == 0 ? m_inf.x : m_sup.x) - ray.origin.x) * invDirection.x;
+	tmax = ( (raySign.x != 0 ? m_inf.x : m_sup.x) - ray.origin.x) * invDirection.x;
+	tymin = ( (raySign.y == 0 ? m_inf.y : m_sup.y) - ray.origin.y) * invDirection.y;
+	tymax = ( (raySign.y != 0 ? m_inf.y : m_sup.y) - ray.origin.y) * invDirection.y;
 	if( (tmin > tymax) || (tymin > tmax) )
 	{
 		return false;
@@ -209,8 +221,8 @@ bool BBox< T >::Intersects( const Ray & ray, float distanceBegin, float distance
 	{
 		tmax = tymax;
 	}
-	tzmin = ( (raySign.z == 0 ? inf.z : sup.z) - ray.origin.z) * invDirection.z;
-	tzmax = ( (raySign.z != 0 ? inf.z : sup.z) - ray.origin.z) * invDirection.z;
+	tzmin = ( (raySign.z == 0 ? m_inf.z : m_sup.z) - ray.origin.z) * invDirection.z;
+	tzmax = ( (raySign.z != 0 ? m_inf.z : m_sup.z) - ray.origin.z) * invDirection.z;
 	if( (tmin > tzmax) || (tzmin > tmax) )
 	{
 		return false;
@@ -235,7 +247,7 @@ bool BBox< T >::Intersects( const Ray & ray, float & distance ) const
 	auto sign = ray.Sign();
 	auto invdir = ray.InvDirection();
 
-	unify::V3< float > bounds[] = { inf, sup };
+	unify::V3< float > bounds[] = { m_inf, m_sup };
 
 	tmin = ( bounds[sign.x].x - orig.x ) * invdir.x;
 	tmax = ( bounds[1 - sign.x].x - orig.x ) * invdir.x;
@@ -299,7 +311,7 @@ template< typename T >
 V3< T > BBox< T >::ToBarrycentric( const V3< T > & point ) const
 {
 	V3< T > size = Size();
-	V3< T > result( point - inf );
+	V3< T > result( point - m_inf );
 	return V3< T >( size.x != 0 ? ( result.x / size.x ) : 0, size.y != 0 ? (result.y / size.y) : 0, size.z != 0 ? (result.z / size.z) : 0 );
 }
 
@@ -307,7 +319,7 @@ template< typename  T >
 BSphere< T > BBox< T >::MakeBSphere() const
 {
 	BSphere< T > bsphere;
-	bsphere += sup;
-	bsphere += inf;
+	bsphere += m_sup;
+	bsphere += m_inf;
 	return bsphere;
 }

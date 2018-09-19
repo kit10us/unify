@@ -24,11 +24,18 @@ namespace unify
 	template< typename T = float >
 	class BBox
 	{
-	public:
-		V3< T > sup;
-		V3< T > inf;
+		V3< T > m_sup;
+		V3< T > m_inf;
 
+	public:
+		/// <summary>
+		/// construct an empty bounding box.
+		/// </summary>
 		BBox();
+
+		/// <summary>
+		/// Create a bouning box where inf is the inferior value (smallest), and sup is the superior value (largest). 
+		/// </summary>
 		BBox( const V3< T > & inf, const V3< T > & sup );
 		
 		/// <summary>
@@ -47,6 +54,16 @@ namespace unify
 
 		BBox< T > operator + ( const BBox< T > & bbox ) const;
 		BBox< T > & operator += ( const BBox< T > & bbox );
+
+		/// <summary>
+		/// Get the inferior position of the bounding box (smallest).
+		/// </summary>
+		V3< T > GetInf() const;
+
+		/// <summary>
+		/// Get the superior position of the bounding box (largest).
+		/// </summary>
+		V3< T > GetSup() const;
 
 		/// <summary>
 		/// Populates an array of vectors the vertices of the bounding box's corners.
@@ -100,9 +117,9 @@ namespace unify
 		/// </summary>		
 		bool Intersects( const Ray & ray ) const;
 
-		/// <description>
+		/// <summary>
 		/// Takes a point and returns a new point barrycentric to the bounding box.
-		/// </description>
+		/// </summary>
 		V3< T > ToBarrycentric( const V3< T > & point ) const;
 
 		/// <summary>
@@ -111,7 +128,11 @@ namespace unify
 		BSphere< T > MakeBSphere() const;
 
 	private:
-		void Fix(); // Ensures our sup is superior and our inf, inferior.
+
+		/// <summary>
+		/// Ensures our sup is superior and our inf, inferior.
+		/// </summary>
+		void Fix();
 	};
 
 	#include <unify/BBox.inl>

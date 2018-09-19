@@ -11,6 +11,8 @@
 #include <unify/BBox.h>
 #include <unify/test/Suite.h>
 
+#include <unify/V3.h>
+
 int main( int argc, char ** argv )
 {
 	using namespace unify;
@@ -59,11 +61,11 @@ int main( int argc, char ** argv )
 			V4< float > transformedV4( 6, 7, 8, 9 );
 			V2< float > transformedNormalV2( 1, 2 );
 			V3< float > transformedNormalV3( 3, 4, 5 );
-			final.TransformCoord( transformedCoordV2 );
-			final.TransformCoord( transformedCoordV3 );
-			final.TransformNormal( transformedNormalV2 );
-			final.TransformNormal( transformedNormalV3 );
-			final.Transform( transformedV4 );
+			transformedCoordV2 = final.TransformCoord( transformedCoordV2 );
+			transformedCoordV3 = final.TransformCoord( transformedCoordV3 );
+			transformedNormalV2 = final.TransformNormal( transformedNormalV2 );
+			transformedNormalV3 = final.TransformNormal( transformedNormalV3 );
+			transformedV4 = final.Transform( transformedV4 );
 			suite.Assert( "transformedCoordV2.x", transformedCoordV2.x == 11.0f );
 			suite.Assert( "transformedCoordV2.y", transformedCoordV2.y == 202.0f );
 			suite.Assert( "transformedCoordV3.x", transformedCoordV3.x == 31.0f );

@@ -34,11 +34,10 @@ Angle unify::AnglePIHalf()
 	return AngleInRadians( 3.14159265f * 0.5f );
 }
 
-Angle unify::AngleZero()
+Angle::Angle()
+	: m_radians( 0.0f )
 {
-	return AngleInRadians( 0.0f );
 }
-
 
 Angle::Angle( float radians )
 : m_radians( radians )
@@ -58,11 +57,6 @@ Angle::Angle( std::string angle )
 		angle.pop_back();
 		m_radians = (float)atof( angle.c_str() );
 	}
-}
-
-Angle::Angle()
-: m_radians( 0.0f )
-{
 }
 
 Angle::Angle( const Angle & angle )

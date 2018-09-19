@@ -8,6 +8,9 @@
 
 namespace unify
 {
+	/// <summary>
+	/// Order of color components.
+	/// </summary>
 	class FrameLite
 	{
 	public:

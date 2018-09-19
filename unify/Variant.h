@@ -1,10 +1,6 @@
 // Copyright (c) 2002 - 2019, Evil Quail LLC
 // All Rights Reserved
 
-///<summary>
-/// A variant allowing simple storage and conversion amongst POD types.
-///</summary>
-
 #pragma once
 
 #include <unify/Unify.h>
@@ -12,6 +8,9 @@
 
 namespace unify 
 {
+	/// <summary>
+	/// A variant allowing simple storage and conversion amongst POD types.
+	/// </summary>
 	class Variant
 	{
 	public:

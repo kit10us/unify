@@ -118,18 +118,16 @@ namespace unify
 		void Transpose();
 		void Transpose( const Matrix & matrix );
 
-		void TransformCoord( V2< float > & v2 ) const;
-		void TransformCoord( V3< float > & v3 ) const;
+		V2< float > TransformCoord( const V2< float > v2 ) const;
+		V3< float > TransformCoord( const V3< float > v3 ) const;
 
 		void TransformCoords( V2< float > * coords, size_t size ) const;
 		void TransformCoords( V3< float > * coords, size_t size ) const;
 
-		V2< float > TransformCoord_Copy( const V2< float > & v2 ) const;
-		V3< float > TransformCoord_Copy( const V3< float > & v3 ) const;
-		void TransformNormal( V2< float > & v2 ) const;
-		void TransformNormal( V3< float > & v3 ) const;
-
-		void Transform( V4< float > & v4 ) const;
+		V2< float > TransformNormal( const V2< float > v2 ) const;
+		V3< float > TransformNormal( const V3< float > v3 ) const;
+		
+		V4< float > Transform( V4< float > v4 ) const;
 	
 		Ray TransformRay( Ray ray ) const;
 		BBox< float > TransformBBox( BBox< float > bbox ) const;

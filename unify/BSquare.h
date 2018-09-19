@@ -7,6 +7,9 @@
 
 namespace unify
 {
+	/// <summary>
+	/// A boudning sphere.
+	/// </summary>
 	template< typename T >
 	class BSquare
 	{

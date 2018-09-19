@@ -6,7 +6,7 @@ LinkList< T >::LinkList()
 : m_pFirst( 0 )
 , m_pLast( 0 )
 , m_uCount( 0 )
-, m_uLisFlags( FLAGNULL )
+, m_uLisFlags( FLAG00 )
 {
 }
 
@@ -54,7 +54,7 @@ void LinkList< T >::Clear()
 template< typename T >
 T* LinkList< T >::AddItem( T * item, std::string sName )
 {
-	return AddItem( item, FLAGNULL, 0.0f, sName );
+	return AddItem( item, FLAG00, 0.0f, sName );
 }
 
 template< typename T >
@@ -66,7 +66,7 @@ T * LinkList< T >::AddItem( T * item, unsigned int uFlags, std::string sName )
 template< typename T >
 T * LinkList< T >::AddItem( T * item, float fSortValue, std::string sName )
 {
-	return AddItem( item, FLAGNULL, fSortValue, sName );
+	return AddItem( item, FLAG00, fSortValue, sName );
 }
 
 template< typename T> 

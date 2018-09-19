@@ -9,9 +9,9 @@
 
 namespace unify 
 {
-	/// <description>
+	/// <summary>
 	/// Perform stream operation on a file source.
-	/// </description>
+	/// </summary>
 	class FileStream : public Stream
 	{
 	public:

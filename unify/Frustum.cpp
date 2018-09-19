@@ -155,7 +155,7 @@ void Frustum::Calculate( const unify::Matrix & worldViewProjection )
 	int i;
 	for( i = 0; i < 8; i++ )
 	{
-		result.TransformCoord( m_vCorner[i] );
+		m_vCorner[i] = result.TransformCoord( m_vCorner[i] );
 	}
 
 	m_Plane[PLANE_NEAR] = unify::Plane::PlaneFromPoints( m_vCorner[ CORNER_xyz ], m_vCorner[ CORNER_Xyz ], m_vCorner[ CORNER_xYz ] );

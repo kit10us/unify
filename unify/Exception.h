@@ -9,7 +9,10 @@
 
 namespace unify
 {
-    class Exception : public std::exception
+	/// <summary>
+	/// A standardized exception.
+	/// </summary>
+	class Exception : public std::exception
     {
     public:
         Exception( std::string what )

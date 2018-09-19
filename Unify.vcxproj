@@ -53,7 +53,6 @@
     <ClInclude Include="unify\Color.h" />
     <ClInclude Include="unify\ColorUnit.h" />
     <ClInclude Include="unify\DataLock.h" />
-    <ClInclude Include="unify\Dynamic.h" />
     <ClInclude Include="unify\Exception.h" />
     <ClInclude Include="unify\FrameLite.h" />
     <ClInclude Include="unify\FrameSetInstance.h" />
@@ -106,7 +105,6 @@
     <None Include="unify\BSphere.inl" />
     <None Include="unify\BSquare.inl" />
     <None Include="unify\Cast.inl" />
-    <None Include="unify\Dynamic.inl" />
     <None Include="unify\LinkList.inl" />
     <None Include="unify\List.inl" />
     <None Include="unify\Math.inl" />

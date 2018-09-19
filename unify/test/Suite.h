@@ -14,46 +14,46 @@ namespace unify
 {
 	namespace test
 	{
-		/// <description>
+		/// <summary>
 		/// Used to test various features in a uniformed matter.
-		/// </description>
+		/// </summary>
 		class Suite
 		{
 		public:
 			Suite();
 			virtual ~Suite();
 
-			/// <description>
+			/// <summary>
 			/// Triggered when a suite begins.
-			/// </description>
+			/// </summary>
 			void BeginSuite( std::string name );
 
-			/// <description>
+			/// <summary>
 			/// Triggered when a suite ends.
-			/// </description>
+			/// </summary>
 			void EndSuite();
 
-			/// <description>
+			/// <summary>
 			/// Triggered when a test begins.
-			/// </description>
+			/// </summary>
 			void BeginCase( std::string name );
 
-			/// <description>
+			/// <summary>
 			/// Triggered when a test ends.
-			/// </description>
+			/// </summary>
 			void EndCase();
 
-			/// <description>
+			/// <summary>
 			/// Call to report information.
 			/// </desciption>
 			void Info( std::string message );
 
-			/// <description>
+			/// <summary>
 			/// Called to report a warning.
 			/// </desciption>
 			void Warning( std::string message );
 
-			/// <description>
+			/// <summary>
 			/// Called on an assertion.
 			/// </desciption>
 			void Assert( std::string message, bool test );

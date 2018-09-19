@@ -8,6 +8,9 @@
 
 namespace unify
 {
+	/// <summary>
+	/// A data lock construct that allows common locking of data so that we can read and write from shared the data.
+	/// </summary>
 	class DataLock
 	{
 	public:

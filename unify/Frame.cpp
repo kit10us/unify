@@ -290,7 +290,7 @@ Frame & Frame::LookAt( const V3< float > & at, const V3< float > & up )
 	{
 		Matrix mTrans = GetParent()->GetFinalMatrix();
 		mTrans.Invert();
-		mTrans.TransformCoord( atFinal );
+		atFinal = mTrans.TransformCoord( atFinal );
 	}
 
 	V3< float > eyePosition = m_matrix.GetPosition();
@@ -351,8 +351,7 @@ Frame & Frame::MoveBy( const V3< float > & by )
 // Slide along an axis (relative to our axis, thus +Z is forward)
 Frame & Frame::Slide( const V3< float > & axis, float amount )
 {
-	V3< float > vTransAxis( axis );
-	m_matrix.TransformNormal( vTransAxis );
+	V3< float > vTransAxis{ m_matrix.TransformNormal( axis ) };
 	m_matrix.SetPosition( m_matrix.GetPosition() + (vTransAxis * amount) );
 	MakeDirty();
 	return *this;
@@ -366,7 +365,7 @@ Frame & Frame::Orbit( const V3< float > & origin, const V2< float > & direction,
 	unify::V3< float > relativeOrigin = origin;
 	if ( GetParent() )
 	{
-		GetParent()->GetFinalMatrix().Inverse().TransformCoord( relativeOrigin );
+		relativeOrigin = GetParent()->GetFinalMatrix().Inverse().TransformCoord( relativeOrigin );
 	}
 
 	// Re-origin our position...

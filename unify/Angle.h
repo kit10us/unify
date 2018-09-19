@@ -14,20 +14,52 @@ namespace unify
 	/// </summary>
 	class Angle
     {
+		/// <definition>
+		/// Construct an angle from radians.
+		/// </definition>
 		friend Angle AngleInRadians( float radians );
+
+		/// <definition>
+		/// Construct an angle from degrees.
+		/// </definition>
 		friend Angle AngleInDegrees( float degrees );
+
+		/// <definition>
+		/// Construct an angle with the value of pi.
+		/// </definition>
 		friend Angle AnglePI();
+
+		/// <definition>
+		/// Construct an angle with the value of pi * 2.
+		/// </definition>
 		friend Angle AnglePI2();
+
+		/// <definition>
+		/// Construct an angle with the value of half pi.
+		/// </definition>
 		friend Angle AnglePIHalf();
-		friend Angle AngleZero();
 		
-        Angle( float radians );
 		float m_radians; // We store in radians, and convert what ever time delta format.
 
-    public:
+		/// <definition>
+		/// Construct an angle in radians.
+		/// </definition>
+		Angle( float radians );
 
+	public:
+		/// <definition>
+		/// Construct an angle to the value of zero.
+		/// </definition>
 		Angle();
+	
+		/// <definition>
+		///  Copy constructor.
+		/// </definition>
 		Angle( const Angle & angle );
+
+		/// <definition>
+		/// Construct an angle from a string.
+		/// </definition>
 		Angle( std::string angle );
 
 		Angle & operator = ( const Angle & angle );
@@ -83,13 +115,32 @@ namespace unify
 
 		/// <summary>
 		/// Convert from radians to a string.
+		/// </summary>
 		std::string ToString( bool radians = true ) const;
-    };
+	};
 
+	/// <definition>
+	/// Construct an angle from radians.
+	/// </definition>
 	Angle AngleInRadians( float radians );
+
+	/// <definition>
+	/// Construct an angle from degrees.
+	/// </definition>
 	Angle AngleInDegrees( float degrees );
+
+	/// <definition>
+	/// Construct an angle with the value of pi.
+	/// </definition>
 	Angle AnglePI();
+
+	/// <definition>
+	/// Construct an angle with the value of pi * 2.
+	/// </definition>
 	Angle AnglePI2();
+
+	/// <definition>
+	/// Construct an angle with rthe value of half pi.
+	/// </definition>
 	Angle AnglePIHalf();
-	Angle AngleZero();
 }

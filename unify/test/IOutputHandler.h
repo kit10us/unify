@@ -11,9 +11,9 @@ namespace unify
 {
 	namespace test
 	{
-		/// <description>
+		/// <summary>
 		/// The type of output. Allows the same interface for each output type.
-		/// </description>
+		/// </summary>
 		enum class OutputType
 		{
 			Info,
@@ -21,9 +21,9 @@ namespace unify
 			COUNT
 		};
 
-		/// <description>
+		/// <summary>
 		/// Interface for handling an assertion.
-		/// </description>
+		/// </summary>
 		class IOutputHandler
 		{
 		public:

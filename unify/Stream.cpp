@@ -8,7 +8,7 @@
 using namespace unify;
 
 Stream::Stream()
-: m_uFlags{ FLAGNULL }
+: m_uFlags{ FLAG00 }
 , m_pStream{ 0 }
 , m_bEndOfStream{ false }
 , m_uBytesWaiting{ 0 }

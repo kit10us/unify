@@ -11,9 +11,9 @@ namespace unify
 {
 	namespace test
 	{
-		/// <description>
+		/// <summary>
 		/// Interface for handling an assertion.
-		/// </description>
+		/// </summary>
 		class IAssertHandler
 		{
 		public:

@@ -18,9 +18,9 @@ namespace unify
 		public:
 			virtual ~DefaultOutputHandler();
 
-			/// <description>
+			/// <summary>
 			/// Called for output of message.
-			/// </description>
+			/// </summary>
 			/// <param name="message">
 			/// Message for the assert.
 			/// </param>

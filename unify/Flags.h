@@ -7,9 +7,12 @@
 
 namespace unify
 {
-	// Bit Macros
+	/// <summary>
+	/// A type def to represent a bit flag value. More so code purpose is mode obvious.
+	/// </summary>
 	typedef unsigned int	Flags;
-	#define FLAGNULL		0x00000000
+
+	#define FLAG00		0x00000000
 	#define FLAG01			0x00000001
 	#define FLAG02			0x00000002
 	#define FLAG03			0x00000004

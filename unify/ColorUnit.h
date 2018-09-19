@@ -10,7 +10,9 @@ namespace unify
 {
 	class Color;
 
-	// A color whose components are normalized (0.0 to 1.0) at standard/real ranges.
+	/// <summary>
+	// Definition of colors whose components are normalized (0.0 to 1.0) at common ranges.
+	/// </summary>
 	class ColorUnit
 	{
 	public:

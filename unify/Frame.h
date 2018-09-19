@@ -10,9 +10,9 @@
 
 namespace unify
 {
-	///
+	/// <summary>
 	/// Frame provides a hierarchical relationship structure for the purpose of providing relative transformation in a rendering or physics pipeline.
-	///
+	/// </summary>
 	class Frame
 	{
 	public:

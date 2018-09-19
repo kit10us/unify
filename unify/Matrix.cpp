@@ -777,17 +777,21 @@ void Matrix::Transpose( const Matrix & matrix )
 	Transpose();
 }
 
-void Matrix::TransformCoord( V2< float > & coord ) const
+V2< float > Matrix::TransformCoord( const V2< float > coord ) const
 {
-	coord.x = m[0][0] * coord.x + m[1][0] * coord.y + m[2][0] * 1.0f + m[3][0] * 1.0f;
-	coord.y = m[0][1] * coord.x + m[1][1] * coord.y + m[2][1] * 1.0f + m[3][1] * 1.0f;
+	auto coordOut{ coord };
+	coordOut.x = m[0][0] * coordOut.x + m[1][0] * coordOut.y + m[2][0] * 1.0f + m[3][0] * 1.0f;
+	coordOut.y = m[0][1] * coordOut.x + m[1][1] * coordOut.y + m[2][1] * 1.0f + m[3][1] * 1.0f;
+	return coordOut;
 }
 
-void Matrix::TransformCoord( V3< float > & coord ) const
+V3< float > Matrix::TransformCoord( const V3< float > coord ) const
 {
-	coord.x = m[0][0] * coord.x + m[1][0] * coord.y + m[2][0] * coord.z + m[3][0] * 1.0f;
-	coord.y = m[0][1] * coord.x + m[1][1] * coord.y + m[2][1] * coord.z + m[3][1] * 1.0f;
-	coord.z = m[0][2] * coord.x + m[1][2] * coord.y + m[2][2] * coord.z + m[3][2] * 1.0f;
+	auto coordOut{ coord };
+	coordOut.x = m[0][0] * coordOut.x + m[1][0] * coordOut.y + m[2][0] * coordOut.z + m[3][0] * 1.0f;
+	coordOut.y = m[0][1] * coordOut.x + m[1][1] * coordOut.y + m[2][1] * coordOut.z + m[3][1] * 1.0f;
+	coordOut.z = m[0][2] * coordOut.x + m[1][2] * coordOut.y + m[2][2] * coordOut.z + m[3][2] * 1.0f;
+	return coordOut;
 }
 
 void Matrix::TransformCoords( V2< float > * coords, size_t size ) const
@@ -811,62 +815,50 @@ void Matrix::TransformCoords( V3< float > * coords, size_t size ) const
 	}
 }
 
-
-unify::V2< float > Matrix::TransformCoord_Copy( const unify::V2< float > & coord ) const
+V2< float > Matrix::TransformNormal( const V2< float > coord ) const
 {
-	unify::V2< float > copy( coord );
-	TransformCoord( copy );
-	return copy;
+	V2< float > coordOut{ coord };
+	coordOut.x = m[0][0] * coordOut.x + m[1][0] * coordOut.y + m[2][0] * 0.0f + m[3][0] * 0.0f;
+	coordOut.y = m[0][1] * coordOut.x + m[1][1] * coordOut.y + m[2][1] * 0.0f + m[3][1] * 0.0f;
+	return coordOut;
 }
 
-unify::V3< float > Matrix::TransformCoord_Copy( const unify::V3< float > & coord ) const
+V3< float > Matrix::TransformNormal( const V3< float > coord ) const
 {
-	unify::V3< float > copy( coord );
-	TransformCoord( copy );
-	return copy;
+	V3< float > coordOut{ coord };
+	coordOut.x = m[0][0] * coordOut.x + m[1][0] * coordOut.y + m[2][0] * coordOut.z + m[3][0] * 0.0f;
+	coordOut.y = m[0][1] * coordOut.x + m[1][1] * coordOut.y + m[2][1] * coordOut.z + m[3][1] * 0.0f;
+	coordOut.z = m[0][2] * coordOut.x + m[1][2] * coordOut.y + m[2][2] * coordOut.z + m[3][2] * 0.0f;
+	return coordOut;
 }
 
-void Matrix::TransformNormal( V2< float > & coord ) const
+V4< float > Matrix::Transform( const V4< float > coord ) const
 {
-	coord.x = m[0][0] * coord.x + m[1][0] * coord.y + m[2][0] * 0.0f + m[3][0] * 0.0f;
-	coord.y = m[0][1] * coord.x + m[1][1] * coord.y + m[2][1] * 0.0f + m[3][1] * 0.0f;
-}
-
-void Matrix::TransformNormal( V3< float > & coord ) const
-{
-	coord.x = m[0][0] * coord.x + m[1][0] * coord.y + m[2][0] * coord.z + m[3][0] * 0.0f;
-	coord.y = m[0][1] * coord.x + m[1][1] * coord.y + m[2][1] * coord.z + m[3][1] * 0.0f;
-	coord.z = m[0][2] * coord.x + m[1][2] * coord.y + m[2][2] * coord.z + m[3][2] * 0.0f;
-}
-
-void Matrix::Transform( V4< float > & coord ) const
-{
-	coord.x = m[0][0] * coord.x + m[1][0] * coord.y + m[2][0] * coord.z + m[3][0] * coord.w;
-	coord.y = m[0][1] * coord.x + m[1][1] * coord.y + m[2][1] * coord.z + m[3][1] * coord.w;
-	coord.z = m[0][2] * coord.x + m[1][2] * coord.y + m[2][2] * coord.z + m[3][2] * coord.w;
-	coord.w = m[0][3] * coord.x + m[1][3] * coord.y + m[2][3] * coord.z + m[3][3] * coord.w;
+	V4< float > coordOut{ coord };
+	coordOut.x = m[0][0] * coordOut.x + m[1][0] * coordOut.y + m[2][0] * coordOut.z + m[3][0] * coordOut.w;
+	coordOut.y = m[0][1] * coordOut.x + m[1][1] * coordOut.y + m[2][1] * coordOut.z + m[3][1] * coordOut.w;
+	coordOut.z = m[0][2] * coordOut.x + m[1][2] * coordOut.y + m[2][2] * coordOut.z + m[3][2] * coordOut.w;
+	coordOut.w = m[0][3] * coordOut.x + m[1][3] * coordOut.y + m[2][3] * coordOut.z + m[3][3] * coordOut.w;
+	return coordOut;
 }
 
 Ray Matrix::TransformRay( Ray ray ) const
 {
 	Ray out{ ray };
-	TransformCoord( out.origin );
-	TransformNormal( out.direction );
+	out.origin = TransformCoord( out.origin );
+	out.direction = TransformNormal( out.direction );
 	return out;
 }
 
 BBox< float > Matrix::TransformBBox( BBox< float > bbox ) const
 {
-	BBox< float > out{ bbox };
-	TransformCoord( out.inf );
-	TransformCoord( out.sup );
+	BBox< float > out= { TransformCoord( bbox.GetInf() ), TransformCoord( bbox.GetSup() ) };
 	return out;
 }
 
 BSphere< float > Matrix::TransformBSphere( BSphere< float > bsphere ) const
 {
-	V3< float > center{ bsphere.GetCenter() };
-	TransformCoord( center );
+	V3< float > center{ TransformCoord( bsphere.GetCenter() ) };
 	BSphere< float > out{ center, bsphere.GetRadius() };
 	return out;
 }
