@@ -8,88 +8,87 @@
 
 using namespace unify;
 
-Color Color::ColorRGBA( Color::Component r, Color::Component g, Color::Component b, Color::Component a )
+Color unify::ColorRGBA( Color::Component r, Color::Component g, Color::Component b, Color::Component a )
 {
 	return Color( r, g, b, a );
 }
 
-Color Color::ColorRGBA( unsigned int rgba )
+Color unify::ColorRGBA( unsigned int rgba )
 {
 	int r = (rgba >> 24) & 0x000000FF;
 	int g = (rgba >> 16) & 0x000000FF;
 	int b = (rgba >> 8) & 0x000000FF;
 	int a = (rgba >> 0) & 0x000000FF;
-	return Color::ColorRGBA( (Component)r, (Component)g, (Component)b, (Component)a );
+	return ColorRGBA( (Color::Component)r, (Color::Component)g, (Color::Component)b, (Color::Component)a );
 }
 
-Color Color::ColorARGB( Color::Component a, Color::Component r, Color::Component g, Color::Component b )
+Color unify::ColorARGB( Color::Component a, Color::Component r, Color::Component g, Color::Component b )
 {
-	return Color::ColorRGBA( r, g, b, a );
+	return ColorRGBA( r, g, b, a );
 }
 
-Color Color::ColorARGB( unsigned int argb )
+Color unify::ColorARGB( unsigned int argb )
 {
 	int a = (argb >> 24) & 0x000000FF;
 	int r = (argb >> 16) & 0x000000FF;
 	int g = (argb >> 8) & 0x000000FF;
 	int b = (argb >> 0) & 0x000000FF;
-	return Color::ColorARGB( (Component)a, (Component)r, (Component)g, (Component)b );
+	return ColorARGB( (Color::Component)a, (Color::Component)r, (Color::Component)g, (Color::Component)b );
 }
 
-Color Color::ColorRGB( Color::Component r, Color::Component g, Color::Component b )
+Color unify::ColorRGB( Color::Component r, Color::Component g, Color::Component b )
 {
-	return Color::ColorRGBA( r, g, b, 255 );
+	return ColorRGBA( r, g, b, 255 );
 }
 
-Color Color::ColorWhite( Component a )
+Color unify::ColorWhite( Color::Component a )
 {
-	return Color::ColorRGBA( 255, 255, 255, a );
+	return ColorRGBA( 255, 255, 255, a );
 }
 
-
-Color Color::ColorRed( Color::Component r, Color::Component a )
+Color unify::ColorRed( Color::Component r, Color::Component a )
 {
-	return Color::ColorRGBA( r, 0, 0, a );
+	return ColorRGBA( r, 0, 0, a );
 }
 
-Color Color::ColorGreen( Color::Component g, Color::Component a )
+Color unify::ColorGreen( Color::Component g, Color::Component a )
 {
-	return Color::ColorRGBA( 0, g, 0, a );
+	return ColorRGBA( 0, g, 0, a );
 }
 
-Color Color::ColorBlue( Color::Component b, Color::Component a )
+Color unify::ColorBlue( Color::Component b, Color::Component a )
 {
-	return Color::ColorRGBA( 0, 0, b, a );
+	return ColorRGBA( 0, 0, b, a );
 }
 
-Color Color::ColorYellow( Color::Component y, Color::Component a )
+Color unify::ColorYellow( Color::Component y, Color::Component a )
 {
-	return Color::ColorRGBA( y, y, 0, a );
+	return ColorRGBA( y, y, 0, a );
 }
 
-Color Color::ColorCyan( Color::Component c, Color::Component a )
+Color unify::ColorCyan( Color::Component c, Color::Component a )
 {
-	return Color::ColorRGBA( 0, c, c, a );
+	return ColorRGBA( 0, c, c, a );
 }
 
-Color Color::ColorMagenta( Color::Component m, Color::Component a )
+Color unify::ColorMagenta( Color::Component m, Color::Component a )
 {
-	return Color::ColorRGBA( m, 0, m, a );
+	return ColorRGBA( m, 0, m, a );
 }
 
-Color Color::ColorGrey( Color::Component grey, Color::Component a )
+Color unify::ColorGrey( Color::Component grey, Color::Component a )
 {
-	return Color::ColorRGBA( grey, grey, grey, a );
+	return ColorRGBA( grey, grey, grey, a );
 }
 
-Color Color::ColorBlack( Color::Component a )
+Color unify::ColorBlack( Color::Component a )
 {
-	return Color::ColorRGBA( 0, 0, 0, a );
+	return ColorRGBA( 0, 0, 0, a );
 }
 
-Color Color::ColorZero()
+Color unify::ColorZero()
 {
-	return Color::ColorRGBA( 0, 0, 0, 0 );
+	return ColorRGBA( 0, 0, 0, 0 );
 }
 
 Color::Color()
@@ -204,7 +203,7 @@ Color::operator ColorUnit () const
 	float g = static_cast< float >( GetGreen() ) / 255.0f;
 	float b = static_cast< float >( GetBlue() ) / 255.0f;
 	float a = static_cast< float >( GetAlpha() ) / 255.0f;
-	return ColorUnit::ColorUnitRGBA( r, g, b, a );
+	return ColorUnitRGBA( r, g, b, a );
 }
 
 Color::operator unsigned int () const

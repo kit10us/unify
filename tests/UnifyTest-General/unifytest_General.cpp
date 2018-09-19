@@ -33,11 +33,11 @@ int main( int argc, char ** argv )
 		suite.EndCase();
 
 		suite.BeginCase( "Color" );
-		suite.Assert( "Color from text", Color( "255, 127, 63, 31" ) == Color::ColorRGBA( 255, 127, 63, 31 ) );
+		suite.Assert( "Color from text", Color( "255, 127, 63, 31" ) == ColorRGBA( 255, 127, 63, 31 ) );
 		suite.EndCase();
 
 		suite.BeginCase( "ColorUnit" );
-		suite.Assert( "ColorUnit from text", ColorUnit( "1, 0.5, 0.25, 0.125" ) == ColorUnit::ColorUnitRGBA( 1, 0.5, 0.25, 0.125 ) ); 
+		suite.Assert( "ColorUnit from text", ColorUnit( "1, 0.5, 0.25, 0.125" ) == ColorUnitRGBA( 1, 0.5, 0.25, 0.125 ) ); 
 		suite.EndCase();
 
 		suite.BeginCase( "Parameter" );

@@ -8,72 +8,72 @@
 
 using namespace unify;
 
-ColorUnit ColorUnit::ColorUnitRGBA( float r, float g, float b, float a )
+ColorUnit unify::ColorUnitRGBA( float r, float g, float b, float a )
 {
 	return ColorUnit( r, g, b, a );
 }
 
-ColorUnit ColorUnit::ColorUnitARGB( float a, float r, float g, float b )
+ColorUnit unify::ColorUnitARGB( float a, float r, float g, float b )
 {
-	return ColorUnit::ColorUnitRGBA( r, g, b, a );
+	return ColorUnitRGBA( r, g, b, a );
 }
 
-ColorUnit ColorUnit::ColorUnitRGB( float r, float g, float b )
+ColorUnit unify::ColorUnitRGB( float r, float g, float b )
 {
-	return ColorUnit::ColorUnitRGBA( r, g, b, 1.0f );
+	return ColorUnitRGBA( r, g, b, 1.0f );
 }
 
-ColorUnit ColorUnit::ColorUnitWhite( float a )
+ColorUnit unify::ColorUnitWhite( float a )
 {
-	return ColorUnit::ColorUnitRGBA( 1.0f, 1.0f, 1.0f, a );
+	return ColorUnitRGBA( 1.0f, 1.0f, 1.0f, a );
 }
 
-ColorUnit ColorUnit::ColorUnitRed( float r, float a )
+ColorUnit unify::ColorUnitRed( float r, float a )
 {
-	return ColorUnit::ColorUnitRGBA( r, 0.0f, 0.0f, a );
+	return ColorUnitRGBA( r, 0.0f, 0.0f, a );
 }
 
-ColorUnit ColorUnit::ColorUnitGreen( float g, float a )
+ColorUnit unify::ColorUnitGreen( float g, float a )
 {
-	return ColorUnit::ColorUnitRGBA( 0.0f, g, 0.0f, a );
+	return ColorUnitRGBA( 0.0f, g, 0.0f, a );
 }
 
-ColorUnit ColorUnit::ColorUnitBlue( float b, float a )
+ColorUnit unify::ColorUnitBlue( float b, float a )
 {
-	return ColorUnit::ColorUnitRGBA( 0.0f, 0.0f, b, a );
+	return ColorUnitRGBA( 0.0f, 0.0f, b, a );
 }
 
-ColorUnit ColorUnit::ColorUnitYellow( float b, float a )
+ColorUnit unify::ColorUnitYellow( float b, float a )
 {
-	return ColorUnit::ColorUnitRGBA( b, b, 0.0f, a );
+	return ColorUnitRGBA( b, b, 0.0f, a );
 }
 
-ColorUnit ColorUnit::ColorUnitCyan( float b, float a )
+ColorUnit unify::ColorUnitCyan( float b, float a )
 {
-	return ColorUnit::ColorUnitRGBA( b, b, 0.0f, a );
+	return ColorUnitRGBA( b, b, 0.0f, a );
 }
 
-ColorUnit ColorUnit::ColorUnitMagenta( float b, float a )
+ColorUnit unify::ColorUnitMagenta( float b, float a )
 {
-	return ColorUnit::ColorUnitRGBA( b, 0.0f, b, a );
+	return ColorUnitRGBA( b, 0.0f, b, a );
 }
 
-ColorUnit ColorUnit::ColorUnitGrey( float grey, float a )
+ColorUnit unify::ColorUnitGrey( float grey, float a )
 {
-	return ColorUnit::ColorUnitRGBA( grey, grey, grey, a );
+	return ColorUnitRGBA( grey, grey, grey, a );
 }
 
-ColorUnit ColorUnit::ColorUnitBlack( float a )
+ColorUnit unify::ColorUnitBlack( float a )
 {
-	return ColorUnit::ColorUnitRGBA( 0, 0, 0, a );
+	return ColorUnitRGBA( 0, 0, 0, a );
 }
 
-ColorUnit ColorUnit::ColorUnitZero()
+ColorUnit unify::ColorUnitZero()
 {
-	return ColorUnit::ColorUnitRGBA( 0, 0, 0, 0 );
+	return ColorUnitRGBA( 0, 0, 0, 0 );
 }
 
-ColorUnit ColorUnit::ColorUnitLerp( ColorUnit l, ColorUnit r, float ratio )
+ColorUnit unify::ColorUnitLerp( ColorUnit l, ColorUnit r, float ratio )
 {
 	return l * (1.0f - ratio) + r * ratio;
 }																  
@@ -81,7 +81,6 @@ ColorUnit ColorUnit::ColorUnitLerp( ColorUnit l, ColorUnit r, float ratio )
 ColorUnit::ColorUnit()
 {
 }
-
 
 ColorUnit::ColorUnit( float r, float g, float b, float a )
 {
@@ -182,7 +181,7 @@ ColorUnit::ColorUnit( std::string text, Order order, float defaultAlpha )
 
 ColorUnit::operator Color()
 {
-	return Color::ColorRGBA( (unsigned char)(component.r * 255.0f), (unsigned char)(component.g * 255.0f), (unsigned char)(component.b * 255.0f), (unsigned char)(component.a * 255.0f) );
+	return ColorRGBA( (unsigned char)(component.r * 255.0f), (unsigned char)(component.g * 255.0f), (unsigned char)(component.b * 255.0f), (unsigned char)(component.a * 255.0f) );
 }
 
 float ColorUnit::SumComponents()
@@ -229,47 +228,42 @@ ColorUnit & ColorUnit::operator /= ( float val )
 	return *this;
 }
 
-// binary
-
 ColorUnit ColorUnit::operator + ( const ColorUnit & col ) const
 {
-	return ColorUnit::ColorUnitARGB( component.a + col.component.a, component.r + col.component.r, component.g + col.component.g, component.b + col.component.b );
+	return ColorUnitARGB( component.a + col.component.a, component.r + col.component.r, component.g + col.component.g, component.b + col.component.b );
 }
 
 
 ColorUnit ColorUnit::operator - ( const ColorUnit & col ) const
 {
-	return ColorUnit::ColorUnitARGB( component.a - col.component.a, component.r - col.component.r, component.g - col.component.g, component.b - col.component.b );
+	return ColorUnitARGB( component.a - col.component.a, component.r - col.component.r, component.g - col.component.g, component.b - col.component.b );
 }
-
 
 ColorUnit ColorUnit::operator * ( const ColorUnit & col ) const
 {
-	return ColorUnit::ColorUnitARGB( component.a * col.component.a, component.r * col.component.r, component.g * col.component.g, component.b * col.component.b );
+	return ColorUnitARGB( component.a * col.component.a, component.r * col.component.r, component.g * col.component.g, component.b * col.component.b );
 }
 
 ColorUnit ColorUnit::operator / ( const ColorUnit & col ) const
 {
-	return ColorUnit::ColorUnitARGB( component.a / col.component.a, component.r / col.component.r, component.g / col.component.g, component.b / col.component.b );
+	return ColorUnitARGB( component.a / col.component.a, component.r / col.component.r, component.g / col.component.g, component.b / col.component.b );
 }
-
 
 ColorUnit ColorUnit::operator * ( float val ) const
 {
-	return ColorUnit::ColorUnitARGB( component.a * val, component.r * val, component.g * val, component.b * val );
+	return ColorUnitARGB( component.a * val, component.r * val, component.g * val, component.b * val );
 }
 
 
 ColorUnit ColorUnit::operator / ( float val ) const
 {
-	return ColorUnit::ColorUnitARGB( component.a / val, component.r / val, component.g / val, component.b / val );
+	return ColorUnitARGB( component.a / val, component.r / val, component.g / val, component.b / val );
 }
 
 bool ColorUnit::operator == ( const ColorUnit & col ) const
 {
 	return( component.a == col.component.a && component.r == col.component.r && component.g == col.component.g && component.b == col.component.b );
 }
-
 
 bool ColorUnit::operator != ( const ColorUnit & col ) const
 {

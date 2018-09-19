@@ -28,6 +28,22 @@ namespace unify
 	public:
 		typedef unsigned char Component;
 
+		friend Color ColorRGBA( Component r, Component g, Component b, Component a );
+		friend Color ColorRGBA( unsigned int rgba );
+		friend Color ColorARGB( Component a, Component r, Component g, Component b );
+		friend Color ColorARGB( unsigned int argb );
+		friend Color ColorRGB( Component r, Component g, Component b );
+		friend Color ColorWhite( Component a );
+		friend Color ColorRed( Component r, Component a );
+		friend Color ColorGreen( Component g, Component a );
+		friend Color ColorBlue( Component c, Component a );
+		friend Color ColorYellow( Component y, Component a );
+		friend Color ColorCyan( Component c, Component a );
+		friend Color ColorMagenta( Component m, Component a );
+		friend Color ColorGrey( Component grey, Component a );
+		friend Color ColorBlack( Component a );
+		friend Color ColorZero();
+
         union {
 		    unsigned int c;
             struct {
@@ -122,22 +138,21 @@ namespace unify
 		/// Returns a string representation fo a color.
 		/// </summary>
 		std::string ToString( Order order = RGBA ) const;
-
-		// Named constructors...
-		static Color ColorRGBA( Component r, Component g, Component b, Component a );
-		static Color ColorRGBA( unsigned int rgba );
-		static Color ColorARGB( Component a, Component r, Component g, Component b );
-		static Color ColorARGB( unsigned int argb );
-		static Color ColorRGB( Component r, Component g, Component b );
-		static Color ColorWhite( Component a = 255 );
-		static Color ColorRed( Component r = 255, Component a = 255 );
-		static Color ColorGreen( Component g = 255, Component a = 255 );
-		static Color ColorBlue( Component c = 255, Component a = 255 );
-		static Color ColorYellow( Component y = 255, Component a = 255 );
-		static Color ColorCyan( Component c = 255, Component a = 255 );
-		static Color ColorMagenta( Component m = 255, Component a = 255 );
-		static Color ColorGrey( Component grey, Component a = 255 );
-		static Color ColorBlack( Component a = 255);
-		static Color ColorZero();
 	};
+
+	Color ColorRGBA( Color::Component r, Color::Component g, Color::Component b, Color::Component a );
+	Color ColorRGBA( unsigned int rgba );
+	Color ColorARGB( Color::Component a, Color::Component r, Color::Component g, Color::Component b );
+	Color ColorARGB( unsigned int argb );
+	Color ColorRGB( Color::Component r, Color::Component g, Color::Component b );
+	Color ColorWhite( Color::Component a = 255 );
+	Color ColorRed( Color::Component r = 255, Color::Component a = 255 );
+	Color ColorGreen( Color::Component g = 255, Color::Component a = 255 );
+	Color ColorBlue( Color::Component c = 255, Color::Component a = 255 );
+	Color ColorYellow( Color::Component y = 255, Color::Component a = 255 );
+	Color ColorCyan( Color::Component c = 255, Color::Component a = 255 );
+	Color ColorMagenta( Color::Component m = 255, Color::Component a = 255 );
+	Color ColorGrey( Color::Component grey, Color::Component a = 255 );
+	Color ColorBlack( Color::Component a = 255 );
+	Color ColorZero(); 
 }
