@@ -353,6 +353,16 @@ std::string Path::ToString( Slash direction ) const
 	return temp;
 }
 
+bool Path::Delete()
+{
+	return remove( (char*)m_path.c_str() ) ? false : true;
+}
+
+bool Path::Rename( unify::Path to )
+{
+	return rename( m_path.c_str(), to.m_path.c_str() ) ? false : true;
+}
+
 std::wstring Path::ToWString( Slash direction ) const
 {
 	std::string temp( ToString( direction ) );
@@ -363,15 +373,4 @@ std::ostream & operator<<( std::ostream & os, const Path & path )
 {
 	os << path.ToString();
 	return os;
-}
-
-
-bool Path::Delete( unify::Path path )
-{
-	return remove( (char*)path.ToString().c_str() ) ? false : true;
-}
-
-bool Path::Rename( unify::Path from, unify::Path to )
-{
-	return rename( from.ToString().c_str(), to.ToString().c_str() ) ? false : true;
 }

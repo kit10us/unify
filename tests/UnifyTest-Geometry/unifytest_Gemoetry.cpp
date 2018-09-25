@@ -22,6 +22,13 @@ int main( int argc, char ** argv )
 
 	suite.BeginSuite( "Geometry" );
 	{
+		suite.BeginCase( "Angle" );
+		{
+			suite.Assert( "AnglePI = pI", AnglePI() * 2.0f == AnglePI2() );
+			suite.Assert( "AnglePI * 2 = AnglePI2", AnglePI() * 2.0f == AnglePI2() );
+			suite.Assert( "AnglePI / 2 = AngleHalf", AnglePI() * 0.5f == AnglePIHalf() );
+		}
+		suite.EndCase();
 
 		suite.BeginCase( "Matrix Identity" );
 		{

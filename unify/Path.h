@@ -104,12 +104,12 @@ namespace unify
 		/// <summary>
 		/// Delete a path.
 		/// </summary>
-		static bool Delete( unify::Path path );
+		bool Delete();
 
 		/// <summary>
 		/// Rename a path.
 		/// </summary>
-		static bool Rename( unify::Path from, unify::Path to );
+		bool Rename( unify::Path to );
 	};
 }
 

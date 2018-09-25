@@ -130,7 +130,7 @@ int main( int argc, char ** argv )
 
 			suite.BeginCase( "Rename" );
 			Path fileTo( "test_renamed.txt" );
-			if( ! Path::Rename( file, fileTo ) || ! fileTo.Exists() )
+			if( ! file.Rename( fileTo ) || ! fileTo.Exists() )
 			{
 				cout << "  result: fail" << endl;
 			}
@@ -141,7 +141,7 @@ int main( int argc, char ** argv )
 			suite.EndCase();
 
 			suite.BeginCase( "Delete" );
-			if( !Path::Delete( fileTo ) || fileTo.Exists() )
+			if( ! fileTo.Delete() || fileTo.Exists() )
 			{
 				cout << "  result: fail" << endl;
 			}
