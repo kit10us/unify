@@ -17,11 +17,17 @@ namespace unify
 
 	class Path	
 	{
-		std::string m_path;
 	public:
+		static const std::string XPathPrefix;
+
+		/// <summary>
+		/// Returns true if the Path is a file.
+		/// </summary>
+		static bool IsXPath( std::string path );
+
 		Path();
 		explicit Path( std::string path );
-		explicit Path( const char * const path );
+		explicit Path( char * path );
 		Path( const Path & left, const Path & right );
 		Path( const std::vector< std::string > & pathParts );
 
@@ -87,19 +93,34 @@ namespace unify
 		std::string ToString() const;
 
 		/// <summary>
-		/// Returns a wide string representation of the path maintaining the original slash directions."
-		/// </summary?
-		std::wstring ToWString() const;
-
-		/// <summary>
 		/// Returns a string with all slashes in a uniform direction.
 		/// </summary>
 		std::string ToString( Slash direction ) const;
 
 		/// <summary>
+		/// Returns a wide string representation of the path maintaining the original slash directions."
+		/// </summary?
+		std::wstring ToWString() const;
+
+		/// <summary>
 		/// Returns a wide string with all slashes in a uniform direction.
 		/// </summary>
 		std::wstring ToWString( Slash direction ) const;
+
+		/// <summary>
+		/// Returns an XPath string representation of the path maintaining the original slash directions."
+		/// </summary?
+		std::string ToXPath() const;
+
+		/// <summary>
+		/// Returns a wide string representation of the path, in XPath format, maintaining the original slash directions."
+		/// </summary>
+		std::wstring ToWXPath() const;
+
+		/// <summary>
+		/// Returns a wide string with all slashes in a uniform direction, in XPath format.
+		/// </summary>
+		std::wstring ToWXPath( Slash direction ) const;
 
 		/// <summary>
 		/// Delete a path.
@@ -110,6 +131,9 @@ namespace unify
 		/// Rename a path.
 		/// </summary>
 		bool Rename( unify::Path to );
+
+	private:
+		std::string m_path;
 	};
 }
 

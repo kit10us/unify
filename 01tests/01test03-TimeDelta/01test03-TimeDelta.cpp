@@ -6,7 +6,7 @@
 //    Test unify::TimeDelta.
 //
 
-#include <iostream>
+#include <conio.h>
 #include <string>
 #include <unify/String.h>
 #include <unify/test/Suite.h>
@@ -68,7 +68,7 @@ int main( int argc, char ** argv )
 	suite.EndSuite();
 
 	std::cout << "Press any Enter to finish...\n";
-	std::cin.ignore();
+	while( !_getch() );
 
 	return 0;
 }

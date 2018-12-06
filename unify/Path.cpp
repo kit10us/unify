@@ -8,18 +8,24 @@
 
 using namespace unify;
 
+const std::string Path::XPathPrefix( "file://" );
+
+bool Path::IsXPath( std::string path )
+{
+	return StringIs( LeftString( path, XPathPrefix.length() ), XPathPrefix );
+}
 
 Path::Path()
 {
 }
 
 Path::Path( std::string path )
-: m_path( path )
+	: m_path{ unify::BeginsWith( path, XPathPrefix ) ? path : XPathPrefix + path }
 {
 }
 
-Path::Path( const char * const path )
-: m_path( path )
+Path::Path( char * path )
+	: m_path{ unify::BeginsWith( path, XPathPrefix ) ? path : XPathPrefix + path }
 {
 }
 
@@ -98,24 +104,36 @@ std::vector< std::string > Path::Split() const
 	std::vector< std::string > parts;
 	size_t start = 0;
 	size_t p;
-	for ( p = 0; p != m_path.size(); ++p )
+	std::string asString = ToString(); 
+	for ( p = 0; p != asString.size(); ++p )
 	{
-		if ( m_path.at( p ) == '\\' || m_path.at( p ) == '/' )
+		if (asString.at( p ) == '\\' || asString.at( p ) == '/' )
 		{
+			std::string part;
+			/*
 			if ( p == 0 )
 			{
 				parts.push_back( "/" );
 			}
 			else
 			{
-				parts.push_back( m_path.substr( start, p - start + 1 ) );
+				parts.push_back( asString.substr( start, p - start + 1 ) );
 				start = p + 1;
 			}
+			*/
+			if ( p != 0 )
+			{
+				part = asString.substr( start, p - start );
+			}
+
+			part += "/";
+			parts.push_back( part );
+			start = p + 1;
 		}
 	}
 	if ( p != 0 && p != start )
 	{
-		parts.push_back( m_path.substr( start, p - start ) );
+		parts.push_back( asString.substr( start, p - start ) );
 		start = p + 1;
 	}
 	return parts;
@@ -151,7 +169,7 @@ Path & Path::Normalize()
 
 bool Path::Exists() const
 {
-	std::ifstream ifile( m_path.c_str() );
+	std::ifstream ifile( ToString() );
 	return ifile ? true : false;
 }
 
@@ -223,34 +241,34 @@ std::string Path::FilenameNoExtension() const
 Path & Path::Combine( const Path & left, const Path & right )
 {
 	// If one or the other is empty, return the other.
-	if ( left.m_path.empty() )
+	if ( left.m_path.empty() || left.m_path == XPathPrefix )
 	{
-		m_path = right.m_path;
+		m_path = right.ToXPath();
 		return *this;
 	}
-	else if ( right.m_path.empty() )
+	else if ( right.m_path.empty() || right.m_path == XPathPrefix )
 	{
-		m_path = left.m_path;
+		m_path = left.ToXPath();
 		return *this;
 	}
 
 	std::string pathOut( left.m_path ); // Create a new path instead of working directly with ours incase L or R is us.
 
 	// Prefix if needed.
-	char lastChar = left.m_path[ left.m_path.length() - 1 ];
-	char firstChar = right.m_path[ 0 ];
+	char lastChar = RightString( left.ToString(), 1 )[ 0 ];
+	char firstChar = right.ToString()[ 0 ];
 	if ( lastChar != '\\' && lastChar != '/' && firstChar != '\\' && firstChar != '/' )
 	{
-		pathOut += '/' + right.m_path;
+		pathOut += '/' + right.ToString();
 	}
 	else if ( ( lastChar == '\\' || lastChar == '/' ) && ( firstChar == '\\' || firstChar == '/' ) )
 	{
 		// Remove prefix if it exists with both
-		pathOut += right.m_path.substr( 1 );
+		pathOut += right.ToString().substr( 1 );
 	}
 	else
 	{
-		pathOut += right.m_path;
+		pathOut += right.ToString();
 	}
 
 	m_path = pathOut;
@@ -329,22 +347,17 @@ Path & Path::ChangeFilename( const Path & newFilename )
 
 std::string Path::ToString() const
 {
-	return m_path;
-}
-
-std::wstring Path::ToWString() const
-{
-	return std::wstring( m_path.begin(), m_path.end() );
+	return BeginsWith( m_path, XPathPrefix) ? StringMinusLeft( m_path, XPathPrefix.length() ) : m_path;
 }
 
 std::string Path::ToString( Slash direction ) const
 {
 	std::string temp;
 
-	switch( direction )
+	switch (direction)
 	{
 	case Slash::Foward:
-		temp = StringReplace( ToString(),  "/", "\\" );
+		temp = StringReplace( ToString(), "/", "\\" );
 		break;
 	case Slash::Backward:
 		temp = StringReplace( ToString(), "\\", "/" );
@@ -353,20 +366,41 @@ std::string Path::ToString( Slash direction ) const
 	return temp;
 }
 
-bool Path::Delete()
+std::wstring Path::ToWString() const
 {
-	return remove( (char*)m_path.c_str() ) ? false : true;
-}
-
-bool Path::Rename( unify::Path to )
-{
-	return rename( m_path.c_str(), to.m_path.c_str() ) ? false : true;
+	return std::wstring( m_path.begin(), m_path.end() );
 }
 
 std::wstring Path::ToWString( Slash direction ) const
 {
 	std::string temp( ToString( direction ) );
 	return std::wstring( temp.begin(), temp.end() );
+}
+
+std::string Path::ToXPath() const
+{
+	return m_path;
+}
+
+std::wstring Path::ToWXPath() const
+{
+	return std::wstring( m_path.begin(), m_path.end() );
+}
+
+std::wstring Path::ToWXPath( Slash direction ) const
+{
+	std::string temp( ToString( direction ) );
+	return std::wstring( temp.begin(), temp.end() );
+}
+
+bool Path::Delete()
+{
+	return remove( ToString().c_str() ) ? false : true;
+}
+
+bool Path::Rename( unify::Path to )
+{
+	return rename( ToString().c_str(), to.ToString().c_str() ) ? false : true;
 }
 
 std::ostream & operator<<( std::ostream & os, const Path & path )

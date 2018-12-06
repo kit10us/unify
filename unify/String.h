@@ -16,22 +16,62 @@ namespace unify
 	bool IsAlpha( const char ch );
 	bool IsNumeric( const char ch );
 
-	// Caseless compare.
+	/// <summary>
+	/// Compare two strings for equvilancy, ignoring case.
+	/// </summary>
 	bool StringIs( std::string a, std::string b );
+
+	/// <summary>
+	/// Compare a string for equvilancy with any of a list of strings, ignoring case.
+	/// </summary>
 	bool StringIsAny( std::string a, const std::list< std::string > & list );
-	bool BeginsWith( std::string a, std::string b );
-	bool EndsWith( std::string a, std::string b );
+
+	/// <summary>
+	/// Returns true if source begins with the string beginsWith.
+	/// </summary>
+	bool BeginsWith( std::string source, std::string beginsWith );
+
+	/// <summary>
+	/// Returns true if the source ends with the string endsWith.
+	/// </summary>
+	bool EndsWith( std::string source, std::string endsWith );
 	
 	bool StringIsInt( std::string sOne );
 	bool StringIsFloat( std::string sOne );
 
+	/// <summary>
+	/// Removes all instances of character 'chr' from the left of 'stringIn'.
+	/// </summary>
 	std::string TrimLeft( std::string stringIn, const char chr );
+
+	/// <summary>
+	/// Removes all instances of character 'chr' from the right of 'stringIn'.
+	/// </summary>
 	std::string TrimRight( std::string stringIn, const char chr );
+
+	/// <summary>
+	/// Performs both TrimLeft and TrimRight...
+	/// </summary>
 	std::string Trim( std::string stringIn, const char chr = ' ' );
+
+	/// <summary>
+	/// Retruns the trimmed string from a specific string, exclusive.
+	/// </summary>
+	std::string TrimFrom( std::string stringIn, std::string to );
+
+	/// <summary>
+	/// Returns the trimmed string to a specific string, exclusive.
+	/// </summary>
+	std::string TrimTo( std::string stringIn, const char from );
+
 	std::string RightString( std::string stringIn, std::string::size_type uLength );
 	std::string LeftString( std::string stringIn, unsigned int uLength );
 	std::string StringMinusLeft( std::string sStringIn, unsigned int uLessLength );
 	std::string StringMinusRight( std::string sStringIn, unsigned int uLessLength );
+
+	/// <summary>
+	/// Replace every instance of "find" within the "in" string with "replace".
+	/// </summary>
 	std::string StringReplace( const std::string in, std::string find, std::string replace );
 	
 	/// <summary>

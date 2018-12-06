@@ -7,7 +7,7 @@
 //    Test may be promoted to seperate suites as desired.
 //
 
-#include <iostream>
+#include <conio.h>
 #include <unify/Color.h>
 #include <unify/ColorUnit.h>
 #include <unify/V2.h>
@@ -63,7 +63,7 @@ int main( int argc, char ** argv )
 	suite.EndSuite();
 
 	std::cout << "Press any Enter to finish...\n";
-	std::cin.ignore();
+	while( ! _getch() );
 
     return 0;
 }

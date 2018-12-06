@@ -18,17 +18,11 @@ bool unify::IsNumeric( const char ch )
 	return false;
 }
 
-/// <summary>
-/// Compare two strings for equvilancy, ignoring case.
-/// </summary>
 bool unify::StringIs( std::string a, std::string b )
 {
 	return _stricmp( a.c_str(), b.c_str()) == 0;
 }
 
-/// <summary>
-/// Compare a string for equvilancy with any of a list of strings, ignoring case.
-/// </summary>
 bool unify::StringIsAny( std::string a, const std::list< std::string > & list )
 {
 	for( const auto & b : list )
@@ -38,16 +32,16 @@ bool unify::StringIsAny( std::string a, const std::list< std::string > & list )
 	return false;
 }
 
-bool unify::BeginsWith( std::string a, std::string b )
+bool unify::BeginsWith( std::string source, std::string beginsWith )
 {
-	if ( a.length() < b.length() ) return false;
-	return StringIs( a.substr( 0, b.length() ), b );
+	if ( source.length() < beginsWith.length() ) return false;
+	return StringIs( source.substr( 0, beginsWith.length() ), beginsWith );
 }
 
-bool unify::EndsWith( std::string a, std::string b )
+bool unify::EndsWith( std::string source, std::string endsWith )
 {
-	if ( a.length() < b.length() ) return false;
-	return StringIs( a.substr( a.length() - b.length() ), b );
+	if ( source.length() < endsWith.length() ) return false;
+	return StringIs( source.substr( source.length() - endsWith.length() ), endsWith );
 }
 
 bool unify::StringIsInt( std::string sOne )
@@ -78,8 +72,10 @@ bool unify::StringIsFloat( std::string sOne )
 	return 1;
 }
 
-// Removes all instances of character 'chr' from the left of 'stringIn'.
-std::string unify::TrimLeft( std::string stringIn, const char chr )
+/// <summary>
+/// Removes all instances of character 'chr' from the left of 'stringIn'.
+/// </summary>
+std::string unify::TrimLeft( std::string stringIn, char chr )
 {
 	if ( stringIn.empty() ) return stringIn;
 	unsigned int uCount = 0;
@@ -87,8 +83,10 @@ std::string unify::TrimLeft( std::string stringIn, const char chr )
 	return stringIn.erase( 0, uCount );
 }
 
-// Removes all instances of character 'chr' from the right of 'stringIn'.
-std::string unify::TrimRight( std::string stringIn, const char chr )
+/// <summary>
+/// Removes all instances of character 'chr' from the right of 'stringIn'.
+/// </summary>
+std::string unify::TrimRight( std::string stringIn, char chr )
 {
 	if ( stringIn.empty() ) return stringIn;
 	unsigned int uCount = 0;
@@ -96,10 +94,42 @@ std::string unify::TrimRight( std::string stringIn, const char chr )
 	return stringIn.erase( stringIn.length() - uCount, stringIn.length() - 1 );
 }
 
-// Performs both TrimLeft and TrimRight...
-std::string unify::Trim( std::string stringIn, const char chr )
+/// <summary>
+/// Performs both TrimLeft and TrimRight...
+/// </summary
+std::string unify::Trim( std::string stringIn, char chr )
 {
 	return TrimRight( TrimLeft(  stringIn, chr ), chr );
+}
+
+/// <summary>
+/// Retruns the trimmed string from a specific string, exclusive.
+/// </summary>
+std::string unify::TrimFrom( std::string stringIn, std::string from )
+{
+	size_t i = stringIn.find( from );
+	if ( i == std::string::npos )
+	{
+		return stringIn;
+	}
+	else
+	{
+		return stringIn.substr( 0, stringIn.length() - i );
+	}
+}
+
+/// <summary>
+/// Returns the trimmed string to a specific string, exclusive.
+/// </summary>
+std::string unify::TrimTo( std::string stringIn, const char to )
+{
+	size_t begins = 0;
+	size_t i = 0;
+	while( ( i = stringIn.find( to ) ) != std::string::npos )
+	{
+		begins = i;
+	}
+	return stringIn.substr( begins );
 }
 
 // Returns a portion of a string (uLength)...
