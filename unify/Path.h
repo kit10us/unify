@@ -82,7 +82,7 @@ namespace unify
 
 		bool IsExtension( std::string extension ) const;
 
-		Path ChangeExtension( std::string extension ) const;
+		void ChangeExtension( std::string extension );
 
 		// Equivalent to Combine( DirectoryOnly( pathIn ), Filename( newFilename ) )
 		Path & ChangeFilename( const Path & newFilename );
@@ -135,6 +135,11 @@ namespace unify
 	private:
 		std::string m_path;
 	};
+
+	/// <summary>
+	/// Return a path with a different extension.
+	/// </summary>
+	Path ChangeExtension( const Path & path, std::string extension );
 }
 
 std::ostream & operator<<( std::ostream & os, const unify::Path & path );
