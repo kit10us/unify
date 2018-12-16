@@ -25,7 +25,7 @@ namespace unify
 
 		struct KeyValuePair
 		{
-			Key key;
+			const Key key;
 			Value value;
 		};
 
@@ -90,56 +90,26 @@ namespace unify
 			Lookup< Key, Value > * m_lookup;
 			size_t m_index;
 		public:
-			iterator( Lookup< Key, Value > * lookup, size_t index )
-				: m_lookup{ lookup } 
-				, m_index{ index }
-			{
-			}
+			iterator( Lookup< Key, Value > * lookup, size_t index );
 
-			iterator & operator++()
-			{
-				m_index++;
-				return *this;
-			}
+			auto & operator++();
 
-			bool operator==( const iterator & itr ) const
-			{
-				return m_index == itr.m_index;
-			}
+			bool operator==( const iterator & itr ) const;
 
-			bool operator!=( const iterator & itr ) const
-			{
-				return m_index != itr.m_index;
-			}
+			bool operator!=( const iterator & itr ) const;
 
-			KeyValuePair & operator*()
-			{
-				return m_lookup->m_values[m_index];
-			}
+			auto & operator*();
 
-			const KeyValuePair & operator*() const
-			{
-				return m_lookup->m_values[ m_index ];
-			}
+			const auto & operator*() const;
 
-			KeyValuePair * operator->()
-			{
-				return &m_lookup->m_values[m_index];
-			}
+			auto * operator->();
 
-			const KeyValuePair * operator->() const
-			{
-				return &m_lookup->m_values[m_index];
-			}
+			const auto * operator->() const;
 		};
 
-		iterator begin()
-		{
-			return iterator( this, 0 );
-		}
-		iterator end() {
-			return iterator( this, this->Count() );
-		}
+		iterator begin();
+		
+		iterator end();
 	};
 
 	#include <unify/Lookup.inl>

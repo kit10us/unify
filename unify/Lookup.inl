@@ -94,3 +94,65 @@ void Lookup< Key, Value >::SetValue( Key key, Value value )
 
 	m_values[itr->second].value = value;
 }
+
+template< typename Key, typename Value >
+typename Lookup< Key, Value >::iterator Lookup< Key, Value >::begin()
+{
+	return iterator( this, 0 );
+}
+
+template< typename Key, typename Value >
+typename Lookup< Key, Value >::iterator Lookup< Key, Value >::end()
+{
+	return iterator( this, this->Count() );
+}
+
+template< typename Key, typename Value >
+Lookup< Key, Value >::iterator::iterator( Lookup< Key, Value > * lookup, size_t index )
+	: m_lookup{ lookup }
+	, m_index{ index }
+{
+}
+
+template< typename Key, typename Value >
+auto & Lookup< Key, Value >::iterator::operator++()
+{
+	m_index++;
+	return *this;
+}
+
+template< typename Key, typename Value >
+bool Lookup< Key, Value >::iterator::operator==( const iterator & itr ) const
+{
+	return m_index == itr.m_index;
+}
+
+template< typename Key, typename Value >
+bool Lookup< Key, Value >::iterator::operator!=( const iterator & itr ) const
+{
+	return m_index != itr.m_index;
+}
+
+template< typename Key, typename Value >
+auto & Lookup< Key, Value >::iterator::operator*()
+{
+	return m_lookup->m_values[m_index];
+}
+
+template< typename Key, typename Value >
+const auto & Lookup< Key, Value >::iterator::operator*() const
+{
+	return m_lookup->m_values[m_index];
+}
+
+template< typename Key, typename Value >
+auto * Lookup< Key, Value >::iterator::operator->()
+{
+	return &m_lookup->m_values[m_index];
+}
+
+template< typename Key, typename Value >
+const auto * Lookup< Key, Value >::iterator::operator->() const
+{
+	return &m_lookup->m_values[m_index];
+}
