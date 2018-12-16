@@ -96,7 +96,7 @@ std::string unify::TrimRight( std::string stringIn, char chr )
 
 /// <summary>
 /// Performs both TrimLeft and TrimRight...
-/// </summary
+/// </summary>
 std::string unify::Trim( std::string stringIn, char chr )
 {
 	return TrimRight( TrimLeft(  stringIn, chr ), chr );

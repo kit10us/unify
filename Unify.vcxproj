@@ -52,6 +52,7 @@
     <ClInclude Include="unify\ColorUnit.h" />
     <ClInclude Include="unify\DataLock.h" />
     <ClInclude Include="unify\Exception.h" />
+    <ClInclude Include="unify\FastMap.h" />
     <ClInclude Include="unify\FrameLite.h" />
     <ClInclude Include="unify\FrameSetInstance.h" />
     <ClInclude Include="unify\Frustum.h" />
@@ -103,6 +104,7 @@
     <None Include="unify\BSphere.inl" />
     <None Include="unify\BSquare.inl" />
     <None Include="unify\Cast.inl" />
+    <None Include="unify\FastMap.inl" />
     <None Include="unify\LinkList.inl" />
     <None Include="unify\List.inl" />
     <None Include="unify\Math.inl" />
@@ -175,6 +177,7 @@
       <PrecompiledHeader />
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
@@ -195,6 +198,7 @@
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>

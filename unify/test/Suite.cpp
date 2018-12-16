@@ -89,3 +89,31 @@ void Suite::Assert( std::string message, bool test )
 		m_assertHandler->Assert( message, test );
 	}
 }
+
+void Suite::TryCatch( std::string message, std::function< void() > test, bool assertOnException )
+{
+	bool result = !assertOnException;
+	try
+	{
+		test();
+	}
+	catch( ... )
+	{
+		result = assertOnException;
+	}
+	Assert( message, result );
+}
+
+void Suite::TryCatchAssert( std::string message, std::function< bool() > test )
+{
+	bool result{ true };
+	try
+	{
+		result = test();
+	}
+	catch (...)
+	{
+		result = false;
+	}
+	Assert( message, result );
+}

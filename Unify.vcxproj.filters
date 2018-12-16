@@ -77,16 +77,16 @@
       <Filter>unify</Filter>
     </ClCompile>
     <ClCompile Include="unify\test\DefaultAssertHandler.cpp">
-      <Filter>unify\test</Filter>
+      <Filter>test</Filter>
     </ClCompile>
     <ClCompile Include="unify\test\Suite.cpp">
-      <Filter>unify\test</Filter>
+      <Filter>test</Filter>
     </ClCompile>
     <ClCompile Include="unify\test\DefaultEventHandlers.cpp">
-      <Filter>unify\test</Filter>
+      <Filter>test</Filter>
     </ClCompile>
     <ClCompile Include="unify\test\DefaultOutputHandlers.cpp">
-      <Filter>unify\test</Filter>
+      <Filter>test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -235,25 +235,28 @@
       <Filter>unify</Filter>
     </ClInclude>
     <ClInclude Include="unify\test\IAssertHandler.h">
-      <Filter>unify\test</Filter>
+      <Filter>test</Filter>
     </ClInclude>
     <ClInclude Include="unify\test\IEventHandler.h">
-      <Filter>unify\test</Filter>
+      <Filter>test</Filter>
     </ClInclude>
     <ClInclude Include="unify\test\Suite.h">
-      <Filter>unify\test</Filter>
+      <Filter>test</Filter>
     </ClInclude>
     <ClInclude Include="unify\test\IOutputHandler.h">
-      <Filter>unify\test</Filter>
+      <Filter>test</Filter>
     </ClInclude>
     <ClInclude Include="unify\test\DefaultAssertHandler.h">
-      <Filter>unify\test</Filter>
+      <Filter>test</Filter>
     </ClInclude>
     <ClInclude Include="unify\test\DefaultEventHandlers.h">
-      <Filter>unify\test</Filter>
+      <Filter>test</Filter>
     </ClInclude>
     <ClInclude Include="unify\test\DefaultOutputHandlers.h">
-      <Filter>unify\test</Filter>
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="unify\FastMap.h">
+      <Filter>unify</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -323,12 +326,15 @@
     <None Include="unify\TLink.inl">
       <Filter>unify</Filter>
     </None>
+    <None Include="unify\FastMap.inl">
+      <Filter>unify</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="unify">
       <UniqueIdentifier>{e6aa8063-da46-4613-8087-269f0d73ae8b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="unify\test">
+    <Filter Include="test">
       <UniqueIdentifier>{a60ab5db-ade3-47b1-ab64-1c71cd6354cc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>

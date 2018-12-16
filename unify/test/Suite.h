@@ -9,6 +9,7 @@
 #include <unify/test/IAssertHandler.h>
 #include <map>
 #include <string>
+#include <functional>
 
 namespace unify
 {
@@ -54,9 +55,19 @@ namespace unify
 			void Warning( std::string message );
 
 			/// <summary>
-			/// Called on an assertion.
+			/// Perform a suite assertion.
 			/// </desciption>
 			void Assert( std::string message, bool test );
+
+			/// <summary>
+			/// Assert on an exception.
+			/// </desciption>
+			void TryCatch( std::string message, std::function< void() > test, bool assertOnException );
+
+			/// <summary>
+			/// Assert on test returning false, or an exception.
+			/// </desciption>
+			void TryCatchAssert( std::string message, std::function< bool() > test );
 
 		private:
 			std::string m_suiteName;
