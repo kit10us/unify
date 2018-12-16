@@ -131,6 +131,26 @@ int main( int argc, char ** argv )
 			suite.TryCatch( "key \"thirty\" doesn't exist", [&] { stringIntLookup.GetValue( "thirty" ); }, true );
 		}
 		suite.EndCase();
+
+		suite.BeginCase( "Iterator" );
+		{
+			auto itr = stringIntLookup.begin();
+			auto end = stringIntLookup.end();
+			suite.Assert( "Begin is not end", itr != end );
+			suite.Assert( "First iterator \"default\" dereferenced (*) correctly", (*itr).key == "default" && (*itr).value == 1000 ); 
+			suite.Assert( "First iterator \"default\" accessed (->) correctly", itr->key == "default" && itr->value == 1000 );
+			suite.TryCatch( "Modify first iterator \"default\" value to 2000", [&] { (*itr).value = 2000; }, false );
+			suite.Assert( "Key \"default\" = 2000", stringIntLookup.GetValue( 0 ) == 2000 );
+			suite.TryCatch( "Modify first iterator \"default\" key to \"two thousand\"", [&] { (*itr).key = "two thousand"; }, false );
+			suite.Assert( "Verify first value key is now \"two thousand\"", stringIntLookup.GetName( 0 ) == "two thousand" );
+			suite.TryCatch( "Pre-increment to next value", [&]{ (++itr)->key = "first"; }, false );
+			suite.TryCatchAssert( "Next iterator is \"second\"", [&] { return (++itr)->key == "second"; } );
+			suite.TryCatchAssert( "Next iterator is \"another\"", [&] { return (++itr)->key == "another"; } );
+			suite.TryCatchAssert( "Next iterator is \"twenty\"", [&] { return (++itr)->key == "twenty"; } );
+			suite.Assert( "Last iterator is not end", itr != end );
+			suite.Assert( "Increment one past last is end", (++itr) == end );
+		}
+		suite.EndCase();
 	}
 	suite.EndSuite();
 

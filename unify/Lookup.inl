@@ -11,8 +11,7 @@ template< typename Key, typename Value >
 size_t Lookup< Key, Value >::Add( Key key, Value value = Value{} )
 	{
 		size_t index = m_values.size();
-		m_values.push_back( value );
-		m_keys.push_back( key );
+		m_values.push_back( { key, value } );
 		m_keyToIndex[key] = index;
 		return index;
 	}
@@ -24,7 +23,7 @@ size_t Lookup< Key, Value >::Count() const
 }
 
 template< typename Key, typename Value >
-bool Lookup< Key, Value >::Exists( std::string key ) const
+bool Lookup< Key, Value >::Exists( Key key ) const
 {
 	auto itr = m_keyToIndex.find( key );
 	if (itr == m_keyToIndex.end())
@@ -54,7 +53,7 @@ Key Lookup< Key, Value >::GetName( size_t index ) const
 		throw std::out_of_range( "Index \"" + std::to_string( index ) + "\" is out of range (" + std::to_string( Count() ) + ")" );
 	}
 
-	return m_keys[index];
+	return m_values[index].key;
 }
 
 template< typename Key, typename Value >
@@ -64,7 +63,7 @@ Value Lookup< Key, Value >::GetValue( size_t index ) const
 	{
 		throw std::out_of_range( std::string( "Index \"" ) + std::to_string( index ) + "\" is out of range (" + std::to_string( Count() ) + ")" );
 	}
-	return m_values[index];
+	return m_values[index].value;
 }
 
 template< typename Key, typename Value >
@@ -81,7 +80,7 @@ void Lookup< Key, Value >::SetValue( size_t index, Value value )
 	{
 		throw std::out_of_range( "Index " + std::to_string( index ) + " not found!" );
 	}
-	m_values[index] = value;
+	m_values[index].value = value;
 }
 
 template< typename Key, typename Value >
@@ -93,5 +92,5 @@ void Lookup< Key, Value >::SetValue( Key key, Value value )
 		throw std::out_of_range( "Key \"" + key + "\" not found!" );
 	}
 
-	m_values[itr->second] = value;
+	m_values[itr->second].value = value;
 }

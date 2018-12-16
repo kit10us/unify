@@ -21,8 +21,15 @@ namespace unify
 	template< typename Key, typename Value >
 	class Lookup
 	{
-		std::vector< Value > m_values;
-		std::vector< Key > m_keys;
+		friend class iterator;
+
+		struct KeyValuePair
+		{
+			Key key;
+			Value value;
+		};
+
+		std::vector< KeyValuePair > m_values;
 		std::map< Key, size_t > m_keyToIndex;
 	public:
 
@@ -40,7 +47,7 @@ namespace unify
 		/// Returns true if the value exists.
 		/// Test for existance first using Exists to prevent exception.
 		/// </summary>
-		bool Exists( std::string key ) const;
+		bool Exists( Key key ) const;
 
 		/// <summary>
 		/// Finds the index of a value by it's key. 
@@ -77,6 +84,62 @@ namespace unify
 		/// Throws std::out_of_bounds if not found.
 		/// </summary>
 		void SetValue( Key key, Value value );
+
+		class iterator
+		{
+			Lookup< Key, Value > * m_lookup;
+			size_t m_index;
+		public:
+			iterator( Lookup< Key, Value > * lookup, size_t index )
+				: m_lookup{ lookup } 
+				, m_index{ index }
+			{
+			}
+
+			iterator & operator++()
+			{
+				m_index++;
+				return *this;
+			}
+
+			bool operator==( const iterator & itr ) const
+			{
+				return m_index == itr.m_index;
+			}
+
+			bool operator!=( const iterator & itr ) const
+			{
+				return m_index != itr.m_index;
+			}
+
+			KeyValuePair & operator*()
+			{
+				return m_lookup->m_values[m_index];
+			}
+
+			const KeyValuePair & operator*() const
+			{
+				return m_lookup->m_values[ m_index ];
+			}
+
+			KeyValuePair * operator->()
+			{
+				return &m_lookup->m_values[m_index];
+			}
+
+			const KeyValuePair * operator->() const
+			{
+				return &m_lookup->m_values[m_index];
+			}
+		};
+
+		iterator begin()
+		{
+			return iterator( this, 0 );
+		}
+		iterator end() {
+			return iterator( this, this->Count() );
+		}
 	};
 
 	#include <unify/Lookup.inl>
