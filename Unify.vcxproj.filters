@@ -255,7 +255,7 @@
     <ClInclude Include="unify\test\DefaultOutputHandlers.h">
       <Filter>test</Filter>
     </ClInclude>
-    <ClInclude Include="unify\FastMap.h">
+    <ClInclude Include="unify\Lookup.h">
       <Filter>unify</Filter>
     </ClInclude>
   </ItemGroup>
@@ -326,7 +326,7 @@
     <None Include="unify\TLink.inl">
       <Filter>unify</Filter>
     </None>
-    <None Include="unify\FastMap.inl">
+    <None Include="unify\Lookup.inl">
       <Filter>unify</Filter>
     </None>
   </ItemGroup>

@@ -8,7 +8,7 @@
 #include <conio.h>
 
 template< typename Key, typename Value >
-size_t FastMap< Key, Value >::Add( Key key, Value value = Value{} )
+size_t Lookup< Key, Value >::Add( Key key, Value value = Value{} )
 	{
 		size_t index = m_values.size();
 		m_values.push_back( value );
@@ -18,13 +18,13 @@ size_t FastMap< Key, Value >::Add( Key key, Value value = Value{} )
 	}
 
 template< typename Key, typename Value >
-size_t FastMap< Key, Value >::Count() const
+size_t Lookup< Key, Value >::Count() const
 {
 	return m_values.size();
 }
 
 template< typename Key, typename Value >
-bool FastMap< Key, Value >::Exists( std::string key ) const
+bool Lookup< Key, Value >::Exists( std::string key ) const
 {
 	auto itr = m_keyToIndex.find( key );
 	if (itr == m_keyToIndex.end())
@@ -35,7 +35,7 @@ bool FastMap< Key, Value >::Exists( std::string key ) const
 }
 
 template< typename Key, typename Value >
-size_t FastMap< Key, Value >::Find( Key key ) const
+size_t Lookup< Key, Value >::Find( Key key ) const
 {
 	auto itr = m_keyToIndex.find( key );
 	if (itr == m_keyToIndex.end())
@@ -47,7 +47,7 @@ size_t FastMap< Key, Value >::Find( Key key ) const
 }
 
 template< typename Key, typename Value >
-Key FastMap< Key, Value >::GetName( size_t index ) const
+Key Lookup< Key, Value >::GetName( size_t index ) const
 {
 	if (index >= Count())
 	{
@@ -58,7 +58,7 @@ Key FastMap< Key, Value >::GetName( size_t index ) const
 }
 
 template< typename Key, typename Value >
-Value FastMap< Key, Value >::GetValue( size_t index ) const
+Value Lookup< Key, Value >::GetValue( size_t index ) const
 {
 	if (index >= Count())
 	{
@@ -68,14 +68,14 @@ Value FastMap< Key, Value >::GetValue( size_t index ) const
 }
 
 template< typename Key, typename Value >
-Value FastMap< Key, Value >::GetValue( Key key ) const
+Value Lookup< Key, Value >::GetValue( Key key ) const
 {
 	size_t index = Find( key );
 	return GetValue( index );
 }
 
 template< typename Key, typename Value >
-void FastMap< Key, Value >::SetValue( size_t index, Value value )
+void Lookup< Key, Value >::SetValue( size_t index, Value value )
 {
 	if (index >= Count())
 	{
@@ -85,7 +85,7 @@ void FastMap< Key, Value >::SetValue( size_t index, Value value )
 }
 
 template< typename Key, typename Value >
-void FastMap< Key, Value >::SetValue( Key key, Value value )
+void Lookup< Key, Value >::SetValue( Key key, Value value )
 {
 	auto itr = m_keyToIndex.find( key );
 	if (itr == m_keyToIndex.end())

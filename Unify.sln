@@ -37,10 +37,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01test06-Geometry", "01test
 		{AD285766-AD5F-4006-91AA-4919F27EF77B} = {AD285766-AD5F-4006-91AA-4919F27EF77B}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01test07-FastMap", "01tests\01test07-FastMap\01test07-FastMap.vcxproj", "{B734556E-2B30-4672-B621-51B072FBB2FB}"
-	ProjectSection(ProjectDependencies) = postProject
-		{AD285766-AD5F-4006-91AA-4919F27EF77B} = {AD285766-AD5F-4006-91AA-4919F27EF77B}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01test07-Lookup", "01tests\01test07-Lookup\01test07-Lookup.vcxproj", "{B734556E-2B30-4672-B621-51B072FBB2FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

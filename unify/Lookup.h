@@ -19,7 +19,7 @@ namespace unify
 	/// Perfers constant operations over log operations, speeding up some common operations.
 	/// </summary>
 	template< typename Key, typename Value >
-	class FastMap
+	class Lookup
 	{
 		std::vector< Value > m_values;
 		std::vector< Key > m_keys;
@@ -79,5 +79,5 @@ namespace unify
 		void SetValue( Key key, Value value );
 	};
 
-	#include <unify/FastMap.inl>
+	#include <unify/Lookup.inl>
 }
