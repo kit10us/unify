@@ -60,9 +60,9 @@ namespace unify
 			void Assert( std::string message, bool test );
 
 			/// <summary>
-			/// Assert on an exception.
+			/// Try to perform a functor, Assert on an exception.
 			/// </desciption>
-			void TryCatch( std::string message, std::function< void() > test, bool assertOnException );
+			void TryCatch( std::string message, std::function< void() > test, bool passOnException );
 
 			/// <summary>
 			/// Assert on test returning false, or an exception.

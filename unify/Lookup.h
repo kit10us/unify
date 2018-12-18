@@ -92,7 +92,13 @@ namespace unify
 		public:
 			iterator( Lookup< Key, Value > * lookup, size_t index );
 
-			auto & operator++();
+			auto operator++();
+
+			auto operator++( int );
+			
+			auto operator--();
+
+			auto operator--( int );
 
 			bool operator==( const iterator & itr ) const;
 

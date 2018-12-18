@@ -115,11 +115,36 @@ Lookup< Key, Value >::iterator::iterator( Lookup< Key, Value > * lookup, size_t 
 }
 
 template< typename Key, typename Value >
-auto & Lookup< Key, Value >::iterator::operator++()
+auto Lookup< Key, Value >::iterator::operator++()
 {
-	m_index++;
+	auto a = ++m_index;
 	return *this;
 }
+
+template< typename Key, typename Value >
+auto Lookup< Key, Value >::iterator::operator++( int )
+{
+	auto itr = *this;
+	m_index++;
+	return itr;
+}
+
+
+template< typename Key, typename Value >
+auto Lookup< Key, Value >::iterator::operator--()
+{
+	--m_index;
+	return *this;
+}
+
+template< typename Key, typename Value >
+auto Lookup< Key, Value >::iterator::operator--( int )
+{
+	auto itr = *this;
+	m_index--;
+	return itr;
+}
+
 
 template< typename Key, typename Value >
 bool Lookup< Key, Value >::iterator::operator==( const iterator & itr ) const

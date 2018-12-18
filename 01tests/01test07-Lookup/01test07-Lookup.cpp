@@ -137,14 +137,26 @@ int main( int argc, char ** argv )
 			auto itr = stringIntLookup.begin();
 			auto end = stringIntLookup.end();
 			suite.Assert( "Begin is not end", itr != end );
-			suite.Assert( "First iterator \"default\" dereferenced (*) correctly", (*itr).key == "default" && (*itr).value == 1000 ); 
-			suite.Assert( "First iterator \"default\" accessed (->) correctly", itr->key == "default" && itr->value == 1000 );
-			suite.TryCatch( "Modify first iterator \"default\" value to 2000", [&] { (*itr).value = 2000; }, false );
-			suite.Assert( "Key \"default\" = 2000", stringIntLookup.GetValue( 0 ) == 2000 );
-			suite.TryCatch( "Pre-increment to next value", [&]{ (++itr)->key == "first"; }, false );
-			suite.TryCatchAssert( "Next iterator is \"second\"", [&] { return (++itr)->key == "second"; } );
-			suite.TryCatchAssert( "Next iterator is \"another\"", [&] { return (++itr)->key == "another"; } );
-			suite.TryCatchAssert( "Next iterator is \"twenty\"", [&] { return (++itr)->key == "twenty"; } );
+			suite.TryCatchAssert( "First iterator \"default\" dereferenced (*) correctly", [&]{ return (*itr).key == "default" && (*itr).value == 1000; } ); 
+
+			{
+				itr->key; // Need to get past "c:\dev\unify\01tests\01test07-lookup\01test07-lookup.cpp(144): fatal error C1001: An internal error has occurred in the compiler." "(compiler file 'msc1.cpp', line 1468)"
+				suite.TryCatchAssert( "First iterator \"default\" accessed (->) correctly", [&]{ return itr->key == "default" && itr->value == 1000; } );
+			}
+
+			suite.TryCatch( "Modify first iterator \"default\" value to 2000", [&]{ (*itr).value = 2000; }, false );
+			suite.TryCatchAssert( "Key \"default\" = 2000", [&]{ return stringIntLookup.GetValue( 0 ) == 2000; } );
+			
+			suite.TryCatchAssert( "Post-increment to next value is \"first\"", [&]{ return (++itr)->key == "first"; } );
+			suite.TryCatchAssert( "Post-decrement to previous value is \"default\"", [&]{ return (--itr)->key == "default"; } );
+			
+			suite.TryCatchAssert( "Pre-increment to next value is \"default\"", [&] { return (itr++)->key == "default"; } );
+			suite.TryCatchAssert( "Pre-decrement to previous value is \"first\"", [&] { return (itr++)->key == "first"; } );
+
+			suite.TryCatchAssert( "Iterator is \"second\"", [&] { return itr->key == "second"; } );
+
+			suite.TryCatchAssert( "Pre-increment is \"another\"", [&] { return (++itr)->key == "another"; } );
+			suite.TryCatchAssert( "Pre-iterator is \"twenty\"", [&] { return (++itr)->key == "twenty"; } );
 			suite.Assert( "Last iterator is not end", itr != end );
 			suite.Assert( "Increment one past last is end", (++itr) == end );
 		}

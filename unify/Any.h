@@ -1,7 +1,7 @@
 // Copyright (c) 2002 - 2019, Evil Quail LLC
 // All Rights Reserved
 
-/// NOTICE: The contents of this header were pulled from the Boost library, and modified to remove usage of Boost, and replace that usage with C++11.
+/// NOTICE: The contents of this header were pulled from the Boost library, modified to remove usage of Boost, and replace that usage with C++11.
 ///         This was done as Any is the last remaining feature from boost, not provided via C++11, that I like to use, and I do not want to have to
 ///         continue to pull in a substantially large library for one tiny piece. All repsect to those who created an maintain this originally.
 ///         I thus assume no rights, responsibility, nor credit for the contents here-in.

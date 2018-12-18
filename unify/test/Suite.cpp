@@ -90,16 +90,16 @@ void Suite::Assert( std::string message, bool test )
 	}
 }
 
-void Suite::TryCatch( std::string message, std::function< void() > test, bool assertOnException )
+void Suite::TryCatch( std::string message, std::function< void() > test, bool passOnException )
 {
-	bool result = !assertOnException;
+	bool result = passOnException ? false : true;
 	try
 	{
 		test();
 	}
 	catch( ... )
 	{
-		result = assertOnException;
+		result = passOnException ? true : false;
 	}
 	Assert( message, result );
 }
