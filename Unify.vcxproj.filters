@@ -258,6 +258,9 @@
     <ClInclude Include="unify\Lookup.h">
       <Filter>unify</Filter>
     </ClInclude>
+    <ClInclude Include="unify\KeyValuePair.h">
+      <Filter>unify</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="unify\BBox.inl">

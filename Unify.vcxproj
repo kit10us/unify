@@ -52,6 +52,7 @@
     <ClInclude Include="unify\ColorUnit.h" />
     <ClInclude Include="unify\DataLock.h" />
     <ClInclude Include="unify\Exception.h" />
+    <ClInclude Include="unify\KeyValuePair.h" />
     <ClInclude Include="unify\Lookup.h" />
     <ClInclude Include="unify\FrameLite.h" />
     <ClInclude Include="unify\FrameSetInstance.h" />

@@ -159,25 +159,25 @@ bool Lookup< Key, Value >::iterator::operator!=( const iterator & itr ) const
 }
 
 template< typename Key, typename Value >
-auto & Lookup< Key, Value >::iterator::operator*()
+KeyValuePair< Key, Value > & Lookup< Key, Value >::iterator::operator*()
 {
 	return m_lookup->m_values[m_index];
 }
 
 template< typename Key, typename Value >
-const auto & Lookup< Key, Value >::iterator::operator*() const
+const KeyValuePair< Key, Value > & Lookup< Key, Value >::iterator::operator*() const
 {
 	return m_lookup->m_values[m_index];
 }
 
 template< typename Key, typename Value >
-auto * Lookup< Key, Value >::iterator::operator->()
+KeyValuePair< Key, Value > * Lookup< Key, Value >::iterator::operator->()
 {
 	return &m_lookup->m_values[m_index];
 }
 
 template< typename Key, typename Value >
-const auto * Lookup< Key, Value >::iterator::operator->() const
+const KeyValuePair< Key, Value > * Lookup< Key, Value >::iterator::operator->() const
 {
 	return &m_lookup->m_values[m_index];
 }

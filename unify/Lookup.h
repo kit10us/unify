@@ -4,6 +4,7 @@
 #pragma once
 
 #include <unify/Unify.h>
+#include <unify/KeyValuePair.h>
 #include <map>
 #include <vector>
 #include <string>
@@ -13,7 +14,6 @@
 
 namespace unify
 {
-
 	/// <summary>
 	/// A mapping between values and pairs with the addition of constant time value lookups by performing searches early one.
 	/// Perfers constant operations over log operations, speeding up some common operations.
@@ -23,13 +23,7 @@ namespace unify
 	{
 		friend class iterator;
 
-		struct KeyValuePair
-		{
-			const Key key;
-			Value value;
-		};
-
-		std::vector< KeyValuePair > m_values;
+		std::vector< KeyValuePair< Key, Value > > m_values;
 		std::map< Key, size_t > m_keyToIndex;
 	public:
 
@@ -104,13 +98,13 @@ namespace unify
 
 			bool operator!=( const iterator & itr ) const;
 
-			auto & operator*();
+			KeyValuePair< Key, Value > & operator*();
 
-			const auto & operator*() const;
+			const KeyValuePair< Key, Value > & operator*() const;
 
-			auto * operator->();
+			KeyValuePair< Key, Value > * operator->();
 
-			const auto * operator->() const;
+			const KeyValuePair< Key, Value > * operator->() const;
 		};
 
 		iterator begin();
