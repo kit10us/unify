@@ -3,7 +3,7 @@
 
 //
 // Purpose of test...
-//    Test the unify::Any.
+//    Test the Any.
 //
 
 #include <conio.h>
@@ -14,17 +14,25 @@ int main( int argc, char ** argv )
 {
 	using namespace unify;
 	using namespace test;
+	using namespace string;
 
 	Suite suite;
 
 	suite.BeginSuite( "String" );
 	{
+		suite.BeginCase( "StringIs" );
+		suite.Assert( "single is", StringIs( "first", "first" ) );
+		suite.Assert( "single is not", !StringIs( "first", "second" ) );
+		suite.Assert( "mutliple mixed case is", StringIs( "first", "FIRST", "FiRst" ) );
+		suite.Assert( "mutliple mixed case is not", !StringIs( "first", "second", "third" ) );
+		suite.EndCase();
+
 		suite.BeginCase( "Replace" );
-		suite.Assert( "no affect (something that doesn't exist)", unify::StringReplace( "abababab", "c", "d" ) == std::string( "abababab" ) );
-		suite.Assert( "character with character", unify::StringReplace( "abababab", "a", "c" ) == std::string( "cbcbcbcb" ) );
-		suite.Assert( "string with character", unify::StringReplace( "aabbaabbaabbaabb", "aa", "c" ) == std::string( "cbbcbbcbbcbb" ) );
-		suite.Assert( "character with string", unify::StringReplace( "abababab", "a", "cd" ) == std::string( "cdbcdbcdbcdb" ) );
-		suite.Assert( "string with string", unify::StringReplace( "aabbaabbaabbaabb", "aa", "cd" ) == std::string( "cdbbcdbbcdbbcdbb" ) );
+		suite.Assert( "no affect (something that doesn't exist)", StringReplace( "abababab", "c", "d" ) == std::string( "abababab" ) );
+		suite.Assert( "character with character", StringReplace( "abababab", "a", "c" ) == std::string( "cbcbcbcb" ) );
+		suite.Assert( "string with character", StringReplace( "aabbaabbaabbaabb", "aa", "c" ) == std::string( "cbbcbbcbbcbb" ) );
+		suite.Assert( "character with string", StringReplace( "abababab", "a", "cd" ) == std::string( "cdbcdbcdbcdb" ) );
+		suite.Assert( "string with string", StringReplace( "aabbaabbaabbaabb", "aa", "cd" ) == std::string( "cdbbcdbbcdbbcdbb" ) );
 		suite.EndCase();
 
 		suite.BeginCase( "Misc." );

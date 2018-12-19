@@ -97,12 +97,12 @@ const std::string Variant::TypeName( const TYPE type )
 
 const Variant::TYPE Variant::TypeEnum( std::string sType )
 {
-	if( unify::StringIs( sType, "BOOL" ) ) return Type_Bool;
-	else if( unify::StringIs( sType, "INTEGER" ) ) return Type_Integer;
-	else if( unify::StringIs( sType, "STRING" ) ) return Type_String;
-	else if( unify::StringIs( sType, "FLOAT" ) ) return Type_Float;
-	else if( unify::StringIs( sType, "BYTEDATA" ) ) return Type_ByteData;
-	else if( unify::StringIs( sType, "UNDEFINED" ) ) return Type_Undefined;
+	if( unify::string::StringIs( sType, "BOOL" ) ) return Type_Bool;
+	else if( unify::string::StringIs( sType, "INTEGER" ) ) return Type_Integer;
+	else if( unify::string::StringIs( sType, "STRING" ) ) return Type_String;
+	else if( unify::string::StringIs( sType, "FLOAT" ) ) return Type_Float;
+	else if( unify::string::StringIs( sType, "BYTEDATA" ) ) return Type_ByteData;
+	else if( unify::string::StringIs( sType, "UNDEFINED" ) ) return Type_Undefined;
 	else return Type_Undefined;
 }
 
@@ -185,23 +185,23 @@ Variant * Variant::Set( std::string sSource )
 	}
 
 	// Type_Bool
-	if( unify::StringIs( sSource, "true" ) ) 
+	if( unify::string::StringIs( sSource, "true" ) ) 
 	{
 		return this->SetBool( true );
 	}
-	if( unify::StringIs( sSource, "false" ) ) 
+	if( unify::string::StringIs( sSource, "false" ) ) 
 	{
 		return this->SetBool( false );
 	}
 
 	// Type_Integer
-	if( unify::StringIsInt( sSource ) ) 
+	if( unify::string::StringIsInt( sSource ) ) 
 	{
 		return this->SetInt( unify::Cast< int >( sSource ) );
 	}
 
 	// Type_Float
-	if( unify::StringIsFloat( sSource ) ) 
+	if( unify::string::StringIsFloat( sSource ) ) 
 	{
 		return this->SetFloat( unify::Cast< float >( sSource ) );
 	}

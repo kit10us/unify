@@ -6,6 +6,7 @@
 #include <unify/Exception.h>
 
 using namespace unify;
+using namespace string;
 
 std::string NinePoint::ToString( TYPE ninePoint )
 {

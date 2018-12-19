@@ -14,7 +14,7 @@ void DefaultAssertHandler::Assert( std::string message, bool test )
 {
 	using namespace std;
 
-	cout << "   Test " << message << " ";
+	cout << "   Test \"" << message << "\" ";
 
 	if ( !test )
 	{

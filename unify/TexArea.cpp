@@ -6,6 +6,7 @@
 #include <unify/String.h>
 
 using namespace unify;
+using namespace string;
 
 TexArea::TexArea()
 {

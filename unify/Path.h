@@ -28,7 +28,7 @@ namespace unify
 		Path();
 		explicit Path( std::string path );
 		explicit Path( char * path );
-		Path( const Path & left, const Path & right );
+		Path( Path left, Path right );
 		Path( const std::vector< std::string > & pathParts );
 
 		Path & operator=( const Path & path );
@@ -57,6 +57,11 @@ namespace unify
 		bool Exists() const;
 		
 		Path DirectoryOnly() const;
+
+		/// <summary>
+		/// Returns true if a path has any extension.
+		/// </summary>
+		bool HasExtension() const;
 
 		/// <summary>
 		/// Returns the extension from a path, includes the leading dot (.).
@@ -139,7 +144,7 @@ namespace unify
 	/// <summary>
 	/// Return a path with a different extension.
 	/// </summary>
-	Path ChangeExtension( const Path & path, std::string extension );
+	Path ChangeExtension( Path path, std::string extension );
 }
 
 std::ostream & operator<<( std::ostream & os, const unify::Path & path );

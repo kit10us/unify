@@ -7,6 +7,7 @@
 #include <algorithm>
 
 using namespace unify;
+using namespace string;
 
 Color unify::ColorRGBA( Color::Component r, Color::Component g, Color::Component b, Color::Component a )
 {
@@ -157,7 +158,7 @@ Color::Color( std::string text, Order order, Color::Component defaultAlpha )
 	}
 	else
 	{
-		std::vector< unsigned char > split = unify::Split< unsigned char >( text, ',' );
+		std::vector< unsigned char > split = Split< unsigned char >( text, ',' );
 		if ( split.size() == 3 )
 		{
 			component.r = split[ 0 ];

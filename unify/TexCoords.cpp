@@ -7,6 +7,7 @@
 #include <unify/Exception.h>
 
 using namespace unify;
+using namespace string;
 
 TexCoords::TexCoords()
 {

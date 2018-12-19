@@ -5,6 +5,7 @@
 #include <unify/String.h>
 
 using namespace unify;
+using namespace string;
 
 Parameters::Parameters()
 {
@@ -27,7 +28,7 @@ Parameters & Parameters::Reset()
     return *this;
 }
 
-Parameters & Parameters::Default( std::string name, const unify::Any & value )
+Parameters & Parameters::Default( std::string name, const Any & value )
 {
     if( m_parameters.find( name ) == m_parameters.end() )
     {
@@ -38,7 +39,7 @@ Parameters & Parameters::Default( std::string name, const unify::Any & value )
 
 bool Parameters::Exists( std::string name ) const
 {
-	std::vector< std::string > split = unify::Split< std::string >( name, ',' );
+	std::vector< std::string > split = Split< std::string >( name, ',' );
 	for( std::vector< std::string >::iterator itr = split.begin(); itr != split.end(); ++itr )
     {
         if( m_parameters.find( *itr ) == m_parameters.end() )
@@ -68,11 +69,11 @@ unsigned int Parameters::Get< unsigned int >( std::string name ) const
     
     if( iterator->second.type() == typeid( unsigned int ) )
     {
-        return unify::any_cast< unsigned int >( iterator->second );
+        return any_cast< unsigned int >( iterator->second );
     }
     else if( iterator->second.type() == typeid( unsigned long int ) )
     {
-        return unify::any_cast< unsigned long int >( iterator->second );
+        return any_cast< unsigned long int >( iterator->second );
     }
 
     throw Exception( "Failed to cast \"" + name + "\" of type " + iterator->second.type().name() + "!" );
@@ -91,11 +92,11 @@ unsigned int Parameters::Get< unsigned int >( std::string name, const unsigned i
     
     if( iterator->second.type() == typeid( unsigned int ) )
     {
-        return unify::any_cast< unsigned int >( iterator->second );
+        return any_cast< unsigned int >( iterator->second );
     }
     else if( iterator->second.type() == typeid( unsigned long int ) )
     {
-        return unify::any_cast< unsigned long int >( iterator->second );
+        return any_cast< unsigned long int >( iterator->second );
     }
 
     throw Exception( "Failed to cast \"" + name + "\" of type " + iterator->second.type().name() + "!" );
@@ -172,7 +173,7 @@ Parameters & Parameters::operator+=( Parameters & parameters )
 
 Parameters Parameters::operator+( Parameters& parameters )
 {
-    unify::Parameters newParameters;
+    Parameters newParameters;
     newParameters += *this;
     newParameters += parameters;
     return newParameters;

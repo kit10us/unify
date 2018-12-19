@@ -4,7 +4,7 @@
 #include <unify/String.h>
 
 // IsAlpha (is a letter)
-bool unify::IsAlpha( const char ch )
+bool unify::string::IsAlpha( const char ch )
 {
 	if( ch >= 'a' && ch <= 'z' ) return true;
 	if( ch >= 'A' && ch <= 'Z' ) return true;
@@ -12,18 +12,18 @@ bool unify::IsAlpha( const char ch )
 }
 
 // IsNumeric (is a number)
-bool unify::IsNumeric( const char ch )
+bool unify::string::IsNumeric( const char ch )
 {
 	if( ch >= '0' && ch <= '9' ) return true;
 	return false;
 }
 
-bool unify::StringIs( std::string a, std::string b )
+bool unify::string::StringIs( std::string a, std::string is )
 {
-	return _stricmp( a.c_str(), b.c_str()) == 0;
+	return _stricmp( a.c_str(), is.c_str()) == 0;
 }
 
-bool unify::StringIsAny( std::string a, const std::list< std::string > & list )
+bool unify::string::StringIsAny( std::string a, const std::list< std::string > & list )
 {
 	for( const auto & b : list )
 	{
@@ -32,19 +32,19 @@ bool unify::StringIsAny( std::string a, const std::list< std::string > & list )
 	return false;
 }
 
-bool unify::BeginsWith( std::string source, std::string beginsWith )
+bool unify::string::BeginsWith( std::string source, std::string beginsWith )
 {
 	if ( source.length() < beginsWith.length() ) return false;
 	return StringIs( source.substr( 0, beginsWith.length() ), beginsWith );
 }
 
-bool unify::EndsWith( std::string source, std::string endsWith )
+bool unify::string::EndsWith( std::string source, std::string endsWith )
 {
 	if ( source.length() < endsWith.length() ) return false;
 	return StringIs( source.substr( source.length() - endsWith.length() ), endsWith );
 }
 
-bool unify::StringIsInt( std::string sOne )
+bool unify::string::StringIsInt( std::string sOne )
 {
 	const char * pChar = sOne.c_str();
 	if( *pChar == '-' ) pChar++;
@@ -56,7 +56,7 @@ bool unify::StringIsInt( std::string sOne )
 	return 1;
 }
 
-bool unify::StringIsFloat( std::string sOne )
+bool unify::string::StringIsFloat( std::string sOne )
 {
 	const char * pChar = sOne.c_str();
 	if( *pChar == '-' ) pChar++;
@@ -75,7 +75,7 @@ bool unify::StringIsFloat( std::string sOne )
 /// <summary>
 /// Removes all instances of character 'chr' from the left of 'stringIn'.
 /// </summary>
-std::string unify::TrimLeft( std::string stringIn, char chr )
+std::string unify::string::TrimLeft( std::string stringIn, char chr )
 {
 	if ( stringIn.empty() ) return stringIn;
 	unsigned int uCount = 0;
@@ -86,7 +86,7 @@ std::string unify::TrimLeft( std::string stringIn, char chr )
 /// <summary>
 /// Removes all instances of character 'chr' from the right of 'stringIn'.
 /// </summary>
-std::string unify::TrimRight( std::string stringIn, char chr )
+std::string unify::string::TrimRight( std::string stringIn, char chr )
 {
 	if ( stringIn.empty() ) return stringIn;
 	unsigned int uCount = 0;
@@ -97,7 +97,7 @@ std::string unify::TrimRight( std::string stringIn, char chr )
 /// <summary>
 /// Performs both TrimLeft and TrimRight...
 /// </summary>
-std::string unify::Trim( std::string stringIn, char chr )
+std::string unify::string::Trim( std::string stringIn, char chr )
 {
 	return TrimRight( TrimLeft(  stringIn, chr ), chr );
 }
@@ -105,7 +105,7 @@ std::string unify::Trim( std::string stringIn, char chr )
 /// <summary>
 /// Retruns the trimmed string from a specific string, exclusive.
 /// </summary>
-std::string unify::TrimFrom( std::string stringIn, std::string from )
+std::string unify::string::TrimFrom( std::string stringIn, std::string from )
 {
 	size_t i = stringIn.find( from );
 	if ( i == std::string::npos )
@@ -121,7 +121,7 @@ std::string unify::TrimFrom( std::string stringIn, std::string from )
 /// <summary>
 /// Returns the trimmed string to a specific string, exclusive.
 /// </summary>
-std::string unify::TrimTo( std::string stringIn, const char to )
+std::string unify::string::TrimTo( std::string stringIn, const char to )
 {
 	size_t begins = 0;
 	size_t i = 0;
@@ -133,7 +133,7 @@ std::string unify::TrimTo( std::string stringIn, const char to )
 }
 
 // Returns a portion of a string (uLength)...
-std::string unify::RightString( std::string stringIn, std::string::size_type uLength )
+std::string unify::string::RightString( std::string stringIn, std::string::size_type uLength )
 {
 	if( stringIn.length() == 0 ) return std::string();
 	if( uLength > stringIn.length() ) uLength = (unsigned int)stringIn.length();
@@ -141,27 +141,27 @@ std::string unify::RightString( std::string stringIn, std::string::size_type uLe
 }
 
 // Returns a portion of a string (uLength) from it's beginning...
-std::string unify::LeftString( std::string stringIn, unsigned int uLength )
+std::string unify::string::LeftString( std::string stringIn, unsigned int uLength )
 {
 	return stringIn.substr( 0, uLength );
 }
 
 // Returns a string minus a portion from the front/left side of the string...
 // new size = size - uLessLength
-std::string unify::StringMinusLeft( std::string sStringIn, unsigned int uLessLength )
+std::string unify::string::StringMinusLeft( std::string sStringIn, unsigned int uLessLength )
 {
 	if( uLessLength >= sStringIn.length() ) return std::string();
 	return sStringIn.substr( uLessLength, (unsigned int)sStringIn.length() - uLessLength );
 }
 
 // Returns a string minus a portion from the end/right side of the string...
-std::string unify::StringMinusRight( std::string sStringIn, unsigned int uLessLength )
+std::string unify::string::StringMinusRight( std::string sStringIn, unsigned int uLessLength )
 {
 	if( uLessLength >= sStringIn.length() ) return std::string();
 	return sStringIn.substr( 0, (unsigned int)sStringIn.length() - uLessLength );
 }
 
-std::string unify::StringReplace( const std::string in, std::string find, std::string replace )
+std::string unify::string::StringReplace( const std::string in, std::string find, std::string replace )
 {
 	if ( find.length() == 0 )
 	{
@@ -191,7 +191,7 @@ std::string unify::StringReplace( const std::string in, std::string find, std::s
 	return out;	
 }
 
-std::string unify::CleanWhitespace( std::string in )
+std::string unify::string::CleanWhitespace( std::string in )
 {
 	if ( in.empty() ) return std::string();
 
@@ -222,7 +222,7 @@ std::string unify::CleanWhitespace( std::string in )
 	return out;
 }
 
-std::string unify::ToLower( std::string in )
+std::string unify::string::ToLower( std::string in )
 {
 	std::string out( in );
 	for( std::size_t i = 0; i < in.length(); ++i )
@@ -233,7 +233,7 @@ std::string unify::ToLower( std::string in )
 	return out;
 }
 
-std::string unify::ToUpper( std::string in )
+std::string unify::string::ToUpper( std::string in )
 {
 	std::string out( in );
 	for (std::size_t i = 0; i < in.length(); ++i)
@@ -244,7 +244,7 @@ std::string unify::ToUpper( std::string in )
 	return out;
 }
 
-std::string unify::ListPart( std::string sString, std::vector< char > seperators, int iPartIndex )
+std::string unify::string::ListPart( std::string sString, std::vector< char > seperators, int iPartIndex )
 {
 	if( sString == "" ) return "";
 
@@ -280,7 +280,7 @@ std::string unify::ListPart( std::string sString, std::vector< char > seperators
 	return sString.substr( iStart, iLenToCopy );
 }
 
-unsigned int unify::ListPartCount( std::string sString, std::vector< char > seperators )
+unsigned int unify::string::ListPartCount( std::string sString, std::vector< char > seperators )
 {
 	if( sString == "" ) return 0;
 
@@ -318,17 +318,17 @@ unsigned int unify::ListPartCount( std::string sString, std::vector< char > sepe
 	return pc + 1;
 }
 
-bool unify::CaseInsensitiveLessThanTest::operator() (std::string string1, std::string string2) const
+bool unify::string::CaseInsensitiveLessThanTest::operator() (std::string string1, std::string string2) const
 {
     return _stricmp(string1.c_str(), string2.c_str()) < 0;
 }
 
-bool unify::CaseInsensitiveLessThanTestCharPtr::operator() ( char * string1, char * string2 ) const
+bool unify::string::CaseInsensitiveLessThanTestCharPtr::operator() ( char * string1, char * string2 ) const
 {
 	return _stricmp( string1, string2 ) < 0;
 }
 
-std::vector< char > unify::SplitWhitespace()
+std::vector< char > unify::string::SplitWhitespace()
 {
 	std::vector< char > splitDelimitors;
 	splitDelimitors.push_back( ' ' );

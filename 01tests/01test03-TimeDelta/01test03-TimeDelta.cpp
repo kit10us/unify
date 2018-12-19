@@ -3,7 +3,7 @@
 
 //
 // Purpose of test...
-//    Test unify::TimeDelta.
+//    Test TimeDelta.
 //
 
 #include <conio.h>
@@ -18,7 +18,7 @@ int main( int argc, char ** argv )
 
 	Suite suite;
 
-	suite.BeginSuite( "unify::TimeDelta" );
+	suite.BeginSuite( "TimeDelta" );
 	{
 		suite.BeginCase( "Constructors" );
 		{

@@ -51,9 +51,9 @@ namespace unify
         Parameters operator+( Parameters & parameters );
 
     private:
-        typedef std::map< std::string, unify::Any, CaseInsensitiveLessThanTest > ParameterMap;
+        typedef std::map< std::string, unify::Any, string::CaseInsensitiveLessThanTest > ParameterMap;
         ParameterMap m_parameters;
-        mutable std::set< std::string, CaseInsensitiveLessThanTest > m_auditItemsUsed; // This helps reduce typos by ensuring every explicitly get and set value are paired. It is naturally ignored for defaults.
+        mutable std::set< std::string, string::CaseInsensitiveLessThanTest > m_auditItemsUsed; // This helps reduce typos by ensuring every explicitly get and set value are paired. It is naturally ignored for defaults.
     };
 
     // Unsigned int specialization to prevent issues with unsigned long int (uint32).

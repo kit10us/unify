@@ -1,10 +1,18 @@
 // Copyright (c) 2002 - 2019, Quentin S. Smith
 // All Rights Reserved
 
-// TODO: Figure out how to generate a template time exception here, for unsupported types, instead of throws.
+template< typename foo, typename ... bar >
+bool unify::string::StringIs( std::string a, std::string is, std::string rest... )
+{
+	if (_stricmp( a.c_str(), is.c_str() ) == 0)
+	{
+		return true;
+	}
+	return string::StringIs( a, rest );
+}
 
 template< typename T >
-std::vector< T > unify::Split( std::string sourceString, const char delimitor )
+std::vector< T > unify::string::Split( std::string sourceString, const char delimitor )
 {
 	std::vector< T > destination;
 	std::stringstream ss( sourceString );
@@ -17,7 +25,7 @@ std::vector< T > unify::Split( std::string sourceString, const char delimitor )
 }
 
 template< typename T >
-std::vector< T > unify::Split( std::string sourceString, const std::vector< char > & delimitors, bool includeEmpties )
+std::vector< T > unify::string::Split( std::string sourceString, const std::vector< char > & delimitors, bool includeEmpties )
 {
 	std::vector< T > destination;
 
@@ -58,7 +66,7 @@ std::vector< T > unify::Split( std::string sourceString, const std::vector< char
 }
 
 template< typename T >
-std::vector< T > unify::SplitOnWhitespace( std::string sourceString )
+std::vector< T > unify::string::SplitOnWhitespace( std::string sourceString )
 {
 	std::vector< char > delimitors;
 	delimitors.push_back( ' ' );

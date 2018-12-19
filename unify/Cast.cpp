@@ -105,8 +105,8 @@ std::string unify::Cast( const TimeDelta in )
 template<> 
 bool unify::Cast( const std::string text )
 {
-	std::string temp = Trim( text );
-	if ( StringIs( temp, "false" ) || StringIs( temp, "f" ) || StringIs( temp, "0" ) || StringIs( temp, "no" ) )
+	std::string temp = string::Trim( text );
+	if ( string::StringIs( temp, "false" ) || string::StringIs( temp, "f" ) || string::StringIs( temp, "0" ) || string::StringIs( temp, "no" ) )
 	{
 		return false;
 	}

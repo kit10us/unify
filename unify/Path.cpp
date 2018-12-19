@@ -7,12 +7,13 @@
 #include <stdio.h>
 
 using namespace unify;
+using namespace string;
 
-const std::string Path::XPathPrefix( "file://" );
+const std::string Path::XPathPrefix( "file:///" );
 
 bool Path::IsXPath( std::string path )
 {
-	return StringIs( LeftString( path, XPathPrefix.length() ), XPathPrefix );
+	return BeginsWith( path, XPathPrefix );
 }
 
 Path::Path()
@@ -20,16 +21,16 @@ Path::Path()
 }
 
 Path::Path( std::string path )
-	: m_path{ unify::BeginsWith( path, XPathPrefix ) ? path : XPathPrefix + path }
+	: m_path{ BeginsWith( path, XPathPrefix ) ? path : XPathPrefix + path }
 {
 }
 
 Path::Path( char * path )
-	: m_path{ unify::BeginsWith( path, XPathPrefix ) ? path : XPathPrefix + path }
+	: m_path{ BeginsWith( path, XPathPrefix ) ? path : XPathPrefix + path }
 {
 }
 
-Path::Path( const Path & left, const Path & right )
+Path::Path( Path left, Path right )
 {
 	Combine( left, right );
 }
@@ -110,17 +111,6 @@ std::vector< std::string > Path::Split() const
 		if (asString.at( p ) == '\\' || asString.at( p ) == '/' )
 		{
 			std::string part;
-			/*
-			if ( p == 0 )
-			{
-				parts.push_back( "/" );
-			}
-			else
-			{
-				parts.push_back( asString.substr( start, p - start + 1 ) );
-				start = p + 1;
-			}
-			*/
 			if ( p != 0 )
 			{
 				part = asString.substr( start, p - start );
@@ -144,7 +134,7 @@ Path & Path::Join( const std::vector< std::string > & pathParts )
 	m_path = std::string();
 	for ( std::vector< std::string >::const_iterator itr = pathParts.begin(), end = pathParts.end(); itr != end; ++itr )
 	{
-		Combine( *this, unify::Path( *itr ) );
+		Combine( *this, Path( *itr ) );
 	}
 	return *this;
 }
@@ -154,12 +144,12 @@ Path & Path::Normalize()
 	std::vector< std::string > parts = Split();
 	for ( std::vector< std::string >::const_iterator itr = parts.begin(); itr != parts.end(); ++itr )
 	{
-		if ( itr != parts.begin() && unify::BeginsWith( *itr, ".." ) ) 
+		if ( itr != parts.begin() && BeginsWith( *itr, ".." ) ) 
 		{
 			itr = parts.erase( itr - 1 ); // Erase what ever leads.
 			itr = parts.erase( itr ); // Erase the "..".
 		}
-		else if ( itr != parts.begin() && unify::BeginsWith( *itr, "." ) ) 
+		else if ( itr != parts.begin() && BeginsWith( *itr, "." ) ) 
 		{
 			itr = parts.erase( itr ); // Erase the ".".
 		}
@@ -200,6 +190,11 @@ Path Path::DirectoryOnly() const
 		std::string s = m_path.substr( 0, i + 1 );
 		return Path( m_path.substr( 0, i + 1 ) );
 	}
+}
+
+bool Path::HasExtension() const
+{
+	return !this->ExtensionOnly().empty();
 }
 
 std::string Path::Filename() const
@@ -290,31 +285,7 @@ bool Path::IsDirectory() const
 
 bool Path::IsExtension( std::string extension ) const
 {
-	std::string leftExtension = ExtensionOnly();
-	if ( leftExtension.empty() )
-	{
-		if ( extension.empty() )
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-	}
-	else if ( extension.empty() )
-	{
-		return false;
-	}
-
-	if ( extension[ 0 ] != '.' )
-	{
-		return _stricmp( leftExtension.c_str() + 1, extension.c_str() ) == 0;
-	}
-	else
-	{
-		return _stricmp( leftExtension.c_str(), extension.c_str() ) == 0;
-	}
+	return string::StringIs( ExtensionOnly(), extension, "." + extension );
 }
 
 void Path::ChangeExtension( std::string extension )
@@ -343,7 +314,7 @@ void Path::ChangeExtension( std::string extension )
 
 Path & Path::ChangeFilename( const Path & newFilename )
 {
-	return Combine( DirectoryOnly(), unify::Path( newFilename.Filename() ) );
+	return Combine( DirectoryOnly(), Path( newFilename.Filename() ) );
 }
 
 std::string Path::ToString() const
@@ -399,20 +370,20 @@ bool Path::Delete()
 	return remove( ToString().c_str() ) ? false : true;
 }
 
-bool Path::Rename( unify::Path to )
+bool Path::Rename( Path to )
 {
 	return rename( ToString().c_str(), to.ToString().c_str() ) ? false : true;
+}
+
+Path unify::ChangeExtension( Path path, std::string extension )
+{
+	Path outPath( path );
+	outPath.ChangeExtension( extension );
+	return outPath;
 }
 
 std::ostream & operator<<( std::ostream & os, const Path & path )
 {
 	os << path.ToString();
 	return os;
-}
-
-Path unify::ChangeExtension( const Path & path, std::string extension )
-{
-	auto newPath{ path };
-	newPath.ChangeExtension( extension );
-	return newPath;
 }

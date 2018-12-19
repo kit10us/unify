@@ -7,6 +7,7 @@
 #include <algorithm>
 
 using namespace unify;
+using namespace string;
 
 ColorUnit unify::ColorUnitRGBA( float r, float g, float b, float a )
 {
@@ -134,10 +135,10 @@ ColorUnit::ColorUnit( std::string text, Order order, float defaultAlpha )
 	}
 	else
 	{
-		std::vector< float > split = unify::Split< float >( text, ',' );
+		std::vector< float > split = Split< float >( text, ',' );
 		if ( split.size() == 1 )
 		{
-			split = unify::SplitOnWhitespace< float >( text );
+			split = SplitOnWhitespace< float >( text );
 		}
 
 		if ( split.size() == 3 )

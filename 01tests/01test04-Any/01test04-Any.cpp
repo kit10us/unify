@@ -3,7 +3,7 @@
 
 //
 // Purpose of test...
-//    Test the unify::Any.
+//    Test the Any.
 //
 
 #include <string>
@@ -18,7 +18,7 @@ int main( int argc, char ** argv )
 
 	Suite suite;
 
-	suite.BeginSuite( "unify::Any" );
+	suite.BeginSuite( "Any" );
 	{
 		suite.BeginCase( "Any not empty" );
 		Any anyInt12 = 12;
@@ -26,7 +26,7 @@ int main( int argc, char ** argv )
 		suite.EndCase();
 
 		suite.BeginCase( "Int match" );
-		suite.Assert( "Int match", unify::any_cast< int >( anyInt12 ) == 12 );
+		suite.Assert( "Int match", any_cast< int >( anyInt12 ) == 12 );
 		suite.EndCase();
 	}
 	suite.EndSuite();
