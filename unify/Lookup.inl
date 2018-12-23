@@ -96,6 +96,13 @@ void Lookup< Key, Value >::SetValue( Key key, Value value )
 }
 
 template< typename Key, typename Value >
+void Lookup< Key, Value >::Clear()
+{
+	m_keyToIndex.clear();
+	m_values.clear();
+}
+
+template< typename Key, typename Value >
 typename Lookup< Key, Value >::iterator Lookup< Key, Value >::begin()
 {
 	return iterator( this, 0 );

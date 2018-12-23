@@ -5,6 +5,7 @@
 
 #include <unify/Unify.h>
 #include <unify/KeyValuePair.h>
+#include <unify/String.h>
 #include <map>
 #include <vector>
 #include <string>
@@ -24,7 +25,7 @@ namespace unify
 		friend class iterator;
 
 		std::vector< KeyValuePair< Key, Value > > m_values;
-		std::map< Key, size_t > m_keyToIndex;
+		std::map< Key, size_t, string::CaseInsensitiveLessThanTest > m_keyToIndex;
 	public:
 
 		/// <summary>
@@ -78,6 +79,11 @@ namespace unify
 		/// Throws std::out_of_bounds if not found.
 		/// </summary>
 		void SetValue( Key key, Value value );
+
+		/// <summary>
+		/// Remove all values.
+		/// </summary>
+		void Clear();
 
 		class iterator
 		{
