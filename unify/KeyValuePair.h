@@ -19,6 +19,23 @@ namespace unify
 	template< typename Key, typename Value >
 	struct KeyValuePair
 	{
+		KeyValuePair( const KeyValuePair< Key, Value > & keyValue )
+			: key{ keyValue.key }
+			, value{ keyValue.value }
+		{
+		}
+
+		KeyValuePair( Key key, Value value )
+			: key{ key }
+			, value{ value }
+		{
+		}
+
+		bool operator=( const KeyValuePair & keyValue )
+		{
+			return key == keyValue.key && value == keyValue.value;
+		}
+
 		const Key key;
 		Value value;
 	};

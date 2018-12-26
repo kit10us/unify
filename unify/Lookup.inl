@@ -11,6 +11,7 @@ template< typename Key, typename Value >
 size_t Lookup< Key, Value >::Add( Key key, Value value = Value{} )
 	{
 		size_t index = m_values.size();
+		KeyValuePair< Key, Value > kvp( { key, value } );
 		m_values.push_back( { key, value } );
 		m_keyToIndex[key] = index;
 		return index;
