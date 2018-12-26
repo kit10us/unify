@@ -17,7 +17,7 @@ namespace unify
 		{
 		public:
 			virtual ~DefaultAssertHandler();
-			virtual void Assert( std::string message, bool test );
+			virtual void Assert( IOutputHandler::ptr output, std::string message, bool test );
 		};
 	}
 }

@@ -16,11 +16,36 @@ void DefaultOutputHandler::Output( std::string message, OutputType type )
 
 	switch( type )
 	{
-		case OutputType::Info:
-			cout << "      Test info: " << message << "." << endl;
-			break;
-		case OutputType::Warning:
-			cout << "      Test warning: " << message << "." << endl;
-			break;
+	case OutputType::BeginSuite:
+		cout << "Begin test suite \"" << message << "\"" << endl;
+		break;
+
+	case OutputType::EndSuite:
+		cout << "End Test suite \"" << message << "\"" << endl;
+		break;
+
+	case OutputType::BeginCase:
+		cout << "   Begin case \"" << message << "\"" << endl;
+		break;
+
+	case OutputType::EndCase:
+		cout << "   End case \"" << message << "\"" << endl;
+		break;
+
+	case OutputType::Info:
+		cout << "         Info \"" << message << "\"" << endl;
+		break;
+
+	case OutputType::Warning:
+		cout << "         Warning \"" << message << "\"" << endl;
+		break;
+
+	case OutputType::AssertPassed:
+		cout << "      Assert \"" << message << "\" passed" << endl;
+		break;
+
+	case OutputType::AssertFailed:
+		cout << "      Assert \"" << message << "\" failed!" << endl;
+		break;
 	}
 }

@@ -10,19 +10,17 @@ DefaultAssertHandler::~DefaultAssertHandler()
 {
 }
 
-void DefaultAssertHandler::Assert( std::string message, bool test )
+void DefaultAssertHandler::Assert( IOutputHandler::ptr output, std::string message, bool test )
 {
 	using namespace std;
 
-	cout << "   Test \"" << message << "\" ";
-
 	if ( !test )
 	{
-		cout << "failed!" << endl;
+		output->Output( message, OutputType::AssertFailed );
 		assert( false );
 	}
 	else
 	{
-		cout << "passed." << endl;
+		output->Output( message, OutputType::AssertPassed );
 	}
 }

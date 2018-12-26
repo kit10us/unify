@@ -3,11 +3,12 @@
 
 #pragma once
 
-#include <memory>
 #include <unify/Unify.h>
 #include <unify/String.h>
 #include <unify/Exception.h>
 #include <unify/test/IEventHandler.h>
+#include <unify/test/IOutputHandler.h>
+#include <memory>
 
 namespace unify
 {
@@ -17,7 +18,7 @@ namespace unify
 		{
 		public:
 			virtual ~DefaultEventHandler();
-			virtual void Event( std::string name, EventType type );
+			virtual void Event( IOutputHandler::ptr output, std::string name, OutputType type );
 		};
 	}
 }

@@ -72,8 +72,8 @@ namespace unify
 		private:
 			std::string m_suiteName;
 			std::string m_caseName;
-			std::map< EventType, IEventHandler::ptr > m_eventHandler;
-			std::map< OutputType, IOutputHandler::ptr > m_outputHandler;
+			IEventHandler::ptr m_eventHandler;
+			IOutputHandler::ptr m_outputHandler;
 			unsigned int m_assertCount;
 			IAssertHandler::ptr m_assertHandler;
 		};

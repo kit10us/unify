@@ -13,14 +13,8 @@ using namespace test;
 
 Suite::Suite()
 {
-	m_eventHandler[EventType::SuiteBegin] = IEventHandler::ptr{ new DefaultEventHandler };
-	m_eventHandler[EventType::SuiteEnd] = IEventHandler::ptr{ new DefaultEventHandler };
-	m_eventHandler[EventType::CaseBegin] = IEventHandler::ptr{ new DefaultEventHandler };
-	m_eventHandler[EventType::CaseEnd] = IEventHandler::ptr{ new DefaultEventHandler };
-
-	m_outputHandler[OutputType::Info] = IOutputHandler::ptr{ new DefaultOutputHandler };
-	m_outputHandler[OutputType::Warning] = IOutputHandler::ptr{ new DefaultOutputHandler };
-
+	m_eventHandler = IEventHandler::ptr{ new DefaultEventHandler };
+	m_outputHandler = IOutputHandler::ptr{ new DefaultOutputHandler };
 	m_assertHandler = IAssertHandler::ptr{ new DefaultAssertHandler };
 }
 
@@ -30,50 +24,53 @@ Suite::~Suite()
 
 void Suite::BeginSuite( std::string name )
 {
-	using namespace std;
-
 	m_suiteName = name;
-
-	auto handler = m_eventHandler.find( EventType::SuiteBegin );
-	if( handler != m_eventHandler.end() )
+	if( m_eventHandler )
 	{
-		handler->second->Event( m_suiteName, EventType::SuiteBegin );
+		m_eventHandler->Event( m_outputHandler, m_suiteName, OutputType::BeginSuite );
 	}
 }
 
 void Suite::EndSuite()
 {
-	using namespace std;
+	if (m_eventHandler)
+	{
+		m_eventHandler->Event( m_outputHandler, m_suiteName, OutputType::EndSuite );
+	}
 	m_suiteName = "";
 }
 
 void Suite::BeginCase( std::string name )
 {
-	using namespace std;
 	m_caseName = name;
+	if ( m_outputHandler )
+	{
+		m_outputHandler->Output( m_caseName, OutputType::BeginCase );
+	}
 }
 
 void Suite::EndCase()
 {
-	using namespace std;
+	if ( m_outputHandler )
+	{
+		m_outputHandler->Output( m_caseName, OutputType::EndCase );
+	}
 	m_caseName = "";
 }
 
 void Suite::Info( std::string message )
 {
-	auto handler = m_outputHandler.find( OutputType::Info );
-	if (handler != m_outputHandler.end())
+	if ( m_outputHandler )
 	{
-		handler->second->Output( message, OutputType::Info );
+		m_outputHandler->Output( message, OutputType::Info );
 	}
 }
 
 void Suite::Warning( std::string message )
 {
-	auto handler = m_outputHandler.find( OutputType::Warning );
-	if (handler != m_outputHandler.end())
+	if ( m_outputHandler )
 	{
-		handler->second->Output( message, OutputType::Warning );
+		m_outputHandler->Output( message, OutputType::Warning );
 	}
 }
 
@@ -86,7 +83,7 @@ void Suite::Assert( std::string message, bool test )
 	
 	if ( m_assertHandler )
 	{
-		m_assertHandler->Assert( message, test );
+		m_assertHandler->Assert( m_outputHandler, message, test );
 	}
 }
 

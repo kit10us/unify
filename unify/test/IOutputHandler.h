@@ -16,8 +16,14 @@ namespace unify
 		/// </summary>
 		enum class OutputType
 		{
+			BeginSuite,
+			EndSuite,
+			BeginCase,
+			EndCase,
 			Info,
 			Warning,
+			AssertPassed,
+			AssertFailed,
 			COUNT
 		};
 

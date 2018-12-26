@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <unify/test/IOutputHandler.h>
 #include <memory>
 #include <unify/Unify.h>
 #include <string>
@@ -11,18 +12,6 @@ namespace unify
 {
 	namespace test
 	{
-		/// <summary>
-		/// The type of output. Allows the same interface for each output type.
-		/// </summary>
-		enum class EventType
-		{
-			SuiteBegin,
-			SuiteEnd,
-			CaseBegin,
-			CaseEnd,
-			COUNT
-		};
-
 		/// <summary>
 		/// Interface for handling a test event.
 		/// </summary>
@@ -37,7 +26,7 @@ namespace unify
 			/// Called when a test event happens.
 			/// </summary>
 			/// <param name="type">Type of event.</param>
-			virtual void Event( std::string name, EventType type ) = 0;
+			virtual void Event( IOutputHandler::ptr output, std::string name, OutputType type ) = 0;
 		};
 	}
 }
