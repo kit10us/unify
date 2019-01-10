@@ -50,6 +50,40 @@ std::string DataLock::ToString( TYPE type )
 	throw unify::Exception( "Invalid DataLock type!" );
 }
 
+bool DataLock::ReadAccess( TYPE type )
+{
+	switch (type)
+	{
+	case DataLock::None:
+		return false;
+	case DataLock::Readonly:
+		return true;
+	case DataLock::Writeonly:
+		return false;
+	case DataLock::ReadWrite:
+		return true;
+	}
+	throw unify::Exception( "Invalid DataLock type!" );
+}
+
+bool DataLock::WriteAccess( TYPE type )
+{
+	switch (type)
+	{
+	case DataLock::None:
+		return false;
+	case DataLock::Readonly:
+		return false;
+	case DataLock::Writeonly:
+		return true;
+	case DataLock::ReadWrite:
+		return true;
+	}
+	throw unify::Exception( "Invalid DataLock type!" );
+}
+
+
+
 DataLock::DataLock()
 : m_data( 0 )
 , m_stride( 0 )

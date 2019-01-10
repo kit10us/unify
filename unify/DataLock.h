@@ -22,6 +22,9 @@ namespace unify
 			ReadWrite
 		};
 
+		static bool ReadAccess( TYPE type );
+		static bool WriteAccess( TYPE type );
+
 		static TYPE FromString( std::string type );
 		static std::string ToString( TYPE type );
 
@@ -235,7 +238,7 @@ namespace unify
 			throw unify::Exception( "Attempted to access index out of range! (" + unify::Cast< std::string >( index ) + " to " + unify::Cast< std::string >( m_count ) + ")" );
 		}
 
-		if (m_readonly)
+		if ( ! WriteAccess( m_type ) )
 		{
 			assert( 0 );
 			throw unify::Exception( "Attempted to access READONLY data for write!" );
