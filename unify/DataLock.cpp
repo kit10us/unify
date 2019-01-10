@@ -5,10 +5,50 @@
 #include <unify/DataLock.h>
 #include <unify/String.h>
 #include <unify/Exception.h>
-#include <string>
+#include <unify/String.h>
 #include <cassert>
 
 using namespace unify;
+
+DataLock::TYPE DataLock::FromString( std::string type )
+{
+	using unify::string::StringIs;
+
+	if ( StringIs( type, "None" ) )
+	{
+		return DataLock::None;
+	}
+	else if ( StringIs( type, "Readonly" ) )
+	{
+		return DataLock::Readonly;
+	}
+	else if ( StringIs( type, "Writeonly" ) )
+	{
+		return DataLock::Writeonly;
+	}
+	else if ( StringIs( type, "ReadWrite" ) )
+	{
+		return DataLock::ReadWrite;
+	}
+
+	throw unify::Exception( "Invalid DataLock type \"" + type + "\"!" );
+}
+std::string DataLock::ToString( TYPE type )
+{
+	switch( type )
+	{
+	case DataLock::None:
+		return "None";
+	case DataLock::Readonly:
+		return "Readonly";
+	case DataLock::Writeonly:
+		return "Writeonly";
+	case DataLock::ReadWrite:
+		return "ReadWrite";
+	}
+
+	throw unify::Exception( "Invalid DataLock type!" );
+}
 
 DataLock::DataLock()
 : m_data( 0 )
@@ -19,79 +59,43 @@ DataLock::DataLock()
 {
 }
 
-DataLock::DataLock( void * data, unsigned int stride, unsigned int count, bool readonly, size_t slot )
+DataLock::DataLock( void * data, unsigned int stride, unsigned int count, TYPE type, size_t slot )
 {
-	SetLock( data, stride, count, readonly, slot );
+	SetLock( data, stride, count, type, slot );
 }
 
-DataLock::DataLock( void * data, unsigned int sizeInBytes, bool readonly, size_t slot )
+DataLock::DataLock( void * data, unsigned int sizeInBytes, TYPE type, size_t slot )
 {
-	SetLock( data, sizeInBytes, readonly, slot );
+	SetLock( data, sizeInBytes, type, slot );
 }
 
 DataLock::~DataLock()
 {
 }
 
-void DataLock::SetLock( void * data, unsigned int stride, unsigned int count, bool readonly, size_t slot )
+void DataLock::SetLock( void * data, unsigned int stride, unsigned int count, TYPE type, size_t slot )
 {
 	m_data = data;
 	m_stride = stride;
 	m_count = count;
 	m_sizeInBytes = stride * count;
-	m_readonly = readonly;
+	m_type = type;
 	m_slot = slot;
 }
 
-void DataLock::SetLock( void * data, unsigned int sizeInBytes, bool readonly, size_t slot )
+void DataLock::SetLock( void * data, unsigned int sizeInBytes, TYPE type, size_t slot )
 {
 	m_data = data;
 	m_stride = sizeInBytes;
 	m_count = 1;
 	m_sizeInBytes = sizeInBytes;
-	m_readonly = readonly;
+	m_type = type;
 	m_slot = slot;
 }
 
-void * DataLock::GetData()
+DataLock::TYPE DataLock::GetType() const
 {
-	if( m_readonly )
-	{
-		return 0;
-	}
-	return m_data;
-}
-
-void * DataLock::GetItem( unsigned int index )
-{
-	if( index >= m_count )
-	{
-		assert( 0 );
-		throw unify::Exception( "Attempted to access index out of range! (" + unify::Cast< std::string >( index ) + " to " + unify::Cast< std::string >( m_count ) +")" );
-	}
-
-	if ( m_readonly )
-	{
-		assert( 0 );
-		throw unify::Exception( "Attempted to access READONLY data for write!" );
-	}
-
-	return ((unsigned char*)m_data) + m_stride * index;
-}
-
-const void * DataLock::GetDataReadOnly() const
-{
-	return m_data;
-}
-
-const void * DataLock::GetItemReadOnly( unsigned int index ) const
-{
-	if( index >= m_count )
-	{
-		return 0;
-	}
-
-	return ((unsigned char*)m_data) + m_stride * index;
+	return m_type;
 }
 
 unsigned int DataLock::Count() const

@@ -5,7 +5,6 @@
 #include <string>
 #include <memory>
 #include <iostream>
-#include <conio.h>
 
 template< typename Key, typename Value >
 size_t Lookup< Key, Value >::Add( Key key, Value value = Value{} )

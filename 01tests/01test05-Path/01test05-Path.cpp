@@ -1,17 +1,16 @@
 // Copyright (c) 2002 - 2018, Evil Quail LLC
 // All Rights Reserved
 
+/// <summary>
+/// Test Path.
+/// </summary>
+
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <conio.h>
 #include <vector>
 #include <unify/Path.h>
 #include <unify/test/Suite.h>
-//
-// Purpose of test...
-//    Test Path.
-//
 
 int main( int argc, char ** argv )
 {
@@ -208,9 +207,6 @@ int main( int argc, char ** argv )
 		suite.EndCase();
 	}
 	suite.EndSuite();
-
-	std::cout << "Press any Enter to finish...\n";
-	while( ! _getch() );
 
 	return 0;
 }

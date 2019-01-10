@@ -9,7 +9,7 @@
 namespace unify
 {
 	///	<summary>
-	/// A FrameSet is a set of matrices, and connectivity between these matrices, used for mesh animations.
+	/// A set of matrices, and connectivity between these matrices, used for mesh animations.
 	/// </summary>
 	class FrameSet
 	{
@@ -27,7 +27,7 @@ namespace unify
 		FrameSet();
 		~FrameSet();
 
-		size_t Add( const Matrix & model, size_t parent, std::string name = std::string() );
+		size_t Add( Matrix model, size_t parent, std::string name = std::string() );
 		bool Exists( std::string name ) const;
 		size_t Find( std::string name ) const;
 		size_t Count() const;

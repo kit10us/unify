@@ -16,7 +16,7 @@ FrameSet::~FrameSet()
 {
 }
 
-size_t FrameSet::Add( const Matrix & model, size_t parent, std::string name )
+size_t FrameSet::Add( Matrix model, size_t parent, std::string name )
 {
 	// Assert valid connectivity.
 	size_t index = m_parentIndex.size();

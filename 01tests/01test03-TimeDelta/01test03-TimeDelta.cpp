@@ -1,12 +1,10 @@
 // Copyright (c) 2002 - 2018, Evil Quail LLC
 // All Rights Reserved
 
-//
-// Purpose of test...
-//    Test TimeDelta.
-//
+/// <summary>
+/// Test TimeDelta.
+/// </summary>
 
-#include <conio.h>
 #include <string>
 #include <unify/String.h>
 #include <unify/test/Suite.h>
@@ -66,9 +64,6 @@ int main( int argc, char ** argv )
 		suite.EndCase();
 	}
 	suite.EndSuite();
-
-	std::cout << "Press any Enter to finish...\n";
-	while( !_getch() );
 
 	return 0;
 }

@@ -1,15 +1,12 @@
 // Copyright (c) 2002 - 2018, Evil Quail LLC
 // All Rights Reserved
 
-//
-// Purpose of test...
-//    Test varois Unify geometry features.
-//
+/// <summary>
+///    Test varois Unify geometry features.
+/// </summary>
 
-#include <conio.h>
 #include <unify/BBox.h>
 #include <unify/test/Suite.h>
-
 #include <unify/V3.h>
 
 int main( int argc, char ** argv )
@@ -127,9 +124,5 @@ int main( int argc, char ** argv )
 		suite.EndCase();
 	}
 	suite.EndSuite();
-
-	std::cout << "Press any Enter to finish...\n";
-	while( !_getch() );
-
-    return 0;
+	return 0;
 }

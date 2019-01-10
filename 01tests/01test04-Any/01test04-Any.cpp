@@ -1,13 +1,11 @@
 // Copyright (c) 2002 - 2018, Evil Quail LLC
 // All Rights Reserved
 
-//
-// Purpose of test...
-//    Test the Any.
-//
+/// <summary>
+/// Test the Any.
+/// </summary>
 
 #include <string>
-#include <conio.h>
 #include <unify/Any.h>
 #include <unify/test/Suite.h>
 
@@ -30,9 +28,5 @@ int main( int argc, char ** argv )
 		suite.EndCase();
 	}
 	suite.EndSuite();
-
-	std::cout << "Press any Enter to finish...\n";
-	while( ! _getch() );
-
 	return 0;
 }

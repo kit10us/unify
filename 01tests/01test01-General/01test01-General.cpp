@@ -1,13 +1,11 @@
 // Copyright (c) 2002 - 2018, Evil Quail LLC
 // All Rights Reserved
 
-//
-// Purpose of test...
-//    Test various Unify features that are too small a scope to deserve a seperate test suite.
-//    Test may be promoted to seperate suites as desired.
-//
+/// <summary>
+/// Test various Unify features that are too small a scope to deserve a seperate test suite.
+/// Test may be promoted to seperate suites as desired.
+/// </summary>
 
-#include <conio.h>
 #include <unify/Color.h>
 #include <unify/ColorUnit.h>
 #include <unify/V2.h>
@@ -61,9 +59,5 @@ int main( int argc, char ** argv )
 		}
 	}
 	suite.EndSuite();
-
-	std::cout << "Press any Enter to finish...\n";
-	while( ! _getch() );
-
     return 0;
 }

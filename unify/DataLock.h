@@ -14,34 +14,71 @@ namespace unify
 	class DataLock
 	{
 	public:
+		enum TYPE
+		{
+			None,
+			Readonly,
+			Writeonly,
+			ReadWrite
+		};
+
+		static TYPE FromString( std::string type );
+		static std::string ToString( TYPE type );
+
+	public:
 		DataLock();
-		DataLock( void * data, unsigned int stride, unsigned int count, bool readonly, size_t slot );
-		DataLock( void * data, unsigned int sizeInBytes, bool readonly, size_t slot );
+		DataLock( void * data, unsigned int stride, unsigned int count, TYPE type, size_t slot );
+		DataLock( void * data, unsigned int sizeInBytes, TYPE type, size_t slot );
 
 		virtual ~DataLock();
 
-		virtual void SetLock( void * data, unsigned int stride, unsigned int count, bool readonly, size_t slot );
-		virtual void SetLock( void * data, unsigned int sizeInBytes, bool readonly, size_t slot );
+		/// <summary>
+		/// Setup a lock.
+		/// </summary>
+		virtual void SetLock( void * data, unsigned int stride, unsigned int count, TYPE type, size_t slot );
 
+		/// <summary>
+		/// Setup a lock.
+		/// </summary>
+		virtual void SetLock( void * data, unsigned int sizeInBytes, TYPE type, size_t slot );
+
+		/// <summary>
+		/// Returns the type of lock.
+		/// </summary>
+		TYPE GetType() const;
+		
 		/// <summary>
 		/// Return the head pointer to the entire data lock.
 		/// </summary>
-		void * GetData();
+		template < typename T >
+		T * GetData();
+
+		/// <summary>
+		/// Get a pointer to the data 
+		/// </summary>
+		template < typename T >
+		const T * GetDataReadOnly() const;
 
 		/// <summary>
 		/// Return a pointer to the head of a specific 'item', and item being determined by length of stride.
 		/// </summary>
-		void * GetItem( unsigned int index );
+		template < typename T >
+		T * GetItem( unsigned int index );
 
-		const void * GetDataReadOnly() const;
-		const void * GetItemReadOnly( unsigned int index ) const;
 		unsigned int Count() const;
+
 		unsigned int Stride() const;
+
 		unsigned int GetSizeInBytes() const;
+
 		size_t Slot() const;
+
 		virtual void Invalidate();
+
 		virtual bool CopyBytesFrom( const void * source, unsigned int offset, unsigned int byteCount );
+
 		virtual bool CopyItemFrom( const void * source, unsigned int indexTo ); 
+
 		virtual bool CopyItemFromTo( unsigned int indexFrom, unsigned int indexTo );
 
 		template< typename T, size_t T_OffsetInBytes = 0 >
@@ -167,7 +204,43 @@ namespace unify
 		unsigned int m_stride; // Item stride
 		unsigned int m_count;	// Number of items we can stride through
 		unsigned int m_sizeInBytes;
-		bool m_readonly;
+		TYPE m_type;
 		size_t m_slot;
 	};
+
+	/// <summary>
+	/// Return the head pointer to the entire data lock.
+	/// </summary>
+	template < typename T >
+	T * DataLock::GetData()
+	{
+		if (m_readonly)
+		{
+			return 0;
+		}
+		return (T*)m_data;
+	}
+
+	template < typename T >
+	const T * DataLock::GetDataReadOnly() const
+	{
+		return (T*)m_data;
+	}
+	template < typename T >
+	T * DataLock::GetItem( unsigned int index )
+	{
+		if (index >= m_count)
+		{
+			assert( 0 );
+			throw unify::Exception( "Attempted to access index out of range! (" + unify::Cast< std::string >( index ) + " to " + unify::Cast< std::string >( m_count ) + ")" );
+		}
+
+		if (m_readonly)
+		{
+			assert( 0 );
+			throw unify::Exception( "Attempted to access READONLY data for write!" );
+		}
+
+		return ((T*)m_data) + m_stride * index;
+	}
 } // namespace unify
