@@ -45,6 +45,74 @@ int main( int argc, char ** argv )
 		suite.Assert( "Writeonly", DataLock::WriteAccess( DataLock::Writeonly ) == true );
 		suite.Assert( "Readonly", DataLock::WriteAccess( DataLock::ReadWrite ) == true );
 		suite.EndCase();
+
+		suite.BeginCase( "GetItemReadonly" );
+		{
+			struct Data
+			{
+				int value1;
+				int value2;
+				int value3;
+
+				bool operator==( const Data & data ) const
+				{
+					return value1 == data.value1 && value2 == data.value2 && value3 == data.value3;
+				}
+			};
+
+			Data data[] =
+			{
+				{ 1, 2, 3 },
+				{ 4, 5, 6 },
+				{ 7, 8, 9 }
+			};
+
+			DataLock lock( &data, sizeof( Data ) * 3, 3, DataLock::Readonly, 0 );
+
+			suite.Assert( "first element", (*lock.GetItemReadonly< Data >( 0 )) == Data{ 1, 2, 3 } );
+			suite.Assert( "second element", (*lock.GetItemReadonly< Data >( 1 )) == Data{ 4, 5, 6 } );
+			suite.Assert( "third element", (*lock.GetItemReadonly< Data >( 2 )) == Data{ 7, 8, 9 } );
+		}
+
+		suite.BeginCase( "GetData" );
+		{
+			struct Data
+			{
+				int value1;
+				int value2;
+				int value3;
+
+				bool operator==( const Data & data ) const
+				{
+					return value1 == data.value1 && value2 == data.value2 && value3 == data.value3;
+				}
+			};
+
+			Data data[] =
+			{
+				{ 1, 2, 3 },
+				{ 4, 5, 6 },
+				{ 7, 8, 9 }
+			};
+
+			DataLock lock( &data, sizeof( Data ) * 3, 3, DataLock::ReadWrite, 0 );
+
+			Data writeData[] =
+			{
+				{ 10, 11, 12 },
+				{ 13, 14, 15 },
+				{ 16, 17, 18 }
+			};
+
+			*lock.GetItem< Data >( 0 ) = writeData[0];
+			*lock.GetItem< Data >( 1 ) = writeData[1];
+			*lock.GetItem< Data >( 2 ) = writeData[2];
+
+			suite.Assert( "first element", (*lock.GetItemReadonly< Data >( 0 )) == Data{ 10, 11, 12 } );
+			suite.Assert( "second element", (*lock.GetItemReadonly< Data >( 1 )) == Data{ 13, 14, 15 } );
+			suite.Assert( "third element", (*lock.GetItemReadonly< Data >( 2 )) == Data{ 16, 17, 18 } );
+		}
+		suite.EndCase();
 	}
 	suite.EndSuite();
 	return 0;

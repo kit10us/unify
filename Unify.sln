@@ -43,6 +43,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01test07-Lookup", "01tests\
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01test08-DataLock", "01tests\01test08-DataLock\01test08-DataLock.vcxproj", "{2BD689B9-F21E-4B02-A9FE-3D4E80580DE3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AD285766-AD5F-4006-91AA-4919F27EF77B} = {AD285766-AD5F-4006-91AA-4919F27EF77B}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -68,6 +68,12 @@ namespace unify
 		template < typename T >
 		T * GetItem( unsigned int index );
 
+		/// <summary>
+		/// Return a pointer to the head of a specific 'item', and item being determined by length of stride.
+		/// </summary>
+		template < typename T >
+		const T * GetItemReadonly( unsigned int index ) const;
+
 		unsigned int Count() const;
 
 		unsigned int Stride() const;
@@ -217,9 +223,9 @@ namespace unify
 	template < typename T >
 	T * DataLock::GetData()
 	{
-		if (m_readonly)
+		if ( !ReadAccess( m_type ) || !WriteAccess( m_type ) )
 		{
-			return 0;
+			throw unify::Exception( "Attempted to access " + ToString( m_type ) + " for " + ToString( DataLock::ReadWrite ) + " access!" );
 		}
 		return (T*)m_data;
 	}
@@ -227,23 +233,42 @@ namespace unify
 	template < typename T >
 	const T * DataLock::GetDataReadOnly() const
 	{
+		if ( !ReadAccess( m_type ) )
+		{
+			throw unify::Exception( "Attempted to access " + ToString( m_type ) + " for " + ToString( DataLock::ReadWrite ) + " access!" );
+		}
 		return (T*)m_data;
 	}
+
 	template < typename T >
 	T * DataLock::GetItem( unsigned int index )
 	{
 		if (index >= m_count)
 		{
-			assert( 0 );
 			throw unify::Exception( "Attempted to access index out of range! (" + unify::Cast< std::string >( index ) + " to " + unify::Cast< std::string >( m_count ) + ")" );
 		}
 
-		if ( ! WriteAccess( m_type ) )
+		if ( ! ReadAccess( m_type ) || ! WriteAccess( m_type )  )
 		{
-			assert( 0 );
+			throw unify::Exception( "Attempted to access " + ToString( m_type ) + " for " + ToString( DataLock::ReadWrite ) + " access!" );
+		}
+
+		return &GetData< T >()[ index ];
+	}
+
+	template < typename T >
+	const T * DataLock::GetItemReadonly( unsigned int index ) const
+	{
+		if (index >= m_count)
+		{
+			throw unify::Exception( "Attempted to access index out of range! (" + unify::Cast< std::string >( index ) + " to " + unify::Cast< std::string >( m_count ) + ")" );
+		}
+
+		if (!ReadAccess( m_type ))
+		{
 			throw unify::Exception( "Attempted to access READONLY data for write!" );
 		}
 
-		return ((T*)m_data) + m_stride * index;
+		return &GetDataReadOnly< T >()[ index ];
 	}
 } // namespace unify
