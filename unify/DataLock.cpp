@@ -10,79 +10,77 @@
 
 using namespace unify;
 
-DataLock::TYPE DataLock::FromString( std::string type )
+DataLockAccess::TYPE DataLockAccess::FromString( std::string access )
 {
 	using unify::string::StringIs;
 
-	if ( StringIs( type, "None" ) )
+	if ( StringIs( access, "None" ) )
 	{
-		return DataLock::None;
+		return DataLockAccess::None;
 	}
-	else if ( StringIs( type, "Readonly" ) )
+	else if ( StringIs( access, "Readonly" ) )
 	{
-		return DataLock::Readonly;
+		return DataLockAccess::Readonly;
 	}
-	else if ( StringIs( type, "Writeonly" ) )
+	else if ( StringIs( access, "Writeonly" ) )
 	{
-		return DataLock::Writeonly;
+		return DataLockAccess::Writeonly;
 	}
-	else if ( StringIs( type, "ReadWrite" ) )
+	else if ( StringIs( access, "ReadWrite" ) )
 	{
-		return DataLock::ReadWrite;
+		return DataLockAccess::ReadWrite;
 	}
 
-	throw unify::Exception( "Invalid DataLock type \"" + type + "\"!" );
+	throw unify::Exception( "Invalid DataLockAccess\"" + access + "\"!" );
 }
-std::string DataLock::ToString( TYPE type )
+std::string DataLockAccess::ToString( TYPE access )
 {
-	switch( type )
+	switch( access )
 	{
-	case DataLock::None:
+	case DataLockAccess::None:
 		return "None";
-	case DataLock::Readonly:
+	case DataLockAccess::Readonly:
 		return "Readonly";
-	case DataLock::Writeonly:
+	case DataLockAccess::Writeonly:
 		return "Writeonly";
-	case DataLock::ReadWrite:
+	case DataLockAccess::ReadWrite:
 		return "ReadWrite";
 	}
 
-	throw unify::Exception( "Invalid DataLock type!" );
+	throw unify::Exception( "Invalid DataLockAccess type!" );
 }
 
-bool DataLock::ReadAccess( TYPE type )
+bool DataLockAccess::ReadAccess( TYPE access )
 {
-	switch (type)
+	switch (access)
 	{
-	case DataLock::None:
+	case DataLockAccess::None:
 		return false;
-	case DataLock::Readonly:
+	case DataLockAccess::Readonly:
 		return true;
-	case DataLock::Writeonly:
+	case DataLockAccess::Writeonly:
 		return false;
-	case DataLock::ReadWrite:
+	case DataLockAccess::ReadWrite:
 		return true;
 	}
-	throw unify::Exception( "Invalid DataLock type!" );
+	throw unify::Exception( "Invalid DataLockAccess type!" );
 }
 
-bool DataLock::WriteAccess( TYPE type )
+bool DataLockAccess::WriteAccess( TYPE access )
 {
-	switch (type)
+	switch (access)
 	{
-	case DataLock::None:
+	case DataLockAccess::None:
 		return false;
-	case DataLock::Readonly:
+	case DataLockAccess::Readonly:
 		return false;
-	case DataLock::Writeonly:
+	case DataLockAccess::Writeonly:
 		return true;
-	case DataLock::ReadWrite:
+	case DataLockAccess::ReadWrite:
 		return true;
 	}
-	throw unify::Exception( "Invalid DataLock type!" );
+	throw unify::Exception( "Invalid DataLockAccess!" );
 }
-
-
 
 DataLock::DataLock()
 : m_data( 0 )
@@ -93,12 +91,12 @@ DataLock::DataLock()
 {
 }
 
-DataLock::DataLock( void * data, unsigned int stride, unsigned int count, TYPE type, size_t slot )
+DataLock::DataLock( void * data, unsigned int stride, unsigned int count, DataLockAccess::TYPE type, size_t slot )
 {
 	SetLock( data, stride, count, type, slot );
 }
 
-DataLock::DataLock( void * data, unsigned int sizeInBytes, TYPE type, size_t slot )
+DataLock::DataLock( void * data, unsigned int sizeInBytes, DataLockAccess::TYPE type, size_t slot )
 {
 	SetLock( data, sizeInBytes, type, slot );
 }
@@ -107,7 +105,7 @@ DataLock::~DataLock()
 {
 }
 
-void DataLock::SetLock( void * data, unsigned int stride, unsigned int count, TYPE type, size_t slot )
+void DataLock::SetLock( void * data, unsigned int stride, unsigned int count, DataLockAccess::TYPE type, size_t slot )
 {
 	m_data = data;
 	m_stride = stride;
@@ -117,7 +115,7 @@ void DataLock::SetLock( void * data, unsigned int stride, unsigned int count, TY
 	m_slot = slot;
 }
 
-void DataLock::SetLock( void * data, unsigned int sizeInBytes, TYPE type, size_t slot )
+void DataLock::SetLock( void * data, unsigned int sizeInBytes, DataLockAccess::TYPE type, size_t slot )
 {
 	m_data = data;
 	m_stride = sizeInBytes;
@@ -127,7 +125,7 @@ void DataLock::SetLock( void * data, unsigned int sizeInBytes, TYPE type, size_t
 	m_slot = slot;
 }
 
-DataLock::TYPE DataLock::GetType() const
+DataLockAccess::TYPE DataLock::GetType() const
 {
 	return m_type;
 }

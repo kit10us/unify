@@ -3,8 +3,9 @@
 
 template< typename T >
 V2< T >::V2()
+	: x{}
+	, y{}
 {
-	// Do nothing.
 }
 
 template< typename T >

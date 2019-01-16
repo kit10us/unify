@@ -3,8 +3,10 @@
 
 template< typename T >
 V3< T >::V3()
+	: x{}
+	, y{}
+	, z{}
 {
-	// DO NOTHING
 }
 
 template< typename T >

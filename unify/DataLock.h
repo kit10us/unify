@@ -8,12 +8,8 @@
 
 namespace unify
 {
-	/// <summary>
-	/// A data lock construct that allows common locking of data so that we can read and write from shared the data.
-	/// </summary>
-	class DataLock
+	struct DataLockAccess
 	{
-	public:
 		enum TYPE
 		{
 			None,
@@ -22,33 +18,39 @@ namespace unify
 			ReadWrite
 		};
 
-		static bool ReadAccess( TYPE type );
-		static bool WriteAccess( TYPE type );
+		static bool ReadAccess( TYPE access );
+		static bool WriteAccess( TYPE access );
 
-		static TYPE FromString( std::string type );
-		static std::string ToString( TYPE type );
+		static TYPE FromString( std::string access );
+		static std::string ToString( TYPE access );
+	};
 
+	/// <summary>
+	/// A data lock construct that allows common locking of data so that we can read and write from shared the data.
+	/// </summary>
+	class DataLock
+	{
 	public:
 		DataLock();
-		DataLock( void * data, unsigned int stride, unsigned int count, TYPE type, size_t slot );
-		DataLock( void * data, unsigned int sizeInBytes, TYPE type, size_t slot );
+		DataLock( void * data, unsigned int stride, unsigned int count, DataLockAccess::TYPE type, size_t slot );
+		DataLock( void * data, unsigned int sizeInBytes, DataLockAccess::TYPE type, size_t slot );
 
 		virtual ~DataLock();
 
 		/// <summary>
 		/// Setup a lock.
 		/// </summary>
-		virtual void SetLock( void * data, unsigned int stride, unsigned int count, TYPE type, size_t slot );
+		virtual void SetLock( void * data, unsigned int stride, unsigned int count, DataLockAccess::TYPE type, size_t slot );
 
 		/// <summary>
 		/// Setup a lock.
 		/// </summary>
-		virtual void SetLock( void * data, unsigned int sizeInBytes, TYPE type, size_t slot );
+		virtual void SetLock( void * data, unsigned int sizeInBytes, DataLockAccess::TYPE type, size_t slot );
 
 		/// <summary>
 		/// Returns the type of lock.
 		/// </summary>
-		TYPE GetType() const;
+		DataLockAccess::TYPE GetType() const;
 		
 		/// <summary>
 		/// Return the head pointer to the entire data lock.
@@ -213,7 +215,7 @@ namespace unify
 		unsigned int m_stride; // Item stride
 		unsigned int m_count;	// Number of items we can stride through
 		unsigned int m_sizeInBytes;
-		TYPE m_type;
+		DataLockAccess::TYPE m_type;
 		size_t m_slot;
 	};
 
@@ -223,9 +225,9 @@ namespace unify
 	template < typename T >
 	T * DataLock::GetData()
 	{
-		if ( !ReadAccess( m_type ) || !WriteAccess( m_type ) )
+		if ( !DataLockAccess::ReadAccess( m_type ) || !DataLockAccess::WriteAccess( m_type ) )
 		{
-			throw unify::Exception( "Attempted to access " + ToString( m_type ) + " for " + ToString( DataLock::ReadWrite ) + " access!" );
+			throw unify::Exception( "Attempted to access " + DataLockAccess::ToString( m_type ) + " for " + DataLockAccess::ToString( DataLockAccess::ReadWrite ) + " access!" );
 		}
 		return (T*)m_data;
 	}
@@ -233,9 +235,9 @@ namespace unify
 	template < typename T >
 	const T * DataLock::GetDataReadOnly() const
 	{
-		if ( !ReadAccess( m_type ) )
+		if ( !DataLockAccess::ReadAccess( m_type ) )
 		{
-			throw unify::Exception( "Attempted to access " + ToString( m_type ) + " for " + ToString( DataLock::ReadWrite ) + " access!" );
+			throw unify::Exception( "Attempted to access " + DataLockAccess::ToString( m_type ) + " for " + DataLockAccess::ToString( DataLockAccess::ReadWrite ) + " access!" );
 		}
 		return (T*)m_data;
 	}
@@ -248,9 +250,9 @@ namespace unify
 			throw unify::Exception( "Attempted to access index out of range! (" + unify::Cast< std::string >( index ) + " to " + unify::Cast< std::string >( m_count ) + ")" );
 		}
 
-		if ( ! ReadAccess( m_type ) || ! WriteAccess( m_type )  )
+		if ( !DataLockAccess::ReadAccess( m_type ) || !DataLockAccess::WriteAccess( m_type )  )
 		{
-			throw unify::Exception( "Attempted to access " + ToString( m_type ) + " for " + ToString( DataLock::ReadWrite ) + " access!" );
+			throw unify::Exception( "Attempted to access " + DataLockAccess::ToString( m_type ) + " for " + DataLockAccess::ToString( DataLockAccess::ReadWrite ) + " access!" );
 		}
 
 		return &GetData< T >()[ index ];
@@ -264,7 +266,7 @@ namespace unify
 			throw unify::Exception( "Attempted to access index out of range! (" + unify::Cast< std::string >( index ) + " to " + unify::Cast< std::string >( m_count ) + ")" );
 		}
 
-		if (!ReadAccess( m_type ))
+		if (!DataLockAccess::ReadAccess( m_type ))
 		{
 			throw unify::Exception( "Attempted to access READONLY data for write!" );
 		}

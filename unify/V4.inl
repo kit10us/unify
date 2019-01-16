@@ -3,6 +3,10 @@
 
 template< typename T >
 V4< T >::V4()
+	: x{}
+	, y{}
+	, z{}
+	, w{}
 {
 }
 

@@ -19,31 +19,31 @@ int main( int argc, char ** argv )
 	suite.BeginSuite( "DataLock" );
 	{
 		suite.BeginCase( "FromString" );
-		suite.Assert( "from \"None\"", DataLock::None == DataLock::FromString( "None" ) );
-		suite.Assert( "from \"Readonly\"", DataLock::Readonly == DataLock::FromString( "Readonly" ) );
-		suite.Assert( "from \"Writeonly\"", DataLock::Writeonly == DataLock::FromString( "Writeonly" ) );
-		suite.Assert( "from \"Readonly\"", DataLock::ReadWrite == DataLock::FromString( "ReadWrite" ) );
+		suite.Assert( "from \"None\"", DataLockAccess::None == DataLockAccess::FromString( "None" ) );
+		suite.Assert( "from \"Readonly\"", DataLockAccess::Readonly == DataLockAccess::FromString( "Readonly" ) );
+		suite.Assert( "from \"Writeonly\"", DataLockAccess::Writeonly == DataLockAccess::FromString( "Writeonly" ) );
+		suite.Assert( "from \"Readonly\"", DataLockAccess::ReadWrite == DataLockAccess::FromString( "ReadWrite" ) );
 		suite.EndCase();
 
 		suite.BeginCase( "ToString" );
-		suite.Assert( "from \"None\"", "None" == DataLock::ToString( DataLock::None ) );
-		suite.Assert( "from \"Readonly\"", "Readonly" == DataLock::ToString( DataLock::Readonly ) );
-		suite.Assert( "from \"Writeonly\"", "Writeonly" == DataLock::ToString( DataLock::Writeonly ) );
-		suite.Assert( "from \"Readonly\"", "ReadWrite" == DataLock::ToString( DataLock::ReadWrite ) );
+		suite.Assert( "from \"None\"", "None" == DataLockAccess::ToString( DataLockAccess::None ) );
+		suite.Assert( "from \"Readonly\"", "Readonly" == DataLockAccess::ToString( DataLockAccess::Readonly ) );
+		suite.Assert( "from \"Writeonly\"", "Writeonly" == DataLockAccess::ToString( DataLockAccess::Writeonly ) );
+		suite.Assert( "from \"Readonly\"", "ReadWrite" == DataLockAccess::ToString( DataLockAccess::ReadWrite ) );
 		suite.EndCase();
 
 		suite.BeginCase( "ReadAccess" );
-		suite.Assert( "None", DataLock::ReadAccess( DataLock::None ) == false );
-		suite.Assert( "Readonly", DataLock::ReadAccess( DataLock::Readonly ) == true );
-		suite.Assert( "Writeonly", DataLock::ReadAccess( DataLock::Writeonly ) == false );
-		suite.Assert( "Readonly", DataLock::ReadAccess( DataLock::ReadWrite ) == true );
+		suite.Assert( "None", DataLockAccess::ReadAccess( DataLockAccess::None ) == false );
+		suite.Assert( "Readonly", DataLockAccess::ReadAccess( DataLockAccess::Readonly ) == true );
+		suite.Assert( "Writeonly", DataLockAccess::ReadAccess( DataLockAccess::Writeonly ) == false );
+		suite.Assert( "Readonly", DataLockAccess::ReadAccess( DataLockAccess::ReadWrite ) == true );
 		suite.EndCase();
 
 		suite.BeginCase( "WriteAccess" );
-		suite.Assert( "None", DataLock::WriteAccess( DataLock::None ) == false );
-		suite.Assert( "Readonly", DataLock::WriteAccess( DataLock::Readonly ) == false );
-		suite.Assert( "Writeonly", DataLock::WriteAccess( DataLock::Writeonly ) == true );
-		suite.Assert( "Readonly", DataLock::WriteAccess( DataLock::ReadWrite ) == true );
+		suite.Assert( "None", DataLockAccess::WriteAccess( DataLockAccess::None ) == false );
+		suite.Assert( "Readonly", DataLockAccess::WriteAccess( DataLockAccess::Readonly ) == false );
+		suite.Assert( "Writeonly", DataLockAccess::WriteAccess( DataLockAccess::Writeonly ) == true );
+		suite.Assert( "Readonly", DataLockAccess::WriteAccess( DataLockAccess::ReadWrite ) == true );
 		suite.EndCase();
 
 		suite.BeginCase( "GetItemReadonly" );
@@ -67,7 +67,7 @@ int main( int argc, char ** argv )
 				{ 7, 8, 9 }
 			};
 
-			DataLock lock( &data, sizeof( Data ) * 3, 3, DataLock::Readonly, 0 );
+			DataLock lock( &data, sizeof( Data ) * 3, 3, DataLockAccess::Readonly, 0 );
 
 			suite.Assert( "first element", (*lock.GetItemReadonly< Data >( 0 )) == Data{ 1, 2, 3 } );
 			suite.Assert( "second element", (*lock.GetItemReadonly< Data >( 1 )) == Data{ 4, 5, 6 } );
@@ -95,7 +95,7 @@ int main( int argc, char ** argv )
 				{ 7, 8, 9 }
 			};
 
-			DataLock lock( &data, sizeof( Data ) * 3, 3, DataLock::ReadWrite, 0 );
+			DataLock lock( &data, sizeof( Data ) * 3, 3, DataLockAccess::ReadWrite, 0 );
 
 			Data writeData[] =
 			{
