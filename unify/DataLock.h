@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include <unify/Unify.h>
+#include <unify/Cast.h>
 
 namespace unify
 {
@@ -18,12 +18,27 @@ namespace unify
 			ReadWrite
 		};
 
+		/// <summary>
+		/// Returns true if the access supports read mode.
+		/// </summary>
 		static bool ReadAccess( TYPE access );
+
+		/// <summary>
+		/// Returns true if the access mode supports write access.
+		/// </summary>
 		static bool WriteAccess( TYPE access );
+
+		/// <summary>
+		/// Retruns true if access 'a' supports the access specified with 'b'.
+		/// </summary>
+		static bool Compatible( TYPE a, TYPE b );
 
 		static TYPE FromString( std::string access );
 		static std::string ToString( TYPE access );
 	};
+
+	template<> std::string Cast( unify::DataLockAccess::TYPE type );
+	template<> unify::DataLockAccess::TYPE Cast( std::string type );
 
 	/// <summary>
 	/// A data lock construct that allows common locking of data so that we can read and write from shared the data.

@@ -10,6 +10,37 @@
 
 using namespace unify;
 
+bool DataLockAccess::ReadAccess( TYPE access )
+{
+	return Compatible( Readonly, access );
+}
+
+bool DataLockAccess::WriteAccess( TYPE access )
+{
+	return Compatible( Writeonly, access );
+}
+
+bool DataLockAccess::Compatible( TYPE a, TYPE b )
+{
+	switch( a )
+	{
+	case None: // Any access supports no access.
+		return true;
+
+	case Readonly:
+		return b == Readonly || b == ReadWrite;
+
+	case DataLockAccess::Writeonly:
+		return b == Writeonly || b == ReadWrite;
+	
+	case DataLockAccess::ReadWrite:
+		return b == ReadWrite;
+
+	default:
+		throw unify::Exception( "Invalid DataLockAccess type!" );
+	}
+}
+
 DataLockAccess::TYPE DataLockAccess::FromString( std::string access )
 {
 	using unify::string::StringIs;
@@ -50,37 +81,17 @@ std::string DataLockAccess::ToString( TYPE access )
 	throw unify::Exception( "Invalid DataLockAccess type!" );
 }
 
-bool DataLockAccess::ReadAccess( TYPE access )
+template<> 
+std::string unify::Cast( unify::DataLockAccess::TYPE type )
 {
-	switch (access)
-	{
-	case DataLockAccess::None:
-		return false;
-	case DataLockAccess::Readonly:
-		return true;
-	case DataLockAccess::Writeonly:
-		return false;
-	case DataLockAccess::ReadWrite:
-		return true;
-	}
-	throw unify::Exception( "Invalid DataLockAccess type!" );
+	return DataLockAccess::ToString( type );
 }
 
-bool DataLockAccess::WriteAccess( TYPE access )
+template<> unify::DataLockAccess::TYPE unify::Cast( std::string type )
 {
-	switch (access)
-	{
-	case DataLockAccess::None:
-		return false;
-	case DataLockAccess::Readonly:
-		return false;
-	case DataLockAccess::Writeonly:
-		return true;
-	case DataLockAccess::ReadWrite:
-		return true;
-	}
-	throw unify::Exception( "Invalid DataLockAccess!" );
+	return DataLockAccess::FromString( type );
 }
+
 
 DataLock::DataLock()
 : m_data( 0 )
