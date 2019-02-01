@@ -1,4 +1,4 @@
-// Copyright (c) 2002 - 2019, Evil Quail LLC
+// Copyright (c) 2002 - 2019, Kit10 Studios LLC
 // All Rights Reserved
 
 #pragma once
