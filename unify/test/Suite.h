@@ -46,27 +46,27 @@ namespace unify
 
 			/// <summary>
 			/// Call to report information.
-			/// </desciption>
+			/// </summary>
 			void Info( std::string message );
 
 			/// <summary>
 			/// Called to report a warning.
-			/// </desciption>
+			/// </summary>
 			void Warning( std::string message );
 
 			/// <summary>
 			/// Perform a suite assertion.
-			/// </desciption>
+			/// </summary>
 			void Assert( std::string message, bool test );
 
 			/// <summary>
 			/// Try to perform a functor, Assert on an exception.
-			/// </desciption>
+			/// </summary>
 			void TryCatch( std::string message, std::function< void() > test, bool passOnException );
 
 			/// <summary>
 			/// Assert on test returning false, or an exception.
-			/// </desciption>
+			/// </summary>
 			void TryCatchAssert( std::string message, std::function< bool() > test );
 
 		private:

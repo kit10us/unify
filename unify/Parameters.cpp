@@ -17,6 +17,14 @@ Parameters::Parameters( std::string name, T value )
     m_parameters[ name ] = value;
 }
 
+Parameters::Parameters( std::initializer_list< Parameter > parameters )
+{
+	for( auto parameter : parameters )
+	{
+		m_parameters[ parameter.name ] = parameter;
+	}
+}
+
 Parameters::~Parameters()
 {
 }
@@ -28,11 +36,16 @@ Parameters & Parameters::Reset()
     return *this;
 }
 
+size_t Parameters::Count() const
+{
+	return m_parameters.size();
+}
+
 Parameters & Parameters::Default( std::string name, const Any & value )
 {
     if( m_parameters.find( name ) == m_parameters.end() )
     {
-        m_parameters[ name ] = value;
+        m_parameters[ name ].value = value;
     }
     return *this;
 }
@@ -52,54 +65,8 @@ bool Parameters::Exists( std::string name ) const
 
 Parameters & Parameters::Set( std::string name, const char * value )
 {
-	m_parameters[ name ] = std::string( value );
+	m_parameters[ name ].value = std::string( value );
     return *this;
-}
-
-// Unsigned int specialization to prevent issues with unsigned long int (uint32).
-template<> 
-unsigned int Parameters::Get< unsigned int >( std::string name ) const
-{
-    ParameterMap::const_iterator iterator = m_parameters.find( name );
-    if ( iterator == m_parameters.end() )
-    {
-        throw Exception( "Failed to find Parameters: \"" + name + "\"!" );
-    }
-    m_auditItemsUsed.insert( name );
-    
-    if( iterator->second.type() == typeid( unsigned int ) )
-    {
-        return any_cast< unsigned int >( iterator->second );
-    }
-    else if( iterator->second.type() == typeid( unsigned long int ) )
-    {
-        return any_cast< unsigned long int >( iterator->second );
-    }
-
-    throw Exception( "Failed to cast \"" + name + "\" of type " + iterator->second.type().name() + "!" );
-}
-
-// Unsigned int specialization to prevent issues with unsigned long int (uint32).
-template<> 
-unsigned int Parameters::Get< unsigned int >( std::string name, const unsigned int & defaultValue ) const
-{
-    ParameterMap::const_iterator iterator = m_parameters.find( name );
-    if( iterator == m_parameters.end() )
-    {
-        return defaultValue;
-    }
-    m_auditItemsUsed.insert( name );
-    
-    if( iterator->second.type() == typeid( unsigned int ) )
-    {
-        return any_cast< unsigned int >( iterator->second );
-    }
-    else if( iterator->second.type() == typeid( unsigned long int ) )
-    {
-        return any_cast< unsigned long int >( iterator->second );
-    }
-
-    throw Exception( "Failed to cast \"" + name + "\" of type " + iterator->second.type().name() + "!" );
 }
 
 std::string Parameters::ToString() const
@@ -177,4 +144,439 @@ Parameters Parameters::operator+( Parameters& parameters )
     newParameters += *this;
     newParameters += parameters;
     return newParameters;
+}
+
+template<> 
+bool Parameters::Cast< bool >( std::string name ) const
+{
+	try
+	{
+		return Get< bool >( name ) ? true : false;
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return Get< char >( name ) ? true : false;
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return Get< unsigned char >( name ) ? true : false;
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return Get< int >( name ) ? true : false;
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return Get< unsigned int >( name ) ? true : false;
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return Get< float >( name ) ? true : false;
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return Get< double >( name ) ? true : false;
+	}
+	catch( ... )
+	{
+	}
+
+	throw Exception( "Failed to cast \"" + name + "\" to specific type \"bool\"." );
+}
+
+template<>
+char Parameters::Cast< char >( std::string name ) const
+{
+	try
+	{
+		return (char)Get< bool >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (char)Get< char >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (char)Get< unsigned char >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (char)Get< int >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (char)Get< unsigned int >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (char)Get< float >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (char)Get< double >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	throw Exception( "Failed to cast \"" + name + "\" to specific type \"char\"." );
+}
+
+template<>
+unsigned char Parameters::Cast< unsigned char >( std::string name ) const
+{
+	try
+	{
+		return (unsigned char)Get< bool >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (unsigned char)Get< char >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (unsigned char)Get< unsigned char >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (unsigned char)Get< int >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (unsigned char)Get< unsigned int >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (unsigned char)Get< float >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (unsigned char)Get< double >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	throw Exception( "Failed to cast \"" + name + "\" to specific type \"unsigned char\"." );
+}
+
+template<>
+int Parameters::Cast< int >( std::string name ) const
+{
+	try
+	{
+		return (int)Get< bool >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (int)Get< char >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (int)Get< unsigned char >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (int)Get< int >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (int)Get< unsigned int >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (int)Get< float >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (int)Get< double >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	throw Exception( "Failed to cast \"" + name + "\" to specific type \"int\"." );
+}
+
+template<>
+unsigned int Parameters::Cast< unsigned int >( std::string name ) const
+{
+	try
+	{
+		return (unsigned int)Get< bool >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (unsigned int)Get< char >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (unsigned int)Get< unsigned char >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (unsigned int)Get< int >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (unsigned int)Get< unsigned int >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (unsigned int)Get< float >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (unsigned int)Get< double >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	throw Exception( "Failed to cast \"" + name + "\" to specific type \"unsigned int\"." );
+}
+
+template<>
+float Parameters::Cast< float >( std::string name ) const
+{
+	try
+	{
+		return (float)Get< bool >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (float)Get< char >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (float)Get< unsigned char >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (float)Get< int >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (float)Get< unsigned int >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (float)Get< float >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (float)Get< double >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	throw Exception( "Failed to cast \"" + name + "\" to specific type \"float\"." );
+}
+
+
+template<>
+double Parameters::Cast< double >( std::string name ) const
+{
+	try
+	{
+		return (double)Get< bool >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (double)Get< char >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (double)Get< unsigned char >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (double)Get< int >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (double)Get< unsigned int >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (double)Get< float >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (double)Get< double >( name );
+	}
+	catch( ... )
+	{
+	}
+
+	throw Exception( "Failed to cast \"" + name + "\" to specific type \"unsigned int\"." );
 }

@@ -4,17 +4,33 @@
 #pragma once
 
 #include <unify/Unify.h>
-#include <unify/Exception.h>
+#include <unify/BadCast.h>
 #include <unify/String.h>
+#include <unify/Any.h>
 #include <vector>
 #include <list>
 #include <map>
 #include <set>
 #include <string>
-#include <unify/Any.h>
 
 namespace unify
 {
+	struct Parameter
+	{
+		Parameter()
+		{
+		}
+
+		template< typename T >
+		Parameter( std::string name, T value )
+			: name{ name }
+			, value{ value }
+		{
+		}
+		std::string name;
+		unify::Any value;
+	};
+
     class Parameters
     {
     public:
@@ -23,26 +39,45 @@ namespace unify
         template< typename T >
         Parameters( std::string name, T value );
 
+		Parameters( std::initializer_list< Parameter > parameters );
+
         virtual ~Parameters();
 
         virtual Parameters & Reset();
+
+		/// <summary>
+		/// Returns the number of parameters.
+		/// </summary>
+		size_t Count() const;
 
         // Default only sets a value if it hasn't already been set. 
 		Parameters & Default( std::string name, const unify::Any & value );
         
         // Default only sets a value if it hasn't already been set. 
-		template< typename T_Type > 
-		Parameters & Default( std::string name, const T_Type & value );
+		template< typename T > 
+		Parameters & Default( std::string name, const T & value );
 
-        template< typename T_Type > 
-		Parameters & Set( std::string name, const T_Type & value );
+        template< typename T > 
+		Parameters & Set( std::string name, const T & value );
         
 		Parameters & Set( std::string name, const char * value );
 	
         bool Exists( std::string name ) const;
-        template< typename T_Type > T_Type Get( std::string name ) const;
-        template< typename T_Type > T_Type Get( std::string name, const T_Type & defaultValue ) const;
-        std::string ToString() const;
+
+		template< typename T > T Get( std::string name ) const;
+        template< typename T > T Get( std::string name, const T & defaultValue ) const;
+
+		/// <description>
+		/// Specialization of unsigned int for similar type conversion.
+		/// </description>
+		template< typename T > T Cast( std::string name ) const;
+
+		/// <description>
+		/// Specialization of unsigned int for similar type conversion, with a default value.
+		/// </description>
+		//template< typename T > T Cast( std::string name, const T & defaultValue ) const;
+
+		std::string ToString() const;
 
         size_t AuditCount() const;
         std::string Audit() const;
@@ -51,18 +86,18 @@ namespace unify
         Parameters operator+( Parameters & parameters );
 
     private:
-        typedef std::map< std::string, unify::Any, string::CaseInsensitiveLessThanTest > ParameterMap;
+        typedef std::map< std::string, Parameter, string::CaseInsensitiveLessThanTest > ParameterMap;
         ParameterMap m_parameters;
         mutable std::set< std::string, string::CaseInsensitiveLessThanTest > m_auditItemsUsed; // This helps reduce typos by ensuring every explicitly get and set value are paired. It is naturally ignored for defaults.
     };
 
-    // Unsigned int specialization to prevent issues with unsigned long int (uint32).
-    // defined in the CPP file.
-    template<> unsigned int Parameters::Get< unsigned int >( std::string name ) const;
-
-    // Unsigned int specialization to prevent issues with unsigned long int (uint32).
-    // defined in the CPP file.
-    template<> unsigned int Parameters::Get< unsigned int >( std::string name, const unsigned int & defaultValue ) const;
+	template<> bool Parameters::Cast< bool >( std::string name ) const;
+	template<> char Parameters::Cast< char >( std::string name ) const;
+	template<> unsigned char Parameters::Cast< unsigned char >( std::string name ) const;
+	template<> int Parameters::Cast< int >( std::string name ) const;
+	template<> unsigned int Parameters::Cast< unsigned int >( std::string name ) const;
+	template<> float Parameters::Cast< float >( std::string name ) const;
+	template<> double Parameters::Cast< double >( std::string name ) const;
 
 	#include <unify/Parameters.inl>
 }

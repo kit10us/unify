@@ -44,6 +44,7 @@
   <ItemGroup>
     <ClInclude Include="unify\Angle.h" />
     <ClInclude Include="unify\Any.h" />
+    <ClInclude Include="unify\BadCast.h" />
     <ClInclude Include="unify\BBox.h" />
     <ClInclude Include="unify\BSphere.h" />
     <ClInclude Include="unify\BSquare.h" />
