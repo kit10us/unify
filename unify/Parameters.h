@@ -27,6 +27,13 @@ namespace unify
 			, value{ value }
 		{
 		}
+
+		template< >
+		Parameter( std::string name, const char * value )
+			: name{ name }
+			, value{ std::string( value ) }
+		{
+		}
 		std::string name;
 		unify::Any value;
 	};
