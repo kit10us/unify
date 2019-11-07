@@ -1,4 +1,4 @@
-// Copyright (c) 2002 - 2019, Quentin S. Smith
+// Copyright (c) 2002 - 2019, Kit10 Studios LLC
 // All Rights Reserved
 #include <map>
 #include <vector>
@@ -7,7 +7,7 @@
 #include <iostream>
 
 template< typename Key, typename Value >
-size_t Lookup< Key, Value >::Add( Key key, Value value = Value{} )
+size_t unify::Lookup< Key, Value >::Add( Key key, Value value )
 	{
 		size_t index = m_values.size();
 		KeyValuePair< Key, Value > kvp( { key, value } );
@@ -17,13 +17,13 @@ size_t Lookup< Key, Value >::Add( Key key, Value value = Value{} )
 	}
 
 template< typename Key, typename Value >
-size_t Lookup< Key, Value >::Count() const
+size_t unify::Lookup< Key, Value >::Count() const
 {
 	return m_values.size();
 }
 
 template< typename Key, typename Value >
-bool Lookup< Key, Value >::Exists( Key key ) const
+bool unify::Lookup< Key, Value >::Exists( Key key ) const
 {
 	auto itr = m_keyToIndex.find( key );
 	if (itr == m_keyToIndex.end())
@@ -34,7 +34,7 @@ bool Lookup< Key, Value >::Exists( Key key ) const
 }
 
 template< typename Key, typename Value >
-size_t Lookup< Key, Value >::Find( Key key ) const
+size_t unify::Lookup< Key, Value >::Find( Key key ) const
 {
 	auto itr = m_keyToIndex.find( key );
 	if (itr == m_keyToIndex.end())
@@ -46,7 +46,7 @@ size_t Lookup< Key, Value >::Find( Key key ) const
 }
 
 template< typename Key, typename Value >
-Key Lookup< Key, Value >::GetName( size_t index ) const
+Key unify::Lookup< Key, Value >::GetName( size_t index ) const
 {
 	if (index >= Count())
 	{
@@ -57,7 +57,7 @@ Key Lookup< Key, Value >::GetName( size_t index ) const
 }
 
 template< typename Key, typename Value >
-Value Lookup< Key, Value >::GetValue( size_t index ) const
+Value unify::Lookup< Key, Value >::GetValue( size_t index ) const
 {
 	if (index >= Count())
 	{
@@ -67,14 +67,14 @@ Value Lookup< Key, Value >::GetValue( size_t index ) const
 }
 
 template< typename Key, typename Value >
-Value Lookup< Key, Value >::GetValue( Key key ) const
+Value unify::Lookup< Key, Value >::GetValue( Key key ) const
 {
 	size_t index = Find( key );
 	return GetValue( index );
 }
 
 template< typename Key, typename Value >
-void Lookup< Key, Value >::SetValue( size_t index, Value value )
+void unify::Lookup< Key, Value >::SetValue( size_t index, Value value )
 {
 	if (index >= Count())
 	{
@@ -84,7 +84,7 @@ void Lookup< Key, Value >::SetValue( size_t index, Value value )
 }
 
 template< typename Key, typename Value >
-void Lookup< Key, Value >::SetValue( Key key, Value value )
+void unify::Lookup< Key, Value >::SetValue( Key key, Value value )
 {
 	auto itr = m_keyToIndex.find( key );
 	if (itr == m_keyToIndex.end())
@@ -96,40 +96,40 @@ void Lookup< Key, Value >::SetValue( Key key, Value value )
 }
 
 template< typename Key, typename Value >
-void Lookup< Key, Value >::Clear()
+void unify::Lookup< Key, Value >::Clear()
 {
 	m_keyToIndex.clear();
 	m_values.clear();
 }
 
 template< typename Key, typename Value >
-typename Lookup< Key, Value >::iterator Lookup< Key, Value >::begin()
+typename unify::Lookup< Key, Value >::iterator unify::Lookup< Key, Value >::begin()
 {
 	return iterator( this, 0 );
 }
 
 template< typename Key, typename Value >
-typename Lookup< Key, Value >::iterator Lookup< Key, Value >::end()
+typename unify::Lookup< Key, Value >::iterator unify::Lookup< Key, Value >::end()
 {
 	return iterator( this, this->Count() );
 }
 
 template< typename Key, typename Value >
-Lookup< Key, Value >::iterator::iterator( Lookup< Key, Value > * lookup, size_t index )
+unify::Lookup< Key, Value >::iterator::iterator(unify::Lookup< Key, Value > * lookup, size_t index )
 	: m_lookup{ lookup }
 	, m_index{ index }
 {
 }
 
 template< typename Key, typename Value >
-auto Lookup< Key, Value >::iterator::operator++()
+auto unify::Lookup< Key, Value >::iterator::operator++()
 {
 	auto a = ++m_index;
 	return *this;
 }
 
 template< typename Key, typename Value >
-auto Lookup< Key, Value >::iterator::operator++( int )
+auto unify::Lookup< Key, Value >::iterator::operator++( int )
 {
 	auto itr = *this;
 	m_index++;
@@ -138,14 +138,14 @@ auto Lookup< Key, Value >::iterator::operator++( int )
 
 
 template< typename Key, typename Value >
-auto Lookup< Key, Value >::iterator::operator--()
+auto unify::Lookup< Key, Value >::iterator::operator--()
 {
 	--m_index;
 	return *this;
 }
 
 template< typename Key, typename Value >
-auto Lookup< Key, Value >::iterator::operator--( int )
+auto unify::Lookup< Key, Value >::iterator::operator--( int )
 {
 	auto itr = *this;
 	m_index--;
@@ -154,37 +154,37 @@ auto Lookup< Key, Value >::iterator::operator--( int )
 
 
 template< typename Key, typename Value >
-bool Lookup< Key, Value >::iterator::operator==( const iterator & itr ) const
+bool unify::Lookup< Key, Value >::iterator::operator==( const unify::Lookup< Key, Value >::iterator & itr ) const
 {
 	return m_index == itr.m_index;
 }
 
 template< typename Key, typename Value >
-bool Lookup< Key, Value >::iterator::operator!=( const iterator & itr ) const
+bool unify::Lookup< Key, Value >::iterator::operator!=( const unify::Lookup< Key, Value >::iterator & itr ) const
 {
 	return m_index != itr.m_index;
 }
 
 template< typename Key, typename Value >
-KeyValuePair< Key, Value > & Lookup< Key, Value >::iterator::operator*()
+unify::KeyValuePair< Key, Value > & unify::Lookup< Key, Value >::iterator::operator*()
 {
 	return m_lookup->m_values[m_index];
 }
 
 template< typename Key, typename Value >
-const KeyValuePair< Key, Value > & Lookup< Key, Value >::iterator::operator*() const
+const unify::KeyValuePair< Key, Value > & unify::Lookup< Key, Value >::iterator::operator*() const
 {
 	return m_lookup->m_values[m_index];
 }
 
 template< typename Key, typename Value >
-KeyValuePair< Key, Value > * Lookup< Key, Value >::iterator::operator->()
+unify::KeyValuePair< Key, Value > * unify::Lookup< Key, Value >::iterator::operator->()
 {
 	return &m_lookup->m_values[m_index];
 }
 
 template< typename Key, typename Value >
-const KeyValuePair< Key, Value > * Lookup< Key, Value >::iterator::operator->() const
+const unify::KeyValuePair< Key, Value > * unify::Lookup< Key, Value >::iterator::operator->() const
 {
 	return &m_lookup->m_values[m_index];
 }

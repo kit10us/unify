@@ -30,7 +30,7 @@ namespace unify
 		/// <summary>
 		/// Add a value.
 		/// </summary>
-		size_t Add( Key key, Value value = Value{} );
+		size_t Add( Key key, Value value );
 
 		/// <summary>
 		/// Returns the number of values.

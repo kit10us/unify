@@ -28,7 +28,7 @@ int main( int argc, char ** argv )
 
 		suite.BeginCase( "Adding values" );
 		{
-			suite.TryCatch( "key not value (default), \"default\"", [&]{ stringIntLookup.Add( "default" ); }, false );
+			suite.TryCatch( "key not value (default), \"default\"", [&]{ stringIntLookup.Add( "default", 0 ); }, false );
 			suite.TryCatch( "key \"first\"", [&]{ stringIntLookup.Add( "first", 1 ); }, false );
 			suite.TryCatch( "key \"second\"", [&]{ stringIntLookup.Add( "second", 2 ); }, false );
 			suite.TryCatch( "key \"another\"", [&]{ stringIntLookup.Add( "another", 10 ); }, false );

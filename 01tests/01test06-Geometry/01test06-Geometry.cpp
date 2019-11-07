@@ -93,22 +93,24 @@ int main( int argc, char ** argv )
 		suite.BeginCase( "Quaternion" );
 		{
 			Quaternion q{ QuaternionIdentity() };
-			suite.Assert( "IsIdentity", q.IsIdentity() );
+			suite.Assert("IsIdentity", q.IsIdentity());
 			q *= q;
-			suite.Assert( "* operator", q.IsIdentity() );
+			suite.Assert("* operator", q.IsIdentity());
 
-			Matrix mx( MatrixRotationAboutAxis( V3< float >( 1, 0, 0 ), AngleInDegrees( 180 ) ) );
-			V3< float > vm( 1, 1, 1 );
-			mx.TransformCoord( vm );
+			Matrix mx(MatrixRotationAboutAxis(V3< float >(1, 0, 0), AngleInDegrees(180)));
+			V3< float > vm(1, 1, 1);
+			mx.TransformCoord(vm);
 
-			Quaternion qx( Quaternion( V3< float >( 1, 0, 0 ), AngleInDegrees( 180 ) ) );
-			Matrix mfromq( qx );
-			V3< float > vq( 1, 1, 1 );
-			mfromq.TransformCoord( vq );
-			suite.Assert( "Quaternion rotation equivalancy with a matrix rotation.", vm == vq );
-			suite.EndCase();
+			Quaternion qx(Quaternion(V3< float >(1, 0, 0), AngleInDegrees(180)));
+			Matrix mfromq(qx);
+			V3< float > vq(1, 1, 1);
+			mfromq.TransformCoord(vq);
+			suite.Assert("Quaternion rotation equivalancy with a matrix rotation.", vm == vq);
+		}
+		suite.EndCase();
 
-			suite.BeginCase( "Ray collision with BBox" );
+		suite.BeginCase( "Ray collision with BBox (incomplete, need to make pass)" );
+		{
 			BBox<float > inFrontBBox( V3<float>( -10, -10, -10 ), V3<float>( 10, 10, 10 ) );
 			inFrontBBox += V3<float>( 0, 0, 40 ); // Move BBox infront of us.
 
@@ -117,9 +119,9 @@ int main( int argc, char ** argv )
 			Ray straightForwardRayTooFarLeft( V3< float >( 0, 0, 0 ), V3< float >( 0, 0, 1 ) );
 			straightForwardRayTooFarLeft.origin -= V3< float >( 11, 0, 0 );
 
-			suite.Assert( "straightRay should hit inFrontBBox", inFrontBBox.Intersects( straightForwardRay, 0, 1000 ) == true );
-			suite.Assert( "inverse straightRay should miss inFrontBBox", inFrontBBox.Intersects( straightBackwardRay, 0, 1000 ) == false );
-			suite.Assert( "straightRay too far left should miss inFrontBBox", inFrontBBox.Intersects( straightForwardRayTooFarLeft, 0, 1000 ) == false );
+			suite.TryCatchAssert("straightRay should hit inFrontBBox", [&]()->bool { return inFrontBBox.Intersects(straightForwardRay, 0, 1000) == true; } );
+			suite.TryCatchAssert("inverse straightRay should miss inFrontBBox", [&]()->bool { return inFrontBBox.Intersects(straightBackwardRay, 0, 1000) == false; } );
+			suite.TryCatchAssert("straightRay too far left should miss inFrontBBox", [&]()->bool { return inFrontBBox.Intersects(straightForwardRayTooFarLeft, 0, 1000) == false; });
 		}
 		suite.EndCase();
 	}
