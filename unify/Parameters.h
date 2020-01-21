@@ -68,6 +68,8 @@ namespace unify
 		Parameters & Set( std::string name, const T & value );
         
 		Parameters & Set( std::string name, const char * value );
+
+		Parameters & Set( Parameter parameter );
 	
         bool Exists( std::string name ) const;
 

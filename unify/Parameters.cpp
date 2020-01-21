@@ -69,6 +69,12 @@ Parameters & Parameters::Set( std::string name, const char * value )
     return *this;
 }
 
+Parameters & Parameters::Set( Parameter parameter )
+{
+	m_parameters[parameter.name] = parameter;
+	return *this;
+}
+
 std::string Parameters::ToString() const
 {
     std::string out;

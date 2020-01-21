@@ -98,7 +98,8 @@ int main( int argc, char ** argv )
 				{ "unsigned int", (unsigned int)40 },
 				{ "size_t", (size_t)50 },
 				{ "std::string", (std::string)"Hello, world!" },
-				{ "float", (float)-60.f },
+				{ "float signed", (float)-60.f },
+				{ "float unsigned", (float)60.f },
 				{ "double", (double)70.0 }
 			};
 
@@ -108,7 +109,7 @@ int main( int argc, char ** argv )
 			suite.Assert( "Cast to bool from int",				parameters.Cast< bool >( "int" ) == true );
 			suite.Assert( "Cast to bool from unsigned int",		parameters.Cast< bool >( "unsigned int" ) == true );
 			suite.Assert( "Cast to bool from size_t",			parameters.Cast< bool >( "size_t" ) == true );
-			suite.Assert( "Cast to bool from float",			parameters.Cast< bool >( "float" ) == true );
+			suite.Assert( "Cast to bool from float",			parameters.Cast< bool >( "float signed" ) == true );
 			suite.Assert( "Cast to bool from double",			parameters.Cast< bool >( "double" ) == true );
 
 			suite.Assert( "Cast to char from bool",				parameters.Cast< char >( "bool" ) == 1 );
@@ -117,16 +118,16 @@ int main( int argc, char ** argv )
 			suite.Assert( "Cast to char from int",				parameters.Cast< char >( "int" ) == -30 );
 			suite.Assert( "Cast to char from unsigned int",		parameters.Cast< char >( "unsigned int" ) == 40 );
 			suite.Assert( "Cast to char from size_t",			parameters.Cast< char >( "size_t" ) == 50 );
-			suite.Assert( "Cast to char from float",			parameters.Cast< char >( "float" ) == -60 );
+			suite.Assert( "Cast to char from float",			parameters.Cast< char >( "float signed" ) == -60 );
 			suite.Assert( "Cast to char from double",			parameters.Cast< char >( "double" ) == 70 );
 
 			suite.Assert( "Cast to unsigned char from bool",			parameters.Cast< unsigned char >( "bool" ) == 1 );
-			suite.Assert( "Cast to unsigned char from char",			parameters.Cast< unsigned char >( "char" ) == (unsigned char) - 10 );
+			suite.Assert( "Cast to unsigned char from char",			parameters.Cast< unsigned char >( "char" ) == (unsigned char) -10 );
 			suite.Assert( "Cast to unsigned char from unsigned char",	parameters.Cast< unsigned char >( "unsigned char" ) == 20 );
-			suite.Assert( "Cast to unsigned char from int",				parameters.Cast< unsigned char >( "int" ) == (unsigned char) - 30 );
+			suite.Assert( "Cast to unsigned char from int",				parameters.Cast< unsigned char >( "int" ) == (unsigned char) -30 );
 			suite.Assert( "Cast to unsigned char from unsigned int",	parameters.Cast< unsigned char >( "unsigned int" ) == 40 );
 			suite.Assert( "Cast to unsigned char from size_t",			parameters.Cast< unsigned char >( "size_t" ) == 50 );
-			suite.Assert( "Cast to unsigned char from float",			parameters.Cast< unsigned char >( "float" ) == (unsigned char) - 60 );
+			suite.Assert( "Cast to unsigned char from float",			parameters.Cast< unsigned char >( "float unsigned" ) == (unsigned char) 60 );
 			suite.Assert( "Cast to unsigned char from double",			parameters.Cast< unsigned char >( "double" ) == 70 );
 		
 			suite.Assert( "Cast to int from bool",			parameters.Cast< int >( "bool" ) == 1 );
@@ -135,7 +136,7 @@ int main( int argc, char ** argv )
 			suite.Assert( "Cast to int from int",			parameters.Cast< int >( "int" ) == -30 );
 			suite.Assert( "Cast to int from unsigned int",	parameters.Cast< int >( "unsigned int" ) == 40 );
 			suite.Assert( "Cast to int from size_t",		parameters.Cast< int >( "size_t" ) == 50 );
-			suite.Assert( "Cast to int from float",			parameters.Cast< int >( "float" ) == -60 );
+			suite.Assert( "Cast to int from float",			parameters.Cast< int >( "float signed" ) == -60 );
 			suite.Assert( "Cast to int from double",		parameters.Cast< int >( "double" ) == 70 );
 
 			suite.Assert( "Cast to unsigned int from bool",				parameters.Cast< unsigned int >( "bool" ) == 1 );
@@ -144,8 +145,8 @@ int main( int argc, char ** argv )
 			suite.Assert( "Cast to unsigned int from int",				parameters.Cast< unsigned int >( "int" ) == (unsigned int) - 30 );
 			suite.Assert( "Cast to unsigned int from unsigned int",		parameters.Cast< unsigned int >( "unsigned int" ) == 40 );
 			suite.Assert( "Cast to unsigned int from size_t",			parameters.Cast< unsigned int >( "size_t" ) == 50 );
-			suite.Assert( "Cast to unsigned int from float",			parameters.Cast< unsigned int >( "float" ) == (unsigned int)-60 );
-			suite.Assert( "Cast to unsigned int from double",			parameters.Cast< unsigned int >( "double" ) == (unsigned int)70 );
+			suite.Assert( "Cast to unsigned int from float",			parameters.Cast< unsigned int >( "float unsigned" ) == (unsigned int) 60 );
+			suite.Assert( "Cast to unsigned int from double",			parameters.Cast< unsigned int >( "double" ) == (unsigned int) 70 );
 
 			suite.Assert( "Cast to float from bool",			parameters.Cast< float >( "bool" ) == 1.0f );
 			suite.Assert( "Cast to float from char",			parameters.Cast< float >( "char" ) == -10.0f );
@@ -153,7 +154,7 @@ int main( int argc, char ** argv )
 			suite.Assert( "Cast to float from int",				parameters.Cast< float >( "int" ) == -30.0f );
 			suite.Assert( "Cast to float from unsigned int",	parameters.Cast< float >( "unsigned int" ) == 40.0f );
 			suite.Assert( "Cast to float from size_t",			parameters.Cast< float >( "size_t" ) == 50.0f );
-			suite.Assert( "Cast to float from float",			parameters.Cast< float >( "float" ) == -60.0f );
+			suite.Assert( "Cast to float from float",			parameters.Cast< float >( "float signed" ) == -60.0f );
 			suite.Assert( "Cast to float from double",			parameters.Cast< float >( "double" ) == 70.0f );
 
 			suite.Assert( "Cast to double from bool",			parameters.Cast< double >( "bool" ) == 1.0 );
@@ -162,8 +163,11 @@ int main( int argc, char ** argv )
 			suite.Assert( "Cast to double from int",			parameters.Cast< double >( "int" ) == -30.0 );
 			suite.Assert( "Cast to double from unsigned int",	parameters.Cast< double >( "unsigned int" ) == 40.0 );
 			suite.Assert( "Cast to double from size_t",			parameters.Cast< double >( "size_t" ) == 50.0 );
-			suite.Assert( "Cast to double from float",			parameters.Cast< double >( "float" ) == -60.0 );
+			suite.Assert( "Cast to double from float",			parameters.Cast< double >( "float signed" ) == -60.0 );
 			suite.Assert( "Cast to double from double",			parameters.Cast< double >( "double" ) == 70.0 );
+
+			parameters.Set( { "new parameter", "new value" } );
+			suite.Assert( "Parameter created via 'Set(Parameter)'", unify::string::StringIs( parameters.Get<std::string>( "new parameter" ), "new value" ) );
 		}
 		suite.EndCase();
 	}
