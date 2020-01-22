@@ -88,8 +88,13 @@ namespace unify
 
 		std::string ToString() const;
 
+
         size_t AuditCount() const;
-        std::string Audit() const;
+        
+		/// <summary>
+		/// Perform an audit of all parameters, if they are used, not used, etc., returning the results as a string.
+		/// </summary>
+		std::string Audit() const;
 
         Parameters & operator+=( Parameters & parameters );
         Parameters operator+( Parameters & parameters );

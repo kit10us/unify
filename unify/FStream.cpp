@@ -200,7 +200,7 @@ bool FileStream::SetPosition( __int64 iPos )
 	return false;
 }
 
-__int64 FileLength( const char * pszFilename )
+__int64 unify::FileLength( const char * pszFilename )
 {
 	__int64 iLength = 0;
 	

@@ -97,45 +97,51 @@ unsigned int Parameters::AuditCount() const
 std::string Parameters::Audit() const
 {
     std::string out;
+	std::string allItems;
+	std::string setButNotUsed;
+	std::string notSetButUsed;
     if( m_auditItemsUsed.size() != m_parameters.size() )
     {
         {
-            out += "Items not set but used: ";
-            bool first = true;
-            for( ParameterMap::const_iterator iterator = m_parameters.begin(), end = m_parameters.end(); iterator != end; ++iterator )
+            for( auto parameter : m_parameters )
             {
-                std::set< std::string, CaseInsensitiveLessThanTest >::const_iterator iteratorSecond = m_auditItemsUsed.find ( iterator->first );
-                if( iteratorSecond == m_auditItemsUsed.end() )
+				if ( !allItems.empty() )
+				{
+					allItems += ", ";
+				}
+				allItems += parameter.first;
+
+                auto itr = m_auditItemsUsed.find( parameter.first );
+                if( itr == m_auditItemsUsed.end() )
                 {
-                    if( ! first )
+                    if( !setButNotUsed.empty() )
                     {
-                        out += ", ";
+						setButNotUsed += ", ";
                     }
-                    first = false;
-                    out += iterator->first;
+					setButNotUsed += parameter.first;
                 }
             }
         }
 
         {
-            out += "  Items set but not used: ";
-            bool first = true;
-            for( std::set< std::string, CaseInsensitiveLessThanTest >::const_iterator iterator = m_auditItemsUsed.begin(), end = m_auditItemsUsed.end(); iterator != end; ++iterator )
+            for( auto item : m_auditItemsUsed )
             {
-                ParameterMap::const_iterator iteratorSecond = m_parameters.find( *iterator );
-                if( iteratorSecond == m_parameters.end() )
+                auto itr = m_parameters.find( item );
+                if( itr == m_parameters.end() )
                 {
-                    if( ! first )
+                    if( !notSetButUsed.empty())
                     {
-                        out += ", ";
+						notSetButUsed += ", ";
                     }
-                    first = false;
-                    out += *iterator;
+					notSetButUsed += item;
                 }
             }
-        }
+		}
     }
-    return out;
+    return 
+		"All items: " + ( allItems.empty() ? "<none>" : allItems ) + 
+		"\nItems set but not used: " + (setButNotUsed.empty() ? "<none>" : setButNotUsed) +
+		"\nItems not set but used: " + (notSetButUsed .empty() ? "<none>" : notSetButUsed);
 }
 
 Parameters & Parameters::operator+=( Parameters & parameters )
