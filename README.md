@@ -1,2 +1,2 @@
 # unify
-A set of 2D and 3D structures designed to be portable, yet inclusive and powerful,
+Unify is a library that attempts to help speed up the development time of C++ programs and libraries. To accomplish this, it provides a set of data structures and features that aim to standardize and reduce the code, and provide optimal and consistent program flow.
