@@ -17,9 +17,7 @@ namespace unify
 {
 	struct Parameter
 	{
-		Parameter()
-		{
-		}
+		Parameter() = default;
 
 		template< typename T >
 		Parameter( std::string name, T value )

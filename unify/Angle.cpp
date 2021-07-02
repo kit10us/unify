@@ -7,6 +7,7 @@
 
 using namespace unify;
 
+const float PI = 3.14159265f;
 const float DTOR = (3.14159265f / 180.0f);
 
 Angle unify::AngleInRadians( float radians )
@@ -21,17 +22,17 @@ Angle unify::AngleInDegrees( float degrees )
 
 Angle unify::AnglePI()
 {
-	return AngleInRadians( 3.14159265f );
+	return AngleInRadians( PI );
 }
 
 Angle unify::AnglePI2()
 {
-	return AngleInRadians( 3.14159265f * 2.0f );
+	return AngleInRadians( PI * 2.0f );
 }
 
 Angle unify::AnglePIHalf()
 {
-	return AngleInRadians( 3.14159265f * 0.5f );
+	return AngleInRadians( PI * 0.5f );
 }
 
 Angle::Angle()
@@ -60,7 +61,7 @@ Angle::Angle( std::string angle )
 }
 
 Angle::Angle( const Angle & angle )
-	: m_radians( angle.m_radians )
+    : Angle{ angle.m_radians }
 {
 }
 
@@ -185,12 +186,12 @@ float Angle::ToRadians() const
 
 float Angle::ToDegrees() const
 {
-    return m_radians * (180.0f / 3.14159265f);
+    return m_radians * (180.0f / PI);
 }
 
 int Angle::Normalize()
 {
-    const float pi2 = (3.14159265f * 2.0f);
+    const float pi2 = (PI * 2.0f);
 	int magnitude = 0;
     while( m_radians > pi2 )
     {

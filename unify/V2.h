@@ -6,6 +6,7 @@
 #include <unify/Unify.h>
 #include <unify/String.h>
 #include <unify/Angle.h>
+#include <unify/Exception.h>
 
 namespace unify
 {

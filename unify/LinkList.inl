@@ -287,12 +287,6 @@ const std::string LinkList< T >::Name( unsigned int uIndex )
 	return "";
 }
 
-template< typename T >
-T * LinkList< T >::Current()
-{
-	return m_pCurrent;
-}
-
 // Return a specific item by index.
 // Return 0 if out of range.
 template< typename T >

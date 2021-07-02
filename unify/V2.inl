@@ -229,7 +229,7 @@ Angle V2< T >::Angle(const V2< T > & a) const
 template< typename T >
 bool V2< T >::IsZero() const
 {
-	return ( x == 0 ) && ( y == 0 ) && ( z == 0 );
+	return ( x == 0 ) && ( y == 0 );
 }
 
 template< typename T >

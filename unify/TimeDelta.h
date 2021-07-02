@@ -18,9 +18,9 @@ namespace unify
 		friend TimeDelta TimeDeltaInWeeks( float weeks );
 		friend TimeDelta TimeDeltaInDays( float days );
 		friend TimeDelta TimeDeltaInYears( float years );
-		TimeDelta( float ms );
 
     public:
+		TimeDelta(float ms);
 		TimeDelta();
 
 		float GetMicros() const;
@@ -54,6 +54,7 @@ namespace unify
 		float m_ms;
     };
 
+	TimeDelta unify::TimeDeltaInMicros(float micros);
 	TimeDelta TimeDeltaInMS( float ms );
 	TimeDelta TimeDeltaInSeconds( float seconds );
 	TimeDelta TimeDeltaInMinutes( float minutes );

@@ -23,7 +23,7 @@ namespace unify
 	{
 	public:
 		Any() noexcept
-			: content( 0 )
+			: content {}
 		{
 		}
 
