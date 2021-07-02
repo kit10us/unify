@@ -13,7 +13,7 @@
 #include <unify/Unify.h>
 #include <unify/Flags.h>
 #include <unify/List.h>
-
+#include <unify/String.h>
 
 namespace unify 
 {

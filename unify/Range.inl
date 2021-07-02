@@ -29,8 +29,8 @@ template< typename T >
 Range< T >::Range( std::string text )
 {
 	std::vector< T > split = Split< T >( text, ',' );
-    width = split[ 0 ];
-    height = split[ 1 ];
+    m_min = split[ 0 ];
+    m_max = split[ 1 ];
 }
 
 template< typename T >

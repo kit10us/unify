@@ -4,20 +4,18 @@
 
 template< typename T >
 BSphere< T >::BSphere()
-	: center{ T(), T(), T() }
-	, radius{ T() }
+	: BSphere{ { {}, {}, {} } }
 {
 }
 
 template< typename T >
-BSphere< T >::BSphere( V3< T > center )
-	: center{ center }
-	, radius{ T() }
+BSphere< T >::BSphere( const V3< T > & center )
+	: BSphere{ center, {} }
 {
 }
 
 template< typename T >
-BSphere< T >::BSphere( V3< T > center, T radius )
+BSphere< T >::BSphere( const V3< T > & center, const T & radius )
 	: center{ center }
 	, radius{ radius }
 {

@@ -23,8 +23,8 @@ namespace unify
 		T radius;
 
 		BSphere();
-		BSphere( V3< T > center );
-		BSphere( V3< T > center, T radius );
+		BSphere( const V3< T > & center );
+		BSphere( const V3< T > & center, const T & radius );
 
 		BSphere & operator+=( const BSphere< T > & sphere );
 		BSphere & operator+=( V3< T > point );

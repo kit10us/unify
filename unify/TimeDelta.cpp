@@ -5,21 +5,21 @@
 
 using namespace unify;
 
-const float MSPerMicros = 0.001f;
-const float MSPerSecond = 1000.0f;
-const float MSPerMinute = MSPerSecond * 60.0f;
-const float MSPerHour = MSPerMinute * 60.0f;
-const float MSPerDay = MSPerHour * 24.0f;
-const float MSPerWeek = MSPerDay * 7.0f;
-const float MSPerYear = MSPerDay * 365.0f;
+constexpr float MSPerMicros = 0.001f;
+constexpr float MSPerSecond = 1000.0f;
+constexpr float MSPerMinute = MSPerSecond * 60.0f;
+constexpr float MSPerHour = MSPerMinute * 60.0f;
+constexpr float MSPerDay = MSPerHour * 24.0f;
+constexpr float MSPerWeek = MSPerDay * 7.0f;
+constexpr float MSPerYear = MSPerDay * 365.0f;
 
-const float MicrosPerMS = 1000.07f;
-const float SecondPerMS = 1.0f / MSPerSecond;
-const float MinutePerMS = 1.0f / MSPerMinute;
-const float HourPerMS = 1.0f / MSPerHour;
-const float DayPerMS = 1.0f / MSPerDay;
-const float WeekPerMS = 1.0f / MSPerWeek;
-const float YearPerMS = 1.0f / MSPerYear;
+constexpr float MicrosPerMS = 1000.07f;
+constexpr float SecondPerMS = 1.0f / MSPerSecond;
+constexpr float MinutePerMS = 1.0f / MSPerMinute;
+constexpr float HourPerMS = 1.0f / MSPerHour;
+constexpr float DayPerMS = 1.0f / MSPerDay;
+constexpr float WeekPerMS = 1.0f / MSPerWeek;
+constexpr float YearPerMS = 1.0f / MSPerYear;
 
 TimeDelta unify::TimeDeltaInMicros( float micros )
 {
@@ -67,7 +67,7 @@ TimeDelta::TimeDelta( float ms )
 }
 
 TimeDelta::TimeDelta()
-	: m_ms{ 0 }
+	: TimeDelta{ {}  }
 {
 }
 

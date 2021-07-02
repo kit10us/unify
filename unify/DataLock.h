@@ -5,6 +5,7 @@
 #pragma once
 
 #include <unify/Cast.h>
+#include <unify/Exception.h>
 
 namespace unify
 {
@@ -154,7 +155,7 @@ namespace unify
 
 			const iterator< T > operator++( int )
 			{
-				iterator< T > post( itr );
+				iterator< T > post( this );
 				assert( m_index + 1 != 0 ); // detect rollover.
 				m_index++;
 				MakeMe();
@@ -171,7 +172,7 @@ namespace unify
 
 			const iterator< T > operator--( int )
 			{
-				DataLock::iterator< T > post( itr );
+				DataLock::iterator< T > post( this );
 				assert( m_index  != 0 ); // detect rollover.
 				m_index--;
 				MakeMe();
@@ -205,7 +206,6 @@ namespace unify
 			iter.m_stride = m_stride;
 			iter.m_count = m_count;
 			iter.m_sizeInBytes = m_sizeInBytes;
-			iter.m_readonly = m_readonly;
 			iter.m_index = 0;
 			iter.MakeMe();
 			return iter;
@@ -219,7 +219,6 @@ namespace unify
 			iter.m_stride = m_stride;
 			iter.m_count = m_count;
 			iter.m_sizeInBytes = m_sizeInBytes;
-			iter.m_readonly = m_readonly;
 			iter.m_index = m_count;
 			iter.MakeMe();
 			return iter;
