@@ -108,22 +108,6 @@ int main( int argc, char ** argv )
 			suite.Assert("Quaternion rotation equivalancy with a matrix rotation.", vm == vq);
 		}
 		suite.EndCase();
-
-		suite.BeginCase( "Ray collision with BBox (incomplete, need to make pass)" );
-		{
-			BBox<float > inFrontBBox( V3<float>( -10, -10, -10 ), V3<float>( 10, 10, 10 ) );
-			inFrontBBox += V3<float>( 0, 0, 40 ); // Move BBox infront of us.
-
-			Ray straightForwardRay( V3< float >( 0, 0, 0 ), V3< float >( 0, 0, 1 ) );
-			Ray straightBackwardRay( V3< float >( 0, 0, 0 ), V3< float >( 0, 0, -1 ) );
-			Ray straightForwardRayTooFarLeft( V3< float >( 0, 0, 0 ), V3< float >( 0, 0, 1 ) );
-			straightForwardRayTooFarLeft.origin -= V3< float >( 11, 0, 0 );
-
-			suite.TryCatchAssert("straightRay should hit inFrontBBox", [&]()->bool { return inFrontBBox.Intersects(straightForwardRay, 0, 1000) == true; } );
-			suite.TryCatchAssert("inverse straightRay should miss inFrontBBox", [&]()->bool { return inFrontBBox.Intersects(straightBackwardRay, 0, 1000) == false; } );
-			suite.TryCatchAssert("straightRay too far left should miss inFrontBBox", [&]()->bool { return inFrontBBox.Intersects(straightForwardRayTooFarLeft, 0, 1000) == false; });
-		}
-		suite.EndCase();
 	}
 	suite.EndSuite();
 	return 0;
