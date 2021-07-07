@@ -108,7 +108,7 @@ std::string Parameters::ToString() const
     return out;
 }
 
-unsigned int Parameters::AuditCount() const
+size_t Parameters::AuditCount() const
 {
     return ( m_parameters.size() - m_auditItemsUsed.size() );
 }
@@ -222,6 +222,14 @@ bool Parameters::Cast< bool >( std::string name ) const
 
 	try
 	{
+		return Get< size_t >(name) ? true : false;
+	}
+	catch (...)
+	{
+	}
+
+	try
+	{
 		return Get< float >( name ) ? true : false;
 	}
 	catch( ... )
@@ -279,6 +287,14 @@ char Parameters::Cast< char >( std::string name ) const
 		return (char)Get< unsigned int >( name );
 	}
 	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (char)Get< size_t >(name);
+	}
+	catch (...)
 	{
 	}
 
@@ -346,6 +362,14 @@ unsigned char Parameters::Cast< unsigned char >( std::string name ) const
 
 	try
 	{
+		return (unsigned char)Get< size_t >(name);
+	}
+	catch (...)
+	{
+	}
+
+	try
+	{
 		return (unsigned char)Get< float >( name );
 	}
 	catch( ... )
@@ -403,6 +427,14 @@ int Parameters::Cast< int >( std::string name ) const
 		return (int)Get< unsigned int >( name );
 	}
 	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (int)Get< size_t >(name);
+	}
+	catch (...)
 	{
 	}
 
@@ -470,6 +502,14 @@ unsigned int Parameters::Cast< unsigned int >( std::string name ) const
 
 	try
 	{
+		return (unsigned int)Get< size_t >(name);
+	}
+	catch (...)
+	{
+	}
+
+	try
+	{
 		return (unsigned int)Get< float >( name );
 	}
 	catch( ... )
@@ -527,6 +567,14 @@ float Parameters::Cast< float >( std::string name ) const
 		return (float)Get< unsigned int >( name );
 	}
 	catch( ... )
+	{
+	}
+
+	try
+	{
+		return (float)Get< size_t >(name);
+	}
+	catch (...)
 	{
 	}
 
@@ -595,6 +643,14 @@ double Parameters::Cast< double >( std::string name ) const
 
 	try
 	{
+		return (double)Get< size_t >(name);
+	}
+	catch (...)
+	{
+	}
+
+	try
+	{
 		return (double)Get< float >( name );
 	}
 	catch( ... )
@@ -609,5 +665,5 @@ double Parameters::Cast< double >( std::string name ) const
 	{
 	}
 
-	throw Exception( "Failed to cast \"" + name + "\" to specific type \"unsigned int\"." );
+	throw Exception( "Failed to cast \"" + name + "\" to specific type \"double\"." );
 }

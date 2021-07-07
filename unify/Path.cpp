@@ -338,7 +338,7 @@ Path & Path::ChangeFilename( const Path & newFilename )
 
 std::string Path::ToString() const
 {
-	return BeginsWith( m_path, XPathPrefix) ? StringMinusLeft( m_path, XPathPrefix.length() ) : m_path;
+	return BeginsWith( m_path, XPathPrefix) ? StringMinusLeft( m_path, (unsigned int)XPathPrefix.length() ) : m_path;
 }
 
 std::string Path::ToString( Slash direction ) const

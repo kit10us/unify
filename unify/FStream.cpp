@@ -175,7 +175,7 @@ void FileStream::WritePack( const void* pSrc )
 
 void FileStream::Write( std::string out )
 {
-	Write( out.c_str(), out.length() );
+	Write( out.c_str(), (unsigned int)out.length() );
 }
 
 bool FileStream::Seek( StreamSeekType seek, int iOffset )

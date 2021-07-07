@@ -22,6 +22,9 @@
 #include <unify/Cast.h>
 #include <unify/String.h>
 
+#pragma warning(push)
+#pragma warning(disable : 4244) // 'argument' : conversion from ... to ..., possible loss of data
+
 const size_t _cast_buffer_size = 30;
 char _cast_buffer[ _cast_buffer_size ];
 
@@ -279,3 +282,6 @@ std::string unify::Cast( const wchar_t * text )
 {
 	return Cast< std::string >( std::wstring( text ) );
 }
+
+
+#pragma warning(pop)
