@@ -42,7 +42,6 @@ namespace unify
 		BSquare< T > operator * ( const V2< T > & muliplcand );
 		
 		void GenerateCorners( V2< T > * bounds );
-		void Initialize( const V2< T > & inf = V2< T >::Zero(), const V2< T > & sup = V2< T >::Zero() );
 		void AddPoint( const V2< T > & point );
 		BSquare & AddBSquare( const BSquare< T > & boundingSquare );
 		bool ContainsPoint( const V2< T > & point );
