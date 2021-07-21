@@ -21,30 +21,21 @@
 
 
 template< typename T >
-V2< T >::V2()
-	: x{}
-	, y{}
-{
-}
-
-template< typename T >
 V2< T >::V2( T _x, T _y )
-	: x( _x )
-	, y( _y )
+	: x{ _x }
+	, y{ _y }
 {
 }
 
 template< typename T >
 V2< T >::V2( const V2< T > & vec )
-	: x( vec.x )
-	, y( vec.y )
+	: V2{ vec.x, vec.y }
 {
 }
 
 template< typename T >
 V2< T >::V2( const Size< T > & size )
-	: x( size.width )
-	, y( size.height )
+	: V2{ size.width, size.height }
 {
 }
 
@@ -226,7 +217,7 @@ V2< T > V2< T >::Absolute() const
 }
 
 template< typename T >
-const T V2< T >::DistanceTo(const V2< T > & to) const
+T V2< T >::DistanceTo(const V2< T > & to) const
 {
 	V2<T> d;
 	d = to - *this;
