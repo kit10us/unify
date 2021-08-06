@@ -40,14 +40,6 @@ int main( int argc, char ** argv )
 
 	suite.BeginSuite( "General" );
 	{
-		suite.BeginCase( "String casts" );
-		suite.Assert( "float conversion", Cast< float >( "   12.21  " ) == 12.21f );
-		suite.Assert( "unsigned char conversion", Cast< unsigned char >( "   12  " ) == 12 );
-		suite.Assert( "int conversion", Cast< int >( "   12  " ) == 12 );
-		suite.Assert( "bool conversion true", Cast< bool >( "   true  " ) == true );
-		suite.Assert( "bool conversion false", Cast< bool >( "   false  " ) == false );
-		suite.EndCase();
-
 		suite.BeginCase( "Color" );
 		suite.Assert( "Color from text", Color( "255, 127, 63, 31" ) == ColorRGBA( 255, 127, 63, 31 ) );
 		suite.EndCase();

@@ -60,6 +60,15 @@ int main( int argc, char ** argv )
 		suite.Assert( "string with string", StringReplace( "aabbaabbaabbaabb", "aa", "cd" ) == std::string( "cdbbcdbbcdbbcdbb" ) );
 		suite.EndCase();
 
+		suite.BeginCase("Split");
+		std::vector<std::string> results;
+		results = Split<std::string>("one,two,three", { ',' });
+		suite.Assert("Split number of elements", results.size() == 3);
+		suite.Assert("First word \"one\"", results[0] == "one");
+		suite.Assert("Second word \"one\"", results[1] == "two");
+		suite.Assert("Thrid word \"one\"", results[2] == "three");
+		suite.EndCase();
+
 		suite.BeginCase( "Misc." );
 		suite.Assert( "CleanWhitespace", CleanWhitespace( " \t \t \n  no \t  \t whitespace \t \t \n \n  " ) == "no whitespace" );
 		suite.Assert( "Begins with succeed", BeginsWith( "a new town", "a ne" ) == true );

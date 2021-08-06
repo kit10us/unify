@@ -24,7 +24,6 @@
 
 #include <unify/Unify.h>
 #include <unify/Path.h>
-#include <unify/TimeDelta.h>
 #include <string>
 #include <typeinfo>
 #include <cassert>
@@ -48,7 +47,6 @@ namespace unify
 	template<> std::string Cast( const short in );
 	template<> std::string Cast( const unsigned long in );
 	template<> std::string Cast( const long in );
-	template<> std::string Cast( const TimeDelta in );
 
 	// Casts from std::string to another type.
 	template<> bool Cast( const std::string text );
@@ -62,7 +60,6 @@ namespace unify
 	template<> short Cast( const std::string text );
 	template<> unsigned short Cast( const std::string text );
 	template<> std::wstring Cast( const std::string text );
-	template<> const char * Cast( const std::string text );
 	template<> unify::Path Cast( const std::string text );
 
 	template<> bool Cast( const char * text );

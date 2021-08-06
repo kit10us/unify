@@ -44,7 +44,7 @@ std::vector< T > unify::string::Split( std::string sourceString, const char deli
 }
 
 template< typename T >
-std::vector< T > unify::string::Split( std::string sourceString, const std::vector< char > & delimitors, bool includeEmpties )
+std::vector< T > unify::string::Split( std::string sourceString, const std::vector< char > delimitors, bool includeEmpties )
 {
 	std::vector< T > destination;
 
@@ -52,7 +52,17 @@ std::vector< T > unify::string::Split( std::string sourceString, const std::vect
 	size_t end = 0;
 	for( end = 0; end < sourceString.size(); ++end )
 	{
-		if ( std::find( delimitors.begin(), delimitors.end(), sourceString.at( end ) ) != delimitors.end() )
+		// auto const itr = std::find_if(delimitors.cbegin(), delimitors.cend(), sourceString.at(end));
+		bool found{};
+		for (const auto c : delimitors)
+		{
+			if (c == sourceString[end])
+			{
+				found = true;
+			}
+		}
+
+		if ( found )
 		{
 			if ( start == end )
 			{
@@ -91,5 +101,5 @@ std::vector< T > unify::string::SplitOnWhitespace( std::string sourceString )
 	delimitors.push_back( ' ' );
 	delimitors.push_back( '\t' );
 	delimitors.push_back( '\n' );
-	return Split< T >( sourceString, delimitors );
+	return string::Split< T >( sourceString, delimitors );
 }

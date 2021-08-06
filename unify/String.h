@@ -148,7 +148,7 @@ namespace unify
 		/// (' ', '\n')"a b   c\n  d" = [ "a", "b", "c", "d" ]{ if includeEmtpies = false } else = ["a", "", "", "b", "c", "" (for '\n'), ""]
 		/// </example>
 		template< typename T >
-		std::vector< T > Split( std::string sourceString, const std::vector< char > & delimitors, bool includeEmpties = false );
+		std::vector< T > Split( std::string sourceString, const std::vector< char > delimitors, bool includeEmpties = false );
 
 		template< typename T >
 		std::vector< T > SplitOnWhitespace( std::string sourceString );

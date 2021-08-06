@@ -44,7 +44,7 @@ RowColumn<T>::RowColumn( const RowColumn< T > & rc )
 template< typename T >
 RowColumn< T >::RowColumn( std::string text )
 {
-	std::vector< T > split = Split< T >( text, ',' );
+	std::vector< T > split = string::Split< T >( text, ',' );
     row = split[ 0 ];
     column = split[ 1 ];
 }

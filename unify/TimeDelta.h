@@ -73,7 +73,7 @@ namespace unify
 		float m_ms;
     };
 
-	TimeDelta unify::TimeDeltaInMicros(float micros);
+	TimeDelta TimeDeltaInMicros(float micros);
 	TimeDelta TimeDeltaInMS( float ms );
 	TimeDelta TimeDeltaInSeconds( float seconds );
 	TimeDelta TimeDeltaInMinutes( float minutes );

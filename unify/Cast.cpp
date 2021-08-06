@@ -25,9 +25,6 @@
 #pragma warning(push)
 #pragma warning(disable : 4244) // 'argument' : conversion from ... to ..., possible loss of data
 
-const size_t _cast_buffer_size = 30;
-char _cast_buffer[ _cast_buffer_size ];
-
 template<>
 std::string unify::Cast( const std::string in )
 {
@@ -49,78 +46,61 @@ std::string unify::Cast( const bool in )
 template<>
 std::string unify::Cast( const unsigned char in )
 {
-	sprintf_s( _cast_buffer, _cast_buffer_size, "%u", in );
-	return _cast_buffer;
+	return std::to_string(in);
 }
 
 template<>
 std::string unify::Cast( const char in )
 {
-	_itoa_s( in, _cast_buffer, _cast_buffer_size, 10 );
-	return std::string( _cast_buffer );
+	return std::to_string(in);
 }
 
 template<>
 std::string unify::Cast( const unsigned int in )
 {
-	sprintf_s( _cast_buffer, _cast_buffer_size, "%u", in );
-	return _cast_buffer;
+	return std::to_string(in);
 }
 
 template<>
 std::string unify::Cast( const int in )
 {
-	_itoa_s( in, _cast_buffer, _cast_buffer_size, 10 );
-	return std::string( _cast_buffer );
+	return std::to_string(in);
 }
 
 template<>
 std::string unify::Cast( const float in )
 {
-	sprintf_s( _cast_buffer, 30, "%f", in );
-	return std::string( _cast_buffer );
+	return std::to_string(in);
 }
 
 template<>
 std::string unify::Cast( const double in )
 {
-	sprintf_s( _cast_buffer, _cast_buffer_size, "%f", (float)in );
-	return std::string( _cast_buffer );
+	return std::to_string(in);
 }
 
 template<>
 std::string unify::Cast( const unsigned short in )
 {
-	sprintf_s( _cast_buffer, _cast_buffer_size, "%u", in );
-	return _cast_buffer;
+	return std::to_string(in);
 }
 
 template<>
 std::string unify::Cast( const short in )
 {
-	_itoa_s( in, _cast_buffer, _cast_buffer_size, 10 );
-	return std::string( _cast_buffer );
+	return std::to_string(in);
 }
 
 template<>
 std::string unify::Cast( const unsigned long in )
 {
-	sprintf_s( _cast_buffer, _cast_buffer_size, "%u", in );
-	return _cast_buffer;
+	return std::to_string(in);
 }
 
 template<>
 std::string unify::Cast( const long in )
 {
-	_ltoa_s( in, _cast_buffer, _cast_buffer_size, 10 );
-	return std::string( _cast_buffer );
-}
-
-template<>
-std::string unify::Cast( const TimeDelta in )
-{
-	sprintf_s( _cast_buffer, 30, "%f", in.GetMS() );
-	return std::string( _cast_buffer );
+	return std::to_string(in);
 }
 
 template<> 
@@ -209,13 +189,6 @@ template<>
 std::wstring unify::Cast( const std::string text )
 {
 	return std::wstring( text.begin(), text.end() );
-}
-
-template<>
-const char * unify::Cast( const std::string text )
-{
-	static_assert(true, "Specialization of Cast to const char * failure; force specialization to std::string!" );
-	return text.c_str();
 }
 
 template<> unify::Path unify::Cast( const std::string text )
