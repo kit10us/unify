@@ -32,13 +32,17 @@ namespace unify
 	template < class T > class V3;
 	template < class T > class Size;
 
+	/// <summary>
+	/// Represents a 2-dimensional vector.
+	/// </summary>
 	template < class T = float >
 	class V2
 	{
 	public:
-		T x, y;
+		T x;
+		T y;
 
-		V2();
+		V2() = default;
 		V2( T x, T y );
 		V2( const V2< T > & vec );
 		explicit V2( const Size< T > & size );
@@ -71,14 +75,47 @@ namespace unify
         T & operator[]( size_t i );
         const T & operator[]( size_t i ) const;
 
+		/// <summary>
+		/// Returns the length of the vector.
+		/// </summary>
+		/// <returns></returns>
 		T Length() const;
+
+		/// <summary>
+		/// Normalizes the vector.
+		/// </summary>
 		void Normalize();
+		
+		/// <summary>
+		/// Returns the absolute value of the vector, making each element absolute;
+		/// </summary>
+		/// <returns></returns>
 		V2< T > Absolute() const;
-		const T DistanceTo(const V2<T> & to) const;
+		
+		/// <summary>
+		/// Returns the distance to a vector.
+		/// </summary>
+		T DistanceTo(const V2<T> & to) const;
+
+		/// <summary>
+		/// Returns the dot product (sum of products) of two vectors.
+		/// </summary>
 		T Dot(const V2< T > & a) const;
+
+		/// <summary>
+		/// Returns the angle of a vector.
+		/// </summary>
 		Angle Angle(const V2< T > & a) const;
+
+		/// <summary>
+		/// Tests wether all elements of a vector are zero.
+		/// </summary>
+		/// <returns></returns>
 		bool IsZero() const;
 
+        /// <summary>
+        /// Returns a string representation of the vector.
+        /// </summary>
         std::string ToString() const;
 
 		// Named constructors

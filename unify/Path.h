@@ -114,7 +114,7 @@ namespace unify
 
 		/// <summary>
 		/// Returns a string representation of the path maintaining the original slash directions."
-		/// </summary?
+		/// </summary>
 		std::string ToString() const;
 
 		/// <summary>
@@ -124,7 +124,7 @@ namespace unify
 
 		/// <summary>
 		/// Returns a wide string representation of the path maintaining the original slash directions."
-		/// </summary?
+		/// </summary>
 		std::wstring ToWString() const;
 
 		/// <summary>
@@ -134,7 +134,7 @@ namespace unify
 
 		/// <summary>
 		/// Returns an XPath string representation of the path maintaining the original slash directions."
-		/// </summary?
+		/// </summary>
 		std::string ToXPath() const;
 
 		/// <summary>

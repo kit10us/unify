@@ -22,14 +22,15 @@
 
 template< typename T >
 unify::BSquare::BSquare()
+	: BSquare({}, {})
 {
-	Initialize();
 }
 
 template< typename T >
 unify::BSquare::BSquare( const unify::V2< T > & inInf, const unify::V2< T > & inSup )
+	: inf{ inInf }
+	, sup{ inSup }
 {
-	Initialize( inInf, inSup );
 }
 
 template< typename T >
@@ -46,13 +47,6 @@ void BSquare::GenerateCorners( unify::V2< T > * bounds )
 	bounds[ 1 ] = unify::V2< T >( sup.x, inf.y );
 	bounds[ 2 ] = unify::V2< T >( inf.x, sup.y );
 	bounds[ 3 ] = unify::V2< T >( sup.x, sup.y );
-}
-
-template< typename T >
-void BSquare::Initialize( const unify::V2< T > & _inf, const unify::V2< T > & _sup )
-{
-	inf = _inf;
-	sup = _sup;
 }
 
 template< typename T >

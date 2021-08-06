@@ -55,7 +55,7 @@ Angle unify::AnglePIHalf()
 }
 
 Angle::Angle()
-	: m_radians( 0.0f )
+	: Angle(0.0f)
 {
 }
 

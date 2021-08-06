@@ -22,8 +22,7 @@
 
 template< typename T >
 BBox< T >::BBox()
-	: inf { V3< T >::V3Zero() }
-	, sup { V3< T >::V3Zero() }
+	: BBox(V3< T >::V3Zero(), V3< T >::V3Zero())
 {
 }
 
