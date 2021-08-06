@@ -195,7 +195,7 @@
     <ClInclude Include="unify\Triangle.h">
       <Filter>unify</Filter>
     </ClInclude>
-    <ClInclude Include="unify\unify.h">
+    <ClInclude Include="unify\Unify.h">
       <Filter>unify</Filter>
     </ClInclude>
     <ClInclude Include="unify\V2.h">
