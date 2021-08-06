@@ -37,16 +37,48 @@ bool unify::string::IsNumeric( const char ch )
 	return false;
 }
 
-bool unify::string::StringIs( std::string a, std::string is )
+bool unify::string::StringIs( std::string a, std::string b )
 {
-	return _stricmp( a.c_str(), is.c_str()) == 0;
+	if (a.length() != b.length())
+	{
+		return false;
+	}
+
+	int length = a.length();
+	for (int i = 0; i < length; i++)
+	{
+		char aa = a[i];
+		char bb = b[i];
+
+		if (aa >= 'A' && aa <= 'Z')
+		{
+			aa -= 'A';
+			aa += 'a';
+		}
+
+		if (bb >= 'A' && bb <= 'Z')
+		{
+			bb -= 'A';
+			bb += 'a';
+		}
+
+		if (aa != bb)
+		{
+			return false;
+		}
+	}
+
+	return true;
 }
 
 bool unify::string::StringIsAny( std::string a, const std::list< std::string > & list )
 {
 	for( const auto & b : list )
 	{
-		if( _stricmp( a.c_str(), b.c_str() ) == 0 ) return true;
+		if (StringIs(a, b))
+		{
+			return true;
+		}
 	}
 	return false;
 }

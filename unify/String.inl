@@ -21,9 +21,9 @@
 
 
 template< typename foo, typename ... bar >
-bool unify::string::StringIs( std::string a, std::string is, std::string rest... )
+bool unify::string::StringIs( std::string a, std::string b, std::string rest... )
 {
-	if (_stricmp( a.c_str(), is.c_str() ) == 0)
+	if (StringIs(a, b ))
 	{
 		return true;
 	}

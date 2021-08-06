@@ -40,8 +40,16 @@ int main( int argc, char ** argv )
 		suite.BeginCase( "StringIs" );
 		suite.Assert( "single is", StringIs( "first", "first" ) );
 		suite.Assert( "single is not", !StringIs( "first", "second" ) );
+		suite.Assert("single is mixed case", StringIs("first", "FiRsT"));
 		suite.Assert( "mutliple mixed case is", StringIs( "first", "FIRST", "FiRst" ) );
 		suite.Assert( "mutliple mixed case is not", !StringIs( "first", "second", "third" ) );
+		suite.EndCase();
+
+		suite.BeginCase("StringIsAny");
+		suite.Assert("single is any", StringIsAny("first", { "first" }));
+		suite.Assert("single is not any", !StringIsAny("first", { "second" }));
+		suite.Assert("multiple is any", StringIsAny("first", { "second", "first", "third" }));
+		suite.Assert("multiple is not any", !StringIsAny("first", { "second", "fourth", "third" }));
 		suite.EndCase();
 
 		suite.BeginCase( "Replace" );
