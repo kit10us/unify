@@ -33,10 +33,17 @@ namespace unify
 	/// </summary>
 	class Exception : public std::exception
     {
+        std::string m_what;
     public:
-        Exception( std::string what )
-			: std::exception( what.c_str() )
+        Exception(std::string what)
+            : 
+            m_what{ what }
         {
+        }
+
+        virtual const char* what() const throw()
+        {
+            return m_what.c_str();
         }
     };
 }

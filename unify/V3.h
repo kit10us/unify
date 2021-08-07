@@ -26,6 +26,7 @@
 #include <unify/String.h>
 #include <unify/Angle.h>
 #include <unify/Exception.h>
+#include <cmath>
 
 namespace unify
 {
@@ -44,11 +45,6 @@ namespace unify
 		V3( const T arr[ 3 ] );
 		V3( const V2< T > & v2, float z = 0.0f );
         explicit V3( std::string text );
-
-        operator V3< T >()
-        {
-            return V3< T >( static_cast< T >( x ), static_cast< T >( y ), static_cast< T >( z ) );
-        }
 
 		// OPERATOR OVERLOADING MEMBER FUNCTIONS
 

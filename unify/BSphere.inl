@@ -45,7 +45,7 @@ BSphere< T > & BSphere< T >::operator+=( const BSphere< T > & sphere )
 	// Handle empty BSpheres...
 	if( sphere.radius < std::numeric_limits< T >::epsilon() )
 	{
-		return;
+		return {};
 	}
 
 	if( radius < std::numeric_limits< T >::epsilon() )

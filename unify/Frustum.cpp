@@ -209,8 +209,7 @@ bool Frustum::CastPoint( const unify::V2< float > & unit, unify::Ray & rayOut )
 
 CULLSTATE Frustum::CullBBox( unify::BBox< float > * pBBox/*, unify::Plane * BBPlane*/ )
 {
-	unsigned char outside[8];
-	memset( &outside, 0, sizeof( outside ) );
+	unsigned char outside[8] {};
 
 	unify::V3< float > vBounds[8];
 	pBBox->GenerateCorners( &vBounds[0] );

@@ -20,12 +20,6 @@
  */
 
 
-/*	LinkList allows the creation of a dynamically sized list.
- *		LinkList--->QList
- *
- *	Dynamically sizable link list. It uses Query objects to traverse the list.
- *
- */
 #pragma once
 
 #include <unify/TLink.h>

@@ -273,6 +273,7 @@ T V4< T >::Dot( const V4< T > & v2 ) const
 	return x * v2.x + y * v2.y + z * v2.z + w * v2.w;
 }	
 
+/*
 template< typename T >
 void V4< T >::Select( const V4< T > & v1, const V4< T > & v2, const V4< float > & control )
 {
@@ -281,6 +282,7 @@ void V4< T >::Select( const V4< T > & v1, const V4< T > & v2, const V4< float > 
 	z = (v1.z & ~control.z) | (v2.z & control.z);
 	w = (v1.w & ~control.w) | (v2.w & control.w);
 }
+*/
 
 template< typename T >
 std::string V4< T >::ToString() const

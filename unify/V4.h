@@ -81,7 +81,7 @@ namespace unify
         T & operator[]( size_t i );
         const T & operator[]( size_t i ) const;
 
-		void Select( const V4< T > & v1, const V4< T > & v2, const V4< float > & control );
+		//void Select( const V4< T > & v1, const V4< T > & v2, const V4< float > & control );
 
         std::string ToString() const;
 	};

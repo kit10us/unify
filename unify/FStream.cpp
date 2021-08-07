@@ -22,6 +22,7 @@
 
 #include <unify/FStream.h>
 #include <unify/Exception.h>
+#include <stdio.h>
 #include <string>
 
 using namespace unify;
@@ -39,7 +40,7 @@ void FileStream::Open( StreamAccessType access, unify::Path path )
 {
 	Close();
 
-	char mode[3];
+	char mode[3]{};
 	switch( access )
 	{
 	case STREAMACCESS_READBINARY:
@@ -77,7 +78,7 @@ void FileStream::Open( StreamAccessType access, unify::Path path )
 		break;
 	};
 
-	fopen_s( &m_pStream, path.ToString().c_str(), mode );
+	m_pStream = fopen(path.ToString().c_str(), mode );
 
 	if( ! m_pStream )
 	{
@@ -199,7 +200,7 @@ bool FileStream::Seek( StreamSeekType seek, int iOffset )
 	}
 }
 
-__int64 FileStream::Pos()
+int64_t FileStream::Pos()
 {
 	//return fseek( (FILE*)m_pStream, 0L, SEEK_CUR );
 	
@@ -210,7 +211,7 @@ __int64 FileStream::Pos()
 	return -1;
 }
 
-bool FileStream::SetPosition( __int64 iPos )
+bool FileStream::SetPosition( int64_t iPos )
 {
 	fpos_t pos = iPos;
 
@@ -219,14 +220,17 @@ bool FileStream::SetPosition( __int64 iPos )
 	return false;
 }
 
-__int64 unify::FileLength( const char * pszFilename )
+int64_t unify::FileLength( const char * pszFilename )
 {
-	__int64 iLength = 0;
+	int64_t iLength = 0;
 	
-	FILE * fp = 0;
+	FILE* fp{};
 
-	fopen_s( &fp, pszFilename, "rt" );
-	if( fp == 0 ) return 0;
+	fp = fopen(pszFilename, "rt" );
+	if (fp == 0)
+	{
+		return {};
+	}
 
 	while( fgetc( fp ) != EOF ) iLength++;
 

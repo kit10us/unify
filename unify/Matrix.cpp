@@ -22,6 +22,8 @@
 
 #include <unify/Matrix.h>
 #include <unify/Cast.h>
+#include <cstring>
+
 using namespace unify;
 
 Matrix::Matrix()

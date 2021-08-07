@@ -21,6 +21,7 @@
 
 
 #include <unify/String.h>
+#include <string>
 
 // IsAlpha (is a letter)
 bool unify::string::IsAlpha( const char ch )
@@ -371,12 +372,12 @@ unsigned int unify::string::ListPartCount( std::string sString, std::vector< cha
 
 bool unify::string::CaseInsensitiveLessThanTest::operator() (std::string string1, std::string string2) const
 {
-    return _stricmp(string1.c_str(), string2.c_str()) < 0;
+	return string1.compare(string2);
 }
 
 bool unify::string::CaseInsensitiveLessThanTestCharPtr::operator() ( char * string1, char * string2 ) const
 {
-	return _stricmp( string1, string2 ) < 0;
+	return std::string(string1).compare(string2);
 }
 
 std::vector< char > unify::string::SplitWhitespace()

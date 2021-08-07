@@ -49,9 +49,9 @@ namespace unify
 
 		bool Seek( StreamSeekType seek, int iOffset = 0 );
 
-		__int64 Pos();
-		bool SetPosition( __int64 );
+		int64_t Pos();
+		bool SetPosition( int64_t );
 	};
 
-	__int64 FileLength( const char * pszFilename );
+	int64_t FileLength( const char * pszFilename );
 }

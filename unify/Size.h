@@ -23,7 +23,7 @@
 #pragma once
 
 #include <unify/Unify.h>
-#include <string>
+#include <unify/String.h>
 #include <vector>
 
 namespace unify

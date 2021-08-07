@@ -42,7 +42,7 @@ Size< T >::Size( const Size< T > & size )
 template< typename T >
 Size< T >::Size( std::string text )
 {
-	std::vector< T > split = Split< T >( text, ',' );
+	std::vector< T > split = string::Split< T >( text, ',' );
     width = split[ 0 ];
     height = split[ 1 ];
 }

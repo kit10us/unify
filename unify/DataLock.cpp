@@ -25,6 +25,7 @@
 #include <unify/Exception.h>
 #include <unify/String.h>
 #include <cassert>
+#include <cstring>
 
 using namespace unify;
 
