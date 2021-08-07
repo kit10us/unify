@@ -25,6 +25,9 @@
 #include <stdio.h>
 #include <string>
 
+#pragma warning(push)
+#pragma warning(disable: 4996) // This function or variable may be unsafe. (fopen)
+
 using namespace unify;
 
 FileStream::FileStream()
@@ -236,3 +239,5 @@ int64_t unify::FileLength( const char * pszFilename )
 
 	return iLength;
 }
+
+#pragma warning(pop)
