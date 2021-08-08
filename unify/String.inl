@@ -21,7 +21,7 @@
 
 
 template< typename foo, typename ... bar >
-bool unify::string::StringIs( std::string a, std::string b, std::string rest... )
+bool StringIs( std::string a, std::string b, std::string rest... )
 {
 	if (StringIs(a, b ))
 	{
@@ -31,7 +31,7 @@ bool unify::string::StringIs( std::string a, std::string b, std::string rest... 
 }
 
 template< typename T >
-std::vector< T > unify::string::Split( std::string sourceString, const char delimitor )
+std::vector< T > Split( std::string sourceString, const char delimitor )
 {
 	std::vector< T > destination;
 	std::stringstream ss( sourceString );
@@ -44,7 +44,7 @@ std::vector< T > unify::string::Split( std::string sourceString, const char deli
 }
 
 template< typename T >
-std::vector< T > unify::string::Split( std::string sourceString, const std::vector< char > delimitors, bool includeEmpties )
+std::vector< T > Split( std::string sourceString, const std::vector< char > delimitors, bool includeEmpties )
 {
 	std::vector< T > destination;
 
@@ -95,7 +95,7 @@ std::vector< T > unify::string::Split( std::string sourceString, const std::vect
 }
 
 template< typename T >
-std::vector< T > unify::string::SplitOnWhitespace( std::string sourceString )
+std::vector< T > SplitOnWhitespace( std::string sourceString )
 {
 	std::vector< char > delimitors;
 	delimitors.push_back( ' ' );

@@ -34,8 +34,8 @@ bool unify::EdgeIntersectsFace( unify::V3< float > * pEdges, unify::V3< float > 
              pPlane->c * pEdges[0].z + pPlane->d;
     fDist2 = pPlane->a * pEdges[1].x + pPlane->b * pEdges[1].y +
              pPlane->c * pEdges[1].z + pPlane->d;
-    if( fDist1 > 0 && fDist2 > 0 ||
-        fDist1 < 0 && fDist2 < 0 )
+    if( (fDist1 > 0 && fDist2 > 0) ||
+        (fDist1 < 0 && fDist2 < 0) )
     {
         return false;
     }

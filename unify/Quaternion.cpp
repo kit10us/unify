@@ -242,7 +242,7 @@ Quaternion unify::QuaternionSlerp( const Quaternion & qa, const Quaternion & qb,
 	Quaternion q;
 
 	float cosHalfTheta = qa.w * qb.w + qa.x * qb.x + qa.y * qb.y + qa.z * qb.z;
-	if ( abs( cosHalfTheta ) >= 1.0f )
+	if ( fabs( cosHalfTheta ) >= 1.0f )
 	{
 		q.w = qa.w; q.x = qa.x; q.y = qa.y; q.z = qa.z;
 		return q;

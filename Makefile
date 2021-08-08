@@ -1,4 +1,6 @@
-CC=g++
+#CC=g++
+#CFLAGS=-std=c++17 -c -I .
+CC=clang
 CFLAGS=-c -I .
 OSTARGET=linux
 INTDIR=./intermediate/$(OSTARGET)/

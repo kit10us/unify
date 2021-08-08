@@ -22,6 +22,9 @@
 
 #include <unify/Plane.h>
 
+#pragma warning(push)
+#pragma warning(disable: 4100)
+
 using namespace unify;
 
 Plane Plane::PlaneFromPoints( const unify::V3< float > & v1, const unify::V3< float > & v2, const unify::V3< float > & v3 )
@@ -63,7 +66,8 @@ float Plane::DotNormal( const V3< float > & v2 ) const
 
 bool Plane::IntersectLine( unify::V3< float > & out, const unify::V3< float > & v1, const unify::V3< float > & v2 ) const
 {
-	out; v1; v2;
 	assert( 0 );
 	return false;
 }
+
+#pragma warning(pop)

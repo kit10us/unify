@@ -79,6 +79,9 @@ void FileStream::Open( StreamAccessType access, unify::Path path )
 		mode[1] = 't';
 		mode[2] = 0;
 		break;
+
+	case STREAMACCESS_NONE:
+		throw Exception("Attempted to access an FStream with access modifier \'none\'!");
 	};
 
 	m_pStream = fopen(path.ToString().c_str(), mode );

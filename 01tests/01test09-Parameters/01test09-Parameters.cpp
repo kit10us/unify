@@ -166,7 +166,7 @@ int main( int argc, char ** argv )
 			suite.Assert( "Cast to double from float",			parameters.Cast< double >( "float signed" ) == -60.0 );
 			suite.Assert( "Cast to double from double",			parameters.Cast< double >( "double" ) == 70.0 );
 
-			parameters.Set( { "new parameter", "new value" } );
+			parameters.Set( { "new parameter", std::string("new value") } );
 			suite.Assert( "Parameter created via 'Set(Parameter)'", unify::string::StringIs( parameters.Get<std::string>( "new parameter" ), "new value" ) );
 		}
 		suite.EndCase();

@@ -38,16 +38,16 @@ namespace unify
 		~FileStream();
 
 		void Open( StreamAccessType access, unify::Path path );
-		void Close();
+		virtual void Close() override;
 		
-		unsigned int Read( void * pDest, unsigned int uLength );
-		unsigned int ReadPack( void * pDest, unsigned int uLength );
+		virtual unsigned int Read( void * pDest, unsigned int uLength ) override;
+		virtual unsigned int ReadPack( void * pDest, unsigned int uLength ) override;
 		
-		void Write( const void * pSrc, unsigned int uLength ) override;
-		void WritePack( const void * pSrc ) override;
+		virtual void Write( const void * pSrc, unsigned int uLength ) override;
+		virtual void WritePack( const void * pSrc ) override;
 		void Write( std::string out );
 
-		bool Seek( StreamSeekType seek, int iOffset = 0 );
+		virtual bool Seek( StreamSeekType seek, int iOffset = 0 ) override;
 
 		int64_t Pos();
 		bool SetPosition( int64_t );

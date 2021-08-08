@@ -24,7 +24,11 @@
 #include <unify/Exception.h>
 #include <unify/Flags.h>
 
+#pragma warning(push)
+#pragma warning(disable: 4100)
+
 using namespace unify;
+
 
 Stream::Stream()
 : m_uFlags{ FLAG00 }
@@ -42,8 +46,6 @@ Stream::~Stream()
 // Open a stream.
 bool Stream::Open( StreamAccessType access, void * pData )
 {
-	access;
-	pData;
 	return true;
 }
 
@@ -61,8 +63,6 @@ void Stream::Close()
 // Read a length of data.
 unsigned int Stream::Read( void * pDest, unsigned int uLength )
 {
-	pDest;
-	uLength;
 	// Fail by default.
 	return 0;
 }
@@ -70,8 +70,6 @@ unsigned int Stream::Read( void * pDest, unsigned int uLength )
 // Read a pack of data (the size of a pack is dependent on the stream).
 unsigned int Stream::ReadPack( void * pDest, unsigned int uLength )
 {
-	pDest;
-	uLength;
 	// Fail by default.
 	return 0;
 }
@@ -79,8 +77,6 @@ unsigned int Stream::ReadPack( void * pDest, unsigned int uLength )
 // Write a length of data.
 void Stream::Write( const void * pSrc, unsigned int uLength )
 {
-	pSrc;
-	uLength;
 	// Fail by default.
 	throw unify::Exception( "Access base write!" );
 }
@@ -88,7 +84,6 @@ void Stream::Write( const void * pSrc, unsigned int uLength )
 // Write a pack of data (the size of a pack is dependent on the stream).
 void Stream::WritePack( const void * pSrc )
 {
-	pSrc;
 	// Fail by default.
 	throw unify::Exception( "Access base write!" );
 }
@@ -108,8 +103,6 @@ unsigned int Stream::GetFlags()
 // Seek to a position in a stream
 bool Stream::Seek( StreamSeekType seek, int iOffset )
 {
-	seek;
-	iOffset;
 	return false; // DEFAULT NO SEEK
 }
 
@@ -129,3 +122,5 @@ bool Stream::IsOpen() const
 {
 	return m_pStream != nullptr;
 }
+
+#pragma warning(pop)

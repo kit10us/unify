@@ -37,14 +37,21 @@ int main( int argc, char ** argv )
 
 	suite.BeginSuite( "Any" );
 	{
-		suite.BeginCase( "Any not empty" );
+		suite.BeginCase("Any not empty (int)");
 		Any anyInt12 = 12;
-		suite.Assert( "Any not empty", ! anyInt12.empty() );
+		suite.Assert("Any not empty", !anyInt12.empty());
 		suite.EndCase();
 
-		suite.BeginCase( "Int match" );
-		suite.Assert( "Int match", any_cast< int >( anyInt12 ) == 12 );
+		suite.BeginCase("Int match");
+		suite.Assert("Int match", any_cast<int>(anyInt12) == 12);
 		suite.EndCase();
+
+		suite.BeginCase("Strings");
+		Any anyString = "Hello, world!";
+		suite.Assert("Any string stored correctly.", any_cast<const char*>(anyString) != nullptr);
+		suite.Assert("Any string equivalency.", std::string(any_cast<const char*>(anyString)) == "Hello, world!");
+		suite.EndCase();
+
 	}
 	suite.EndSuite();
 	return 0;

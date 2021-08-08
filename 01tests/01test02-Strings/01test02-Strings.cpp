@@ -78,6 +78,13 @@ int main( int argc, char ** argv )
 		suite.Assert( "ToLower", ToLower( "All Lower Case, Zero UPPER!" ) == "all lower case, zero upper!" );
 		suite.Assert( "ToUpper", ToUpper( "All Lower Case, Zero UPPER!" ) == "ALL LOWER CASE, ZERO UPPER!" );
 		suite.EndCase();
+
+		suite.BeginCase("Caseless char* comparison");
+		suite.Assert("Is less than", CaseInsensitiveLessThanEqualTestCharPtr()("first", "second") == true);
+		suite.Assert("Is not less than", CaseInsensitiveLessThanEqualTestCharPtr()("second", "first") == false);
+
+		suite.Assert("Lower-case to same", CaseInsensitiveLessThanEqualTestCharPtr()("first", "first") == true);
+		suite.Assert("Mixed case", CaseInsensitiveLessThanEqualTestCharPtr()("fIrSt", "FiRsT") == true);
 	}
 	suite.EndSuite();
 	return 0;

@@ -34,7 +34,7 @@
 namespace unify
 {
 	/// <summary>
-	/// A mapping between values and pairs with the addition of constant time value lookups by performing searches early one.
+	/// A mapping between values and pairs with the addition of constant time value lookups by performing searches early on.
 	/// Perfers constant operations over log operations, speeding up some common operations.
 	/// </summary>
 	template< typename Key, typename Value >
@@ -43,7 +43,7 @@ namespace unify
 		friend class iterator;
 
 		std::vector< KeyValuePair< Key, Value > > m_values;
-		std::map< Key, size_t, string::CaseInsensitiveLessThanTest > m_keyToIndex;
+		std::map< Key, size_t> m_keyToIndex;
 	public:
 
 		/// <summary>

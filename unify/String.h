@@ -118,14 +118,14 @@ namespace unify
 		unsigned int ListPartCount(std::string sString, std::vector< char > seperators );
 
 		// Binary functor for case insensitive string compares. Useful for maps.
-		class CaseInsensitiveLessThanTest
+		class CaseInsensitiveLessThanEqualTest
 		{
 		public:
 			bool operator() (std::string string1, std::string string2) const;
 		};  
 
 		// Binary functor for case insensitive string compares. Useful for maps.
-		class CaseInsensitiveLessThanTestCharPtr
+		class CaseInsensitiveLessThanEqualTestCharPtr
 		{
 		public:
 			bool operator() ( char * string1, char * string2 ) const;

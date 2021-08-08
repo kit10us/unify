@@ -249,8 +249,8 @@ std::string unify::string::CleanWhitespace( std::string in )
 
 	// Find the first and last non-whitespace character...
 	size_t left = 0, right = in.length();
-	for( left; left < right && ( in[ left ] == ' ' || in[ left ] == '\t' || in[ left ] == '\n' ); ++left );
-	for( right; left < ( right - 1 ) && ( in[ right - 1 ] == ' ' || in[ right - 1 ] == '\t' || in[ right - 1 ] == '\n' ); --right );
+	for (;  left < right && (in[left] == ' ' || in[left] == '\t' || in[left] == '\n'); ++left);
+	for (; left < ( right - 1 ) && ( in[ right - 1 ] == ' ' || in[ right - 1 ] == '\t' || in[ right - 1 ] == '\n' ); --right );
 
 	if( left == right ) return std::string();
 
@@ -300,7 +300,12 @@ std::string unify::string::ListPart( std::string sString, std::vector< char > se
 {
 	if( sString == "" ) return "";
 
-	auto isSeperator = [seperators]( char c ){ auto itr = seperators.begin(), end = seperators.end(); for( ; itr != end && c != *itr; ++itr ); return itr != end; };
+	auto isSeperator = [seperators]( char c )
+	{ 
+		auto itr = seperators.begin(), end = seperators.end(); 
+		for( ; itr != end && c != *itr; ++itr ); 
+		return itr != end; 
+	};
 										 
 	int iInBrackets = 0;	// How deep in brackets we are
 	bool bInQuote = false;	// In quotations
@@ -336,7 +341,15 @@ unsigned int unify::string::ListPartCount( std::string sString, std::vector< cha
 {
 	if( sString == "" ) return 0;
 
-	auto isSeperator = [ seperators ]( char c ) { auto itr = seperators.begin(), end = seperators.end(); for( ; itr != end && c != *itr; ++itr ); return itr != end; };
+	auto isSeperator = [ seperators ]( char c ) 
+	{ 
+		auto itr = seperators.begin(), end = seperators.end(); 
+		for (; itr != end && c != *itr; ++itr) 
+		{
+			// Do nothing here.
+		} 
+		return itr != end; 
+	};
 
 	int iInBrackets = 0;
 	bool bInQuote = false; //in quotations
@@ -370,14 +383,62 @@ unsigned int unify::string::ListPartCount( std::string sString, std::vector< cha
 	return pc + 1;
 }
 
-bool unify::string::CaseInsensitiveLessThanTest::operator() (std::string string1, std::string string2) const
+bool unify::string::CaseInsensitiveLessThanEqualTest::operator() (std::string stringA, std::string stringB) const
 {
-	return string1.compare(string2);
+	auto LowercaseChar = [](char a) -> char
+	{
+		return a >= 'A' && a <= 'Z' ? (a - 'A' + 'a') : a;
+	};
+
+	auto itrA = stringA.cbegin();
+	auto endA = stringA.cend();
+	auto itrB = stringB.cbegin();
+	auto endB = stringB.cend();
+	for(;itrA != endA && itrB != endB; itrA++, itrB++)
+	{
+		char a = LowercaseChar(*itrA);
+		char b = LowercaseChar(*itrB);
+		if (a == b)
+		{
+			continue;
+		}
+		return a < b;
+	}
+
+	return itrA == endA; // Less than or equal, if we hit the end.
 }
 
-bool unify::string::CaseInsensitiveLessThanTestCharPtr::operator() ( char * string1, char * string2 ) const
+bool unify::string::CaseInsensitiveLessThanEqualTestCharPtr::operator() ( char * stringA, char * stringB ) const
 {
-	return std::string(string1).compare(string2);
+	auto LowercaseChar = [](char a) -> char
+	{
+		return a >= 'A' && a <= 'Z' ? (a - 'A' + 'a') : a;
+	};
+
+	if (stringA == nullptr || stringA[0] == '0')
+	{
+		return true;
+	}
+
+	if (stringB == nullptr || stringB[0] == '0')
+	{
+		return false;
+	}
+
+	char* itrA = stringA;
+	char* itrB = stringB;
+	for (;*itrA != '0' && *itrB != '0'; itrA++, itrB++)
+	{
+		char a = LowercaseChar(*itrA);
+		char b = LowercaseChar(*itrB);
+		if (a == b)
+		{
+			continue;
+		}
+		return a < b;
+	}
+
+	return *itrA == '0';
 }
 
 std::vector< char > unify::string::SplitWhitespace()

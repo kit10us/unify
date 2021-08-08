@@ -404,9 +404,17 @@ V3< T > V3< T >::V3RotateAbout(V3< T > position, float distance, unify::Angle ro
 
 	float rotationMatrix[9] = 
 	{ 
-		 cos( ry ) *  cos( rz ), -cos( rx ) *  sin( rz ) +  sin( rx ) *  sin( ry ) *  cos( rz ),   sin( rx ) *  sin( rx ) +  cos( rz ) *  sin( ry ) * sin( rz ),
-		 cos( ry ) *  sin( rz ),  cos( rx ) *  cos( rz ) +  sin( rx ) *  sin( ry ) *  sin( rz ),  -sin( rx ) *  cos( rz ) +  cos( rz ) +  sin( rx ) * sin( ry ), 
-		-sin( ry ),               sin( rx ) *  cos( ry ),                                           cos( rx ) *  cos( ry ) 
+		 cosf( ry ) *  cosf( rz ), 
+		 -cosf( rx ) *  sinf( rz ) +  sinf( rx ) *  sinf( ry ) *  cosf( rz ),
+		 sinf( rx ) *  sinf( rx ) +  cosf( rz ) *  sinf( ry ) * sinf( rz ),
+		 
+		 cosf( ry ) *  sinf( rz ),  
+		 cosf( rx ) *  cosf( rz ) +  sinf( rx ) *  sinf( ry ) *  sinf( rz ),
+		 -sinf( rx ) *  cosf( rz ) +  cosf( rz ) +  sinf( rx ) * sinf( ry ), 
+		
+		-sinf( ry ),
+		sinf( rx ) *  cosf( ry ),
+		cosf( rx ) *  cosf( ry ) 
 	};
 
 	auto finalPosition = position + pivot * distance;

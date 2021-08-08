@@ -45,15 +45,13 @@ namespace unify
 		{
 		}
 
-		/*
-		template< >
-		Parameter( std::string name, const char * value )
+		template<>
+		Parameter( std::string name, const char* value )
 			: name{ name }
-			, value{ std::string( value ) }
+			, value{ std::string(value) }
 		{
 		}
-		*/
-	
+
 		std::string name;
 		unify::Any value;
 	};
@@ -120,9 +118,9 @@ namespace unify
         Parameters operator+( Parameters & parameters );
 
     private:
-        typedef std::map< std::string, Parameter, string::CaseInsensitiveLessThanTest > ParameterMap;
+        typedef std::map< std::string, Parameter> ParameterMap;
         ParameterMap m_parameters;
-        mutable std::set< std::string, string::CaseInsensitiveLessThanTest > m_auditItemsUsed; // This helps reduce typos by ensuring every explicitly get and set value are paired. It is naturally ignored for defaults.
+        mutable std::set< std::string> m_auditItemsUsed; // This helps reduce typos by ensuring every explicitly get and set value are paired. It is naturally ignored for defaults.
     };
 
 	template<> bool Parameters::Cast< bool >( std::string name ) const;

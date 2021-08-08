@@ -48,15 +48,6 @@ int main( int argc, char ** argv )
 		suite.Assert( "ColorUnit from text", ColorUnit( "1, 0.5, 0.25, 0.125" ) == ColorUnitRGBA( 1, 0.5, 0.25, 0.125 ) ); 
 		suite.EndCase();
 
-		suite.BeginCase( "Parameter" );
-		Parameters parameters;
-		parameters.Set( "first", 1234567 );
-		parameters.Set( "second", "second" );
-		parameters.Set( "third", 3.33f );
-		suite.Assert( "verify value of first parameter, int", parameters.Get< int >( "first" ) == (int)1234567 );
-		suite.Assert( "verify parameter \"second\" exists", parameters.Exists( "second" ) );
-		suite.EndCase();
-
 		// Optional test...
 		{
 			/*
