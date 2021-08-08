@@ -9,7 +9,7 @@ OUTDIR=./lib/$(OSTARGET)/
 all: unify
 
 unify: make_directories others Angle.o Cast.o Color.o ColorUnit.o DataLock.o Frame.o \
-	FrameLite.o Frameset.o FrameSetInstance.o Frustum.o FStream.o Matrix.o NinePoint.o \
+	FrameLite.o FrameSet.o FrameSetInstance.o Frustum.o FStream.o Matrix.o NinePoint.o \
 	Owner.o Parameters.o Path.o Plane.o Quaternion.o Ray.o Stream.o String.o TexArea.o \
 	TexCoords.o TimeDelta.o Variant.o createlib
 
@@ -34,7 +34,7 @@ Frame.o: ./unify/Frame.cpp ./unify/Frame.h
 FrameLite.o: ./unify/FrameLite.cpp ./unify/FrameLite.h
 	$(CC) $(CFLAGS) unify/FrameLite.cpp -o $(INTDIR)FrameLite.o
 
-Frameset.o: ./unify/FrameSet.cpp ./unify/FrameSet.h
+FrameSet.o: ./unify/FrameSet.cpp ./unify/FrameSet.h
 	$(CC) $(CFLAGS) unify/FrameSet.cpp -o $(INTDIR)FrameSet.o
 
 FrameSetInstance.o: ./unify/FrameSetInstance.cpp ./unify/FrameSetInstance.h
@@ -90,7 +90,7 @@ Variant.o: ./unify/Variant.cpp ./unify/Variant.h
 
 createlib: 
 	ar ruc $(OUTDIR)Unify.a $(INTDIR)Angle.o $(INTDIR)Cast.o $(INTDIR)Color.o $(INTDIR)ColorUnit.o \
-	$(INTDIR)DataLock.o $(INTDIR)Frame.o $(INTDIR)FrameLite.o $(INTDIR)Frameset.o \
+	$(INTDIR)DataLock.o $(INTDIR)Frame.o $(INTDIR)FrameLite.o $(INTDIR)FrameSet.o \
 	$(INTDIR)FrameSetInstance.o $(INTDIR)Frustum.o $(INTDIR)FStream.o $(INTDIR)Matrix.o \
 	$(INTDIR)NinePoint.o $(INTDIR)Owner.o $(INTDIR)Parameters.o $(INTDIR)Path.o $(INTDIR)Plane.o \
 	$(INTDIR)Quaternion.o $(INTDIR)Ray.o $(INTDIR)Stream.o $(INTDIR)String.o $(INTDIR)TexArea.o \

@@ -206,24 +206,14 @@ bool FileStream::Seek( StreamSeekType seek, int iOffset )
 	}
 }
 
-int64_t FileStream::Pos()
+bool FileStream::Pos(fpos_t & pos)
 {
-	//return fseek( (FILE*)m_pStream, 0L, SEEK_CUR );
-	
-	fpos_t pos;
-
-	if( fgetpos( (FILE*)m_pStream, &pos) == 0 /*Success*/ ) return pos;
-	
-	return -1;
+	return fgetpos( (FILE*)m_pStream, &pos) == 0;
 }
 
-bool FileStream::SetPosition( int64_t iPos )
+bool FileStream::SetPosition( fpos_t & pos )
 {
-	fpos_t pos = iPos;
-
-	if( fsetpos( (FILE*)m_pStream, &pos) == 0 /*Success*/ ) return true;
-	
-	return false;
+	return fsetpos( (FILE*)m_pStream, &pos) == 0;
 }
 
 int64_t unify::FileLength( const char * pszFilename )
