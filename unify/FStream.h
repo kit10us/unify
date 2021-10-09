@@ -49,8 +49,8 @@ namespace unify
 
 		virtual bool Seek( StreamSeekType seek, int iOffset = 0 ) override;
 
-		int64_t Pos();
-		bool SetPosition( int64_t );
+		bool Pos(fpos_t & pos);
+		bool SetPosition( fpos_t & pos );
 	};
 
 	int64_t FileLength( const char * pszFilename );
