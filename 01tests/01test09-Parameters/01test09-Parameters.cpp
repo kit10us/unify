@@ -30,6 +30,9 @@ int main( int argc, char ** argv )
 
 			suite.Assert( "count is 3", parameters.Count() == 3 );
 
+			auto exists = parameters.Exists("first");
+			auto a = parameters.Get<std::string>("first");
+
 			suite.Assert( "first", parameters.Get< std::string >( "first" ) == "first" );
 			suite.Assert( "second", parameters.Get< std::string >( "second" ) == "second" );
 			suite.Assert( "third", parameters.Get< std::string >( "third" ) == "third" );
@@ -168,6 +171,19 @@ int main( int argc, char ** argv )
 
 			parameters.Set( { "new parameter", std::string("new value") } );
 			suite.Assert( "Parameter created via 'Set(Parameter)'", unify::string::StringIs( parameters.Get<std::string>( "new parameter" ), "new value" ) );
+		}
+		suite.EndCase();
+
+		suite.BeginCase("Case insensitive.");
+		{
+			Parameters parameters
+			{
+				{"First", true}
+			};
+
+			suite.Assert("Case insensitive compare, same", parameters.Exists("First"));
+			suite.Assert("Case insensitive compare, all lower", parameters.Exists("first"));
+			suite.Assert("Case insensitive compare, all capitals", parameters.Exists("FIRST"));
 		}
 		suite.EndCase();
 	}

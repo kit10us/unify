@@ -118,7 +118,7 @@ namespace unify
         Parameters operator+( Parameters & parameters );
 
     private:
-        typedef std::map< std::string, Parameter> ParameterMap;
+        typedef std::map< std::string, Parameter, string::CaseInsensitiveLessThanEqualTest> ParameterMap;
         ParameterMap m_parameters;
         mutable std::set< std::string> m_auditItemsUsed; // This helps reduce typos by ensuring every explicitly get and set value are paired. It is naturally ignored for defaults.
     };

@@ -111,6 +111,10 @@ others: unify/Any.h unify/BadCast.h unify/BBox.h unify/BBox.inl unify/BSphere.h 
 	unify/Triangle.inl unify/Unify.h unify/V2.h unify/V2.inl unify/V3.h unify/V3.inl unify/V4.h \
 	unify/V4.inl unify/Viewport.h unify/Viewport.inl
 
+check:
+
+distcheck:
+
 clean:
 	rm -f $(INTDIR)*.o
 	rm -f $(OUTDIR)*.a

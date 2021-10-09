@@ -121,7 +121,7 @@ namespace unify
 		class CaseInsensitiveLessThanEqualTest
 		{
 		public:
-			bool operator() (std::string string1, std::string string2) const;
+			bool operator() (const std::string & stringA, const std::string & stringB) const;
 		};  
 
 		// Binary functor for case insensitive string compares. Useful for maps.

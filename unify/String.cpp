@@ -383,29 +383,18 @@ unsigned int unify::string::ListPartCount( std::string sString, std::vector< cha
 	return pc + 1;
 }
 
-bool unify::string::CaseInsensitiveLessThanEqualTest::operator() (std::string stringA, std::string stringB) const
+
+struct nocase_compare
 {
-	auto LowercaseChar = [](char a) -> char
+	bool operator()(const unsigned char& c1, const unsigned char& c2) const
 	{
-		return a >= 'A' && a <= 'Z' ? (a - 'A' + 'a') : a;
-	};
-
-	auto itrA = stringA.cbegin();
-	auto endA = stringA.cend();
-	auto itrB = stringB.cbegin();
-	auto endB = stringB.cend();
-	for(;itrA != endA && itrB != endB; itrA++, itrB++)
-	{
-		char a = LowercaseChar(*itrA);
-		char b = LowercaseChar(*itrB);
-		if (a == b)
-		{
-			continue;
-		}
-		return a < b;
+		return tolower(c1) < tolower(c2);
 	}
+};
 
-	return itrA == endA; // Less than or equal, if we hit the end.
+bool unify::string::CaseInsensitiveLessThanEqualTest::operator() (const std::string & stringA, const std::string & stringB) const
+{
+	return std::lexicographical_compare(stringA.begin(), stringA.end(), stringB.begin(), stringB.end(), nocase_compare());
 }
 
 bool unify::string::CaseInsensitiveLessThanEqualTestCharPtr::operator() ( char * stringA, char * stringB ) const
