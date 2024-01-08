@@ -22,6 +22,11 @@
 
 #include <unify/test/DefaultOutputHandlers.h>
 
+#ifdef _WIN32
+#include <Windows.h>
+#include <debugapi.h>
+#endif // _WIN32
+
 using namespace unify;
 using namespace test;
 
@@ -33,38 +38,47 @@ void DefaultOutputHandler::Output( std::string message, OutputType type )
 {
 	using namespace std;
 
+	auto out = [](std::string output)
+		{
+			cout << output << endl;
+	#ifdef _WIN32
+			OutputDebugStringA((output + "\n").c_str() );
+	#endif // _WIN32
+
+		};
+
 	switch( type )
 	{
 	case OutputType::BeginSuite:
-		cout << "Begin test suite \"" << message << "\"" << endl;
+		out("Begin test suite \"" + message + "\"");
 		break;
 
 	case OutputType::EndSuite:
-		cout << "End Test suite \"" << message << "\"" << endl;
+		out( "End Test suite \"" + message + "\"" );
 		break;
 
 	case OutputType::BeginCase:
-		cout << "   Begin case \"" << message << "\"" << endl;
+		out( "   Begin case \"" + message + "\"" );
 		break;
 
 	case OutputType::EndCase:
-		cout << "   End case \"" << message << "\"" << endl;
+		out( "   End case \"" + message + "\"" );
 		break;
 
 	case OutputType::Info:
-		cout << "         Info \"" << message << "\"" << endl;
+		out( "         Info \"" + message + "\"" );
 		break;
 
 	case OutputType::Warning:
-		cout << "         Warning \"" << message << "\"" << endl;
+		out( "         Warning \"" + message + "\"" );
 		break;
 
 	case OutputType::AssertPassed:
-		cout << "      Assert \"" << message << "\" passed" << endl;
+		out( "      Assert \"" + message + "\" passed" );
 		break;
 
 	case OutputType::AssertFailed:
-		cout << "      Assert \"" << message << "\" failed!" << endl;
+		out( "      Assert \"" + message + "\" failed!" );
 		break;
 	}
 }

@@ -24,6 +24,7 @@
 
 #include <unify/Unify.h>
 #include <unify/Path.h>
+#include <unify/TimeDelta.h>
 #include <string>
 #include <typeinfo>
 #include <cassert>
@@ -40,6 +41,7 @@ namespace unify
 	template<> std::string Cast( const unsigned char in );
 	template<> std::string Cast( const char in );
 	template<> std::string Cast( const unsigned int in );
+	template<> std::string Cast( const unsigned __int64 in );
 	template<> std::string Cast( const int in );
 	template<> std::string Cast( const float in );
 	template<> std::string Cast( const double in );
@@ -54,6 +56,7 @@ namespace unify
 	template<> unsigned char Cast( const std::string text );
 	template<> int Cast( const std::string text );
 	template<> unsigned int Cast( const std::string text );
+	template<> unsigned __int64 Cast( const std::string text );
 	template<> float Cast( const std::string text );
 	template<> double Cast( const std::string text );
 	template<> wchar_t * Cast( const std::string text );
@@ -67,6 +70,7 @@ namespace unify
 	template<> unsigned char Cast( const char * text );
 	template<> int Cast( const char * text );
 	template<> unsigned int Cast( const char * text );
+	template<> unsigned __int64 Cast( const char* text );
 	template<> float Cast( const char * text );
 	template<> double Cast( const char * text );
 	template<> wchar_t * Cast( const char * text );

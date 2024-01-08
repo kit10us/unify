@@ -59,7 +59,7 @@ size_t unify::Lookup< Key, Value >::Find( Key key ) const
 	auto itr = m_keyToIndex.find( key );
 	if (itr == m_keyToIndex.end())
 	{
-		throw std::out_of_range( "Key \"" + key + "\" not found!" );
+		throw std::out_of_range( "Lookup key \"" + key + "\" not found!" );
 	}
 
 	return itr->second;
@@ -109,7 +109,7 @@ void unify::Lookup< Key, Value >::SetValue( Key key, Value value )
 	auto itr = m_keyToIndex.find( key );
 	if (itr == m_keyToIndex.end())
 	{
-		throw std::out_of_range( "Key \"" + key + "\" not found!" );
+		throw std::out_of_range( "Lookup key \"" + key + "\" not found!" );
 	}
 
 	m_values[itr->second].value = value;

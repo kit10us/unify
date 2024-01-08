@@ -210,3 +210,22 @@ bool TimeDelta::operator <= ( TimeDelta delta ) const
 }
 
 
+template<>
+std::string unify::Cast(const TimeDelta in)
+{
+	return std::to_string(in.GetSeconds());
+}
+
+template<> 
+TimeDelta unify::Cast(const std::string text)
+{
+	text; // unused
+	return TimeDelta{}; // SAS TODO: Need to convert to time delta from string.
+}
+
+template<>
+TimeDelta unify::Cast(const char* text)
+{
+	text; // unused
+	return TimeDelta{}; // SAS TODO: Need to convert to time delta from string.
+}

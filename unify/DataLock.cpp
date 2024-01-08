@@ -121,12 +121,12 @@ DataLock::DataLock()
 {
 }
 
-DataLock::DataLock( void * data, unsigned int stride, unsigned int count, DataLockAccess::TYPE type, size_t slot )
+DataLock::DataLock( void * data, size_t stride, size_t count, DataLockAccess::TYPE type, size_t slot )
 {
 	SetLock( data, stride, count, type, slot );
 }
 
-DataLock::DataLock( void * data, unsigned int sizeInBytes, DataLockAccess::TYPE type, size_t slot )
+DataLock::DataLock( void * data, size_t sizeInBytes, DataLockAccess::TYPE type, size_t slot )
 {
 	SetLock( data, sizeInBytes, type, slot );
 }
@@ -135,7 +135,7 @@ DataLock::~DataLock()
 {
 }
 
-void DataLock::SetLock( void * data, unsigned int stride, unsigned int count, DataLockAccess::TYPE type, size_t slot )
+void DataLock::SetLock( void * data, size_t stride, size_t count, DataLockAccess::TYPE type, size_t slot )
 {
 	m_data = data;
 	m_stride = stride;
@@ -143,9 +143,9 @@ void DataLock::SetLock( void * data, unsigned int stride, unsigned int count, Da
 	m_sizeInBytes = stride * count;
 	m_type = type;
 	m_slot = slot;
-}
+} 
 
-void DataLock::SetLock( void * data, unsigned int sizeInBytes, DataLockAccess::TYPE type, size_t slot )
+void DataLock::SetLock( void * data, size_t sizeInBytes, DataLockAccess::TYPE type, size_t slot )
 {
 	m_data = data;
 	m_stride = sizeInBytes;
@@ -160,17 +160,17 @@ DataLockAccess::TYPE DataLock::GetType() const
 	return m_type;
 }
 
-unsigned int DataLock::Count() const
+size_t DataLock::Count() const
 {
 	return m_count;
 }
 
-unsigned int DataLock::Stride() const
+size_t DataLock::Stride() const
 {
 	return m_stride;
 }
 
-unsigned int DataLock::GetSizeInBytes() const
+size_t DataLock::GetSizeInBytes() const
 {
 	return m_sizeInBytes;
 }
@@ -188,7 +188,7 @@ void DataLock::Invalidate()
 	m_slot = 0;
 }
 
-bool DataLock::CopyBytesFrom( const void * source, unsigned int offset, unsigned int byteCount )
+bool DataLock::CopyBytesFrom( const void * source, size_t offset, size_t byteCount )
 {
 	if( offset + byteCount > m_sizeInBytes )
 	{
@@ -198,7 +198,7 @@ bool DataLock::CopyBytesFrom( const void * source, unsigned int offset, unsigned
 	return true;
 }
 
-bool DataLock::CopyItemFrom( const void * source, unsigned int indexTo )
+bool DataLock::CopyItemFrom( const void * source, size_t indexTo )
 {
 	if( indexTo >= m_count )
 	{
@@ -209,7 +209,7 @@ bool DataLock::CopyItemFrom( const void * source, unsigned int indexTo )
 	return true;
 }
 
-bool DataLock::CopyItemFromTo( unsigned int indexFrom, unsigned int indexTo )
+bool DataLock::CopyItemFromTo( size_t indexFrom, size_t indexTo )
 {
 	if( indexFrom == indexTo )
 	{

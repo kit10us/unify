@@ -66,20 +66,20 @@ namespace unify
 	{
 	public:
 		DataLock();
-		DataLock( void * data, unsigned int stride, unsigned int count, DataLockAccess::TYPE type, size_t slot );
-		DataLock( void * data, unsigned int sizeInBytes, DataLockAccess::TYPE type, size_t slot );
+		DataLock( void * data, size_t stride, size_t count, DataLockAccess::TYPE type, size_t slot );
+		DataLock( void * data, size_t sizeInBytes, DataLockAccess::TYPE type, size_t slot );
 
 		virtual ~DataLock();
 
 		/// <summary>
 		/// Setup a lock.
 		/// </summary>
-		virtual void SetLock( void * data, unsigned int stride, unsigned int count, DataLockAccess::TYPE type, size_t slot );
+		virtual void SetLock( void * data, size_t stride, size_t count, DataLockAccess::TYPE type, size_t slot );
 
 		/// <summary>
 		/// Setup a lock.
 		/// </summary>
-		virtual void SetLock( void * data, unsigned int sizeInBytes, DataLockAccess::TYPE type, size_t slot );
+		virtual void SetLock( void * data, size_t sizeInBytes, DataLockAccess::TYPE type, size_t slot );
 
 		/// <summary>
 		/// Returns the type of lock.
@@ -102,29 +102,29 @@ namespace unify
 		/// Return a pointer to the head of a specific 'item', and item being determined by length of stride.
 		/// </summary>
 		template < typename T >
-		T * GetItem( unsigned int index );
+		T * GetItem( size_t index );
 
 		/// <summary>
 		/// Return a pointer to the head of a specific 'item', and item being determined by length of stride.
 		/// </summary>
 		template < typename T >
-		const T * GetItemReadonly( unsigned int index ) const;
+		const T * GetItemReadonly( size_t index ) const;
 
-		unsigned int Count() const;
+		size_t Count() const;
 
-		unsigned int Stride() const;
+		size_t Stride() const;
 
-		unsigned int GetSizeInBytes() const;
+		size_t GetSizeInBytes() const;
 
 		size_t Slot() const;
 
 		virtual void Invalidate();
 
-		virtual bool CopyBytesFrom( const void * source, unsigned int offset, unsigned int byteCount );
+		virtual bool CopyBytesFrom( const void * source, size_t offset, size_t byteCount );
 
-		virtual bool CopyItemFrom( const void * source, unsigned int indexTo ); 
+		virtual bool CopyItemFrom( const void * source, size_t indexTo ); 
 
-		virtual bool CopyItemFromTo( unsigned int indexFrom, unsigned int indexTo );
+		virtual bool CopyItemFromTo( size_t indexFrom, size_t indexTo );
 
 		template< typename T, size_t T_OffsetInBytes = 0 >
 		class iterator
@@ -206,13 +206,13 @@ namespace unify
 
 			// From DataLock
 			void * m_data;
-			unsigned int m_stride; // Item stride
-			unsigned int m_count;	// Number of items we can stride through
-			unsigned int m_sizeInBytes;
+			size_t m_stride; // Item stride
+			size_t m_count;	// Number of items we can stride through
+			size_t m_sizeInBytes;
 			bool m_readonly;
 
 			// Iterator specific
-			unsigned int m_index;
+			size_t m_index;
 			T * m_me;
 		};
 
@@ -244,9 +244,9 @@ namespace unify
 
 	protected:
 		void * m_data;
-		unsigned int m_stride; // Item stride
-		unsigned int m_count;	// Number of items we can stride through
-		unsigned int m_sizeInBytes;
+		size_t m_stride; // Item stride
+		size_t m_count;	// Number of items we can stride through
+		size_t m_sizeInBytes;
 		DataLockAccess::TYPE m_type;
 		size_t m_slot;
 	};
@@ -275,7 +275,7 @@ namespace unify
 	}
 
 	template < typename T >
-	T * DataLock::GetItem( unsigned int index )
+	T * DataLock::GetItem( size_t index )
 	{
 		if (index >= m_count)
 		{
@@ -291,7 +291,7 @@ namespace unify
 	}
 
 	template < typename T >
-	const T * DataLock::GetItemReadonly( unsigned int index ) const
+	const T * DataLock::GetItemReadonly( size_t index ) const
 	{
 		if (index >= m_count)
 		{

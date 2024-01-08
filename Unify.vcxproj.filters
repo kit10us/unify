@@ -117,9 +117,6 @@
     <ClInclude Include="unify\DataLock.h">
       <Filter>unify</Filter>
     </ClInclude>
-    <ClInclude Include="unify\Exception.h">
-      <Filter>unify</Filter>
-    </ClInclude>
     <ClInclude Include="unify\Flags.h">
       <Filter>unify</Filter>
     </ClInclude>
@@ -262,6 +259,12 @@
       <Filter>unify</Filter>
     </ClInclude>
     <ClInclude Include="unify\BadCast.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="unify\IExceptionHandler.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="unify\DefaultExceptionHandler.h">
       <Filter>unify</Filter>
     </ClInclude>
   </ItemGroup>

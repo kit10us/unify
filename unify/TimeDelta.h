@@ -23,6 +23,7 @@
 #pragma once
 
 #include <unify/Unify.h>
+#include <unify/Cast.h>
 
 namespace unify
 {
@@ -81,4 +82,9 @@ namespace unify
 	TimeDelta TimeDeltaInWeeks( float weeks );
 	TimeDelta TimeDeltaInDays( float days );
 	TimeDelta TimeDeltaInYears( float years );
+
+	template< typename TTo, typename TFrom > TTo Cast(const TFrom in);
+	template<> std::string unify::Cast(const TimeDelta in);
+	template<> TimeDelta Cast(const std::string text);
+	template<> TimeDelta Cast(const char* text);
 }

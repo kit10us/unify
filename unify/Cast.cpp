@@ -62,6 +62,13 @@ std::string unify::Cast( const unsigned int in )
 }
 
 template<>
+std::string unify::Cast(const unsigned __int64 in)
+{
+	return std::to_string(in);
+}
+
+
+template<>
 std::string unify::Cast( const int in )
 {
 	return std::to_string(in);
@@ -139,6 +146,12 @@ template<>
 unsigned int unify::Cast( const std::string text )
 {
 	return( ! text.empty() ? strtoul( text.c_str(), 0, 0 ) : 0 );
+}
+
+template<>
+unsigned __int64 unify::Cast(const std::string text)
+{
+	return(!text.empty() ? strtoull(text.c_str(), 0, 0) : 0);
 }
 
 template<>
@@ -224,6 +237,12 @@ template<>
 unsigned int unify::Cast( const char * text )
 {
 	return Cast< unsigned int, std::string >( text );
+}
+
+template<>
+unsigned __int64 unify::Cast(const char* text)
+{
+	return Cast< unsigned __int64, std::string >(text);
 }
 
 template<>

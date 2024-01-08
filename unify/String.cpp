@@ -45,7 +45,7 @@ bool unify::string::StringIs( std::string a, std::string b )
 		return false;
 	}
 
-	int length = a.length();
+	int length = (int)a.length();
 	for (int i = 0; i < length; i++)
 	{
 		char aa = a[i];
