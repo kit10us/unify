@@ -22,3 +22,7 @@ There is also an ongoing effort to support additional rendering features, shared
 
 # The Rub
 All of this is to say that extreme optimization has not been a priority. It might become one in the future, however, at that point it could be necessary to reduce implementation clarity, in other words, it would become a poor example for learning.
+
+# Code Formatting
+The formatting of the code within Unify is the culmination of research in code readability. This was also an objective with Unify. It was not only a place to practice and learn functional implementation, it was also a place to practice and learn code formatting and naming conventions. To those ends, it might look a little *funky* to many developers. It's not following the general standard many in the C++ community use, or would prefer - trust me *I've heard this already*. This is also a feature that might change in the future.
+
