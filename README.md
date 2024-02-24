@@ -37,3 +37,16 @@ _note: This can become tedious, especially with the growing number of C++ versio
 
 See https://www.stroustrup.com/C++11FAQ.html#11
 
+## In-line Document Generation Comments
+Code comments in Unify are in the xml doc format, see: https://learn.microsoft.com/en-us/cpp/build/reference/xml-documentation-visual-cpp?view=msvc-170
+
+Inline code comments should only be within headers (whatever the extension is), and not within the c/cpp files.
+
+The following should be commented before pushing code into the repo:
+- class and struct types with summaries
+- enum types with summaries
+- All functions, except for constructors, operators, functions only within c/cpp files
+
+Additional, non-duplicate, comments should be added at the developers discretion where clarity requires.
+
+_Note: xml docs, such as vs doxygen, comment formatting is the current method for in-code commenting due to legacy Visual Studio support. Changing format is a consideration, however, doxygen supports this format, so this is not a priority._
