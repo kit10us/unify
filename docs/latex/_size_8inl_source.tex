@@ -1,0 +1,228 @@
+\doxysection{Size.\+inl}
+\hypertarget{_size_8inl_source}{}\label{_size_8inl_source}\index{unify/Size.inl@{unify/Size.inl}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00024\ Size<\ T\ >::Size()}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00029\ Size<\ T\ >::Size(\ T\ \_width,\ T\ \_height\ )}
+\DoxyCodeLine{00030\ :\ width(\ \_width\ )}
+\DoxyCodeLine{00031\ ,\ height(\ \_height\ )}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00036\ Size<\ T\ >::Size(\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size\ )}
+\DoxyCodeLine{00037\ :\ width(\ size.width\ )}
+\DoxyCodeLine{00038\ ,\ height(\ size.height\ )}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00043\ Size<\ T\ >::Size(\ std::string\ text\ )}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ std::vector<\ T\ >\ split\ =\ string::Split<\ T\ >(\ text,\ \textcolor{charliteral}{','}\ );}
+\DoxyCodeLine{00046\ \ \ \ \ width\ =\ split[\ 0\ ];}
+\DoxyCodeLine{00047\ \ \ \ \ height\ =\ split[\ 1\ ];}
+\DoxyCodeLine{00048\ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00051\ T\ Size<\ T\ >::Width()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00052\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{return}\ width;}
+\DoxyCodeLine{00054\ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00057\ T\ Size<\ T\ >::Height()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00058\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{return}\ height;}
+\DoxyCodeLine{00060\ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ Size<\ T\ >::Zero()}
+\DoxyCodeLine{00064\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ width\ =\ 0;}
+\DoxyCodeLine{00066\ \ \ \ \ height\ =\ 0;}
+\DoxyCodeLine{00067\ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00070\ Size<\ T\ >\ \&\ Size<\ T\ >::operator\ =\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ vec\ )}
+\DoxyCodeLine{00071\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ width\ =\ vec.x;}
+\DoxyCodeLine{00073\ \ \ \ \ height\ =\ vec.y;}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00075\ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00078\ Size<\ T\ >\ \&\ Size<\ T\ >::operator\ =\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size\ )}
+\DoxyCodeLine{00079\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ width\ =\ size.width;}
+\DoxyCodeLine{00081\ \ \ \ \ height\ =\ size.height;}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00086\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >::operator\ +=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ size\ )}
+\DoxyCodeLine{00087\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ width\ +=\ size.width;}
+\DoxyCodeLine{00089\ \ \ \ \ height\ +=\ size.height;}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00091\ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00094\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >::operator\ -\/=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ size\ )}
+\DoxyCodeLine{00095\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ width\ -\/=\ size.width;}
+\DoxyCodeLine{00097\ \ \ \ \ height\ -\/=\ size.height;}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00099\ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00102\ Size<\ T\ >\ \&\ Size<\ T\ >::operator\ *=\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size\ )}
+\DoxyCodeLine{00103\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ width\ *=\ size.width;}
+\DoxyCodeLine{00105\ \ \ \ \ height\ *=\ size.height;}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00107\ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00110\ Size<\ T\ >\ \&\ Size<\ T\ >::operator\ /=\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size\ )}
+\DoxyCodeLine{00111\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ width\ /=\ size.width;}
+\DoxyCodeLine{00113\ \ \ \ \ height\ /=\ size.height;}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00115\ \}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00118\ Size<\ T\ >\ \&\ Size<\ T\ >::operator\ *=\ (\ T\ val\ )}
+\DoxyCodeLine{00119\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ width\ *=\ val;}
+\DoxyCodeLine{00121\ \ \ \ \ height\ *=\ val;}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00123\ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00126\ Size<\ T\ >\ \&\ Size<\ T\ >::operator\ /=\ (\ T\ val\ )}
+\DoxyCodeLine{00127\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ width\ /=\ val;}
+\DoxyCodeLine{00129\ \ \ \ \ height\ /=\ val;}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00131\ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00134\ Size<\ T\ >\ Size<\ T\ >::operator\ +\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00135\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordflow}{return}\ Size<\ T\ >(\ width\ +\ size.width,\ height\ +\ size.height\ );}
+\DoxyCodeLine{00137\ \}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00140\ Size<\ T\ >\ Size<\ T\ >::operator\ -\/\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00141\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordflow}{return}\ Size<\ T\ >(\ width\ -\/\ size.width,\ height\ -\/\ size.height\ );}
+\DoxyCodeLine{00143\ \}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00146\ Size<\ T\ >\ Size<\ T\ >::operator\ *\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00147\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordflow}{return}\ Size<\ T\ >(\ width\ *\ size.width,\ height\ *\ size.height\ );}
+\DoxyCodeLine{00149\ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00152\ Size<\ T\ >\ Size<\ T\ >::operator\ /\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00153\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{return}\ Size<\ T\ >(\ width\ /\ size.width,\ height\ /\ size.height\ );}
+\DoxyCodeLine{00155\ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00158\ Size<\ T\ >\ Size<\ T\ >::operator\ *\ (\ T\ val\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00159\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordflow}{return}\ Size<\ T\ >(\ width\ *\ val,\ height\ *\ val\ );}
+\DoxyCodeLine{00161\ \}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00164\ Size<\ T\ >\ Size<\ T\ >::operator\ /\ (\ T\ val\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00165\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordflow}{return}\ Size<\ T\ >(\ width\ /\ val,\ height\ /\ val\ );}
+\DoxyCodeLine{00167\ \}}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00170\ \textcolor{keywordtype}{bool}\ Size<\ T\ >::operator\ ==\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\&\ size\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00171\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{return}(\ width\ ==\ size.width\ \&\&\ height\ ==\ size.height\ );}
+\DoxyCodeLine{00173\ \}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00176\ \textcolor{keywordtype}{bool}\ Size<\ T\ >::operator\ !=\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\&\ size\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00177\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordflow}{return}(\ width\ !=\ size.width\ ||\ height\ !=\ size.height\ );}
+\DoxyCodeLine{00179\ \}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00182\ std::string\ Size<\ T\ >::ToString()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00183\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordflow}{return}\ Cast<\ std::string\ >(\ width\ )\ +\ \textcolor{stringliteral}{"{},\ "{}}\ +\ Cast<\ std::string\ >(\ height\ );}
+\DoxyCodeLine{00185\ \}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00188\ T\ Size<\ T\ >::Units()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00189\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordflow}{return}\ width\ *\ height;}
+\DoxyCodeLine{00191\ \}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00194\ T\ Size<\ T\ >::LinearIndex(\ T\ h,\ T\ v\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00195\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordflow}{return}\ h\ +\ v\ *\ width;}
+\DoxyCodeLine{00197\ \}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00200\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >::LinearToV2}}(\ T\ index\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00201\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00202\ \ \ \ \ T\ x\ =\ index\ /\ width;}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}(\ x,\ index\ -\/\ (\ x\ *\ width\ )\ );}
+\DoxyCodeLine{00204\ \}}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00207\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >::AspectRatioHW}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00208\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{float})height\ /\ width;}
+\DoxyCodeLine{00210\ \}}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00213\ \textcolor{keywordtype}{float}\ Size<\ T\ >::AspectRatioWH()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00214\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{float})width\ /\ height;}
+\DoxyCodeLine{00216\ \}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00219\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_size}{unify::Size<\ T\ >::Center}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00220\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}(\ width\ /\ 2,\ height\ /\ 2\ );}
+\DoxyCodeLine{00222\ \}}
+
+\end{DoxyCode}

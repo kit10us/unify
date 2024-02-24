@@ -1,0 +1,60 @@
+\doxysection{unify\+::test\+::IAssert\+Handler Class Reference}
+\hypertarget{classunify_1_1test_1_1_i_assert_handler}{}\label{classunify_1_1test_1_1_i_assert_handler}\index{unify::test::IAssertHandler@{unify::test::IAssertHandler}}
+
+
+Interface for handling an assertion.  
+
+
+
+
+{\ttfamily \#include $<$IAssert\+Handler.\+h$>$}
+
+Inheritance diagram for unify\+::test\+::IAssert\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classunify_1_1test_1_1_i_assert_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1test_1_1_i_assert_handler_a8a4992534ff759990ab2403cb5066ea2}\label{classunify_1_1test_1_1_i_assert_handler_a8a4992534ff759990ab2403cb5066ea2} 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classunify_1_1test_1_1_i_assert_handler}{IAssert\+Handler}} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classunify_1_1test_1_1_i_assert_handler_a5eb0f61b136cf06b54b0ea2280e6792e}{Assert}} (IOutput\+Handler\+::ptr output, std\+::string message, bool test)=0
+\begin{DoxyCompactList}\small\item\em Called when we perform an assertion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for handling an assertion. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classunify_1_1test_1_1_i_assert_handler_a5eb0f61b136cf06b54b0ea2280e6792e}\label{classunify_1_1test_1_1_i_assert_handler_a5eb0f61b136cf06b54b0ea2280e6792e} 
+\index{unify::test::IAssertHandler@{unify::test::IAssertHandler}!Assert@{Assert}}
+\index{Assert@{Assert}!unify::test::IAssertHandler@{unify::test::IAssertHandler}}
+\doxysubsubsection{\texorpdfstring{Assert()}{Assert()}}
+{\footnotesize\ttfamily virtual void unify\+::test\+::\+IAssert\+Handler\+::\+Assert (\begin{DoxyParamCaption}\item[{IOutput\+Handler\+::ptr}]{output,  }\item[{std\+::string}]{message,  }\item[{bool}]{test }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Called when we perform an assertion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message for output.\\
+\hline
+{\em test} & There result of the assert test.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classunify_1_1test_1_1_default_assert_handler_a20753b12da7fa1ba9c2b560b329a76c2}{unify\+::test\+::\+Default\+Assert\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+unify/test/IAssert\+Handler.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,97 @@
+\doxysection{unify\+::Var\+String Class Reference}
+\hypertarget{classunify_1_1_var_string}{}\label{classunify_1_1_var_string}\index{unify::VarString@{unify::VarString}}
+Inheritance diagram for unify\+::Var\+String\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classunify_1_1_var_string}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_var_string_af6bcceee407c9201be96dc3e7612e07c}\label{classunify_1_1_var_string_af6bcceee407c9201be96dc3e7612e07c} 
+{\bfseries Var\+String} (std\+::string s\+String)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classunify_1_1_variant}{unify\+::\+Variant}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Variant} (const \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \&var)
+\item 
+{\bfseries Variant} (const int source)
+\item 
+{\bfseries Variant} (std\+::string source)
+\item 
+{\bfseries Variant} (const float source)
+\item 
+{\bfseries Variant} (void \texorpdfstring{$\ast$}{*}p\+Data, TYPE type, bool b\+Reference)
+\item 
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \& {\bfseries operator=} (const \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \&)
+\item 
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set} (std\+::string s\+Source)
+\item 
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set} (const void \texorpdfstring{$\ast$}{*}p\+Void, TYPE type)
+\item 
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set\+Reference} (void \texorpdfstring{$\ast$}{*}p\+Void, TYPE type)
+\item 
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set\+String} (std\+::string s\+Source)
+\item 
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set\+Int} (const int i\+Int)
+\item 
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set\+Bool} (const bool b\+Bool)
+\item 
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set\+Float} (const float f\+Float)
+\item 
+TYPE {\bfseries Type} () const
+\item 
+std\+::string {\bfseries Type\+Name} () const
+\item 
+bool {\bfseries Ge\+Bool} () const
+\item 
+int {\bfseries Get\+Int} () const
+\item 
+std\+::string {\bfseries Get\+String} () const
+\item 
+float {\bfseries Get\+Float} () const
+\item 
+void \texorpdfstring{$\ast$}{*} {\bfseries Get\+Address} () const
+\item 
+void {\bfseries Free} ()
+\item 
+void {\bfseries Set\+Constant} (bool b\+Constant)
+\item 
+bool {\bfseries Constant} () const
+\item 
+bool {\bfseries Reference} () const
+\item 
+const bool {\bfseries Empty} () const
+\item 
+{\bfseries operator std\+::string} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classunify_1_1_variant}{unify\+::\+Variant}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}\label{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf} 
+enum {\bfseries TYPE} \{ \newline
+{\bfseries Type\+\_\+\+Undefined}
+, {\bfseries Type\+\_\+\+Bool}
+, {\bfseries Type\+\_\+\+Integer}
+, {\bfseries Type\+\_\+\+String}
+, \newline
+{\bfseries Type\+\_\+\+Float}
+, {\bfseries Type\+\_\+\+Byte\+Data}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classunify_1_1_variant}{unify\+::\+Variant}}}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string {\bfseries Type\+Name} (const TYPE type)
+\item 
+static const TYPE {\bfseries Type\+Enum} (std\+::string s\+Type)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unify/Variant.\+h\item 
+unify/Variant.\+cpp\end{DoxyCompactItemize}

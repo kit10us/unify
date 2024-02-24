@@ -1,0 +1,130 @@
+\doxysection{unify\+::Variant Class Reference}
+\hypertarget{classunify_1_1_variant}{}\label{classunify_1_1_variant}\index{unify::Variant@{unify::Variant}}
+
+
+A variant allowing simple storage and conversion amongst POD types.  
+
+
+
+
+{\ttfamily \#include $<$Variant.\+h$>$}
+
+Inheritance diagram for unify\+::Variant\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.618497cm]{classunify_1_1_variant}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}\label{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf} 
+enum {\bfseries TYPE} \{ \newline
+{\bfseries Type\+\_\+\+Undefined}
+, {\bfseries Type\+\_\+\+Bool}
+, {\bfseries Type\+\_\+\+Integer}
+, {\bfseries Type\+\_\+\+String}
+, \newline
+{\bfseries Type\+\_\+\+Float}
+, {\bfseries Type\+\_\+\+Byte\+Data}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_variant_ab0ae13117d959282f5a5b2e50a87da27}\label{classunify_1_1_variant_ab0ae13117d959282f5a5b2e50a87da27} 
+{\bfseries Variant} (const \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \&var)
+\item 
+\Hypertarget{classunify_1_1_variant_add8b684ed34d56da72ba74eabd2cfe02}\label{classunify_1_1_variant_add8b684ed34d56da72ba74eabd2cfe02} 
+{\bfseries Variant} (const int source)
+\item 
+\Hypertarget{classunify_1_1_variant_af16e5b8d093fcef88b777a3a43adb7a0}\label{classunify_1_1_variant_af16e5b8d093fcef88b777a3a43adb7a0} 
+{\bfseries Variant} (std\+::string source)
+\item 
+\Hypertarget{classunify_1_1_variant_acaf0f2db0f70447e3ec5a0c181599573}\label{classunify_1_1_variant_acaf0f2db0f70447e3ec5a0c181599573} 
+{\bfseries Variant} (const float source)
+\item 
+\Hypertarget{classunify_1_1_variant_a0b458443001f14258b3de2d13a9a19ff}\label{classunify_1_1_variant_a0b458443001f14258b3de2d13a9a19ff} 
+{\bfseries Variant} (void \texorpdfstring{$\ast$}{*}p\+Data, TYPE type, bool b\+Reference)
+\item 
+\Hypertarget{classunify_1_1_variant_aeaed361eec1013d08184e58b2885cb9f}\label{classunify_1_1_variant_aeaed361eec1013d08184e58b2885cb9f} 
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \& {\bfseries operator=} (const \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \&)
+\item 
+\Hypertarget{classunify_1_1_variant_a47eae51acbea5780528f85d4a19826b4}\label{classunify_1_1_variant_a47eae51acbea5780528f85d4a19826b4} 
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set} (std\+::string s\+Source)
+\item 
+\Hypertarget{classunify_1_1_variant_a352f78c8d83ad57d342cdb61e1b6d094}\label{classunify_1_1_variant_a352f78c8d83ad57d342cdb61e1b6d094} 
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set} (const void \texorpdfstring{$\ast$}{*}p\+Void, TYPE type)
+\item 
+\Hypertarget{classunify_1_1_variant_a72726da9aaba2683be16b2b69b2dd7cc}\label{classunify_1_1_variant_a72726da9aaba2683be16b2b69b2dd7cc} 
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set\+Reference} (void \texorpdfstring{$\ast$}{*}p\+Void, TYPE type)
+\item 
+\Hypertarget{classunify_1_1_variant_af9ecd7e28ea7e371c750587292b7e2ee}\label{classunify_1_1_variant_af9ecd7e28ea7e371c750587292b7e2ee} 
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set\+String} (std\+::string s\+Source)
+\item 
+\Hypertarget{classunify_1_1_variant_af53c366bacb035721449fdf1ca2fdc6b}\label{classunify_1_1_variant_af53c366bacb035721449fdf1ca2fdc6b} 
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set\+Int} (const int i\+Int)
+\item 
+\Hypertarget{classunify_1_1_variant_af5e4b06b6b0ce90fab9c5c5cefa54dfb}\label{classunify_1_1_variant_af5e4b06b6b0ce90fab9c5c5cefa54dfb} 
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set\+Bool} (const bool b\+Bool)
+\item 
+\Hypertarget{classunify_1_1_variant_aa13ee8de950868723a2cd60608eaad7f}\label{classunify_1_1_variant_aa13ee8de950868723a2cd60608eaad7f} 
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set\+Float} (const float f\+Float)
+\item 
+\Hypertarget{classunify_1_1_variant_a0cc2ed671fd43b53b0273f6e97ad5c61}\label{classunify_1_1_variant_a0cc2ed671fd43b53b0273f6e97ad5c61} 
+TYPE {\bfseries Type} () const
+\item 
+\Hypertarget{classunify_1_1_variant_a8293fc459e2baedf36d88d83d2427167}\label{classunify_1_1_variant_a8293fc459e2baedf36d88d83d2427167} 
+std\+::string {\bfseries Type\+Name} () const
+\item 
+\Hypertarget{classunify_1_1_variant_a54ebf4a965738cd27b609c7ff4dd3c28}\label{classunify_1_1_variant_a54ebf4a965738cd27b609c7ff4dd3c28} 
+bool {\bfseries Ge\+Bool} () const
+\item 
+\Hypertarget{classunify_1_1_variant_a282413a741656fe33a434e10405870da}\label{classunify_1_1_variant_a282413a741656fe33a434e10405870da} 
+int {\bfseries Get\+Int} () const
+\item 
+\Hypertarget{classunify_1_1_variant_a79defbc8ef9b34b09f3bf2b3f6eb1fbb}\label{classunify_1_1_variant_a79defbc8ef9b34b09f3bf2b3f6eb1fbb} 
+std\+::string {\bfseries Get\+String} () const
+\item 
+\Hypertarget{classunify_1_1_variant_acbdeeb17c2a500bb39e5e5860bcdd9c1}\label{classunify_1_1_variant_acbdeeb17c2a500bb39e5e5860bcdd9c1} 
+float {\bfseries Get\+Float} () const
+\item 
+\Hypertarget{classunify_1_1_variant_a9e72cf7c06d683b210c8cfb9f402d498}\label{classunify_1_1_variant_a9e72cf7c06d683b210c8cfb9f402d498} 
+void \texorpdfstring{$\ast$}{*} {\bfseries Get\+Address} () const
+\item 
+\Hypertarget{classunify_1_1_variant_a6761d8a09b5fab64983dc969dece27af}\label{classunify_1_1_variant_a6761d8a09b5fab64983dc969dece27af} 
+void {\bfseries Free} ()
+\item 
+\Hypertarget{classunify_1_1_variant_a6fd3c494cdaabd6769299d1572598290}\label{classunify_1_1_variant_a6fd3c494cdaabd6769299d1572598290} 
+void {\bfseries Set\+Constant} (bool b\+Constant)
+\item 
+\Hypertarget{classunify_1_1_variant_acda5cc7f340956d3c875bc033f05f74b}\label{classunify_1_1_variant_acda5cc7f340956d3c875bc033f05f74b} 
+bool {\bfseries Constant} () const
+\item 
+\Hypertarget{classunify_1_1_variant_ab331a079d37fc27ab8d7f01baa87d528}\label{classunify_1_1_variant_ab331a079d37fc27ab8d7f01baa87d528} 
+bool {\bfseries Reference} () const
+\item 
+\Hypertarget{classunify_1_1_variant_aa07b97e01b9e0c180fd7ead6db4a65a8}\label{classunify_1_1_variant_aa07b97e01b9e0c180fd7ead6db4a65a8} 
+const bool {\bfseries Empty} () const
+\item 
+\Hypertarget{classunify_1_1_variant_a6048f3091b11421e6dc48a66bcdcf7b1}\label{classunify_1_1_variant_a6048f3091b11421e6dc48a66bcdcf7b1} 
+{\bfseries operator std\+::string} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_variant_a2f829fb98021d21cbe0ae945b29b61c5}\label{classunify_1_1_variant_a2f829fb98021d21cbe0ae945b29b61c5} 
+static const std\+::string {\bfseries Type\+Name} (const TYPE type)
+\item 
+\Hypertarget{classunify_1_1_variant_acb8f15afe729e71731322de236d2c5b0}\label{classunify_1_1_variant_acb8f15afe729e71731322de236d2c5b0} 
+static const TYPE {\bfseries Type\+Enum} (std\+::string s\+Type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A variant allowing simple storage and conversion amongst POD types. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unify/Variant.\+h\item 
+unify/Variant.\+cpp\end{DoxyCompactItemize}

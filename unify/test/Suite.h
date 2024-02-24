@@ -32,6 +32,9 @@
 
 namespace unify
 {
+	/// <summary>
+	/// Simple unit test suite.
+	/// </summary>
 	namespace test
 	{
 		/// <summary>

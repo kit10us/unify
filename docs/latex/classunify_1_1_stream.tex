@@ -1,0 +1,86 @@
+\doxysection{unify\+::Stream Class Reference}
+\hypertarget{classunify_1_1_stream}{}\label{classunify_1_1_stream}\index{unify::Stream@{unify::Stream}}
+
+
+Allows streaming (serializing) of data.  
+
+
+
+
+{\ttfamily \#include $<$Stream.\+h$>$}
+
+Inheritance diagram for unify\+::Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classunify_1_1_stream}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_stream_aeefeff1dd2a436a0e2273469ab1dfd39}\label{classunify_1_1_stream_aeefeff1dd2a436a0e2273469ab1dfd39} 
+virtual bool {\bfseries Open} (\mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417}{Stream\+Access\+Type}} access, void \texorpdfstring{$\ast$}{*}p\+Data)
+\item 
+\Hypertarget{classunify_1_1_stream_a2115306c7cdd49c20a8d5c0af5657859}\label{classunify_1_1_stream_a2115306c7cdd49c20a8d5c0af5657859} 
+virtual void {\bfseries Close} ()
+\item 
+\Hypertarget{classunify_1_1_stream_a944171b695e86dc4525e7246d624fde4}\label{classunify_1_1_stream_a944171b695e86dc4525e7246d624fde4} 
+virtual unsigned int {\bfseries Read} (void \texorpdfstring{$\ast$}{*}p\+Dest, unsigned int u\+Length)
+\item 
+\Hypertarget{classunify_1_1_stream_a930237afb2514d5a8854c760d7a65a69}\label{classunify_1_1_stream_a930237afb2514d5a8854c760d7a65a69} 
+virtual unsigned int {\bfseries Read\+Pack} (void \texorpdfstring{$\ast$}{*}p\+Dest, unsigned int u\+Length)
+\item 
+\Hypertarget{classunify_1_1_stream_ae9e8b6d7ef8908f685b1fed39f44cbe8}\label{classunify_1_1_stream_ae9e8b6d7ef8908f685b1fed39f44cbe8} 
+virtual void {\bfseries Write} (const void \texorpdfstring{$\ast$}{*}p\+Src, unsigned int u\+Length)
+\item 
+\Hypertarget{classunify_1_1_stream_a7d651722c07dbdeac0858de5d6cbab3d}\label{classunify_1_1_stream_a7d651722c07dbdeac0858de5d6cbab3d} 
+virtual void {\bfseries Write\+Pack} (const void \texorpdfstring{$\ast$}{*}p\+Src)
+\item 
+\Hypertarget{classunify_1_1_stream_aa37da7bc58e44e2800bab65a6e0091dd}\label{classunify_1_1_stream_aa37da7bc58e44e2800bab65a6e0091dd} 
+virtual bool {\bfseries Seek} (\mbox{\hyperlink{namespaceunify_a384b8275876d58563e0ed7a141823264}{Stream\+Seek\+Type}} seek, int i\+Offset=0)
+\item 
+\Hypertarget{classunify_1_1_stream_a9d53acecd5781cdafbeeec333b0e0a27}\label{classunify_1_1_stream_a9d53acecd5781cdafbeeec333b0e0a27} 
+void {\bfseries Set\+Flags} (unsigned int u\+Flags)
+\item 
+\Hypertarget{classunify_1_1_stream_ad66d12715723f199bb2932a5ec0a48ba}\label{classunify_1_1_stream_ad66d12715723f199bb2932a5ec0a48ba} 
+unsigned int {\bfseries Get\+Flags} ()
+\item 
+\Hypertarget{classunify_1_1_stream_af58c2c2eb95ef2ace75a6da921b7b395}\label{classunify_1_1_stream_af58c2c2eb95ef2ace75a6da921b7b395} 
+bool {\bfseries End\+Of\+Stream} ()
+\item 
+\Hypertarget{classunify_1_1_stream_a2e980238146322db1db1aef1c799b4c1}\label{classunify_1_1_stream_a2e980238146322db1db1aef1c799b4c1} 
+unsigned int {\bfseries Bytes\+Waiting} ()
+\item 
+\Hypertarget{classunify_1_1_stream_a93619adf94bbeb4c4462b45b08af9f96}\label{classunify_1_1_stream_a93619adf94bbeb4c4462b45b08af9f96} 
+bool {\bfseries Is\+Open} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_stream_ae5629707794c7bd214188cd21413221a}\label{classunify_1_1_stream_ae5629707794c7bd214188cd21413221a} 
+FILE \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+p\+Stream}
+\item 
+\Hypertarget{classunify_1_1_stream_a813b3ba44975ddb8d5e747c8ea874693}\label{classunify_1_1_stream_a813b3ba44975ddb8d5e747c8ea874693} 
+\mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417}{Stream\+Access\+Type}} {\bfseries m\+\_\+\+Access}
+\item 
+\Hypertarget{classunify_1_1_stream_a3d04dd21cb666e95a8c0a7443c7a88cb}\label{classunify_1_1_stream_a3d04dd21cb666e95a8c0a7443c7a88cb} 
+unsigned int {\bfseries m\+\_\+u\+Flags}
+\item 
+\Hypertarget{classunify_1_1_stream_aafc3360733a9a1b784e249f081033696}\label{classunify_1_1_stream_aafc3360733a9a1b784e249f081033696} 
+bool {\bfseries m\+\_\+b\+End\+Of\+Stream}
+\item 
+\Hypertarget{classunify_1_1_stream_abac4a478bbaa36817cc32b9ed90beb5d}\label{classunify_1_1_stream_abac4a478bbaa36817cc32b9ed90beb5d} 
+unsigned int {\bfseries m\+\_\+u\+Bytes\+Waiting}
+\item 
+\Hypertarget{classunify_1_1_stream_a2223a7a358f03467c608b931e8e17a8a}\label{classunify_1_1_stream_a2223a7a358f03467c608b931e8e17a8a} 
+bool {\bfseries m\+\_\+is\+Open}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Allows streaming (serializing) of data. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unify/Stream.\+h\item 
+unify/Stream.\+cpp\end{DoxyCompactItemize}

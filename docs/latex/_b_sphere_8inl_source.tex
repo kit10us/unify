@@ -1,0 +1,121 @@
+\doxysection{BSphere.\+inl}
+\hypertarget{_b_sphere_8inl_source}{}\label{_b_sphere_8inl_source}\index{unify/BSphere.inl@{unify/BSphere.inl}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00024\ BSphere<\ T\ >::BSphere()}
+\DoxyCodeLine{00025\ \ \ \ \ :\ BSphere\{\ \{\ \{\},\ \{\},\ \{\}\ \}\ \}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00030\ BSphere<\ T\ >::BSphere(\ \textcolor{keyword}{const}\ V3<\ T\ >\ \&\ center\ )}
+\DoxyCodeLine{00031\ \ \ \ \ :\ BSphere\{\ center,\ \{\}\ \}}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00036\ BSphere<\ T\ >::BSphere(\ \textcolor{keyword}{const}\ V3<\ T\ >\ \&\ center,\ \textcolor{keyword}{const}\ T\ \&\ radius\ )}
+\DoxyCodeLine{00037\ \ \ \ \ :\ center\{\ center\ \}}
+\DoxyCodeLine{00038\ \ \ \ \ ,\ radius\{\ radius\ \}}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00043\ BSphere<\ T\ >\ \&\ BSphere<\ T\ >::operator+=(\ \textcolor{keyword}{const}\ BSphere<\ T\ >\ \&\ sphere\ )}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ Handle\ empty\ BSpheres...}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{if}(\ sphere.radius\ <\ std::numeric\_limits<\ T\ >::epsilon()\ )}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{if}(\ radius\ <\ std::numeric\_limits<\ T\ >::epsilon()\ )}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ radius\ =\ sphere.radius;}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ Create\ extents\ and\ add\ them...}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ T\ >}}\ a\{\ GetCenter()\ -\/\ sphere.GetCenter()\ \};}
+\DoxyCodeLine{00059\ \ \ \ \ a.Normalize();}
+\DoxyCodeLine{00060\ \ \ \ \ a\ =\ center\ +=\ a\ *\ radius;}
+\DoxyCodeLine{00061\ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ T\ >}}\ b\{\ sphere.center\ -\/\ center\ \};}
+\DoxyCodeLine{00063\ \ \ \ \ b.Normalize();}
+\DoxyCodeLine{00064\ \ \ \ \ b\ =\ sphere.center\ +=\ b\ *\ sphere.radius;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ (\ *this\ )\ +=\ b;}
+\DoxyCodeLine{00067\ \ \ \ \ (\ *this\ )\ +=\ a;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00070\ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00073\ BSphere<\ T\ >\ \&\ BSphere<\ T\ >::operator+=(\ V3<\ T\ >\ point\ )}
+\DoxyCodeLine{00074\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ T\ distanceFromCenter\ =\ center.DistanceTo(\ point\ );}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{if}(\ distanceFromCenter\ >\ radius\ )}
+\DoxyCodeLine{00077\ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ radius\ =\ distanceFromCenter;}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00081\ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00084\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >::GetCenter}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00085\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{return}\ center;}
+\DoxyCodeLine{00087\ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00090\ T\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >::GetRadius}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00091\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordflow}{return}\ radius;}
+\DoxyCodeLine{00093\ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00096\ T\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >::GetDiameter}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00097\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordflow}{return}\ radius\ *\ 3.14159265f;}
+\DoxyCodeLine{00099\ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00102\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >::Contains}}(\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ point\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00103\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00104\ \ \ \ \ T\ distanceFromCenter\ =\ center.DistanceTo(\ point\ );}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordflow}{return}\ distanceFromCenter\ <=\ radius;}
+\DoxyCodeLine{00106\ \}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00109\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >::Collides}}(\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >}}\ sphere\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00110\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{float}\ d\ =\ center.DistanceTo(\ sphere.center\ );}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{float}\ rt\ =\ radius\ +\ sphere.radius;}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{bool}\ collides\ =\ d\ <\ rt;}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{return}\ collides;}
+\DoxyCodeLine{00115\ \}}
+
+\end{DoxyCode}

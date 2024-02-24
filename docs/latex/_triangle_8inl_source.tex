@@ -1,0 +1,59 @@
+\doxysection{Triangle.\+inl}
+\hypertarget{_triangle_8inl_source}{}\label{_triangle_8inl_source}\index{unify/Triangle.inl@{unify/Triangle.inl}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00024\ Triangle<\ T\ >::Triangle(\ \textcolor{keyword}{const}\ T\ \&\ v1,\ \textcolor{keyword}{const}\ T\ \&\ v2,\ \textcolor{keyword}{const}\ T\ \&\ v3\ )}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ v[\ 0\ ]\ =\ v1;}
+\DoxyCodeLine{00027\ \ \ \ \ v[\ 1\ ]\ =\ v2;}
+\DoxyCodeLine{00028\ \ \ \ \ v[\ 2\ ]\ =\ v3;}
+\DoxyCodeLine{00029\ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00032\ Triangle<\ T\ >\ \&\ Triangle<\ T\ >::operator\ =\ (\ \textcolor{keyword}{const}\ Triangle\ \&\ triangle\ )}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ v[\ 0\ ]\ =\ triangle.v[\ 0\ ];}
+\DoxyCodeLine{00035\ \ \ \ \ v[\ 1\ ]\ =\ triangle.v[\ 1\ ];}
+\DoxyCodeLine{00036\ \ \ \ \ v[\ 2\ ]\ =\ triangle.v[\ 2\ ];}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00041\ Triangle<\ T\ >\ \&\ Triangle<\ T\ >::operator+=(\ T\ value\ )}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ std::for\_each(\ \&v[\ 0\ ],\ \&v[\ 2\ ],\ std::bind2nd(\ std::plus<\ T\ >(),\ value\ )\ );}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00045\ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00048\ Triangle<\ T\ >\ Triangle<\ T\ >::operator+(\ T\ value\ )}
+\DoxyCodeLine{00049\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ Triangle\ newTriangle(\ *\textcolor{keyword}{this}\ );}
+\DoxyCodeLine{00051\ \ \ \ \ newTriangle\ +=\ value;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{return}\ newTriangle;}
+\DoxyCodeLine{00053\ \}}
+
+\end{DoxyCode}

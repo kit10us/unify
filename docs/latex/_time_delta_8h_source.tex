@@ -1,0 +1,96 @@
+\doxysection{Time\+Delta.\+h}
+\hypertarget{_time_delta_8h_source}{}\label{_time_delta_8h_source}\index{unify/TimeDelta.h@{unify/TimeDelta.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <unify/Cast.h>}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ TimeDeltaInMicros(\ \textcolor{keywordtype}{float}\ micros\ );}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ TimeDeltaInMS(\ \textcolor{keywordtype}{float}\ ms\ );}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ TimeDeltaInSeconds(\ \textcolor{keywordtype}{float}\ seconds\ );}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ TimeDeltaInMinutes(\ \textcolor{keywordtype}{float}\ seconds\ );}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ TimeDeltaInHours(\ \textcolor{keywordtype}{float}\ hours\ );}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ TimeDeltaInWeeks(\ \textcolor{keywordtype}{float}\ weeks\ );}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ TimeDeltaInDays(\ \textcolor{keywordtype}{float}\ days\ );}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ TimeDeltaInYears(\ \textcolor{keywordtype}{float}\ years\ );}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}(\textcolor{keywordtype}{float}\ ms);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ GetMicros()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ GetMS()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ GetSeconds()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ GetMinutes()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ GetHours()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ GetWeeks()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ GetDays()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ GetYears()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ operator+(\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ delta\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ operator-\/(\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ delta\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ operator/(\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ delta\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ \&\ operator+=(\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ delta\ );}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ \&\ operator-\/=(\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ delta\ );}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ operator\ *\ (\ \textcolor{keywordtype}{float}\ times\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ operator\ /\ (\ \textcolor{keywordtype}{float}\ times\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ \&\ operator\ *=\ (\ \textcolor{keywordtype}{float}\ times\ );}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ \&\ operator\ /=\ (\ \textcolor{keywordtype}{float}\ times\ );}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ ==\ (\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ delta\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ !=\ (\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ delta\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ >\ (\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ delta\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ <\ (\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ delta\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ >=\ (\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ delta\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ <=\ (\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ delta\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ m\_ms;}
+\DoxyCodeLine{00075\ \ \ \ \ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ TimeDeltaInMicros(\textcolor{keywordtype}{float}\ micros);}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ TimeDeltaInMS(\ \textcolor{keywordtype}{float}\ ms\ );}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ TimeDeltaInSeconds(\ \textcolor{keywordtype}{float}\ seconds\ );}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ TimeDeltaInMinutes(\ \textcolor{keywordtype}{float}\ minutes\ );}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ TimeDeltaInHours(\ \textcolor{keywordtype}{float}\ hours\ );}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ TimeDeltaInWeeks(\ \textcolor{keywordtype}{float}\ weeks\ );}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ TimeDeltaInDays(\ \textcolor{keywordtype}{float}\ days\ );}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ TimeDeltaInYears(\ \textcolor{keywordtype}{float}\ years\ );}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ TTo,\ \textcolor{keyword}{typename}\ TFrom\ >\ TTo\ Cast(\textcolor{keyword}{const}\ TFrom\ in);}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ unify::Cast(\textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ in);}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{template}<>\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ Cast(\textcolor{keyword}{const}\ std::string\ text);}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{template}<>\ \mbox{\hyperlink{classunify_1_1_time_delta}{TimeDelta}}\ Cast(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ text);}
+\DoxyCodeLine{00090\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,145 @@
+\doxysection{Color.\+h}
+\hypertarget{_color_8h_source}{}\label{_color_8h_source}\index{unify/Color.h@{unify/Color.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{class\ }ColorUnit;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fb}{Order}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ RGBA,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ ARGB,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ BGRA,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ ABGR,}
+\DoxyCodeLine{00040\ \ \ \ \ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_color}{Color}}}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ Component;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorRGBA(\ Component\ r,\ Component\ g,\ Component\ b,\ Component\ a\ );}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorRGBA(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ rgba\ );}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorARGB(\ Component\ a,\ Component\ r,\ Component\ g,\ Component\ b\ );}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorARGB(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ argb\ );}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorRGB(\ Component\ r,\ Component\ g,\ Component\ b\ );}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorWhite(\ Component\ a\ );}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorRed(\ Component\ r,\ Component\ a\ );}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorGreen(\ Component\ g,\ Component\ a\ );}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorBlue(\ Component\ c,\ Component\ a\ );}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorYellow(\ Component\ y,\ Component\ a\ );}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorCyan(\ Component\ c,\ Component\ a\ );}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorMagenta(\ Component\ m,\ Component\ a\ );}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorGrey(\ Component\ grey,\ Component\ a\ );}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorBlack(\ Component\ a\ );}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorZero();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ c;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Component\ r;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Component\ g;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Component\ b;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Component\ a;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ component;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ linear[4];}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}(\ Component\ r,\ Component\ g,\ Component\ b,\ Component\ a\ );}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ color\ );}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}(\ std::string\ text,\ \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fb}{Order}}\ order\ =\ RGBA,\ Component\ defaultAlpha\ =\ 255\ );}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ \&\ colorUnit\ );}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ CONVERSIONS}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ \textcolor{keywordtype}{unsigned}\ int()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Overloaded\ operators}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Note:\ We\ use\ a\ larger\ type\ to\ provide\ clamping.\ This\ might\ affect\ performance.}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ operator\ +=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ );}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ operator\ -\/=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ );}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ operator\ *=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ );}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ operator\ /=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ );}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ operator\ *=\ (\ \textcolor{keywordtype}{float}\ val\ );}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ operator\ /=\ (\ \textcolor{keywordtype}{float}\ val\ );}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ binary\ operators}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ operator\ +\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ operator\ -\/\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ operator\ *\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ operator\ /\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ operator\ *\ (\ \textcolor{keywordtype}{float}\ val\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ operator\ /\ (\ \textcolor{keywordtype}{float}\ val\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ ==\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ !=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a29f8f964e5782416c4abee28dbf594b6}{SetRGBA}}(\ Component\ r,\ Component\ g,\ Component\ b,\ Component\ a\ );}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ Component\ \mbox{\hyperlink{classunify_1_1_color_a3afff9e9a4a56289a229311050ebde09}{GetRed}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ Component\ \mbox{\hyperlink{classunify_1_1_color_a3e8cc7a8d7dbd1f48c51393d37d409ed}{GetGreen}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ Component\ \mbox{\hyperlink{classunify_1_1_color_abc86295756a720d4917a87c165c6c059}{GetBlue}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ Component\ \mbox{\hyperlink{classunify_1_1_color_a4353eba6f8b8deb28a4fffa76c9954db}{GetAlpha}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a37569aa8abb06eb2eef2aba698d7d4bc}{SetRed}}(\ Component\ r\ );}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a4884e9566d50fe926fa0e58d19fc47b5}{SetGreen}}(\ Component\ g\ );}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a19c932020de62ccd1f6e9d205f45b271}{SetBlue}}(\ Component\ b\ );}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a0c336f199cf5c60b60b30022d54c5d77}{SetAlpha}}(\ Component\ a\ );}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a1df3727a270fb4dcc22749a3ee7febc3}{Interpulate}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ colorA,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ colorB,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ ratio\ );}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classunify_1_1_color_ab6ba4294480ac7cfdfc22620b7d8a484}{ToString}}(\ \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fb}{Order}}\ order\ =\ RGBA\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00160\ \ \ \ \ \};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorRGBA(\ Color::Component\ r,\ Color::Component\ g,\ Color::Component\ b,\ Color::Component\ a\ );}
+\DoxyCodeLine{00163\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorRGBA(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ rgba\ );}
+\DoxyCodeLine{00164\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorARGB(\ Color::Component\ a,\ Color::Component\ r,\ Color::Component\ g,\ Color::Component\ b\ );}
+\DoxyCodeLine{00165\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorARGB(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ argb\ );}
+\DoxyCodeLine{00166\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorRGB(\ Color::Component\ r,\ Color::Component\ g,\ Color::Component\ b\ );}
+\DoxyCodeLine{00167\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorWhite(\ Color::Component\ a\ =\ 255\ );}
+\DoxyCodeLine{00168\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorRed(\ Color::Component\ r\ =\ 255,\ Color::Component\ a\ =\ 255\ );}
+\DoxyCodeLine{00169\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorGreen(\ Color::Component\ g\ =\ 255,\ Color::Component\ a\ =\ 255\ );}
+\DoxyCodeLine{00170\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorBlue(\ Color::Component\ c\ =\ 255,\ Color::Component\ a\ =\ 255\ );}
+\DoxyCodeLine{00171\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorYellow(\ Color::Component\ y\ =\ 255,\ Color::Component\ a\ =\ 255\ );}
+\DoxyCodeLine{00172\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorCyan(\ Color::Component\ c\ =\ 255,\ Color::Component\ a\ =\ 255\ );}
+\DoxyCodeLine{00173\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorMagenta(\ Color::Component\ m\ =\ 255,\ Color::Component\ a\ =\ 255\ );}
+\DoxyCodeLine{00174\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorGrey(\ Color::Component\ grey,\ Color::Component\ a\ =\ 255\ );}
+\DoxyCodeLine{00175\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorBlack(\ Color::Component\ a\ =\ 255\ );}
+\DoxyCodeLine{00176\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorZero();\ }
+\DoxyCodeLine{00177\ \}}
+
+\end{DoxyCode}

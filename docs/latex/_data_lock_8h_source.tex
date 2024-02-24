@@ -1,0 +1,278 @@
+\doxysection{Data\+Lock.\+h}
+\hypertarget{_data_lock_8h_source}{}\label{_data_lock_8h_source}\index{unify/DataLock.h@{unify/DataLock.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Cast.h>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <unify/Exception.h>}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structunify_1_1_data_lock_access}{DataLockAccess}}}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ TYPE}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ None,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ Readonly,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ Writeonly,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ ReadWrite}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structunify_1_1_data_lock_access_aa078192be1505665fa71ea75b704939a}{ReadAccess}}(\ TYPE\ access\ );}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structunify_1_1_data_lock_access_ab8bd196b2a1c9b86b6f2f92f01a93769}{WriteAccess}}(\ TYPE\ access\ );}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structunify_1_1_data_lock_access_ae8ccdf02074422b5b94c1702b9303f5a}{Compatible}}(\ TYPE\ a,\ TYPE\ b\ );}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ TYPE\ FromString(\ std::string\ access\ );}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ ToString(\ TYPE\ access\ );}
+\DoxyCodeLine{00057\ \ \ \ \ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ Cast(\ unify::DataLockAccess::TYPE\ type\ );}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{template}<>\ unify::DataLockAccess::TYPE\ Cast(\ std::string\ type\ );}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_data_lock}{DataLock}}}
+\DoxyCodeLine{00066\ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_data_lock}{DataLock}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_data_lock}{DataLock}}(\ \textcolor{keywordtype}{void}\ *\ data,\ \textcolor{keywordtype}{size\_t}\ stride,\ \textcolor{keywordtype}{size\_t}\ count,\ DataLockAccess::TYPE\ type,\ \textcolor{keywordtype}{size\_t}\ slot\ );}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_data_lock}{DataLock}}(\ \textcolor{keywordtype}{void}\ *\ data,\ \textcolor{keywordtype}{size\_t}\ sizeInBytes,\ DataLockAccess::TYPE\ type,\ \textcolor{keywordtype}{size\_t}\ slot\ );}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classunify_1_1_data_lock}{\string~DataLock}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_data_lock_af54acb0464a8a43ea95bb79158b243a5}{SetLock}}(\ \textcolor{keywordtype}{void}\ *\ data,\ \textcolor{keywordtype}{size\_t}\ stride,\ \textcolor{keywordtype}{size\_t}\ count,\ DataLockAccess::TYPE\ type,\ \textcolor{keywordtype}{size\_t}\ slot\ );}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_data_lock_af54acb0464a8a43ea95bb79158b243a5}{SetLock}}(\ \textcolor{keywordtype}{void}\ *\ data,\ \textcolor{keywordtype}{size\_t}\ sizeInBytes,\ DataLockAccess::TYPE\ type,\ \textcolor{keywordtype}{size\_t}\ slot\ );}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ DataLockAccess::TYPE\ \mbox{\hyperlink{classunify_1_1_data_lock_a076c682239384abc2aa8d78df26d3302}{GetType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ T\ *\ \mbox{\hyperlink{classunify_1_1_data_lock_a213ad16ff42907f59adbbe1e5530d1b7}{GetData}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ T\ *\ \mbox{\hyperlink{classunify_1_1_data_lock_a643951687b88e13b601ed4c5ca316281}{GetDataReadOnly}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ T\ *\ \mbox{\hyperlink{classunify_1_1_data_lock_a908ecc109b6224de3dbb0f0b83f4b7f3}{GetItem}}(\ \textcolor{keywordtype}{size\_t}\ index\ );}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ T\ *\ \mbox{\hyperlink{classunify_1_1_data_lock_a5d749544aeffe7e49551639a6ed0c7a5}{GetItemReadonly}}(\ \textcolor{keywordtype}{size\_t}\ index\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ Count()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ Stride()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ GetSizeInBytes()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ Slot()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Invalidate();}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ CopyBytesFrom(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ source,\ \textcolor{keywordtype}{size\_t}\ offset,\ \textcolor{keywordtype}{size\_t}\ byteCount\ );}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ CopyItemFrom(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ source,\ \textcolor{keywordtype}{size\_t}\ indexTo\ );\ }
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ CopyItemFromTo(\ \textcolor{keywordtype}{size\_t}\ indexFrom,\ \textcolor{keywordtype}{size\_t}\ indexTo\ );}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T,\ \textcolor{keywordtype}{size\_t}\ T\_OffsetInBytes\ =\ 0\ >}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{iterator}}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_data_lock}{DataLock}};}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{iterator}}()}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ m\_data(\ 0\ )}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ m\_me(\ 0\ )}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{iterator}}(\ \mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{iterator<\ T\ >}}\ \&\ from\ )}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ m\_data(\ from.m\_data\ )}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ m\_stride(\ from.m\_stride\ )}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ m\_count(\ from.m\_count\ )}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ m\_sizeInBytes(\ from.m\_sizeInBytes\ )}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ m\_readonly(\ from.m\_readonly\ )}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ m\_index(\ from.m\_index\ )}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ m\_me(\ from.m\_me\ )}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ T\ \&\ operator*()}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *m\_me;}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator==(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{iterator}}\ \&\ itr\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00157\ \textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_data\ ==\ itr.m\_data\ \&\&\ m\_index\ ==\ itr.m\_index;}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator!=(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{iterator}}\ \&\ itr\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00162\ \textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !\ (\ operator==(itr)\ );}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{iterator<\ T\ >}}\ \&\ operator++()}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ assert(\ m\_index\ +\ 1\ !=\ 0\ );\ \textcolor{comment}{//\ detect\ rollover.}}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_index++;}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MakeMe();}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{iterator<\ T\ >}}\ operator++(\ \textcolor{keywordtype}{int}\ )}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{iterator<\ T\ >}}\ post(\ \textcolor{keyword}{this}\ );}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ assert(\ m\_index\ +\ 1\ !=\ 0\ );\ \textcolor{comment}{//\ detect\ rollover.}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_index++;}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MakeMe();}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ post;}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{iterator<\ T\ >}}\ \&\ operator-\/-\/()}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ assert(\ m\_index\ !=\ 0\ );\ \textcolor{comment}{//\ detect\ rollover.}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_index-\/-\/;}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MakeMe();}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{iterator<\ T\ >}}\ operator-\/-\/(\ \textcolor{keywordtype}{int}\ )}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{DataLock::iterator<\ T\ >}}\ post(\ \textcolor{keyword}{this}\ );}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ assert(\ m\_index\ \ !=\ 0\ );\ \textcolor{comment}{//\ detect\ rollover.}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_index-\/-\/;}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MakeMe();}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ post;}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ MakeMe()}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\ offset\ =\ \textcolor{keyword}{static\_cast<}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}*\textcolor{keyword}{>}(m\_data)\ +\ m\_stride\ *\ m\_index;}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_me\ =\ \textcolor{keyword}{reinterpret\_cast<}\ T\ *\ \textcolor{keyword}{>}(\ offset\ +\ T\_OffsetInBytes\ );}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ From\ DataLock}}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\ m\_data;}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ m\_stride;\ \textcolor{comment}{//\ Item\ stride}}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ m\_count;\ \textcolor{comment}{//\ Number\ of\ items\ we\ can\ stride\ through}}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ m\_sizeInBytes;}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_readonly;}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Iterator\ specific}}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ m\_index;}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ T\ *\ m\_me;}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{iterator<\ T\ >}}\ begin()}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{iterator<\ T\ >}}\ iter;}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ iter.m\_data\ =\ m\_data;}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ iter.m\_stride\ =\ m\_stride;}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ iter.m\_count\ =\ m\_count;}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ iter.m\_sizeInBytes\ =\ m\_sizeInBytes;}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ iter.m\_index\ =\ 0;}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ iter.MakeMe();}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ iter;}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ iterator<\ T\ >\ end()}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ iterator<\ T\ >\ iter;}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ iter.m\_data\ =\ m\_data;}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ iter.m\_stride\ =\ m\_stride;}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ iter.m\_count\ =\ m\_count;}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ iter.m\_sizeInBytes\ =\ m\_sizeInBytes;}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ iter.m\_index\ =\ m\_count;}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ iter.MakeMe();}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ iter;}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\ m\_data;}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ m\_stride;\ \textcolor{comment}{//\ Item\ stride}}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ m\_count;\ \textcolor{comment}{//\ Number\ of\ items\ we\ can\ stride\ through}}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ m\_sizeInBytes;}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ DataLockAccess::TYPE\ m\_type;}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ m\_slot;}
+\DoxyCodeLine{00252\ \ \ \ \ \};}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keyword}{template}\ <\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00258\ \ \ \ \ T\ *\ \mbox{\hyperlink{classunify_1_1_data_lock_a213ad16ff42907f59adbbe1e5530d1b7}{DataLock::GetData}}()}
+\DoxyCodeLine{00259\ \ \ \ \ \{}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ !\mbox{\hyperlink{structunify_1_1_data_lock_access_aa078192be1505665fa71ea75b704939a}{DataLockAccess::ReadAccess}}(\ m\_type\ )\ ||\ !\mbox{\hyperlink{structunify_1_1_data_lock_access_ab8bd196b2a1c9b86b6f2f92f01a93769}{DataLockAccess::WriteAccess}}(\ m\_type\ )\ )}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classunify_1_1_exception}{unify::Exception}}(\ \textcolor{stringliteral}{"{}Attempted\ to\ access\ "{}}\ +\ DataLockAccess::ToString(\ m\_type\ )\ +\ \textcolor{stringliteral}{"{}\ for\ "{}}\ +\ DataLockAccess::ToString(\ DataLockAccess::ReadWrite\ )\ +\ \textcolor{stringliteral}{"{}\ access!"{}}\ );}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (T*)m\_data;}
+\DoxyCodeLine{00265\ \ \ \ \ \}}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keyword}{template}\ <\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{keyword}{const}\ T\ *\ \mbox{\hyperlink{classunify_1_1_data_lock_a643951687b88e13b601ed4c5ca316281}{DataLock::GetDataReadOnly}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00269\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ !\mbox{\hyperlink{structunify_1_1_data_lock_access_aa078192be1505665fa71ea75b704939a}{DataLockAccess::ReadAccess}}(\ m\_type\ )\ )}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classunify_1_1_exception}{unify::Exception}}(\ \textcolor{stringliteral}{"{}Attempted\ to\ access\ "{}}\ +\ DataLockAccess::ToString(\ m\_type\ )\ +\ \textcolor{stringliteral}{"{}\ for\ "{}}\ +\ DataLockAccess::ToString(\ DataLockAccess::ReadWrite\ )\ +\ \textcolor{stringliteral}{"{}\ access!"{}}\ );}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (T*)m\_data;}
+\DoxyCodeLine{00275\ \ \ \ \ \}}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keyword}{template}\ <\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00278\ \ \ \ \ T\ *\ \mbox{\hyperlink{classunify_1_1_data_lock_a908ecc109b6224de3dbb0f0b83f4b7f3}{DataLock::GetItem}}(\ \textcolor{keywordtype}{size\_t}\ index\ )}
+\DoxyCodeLine{00279\ \ \ \ \ \{}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ >=\ m\_count)}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classunify_1_1_exception}{unify::Exception}}(\ \textcolor{stringliteral}{"{}Attempted\ to\ access\ index\ out\ of\ range!\ ("{}}\ +\ unify::Cast<\ std::string\ >(\ index\ )\ +\ \textcolor{stringliteral}{"{}\ to\ "{}}\ +\ unify::Cast<\ std::string\ >(\ m\_count\ )\ +\ \textcolor{stringliteral}{"{})"{}}\ );}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ !\mbox{\hyperlink{structunify_1_1_data_lock_access_aa078192be1505665fa71ea75b704939a}{DataLockAccess::ReadAccess}}(\ m\_type\ )\ ||\ !\mbox{\hyperlink{structunify_1_1_data_lock_access_ab8bd196b2a1c9b86b6f2f92f01a93769}{DataLockAccess::WriteAccess}}(\ m\_type\ )\ \ )}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classunify_1_1_exception}{unify::Exception}}(\ \textcolor{stringliteral}{"{}Attempted\ to\ access\ "{}}\ +\ DataLockAccess::ToString(\ m\_type\ )\ +\ \textcolor{stringliteral}{"{}\ for\ "{}}\ +\ DataLockAccess::ToString(\ DataLockAccess::ReadWrite\ )\ +\ \textcolor{stringliteral}{"{}\ access!"{}}\ );}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&GetData<\ T\ >()[\ index\ ];}
+\DoxyCodeLine{00291\ \ \ \ \ \}}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \ \ \ \ \textcolor{keyword}{template}\ <\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00294\ \ \ \ \ \textcolor{keyword}{const}\ T\ *\ \mbox{\hyperlink{classunify_1_1_data_lock_a5d749544aeffe7e49551639a6ed0c7a5}{DataLock::GetItemReadonly}}(\ \textcolor{keywordtype}{size\_t}\ index\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00295\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ >=\ m\_count)}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classunify_1_1_exception}{unify::Exception}}(\ \textcolor{stringliteral}{"{}Attempted\ to\ access\ index\ out\ of\ range!\ ("{}}\ +\ unify::Cast<\ std::string\ >(\ index\ )\ +\ \textcolor{stringliteral}{"{}\ to\ "{}}\ +\ unify::Cast<\ std::string\ >(\ m\_count\ )\ +\ \textcolor{stringliteral}{"{})"{}}\ );}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{structunify_1_1_data_lock_access_aa078192be1505665fa71ea75b704939a}{DataLockAccess::ReadAccess}}(\ m\_type\ ))}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classunify_1_1_exception}{unify::Exception}}(\ \textcolor{stringliteral}{"{}Attempted\ to\ access\ READONLY\ data\ for\ write!"{}}\ );}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&GetDataReadOnly<\ T\ >()[\ index\ ];}
+\DoxyCodeLine{00307\ \ \ \ \ \}}
+\DoxyCodeLine{00308\ \}\ \textcolor{comment}{//\ namespace\ unify}}
+
+\end{DoxyCode}

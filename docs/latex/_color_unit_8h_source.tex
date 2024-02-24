@@ -1,0 +1,130 @@
+\doxysection{Color\+Unit.\+h}
+\hypertarget{_color_unit_8h_source}{}\label{_color_unit_8h_source}\index{unify/ColorUnit.h@{unify/ColorUnit.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{class\ }Color;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ Definition\ of\ colors\ whose\ components\ are\ normalized\ (0.0\ to\ 1.0)\ at\ common\ ranges.}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ Order\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ RGBA,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ ARGB,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ BGRA,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ ABGR,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Named\ constructors...}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitRGBA(\ \textcolor{keywordtype}{float}\ r,\ \textcolor{keywordtype}{float}\ g,\ \textcolor{keywordtype}{float}\ b,\ \textcolor{keywordtype}{float}\ a\ );}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitARGB(\ \textcolor{keywordtype}{float}\ a,\ \textcolor{keywordtype}{float}\ r,\ \textcolor{keywordtype}{float}\ g,\ \textcolor{keywordtype}{float}\ b\ );}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitRGB(\ \textcolor{keywordtype}{float}\ r,\ \textcolor{keywordtype}{float}\ g,\ \textcolor{keywordtype}{float}\ b\ );}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitWhite(\ \textcolor{keywordtype}{float}\ a\ );}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitRed(\ \textcolor{keywordtype}{float}\ r,\ \textcolor{keywordtype}{float}\ a\ );}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitGreen(\ \textcolor{keywordtype}{float}\ g,\ \textcolor{keywordtype}{float}\ a\ );}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitBlue(\ \textcolor{keywordtype}{float}\ b,\ \textcolor{keywordtype}{float}\ a\ );\ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitYellow(\ \textcolor{keywordtype}{float}\ b,\ \textcolor{keywordtype}{float}\ a\ );}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitCyan(\ \textcolor{keywordtype}{float}\ b,\ \textcolor{keywordtype}{float}\ a\ );}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitMagenta(\ \textcolor{keywordtype}{float}\ b,\ \textcolor{keywordtype}{float}\ a\ );}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitGrey(\ \textcolor{keywordtype}{float}\ grey,\ \textcolor{keywordtype}{float}\ a\ );}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitBlack(\ \textcolor{keywordtype}{float}\ a\ );}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitZero();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitLerp(\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ l,\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ r,\ \textcolor{keywordtype}{float}\ ratio\ );}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ r,\ g,\ b,\ a;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ component;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ linear[4];}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}(\ \textcolor{keywordtype}{float}\ r,\ \textcolor{keywordtype}{float}\ g,\ \textcolor{keywordtype}{float}\ b,\ \textcolor{keywordtype}{float}\ a\ );}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ \&\ color\ );}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}(\ std::string\ text,\ Order\ order\ =\ RGBA,\ \textcolor{keywordtype}{float}\ defaultAlpha\ =\ 1.0f\ );}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetRGBA(\ \textcolor{keywordtype}{float}\ r,\ \textcolor{keywordtype}{float}\ g,\ \textcolor{keywordtype}{float}\ b,\ \textcolor{keywordtype}{float}\ a\ );}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ CONVERSIONS}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Combines\ the\ various\ components\ into\ a\ single\ scalar\ using\ addition:\ result\ =\ a\ +\ r\ +\ g\ +\ b;}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ SumComponents();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ OPERATOR\ OVERLOADING\ MEMBER\ FUNCTIONS}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ \&\ operator\ +=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ \&\ col\ );}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ \&\ operator\ -\/=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ \&\ col\ );}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ \&\ operator\ *=\ (\ \textcolor{keywordtype}{float}\ val\ );}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ \&\ operator\ /=\ (\ \textcolor{keywordtype}{float}\ \ val\ );}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ unary\ operators}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{comment}{//V3\ operator\ +\ ()\ const;}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{comment}{//V3\ operator\ -\/\ ()\ const;}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ operator\ +\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ \&\ col\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ operator\ -\/\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ \&\ col\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ operator\ *\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ \&\ col\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ operator\ /\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ \&\ col\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ operator\ *\ (\ \textcolor{keywordtype}{float}\ val\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ operator\ /\ (\ \textcolor{keywordtype}{float}\ val\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ ==\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ \&\ col\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ !=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ \&\ col\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_unit_a2796821de0c90e3f1add67939eebdb7e}{SetRed}}(\ \textcolor{keywordtype}{float}\ r\ );}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_unit_a4edb123e122633794df2727c1d2a02c3}{SetGreen}}(\ \textcolor{keywordtype}{float}\ g\ );}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_unit_a9fbd2beb6b849e937faea706e979468e}{SetBlue}}(\ \textcolor{keywordtype}{float}\ b\ );}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_unit_a01fcf55692b6799e0f3f53a00d59d3c2}{SetAlpha}}(\ \textcolor{keywordtype}{float}\ a\ );}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ std::string\ ToString(\ Order\ order\ =\ RGBA\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00122\ \ \ \ \ \};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitRGBA(\ \textcolor{keywordtype}{float}\ r,\ \textcolor{keywordtype}{float}\ g,\ \textcolor{keywordtype}{float}\ b,\ \textcolor{keywordtype}{float}\ a\ );}
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitARGB(\ \textcolor{keywordtype}{float}\ a,\ \textcolor{keywordtype}{float}\ r,\ \textcolor{keywordtype}{float}\ g,\ \textcolor{keywordtype}{float}\ b\ );}
+\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitRGB(\ \textcolor{keywordtype}{float}\ r,\ \textcolor{keywordtype}{float}\ g,\ \textcolor{keywordtype}{float}\ b\ );}
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitWhite(\ \textcolor{keywordtype}{float}\ a\ =\ 1.0f\ );}
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitRed(\ \textcolor{keywordtype}{float}\ r\ =\ 1.0f,\ \textcolor{keywordtype}{float}\ a\ =\ 1.0f\ );}
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitGreen(\ \textcolor{keywordtype}{float}\ g\ =\ 1.0f,\ \textcolor{keywordtype}{float}\ a\ =\ 1.0f\ );}
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitBlue(\ \textcolor{keywordtype}{float}\ b\ =\ 1.0f,\ \textcolor{keywordtype}{float}\ a\ =\ 1.0f\ );}
+\DoxyCodeLine{00131\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitYellow(\ \textcolor{keywordtype}{float}\ b\ =\ 1.0f,\ \textcolor{keywordtype}{float}\ a\ =\ 1.0f\ );}
+\DoxyCodeLine{00132\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitCyan(\ \textcolor{keywordtype}{float}\ b\ =\ 1.0f,\ \textcolor{keywordtype}{float}\ a\ =\ 1.0f\ );}
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitMagenta(\ \textcolor{keywordtype}{float}\ b\ =\ 1.0f,\ \textcolor{keywordtype}{float}\ a\ =\ 1.0f\ );}
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitGrey(\ \textcolor{keywordtype}{float}\ grey,\ \textcolor{keywordtype}{float}\ a\ =\ 1.0f\ );}
+\DoxyCodeLine{00135\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitBlack(\ \textcolor{keywordtype}{float}\ a\ =\ 1.0f\ );}
+\DoxyCodeLine{00136\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitZero();}
+\DoxyCodeLine{00137\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ ColorUnitLerp(\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ l,\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ r,\ \textcolor{keywordtype}{float}\ ratio\ );}
+\DoxyCodeLine{00138\ \}}
+
+\end{DoxyCode}

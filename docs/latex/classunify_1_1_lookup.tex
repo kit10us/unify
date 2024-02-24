@@ -1,0 +1,72 @@
+\doxysection{unify\+::Lookup\texorpdfstring{$<$}{<} Key, Value \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classunify_1_1_lookup}{}\label{classunify_1_1_lookup}\index{unify::Lookup$<$ Key, Value $>$@{unify::Lookup$<$ Key, Value $>$}}
+
+
+A mapping between values and pairs with the addition of constant time value lookups by performing searches early on. Perfers constant operations over log operations, speeding up some common operations.  
+
+
+
+
+{\ttfamily \#include $<$Lookup.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator}{iterator}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_lookup_a270cd93d84f323c093f3ef2d120ac8cf}\label{classunify_1_1_lookup_a270cd93d84f323c093f3ef2d120ac8cf} 
+size\+\_\+t {\bfseries Add} (Key key, Value value)
+\begin{DoxyCompactList}\small\item\em Add a value. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_lookup_a2ff484526b53bb99ecfdbaf2b512acdc}\label{classunify_1_1_lookup_a2ff484526b53bb99ecfdbaf2b512acdc} 
+size\+\_\+t {\bfseries Count} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of values. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_lookup_a0b7b633cf0e7820cfecabe72f1273c10}\label{classunify_1_1_lookup_a0b7b633cf0e7820cfecabe72f1273c10} 
+bool {\bfseries Exists} (Key key) const
+\begin{DoxyCompactList}\small\item\em Returns true if the value exists. Test for existance first using Exists to prevent exception. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_lookup_ad934294575f8fa196644bfa2f5581aa1}\label{classunify_1_1_lookup_ad934294575f8fa196644bfa2f5581aa1} 
+size\+\_\+t {\bfseries Find} (Key key) const
+\begin{DoxyCompactList}\small\item\em Finds the index of a value by it\textquotesingle{}s key. Throws std\+::out\+\_\+of\+\_\+bounds if not found. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_lookup_a68c43df76747785d69e893c6079359a0}\label{classunify_1_1_lookup_a68c43df76747785d69e893c6079359a0} 
+Key {\bfseries Get\+Name} (size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Returns the name of a value by it\textquotesingle{}s index. Throws std\+::out\+\_\+of\+\_\+bounds if not found. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_lookup_a50e172d477584e09e8df194b66f15580}\label{classunify_1_1_lookup_a50e172d477584e09e8df194b66f15580} 
+Value {\bfseries Get\+Value} (size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Returns a value by it\textquotesingle{}s index. Throws std\+::out\+\_\+of\+\_\+bounds if not found. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_lookup_ae6422b58d8ea799a409aef70e4b7fb4f}\label{classunify_1_1_lookup_ae6422b58d8ea799a409aef70e4b7fb4f} 
+Value {\bfseries Get\+Value} (Key key) const
+\begin{DoxyCompactList}\small\item\em Returns a value by it\textquotesingle{}s key. Throws std\+::out\+\_\+of\+\_\+bounds if not found. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_lookup_aad0502d78c2eba1e1fe610e4d1219e26}\label{classunify_1_1_lookup_aad0502d78c2eba1e1fe610e4d1219e26} 
+void {\bfseries Set\+Value} (size\+\_\+t index, Value value)
+\begin{DoxyCompactList}\small\item\em Sets a value by it\textquotesingle{}s index. Throws std\+::out\+\_\+of\+\_\+bounds if not found. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_lookup_a6c143d5afac9afe61865f0737749b2d0}\label{classunify_1_1_lookup_a6c143d5afac9afe61865f0737749b2d0} 
+void {\bfseries Set\+Value} (Key key, Value value)
+\begin{DoxyCompactList}\small\item\em Set a vakue by it\textquotesingle{}s key. Returns false if not able to. Throws std\+::out\+\_\+of\+\_\+bounds if not found. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_lookup_aeec57461eb4d1d9445f282a49c735f45}\label{classunify_1_1_lookup_aeec57461eb4d1d9445f282a49c735f45} 
+void {\bfseries Clear} ()
+\begin{DoxyCompactList}\small\item\em Remove all values. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_lookup_a2d2eb09ac12e662255db29b2d5de5887}\label{classunify_1_1_lookup_a2d2eb09ac12e662255db29b2d5de5887} 
+\mbox{\hyperlink{classunify_1_1_lookup_1_1iterator}{iterator}} {\bfseries begin} ()
+\item 
+\Hypertarget{classunify_1_1_lookup_a036de8004b86301f1d5e4765cf3bebb6}\label{classunify_1_1_lookup_a036de8004b86301f1d5e4765cf3bebb6} 
+\mbox{\hyperlink{classunify_1_1_lookup_1_1iterator}{iterator}} {\bfseries end} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_lookup_a67171474c4da6cc8efe0c7fafefd2b2d}\label{classunify_1_1_lookup_a67171474c4da6cc8efe0c7fafefd2b2d} 
+class {\bfseries iterator}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Key, typename Value$>$\newline
+class unify\+::\+Lookup$<$ Key, Value $>$}
+A mapping between values and pairs with the addition of constant time value lookups by performing searches early on. Perfers constant operations over log operations, speeding up some common operations. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unify/Lookup.\+h\item 
+unify/Lookup.\+inl\end{DoxyCompactItemize}

@@ -1,0 +1,139 @@
+\doxysection{unify\+::BBox\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classunify_1_1_b_box}{}\label{classunify_1_1_b_box}\index{unify::BBox$<$ T $>$@{unify::BBox$<$ T $>$}}
+
+
+A Bounding box.  
+
+
+
+
+{\ttfamily \#include $<$BBox.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_b_box_ae26e694ee88779b928e8d3726f8213a1}\label{classunify_1_1_b_box_ae26e694ee88779b928e8d3726f8213a1} 
+{\bfseries BBox} ()
+\begin{DoxyCompactList}\small\item\em construct an empty bounding box. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_b_box_a5f484133bda2a0b426a8e36556f3b1ba}\label{classunify_1_1_b_box_a5f484133bda2a0b426a8e36556f3b1ba} 
+{\bfseries BBox} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ \&inf, const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ \&sup)
+\begin{DoxyCompactList}\small\item\em Create a bouning box where inf is the inferior value (smallest), and sup is the superior value (largest). \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_b_box_ae4c98398b9a700de1e20327886732697}\label{classunify_1_1_b_box_ae4c98398b9a700de1e20327886732697} 
+{\bfseries BBox} (T square\+Size)
+\begin{DoxyCompactList}\small\item\em Creates a cube \doxylink{classunify_1_1_b_box}{BBox} with a size totalling square\+Size\+: -\/square\+Size/2 to square\+Size/2. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_b_box_a6ca8679758da723939b1e22764f84125}\label{classunify_1_1_b_box_a6ca8679758da723939b1e22764f84125} 
+\mbox{\hyperlink{classunify_1_1_b_box}{BBox}}$<$ T $>$ {\bfseries operator\texorpdfstring{$\ast$}{*}} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ \&multiplicand) const
+\item 
+\Hypertarget{classunify_1_1_b_box_a55b86bd9604cecbcb645341fa1ffeab4}\label{classunify_1_1_b_box_a55b86bd9604cecbcb645341fa1ffeab4} 
+\mbox{\hyperlink{classunify_1_1_b_box}{BBox}}$<$ T $>$ \& {\bfseries operator\texorpdfstring{$\ast$}{*}=} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ \&multiplicand)
+\item 
+\Hypertarget{classunify_1_1_b_box_a421b04dba4fe836b5ac552805bc783ea}\label{classunify_1_1_b_box_a421b04dba4fe836b5ac552805bc783ea} 
+\mbox{\hyperlink{classunify_1_1_b_box}{BBox}}$<$ T $>$ {\bfseries operator\texorpdfstring{$\ast$}{*}} (T multiplicand) const
+\item 
+\Hypertarget{classunify_1_1_b_box_aac936f144d0750adf46a8259e7aa2314}\label{classunify_1_1_b_box_aac936f144d0750adf46a8259e7aa2314} 
+\mbox{\hyperlink{classunify_1_1_b_box}{BBox}}$<$ T $>$ \& {\bfseries operator\texorpdfstring{$\ast$}{*}=} (T multiplicand)
+\item 
+\Hypertarget{classunify_1_1_b_box_a0aeec3de51547f9baaa61c129edf1916}\label{classunify_1_1_b_box_a0aeec3de51547f9baaa61c129edf1916} 
+\mbox{\hyperlink{classunify_1_1_b_box}{BBox}}$<$ T $>$ {\bfseries operator+} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ \&point) const
+\item 
+\Hypertarget{classunify_1_1_b_box_a8ac4e17e5ffdc50d4ebd3790f6deef15}\label{classunify_1_1_b_box_a8ac4e17e5ffdc50d4ebd3790f6deef15} 
+\mbox{\hyperlink{classunify_1_1_b_box}{BBox}}$<$ T $>$ \& {\bfseries operator+=} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ \&point)
+\item 
+\Hypertarget{classunify_1_1_b_box_a987605819a6c5767a800cb1c9c21ed47}\label{classunify_1_1_b_box_a987605819a6c5767a800cb1c9c21ed47} 
+\mbox{\hyperlink{classunify_1_1_b_box}{BBox}}$<$ T $>$ {\bfseries operator+} (const \mbox{\hyperlink{classunify_1_1_b_box}{BBox}}$<$ T $>$ \&bbox) const
+\item 
+\Hypertarget{classunify_1_1_b_box_a4b63796f54c20cf5192b26271b3202a9}\label{classunify_1_1_b_box_a4b63796f54c20cf5192b26271b3202a9} 
+\mbox{\hyperlink{classunify_1_1_b_box}{BBox}}$<$ T $>$ \& {\bfseries operator+=} (const \mbox{\hyperlink{classunify_1_1_b_box}{BBox}}$<$ T $>$ \&bbox)
+\item 
+\Hypertarget{classunify_1_1_b_box_a348fee5a04dc45501ddeff41a888ab3d}\label{classunify_1_1_b_box_a348fee5a04dc45501ddeff41a888ab3d} 
+void {\bfseries Generate\+Corners} (\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ \texorpdfstring{$\ast$}{*}bounds)
+\begin{DoxyCompactList}\small\item\em Populates an array of vectors the vertices of the bounding box\textquotesingle{}s corners. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_b_box_a230d85250b36dfdd05270e64e26470af}\label{classunify_1_1_b_box_a230d85250b36dfdd05270e64e26470af} 
+void {\bfseries Clear} ()
+\begin{DoxyCompactList}\small\item\em Reduces the bounding box to empty/zeros. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_b_box_ab8c4c9eef96286916ecdc6edd25936d1}\label{classunify_1_1_b_box_ab8c4c9eef96286916ecdc6edd25936d1} 
+\mbox{\hyperlink{classunify_1_1_b_box}{BBox}} \& {\bfseries Add\+BBox\+With\+Position} (const \mbox{\hyperlink{classunify_1_1_b_box}{BBox}}$<$ T $>$ \&bounding\+Box, const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ \&position)
+\begin{DoxyCompactList}\small\item\em Add bouding box with spatial locations (basically, just adds the corners + an offset). This allows us to be a BB of BBs. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_b_box_a3066fbf75b33560e3afae7e9d223cabb}\label{classunify_1_1_b_box_a3066fbf75b33560e3afae7e9d223cabb} 
+void {\bfseries Add\+Points} (const \mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ T $>$ \texorpdfstring{$\ast$}{*}const points, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Ensure points are within the bounding box, else increase the bounding box to encompass them. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_b_box_a40b7bda6953a2b288c3b702449ea57dc}\label{classunify_1_1_b_box_a40b7bda6953a2b288c3b702449ea57dc} 
+bool {\bfseries Contains\+Point} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ \&point)
+\begin{DoxyCompactList}\small\item\em Test if a point is withing the bounding box. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_b_box_aac7ab7c0e98781a9d40bba62d21f75b8}\label{classunify_1_1_b_box_aac7ab7c0e98781a9d40bba62d21f75b8} 
+const \mbox{\hyperlink{classunify_1_1_size3}{Size3}}$<$ T $>$ {\bfseries Size} () const
+\begin{DoxyCompactList}\small\item\em Returns the dimensions of the bounding box. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_b_box_a1ee05b7da5d5f45993c248c0b9518103}\label{classunify_1_1_b_box_a1ee05b7da5d5f45993c248c0b9518103} 
+bool {\bfseries Intersects} (const \mbox{\hyperlink{classunify_1_1_ray}{Ray}} \&ray, float t0, float t1) const
+\begin{DoxyCompactList}\small\item\em Tests if a ray intersects with the bounding box. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_b_box_abdbd37e40ea6e45e956a584fffc53623}\label{classunify_1_1_b_box_abdbd37e40ea6e45e956a584fffc53623} 
+bool {\bfseries Intersects} (const \mbox{\hyperlink{classunify_1_1_ray}{Ray}} \&ray, \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&hit\+Point) const
+\begin{DoxyCompactList}\small\item\em Tests if a ray intersects with the bounding box. Sets hit\+Point to the first point of collision. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classunify_1_1_b_box_a734425195c45e12a29206b67d0ce0d70}{Intersects}} (const \mbox{\hyperlink{classunify_1_1_ray}{Ray}} \&ray, float \&distance) const
+\begin{DoxyCompactList}\small\item\em Tests if a ray intersects with the bounding box. Sets distance to the distance from the ray to the bounding box. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classunify_1_1_b_box_ad5c869884512c41d65e4ba9755c11812}{Intersects}} (const \mbox{\hyperlink{classunify_1_1_ray}{Ray}} \&ray) const
+\begin{DoxyCompactList}\small\item\em Tests if a ray intersects with the bounding box. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_b_box_ab9da6a93000c5e0a22913e4464d0f2da}\label{classunify_1_1_b_box_ab9da6a93000c5e0a22913e4464d0f2da} 
+\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ {\bfseries To\+Barrycentric} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ \&point) const
+\begin{DoxyCompactList}\small\item\em Takes a point and returns a new point barrycentric to the bounding box. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere}}$<$ T $>$ \mbox{\hyperlink{classunify_1_1_b_box_a1e6cd464ff354f8474c976d42fb8e651}{Make\+BSphere}} () const
+\begin{DoxyCompactList}\small\item\em Returns a bounding sphere that encompases the boundinh box. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_b_box_a713d7db8b80484376ce41c5453a6287e}\label{classunify_1_1_b_box_a713d7db8b80484376ce41c5453a6287e} 
+\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ {\bfseries sup}
+\item 
+\Hypertarget{classunify_1_1_b_box_aba5489e9eb91ccbfd01929c789861ccd}\label{classunify_1_1_b_box_aba5489e9eb91ccbfd01929c789861ccd} 
+\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ {\bfseries inf}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T = float$>$\newline
+class unify\+::\+BBox$<$ T $>$}
+A Bounding box. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classunify_1_1_b_box_ad5c869884512c41d65e4ba9755c11812}\label{classunify_1_1_b_box_ad5c869884512c41d65e4ba9755c11812} 
+\index{unify::BBox$<$ T $>$@{unify::BBox$<$ T $>$}!Intersects@{Intersects}}
+\index{Intersects@{Intersects}!unify::BBox$<$ T $>$@{unify::BBox$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Intersects()}{Intersects()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T  = float$>$ \\
+bool BBox\+::\+Intersects (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classunify_1_1_ray}{Ray}} \&}]{ray }\end{DoxyParamCaption}) const}
+
+
+
+Tests if a ray intersects with the bounding box. 
+
+~\newline
+ \Hypertarget{classunify_1_1_b_box_a734425195c45e12a29206b67d0ce0d70}\label{classunify_1_1_b_box_a734425195c45e12a29206b67d0ce0d70} 
+\index{unify::BBox$<$ T $>$@{unify::BBox$<$ T $>$}!Intersects@{Intersects}}
+\index{Intersects@{Intersects}!unify::BBox$<$ T $>$@{unify::BBox$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Intersects()}{Intersects()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T  = float$>$ \\
+bool BBox\+::\+Intersects (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classunify_1_1_ray}{Ray}} \&}]{ray,  }\item[{float \&}]{distance }\end{DoxyParamCaption}) const}
+
+
+
+Tests if a ray intersects with the bounding box. Sets distance to the distance from the ray to the bounding box. 
+
+~\newline
+ \Hypertarget{classunify_1_1_b_box_a1e6cd464ff354f8474c976d42fb8e651}\label{classunify_1_1_b_box_a1e6cd464ff354f8474c976d42fb8e651} 
+\index{unify::BBox$<$ T $>$@{unify::BBox$<$ T $>$}!MakeBSphere@{MakeBSphere}}
+\index{MakeBSphere@{MakeBSphere}!unify::BBox$<$ T $>$@{unify::BBox$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MakeBSphere()}{MakeBSphere()}}
+{\footnotesize\ttfamily template$<$typename T  = float$>$ \\
+\mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere}}$<$ T $>$ BBox\+::\+Make\+BSphere (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a bounding sphere that encompases the boundinh box. 
+
+~\newline
+ 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unify/BBox.\+h\item 
+unify/BBox.\+inl\end{DoxyCompactItemize}

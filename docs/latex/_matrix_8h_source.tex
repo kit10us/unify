@@ -1,0 +1,182 @@
+\doxysection{Matrix.\+h}
+\hypertarget{_matrix_8h_source}{}\label{_matrix_8h_source}\index{unify/Matrix.h@{unify/Matrix.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <unify/V2.h>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <unify/V3.h>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <unify/V4.h>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <unify/Ray.h>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <unify/BBox.h>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <unify/RowColumn.h>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <unify/Quaternion.h>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <unify/Angle.h>}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Named\ constructors...}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixIdentity();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixZero();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixTranslate(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ vector\ );}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixOrthoOffCenterLH(\ \textcolor{keywordtype}{float}\ left,\ \textcolor{keywordtype}{float}\ right,\ \textcolor{keywordtype}{float}\ bottom,\ \textcolor{keywordtype}{float}\ top,\ \textcolor{keywordtype}{float}\ znear,\ \textcolor{keywordtype}{float}\ zfar\ );}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixScale(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ float\ >}}\ \&\ scale\ );}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixScale(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixScale(\ \textcolor{keywordtype}{float}\ scale\ );}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixRotationAboutAxis(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ axis,\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixPerspectiveFovLH(\ \textcolor{keywordtype}{float}\ fovy,\ \textcolor{keywordtype}{float}\ apsect,\ \textcolor{keywordtype}{float}\ zn,\ \textcolor{keywordtype}{float}\ zf\ );}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixRotationX(\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixRotationY(\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixRotationZ(\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixLookAtLH(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ eyePosition,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ at,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ up\ );}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ );}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}(\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ orientation,\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ position\ =\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}(\ 0,\ 0,\ 0\ )\ );}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}(\ std::string\ text\ );}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{\string~Matrix}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ operator\ =\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ );}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ operator\ +=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ );}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ operator\ -\/=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ );}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ operator\ *=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ );}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ operator\ *=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ \&\ quaternion\ );}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ operator\ *=\ (\ \textcolor{keywordtype}{float}\ multiplier\ );}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ operator\ /=\ (\ \textcolor{keywordtype}{float}\ divisor\ );}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ binary\ operators}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ operator\ +\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ operator\ -\/\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ operator\ *\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ operator\ *\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ \&\ quaternion\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ operator\ *\ (\ \textcolor{keywordtype}{float}\ multiplier\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ operator\ /\ (\ \textcolor{keywordtype}{float}\ divisor\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ ==\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ !=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \&\ \ operator()(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ unsigned\ int\ >}}\ \&\ rowColumn\ );}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \&\ operator()(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ column\ );}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&\ operator()(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ unsigned\ int\ >}}\ \&\ rowColumn\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&\ operator()(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ column\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ \&\ operator()(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ row\ );}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ \&\ operator()(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ row\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ SetRotation(\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ quaternion\ );}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ Translate(\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ vector\ );}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ Scale(\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ vector\ );}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ Scale(\ \textcolor{keywordtype}{float}\ scale\ );}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Set(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ column,\ \textcolor{keywordtype}{float}\ value\ );}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetLeft(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ vec\ );}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetUp(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ vec\ );}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetForward(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ vec\ );}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetPosition(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ vec\ );}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetLeft(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetUp(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetForward(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetPosition(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetRow(\ \textcolor{keywordtype}{size\_t}\ row,\ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ v4\ );}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetColumn(\ \textcolor{keywordtype}{size\_t}\ column,\ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ v4\ );}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ GetRow(\ \textcolor{keywordtype}{size\_t}\ row\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ GetColumn(\ \textcolor{keywordtype}{size\_t}\ column\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetLeft()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetUp()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetForward()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetPosition()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetScale()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ GetRotation()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ Determinant()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsIdentity()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ BecomeIdentity();}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Zero();}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_a008d1a5f99a91b477945fd7336ed6b0d}{Invert}}();}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_ad5f101877c4a10988bf7f128a9c248d8}{Inverse}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Transpose();}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Transpose(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ );}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ TransformCoord(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ v2\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ TransformCoord(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ v3\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ TransformCoords(\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ *\ coords,\ \textcolor{keywordtype}{size\_t}\ size\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ TransformCoords(\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ *\ coords,\ \textcolor{keywordtype}{size\_t}\ size\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ TransformNormal(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ v2\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ TransformNormal(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ v3\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v4}{V4<\ float\ >}}\ Transform(\ \mbox{\hyperlink{classunify_1_1_v4}{V4<\ float\ >}}\ v4\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00149\ \ \ \ \ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ TransformRay(\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ ray\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ float\ >}}\ TransformBBox(\ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ float\ >}}\ bbox\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ float\ >}}\ TransformBSphere(\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ float\ >}}\ bsphere\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ RotateAboutAxis(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ axis,\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ LookAtLH(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ at,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ up\ );}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Orbit(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ origin,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ \&\ direction,\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ std::string\ ToString()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ FromString(\ std::string\ text\ );}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ m[4][4];}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ linear[16];}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00167\ \ \ \ \ \};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixIdentity();}
+\DoxyCodeLine{00170\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixZero();}
+\DoxyCodeLine{00171\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixTranslate(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ vector\ );}
+\DoxyCodeLine{00172\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixOrthoOffCenterLH(\ \textcolor{keywordtype}{float}\ left,\ \textcolor{keywordtype}{float}\ right,\ \textcolor{keywordtype}{float}\ bottom,\ \textcolor{keywordtype}{float}\ top,\ \textcolor{keywordtype}{float}\ znear,\ \textcolor{keywordtype}{float}\ zfar\ );}
+\DoxyCodeLine{00173\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixScale(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ float\ >}}\ \&\ scale\ );}
+\DoxyCodeLine{00174\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixScale(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
+\DoxyCodeLine{00175\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixScale(\ \textcolor{keywordtype}{float}\ scale\ );}
+\DoxyCodeLine{00176\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixRotationAboutAxis(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ axis,\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
+\DoxyCodeLine{00177\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixPerspectiveFovLH(\ \textcolor{keywordtype}{float}\ fovy,\ \textcolor{keywordtype}{float}\ apsect,\ \textcolor{keywordtype}{float}\ zn,\ \textcolor{keywordtype}{float}\ zf\ );}
+\DoxyCodeLine{00178\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixRotationX(\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
+\DoxyCodeLine{00179\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixRotationY(\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
+\DoxyCodeLine{00180\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixRotationZ(\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
+\DoxyCodeLine{00181\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixLookAtLH(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ eyePosition,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ at,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ up\ );}
+\DoxyCodeLine{00182\ \}}
+
+\end{DoxyCode}

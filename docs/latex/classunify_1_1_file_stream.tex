@@ -1,0 +1,147 @@
+\doxysection{unify\+::File\+Stream Class Reference}
+\hypertarget{classunify_1_1_file_stream}{}\label{classunify_1_1_file_stream}\index{unify::FileStream@{unify::FileStream}}
+
+
+Perform stream operation on a file source.  
+
+
+
+
+{\ttfamily \#include $<$FStream.\+h$>$}
+
+Inheritance diagram for unify\+::File\+Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classunify_1_1_file_stream}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_file_stream_abc903dfb8b3dbc4a687c961c4f4258e6}\label{classunify_1_1_file_stream_abc903dfb8b3dbc4a687c961c4f4258e6} 
+void {\bfseries Open} (\mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417}{Stream\+Access\+Type}} access, \mbox{\hyperlink{classunify_1_1_path}{unify\+::\+Path}} path)
+\item 
+virtual void \mbox{\hyperlink{classunify_1_1_file_stream_a66a22e08429d6489442c9a9b845c1e85}{Close}} () override
+\item 
+virtual unsigned int \mbox{\hyperlink{classunify_1_1_file_stream_a1d23bc20a1194a9c875824d14af34140}{Read}} (void \texorpdfstring{$\ast$}{*}p\+Dest, unsigned int u\+Length) override
+\item 
+virtual unsigned int \mbox{\hyperlink{classunify_1_1_file_stream_a739d2bcfc548a9a1d444183dcc54394a}{Read\+Pack}} (void \texorpdfstring{$\ast$}{*}p\+Dest, unsigned int u\+Length) override
+\item 
+virtual void \mbox{\hyperlink{classunify_1_1_file_stream_a074cccdda4d46d5be1c80e78a3648222}{Write}} (const void \texorpdfstring{$\ast$}{*}p\+Src, unsigned int u\+Length) override
+\item 
+virtual void \mbox{\hyperlink{classunify_1_1_file_stream_a15ebd83c13e275ca8779f591eb85ad14}{Write\+Pack}} (const void \texorpdfstring{$\ast$}{*}p\+Src) override
+\item 
+\Hypertarget{classunify_1_1_file_stream_a018840da7e3b7dcdd50e66e86b41ce99}\label{classunify_1_1_file_stream_a018840da7e3b7dcdd50e66e86b41ce99} 
+void {\bfseries Write} (std\+::string out)
+\item 
+virtual bool \mbox{\hyperlink{classunify_1_1_file_stream_ab14a7efbbc77ffb100f2d7eebacafcf9}{Seek}} (\mbox{\hyperlink{namespaceunify_a384b8275876d58563e0ed7a141823264}{Stream\+Seek\+Type}} seek, int i\+Offset=0) override
+\item 
+\Hypertarget{classunify_1_1_file_stream_a394332d7b8c17761c66db532b0a32b05}\label{classunify_1_1_file_stream_a394332d7b8c17761c66db532b0a32b05} 
+bool {\bfseries Pos} (fpos\+\_\+t \&pos)
+\item 
+\Hypertarget{classunify_1_1_file_stream_aadc01e6ad4eb715861e1a815a8c4dd89}\label{classunify_1_1_file_stream_aadc01e6ad4eb715861e1a815a8c4dd89} 
+bool {\bfseries Set\+Position} (fpos\+\_\+t \&pos)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classunify_1_1_stream}{unify\+::\+Stream}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool {\bfseries Open} (\mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417}{Stream\+Access\+Type}} access, void \texorpdfstring{$\ast$}{*}p\+Data)
+\item 
+void {\bfseries Set\+Flags} (unsigned int u\+Flags)
+\item 
+unsigned int {\bfseries Get\+Flags} ()
+\item 
+bool {\bfseries End\+Of\+Stream} ()
+\item 
+unsigned int {\bfseries Bytes\+Waiting} ()
+\item 
+bool {\bfseries Is\+Open} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classunify_1_1_stream}{unify\+::\+Stream}}}
+\begin{DoxyCompactItemize}
+\item 
+FILE \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+p\+Stream}
+\item 
+\mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417}{Stream\+Access\+Type}} {\bfseries m\+\_\+\+Access}
+\item 
+unsigned int {\bfseries m\+\_\+u\+Flags}
+\item 
+bool {\bfseries m\+\_\+b\+End\+Of\+Stream}
+\item 
+unsigned int {\bfseries m\+\_\+u\+Bytes\+Waiting}
+\item 
+bool {\bfseries m\+\_\+is\+Open}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Perform stream operation on a file source. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classunify_1_1_file_stream_a66a22e08429d6489442c9a9b845c1e85}\label{classunify_1_1_file_stream_a66a22e08429d6489442c9a9b845c1e85} 
+\index{unify::FileStream@{unify::FileStream}!Close@{Close}}
+\index{Close@{Close}!unify::FileStream@{unify::FileStream}}
+\doxysubsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily void File\+Stream\+::\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classunify_1_1_stream}{unify\+::\+Stream}}.
+
+\Hypertarget{classunify_1_1_file_stream_a1d23bc20a1194a9c875824d14af34140}\label{classunify_1_1_file_stream_a1d23bc20a1194a9c875824d14af34140} 
+\index{unify::FileStream@{unify::FileStream}!Read@{Read}}
+\index{Read@{Read}!unify::FileStream@{unify::FileStream}}
+\doxysubsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily unsigned int File\+Stream\+::\+Read (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Dest,  }\item[{unsigned int}]{u\+Length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classunify_1_1_stream}{unify\+::\+Stream}}.
+
+\Hypertarget{classunify_1_1_file_stream_a739d2bcfc548a9a1d444183dcc54394a}\label{classunify_1_1_file_stream_a739d2bcfc548a9a1d444183dcc54394a} 
+\index{unify::FileStream@{unify::FileStream}!ReadPack@{ReadPack}}
+\index{ReadPack@{ReadPack}!unify::FileStream@{unify::FileStream}}
+\doxysubsubsection{\texorpdfstring{ReadPack()}{ReadPack()}}
+{\footnotesize\ttfamily unsigned int File\+Stream\+::\+Read\+Pack (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Dest,  }\item[{unsigned int}]{u\+Length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classunify_1_1_stream}{unify\+::\+Stream}}.
+
+\Hypertarget{classunify_1_1_file_stream_ab14a7efbbc77ffb100f2d7eebacafcf9}\label{classunify_1_1_file_stream_ab14a7efbbc77ffb100f2d7eebacafcf9} 
+\index{unify::FileStream@{unify::FileStream}!Seek@{Seek}}
+\index{Seek@{Seek}!unify::FileStream@{unify::FileStream}}
+\doxysubsubsection{\texorpdfstring{Seek()}{Seek()}}
+{\footnotesize\ttfamily bool File\+Stream\+::\+Seek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a384b8275876d58563e0ed7a141823264}{Stream\+Seek\+Type}}}]{seek,  }\item[{int}]{i\+Offset = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classunify_1_1_stream}{unify\+::\+Stream}}.
+
+\Hypertarget{classunify_1_1_file_stream_a074cccdda4d46d5be1c80e78a3648222}\label{classunify_1_1_file_stream_a074cccdda4d46d5be1c80e78a3648222} 
+\index{unify::FileStream@{unify::FileStream}!Write@{Write}}
+\index{Write@{Write}!unify::FileStream@{unify::FileStream}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily void File\+Stream\+::\+Write (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{p\+Src,  }\item[{unsigned int}]{u\+Length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classunify_1_1_stream}{unify\+::\+Stream}}.
+
+\Hypertarget{classunify_1_1_file_stream_a15ebd83c13e275ca8779f591eb85ad14}\label{classunify_1_1_file_stream_a15ebd83c13e275ca8779f591eb85ad14} 
+\index{unify::FileStream@{unify::FileStream}!WritePack@{WritePack}}
+\index{WritePack@{WritePack}!unify::FileStream@{unify::FileStream}}
+\doxysubsubsection{\texorpdfstring{WritePack()}{WritePack()}}
+{\footnotesize\ttfamily void File\+Stream\+::\+Write\+Pack (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{p\+Src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classunify_1_1_stream}{unify\+::\+Stream}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unify/FStream.\+h\item 
+unify/FStream.\+cpp\end{DoxyCompactItemize}

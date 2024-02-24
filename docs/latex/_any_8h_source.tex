@@ -1,0 +1,278 @@
+\doxysection{Any.\+h}
+\hypertarget{_any_8h_source}{}\label{_any_8h_source}\index{unify/Any.h@{unify/Any.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <typeinfo>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_any}{Any}}}
+\DoxyCodeLine{00042\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_any}{Any}}()\ noexcept}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ :\ content\ \{\}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_any}{Any}}(\ \textcolor{keyword}{const}\ ValueType\ \&\ value\ )}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ :\ content(\ \textcolor{keyword}{new}\ holder<\ \textcolor{keyword}{typename}\ std::remove\_cv<\textcolor{keyword}{typename}\ std::decay<const\ ValueType>::type>::type\ >(\ value\ )\ )}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_any}{Any}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_any}{Any}}\ \&\ other\ )}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ :\ content(\ other.content\ ?\ other.content-\/>clone()\ :\ 0\ )}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Move\ constructor}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_any}{Any}}(\ \mbox{\hyperlink{classunify_1_1_any}{Any}}\&\&\ other\ )\ noexcept}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ :\ content(\ other.content\ )}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ other.content\ =\ 0;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Perfect\ forwarding\ of\ ValueType}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_any}{Any}}(\ ValueType\&\&\ value}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \textcolor{keyword}{typename}\ std::enable\_if<\ !std::is\_same<Any\&,\ ValueType>::value\ >::type*\ =\ 0\ \textcolor{comment}{//\ disable\ if\ value\ has\ type\ \`{}Any\&`}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \textcolor{keyword}{typename}\ std::enable\_if<\ !std::is\_const<ValueType>::value\ >::type*\ =\ 0\ )\ \textcolor{comment}{//\ disable\ if\ value\ has\ type\ \`{}const\ ValueType\&\&`}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ :\ content(\ \textcolor{keyword}{new}\ holder<\ \textcolor{keyword}{typename}\ std::decay<ValueType>::type\ >(\ \textcolor{keyword}{static\_cast<}ValueType\&\&\textcolor{keyword}{>}(value)\ )\ )}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_any}{\string~Any}}()\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ content;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ modifiers}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_any}{Any}}\ \&\ swap(\ \mbox{\hyperlink{classunify_1_1_any}{Any}}\ \&\ rhs\ )\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ std::swap(\ content,\ rhs.content\ );}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_any}{Any}}\ \&\ operator=(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_any}{Any}}\&\ rhs\ )}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_any}{Any}}(\ rhs\ ).swap(\ *\textcolor{keyword}{this}\ );}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ move\ assignement}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_any}{Any}}\ \&\ operator=(\ \mbox{\hyperlink{classunify_1_1_any}{Any}}\&\&\ rhs\ )\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ rhs.swap(\ *\textcolor{keyword}{this}\ );}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_any}{Any}}().swap(\ rhs\ );}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Perfect\ forwarding\ of\ ValueType}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ ValueType>}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_any}{Any}}\ \&\ operator=(\ ValueType\&\&\ rhs\ )}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_any}{Any}}(\ \textcolor{keyword}{static\_cast<}ValueType\&\&\textcolor{keyword}{>}(rhs)\ ).swap(\ *\textcolor{keyword}{this}\ );}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ queries}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ empty()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !content;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ clear()\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_any}{Any}}().swap(\ *\textcolor{keyword}{this}\ );}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::type\_info\&\ type()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ content\ ?\ content-\/>type()\ :\ \textcolor{keyword}{typeid}(void);}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ types}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }placeholder}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ structors}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \string~placeholder()}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ queries}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::type\_info\&\ type()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ =\ 0;}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ placeholder\ *\ clone()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }holder\ :\ \textcolor{keyword}{public}\ placeholder}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ structors}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ holder(\ \textcolor{keyword}{const}\ ValueType\ \&\ value\ )}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ held(\ value\ )}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ holder(\ ValueType\&\&\ value\ )}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ held(\ \textcolor{keyword}{static\_cast<}\ ValueType\&\&\ \textcolor{keyword}{>}(value)\ )}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ queries}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::type\_info\&\ type()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{typeid}(ValueType);}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ placeholder\ *\ clone()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00169\ \textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ holder(\ held\ );}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ representation}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ ValueType\ held;}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ intentionally\ left\ unimplemented}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ holder\ \&\ operator=(\ \textcolor{keyword}{const}\ holder\ \&\ );}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ representation}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ ValueType\ *\ any\_cast(\ \mbox{\hyperlink{classunify_1_1_any}{Any}}\ *\ )\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ ValueType\ *\ unsafe\_any\_cast(\ \mbox{\hyperlink{classunify_1_1_any}{Any}}\ *\ )\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ placeholder\ *\ content;}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \};}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ swap(\ \mbox{\hyperlink{classunify_1_1_any}{Any}}\ \&\ lhs,\ \mbox{\hyperlink{classunify_1_1_any}{Any}}\ \&\ rhs\ )\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{00195\ \ \ \ \ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ lhs.swap(\ rhs\ );}
+\DoxyCodeLine{00197\ \ \ \ \ \}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keyword}{class\ }\textcolor{comment}{/*BOOST\_SYMBOL\_VISIBLE*/}\ \mbox{\hyperlink{classunify_1_1bad__any__cast}{bad\_any\_cast}}\ :}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ std::bad\_cast}
+\DoxyCodeLine{00201\ \ \ \ \ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ what()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}unify::bad\_any\_cast:\ "{}}}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}failed\ conversion\ using\ unify::any\_cast"{}};}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00208\ \ \ \ \ \};}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{00211\ \ \ \ \ ValueType\ *\ any\_cast(\ \mbox{\hyperlink{classunify_1_1_any}{Any}}\ *\ operand\ )\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{00212\ \ \ \ \ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ operand\ \&\&\ operand-\/>type()\ ==\ \textcolor{keyword}{typeid}(ValueType)}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ ?\ \&\textcolor{keyword}{static\_cast<}Any::holder<typename\ std::remove\_cv<ValueType>::type\textcolor{keyword}{>}\ *>(operand-\/>content)-\/>held}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ :\ 0;}
+\DoxyCodeLine{00216\ \ \ \ \ \}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ ValueType\ *\ any\_cast(\ \textcolor{keyword}{const}\ Any\ *\ operand\ )\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{00220\ \ \ \ \ \{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ any\_cast<ValueType>(\textcolor{keyword}{const\_cast<}Any\ *\textcolor{keyword}{>}(operand));}
+\DoxyCodeLine{00222\ \ \ \ \ \}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{00225\ \ \ \ \ ValueType\ any\_cast(\ Any\ \&\ operand\ )}
+\DoxyCodeLine{00226\ \ \ \ \ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ std::remove\_reference<ValueType>::type\ nonref;}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ nonref\ *\ result\ =\ any\_cast<nonref>(\&operand);}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ !result\ )}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ bad\_any\_cast();}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Attempt\ to\ avoid\ construction\ of\ a\ temporary\ object\ in\ cases\ when\ }}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \`{}ValueType`\ is\ not\ a\ reference.\ Example:}}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \`{}static\_cast<std::string>(*result);`\ }}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ which\ is\ equal\ to\ \`{}std::string(*result);`}}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ std::conditional<}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_reference<ValueType>::value,}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ ValueType,}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ ValueType\ \&}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ >::type\ ref\_type;}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}ref\_type\textcolor{keyword}{>}(*result);}
+\DoxyCodeLine{00245\ \ \ \ \ \}}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keyword}{inline}\ ValueType\ any\_cast(\ \textcolor{keyword}{const}\ Any\ \&\ operand\ )}
+\DoxyCodeLine{00249\ \ \ \ \ \{}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ std::remove\_reference<ValueType>::type\ nonref;}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ any\_cast<const\ nonref\ \&>(\textcolor{keyword}{const\_cast<}Any\ \&\textcolor{keyword}{>}(operand));}
+\DoxyCodeLine{00252\ \ \ \ \ \}}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keyword}{inline}\ ValueType\ any\_cast(\ Any\&\&\ operand\ )}
+\DoxyCodeLine{00256\ \ \ \ \ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ assert(}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ (std::is\_rvalue\_reference<ValueType\&\&>::value\ \textcolor{comment}{/*true\ if\ ValueType\ is\ rvalue\ or\ just\ a\ value*/}}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ||\ std::is\_const<\ \textcolor{keyword}{typename}\ std::remove\_reference<ValueType>::type\ >::value)\ \&\&}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}unify::any\_cast\ shall\ not\ be\ used\ for\ getting\ nonconst\ references\ to\ temporary\ objects"{}}}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ any\_cast<ValueType>(operand);}
+\DoxyCodeLine{00263\ \ \ \ \ \}}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{comment}{//\ Note:\ The\ "{}unsafe"{}\ versions\ of\ any\_cast\ are\ not\ part\ of\ the}}
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{comment}{//\ public\ interface\ and\ may\ be\ removed\ at\ any\ time.\ They\ are}}
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{comment}{//\ required\ where\ we\ know\ what\ type\ is\ stored\ in\ the\ any\ and\ can't}}
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{comment}{//\ use\ typeid()\ comparison,\ e.g.,\ when\ our\ types\ may\ travel\ across}}
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{comment}{//\ different\ shared\ libraries.}}
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keyword}{inline}\ ValueType\ *\ unsafe\_any\_cast(\ Any\ *\ operand\ )\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{00273\ \ \ \ \ \{}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&\textcolor{keyword}{static\_cast<}Any::holder<ValueType>\ *\textcolor{keyword}{>}(operand-\/>content)-\/>held;}
+\DoxyCodeLine{00275\ \ \ \ \ \}}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ ValueType\ *\ unsafe\_any\_cast(\ \textcolor{keyword}{const}\ Any\ *\ operand\ )\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{00279\ \ \ \ \ \{}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ unsafe\_any\_cast<ValueType>(\textcolor{keyword}{const\_cast<}Any\ *\textcolor{keyword}{>}(operand));}
+\DoxyCodeLine{00281\ \ \ \ \ \}}
+\DoxyCodeLine{00282\ \}}
+
+\end{DoxyCode}

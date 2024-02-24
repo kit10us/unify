@@ -1,0 +1,224 @@
+\doxysection{Tree.\+inl}
+\hypertarget{_tree_8inl_source}{}\label{_tree_8inl_source}\index{unify/Tree.inl@{unify/Tree.inl}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ unify::Tree::Tree()}
+\DoxyCodeLine{00024\ :\ m\_child(\ 0\ )}
+\DoxyCodeLine{00025\ ,\ m\_parent(\ 0\ )}
+\DoxyCodeLine{00026\ ,\ m\_nextSib(\ 0\ )}
+\DoxyCodeLine{00027\ ,\ m\_prevSib(\ 0\ )}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{inline}\ unify::Tree::Tree(\ std::string\ sName\ )}
+\DoxyCodeLine{00032\ :\ m\_name(\ sName\ )}
+\DoxyCodeLine{00033\ ,\ m\_child(\ 0\ )}
+\DoxyCodeLine{00034\ ,\ m\_parent(\ 0\ )}
+\DoxyCodeLine{00035\ ,\ m\_nextSib(\ 0\ )}
+\DoxyCodeLine{00036\ ,\ m\_prevSib(\ 0\ )}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{inline}\ unify::Tree::Tree(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ \&\ tree\ )}
+\DoxyCodeLine{00041\ :\ m\_name(\ tree.m\_name\ )}
+\DoxyCodeLine{00042\ ,\ m\_child(\ tree.m\_child\ )}
+\DoxyCodeLine{00043\ ,\ m\_parent(\ tree.m\_parent\ )}
+\DoxyCodeLine{00044\ ,\ m\_nextSib(\ tree.m\_nextSib\ )}
+\DoxyCodeLine{00045\ ,\ m\_prevSib(\ tree.m\_prevSib\ )}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{inline}\ unify::Tree::\string~Tree()}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ \&\ unify::Tree::operator=(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ \&\ tree\ )}
+\DoxyCodeLine{00054\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ m\_name\ =\ tree.m\_name;}
+\DoxyCodeLine{00056\ \ \ \ \ m\_child\ =\ tree.m\_child;}
+\DoxyCodeLine{00057\ \ \ \ \ m\_parent\ =\ tree.m\_parent;}
+\DoxyCodeLine{00058\ \ \ \ \ m\_nextSib\ =\ tree.m\_nextSib;}
+\DoxyCodeLine{00059\ \ \ \ \ m\_prevSib\ =\ tree.m\_prevSib;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00061\ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{comment}{//\ Attach\ us\ to\ a\ parent}}
+\DoxyCodeLine{00065\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ unify::Tree::AttachTo(\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ *\ pTo\ )}
+\DoxyCodeLine{00066\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{if}(\ pTo\ ==\ m\_parent\ )\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ Remove\ us\ from\ any\ previous\ frame\ hierarchy...}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{if}(\ m\_parent\ )}
+\DoxyCodeLine{00071\ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Break\ our\ sibling\ relationship\ with\ our\ PrevSib}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ m\_prevSib\ )}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Assign\ our\ siblings\ to\ each\ other}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ m\_prevSib-\/>m\_nextSib\ =\ m\_nextSib;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \ \ \ \textcolor{comment}{//\ We\ are\ the\ first\ child}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Make\ our\ next\ sib\ the\ first\ child\ of\ our\ parent}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ m\_parent-\/>m\_child\ =\ m\_nextSib;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Break\ our\ sibling\ relationship\ with\ our\ NextSib}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ m\_nextSib\ )}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ m\_nextSib-\/>m\_prevSib\ =\ m\_prevSib;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ m\_nextSib\ =\ 0;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ m\_prevSib\ =\ 0;}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//\ Attach\ to\ new\ frame\ hierarchy...}}
+\DoxyCodeLine{00094\ \ \ \ \ m\_parent\ =\ pTo;}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{if}(\ pTo\ )}
+\DoxyCodeLine{00096\ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ there\ is\ already\ a\ child,\ take\ it's\ place}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ pTo-\/>m\_child\ )}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ m\_nextSib\ =\ pTo-\/>m\_child;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ m\_nextSib-\/>m\_prevSib\ =\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ pTo-\/>m\_child\ =\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ unify::Tree::Detach()}
+\DoxyCodeLine{00108\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//\ If\ we\ have\ no\ parent\ then\ we\ are\ not\ attached\ and\ cannot\ detach.}}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordflow}{if}(\ m\_parent\ ==\ 0\ )\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//\ If\ we\ have\ don't\ have\ a\ previous\ sibling\ than\ we\ are\ the\ first\ child\ (update\ the\ parent).}}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordflow}{if}(\ m\_prevSib\ ==\ 0\ )}
+\DoxyCodeLine{00114\ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Parent:}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ m\_parent-\/>m\_child\ =\ m\_nextSib;}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Previous\ sibling:}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Next\ sibling:}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ m\_nextSib\ !=\ 0\ )\ m\_nextSib-\/>m\_prevSib\ =\ 0;}
+\DoxyCodeLine{00123\ \ \ \ \ \}}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00125\ \ \ \ \ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Parent:}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ NO\ CHANGE}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Previous\ sibling:}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ m\_prevSib-\/>m\_nextSib\ =\ m\_nextSib;}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Next\ sibling:}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ m\_nextSib\ !=\ 0\ )\ m\_nextSib-\/>m\_prevSib\ =\ m\_prevSib;}
+\DoxyCodeLine{00134\ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ unify::Tree::SetName(\ std::string\ name\ )}
+\DoxyCodeLine{00138\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ m\_name\ =\ name;}
+\DoxyCodeLine{00140\ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \textcolor{keyword}{inline}\ std::string\ unify::Tree::GetName()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00143\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_name;}
+\DoxyCodeLine{00145\ \}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ *\ unify::Tree::GetChild()}
+\DoxyCodeLine{00148\ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_child;}
+\DoxyCodeLine{00150\ \}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ *\ unify::Tree::GetParent()}
+\DoxyCodeLine{00153\ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_parent;}
+\DoxyCodeLine{00155\ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ *\ unify::Tree::GetRoot()}
+\DoxyCodeLine{00158\ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordflow}{return}(\ m\_parent\ ?\ m\_parent-\/>GetRoot()\ :\ this\ );}
+\DoxyCodeLine{00160\ \}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ *\ unify::Tree::GetTopSibling()}
+\DoxyCodeLine{00163\ \{}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{comment}{//\ Easy\ if\ we\ have\ a\ parent...}}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordflow}{if}(\ m\_parent\ )\ \textcolor{keywordflow}{return}\ m\_parent-\/>GetChild();}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{comment}{//\ No\ parent,\ then\ figure\ it\ out...}}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{comment}{//\ Check\ if\ we\ are\ NOT\ the\ top\ sibling...}}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordflow}{if}(\ m\_prevSib\ )}
+\DoxyCodeLine{00170\ \ \ \ \ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_prevSib-\/>GetTopSibling();}
+\DoxyCodeLine{00172\ \ \ \ \ \}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{comment}{//\ We\ ARE\ the\ top\ sibling}}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00176\ \}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ *\ unify::Tree::GetBottomSibling()}
+\DoxyCodeLine{00179\ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{comment}{//\ Check\ if\ we\ are\ NOT\ the\ bottom\ sibling...}}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordflow}{if}(\ m\_nextSib\ )}
+\DoxyCodeLine{00182\ \ \ \ \ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_nextSib-\/>GetBottomSibling();}
+\DoxyCodeLine{00184\ \ \ \ \ \}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{comment}{//\ We\ ARE\ the\ bottom\ sibling}}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00188\ \}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ *\ unify::Tree::GetPrev()}
+\DoxyCodeLine{00191\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_prevSib;}
+\DoxyCodeLine{00193\ \}}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ *\ unify::Tree::GetNext()}
+\DoxyCodeLine{00196\ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_nextSib;}
+\DoxyCodeLine{00198\ \}}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ *\ unify::Tree::SetParent(\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ *\ parent\ )}
+\DoxyCodeLine{00201\ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordflow}{return}(\ m\_parent\ =\ parent\ );}
+\DoxyCodeLine{00203\ \}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ *\ unify::Tree::SetChild(\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ *\ child\ )}
+\DoxyCodeLine{00206\ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordflow}{return}(\ m\_child\ =\ child\ );}
+\DoxyCodeLine{00208\ \}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ *\ unify::Tree::SetPrev(\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ *\ prev\ )}
+\DoxyCodeLine{00211\ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordflow}{return}(\ m\_prevSib\ =\ prev\ );}
+\DoxyCodeLine{00213\ \}}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ *\ unify::Tree::SetNext(\ \mbox{\hyperlink{classunify_1_1_tree}{unify::Tree}}\ *\ next)}
+\DoxyCodeLine{00216\ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordflow}{return}(\ m\_nextSib\ =\ next\ );}
+\DoxyCodeLine{00218\ \}}
+
+\end{DoxyCode}

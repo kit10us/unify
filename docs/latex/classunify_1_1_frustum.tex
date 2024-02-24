@@ -1,0 +1,35 @@
+\doxysection{unify\+::Frustum Class Reference}
+\hypertarget{classunify_1_1_frustum}{}\label{classunify_1_1_frustum}\index{unify::Frustum@{unify::Frustum}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_frustum_a543a194e3f252526c4e8612a622ba1dc}\label{classunify_1_1_frustum_a543a194e3f252526c4e8612a622ba1dc} 
+{\bfseries Frustum} (const \mbox{\hyperlink{classunify_1_1_matrix}{unify\+::\+Matrix}} \&world\+View\+Projection)
+\item 
+\Hypertarget{classunify_1_1_frustum_aca02865835f9fc0da88cd60cf930cd36}\label{classunify_1_1_frustum_aca02865835f9fc0da88cd60cf930cd36} 
+void {\bfseries Calculate} (const \mbox{\hyperlink{classunify_1_1_matrix}{unify\+::\+Matrix}} \&world\+View\+Projection)
+\item 
+\Hypertarget{classunify_1_1_frustum_acea70dc41764a26260da4a6fae07e212}\label{classunify_1_1_frustum_acea70dc41764a26260da4a6fae07e212} 
+bool {\bfseries Cast\+Point} (const \mbox{\hyperlink{classunify_1_1_v2}{unify\+::\+V2}}$<$ float $>$ \&unit, \mbox{\hyperlink{classunify_1_1_ray}{unify\+::\+Ray}} \&ray\+Out)
+\item 
+\Hypertarget{classunify_1_1_frustum_a731713a28723f2e9d9d153e5b097d227}\label{classunify_1_1_frustum_a731713a28723f2e9d9d153e5b097d227} 
+CULLSTATE {\bfseries Cull\+BBox} (\mbox{\hyperlink{classunify_1_1_b_box}{unify\+::\+BBox}}$<$ float $>$ \texorpdfstring{$\ast$}{*}p\+BBox)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_frustum_a8ed703f4a607631703222b5d407ef67a}\label{classunify_1_1_frustum_a8ed703f4a607631703222b5d407ef67a} 
+\mbox{\hyperlink{classunify_1_1_matrix}{unify\+::\+Matrix}} {\bfseries m\+\_\+world\+View\+Projection}
+\item 
+\Hypertarget{classunify_1_1_frustum_a5f03e87f36a9946104fb5d55e6e8bd1b}\label{classunify_1_1_frustum_a5f03e87f36a9946104fb5d55e6e8bd1b} 
+\mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ float $>$ {\bfseries m\+\_\+v\+Corner} \mbox{[}CORNER\+\_\+\+COUNT\mbox{]}
+\item 
+\Hypertarget{classunify_1_1_frustum_a27b019de5ea5f8a2cb17bfb1967d7df3}\label{classunify_1_1_frustum_a27b019de5ea5f8a2cb17bfb1967d7df3} 
+\mbox{\hyperlink{classunify_1_1_plane}{unify\+::\+Plane}} {\bfseries m\+\_\+\+Plane} \mbox{[}PLANE\+\_\+\+COUNT\mbox{]}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unify/Frustum.\+h\item 
+unify/Frustum.\+cpp\end{DoxyCompactItemize}

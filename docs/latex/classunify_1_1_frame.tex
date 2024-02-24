@@ -1,0 +1,203 @@
+\doxysection{unify\+::Frame Class Reference}
+\hypertarget{classunify_1_1_frame}{}\label{classunify_1_1_frame}\index{unify::Frame@{unify::Frame}}
+
+
+\doxylink{classunify_1_1_frame}{Frame} provides a hierarchical relationship structure for the purpose of providing relative transformation in a rendering or physics pipeline.  
+
+
+
+
+{\ttfamily \#include $<$Frame.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_frame_a285c5e843a79ce946443eb1b76cff5b8}\label{classunify_1_1_frame_a285c5e843a79ce946443eb1b76cff5b8} 
+{\bfseries Frame} (std\+::string s\+Name)
+\item 
+\Hypertarget{classunify_1_1_frame_ab688eca7d83b23b67f52361f967ce336}\label{classunify_1_1_frame_ab688eca7d83b23b67f52361f967ce336} 
+{\bfseries Frame} (const \mbox{\hyperlink{classunify_1_1_frame}{Frame}} \&frame)
+\item 
+\Hypertarget{classunify_1_1_frame_a75c34fb05e2c547d06800717cefdde9f}\label{classunify_1_1_frame_a75c34fb05e2c547d06800717cefdde9f} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \& {\bfseries operator=} (const \mbox{\hyperlink{classunify_1_1_frame}{Frame}} \&frame)
+\item 
+\Hypertarget{classunify_1_1_frame_abfffc62eb4ac103dd5fa6b814218b49a}\label{classunify_1_1_frame_abfffc62eb4ac103dd5fa6b814218b49a} 
+void {\bfseries Set\+Matrix} (const \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \&matrix)
+\item 
+\Hypertarget{classunify_1_1_frame_a3bd9155107de40d1c1310e03f9337e83}\label{classunify_1_1_frame_a3bd9155107de40d1c1310e03f9337e83} 
+void {\bfseries Attach\+To} (\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*}new\+Parent)
+\item 
+\Hypertarget{classunify_1_1_frame_ae28a971524a4793bc60ac4f5eca8b0e3}\label{classunify_1_1_frame_ae28a971524a4793bc60ac4f5eca8b0e3} 
+virtual void {\bfseries Update} ()
+\item 
+\Hypertarget{classunify_1_1_frame_a775e75e18bb43eb8e882f3028a6364ae}\label{classunify_1_1_frame_a775e75e18bb43eb8e882f3028a6364ae} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \& {\bfseries Look\+At} (const \mbox{\hyperlink{classunify_1_1_frame}{Frame}} \&at, const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&up=\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$(0, 1, 0))
+\item 
+\Hypertarget{classunify_1_1_frame_aa04b4f48f92c06d533fb6aeb31038fad}\label{classunify_1_1_frame_aa04b4f48f92c06d533fb6aeb31038fad} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \& {\bfseries Look\+At} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&at, const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&up=\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$(0, 1, 0))
+\item 
+\Hypertarget{classunify_1_1_frame_aec0a89efff24529a33c274669cba2dfc}\label{classunify_1_1_frame_aec0a89efff24529a33c274669cba2dfc} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \& {\bfseries Look\+Direction} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&direction, const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&left)
+\item 
+\Hypertarget{classunify_1_1_frame_a4679ccfb992a2d361ae64bfd2b713738}\label{classunify_1_1_frame_a4679ccfb992a2d361ae64bfd2b713738} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \& {\bfseries Move\+By} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&by)
+\item 
+\Hypertarget{classunify_1_1_frame_a92a91433ca9087ba521026d7b403a114}\label{classunify_1_1_frame_a92a91433ca9087ba521026d7b403a114} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \& {\bfseries Slide} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&axis, float amount)
+\item 
+\Hypertarget{classunify_1_1_frame_ae2efdcd61e03e97c76d0397a7859a807}\label{classunify_1_1_frame_ae2efdcd61e03e97c76d0397a7859a807} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \& {\bfseries Orbit} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&origin, const \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ float $>$ \&direction, \mbox{\hyperlink{classunify_1_1_angle}{Angle}} angle)
+\begin{DoxyCompactList}\small\item\em Orbit about an origin point, an amount of degrees. This orbit utilizes our current position, and orientation. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_frame_a3064b2071a6c172affb1833c53431179}\label{classunify_1_1_frame_a3064b2071a6c172affb1833c53431179} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \& {\bfseries Orbit} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&origin, const \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&orbit, float distance)
+\item 
+\Hypertarget{classunify_1_1_frame_ac190c08e7eeba13a2605413add73aaae}\label{classunify_1_1_frame_ac190c08e7eeba13a2605413add73aaae} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \& {\bfseries Rotate} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&axis, \mbox{\hyperlink{classunify_1_1_angle}{Angle}} angle)
+\item 
+\Hypertarget{classunify_1_1_frame_a16a4a2500d9a1a0d3b1528946f0f1d32}\label{classunify_1_1_frame_a16a4a2500d9a1a0d3b1528946f0f1d32} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \& {\bfseries Rotate} (const \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&q)
+\item 
+\Hypertarget{classunify_1_1_frame_a4ce062427441b6773362ac1fdd9484b5}\label{classunify_1_1_frame_a4ce062427441b6773362ac1fdd9484b5} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \& {\bfseries Rotate\+About} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&axis, \mbox{\hyperlink{classunify_1_1_angle}{Angle}} angle)
+\item 
+\Hypertarget{classunify_1_1_frame_a2d3026b7d217b89371598cd95a308ae4}\label{classunify_1_1_frame_a2d3026b7d217b89371598cd95a308ae4} 
+const \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \& {\bfseries Get\+Matrix} () const
+\item 
+\Hypertarget{classunify_1_1_frame_a1135631d472e8cee8e8d68ae97b3b36d}\label{classunify_1_1_frame_a1135631d472e8cee8e8d68ae97b3b36d} 
+const \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \& {\bfseries Get\+Final\+Matrix} () const
+\begin{DoxyCompactList}\small\item\em Final matrix is the result of the parent matrix combined with our matrix. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_frame_a3f5db7cfae290cb68e816073fa260f1e}\label{classunify_1_1_frame_a3f5db7cfae290cb68e816073fa260f1e} 
+\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ {\bfseries Get\+Left} () const
+\item 
+\Hypertarget{classunify_1_1_frame_acf8a3216ea70d903c7b1e48348d8ca28}\label{classunify_1_1_frame_acf8a3216ea70d903c7b1e48348d8ca28} 
+\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ {\bfseries Get\+Up} () const
+\item 
+\Hypertarget{classunify_1_1_frame_ab1bd7fceabc26705c00d58bd4ef10550}\label{classunify_1_1_frame_ab1bd7fceabc26705c00d58bd4ef10550} 
+\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ {\bfseries Get\+Forward} () const
+\item 
+\Hypertarget{classunify_1_1_frame_a1727f04f5722881de90dd414e93c67b5}\label{classunify_1_1_frame_a1727f04f5722881de90dd414e93c67b5} 
+\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} {\bfseries Get\+Rotation} () const
+\item 
+\Hypertarget{classunify_1_1_frame_a705b2fdfe6dcf71936fe9b09a4563768}\label{classunify_1_1_frame_a705b2fdfe6dcf71936fe9b09a4563768} 
+\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ {\bfseries Get\+Position} () const
+\item 
+\Hypertarget{classunify_1_1_frame_a4bc11c020aeef854e5b912b9853c5c9b}\label{classunify_1_1_frame_a4bc11c020aeef854e5b912b9853c5c9b} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \& {\bfseries Set\+Left} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&left)
+\item 
+\Hypertarget{classunify_1_1_frame_a2683fa9b3c5e559bdfea56e5d10c7c43}\label{classunify_1_1_frame_a2683fa9b3c5e559bdfea56e5d10c7c43} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \& {\bfseries Set\+Up} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&up)
+\item 
+\Hypertarget{classunify_1_1_frame_ad20ad7e95a3334870c6586d434b3a0fb}\label{classunify_1_1_frame_ad20ad7e95a3334870c6586d434b3a0fb} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \& {\bfseries Set\+Forward} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&direction)
+\item 
+\Hypertarget{classunify_1_1_frame_addfc5b39ba8a9cf0ae0cb6bc066f16e8}\label{classunify_1_1_frame_addfc5b39ba8a9cf0ae0cb6bc066f16e8} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \& {\bfseries Set\+Rotation} (const \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&rotation)
+\item 
+\Hypertarget{classunify_1_1_frame_aa20b9685d22dc4df9c787d9e08553ea9}\label{classunify_1_1_frame_aa20b9685d22dc4df9c787d9e08553ea9} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \& {\bfseries Set\+Position} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&position)
+\item 
+\Hypertarget{classunify_1_1_frame_a3b3709400488bd39fd5fa969f8332e13}\label{classunify_1_1_frame_a3b3709400488bd39fd5fa969f8332e13} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \& {\bfseries Set} (const \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&orientation, const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&position, const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&scale=\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$(1, 1, 1))
+\item 
+\Hypertarget{classunify_1_1_frame_a4cfcd983aaceba507ac9c5cf907a9ca3}\label{classunify_1_1_frame_a4cfcd983aaceba507ac9c5cf907a9ca3} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Parent} ()
+\item 
+\Hypertarget{classunify_1_1_frame_a82e2f84753fb75963ef0b175413f7f5d}\label{classunify_1_1_frame_a82e2f84753fb75963ef0b175413f7f5d} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Child} ()
+\item 
+\Hypertarget{classunify_1_1_frame_af2b57026c2a408e16443772c61f341c4}\label{classunify_1_1_frame_af2b57026c2a408e16443772c61f341c4} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Previous} ()
+\item 
+\Hypertarget{classunify_1_1_frame_a46c5319e60ec5f6a159904b4accf1bcb}\label{classunify_1_1_frame_a46c5319e60ec5f6a159904b4accf1bcb} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Next} ()
+\item 
+\Hypertarget{classunify_1_1_frame_a3dd170eed51c0f491ba0f3e4a705e66f}\label{classunify_1_1_frame_a3dd170eed51c0f491ba0f3e4a705e66f} 
+const \mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Parent} () const
+\item 
+\Hypertarget{classunify_1_1_frame_a4c9cad12b498b2d674085d14335ea607}\label{classunify_1_1_frame_a4c9cad12b498b2d674085d14335ea607} 
+const \mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Child} () const
+\item 
+\Hypertarget{classunify_1_1_frame_a8ef0edc94b4df6b9c18c273b00f073c1}\label{classunify_1_1_frame_a8ef0edc94b4df6b9c18c273b00f073c1} 
+const \mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Previous} () const
+\item 
+\Hypertarget{classunify_1_1_frame_ab49bd920b2a72b43ce3fe0ed70ca999a}\label{classunify_1_1_frame_ab49bd920b2a72b43ce3fe0ed70ca999a} 
+const \mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Next} () const
+\item 
+\Hypertarget{classunify_1_1_frame_a81c0c865b5fac764f502dec9b4eb5e1e}\label{classunify_1_1_frame_a81c0c865b5fac764f502dec9b4eb5e1e} 
+std\+::string {\bfseries Get\+Name} () const
+\item 
+\Hypertarget{classunify_1_1_frame_aa4f1c1ab1a26f899955efe698fae3125}\label{classunify_1_1_frame_aa4f1c1ab1a26f899955efe698fae3125} 
+bool {\bfseries Is\+Dirty} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_frame_a7ef385a9d1cfb2bc4cfb44f01fa9c59c}\label{classunify_1_1_frame_a7ef385a9d1cfb2bc4cfb44f01fa9c59c} 
+static void {\bfseries Update\+On\+Change} (bool tf)
+\item 
+\Hypertarget{classunify_1_1_frame_ae2eaca99ff0927e2529406b5c65914a0}\label{classunify_1_1_frame_ae2eaca99ff0927e2529406b5c65914a0} 
+static bool {\bfseries Update\+On\+Change} ()
+\item 
+\Hypertarget{classunify_1_1_frame_a791b5449891d1690d56369e9593c3e96}\label{classunify_1_1_frame_a791b5449891d1690d56369e9593c3e96} 
+static \mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*} {\bfseries Create\+Duplicate\+Hierarchy} (const \mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*}in)
+\item 
+\Hypertarget{classunify_1_1_frame_add4ca897d7add1058c0e27c85fe6b494}\label{classunify_1_1_frame_add4ca897d7add1058c0e27c85fe6b494} 
+static void {\bfseries Create\+Index\+To\+Frame\+Vector} (std\+::vector$<$ \mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*} $>$ \&index\+To\+Frame\+Out, \mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*}frame)
+\item 
+\Hypertarget{classunify_1_1_frame_a72bee071d6d57160c5446cdf99658980}\label{classunify_1_1_frame_a72bee071d6d57160c5446cdf99658980} 
+static void {\bfseries Create\+Name\+To\+Index\+Map} (std\+::map$<$ std\+::string, size\+\_\+t $>$ \&name\+To\+Index\+Out, const std\+::vector$<$ \mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*} $>$ \&index\+To\+Frame\+In)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_frame_ae544a8feb6f62740b6b1a5391869eb3e}\label{classunify_1_1_frame_ae544a8feb6f62740b6b1a5391869eb3e} 
+void {\bfseries Make\+Dirty} (bool dirty\+Siblings=false)
+\item 
+\Hypertarget{classunify_1_1_frame_a876e1233640a845b58b3b2163e491e49}\label{classunify_1_1_frame_a876e1233640a845b58b3b2163e491e49} 
+void {\bfseries Add\+Child} (\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*}frame)
+\item 
+\Hypertarget{classunify_1_1_frame_a7ff332b433c92dd84989ee425b10f38d}\label{classunify_1_1_frame_a7ff332b433c92dd84989ee425b10f38d} 
+void {\bfseries Add\+Sibling} (\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*}frame)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_frame_a1ae81d444231f6969463c7f2eb10e062}\label{classunify_1_1_frame_a1ae81d444231f6969463c7f2eb10e062} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+child}
+\item 
+\Hypertarget{classunify_1_1_frame_affb19bc0828ffc26c00e4eabb1cb6660}\label{classunify_1_1_frame_affb19bc0828ffc26c00e4eabb1cb6660} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+previous}
+\item 
+\Hypertarget{classunify_1_1_frame_a81e36f02d320a7bc787fc3b2adbd5b71}\label{classunify_1_1_frame_a81e36f02d320a7bc787fc3b2adbd5b71} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+next}
+\item 
+\Hypertarget{classunify_1_1_frame_a85c19cd1bc1efa3fab20be098d9f49b4}\label{classunify_1_1_frame_a85c19cd1bc1efa3fab20be098d9f49b4} 
+\mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+parent}
+\item 
+\Hypertarget{classunify_1_1_frame_a0fe70d002626359a0d70b63c5a92ede9}\label{classunify_1_1_frame_a0fe70d002626359a0d70b63c5a92ede9} 
+std\+::string {\bfseries m\+\_\+name}
+\item 
+\Hypertarget{classunify_1_1_frame_affa47e3f1cba8505d99df7d63be7ab88}\label{classunify_1_1_frame_affa47e3f1cba8505d99df7d63be7ab88} 
+\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} {\bfseries m\+\_\+matrix}
+\item 
+\Hypertarget{classunify_1_1_frame_a3c88bd4a3ab5cf8adb16f519f4df1a87}\label{classunify_1_1_frame_a3c88bd4a3ab5cf8adb16f519f4df1a87} 
+\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} {\bfseries m\+\_\+final\+Cached}
+\item 
+\Hypertarget{classunify_1_1_frame_aec395b8f831a4c7c61313e9b0e48ea84}\label{classunify_1_1_frame_aec395b8f831a4c7c61313e9b0e48ea84} 
+bool {\bfseries m\+\_\+is\+Dirty}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_frame_aa2e0954afcc0f7fd5a0cbf3df858ff0c}\label{classunify_1_1_frame_aa2e0954afcc0f7fd5a0cbf3df858ff0c} 
+static bool {\bfseries m\+\_\+update\+On\+Change} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classunify_1_1_frame}{Frame} provides a hierarchical relationship structure for the purpose of providing relative transformation in a rendering or physics pipeline. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unify/Frame.\+h\item 
+unify/Frame.\+cpp\end{DoxyCompactItemize}

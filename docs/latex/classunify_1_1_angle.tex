@@ -1,0 +1,185 @@
+\doxysection{unify\+::Angle Class Reference}
+\hypertarget{classunify_1_1_angle}{}\label{classunify_1_1_angle}\index{unify::Angle@{unify::Angle}}
+
+
+An \doxylink{classunify_1_1_angle}{Angle} abstract so we can move between degrees and radians easily, and simplify math by pushing the actual conversion format to the beginning and end of the lifetime of the math -\/ that is to say, we don\textquotesingle{}t care if A + B is degrees or radians, we only care that the result is in degrees or radians.  
+
+
+
+
+{\ttfamily \#include $<$Angle.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classunify_1_1_angle_aca3c6e1519b40835d31736430ca082a9}{Angle}} ()
+\item 
+\mbox{\hyperlink{classunify_1_1_angle_a1f7c46281e5d0d4d81db44e0f00071b2}{Angle}} (const \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \&angle)
+\item 
+\mbox{\hyperlink{classunify_1_1_angle_a9e9bb3e2a8a93eee10c3a80f94ae4c25}{Angle}} (std\+::string angle)
+\item 
+\Hypertarget{classunify_1_1_angle_a4e02d645fa7bd2ef97862522b4291f8f}\label{classunify_1_1_angle_a4e02d645fa7bd2ef97862522b4291f8f} 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} \& {\bfseries operator=} (const \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \&angle)
+\item 
+\Hypertarget{classunify_1_1_angle_ab653a1308c1f47d8cd69585767a16820}\label{classunify_1_1_angle_ab653a1308c1f47d8cd69585767a16820} 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} \& {\bfseries operator+=} (const \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \&angle)
+\item 
+\Hypertarget{classunify_1_1_angle_a6e8ecbcbb07e2416597de12cfd75099b}\label{classunify_1_1_angle_a6e8ecbcbb07e2416597de12cfd75099b} 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} \& {\bfseries operator-\/=} (const \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \&angle)
+\item 
+\Hypertarget{classunify_1_1_angle_ad2d077c7088fc33d3134e30a1401c4e1}\label{classunify_1_1_angle_ad2d077c7088fc33d3134e30a1401c4e1} 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} \& {\bfseries operator\texorpdfstring{$\ast$}{*}=} (const \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \&angle)
+\item 
+\Hypertarget{classunify_1_1_angle_af130381aa0c4cc83f6436bb95389f593}\label{classunify_1_1_angle_af130381aa0c4cc83f6436bb95389f593} 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} \& {\bfseries operator/=} (const \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \&angle)
+\item 
+\Hypertarget{classunify_1_1_angle_ae69e283182a3c0862adac537482b27d1}\label{classunify_1_1_angle_ae69e283182a3c0862adac537482b27d1} 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} {\bfseries operator+} (const \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \&angle) const
+\item 
+\Hypertarget{classunify_1_1_angle_a64e3249a09a5bbffd8a0c05bab2753b7}\label{classunify_1_1_angle_a64e3249a09a5bbffd8a0c05bab2753b7} 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} {\bfseries operator-\/} (const \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \&angle) const
+\item 
+\Hypertarget{classunify_1_1_angle_afed669cc8b1aada2349e2daad85c9e2e}\label{classunify_1_1_angle_afed669cc8b1aada2349e2daad85c9e2e} 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} {\bfseries operator\texorpdfstring{$\ast$}{*}} (const \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \&angle) const
+\item 
+\Hypertarget{classunify_1_1_angle_ad299cd98127c91da354bdc2415b1448c}\label{classunify_1_1_angle_ad299cd98127c91da354bdc2415b1448c} 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} {\bfseries operator/} (const \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \&angle) const
+\item 
+\Hypertarget{classunify_1_1_angle_ad546e50e0c0d3a07dd7e16e1116f08c3}\label{classunify_1_1_angle_ad546e50e0c0d3a07dd7e16e1116f08c3} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \&angle) const
+\item 
+\Hypertarget{classunify_1_1_angle_a879297d9ce63da73f107feb3eac42194}\label{classunify_1_1_angle_a879297d9ce63da73f107feb3eac42194} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \&angle) const
+\item 
+\Hypertarget{classunify_1_1_angle_aeee940e38571c00a4d61e5229b66a59e}\label{classunify_1_1_angle_aeee940e38571c00a4d61e5229b66a59e} 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} \& {\bfseries operator\texorpdfstring{$\ast$}{*}=} (float scalar)
+\item 
+\Hypertarget{classunify_1_1_angle_ad140db68a6d1106be99b026226dce1b3}\label{classunify_1_1_angle_ad140db68a6d1106be99b026226dce1b3} 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} \& {\bfseries operator/=} (float scalar)
+\item 
+\Hypertarget{classunify_1_1_angle_ab741fa2b2d79a9af42073c2af9901a06}\label{classunify_1_1_angle_ab741fa2b2d79a9af42073c2af9901a06} 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} {\bfseries operator\texorpdfstring{$\ast$}{*}} (float scalar) const
+\item 
+\Hypertarget{classunify_1_1_angle_a7ac06961b0f1d6a21385ae824901ec8d}\label{classunify_1_1_angle_a7ac06961b0f1d6a21385ae824901ec8d} 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} {\bfseries operator/} (float scalar) const
+\item 
+\Hypertarget{classunify_1_1_angle_ac1a8295a923c1175140fed51e6ee3bac}\label{classunify_1_1_angle_ac1a8295a923c1175140fed51e6ee3bac} 
+bool {\bfseries operator$>$} (const \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \&angle)
+\item 
+\Hypertarget{classunify_1_1_angle_a2110ed259c8f321e152f2cd18dd6b89e}\label{classunify_1_1_angle_a2110ed259c8f321e152f2cd18dd6b89e} 
+bool {\bfseries operator$>$=} (const \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \&angle)
+\item 
+\Hypertarget{classunify_1_1_angle_a1503f7bb6bc02d8bf3df574ce896987b}\label{classunify_1_1_angle_a1503f7bb6bc02d8bf3df574ce896987b} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \&angle)
+\item 
+\Hypertarget{classunify_1_1_angle_a4ef6997ab344e8288817850398eb3a00}\label{classunify_1_1_angle_a4ef6997ab344e8288817850398eb3a00} 
+bool {\bfseries operator$<$=} (const \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \&angle)
+\item 
+\Hypertarget{classunify_1_1_angle_af5c7be28a33d8b76362df6569e5c0168}\label{classunify_1_1_angle_af5c7be28a33d8b76362df6569e5c0168} 
+float {\bfseries To\+Radians} () const
+\begin{DoxyCompactList}\small\item\em Returns angle in radians. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classunify_1_1_angle_a6c58b71abc62f8769771fdef36cc1f2d}{To\+Degrees}} () const
+\begin{DoxyCompactList}\small\item\em Returns angle in degress. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_angle_a30dff071dfcf2c23644b933a72a0d03d}\label{classunify_1_1_angle_a30dff071dfcf2c23644b933a72a0d03d} 
+int {\bfseries Normalize} ()
+\item 
+\Hypertarget{classunify_1_1_angle_a18d6ffd45d91030d09d48fff2a5232fa}\label{classunify_1_1_angle_a18d6ffd45d91030d09d48fff2a5232fa} 
+float {\bfseries Sin\+Of} () const
+\begin{DoxyCompactList}\small\item\em Returns the sine of this angle. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_angle_ac2ace7a480a88d79ea2f604b7d2206f5}\label{classunify_1_1_angle_ac2ace7a480a88d79ea2f604b7d2206f5} 
+float {\bfseries Cos\+Of} () const
+\begin{DoxyCompactList}\small\item\em Returns the cosine of this angle. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_angle_a5bba8d858af081aad239d911df255cb7}\label{classunify_1_1_angle_a5bba8d858af081aad239d911df255cb7} 
+std\+::string {\bfseries To\+String} (bool radians=true) const
+\begin{DoxyCompactList}\small\item\em Convert from radians to a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} \mbox{\hyperlink{classunify_1_1_angle_ad50b7254fb56e40cc763983e4d7176b4}{Angle\+In\+Radians}} (float radians)
+\item 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} \mbox{\hyperlink{classunify_1_1_angle_aaef77280f0f320d6a87ac07b474b3815}{Angle\+In\+Degrees}} (float degrees)
+\item 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} \mbox{\hyperlink{classunify_1_1_angle_a992aa06d0940da30c6ce03c30b21d1c1}{Angle\+PI}} ()
+\item 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} \mbox{\hyperlink{classunify_1_1_angle_a5628ad1dcbc300e5b9bfb0f32fa587c9}{Angle\+PI2}} ()
+\item 
+\mbox{\hyperlink{classunify_1_1_angle}{Angle}} \mbox{\hyperlink{classunify_1_1_angle_a0f701690b0b61b8bc04fc211cabab117}{Angle\+PIHalf}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \doxylink{classunify_1_1_angle}{Angle} abstract so we can move between degrees and radians easily, and simplify math by pushing the actual conversion format to the beginning and end of the lifetime of the math -\/ that is to say, we don\textquotesingle{}t care if A + B is degrees or radians, we only care that the result is in degrees or radians. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classunify_1_1_angle_aca3c6e1519b40835d31736430ca082a9}\label{classunify_1_1_angle_aca3c6e1519b40835d31736430ca082a9} 
+\index{unify::Angle@{unify::Angle}!Angle@{Angle}}
+\index{Angle@{Angle}!unify::Angle@{unify::Angle}}
+\doxysubsubsection{\texorpdfstring{Angle()}{Angle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Angle\+::\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+$<$definition$>$ Construct an angle to the value of zero. $<$/definition$>$ \Hypertarget{classunify_1_1_angle_a1f7c46281e5d0d4d81db44e0f00071b2}\label{classunify_1_1_angle_a1f7c46281e5d0d4d81db44e0f00071b2} 
+\index{unify::Angle@{unify::Angle}!Angle@{Angle}}
+\index{Angle@{Angle}!unify::Angle@{unify::Angle}}
+\doxysubsubsection{\texorpdfstring{Angle()}{Angle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Angle\+::\+Angle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \&}]{angle }\end{DoxyParamCaption})}
+
+$<$definition$>$ Copy constructor. $<$/definition$>$ \Hypertarget{classunify_1_1_angle_a9e9bb3e2a8a93eee10c3a80f94ae4c25}\label{classunify_1_1_angle_a9e9bb3e2a8a93eee10c3a80f94ae4c25} 
+\index{unify::Angle@{unify::Angle}!Angle@{Angle}}
+\index{Angle@{Angle}!unify::Angle@{unify::Angle}}
+\doxysubsubsection{\texorpdfstring{Angle()}{Angle()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Angle\+::\+Angle (\begin{DoxyParamCaption}\item[{std\+::string}]{angle }\end{DoxyParamCaption})}
+
+$<$definition$>$ Construct an angle from a string. $<$/definition$>$ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classunify_1_1_angle_a6c58b71abc62f8769771fdef36cc1f2d}\label{classunify_1_1_angle_a6c58b71abc62f8769771fdef36cc1f2d} 
+\index{unify::Angle@{unify::Angle}!ToDegrees@{ToDegrees}}
+\index{ToDegrees@{ToDegrees}!unify::Angle@{unify::Angle}}
+\doxysubsubsection{\texorpdfstring{ToDegrees()}{ToDegrees()}}
+{\footnotesize\ttfamily float Angle\+::\+To\+Degrees (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns angle in degress. 
+
+summary\texorpdfstring{$>$}{>} Ensures our value is within 360 degrees, without loss of precision (if we are 367, then we become 7, etc.). Returns the change in magnitude relative to 360 (367 returns 1, -\/728 returns -\/2, etc.). /summary\texorpdfstring{$>$}{>} 
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classunify_1_1_angle_aaef77280f0f320d6a87ac07b474b3815}\label{classunify_1_1_angle_aaef77280f0f320d6a87ac07b474b3815} 
+\index{unify::Angle@{unify::Angle}!AngleInDegrees@{AngleInDegrees}}
+\index{AngleInDegrees@{AngleInDegrees}!unify::Angle@{unify::Angle}}
+\doxysubsubsection{\texorpdfstring{AngleInDegrees}{AngleInDegrees}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_angle}{Angle}} Angle\+In\+Degrees (\begin{DoxyParamCaption}\item[{float}]{degrees }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+$<$definition$>$ Construct an angle from degrees. $<$/definition$>$ \Hypertarget{classunify_1_1_angle_ad50b7254fb56e40cc763983e4d7176b4}\label{classunify_1_1_angle_ad50b7254fb56e40cc763983e4d7176b4} 
+\index{unify::Angle@{unify::Angle}!AngleInRadians@{AngleInRadians}}
+\index{AngleInRadians@{AngleInRadians}!unify::Angle@{unify::Angle}}
+\doxysubsubsection{\texorpdfstring{AngleInRadians}{AngleInRadians}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_angle}{Angle}} Angle\+In\+Radians (\begin{DoxyParamCaption}\item[{float}]{radians }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+$<$definition$>$ Construct an angle from radians. $<$/definition$>$ \Hypertarget{classunify_1_1_angle_a992aa06d0940da30c6ce03c30b21d1c1}\label{classunify_1_1_angle_a992aa06d0940da30c6ce03c30b21d1c1} 
+\index{unify::Angle@{unify::Angle}!AnglePI@{AnglePI}}
+\index{AnglePI@{AnglePI}!unify::Angle@{unify::Angle}}
+\doxysubsubsection{\texorpdfstring{AnglePI}{AnglePI}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_angle}{Angle}} Angle\+PI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+$<$definition$>$ Construct an angle with the value of pi. $<$/definition$>$ \Hypertarget{classunify_1_1_angle_a5628ad1dcbc300e5b9bfb0f32fa587c9}\label{classunify_1_1_angle_a5628ad1dcbc300e5b9bfb0f32fa587c9} 
+\index{unify::Angle@{unify::Angle}!AnglePI2@{AnglePI2}}
+\index{AnglePI2@{AnglePI2}!unify::Angle@{unify::Angle}}
+\doxysubsubsection{\texorpdfstring{AnglePI2}{AnglePI2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_angle}{Angle}} Angle\+PI2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+$<$definition$>$ Construct an angle with the value of pi \texorpdfstring{$\ast$}{*} 2. $<$/definition$>$ \Hypertarget{classunify_1_1_angle_a0f701690b0b61b8bc04fc211cabab117}\label{classunify_1_1_angle_a0f701690b0b61b8bc04fc211cabab117} 
+\index{unify::Angle@{unify::Angle}!AnglePIHalf@{AnglePIHalf}}
+\index{AnglePIHalf@{AnglePIHalf}!unify::Angle@{unify::Angle}}
+\doxysubsubsection{\texorpdfstring{AnglePIHalf}{AnglePIHalf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_angle}{Angle}} Angle\+PIHalf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+$<$definition$>$ Construct an angle with the value of half pi. $<$/definition$>$
+
+$<$definition$>$ Construct an angle with rthe value of half pi. $<$/definition$>$ 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unify/Angle.\+h\item 
+unify/Angle.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,61 @@
+\doxysection{unify\+::BSphere\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classunify_1_1_b_sphere}{}\label{classunify_1_1_b_sphere}\index{unify::BSphere$<$ T $>$@{unify::BSphere$<$ T $>$}}
+
+
+A sphere used to track a volume, typically of an object.  
+
+
+
+
+{\ttfamily \#include $<$BSphere.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_b_sphere_adb5e3b6ac4a851e21212e9d54130cd12}\label{classunify_1_1_b_sphere_adb5e3b6ac4a851e21212e9d54130cd12} 
+{\bfseries BSphere} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ \&center)
+\item 
+\Hypertarget{classunify_1_1_b_sphere_a98e076a6ed13074832606f36ff779bc3}\label{classunify_1_1_b_sphere_a98e076a6ed13074832606f36ff779bc3} 
+{\bfseries BSphere} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ \&center, const T \&radius)
+\item 
+\Hypertarget{classunify_1_1_b_sphere_acaa7b6a1942d03dccb9a34ef60a95c1a}\label{classunify_1_1_b_sphere_acaa7b6a1942d03dccb9a34ef60a95c1a} 
+\mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere}} \& {\bfseries operator+=} (const \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere}}$<$ T $>$ \&sphere)
+\item 
+\Hypertarget{classunify_1_1_b_sphere_a823e1c535f50f41275d40bbab029b1db}\label{classunify_1_1_b_sphere_a823e1c535f50f41275d40bbab029b1db} 
+\mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere}} \& {\bfseries operator+=} (\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ point)
+\item 
+\Hypertarget{classunify_1_1_b_sphere_a2e00b6fb4f7cbe53e21e99e0a7e57164}\label{classunify_1_1_b_sphere_a2e00b6fb4f7cbe53e21e99e0a7e57164} 
+\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ {\bfseries Get\+Center} () const
+\begin{DoxyCompactList}\small\item\em Returns the center of the bounding sphere. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_b_sphere_a6e34412cd007563db4668bbb45134b7c}\label{classunify_1_1_b_sphere_a6e34412cd007563db4668bbb45134b7c} 
+T {\bfseries Get\+Radius} () const
+\begin{DoxyCompactList}\small\item\em Retruns the radius of the sphere. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_b_sphere_aab0a549bde28191c3c9f3262b91ef3a6}\label{classunify_1_1_b_sphere_aab0a549bde28191c3c9f3262b91ef3a6} 
+T {\bfseries Get\+Diameter} () const
+\begin{DoxyCompactList}\small\item\em Retruns the diameter of the sphere. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_b_sphere_ad2f437dca29ba8c172392f58e6ce387e}\label{classunify_1_1_b_sphere_ad2f437dca29ba8c172392f58e6ce387e} 
+bool {\bfseries Contains} (\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ point) const
+\begin{DoxyCompactList}\small\item\em Returns true if point lies within the bounding sphere. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_b_sphere_a673e1766ebbaf9e2abd31db214afe5ef}\label{classunify_1_1_b_sphere_a673e1766ebbaf9e2abd31db214afe5ef} 
+bool {\bfseries Collides} (\mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere}}$<$ T $>$ sphere) const
+\begin{DoxyCompactList}\small\item\em Returns true if a sphere overlaps/collides with another sphere. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_b_sphere_a9fc6217c6b7fae6d6009060c134f2455}\label{classunify_1_1_b_sphere_a9fc6217c6b7fae6d6009060c134f2455} 
+\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ T $>$ {\bfseries center}
+\item 
+\Hypertarget{classunify_1_1_b_sphere_afdbb8ae4d3181ad2c0cc49fb642c077f}\label{classunify_1_1_b_sphere_afdbb8ae4d3181ad2c0cc49fb642c077f} 
+T {\bfseries radius}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T = float$>$\newline
+class unify\+::\+BSphere$<$ T $>$}
+A sphere used to track a volume, typically of an object. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unify/BSphere.\+h\item 
+unify/BSphere.\+inl\end{DoxyCompactItemize}

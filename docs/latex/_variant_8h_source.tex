@@ -1,0 +1,119 @@
+\doxysection{Variant.\+h}
+\hypertarget{_variant_8h_source}{}\label{_variant_8h_source}\index{unify/Variant.h@{unify/Variant.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}\ }
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_variant}{Variant}}}
+\DoxyCodeLine{00034\ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ TYPE\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ Type\_Undefined,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ Type\_Bool,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ Type\_Integer,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ Type\_String,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ Type\_Float,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ Type\_ByteData}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}();\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}\ \&\ var\ );}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ source\ );}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}(\ std::string\ source\ );}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ source\ );}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}(\ \textcolor{keywordtype}{void}\ *\ pData,\ TYPE\ type,\ \textcolor{keywordtype}{bool}\ bReference\ );}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_variant}{\string~Variant}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}\ \&\ operator=(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}\ \&\ );}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}\ *\ Set(\ std::string\ sSource\ );}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}\ *\ Set(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ pVoid,\ TYPE\ type\ );}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}\ *\ SetReference(\ \textcolor{keywordtype}{void}\ *\ pVoid,\ TYPE\ type\ );}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}\ *\ SetString(\ std::string\ sSource\ );}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}\ *\ SetInt(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ iInt\ );}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}\ *\ SetBool(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ bBool\ );}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}\ *\ SetFloat(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ fFloat\ );}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ TYPE\ Type()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ std::string\ TypeName()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ GeBool()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ GetInt()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ std::string\ GetString()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ GetFloat()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\ GetAddress()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Free();}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetConstant(\ \textcolor{keywordtype}{bool}\ bConstant\ );}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ Constant()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ Reference()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ Empty()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ std::string();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ TypeName(\ \textcolor{keyword}{const}\ TYPE\ type\ );}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ TYPE\ TypeEnum(\ std::string\ sType\ );}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ TYPE\ m\_type;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_isReference;\ \textcolor{comment}{//\ Is\ this\ a\ reference\ (if\ so,\ we\ don't\ handle\ it's\ memory).}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_isConstant;\ \ \textcolor{comment}{//\ Can\ this\ data\ be\ altered\ from\ initialization?}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\ m\_pData;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ *\ m\_pBool;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ *\ m\_pInt;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ *\ m\_pString;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ *\ m\_pFloat;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}\ data;}
+\DoxyCodeLine{00088\ \ \ \ \ \};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_var_bool}{VarBool}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}}
+\DoxyCodeLine{00091\ \ \ \ \ \{\textcolor{keyword}{public}:\mbox{\hyperlink{classunify_1_1_var_bool}{VarBool}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ bBool\ );\};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_var_integer}{VarInteger}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}}
+\DoxyCodeLine{00094\ \ \ \ \ \{\textcolor{keyword}{public}:\mbox{\hyperlink{classunify_1_1_var_integer}{VarInteger}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ iInt\ );\};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_var_float}{VarFloat}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}}
+\DoxyCodeLine{00097\ \ \ \ \ \{\textcolor{keyword}{public}:\mbox{\hyperlink{classunify_1_1_var_float}{VarFloat}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ fFloat\ );\};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_var_string}{VarString}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}}
+\DoxyCodeLine{00100\ \ \ \ \ \{\textcolor{keyword}{public}:\mbox{\hyperlink{classunify_1_1_var_string}{VarString}}(\ std::string\ sString\ );\};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_var_reference}{VarReference}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classunify_1_1_variant}{Variant}}}
+\DoxyCodeLine{00103\ \ \ \ \ \{\textcolor{keyword}{public}:\mbox{\hyperlink{classunify_1_1_var_reference}{VarReference}}(\ \textcolor{keywordtype}{void}\ *\ pData,\ TYPE\ type\ );\};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_var_bool_reference}{VarBoolReference}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classunify_1_1_var_reference}{VarReference}}}
+\DoxyCodeLine{00106\ \ \ \ \ \{\textcolor{keyword}{public}:\mbox{\hyperlink{classunify_1_1_var_bool_reference}{VarBoolReference}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ *\ pBool\ );\};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_var_integer_reference}{VarIntegerReference}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classunify_1_1_var_reference}{VarReference}}}
+\DoxyCodeLine{00109\ \ \ \ \ \{\textcolor{keyword}{public}:\mbox{\hyperlink{classunify_1_1_var_integer_reference}{VarIntegerReference}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ *\ pInt\ );\};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_var_float_reference}{VarFloatReference}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classunify_1_1_var_reference}{VarReference}}}
+\DoxyCodeLine{00112\ \ \ \ \ \{\textcolor{keyword}{public}:\mbox{\hyperlink{classunify_1_1_var_float_reference}{VarFloatReference}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ *\ pFloat\ );\};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_var_string_reference}{VarStringReference}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classunify_1_1_var_reference}{VarReference}}}
+\DoxyCodeLine{00115\ \ \ \ \ \{\textcolor{keyword}{public}:\mbox{\hyperlink{classunify_1_1_var_string_reference}{VarStringReference}}(\ \textcolor{keyword}{const}\ std::string\ *\ pString\ );\};}
+\DoxyCodeLine{00116\ \}\ \textcolor{comment}{//\ namespace\ unify\ }}
+
+\end{DoxyCode}

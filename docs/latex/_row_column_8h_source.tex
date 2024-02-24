@@ -1,0 +1,75 @@
+\doxysection{Row\+Column.\+h}
+\hypertarget{_row_column_8h_source}{}\label{_row_column_8h_source}\index{unify/RowColumn.h@{unify/RowColumn.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <unify/V2.h>}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_row_column}{RowColumn}}}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ T\ row,\ column;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn}}(\ T\ row,\ T\ column\ );}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ rc\ );}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn}}(\ std::string\ text\ );}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Zero();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Conversion\ operators...}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ operator\ =\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ vec\ );}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ binary\ operators...}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ operator\ =\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ rc\ );}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ operator\ +=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ rc\ );}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ operator\ -\/=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ rc\ );}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ operator\ *=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ rc\ );}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ operator\ /=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ rc\ );}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ operator\ *=\ (\ T\ val\ );}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ operator\ /=\ (\ T\ val\ );}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ operator\ +\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ rc)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ operator\ -\/\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ rc\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ operator\ *\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ rc\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ operator\ /\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ rc\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ operator\ *\ (\ T\ val\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ operator\ /\ (\ T\ val\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ ==\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ rc\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ !=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ T\ >}}\ \&\ rc\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ T\ CellCount()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \ \ \ \ \};}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\ \ \ \ \#include\ <unify/RowColumn.inl>}}
+\DoxyCodeLine{00069\ \}}
+
+\end{DoxyCode}

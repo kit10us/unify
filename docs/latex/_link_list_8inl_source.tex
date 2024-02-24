@@ -1,0 +1,327 @@
+\doxysection{Link\+List.\+inl}
+\hypertarget{_link_list_8inl_source}{}\label{_link_list_8inl_source}\index{unify/LinkList.inl@{unify/LinkList.inl}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00024\ LinkList<\ T\ >::LinkList()}
+\DoxyCodeLine{00025\ :\ m\_pFirst(\ 0\ )}
+\DoxyCodeLine{00026\ ,\ m\_pLast(\ 0\ )}
+\DoxyCodeLine{00027\ ,\ m\_uCount(\ 0\ )}
+\DoxyCodeLine{00028\ ,\ m\_uLisFlags(\ FLAG00\ )}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00033\ LinkList<\ T\ >::\string~LinkList()}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ Clear();}
+\DoxyCodeLine{00036\ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ LinkList<\ T\ >::Count()}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_uCount;}
+\DoxyCodeLine{00042\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ LinkList<\ T\ >::SetLisFlags(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uFlags\ )}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ m\_uLisFlags\ =\ uFlags;}
+\DoxyCodeLine{00048\ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ LinkList<\ T\ >::GetLisFlags()}
+\DoxyCodeLine{00052\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_uLisFlags;}
+\DoxyCodeLine{00054\ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ Destroy\ contents.}}
+\DoxyCodeLine{00057\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ LinkList<\ T\ >::Clear()}
+\DoxyCodeLine{00059\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ TLink<\ T\ >\ *\ pLink\ =\ m\_pFirst;}
+\DoxyCodeLine{00061\ \ \ \ \ TLink<\ T\ >\ *\ pNext\ =\ 0;}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{while}(\ pLink\ )}
+\DoxyCodeLine{00063\ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ pNext\ =\ pLink-\/>Next();}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ pLink;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ pLink\ =\ pNext;}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ m\_pFirst\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00069\ \ \ \ \ m\_pLast\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00070\ \ \ \ \ m\_uCount\ =\ 0;}
+\DoxyCodeLine{00071\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00074\ T*\ LinkList<\ T\ >::AddItem(\ T\ *\ item,\ std::string\ sName\ )}
+\DoxyCodeLine{00075\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{return}\ AddItem(\ item,\ FLAG00,\ 0.0f,\ sName\ );}
+\DoxyCodeLine{00077\ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00080\ T\ *\ LinkList<\ T\ >::AddItem(\ T\ *\ item,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uFlags,\ std::string\ sName\ )}
+\DoxyCodeLine{00081\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordflow}{return}\ AddItem(\ item,\ uFlags,\ 0.0f,\ sName\ );}
+\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00086\ T\ *\ LinkList<\ T\ >::AddItem(\ T\ *\ item,\ \textcolor{keywordtype}{float}\ fSortValue,\ std::string\ sName\ )}
+\DoxyCodeLine{00087\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{return}\ AddItem(\ item,\ FLAG00,\ fSortValue,\ sName\ );}
+\DoxyCodeLine{00089\ \}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T>\ }
+\DoxyCodeLine{00092\ T\ *\ LinkList<\ T\ >::AddItem(\ T\ *\ item,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uFlags,\ \textcolor{keywordtype}{float}\ fSortValue,\ std::string\ sName\ )}
+\DoxyCodeLine{00093\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ TLink<\ T\ >\ *\ pNewLink\ =\ \textcolor{keyword}{new}\ TLink<\ T\ >(\ item,\ sName\ );}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{if}(\ !\ pNewLink\ )\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ pNewLink-\/>m\_uFlags\ =\ uFlags;}
+\DoxyCodeLine{00098\ \ \ \ \ pNewLink-\/>m\_fSortValue\ =\ fSortValue;}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordflow}{if}(\ !\ m\_pFirst\ )}
+\DoxyCodeLine{00101\ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ m\_pFirst\ =\ pNewLink;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ m\_pLast\ =\ pNewLink;}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00106\ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ unify::CheckFlag(m\_uLisFlags,\ LINKLIST\_SORT)\ )}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sort\ into\ list..}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ TLink<\ T\ >\ *\ pLink\ =\ m\_pFirst;}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ unify::CheckFlag(m\_uLisFlags,\ LINKLIST\_SORTREVERSE)\ )}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\ pLink\ \&\&\ pLink-\/>m\_fSortValue\ >\ pNewLink-\/>m\_fSortValue\ )}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pLink\ =\ pLink-\/>Next();}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\ pLink\ \&\&\ pLink-\/>m\_fSortValue\ <\ pNewLink-\/>m\_fSortValue\ )}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pLink\ =\ pLink-\/>Next();}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Found\ a\ larger\ link}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ pLink\ )}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ pLink\ ==\ m\_pFirst\ )}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_pFirst\ =\ pNewLink;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pNewLink-\/>m\_previous\ =\ pLink-\/>m\_previous;}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ pNewLink-\/>m\_previous\ )}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pNewLink-\/>m\_previous-\/>m\_next\ =\ pNewLink;}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pNewLink-\/>m\_next\ =\ pLink;}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pLink-\/>m\_previous\ =\ pNewLink;}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_pLast-\/>m\_next\ =\ pNewLink;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pNewLink-\/>m\_previous\ =\ m\_pLast;}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_pLast\ =\ pNewLink;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \ \ \ \textcolor{comment}{//\ Non-\/sorted...}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ m\_pLast-\/>m\_next\ =\ pNewLink;}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ pNewLink-\/>m\_previous\ =\ m\_pLast;}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ m\_pLast\ =\ pNewLink;}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ m\_uCount++;}
+\DoxyCodeLine{00160\ \ \ \ \ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordflow}{return}\ item;}
+\DoxyCodeLine{00162\ \}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00165\ \textcolor{keywordtype}{bool}\ LinkList<\ T\ >::DeleteItem(\ TLink<\ T\ >\ *\ \&\ pLink\ )}
+\DoxyCodeLine{00166\ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{comment}{//\ REMOVE\ LINK\ FROM\ THE\ PRIMARY\ LIST}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{comment}{//\ Check\ if\ we\ did\ not\ find\ it...}}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{if}(\ !\ pLink\ )\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{comment}{//\ Check\ if\ is\ last...}}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordflow}{if}(\ m\_pLast\ ==\ pLink\ )\ m\_pLast\ =\ m\_pLast-\/>m\_pPrevious;}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{comment}{//\ if\ is\ first\ link...}}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordflow}{if}(\ m\_pFirst\ ==\ pLink\ )\ m\_pFirst\ =\ m\_pFirst-\/>m\_pNext;}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{comment}{//\ REMOVE\ LINK\ FROM\ ITEM\ LIST}}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordflow}{if}(\ pLink-\/>m\_pPrevious\ )\ pLink-\/>m\_pPrevious-\/>m\_pNext\ =\ pLink-\/>m\_pNext;}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordflow}{if}(\ pLink-\/>m\_pNext\ )\ pLink-\/>m\_pNext-\/>m\_pPrevious\ =\ pLink-\/>m\_pPrevious;}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keyword}{delete}\ pLink;}
+\DoxyCodeLine{00188\ \ \ \ \ }
+\DoxyCodeLine{00189\ \ \ \ \ m\_uCount-\/-\/;}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00192\ \}}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00195\ \textcolor{keywordtype}{bool}\ LinkList<\ T\ >::DeleteItem(\ std::string\ sName\ )}
+\DoxyCodeLine{00196\ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordflow}{if}(\ !m\_pFirst\ )\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00198\ \ \ \ \ TLink<\ T\ >\ *\ pLink\ =\ m\_pFirst;}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{comment}{//\ Find\ the\ link...}}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordflow}{while}(\ pLink\ \&\&\ !StringIs(\ pLink-\/>m\_sName,\ sName\ )\ )}
+\DoxyCodeLine{00202\ \ \ \ \ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ pLink\ =\ pLink-\/>m\_pNext;}
+\DoxyCodeLine{00204\ \ \ \ \ \}}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordflow}{return}\ DeleteItem(\ pLink\ );}
+\DoxyCodeLine{00207\ \}}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00210\ \textcolor{keywordtype}{bool}\ LinkList<\ T\ >::DeleteItem(\ T\ *\ pItem\ )}
+\DoxyCodeLine{00211\ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordflow}{if}(\ !m\_pFirst\ )\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00213\ \ \ \ \ TLink<\ T\ >\ *\ pLink\ =\ m\_pFirst;}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{comment}{//\ Find\ the\ link...}}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordflow}{while}(\ pLink\ \&\&\ pLink-\/>m\_pItem\ !=\ pItem\ )}
+\DoxyCodeLine{00217\ \ \ \ \ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ pLink\ =\ pLink-\/>m\_pNext;}
+\DoxyCodeLine{00219\ \ \ \ \ \}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordflow}{return}\ DeleteItem(\ pLink\ );\ }
+\DoxyCodeLine{00222\ \}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >\ }
+\DoxyCodeLine{00225\ T\ *\ LinkList<\ T\ >::GotoFirst(\ Query<\ T\ >\ *\ pQuery\ )}
+\DoxyCodeLine{00226\ \{}
+\DoxyCodeLine{00227\ \ \ \ \ pQuery-\/>m\_pCurrent\ =\ m\_pFirst;}
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keywordflow}{return}(\ pQuery-\/>m\_pCurrent\ ?\ pQuery-\/>m\_pCurrent-\/>Item()\ :\ 0\ );}
+\DoxyCodeLine{00229\ \}}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00232\ T\ *\ LinkList<\ T\ >::GotoLast(\ Query<\ T\ >\ *\ pQuery\ )}
+\DoxyCodeLine{00233\ \{}
+\DoxyCodeLine{00234\ \ \ \ \ pQuery-\/>m\_pCurrent\ =\ m\_pLast;}
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordflow}{return}(\ pQuery-\/>m\_pCurrent\ ?\ pQuery-\/>m\_pCurrent-\/>Item()\ :\ 0\ );}
+\DoxyCodeLine{00236\ \}}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >\ }
+\DoxyCodeLine{00239\ T\ *\ LinkList<\ T\ >::GotoNext(\ Query<\ T\ >\ *\ pQuery\ )}
+\DoxyCodeLine{00240\ \{}
+\DoxyCodeLine{00241\ \ \ \ \ pQuery-\/>m\_pCurrent\ =\ pQuery-\/>m\_pCurrent-\/>Next();}
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordflow}{return}(\ pQuery-\/>m\_pCurrent\ ?\ pQuery-\/>m\_pCurrent-\/>Item()\ :\ 0\ );}
+\DoxyCodeLine{00243\ \}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >\ }
+\DoxyCodeLine{00246\ T\ *\ LinkList<\ T\ >::GotoPrevious(\ Query<\ T\ >\ *\ pQuery\ )}
+\DoxyCodeLine{00247\ \{}
+\DoxyCodeLine{00248\ \ \ \ \ pQuery-\/>m\_pCurrent\ =\ pQuery-\/>m\_pCurrent-\/>Previous();}
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordflow}{return}(\ pQuery-\/>m\_pCurrent\ ?\ pQuery-\/>m\_pCurrent-\/>Item()\ :\ 0\ );}
+\DoxyCodeLine{00250\ \}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00253\ T\ *\ LinkList<\ T\ >::Find(\ std::string\ sName\ )}
+\DoxyCodeLine{00254\ \{}
+\DoxyCodeLine{00255\ \ \ \ \ TLink<\ T\ >\ *\ pLink\ =\ m\_pFirst;}
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordflow}{while}(\ pLink\ )}
+\DoxyCodeLine{00257\ \ \ \ \ \{}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ unify::string::StringIs(\ sName,\ pLink-\/>Name()\ )\ )\ \textcolor{keywordflow}{return}\ pLink-\/>Item();}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ pLink\ =\ pLink-\/>Next();}
+\DoxyCodeLine{00260\ \ \ \ \ \}}
+\DoxyCodeLine{00261\ \ \ \ \ }
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00263\ \}}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00266\ T\ *\ LinkList<\ T\ >::Find(\ Query<\ T\ >\ *\ pQuery,\ std::string\ sName\ )}
+\DoxyCodeLine{00267\ \{}
+\DoxyCodeLine{00268\ \ \ \ \ pQuery-\/>m\_pCurrent\ =\ m\_pFirst;}
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordflow}{while}(\ pQuery-\/>m\_pCurrent\ )}
+\DoxyCodeLine{00270\ \ \ \ \ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ unify::string::StringIs(\ sName,\ pQuery-\/>Name()\ )\ )\ \textcolor{keywordflow}{return}\ pQuery-\/>m\_pCurrent-\/>m\_pItem;}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ pQuery-\/>m\_pCurrent\ =\ pQuery-\/>m\_pCurrent-\/>m\_pNext;}
+\DoxyCodeLine{00273\ \ \ \ \ \}}
+\DoxyCodeLine{00274\ \ \ \ \ }
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00276\ \}}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00278\ \textcolor{comment}{//\ Returns\ the\ name\ of\ the\ item\ by\ it's\ address\ (Since\ an\ item\ can\ be\ in\ a\ list\ twice,\ it\ will\ return\ the\ first\ instance)}}
+\DoxyCodeLine{00279\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00280\ \textcolor{keyword}{const}\ std::string\ LinkList<\ T\ >::Name(\ \textcolor{keyword}{const}\ T\ *\ pItem\ )}
+\DoxyCodeLine{00281\ \{}
+\DoxyCodeLine{00282\ \ \ \ \ TLink<\ T\ >\ *\ pLink\ =\ m\_pFirst;}
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ u\ =\ 0;}
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keywordflow}{while}(\ pLink\ )\ \{\ }
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ pLink-\/>m\_pItem\ ==\ pItem\ )\ \textcolor{keywordflow}{return}\ pLink-\/>m\_sName;}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ pLink\ =\ pLink-\/>m\_pNext;}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ u++;}
+\DoxyCodeLine{00288\ \ \ \ \ \}}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00291\ \}}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \textcolor{comment}{//\ Returns\ the\ name\ of\ the\ item\ by\ the\ items\ index...}}
+\DoxyCodeLine{00294\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00295\ \textcolor{keyword}{const}\ std::string\ LinkList<\ T\ >::Name(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uIndex\ )}
+\DoxyCodeLine{00296\ \{}
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ uIndex\ >=\ m\_uCount\ )\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00299\ \ \ \ \ TLink<\ T\ >\ *\ pLink\ =\ m\_pFirst;}
+\DoxyCodeLine{00300\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ u\ =\ 0;}
+\DoxyCodeLine{00301\ \ \ \ \ \textcolor{keywordflow}{while}(\ pLink\ )\ \{\ }
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ u\ ==\ uIndex\ )\ \textcolor{keywordflow}{return}\ pLink-\/>m\_sName;}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ pLink\ =\ pLink-\/>m\_pNext;}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ u++;}
+\DoxyCodeLine{00305\ \ \ \ \ \}}
+\DoxyCodeLine{00306\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00307\ \}}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00309\ \textcolor{comment}{//\ Return\ a\ specific\ item\ by\ index.}}
+\DoxyCodeLine{00310\ \textcolor{comment}{//\ Return\ 0\ if\ out\ of\ range.}}
+\DoxyCodeLine{00311\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00312\ T\ *\ LinkList<\ T\ >::Item(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uIndex\ )}
+\DoxyCodeLine{00313\ \{}
+\DoxyCodeLine{00314\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ uIndex\ >=\ m\_uCount\ )\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00316\ \ \ \ \ TLink<\ T\ >\ *\ pLink\ =\ m\_pFirst;}
+\DoxyCodeLine{00317\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ u\ =\ 0;}
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keywordflow}{while}(\ pLink\ )\ }
+\DoxyCodeLine{00319\ \ \ \ \ \{\ }
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ u\ ==\ uIndex\ )\ \textcolor{keywordflow}{return}\ pLink-\/>Item();}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ pLink\ =\ pLink-\/>Next();}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ u++;}
+\DoxyCodeLine{00323\ \ \ \ \ \}}
+\DoxyCodeLine{00324\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00325\ \}}
+
+\end{DoxyCode}

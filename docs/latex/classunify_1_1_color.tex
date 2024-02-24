@@ -1,0 +1,212 @@
+\doxysection{unify\+::Color Class Reference}
+\hypertarget{classunify_1_1_color}{}\label{classunify_1_1_color}\index{unify::Color@{unify::Color}}
+
+
+A 32 bit color, 8 bits per component.  
+
+
+
+
+{\ttfamily \#include $<$Color.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}\label{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d} 
+typedef unsigned char {\bfseries Component}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_color_a60d54fc74e7dd9070b8ce2b056f5a381}\label{classunify_1_1_color_a60d54fc74e7dd9070b8ce2b056f5a381} 
+{\bfseries Color} (Component r, Component g, Component b, Component a)
+\item 
+\Hypertarget{classunify_1_1_color_a7b075d27e3bbdde7cbe648dc3b804261}\label{classunify_1_1_color_a7b075d27e3bbdde7cbe648dc3b804261} 
+{\bfseries Color} (const \mbox{\hyperlink{classunify_1_1_color}{Color}} \&color)
+\item 
+\Hypertarget{classunify_1_1_color_ad31d9fd6c02d7d25d649e1e18c503f8c}\label{classunify_1_1_color_ad31d9fd6c02d7d25d649e1e18c503f8c} 
+{\bfseries Color} (std\+::string text, \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fb}{Order}} order=RGBA, Component default\+Alpha=255)
+\item 
+\Hypertarget{classunify_1_1_color_a56af7990e3c91e86124a6925703d5432}\label{classunify_1_1_color_a56af7990e3c91e86124a6925703d5432} 
+{\bfseries Color} (const \mbox{\hyperlink{classunify_1_1_color_unit}{Color\+Unit}} \&color\+Unit)
+\item 
+\Hypertarget{classunify_1_1_color_a88f22ab34b14e6976e6b9ef2177b90cf}\label{classunify_1_1_color_a88f22ab34b14e6976e6b9ef2177b90cf} 
+{\bfseries operator Color\+Unit} () const
+\item 
+\Hypertarget{classunify_1_1_color_a1edba280b80fd28638dc8c8488f35fd5}\label{classunify_1_1_color_a1edba280b80fd28638dc8c8488f35fd5} 
+{\bfseries operator unsigned int} () const
+\item 
+\Hypertarget{classunify_1_1_color_a07302cb348f125aa032c7947dd28353f}\label{classunify_1_1_color_a07302cb348f125aa032c7947dd28353f} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \& {\bfseries operator+=} (const \mbox{\hyperlink{classunify_1_1_color}{Color}} \&col)
+\item 
+\Hypertarget{classunify_1_1_color_a975249eae03c3b3fff698ce278670345}\label{classunify_1_1_color_a975249eae03c3b3fff698ce278670345} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \& {\bfseries operator-\/=} (const \mbox{\hyperlink{classunify_1_1_color}{Color}} \&col)
+\item 
+\Hypertarget{classunify_1_1_color_af1ea86648f65b720778301206fe92846}\label{classunify_1_1_color_af1ea86648f65b720778301206fe92846} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \& {\bfseries operator\texorpdfstring{$\ast$}{*}=} (const \mbox{\hyperlink{classunify_1_1_color}{Color}} \&col)
+\item 
+\Hypertarget{classunify_1_1_color_ab56c3e10c325157a80245fd88b59d6c5}\label{classunify_1_1_color_ab56c3e10c325157a80245fd88b59d6c5} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \& {\bfseries operator/=} (const \mbox{\hyperlink{classunify_1_1_color}{Color}} \&col)
+\item 
+\Hypertarget{classunify_1_1_color_a6ed06b0955c675db2ca774d40407fe7a}\label{classunify_1_1_color_a6ed06b0955c675db2ca774d40407fe7a} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \& {\bfseries operator\texorpdfstring{$\ast$}{*}=} (float val)
+\item 
+\Hypertarget{classunify_1_1_color_a8b48c3483996eb5dc2bdb60582934cf8}\label{classunify_1_1_color_a8b48c3483996eb5dc2bdb60582934cf8} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \& {\bfseries operator/=} (float val)
+\item 
+\Hypertarget{classunify_1_1_color_aeac606905706425a7f7da965df77df9f}\label{classunify_1_1_color_aeac606905706425a7f7da965df77df9f} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries operator+} (const \mbox{\hyperlink{classunify_1_1_color}{Color}} \&col) const
+\item 
+\Hypertarget{classunify_1_1_color_a0d0d7cb9d2d9cb8df1c79198ec3de4c1}\label{classunify_1_1_color_a0d0d7cb9d2d9cb8df1c79198ec3de4c1} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries operator-\/} (const \mbox{\hyperlink{classunify_1_1_color}{Color}} \&col) const
+\item 
+\Hypertarget{classunify_1_1_color_aabd5d3b1a9e7a0f52b289c1f5c7f0ec7}\label{classunify_1_1_color_aabd5d3b1a9e7a0f52b289c1f5c7f0ec7} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries operator\texorpdfstring{$\ast$}{*}} (const \mbox{\hyperlink{classunify_1_1_color}{Color}} \&col) const
+\item 
+\Hypertarget{classunify_1_1_color_a890523531de61c1aec84e5b2a1307ef3}\label{classunify_1_1_color_a890523531de61c1aec84e5b2a1307ef3} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries operator/} (const \mbox{\hyperlink{classunify_1_1_color}{Color}} \&col) const
+\item 
+\Hypertarget{classunify_1_1_color_afcf6c112ab6662955022a16f8845a2d8}\label{classunify_1_1_color_afcf6c112ab6662955022a16f8845a2d8} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries operator\texorpdfstring{$\ast$}{*}} (float val) const
+\item 
+\Hypertarget{classunify_1_1_color_a8ff9a5019af594f9fcade1c0080d98d7}\label{classunify_1_1_color_a8ff9a5019af594f9fcade1c0080d98d7} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries operator/} (float val) const
+\item 
+\Hypertarget{classunify_1_1_color_ac91555626db81da379b3e2ecdca86292}\label{classunify_1_1_color_ac91555626db81da379b3e2ecdca86292} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classunify_1_1_color}{Color}} \&col) const
+\item 
+\Hypertarget{classunify_1_1_color_af7a105f6ee16c7943ffc636424be6936}\label{classunify_1_1_color_af7a105f6ee16c7943ffc636424be6936} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classunify_1_1_color}{Color}} \&col) const
+\item 
+\Hypertarget{classunify_1_1_color_a29f8f964e5782416c4abee28dbf594b6}\label{classunify_1_1_color_a29f8f964e5782416c4abee28dbf594b6} 
+void {\bfseries Set\+RGBA} (Component r, Component g, Component b, Component a)
+\begin{DoxyCompactList}\small\item\em Set all color components. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_color_a3afff9e9a4a56289a229311050ebde09}\label{classunify_1_1_color_a3afff9e9a4a56289a229311050ebde09} 
+Component {\bfseries Get\+Red} () const
+\begin{DoxyCompactList}\small\item\em Returns the red color component. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_color_a3e8cc7a8d7dbd1f48c51393d37d409ed}\label{classunify_1_1_color_a3e8cc7a8d7dbd1f48c51393d37d409ed} 
+Component {\bfseries Get\+Green} () const
+\begin{DoxyCompactList}\small\item\em Returns the green color component. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_color_abc86295756a720d4917a87c165c6c059}\label{classunify_1_1_color_abc86295756a720d4917a87c165c6c059} 
+Component {\bfseries Get\+Blue} () const
+\begin{DoxyCompactList}\small\item\em Returns the blue color component. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_color_a4353eba6f8b8deb28a4fffa76c9954db}\label{classunify_1_1_color_a4353eba6f8b8deb28a4fffa76c9954db} 
+Component {\bfseries Get\+Alpha} () const
+\begin{DoxyCompactList}\small\item\em Returns the alpha color component. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_color_a37569aa8abb06eb2eef2aba698d7d4bc}\label{classunify_1_1_color_a37569aa8abb06eb2eef2aba698d7d4bc} 
+void {\bfseries Set\+Red} (Component r)
+\begin{DoxyCompactList}\small\item\em Sets the red component of the color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classunify_1_1_color_a4884e9566d50fe926fa0e58d19fc47b5}{Set\+Green}} (Component g)
+\begin{DoxyCompactList}\small\item\em Sets the green component of the color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classunify_1_1_color_a19c932020de62ccd1f6e9d205f45b271}{Set\+Blue}} (Component b)
+\begin{DoxyCompactList}\small\item\em Sets the blue component of the color. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_color_a0c336f199cf5c60b60b30022d54c5d77}\label{classunify_1_1_color_a0c336f199cf5c60b60b30022d54c5d77} 
+void {\bfseries Set\+Alpha} (Component a)
+\begin{DoxyCompactList}\small\item\em Sets the alpha component of the color. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_color_a1df3727a270fb4dcc22749a3ee7febc3}\label{classunify_1_1_color_a1df3727a270fb4dcc22749a3ee7febc3} 
+void {\bfseries Interpulate} (const \mbox{\hyperlink{classunify_1_1_color}{Color}} colorA, const \mbox{\hyperlink{classunify_1_1_color}{Color}} colorB, const float ratio)
+\begin{DoxyCompactList}\small\item\em Interpulate between two colors colors. ~\newline
+ \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_color_ab6ba4294480ac7cfdfc22620b7d8a484}\label{classunify_1_1_color_ab6ba4294480ac7cfdfc22620b7d8a484} 
+std\+::string {\bfseries To\+String} (\mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fb}{Order}} order=RGBA) const
+\begin{DoxyCompactList}\small\item\em Returns a string representation fo a color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_color_a7ea56219dfb4900b44d0b9463c229f43}\label{classunify_1_1_color_a7ea56219dfb4900b44d0b9463c229f43} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>unsigned int {\bfseries c}\\
+\>struct \{\\
+\>\>Component {\bfseries r}\\
+\>\>Component {\bfseries g}\\
+\>\>Component {\bfseries b}\\
+\>\>Component {\bfseries a}\\
+\>\} {\bfseries component}\\
+\>unsigned char {\bfseries linear} \mbox{[}4\mbox{]}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_color_a976acc41772d67e9ca6493fd262212ac}\label{classunify_1_1_color_a976acc41772d67e9ca6493fd262212ac} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries Color\+RGBA} (Component r, Component g, Component b, Component a)
+\item 
+\Hypertarget{classunify_1_1_color_ab5d78d6830b9a50146d90631c77de91e}\label{classunify_1_1_color_ab5d78d6830b9a50146d90631c77de91e} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries Color\+RGBA} (unsigned int rgba)
+\item 
+\Hypertarget{classunify_1_1_color_a0086694b6bb3e2f29308066f40925b90}\label{classunify_1_1_color_a0086694b6bb3e2f29308066f40925b90} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries Color\+ARGB} (Component a, Component r, Component g, Component b)
+\item 
+\Hypertarget{classunify_1_1_color_a4465b6cd5936979b382655cf51bfead5}\label{classunify_1_1_color_a4465b6cd5936979b382655cf51bfead5} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries Color\+ARGB} (unsigned int argb)
+\item 
+\Hypertarget{classunify_1_1_color_ae691d929e2d3fc118c0f84885a746832}\label{classunify_1_1_color_ae691d929e2d3fc118c0f84885a746832} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries Color\+RGB} (Component r, Component g, Component b)
+\item 
+\Hypertarget{classunify_1_1_color_a415fbcc605b632871e9eab34dbda7790}\label{classunify_1_1_color_a415fbcc605b632871e9eab34dbda7790} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries Color\+White} (Component a)
+\item 
+\Hypertarget{classunify_1_1_color_a5089b0719b71c9e971d3a6de6f1d3dad}\label{classunify_1_1_color_a5089b0719b71c9e971d3a6de6f1d3dad} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries Color\+Red} (Component r, Component a)
+\item 
+\Hypertarget{classunify_1_1_color_aa0fa65ca92397cb40a94bec2c3c6500d}\label{classunify_1_1_color_aa0fa65ca92397cb40a94bec2c3c6500d} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries Color\+Green} (Component g, Component a)
+\item 
+\Hypertarget{classunify_1_1_color_a2730e30acca9eeb141ef80eae7a6a784}\label{classunify_1_1_color_a2730e30acca9eeb141ef80eae7a6a784} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries Color\+Blue} (Component c, Component a)
+\item 
+\Hypertarget{classunify_1_1_color_aafb384fb6cbad766900759963acd4303}\label{classunify_1_1_color_aafb384fb6cbad766900759963acd4303} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries Color\+Yellow} (Component y, Component a)
+\item 
+\Hypertarget{classunify_1_1_color_a355b861ff6f8af5518d79ebb0cc34125}\label{classunify_1_1_color_a355b861ff6f8af5518d79ebb0cc34125} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries Color\+Cyan} (Component c, Component a)
+\item 
+\Hypertarget{classunify_1_1_color_aaf529194cef55130fc0104d5f3d3b743}\label{classunify_1_1_color_aaf529194cef55130fc0104d5f3d3b743} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries Color\+Magenta} (Component m, Component a)
+\item 
+\Hypertarget{classunify_1_1_color_ab66a1d8d27b0a8e1560f5967491f495e}\label{classunify_1_1_color_ab66a1d8d27b0a8e1560f5967491f495e} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries Color\+Grey} (Component grey, Component a)
+\item 
+\Hypertarget{classunify_1_1_color_a2741901d145a50691d223f8380a97c46}\label{classunify_1_1_color_a2741901d145a50691d223f8380a97c46} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries Color\+Black} (Component a)
+\item 
+\Hypertarget{classunify_1_1_color_ac91a81efa271ee003b0d242644ccaef9}\label{classunify_1_1_color_ac91a81efa271ee003b0d242644ccaef9} 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} {\bfseries Color\+Zero} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A 32 bit color, 8 bits per component. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classunify_1_1_color_a19c932020de62ccd1f6e9d205f45b271}\label{classunify_1_1_color_a19c932020de62ccd1f6e9d205f45b271} 
+\index{unify::Color@{unify::Color}!SetBlue@{SetBlue}}
+\index{SetBlue@{SetBlue}!unify::Color@{unify::Color}}
+\doxysubsubsection{\texorpdfstring{SetBlue()}{SetBlue()}}
+{\footnotesize\ttfamily void Color\+::\+Set\+Blue (\begin{DoxyParamCaption}\item[{Color\+::\+Component}]{b }\end{DoxyParamCaption})}
+
+
+
+Sets the blue component of the color. 
+
+~\newline
+ \Hypertarget{classunify_1_1_color_a4884e9566d50fe926fa0e58d19fc47b5}\label{classunify_1_1_color_a4884e9566d50fe926fa0e58d19fc47b5} 
+\index{unify::Color@{unify::Color}!SetGreen@{SetGreen}}
+\index{SetGreen@{SetGreen}!unify::Color@{unify::Color}}
+\doxysubsubsection{\texorpdfstring{SetGreen()}{SetGreen()}}
+{\footnotesize\ttfamily void Color\+::\+Set\+Green (\begin{DoxyParamCaption}\item[{Color\+::\+Component}]{g }\end{DoxyParamCaption})}
+
+
+
+Sets the green component of the color. 
+
+~\newline
+ 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unify/Color.\+h\item 
+unify/Color.\+cpp\end{DoxyCompactItemize}

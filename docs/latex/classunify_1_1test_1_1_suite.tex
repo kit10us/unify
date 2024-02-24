@@ -1,0 +1,50 @@
+\doxysection{unify\+::test\+::Suite Class Reference}
+\hypertarget{classunify_1_1test_1_1_suite}{}\label{classunify_1_1test_1_1_suite}\index{unify::test::Suite@{unify::test::Suite}}
+
+
+Used to test various features in a uniformed matter.  
+
+
+
+
+{\ttfamily \#include $<$Suite.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1test_1_1_suite_a3933900c65165b299798bd3a6dac0877}\label{classunify_1_1test_1_1_suite_a3933900c65165b299798bd3a6dac0877} 
+void {\bfseries Begin\+Suite} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Triggered when a suite begins. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1test_1_1_suite_a4253541a8ff34419b3c31a6dcf2a586f}\label{classunify_1_1test_1_1_suite_a4253541a8ff34419b3c31a6dcf2a586f} 
+void {\bfseries End\+Suite} ()
+\begin{DoxyCompactList}\small\item\em Triggered when a suite ends. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1test_1_1_suite_a11dbe56a98077c6d4f87931bf24bdc72}\label{classunify_1_1test_1_1_suite_a11dbe56a98077c6d4f87931bf24bdc72} 
+void {\bfseries Begin\+Case} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Triggered when a test begins. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1test_1_1_suite_a6a2205dcc9bf9ca544f2d1828410889f}\label{classunify_1_1test_1_1_suite_a6a2205dcc9bf9ca544f2d1828410889f} 
+void {\bfseries End\+Case} ()
+\begin{DoxyCompactList}\small\item\em Triggered when a test ends. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1test_1_1_suite_addc5166428008b2afa932cb02915ff3b}\label{classunify_1_1test_1_1_suite_addc5166428008b2afa932cb02915ff3b} 
+void {\bfseries Info} (std\+::string message)
+\begin{DoxyCompactList}\small\item\em Call to report information. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1test_1_1_suite_a4335fb5acaf1d14352cf16fb38c39709}\label{classunify_1_1test_1_1_suite_a4335fb5acaf1d14352cf16fb38c39709} 
+void {\bfseries Warning} (std\+::string message)
+\begin{DoxyCompactList}\small\item\em Called to report a warning. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1test_1_1_suite_accef319bdaea72911cdcb3c38f776fa0}\label{classunify_1_1test_1_1_suite_accef319bdaea72911cdcb3c38f776fa0} 
+void {\bfseries Assert} (std\+::string message, bool test)
+\begin{DoxyCompactList}\small\item\em Perform a suite assertion. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1test_1_1_suite_a44ce7fe738abba3c773700466f7bb378}\label{classunify_1_1test_1_1_suite_a44ce7fe738abba3c773700466f7bb378} 
+void {\bfseries Try\+Catch} (std\+::string message, std\+::function$<$ void() $>$ test, bool pass\+On\+Exception)
+\begin{DoxyCompactList}\small\item\em Try to perform a functor, Assert on an exception. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1test_1_1_suite_a13f0956bdefea037291afbcdc75aa7c3}\label{classunify_1_1test_1_1_suite_a13f0956bdefea037291afbcdc75aa7c3} 
+void {\bfseries Try\+Catch\+Assert} (std\+::string message, std\+::function$<$ bool() $>$ test)
+\begin{DoxyCompactList}\small\item\em Assert on test returning false, or an exception. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Used to test various features in a uniformed matter. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unify/test/Suite.\+h\item 
+unify/test/Suite.\+cpp\end{DoxyCompactItemize}

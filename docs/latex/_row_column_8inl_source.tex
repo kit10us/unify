@@ -1,0 +1,183 @@
+\doxysection{Row\+Column.\+inl}
+\hypertarget{_row_column_8inl_source}{}\label{_row_column_8inl_source}\index{unify/RowColumn.inl@{unify/RowColumn.inl}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00024\ RowColumn<T>::RowColumn()}
+\DoxyCodeLine{00025\ :\ row(\ 0\ )}
+\DoxyCodeLine{00026\ ,\ column(\ 0\ )}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00031\ RowColumn<T>::RowColumn(\ T\ \_row,\ T\ \_column\ )}
+\DoxyCodeLine{00032\ \ \ \ \ :\ row(\ \_row\ )}
+\DoxyCodeLine{00033\ \ \ \ \ ,\ column(\ \_column\ )}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00038\ RowColumn<T>::RowColumn(\ \textcolor{keyword}{const}\ RowColumn<\ T\ >\ \&\ rc\ )}
+\DoxyCodeLine{00039\ \ \ \ \ :\ row(\ rc.row\ )}
+\DoxyCodeLine{00040\ \ \ \ \ ,\ column(\ rc.column\ )}
+\DoxyCodeLine{00041\ \{}
+\DoxyCodeLine{00042\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00045\ RowColumn<\ T\ >::RowColumn(\ std::string\ text\ )}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ std::vector<\ T\ >\ split\ =\ string::Split<\ T\ >(\ text,\ \textcolor{charliteral}{','}\ );}
+\DoxyCodeLine{00048\ \ \ \ \ row\ =\ split[\ 0\ ];}
+\DoxyCodeLine{00049\ \ \ \ \ column\ =\ split[\ 1\ ];}
+\DoxyCodeLine{00050\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ RowColumn<T>::Zero()}
+\DoxyCodeLine{00054\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ row\ =\ 0;}
+\DoxyCodeLine{00056\ \ \ \ \ column\ =\ 0;}
+\DoxyCodeLine{00057\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00060\ RowColumn<T>\ \&\ RowColumn<T>::operator\ =\ (\ \textcolor{keyword}{const}\ V2<T>\ \&\ vec\ )}
+\DoxyCodeLine{00061\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ row\ =\ vec.x;}
+\DoxyCodeLine{00063\ \ \ \ \ column\ =\ vec.y;}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00065\ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00068\ RowColumn<T>\ \&\ RowColumn<T>::operator\ =\ (\ \textcolor{keyword}{const}\ RowColumn<T>\ \&\ rc\ )}
+\DoxyCodeLine{00069\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ row\ =\ rc.row;}
+\DoxyCodeLine{00071\ \ \ \ \ column\ =\ rc.column;}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00073\ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00076\ RowColumn<T>\ \&\ RowColumn<T>::operator\ +=\ (\ \textcolor{keyword}{const}\ RowColumn<T>\ \&\ rc\ )}
+\DoxyCodeLine{00077\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ row\ +=\ rc.row;}
+\DoxyCodeLine{00079\ \ \ \ \ column\ +=\ rc.column;}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00081\ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00084\ RowColumn<T>\ \&\ RowColumn<T>::operator\ -\/=\ (\ \textcolor{keyword}{const}\ RowColumn<T>\ \&\ rc\ )}
+\DoxyCodeLine{00085\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ row\ -\/=\ rc.row;}
+\DoxyCodeLine{00087\ \ \ \ \ column\ -\/=\ rc.column;}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00089\ \}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00092\ RowColumn<T>\ \&\ RowColumn<T>::operator\ *=\ (\ \textcolor{keyword}{const}\ RowColumn<T>\ \&\ rc\ )}
+\DoxyCodeLine{00093\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ row\ *=\ rc.row;}
+\DoxyCodeLine{00095\ \ \ \ \ column\ *=\ rc.column;}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00097\ \}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00100\ RowColumn<T>\ \&\ RowColumn<T>::operator\ /=\ (\ \textcolor{keyword}{const}\ RowColumn<T>\ \&\ rc\ )}
+\DoxyCodeLine{00101\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ row\ /=\ rc.row;}
+\DoxyCodeLine{00103\ \ \ \ \ column\ /=\ rc.column;}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00105\ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00108\ RowColumn<T>\ \&\ RowColumn<T>::operator\ *=\ (\ T\ val\ )}
+\DoxyCodeLine{00109\ \{}
+\DoxyCodeLine{00110\ \ \ \ \ row\ *=\ val;}
+\DoxyCodeLine{00111\ \ \ \ \ column\ *=\ val;}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00113\ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00116\ RowColumn<\ T\ >\ \&\ RowColumn<\ T\ >::operator\ /=\ (\ T\ val\ )}
+\DoxyCodeLine{00117\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ row\ /=\ val;}
+\DoxyCodeLine{00119\ \ \ \ \ column\ /=\ val;}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00121\ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{comment}{//\ binarcolumn}}
+\DoxyCodeLine{00124\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00125\ RowColumn<\ T\ >\ RowColumn<\ T\ >::operator\ +\ (\ \textcolor{keyword}{const}\ RowColumn<\ T\ >\ \&\ rc)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00126\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordflow}{return}\ RowColumn<\ T\ >(\ row\ +\ rc.row,\ column\ +\ rc.column\ );}
+\DoxyCodeLine{00128\ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00131\ RowColumn<\ T\ >\ RowColumn<\ T\ >::operator\ -\/\ (\ \textcolor{keyword}{const}\ RowColumn<\ T\ >\ \&\ rc\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00132\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{return}\ RowColumn<\ T\ >(\ row\ -\/\ rc.row,\ column\ -\/\ rc.column\ );}
+\DoxyCodeLine{00134\ \}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00137\ RowColumn<\ T\ >\ RowColumn<\ T\ >::operator\ *\ (\ \textcolor{keyword}{const}\ RowColumn<\ T\ >\ \&\ rc\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00138\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordflow}{return}\ RowColumn<\ T\ >(\ row\ *\ rc.row,\ column\ *\ rc.column\ );}
+\DoxyCodeLine{00140\ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00143\ RowColumn<\ T\ >\ RowColumn<\ T\ >::operator\ /\ (\ \textcolor{keyword}{const}\ RowColumn<\ T\ >\ \&\ rc\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00144\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordflow}{return}\ RowColumn<\ T\ >(\ row\ /\ rc.row,\ column\ /\ rc.column\ );}
+\DoxyCodeLine{00146\ \}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00149\ RowColumn<\ T\ >\ RowColumn<\ T\ >::operator\ *\ (\ T\ val\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00150\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordflow}{return}\ RowColumn<\ T\ >(\ row\ *\ val,\ column\ *\ val\ );}
+\DoxyCodeLine{00152\ \}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00155\ RowColumn<\ T\ >\ RowColumn<\ T\ >::operator\ /\ (\ T\ val\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00156\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordflow}{return}\ RowColumn<\ T\ >(\ row\ /\ val,\ column\ /\ val\ );}
+\DoxyCodeLine{00158\ \}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00161\ \textcolor{keywordtype}{bool}\ RowColumn<\ T\ >::operator\ ==\ (\ \textcolor{keyword}{const}\ RowColumn<\ T\ >\&\ rc\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00162\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordflow}{return}(\ row\ ==\ rc.row\ \&\&\ column\ ==\ rc.column\ );}
+\DoxyCodeLine{00164\ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00167\ \textcolor{keywordtype}{bool}\ RowColumn<\ T\ >::operator\ !=\ (\ \textcolor{keyword}{const}\ RowColumn\&\ rc\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00168\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordflow}{return}(\ row\ !=\ rc.row\ ||\ column\ !=\ rc.column\ );}
+\DoxyCodeLine{00170\ \}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00173\ T\ RowColumn<\ T\ >::CellCount()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00174\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordflow}{return}\ row\ *\ column;}
+\DoxyCodeLine{00176\ \}}
+\DoxyCodeLine{00177\ }
+
+\end{DoxyCode}

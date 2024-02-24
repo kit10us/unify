@@ -1,0 +1,78 @@
+\doxysection{Class List}
+Here are the classes, structs, unions and interfaces with brief descriptions\+:\begin{DoxyCompactList}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_angle}{unify\+::\+Angle}} \\*An \doxylink{classunify_1_1_angle}{Angle} abstract so we can move between degrees and radians easily, and simplify math by pushing the actual conversion format to the beginning and end of the lifetime of the math -\/ that is to say, we don\textquotesingle{}t care if A + B is degrees or radians, we only care that the result is in degrees or radians }{\pageref{classunify_1_1_angle}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_any}{unify\+::\+Any}} \\*\doxylink{classunify_1_1_any}{Any} allows us to simplify our interfaces when the type a function can consume is largely variable, or more importantly, extremely late, such as with an event system. Instead of creating tens to hundreds of member functions able to consume specific type, we generalize to to take an \doxylink{classunify_1_1_any}{Any} (think of it as an "{}anything"{}), then let the implementation verify the actual type and act accordingly. This pretty much just encapsulates RTTI and makes it feel more natural }{\pageref{classunify_1_1_any}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1bad__any__cast}{unify\+::bad\+\_\+any\+\_\+cast}} }{\pageref{classunify_1_1bad__any__cast}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_bad_cast}{unify\+::\+Bad\+Cast}} \\*A standardized exception }{\pageref{classunify_1_1_bad_cast}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_b_box}{unify\+::\+BBox$<$ T $>$}} \\*A Bounding box }{\pageref{classunify_1_1_b_box}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_b_sphere}{unify\+::\+BSphere$<$ T $>$}} \\*A sphere used to track a volume, typically of an object }{\pageref{classunify_1_1_b_sphere}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_b_square}{unify\+::\+BSquare$<$ T $>$}} \\*A boudning sphere }{\pageref{classunify_1_1_b_square}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1string_1_1_case_insensitive_less_than_equal_test}{unify\+::string\+::\+Case\+Insensitive\+Less\+Than\+Equal\+Test}} }{\pageref{classunify_1_1string_1_1_case_insensitive_less_than_equal_test}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1string_1_1_case_insensitive_less_than_equal_test_char_ptr}{unify\+::string\+::\+Case\+Insensitive\+Less\+Than\+Equal\+Test\+Char\+Ptr}} }{\pageref{classunify_1_1string_1_1_case_insensitive_less_than_equal_test_char_ptr}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_color}{unify\+::\+Color}} \\*A 32 bit color, 8 bits per component }{\pageref{classunify_1_1_color}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_color_unit}{unify\+::\+Color\+Unit}} }{\pageref{classunify_1_1_color_unit}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_data_lock}{unify\+::\+Data\+Lock}} \\*A data lock construct that allows common locking of data so that we can read and write from shared the data }{\pageref{classunify_1_1_data_lock}}{}
+\item\contentsline{section}{\mbox{\hyperlink{structunify_1_1_data_lock_access}{unify\+::\+Data\+Lock\+Access}} }{\pageref{structunify_1_1_data_lock_access}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1test_1_1_default_assert_handler}{unify\+::test\+::\+Default\+Assert\+Handler}} }{\pageref{classunify_1_1test_1_1_default_assert_handler}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1test_1_1_default_event_handler}{unify\+::test\+::\+Default\+Event\+Handler}} }{\pageref{classunify_1_1test_1_1_default_event_handler}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_default_exception_handler}{unify\+::\+Default\+Exception\+Handler}} }{\pageref{classunify_1_1_default_exception_handler}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1test_1_1_default_output_handler}{unify\+::test\+::\+Default\+Output\+Handler}} }{\pageref{classunify_1_1test_1_1_default_output_handler}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_exception}{unify\+::\+Exception}} \\*A standardized exception }{\pageref{classunify_1_1_exception}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_file_stream}{unify\+::\+File\+Stream}} \\*Perform stream operation on a file source }{\pageref{classunify_1_1_file_stream}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_frame_set_1_1_for_each_functor}{unify\+::\+Frame\+Set\+::\+For\+Each\+Functor}} }{\pageref{classunify_1_1_frame_set_1_1_for_each_functor}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_frame}{unify\+::\+Frame}} \\*\doxylink{classunify_1_1_frame}{Frame} provides a hierarchical relationship structure for the purpose of providing relative transformation in a rendering or physics pipeline }{\pageref{classunify_1_1_frame}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_frame_lite}{unify\+::\+Frame\+Lite}} \\*Order of color components }{\pageref{classunify_1_1_frame_lite}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_frame_set}{unify\+::\+Frame\+Set}} \\*A set of matrices, and connectivity between these matrices, used for mesh animations }{\pageref{classunify_1_1_frame_set}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_frame_set_instance}{unify\+::\+Frame\+Set\+Instance}} \\*A modified \doxylink{classunify_1_1_frame_set}{Frame\+Set}. Used with animations, separating animation changes into \doxylink{classunify_1_1_frame_set_instance}{Frame\+Set\+Instance}, while maintaining the original \doxylink{classunify_1_1_frame_set}{Frame\+Set} }{\pageref{classunify_1_1_frame_set_instance}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_frustum}{unify\+::\+Frustum}} }{\pageref{classunify_1_1_frustum}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1test_1_1_i_assert_handler}{unify\+::test\+::\+IAssert\+Handler}} \\*Interface for handling an assertion }{\pageref{classunify_1_1test_1_1_i_assert_handler}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1test_1_1_i_event_handler}{unify\+::test\+::\+IEvent\+Handler}} \\*Interface for handling a test event }{\pageref{classunify_1_1test_1_1_i_event_handler}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_i_exception_handler}{unify\+::\+IException\+Handler}} }{\pageref{classunify_1_1_i_exception_handler}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1test_1_1_i_output_handler}{unify\+::test\+::\+IOutput\+Handler}} \\*Interface for handling an assertion }{\pageref{classunify_1_1test_1_1_i_output_handler}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{unify\+::\+Data\+Lock\+::iterator$<$ T, T\+\_\+\+Offset\+In\+Bytes $>$}} }{\pageref{classunify_1_1_data_lock_1_1iterator}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_lookup_1_1iterator}{unify\+::\+Lookup$<$ Key, Value $>$\+::iterator}} }{\pageref{classunify_1_1_lookup_1_1iterator}}{}
+\item\contentsline{section}{\mbox{\hyperlink{structunify_1_1_key_value_pair}{unify\+::\+Key\+Value\+Pair$<$ Key, Value $>$}} \\*A generic key value pair }{\pageref{structunify_1_1_key_value_pair}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_link_list}{unify\+::\+Link\+List$<$ T $>$}} }{\pageref{classunify_1_1_link_list}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_lookup}{unify\+::\+Lookup$<$ Key, Value $>$}} \\*A mapping between values and pairs with the addition of constant time value lookups by performing searches early on. Perfers constant operations over log operations, speeding up some common operations }{\pageref{classunify_1_1_lookup}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_matrix}{unify\+::\+Matrix}} }{\pageref{classunify_1_1_matrix}}{}
+\item\contentsline{section}{\mbox{\hyperlink{structunify_1_1_nine_point}{unify\+::\+Nine\+Point}} }{\pageref{structunify_1_1_nine_point}}{}
+\item\contentsline{section}{\mbox{\hyperlink{structnocase__compare}{nocase\+\_\+compare}} }{\pageref{structnocase__compare}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_optional}{unify\+::\+Optional$<$ T $>$}} }{\pageref{classunify_1_1_optional}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_owner}{unify\+::\+Owner}} \\*Provides ownership symantics, where two or more objects can observer ownership of memory or events }{\pageref{classunify_1_1_owner}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_owner_property}{unify\+::\+Owner\+Property}} }{\pageref{classunify_1_1_owner_property}}{}
+\item\contentsline{section}{\mbox{\hyperlink{structunify_1_1_parameter}{unify\+::\+Parameter}} }{\pageref{structunify_1_1_parameter}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_parameters}{unify\+::\+Parameters}} }{\pageref{classunify_1_1_parameters}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_path}{unify\+::\+Path}} }{\pageref{classunify_1_1_path}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_plane}{unify\+::\+Plane}} }{\pageref{classunify_1_1_plane}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_q_list}{unify\+::\+QList$<$ T $>$}} }{\pageref{classunify_1_1_q_list}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_quaternion}{unify\+::\+Quaternion}} }{\pageref{classunify_1_1_quaternion}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_query}{unify\+::\+Query$<$ T $>$}} }{\pageref{classunify_1_1_query}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_range}{unify\+::\+Range$<$ T $>$}} }{\pageref{classunify_1_1_range}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_ray}{unify\+::\+Ray}} }{\pageref{classunify_1_1_ray}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_rect}{unify\+::\+Rect$<$ T $>$}} \\*A rectangle }{\pageref{classunify_1_1_rect}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_row_column}{unify\+::\+Row\+Column$<$ T $>$}} }{\pageref{classunify_1_1_row_column}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_size}{unify\+::\+Size$<$ T $>$}} }{\pageref{classunify_1_1_size}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_size3}{unify\+::\+Size3$<$ T $>$}} }{\pageref{classunify_1_1_size3}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_stream}{unify\+::\+Stream}} \\*Allows streaming (serializing) of data }{\pageref{classunify_1_1_stream}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1test_1_1_suite}{unify\+::test\+::\+Suite}} \\*Used to test various features in a uniformed matter }{\pageref{classunify_1_1test_1_1_suite}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_tex_area}{unify\+::\+Tex\+Area}} }{\pageref{classunify_1_1_tex_area}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_tex_coords}{unify\+::\+Tex\+Coords}} }{\pageref{classunify_1_1_tex_coords}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_time_delta}{unify\+::\+Time\+Delta}} }{\pageref{classunify_1_1_time_delta}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_t_link}{unify\+::\+TLink$<$ T $>$}} }{\pageref{classunify_1_1_t_link}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_tree}{unify\+::\+Tree}} }{\pageref{classunify_1_1_tree}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_triangle}{unify\+::\+Triangle$<$ T $>$}} }{\pageref{classunify_1_1_triangle}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_v2}{unify\+::\+V2$<$ T $>$}} \\*Represents a 2-\/dimensional vector }{\pageref{classunify_1_1_v2}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3$<$ T $>$}} }{\pageref{classunify_1_1_v3}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_v4}{unify\+::\+V4$<$ T $>$}} }{\pageref{classunify_1_1_v4}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_var_bool}{unify\+::\+Var\+Bool}} }{\pageref{classunify_1_1_var_bool}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_var_bool_reference}{unify\+::\+Var\+Bool\+Reference}} }{\pageref{classunify_1_1_var_bool_reference}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_var_float}{unify\+::\+Var\+Float}} }{\pageref{classunify_1_1_var_float}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_var_float_reference}{unify\+::\+Var\+Float\+Reference}} }{\pageref{classunify_1_1_var_float_reference}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_variant}{unify\+::\+Variant}} \\*A variant allowing simple storage and conversion amongst POD types }{\pageref{classunify_1_1_variant}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_var_integer}{unify\+::\+Var\+Integer}} }{\pageref{classunify_1_1_var_integer}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_var_integer_reference}{unify\+::\+Var\+Integer\+Reference}} }{\pageref{classunify_1_1_var_integer_reference}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_var_reference}{unify\+::\+Var\+Reference}} }{\pageref{classunify_1_1_var_reference}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_var_string}{unify\+::\+Var\+String}} }{\pageref{classunify_1_1_var_string}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_var_string_reference}{unify\+::\+Var\+String\+Reference}} }{\pageref{classunify_1_1_var_string_reference}}{}
+\item\contentsline{section}{\mbox{\hyperlink{classunify_1_1_viewport}{unify\+::\+Viewport}} }{\pageref{classunify_1_1_viewport}}{}
+\end{DoxyCompactList}

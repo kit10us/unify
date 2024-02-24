@@ -1,0 +1,122 @@
+\doxysection{unify\+::Path Class Reference}
+\hypertarget{classunify_1_1_path}{}\label{classunify_1_1_path}\index{unify::Path@{unify::Path}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_path_a8f803bf40c71c7e2b75bc3c4cba3e73f}\label{classunify_1_1_path_a8f803bf40c71c7e2b75bc3c4cba3e73f} 
+{\bfseries Path} (std\+::string path)
+\item 
+\Hypertarget{classunify_1_1_path_a76d934a42399a33a8402696755eeecf7}\label{classunify_1_1_path_a76d934a42399a33a8402696755eeecf7} 
+{\bfseries Path} (char \texorpdfstring{$\ast$}{*}path)
+\item 
+\Hypertarget{classunify_1_1_path_a0b82f0de2cba12d825d9f2883a2acc28}\label{classunify_1_1_path_a0b82f0de2cba12d825d9f2883a2acc28} 
+{\bfseries Path} (\mbox{\hyperlink{classunify_1_1_path}{Path}} left, \mbox{\hyperlink{classunify_1_1_path}{Path}} right)
+\item 
+\Hypertarget{classunify_1_1_path_abedffc92f88bade0d698a18a048e06bc}\label{classunify_1_1_path_abedffc92f88bade0d698a18a048e06bc} 
+{\bfseries Path} (const std\+::vector$<$ std\+::string $>$ \&path\+Parts)
+\item 
+\Hypertarget{classunify_1_1_path_a436e80bdeafc0c5409feac74b75cb759}\label{classunify_1_1_path_a436e80bdeafc0c5409feac74b75cb759} 
+\mbox{\hyperlink{classunify_1_1_path}{Path}} \& {\bfseries operator=} (const \mbox{\hyperlink{classunify_1_1_path}{Path}} \&path)
+\item 
+\Hypertarget{classunify_1_1_path_abc0f2fabb556d8135791ee8f70fbfa9a}\label{classunify_1_1_path_abc0f2fabb556d8135791ee8f70fbfa9a} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classunify_1_1_path}{Path}} \&path) const
+\item 
+\Hypertarget{classunify_1_1_path_a114edfea85ed899e783a5e3301764e4e}\label{classunify_1_1_path_a114edfea85ed899e783a5e3301764e4e} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classunify_1_1_path}{Path}} \&path) const
+\item 
+\Hypertarget{classunify_1_1_path_a2a22f7da00bab9aaf6634a56236f5997}\label{classunify_1_1_path_a2a22f7da00bab9aaf6634a56236f5997} 
+\mbox{\hyperlink{classunify_1_1_path}{Path}} {\bfseries operator+} (const \mbox{\hyperlink{classunify_1_1_path}{Path}} \&path)
+\item 
+\Hypertarget{classunify_1_1_path_a681fcf86b52fd6c696777b75ccd3a72a}\label{classunify_1_1_path_a681fcf86b52fd6c696777b75ccd3a72a} 
+\mbox{\hyperlink{classunify_1_1_path}{Path}} \& {\bfseries operator+=} (const \mbox{\hyperlink{classunify_1_1_path}{Path}} \&path)
+\item 
+\Hypertarget{classunify_1_1_path_af6303437c43d9c9f87161211b5a21be1}\label{classunify_1_1_path_af6303437c43d9c9f87161211b5a21be1} 
+bool {\bfseries Empty} () const
+\item 
+\Hypertarget{classunify_1_1_path_a804e7c2e834fae2b0eda67c6326966c9}\label{classunify_1_1_path_a804e7c2e834fae2b0eda67c6326966c9} 
+std\+::vector$<$ std\+::string $>$ {\bfseries Split} () const
+\begin{DoxyCompactList}\small\item\em Splits a path into individual parts. If the path begins with a slash, then the first part will be a slash. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_path_a8fe8c15d2668967ab2c3dbecdcc818c0}\label{classunify_1_1_path_a8fe8c15d2668967ab2c3dbecdcc818c0} 
+\mbox{\hyperlink{classunify_1_1_path}{Path}} \& {\bfseries Join} (const std\+::vector$<$ std\+::string $>$ \&path\+Parts)
+\begin{DoxyCompactList}\small\item\em Joins a vector of path parts, such as that created by Split, into a single path. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_path_a5e13b5d0dbcc69908b0af09fe1c7391d}\label{classunify_1_1_path_a5e13b5d0dbcc69908b0af09fe1c7391d} 
+\mbox{\hyperlink{classunify_1_1_path}{Path}} \& {\bfseries Normalize} ()
+\begin{DoxyCompactList}\small\item\em Attempts to normalize the path, resolving all "{}.."{}. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_path_ae9bfbff05677b2ef25380b3568f9aa9f}\label{classunify_1_1_path_ae9bfbff05677b2ef25380b3568f9aa9f} 
+bool {\bfseries Exists} () const
+\item 
+\Hypertarget{classunify_1_1_path_ae2d40aae8ca75f06c82d4751dd3be333}\label{classunify_1_1_path_ae2d40aae8ca75f06c82d4751dd3be333} 
+\mbox{\hyperlink{classunify_1_1_path}{Path}} {\bfseries Directory\+Only} () const
+\item 
+\Hypertarget{classunify_1_1_path_ac6c2b934f4ac5a9135e02378edbac346}\label{classunify_1_1_path_ac6c2b934f4ac5a9135e02378edbac346} 
+bool {\bfseries Has\+Extension} () const
+\begin{DoxyCompactList}\small\item\em Returns true if a path has any extension. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_path_a4707c7c98ed23ee25a92471765b4664a}\label{classunify_1_1_path_a4707c7c98ed23ee25a92471765b4664a} 
+std\+::string {\bfseries Extension\+Only} () const
+\begin{DoxyCompactList}\small\item\em Returns the extension from a path, includes the leading dot (.). Returns empty string if no extension was found. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_path_a7d979a6f37261b97b7c11c4d1b4f5527}\label{classunify_1_1_path_a7d979a6f37261b97b7c11c4d1b4f5527} 
+std\+::string {\bfseries Filename} () const
+\begin{DoxyCompactList}\small\item\em Returns the file name (e.\+g., "{}c\+:\textbackslash{}folder\textbackslash{}filename.\+ext"{} ... "{}filename.\+ext"{} ) Equivalent to\+: boost\+::filesystem\+::path.\+filename. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_path_ab6a483b07f9204354ae4e55e65d15e9d}\label{classunify_1_1_path_ab6a483b07f9204354ae4e55e65d15e9d} 
+std\+::string {\bfseries Filename\+No\+Extension} () const
+\begin{DoxyCompactList}\small\item\em Returns the file name without extension (e.\+g., "{}c\+:\textbackslash{}folder\textbackslash{}filename.\+ext"{} ... "{}filename"{} ) Equivalent to\+: boost\+::filesystem\+::path.\+stem. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_path_a8b107a6fbdf7b019271fa1d19266ed18}\label{classunify_1_1_path_a8b107a6fbdf7b019271fa1d19266ed18} 
+\mbox{\hyperlink{classunify_1_1_path}{Path}} \& {\bfseries Combine} (const \mbox{\hyperlink{classunify_1_1_path}{Path}} \&left, const \mbox{\hyperlink{classunify_1_1_path}{Path}} \&right)
+\item 
+\Hypertarget{classunify_1_1_path_a55cffc3a31fc94b3dc105ecff57605b0}\label{classunify_1_1_path_a55cffc3a31fc94b3dc105ecff57605b0} 
+bool {\bfseries Is\+Directory} () const
+\item 
+\Hypertarget{classunify_1_1_path_a7c510423dd484180636c41e85e47cb0a}\label{classunify_1_1_path_a7c510423dd484180636c41e85e47cb0a} 
+bool {\bfseries Is\+Extension} (std\+::string extension) const
+\item 
+\Hypertarget{classunify_1_1_path_ad3b317886f40ff0756d6fbad445b6bcf}\label{classunify_1_1_path_ad3b317886f40ff0756d6fbad445b6bcf} 
+void {\bfseries Change\+Extension} (std\+::string extension)
+\item 
+\Hypertarget{classunify_1_1_path_a8057b266286574e47c6231a22d3c6ec9}\label{classunify_1_1_path_a8057b266286574e47c6231a22d3c6ec9} 
+\mbox{\hyperlink{classunify_1_1_path}{Path}} \& {\bfseries Change\+Filename} (const \mbox{\hyperlink{classunify_1_1_path}{Path}} \&new\+Filename)
+\item 
+\Hypertarget{classunify_1_1_path_ae782d39e40eb21fee15978417bdb8a37}\label{classunify_1_1_path_ae782d39e40eb21fee15978417bdb8a37} 
+std\+::string {\bfseries To\+String} () const
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the path maintaining the original slash directions."{}. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_path_a6f06bc7a28607497bed2bf6e9e1b2a05}\label{classunify_1_1_path_a6f06bc7a28607497bed2bf6e9e1b2a05} 
+std\+::string {\bfseries To\+String} (Slash direction) const
+\begin{DoxyCompactList}\small\item\em Returns a string with all slashes in a uniform direction. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_path_a5d042a2534d076e8a1795cbeedbaf8dc}\label{classunify_1_1_path_a5d042a2534d076e8a1795cbeedbaf8dc} 
+std\+::wstring {\bfseries To\+WString} () const
+\begin{DoxyCompactList}\small\item\em Returns a wide string representation of the path maintaining the original slash directions."{}. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_path_ac94bd93459b00ef03370e0e979fd6043}\label{classunify_1_1_path_ac94bd93459b00ef03370e0e979fd6043} 
+std\+::wstring {\bfseries To\+WString} (Slash direction) const
+\begin{DoxyCompactList}\small\item\em Returns a wide string with all slashes in a uniform direction. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_path_a4f20a117c0a03c7deed194dde19b8afa}\label{classunify_1_1_path_a4f20a117c0a03c7deed194dde19b8afa} 
+std\+::string {\bfseries To\+XPath} () const
+\begin{DoxyCompactList}\small\item\em Returns an XPath string representation of the path maintaining the original slash directions."{}. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_path_a0d36d907651e47d4a85a3441bec6415c}\label{classunify_1_1_path_a0d36d907651e47d4a85a3441bec6415c} 
+std\+::wstring {\bfseries To\+WXPath} () const
+\begin{DoxyCompactList}\small\item\em Returns a wide string representation of the path, in XPath format, maintaining the original slash directions."{}. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_path_a97035f42ec16a1c9687638fb027ed80f}\label{classunify_1_1_path_a97035f42ec16a1c9687638fb027ed80f} 
+std\+::wstring {\bfseries To\+WXPath} (Slash direction) const
+\begin{DoxyCompactList}\small\item\em Returns a wide string with all slashes in a uniform direction, in XPath format. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_path_a799ec211b61f03da6b6117af85eac75d}\label{classunify_1_1_path_a799ec211b61f03da6b6117af85eac75d} 
+bool {\bfseries Delete} ()
+\begin{DoxyCompactList}\small\item\em Delete a path. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_path_a22af7cc30a1b7c7ce0f8de4a61d8620d}\label{classunify_1_1_path_a22af7cc30a1b7c7ce0f8de4a61d8620d} 
+bool {\bfseries Rename} (\mbox{\hyperlink{classunify_1_1_path}{unify\+::\+Path}} to)
+\begin{DoxyCompactList}\small\item\em Rename a path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_path_a3449d3737417ccd0b0e88e11c31847ec}\label{classunify_1_1_path_a3449d3737417ccd0b0e88e11c31847ec} 
+static bool {\bfseries Is\+XPath} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Returns true if the \doxylink{classunify_1_1_path}{Path} is a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_path_a3d843097334e0d1dd6fecf7a7816e050}\label{classunify_1_1_path_a3d843097334e0d1dd6fecf7a7816e050} 
+static const std\+::string {\bfseries XPath\+Prefix}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unify/Path.\+h\item 
+unify/Path.\+cpp\end{DoxyCompactItemize}

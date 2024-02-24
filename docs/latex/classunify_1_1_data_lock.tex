@@ -1,0 +1,106 @@
+\doxysection{unify\+::Data\+Lock Class Reference}
+\hypertarget{classunify_1_1_data_lock}{}\label{classunify_1_1_data_lock}\index{unify::DataLock@{unify::DataLock}}
+
+
+A data lock construct that allows common locking of data so that we can read and write from shared the data.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Lock.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{iterator}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_data_lock_a5bfa2a6f484d3128f95ba14ab8944f69}\label{classunify_1_1_data_lock_a5bfa2a6f484d3128f95ba14ab8944f69} 
+{\bfseries Data\+Lock} (void \texorpdfstring{$\ast$}{*}data, size\+\_\+t stride, size\+\_\+t count, Data\+Lock\+Access\+::\+TYPE type, size\+\_\+t slot)
+\item 
+\Hypertarget{classunify_1_1_data_lock_a14cf367a15bc78d32ff27fd8c1e127ef}\label{classunify_1_1_data_lock_a14cf367a15bc78d32ff27fd8c1e127ef} 
+{\bfseries Data\+Lock} (void \texorpdfstring{$\ast$}{*}data, size\+\_\+t size\+In\+Bytes, Data\+Lock\+Access\+::\+TYPE type, size\+\_\+t slot)
+\item 
+\Hypertarget{classunify_1_1_data_lock_af54acb0464a8a43ea95bb79158b243a5}\label{classunify_1_1_data_lock_af54acb0464a8a43ea95bb79158b243a5} 
+virtual void {\bfseries Set\+Lock} (void \texorpdfstring{$\ast$}{*}data, size\+\_\+t stride, size\+\_\+t count, Data\+Lock\+Access\+::\+TYPE type, size\+\_\+t slot)
+\begin{DoxyCompactList}\small\item\em Setup a lock. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_data_lock_ad384e0da80c539496c9e7e16f716b81c}\label{classunify_1_1_data_lock_ad384e0da80c539496c9e7e16f716b81c} 
+virtual void {\bfseries Set\+Lock} (void \texorpdfstring{$\ast$}{*}data, size\+\_\+t size\+In\+Bytes, Data\+Lock\+Access\+::\+TYPE type, size\+\_\+t slot)
+\begin{DoxyCompactList}\small\item\em Setup a lock. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_data_lock_a076c682239384abc2aa8d78df26d3302}\label{classunify_1_1_data_lock_a076c682239384abc2aa8d78df26d3302} 
+Data\+Lock\+Access\+::\+TYPE {\bfseries Get\+Type} () const
+\begin{DoxyCompactList}\small\item\em Returns the type of lock. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_data_lock_a213ad16ff42907f59adbbe1e5530d1b7}\label{classunify_1_1_data_lock_a213ad16ff42907f59adbbe1e5530d1b7} 
+{\footnotesize template$<$typename T $>$ }\\T \texorpdfstring{$\ast$}{*} {\bfseries Get\+Data} ()
+\begin{DoxyCompactList}\small\item\em Return the head pointer to the entire data lock. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_data_lock_a643951687b88e13b601ed4c5ca316281}\label{classunify_1_1_data_lock_a643951687b88e13b601ed4c5ca316281} 
+{\footnotesize template$<$typename T $>$ }\\const T \texorpdfstring{$\ast$}{*} {\bfseries Get\+Data\+Read\+Only} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the data. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_data_lock_a908ecc109b6224de3dbb0f0b83f4b7f3}\label{classunify_1_1_data_lock_a908ecc109b6224de3dbb0f0b83f4b7f3} 
+{\footnotesize template$<$typename T $>$ }\\T \texorpdfstring{$\ast$}{*} {\bfseries Get\+Item} (size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Return a pointer to the head of a specific \textquotesingle{}item\textquotesingle{}, and item being determined by length of stride. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_data_lock_a5d749544aeffe7e49551639a6ed0c7a5}\label{classunify_1_1_data_lock_a5d749544aeffe7e49551639a6ed0c7a5} 
+{\footnotesize template$<$typename T $>$ }\\const T \texorpdfstring{$\ast$}{*} {\bfseries Get\+Item\+Readonly} (size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Return a pointer to the head of a specific \textquotesingle{}item\textquotesingle{}, and item being determined by length of stride. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_data_lock_abff66190ba718c6f3a283d710d96e09a}\label{classunify_1_1_data_lock_abff66190ba718c6f3a283d710d96e09a} 
+size\+\_\+t {\bfseries Count} () const
+\item 
+\Hypertarget{classunify_1_1_data_lock_aff89b14fca9b1b7763a9165289a752fd}\label{classunify_1_1_data_lock_aff89b14fca9b1b7763a9165289a752fd} 
+size\+\_\+t {\bfseries Stride} () const
+\item 
+\Hypertarget{classunify_1_1_data_lock_a67868425b142525f9b999bbbaf472282}\label{classunify_1_1_data_lock_a67868425b142525f9b999bbbaf472282} 
+size\+\_\+t {\bfseries Get\+Size\+In\+Bytes} () const
+\item 
+\Hypertarget{classunify_1_1_data_lock_a890f8ac2b8b7786197c1fa3dd19b2159}\label{classunify_1_1_data_lock_a890f8ac2b8b7786197c1fa3dd19b2159} 
+size\+\_\+t {\bfseries Slot} () const
+\item 
+\Hypertarget{classunify_1_1_data_lock_afa0c4e2d1ed02aa7801c8a1193e8b71b}\label{classunify_1_1_data_lock_afa0c4e2d1ed02aa7801c8a1193e8b71b} 
+virtual void {\bfseries Invalidate} ()
+\item 
+\Hypertarget{classunify_1_1_data_lock_a7076ec94e73ac1b1089225cc583d530d}\label{classunify_1_1_data_lock_a7076ec94e73ac1b1089225cc583d530d} 
+virtual bool {\bfseries Copy\+Bytes\+From} (const void \texorpdfstring{$\ast$}{*}source, size\+\_\+t offset, size\+\_\+t byte\+Count)
+\item 
+\Hypertarget{classunify_1_1_data_lock_a2334241188e509752488d912f55a9c92}\label{classunify_1_1_data_lock_a2334241188e509752488d912f55a9c92} 
+virtual bool {\bfseries Copy\+Item\+From} (const void \texorpdfstring{$\ast$}{*}source, size\+\_\+t index\+To)
+\item 
+\Hypertarget{classunify_1_1_data_lock_a6aedfa24dc795d497653ae900a990ecc}\label{classunify_1_1_data_lock_a6aedfa24dc795d497653ae900a990ecc} 
+virtual bool {\bfseries Copy\+Item\+From\+To} (size\+\_\+t index\+From, size\+\_\+t index\+To)
+\item 
+\Hypertarget{classunify_1_1_data_lock_a22612ac5a06ce8437ab249839d7ca10b}\label{classunify_1_1_data_lock_a22612ac5a06ce8437ab249839d7ca10b} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{iterator}}$<$ T $>$ {\bfseries begin} ()
+\item 
+\Hypertarget{classunify_1_1_data_lock_ad03154966b76f4ccf138cc4b18559e88}\label{classunify_1_1_data_lock_ad03154966b76f4ccf138cc4b18559e88} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{iterator}}$<$ T $>$ {\bfseries end} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_data_lock_aef11d8130c2aeafa66532f4d75568ba5}\label{classunify_1_1_data_lock_aef11d8130c2aeafa66532f4d75568ba5} 
+void \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+data}
+\item 
+\Hypertarget{classunify_1_1_data_lock_a23a23e9cb05f3f49d251ef54f09c68d2}\label{classunify_1_1_data_lock_a23a23e9cb05f3f49d251ef54f09c68d2} 
+size\+\_\+t {\bfseries m\+\_\+stride}
+\item 
+\Hypertarget{classunify_1_1_data_lock_a2bd839fb1495de679a115ac32071af34}\label{classunify_1_1_data_lock_a2bd839fb1495de679a115ac32071af34} 
+size\+\_\+t {\bfseries m\+\_\+count}
+\item 
+\Hypertarget{classunify_1_1_data_lock_a3c3537ad10e855ab504c247e630e1b1b}\label{classunify_1_1_data_lock_a3c3537ad10e855ab504c247e630e1b1b} 
+size\+\_\+t {\bfseries m\+\_\+size\+In\+Bytes}
+\item 
+\Hypertarget{classunify_1_1_data_lock_a7446256d98356499afadc241c619a9b6}\label{classunify_1_1_data_lock_a7446256d98356499afadc241c619a9b6} 
+Data\+Lock\+Access\+::\+TYPE {\bfseries m\+\_\+type}
+\item 
+\Hypertarget{classunify_1_1_data_lock_ac4d5837aa1ca5a694f5b9d8193a83806}\label{classunify_1_1_data_lock_ac4d5837aa1ca5a694f5b9d8193a83806} 
+size\+\_\+t {\bfseries m\+\_\+slot}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A data lock construct that allows common locking of data so that we can read and write from shared the data. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unify/Data\+Lock.\+h\item 
+unify/Data\+Lock.\+cpp\end{DoxyCompactItemize}

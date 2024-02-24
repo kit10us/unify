@@ -1,0 +1,58 @@
+\doxysection{unify\+::test\+::IEvent\+Handler Class Reference}
+\hypertarget{classunify_1_1test_1_1_i_event_handler}{}\label{classunify_1_1test_1_1_i_event_handler}\index{unify::test::IEventHandler@{unify::test::IEventHandler}}
+
+
+Interface for handling a test event.  
+
+
+
+
+{\ttfamily \#include $<$IEvent\+Handler.\+h$>$}
+
+Inheritance diagram for unify\+::test\+::IEvent\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classunify_1_1test_1_1_i_event_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1test_1_1_i_event_handler_a70a3082c749565672cbad3b107779766}\label{classunify_1_1test_1_1_i_event_handler_a70a3082c749565672cbad3b107779766} 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classunify_1_1test_1_1_i_event_handler}{IEvent\+Handler}} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classunify_1_1test_1_1_i_event_handler_a50abc29aa6511b0196efae99bf026484}{Event}} (IOutput\+Handler\+::ptr output, std\+::string name, \mbox{\hyperlink{namespaceunify_1_1test_a45a0260989c730681b7ca362b3add8ca}{Output\+Type}} type)=0
+\begin{DoxyCompactList}\small\item\em Called when a test event happens. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for handling a test event. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classunify_1_1test_1_1_i_event_handler_a50abc29aa6511b0196efae99bf026484}\label{classunify_1_1test_1_1_i_event_handler_a50abc29aa6511b0196efae99bf026484} 
+\index{unify::test::IEventHandler@{unify::test::IEventHandler}!Event@{Event}}
+\index{Event@{Event}!unify::test::IEventHandler@{unify::test::IEventHandler}}
+\doxysubsubsection{\texorpdfstring{Event()}{Event()}}
+{\footnotesize\ttfamily virtual void unify\+::test\+::\+IEvent\+Handler\+::\+Event (\begin{DoxyParamCaption}\item[{IOutput\+Handler\+::ptr}]{output,  }\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{namespaceunify_1_1test_a45a0260989c730681b7ca362b3add8ca}{Output\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Called when a test event happens. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of event.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classunify_1_1test_1_1_default_event_handler_a4623a8daa4be9a9821ab2c92c415ca73}{unify\+::test\+::\+Default\+Event\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+unify/test/IEvent\+Handler.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,102 @@
+\doxysection{BBox.\+h}
+\hypertarget{_b_box_8h_source}{}\label{_b_box_8h_source}\index{unify/BBox.h@{unify/BBox.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <unify/V3.h>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <unify/Size3.h>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <unify/Ray.h>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <unify/BSphere.h>}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#ifdef\ min}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#undef\ min}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#ifdef\ max}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#undef\ max}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00038\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ =\ \textcolor{keywordtype}{float}\ >}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_b_box}{BBox}}}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Public\ members\ to\ reduce\ possible\ speed\ issues.}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ sup;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ inf;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box_ae26e694ee88779b928e8d3726f8213a1}{BBox}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box_ae26e694ee88779b928e8d3726f8213a1}{BBox}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ inf,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ sup\ );}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box_ae26e694ee88779b928e8d3726f8213a1}{BBox}}(\ T\ squareSize\ );}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ operator\ *\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ multiplicand\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ operator\ *=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ multiplicand\ );}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ operator\ *\ (\ T\ multiplicand\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ operator\ *=\ (\ T\ multiplicand\ );}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ operator\ +\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ point\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ operator\ +=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ point\ );}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ operator\ +\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ bbox\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ operator\ +=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ bbox\ );}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_b_box_a348fee5a04dc45501ddeff41a888ab3d}{GenerateCorners}}(\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ *\ bounds\ );}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_b_box_a230d85250b36dfdd05270e64e26470af}{Clear}}();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox}}\ \&\ \mbox{\hyperlink{classunify_1_1_b_box_ab8c4c9eef96286916ecdc6edd25936d1}{AddBBoxWithPosition}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ boundingBox,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ position\ );\ \ }
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_b_box_a3066fbf75b33560e3afae7e9d223cabb}{AddPoints}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ T\ >}}\ *\ \textcolor{keyword}{const}\ points,\ \textcolor{keywordtype}{size\_t}\ size\ );}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_box_a40b7bda6953a2b288c3b702449ea57dc}{ContainsPoint}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ point\ );}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size3}{Size3<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_b_box_aac7ab7c0e98781a9d40bba62d21f75b8}{Size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_box_a1ee05b7da5d5f45993c248c0b9518103}{Intersects}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ \&\ ray,\ \textcolor{keywordtype}{float}\ t0,\ \textcolor{keywordtype}{float}\ t1\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_box_a1ee05b7da5d5f45993c248c0b9518103}{Intersects}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ \&\ ray,\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ hitPoint\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_box_a1ee05b7da5d5f45993c248c0b9518103}{Intersects}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ \&\ ray,\ \textcolor{keywordtype}{float}\ \&\ distance\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_box_a1ee05b7da5d5f45993c248c0b9518103}{Intersects}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ \&\ ray\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_b_box_ab9da6a93000c5e0a22913e4464d0f2da}{ToBarrycentric}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ point\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_b_box_a1e6cd464ff354f8474c976d42fb8e651}{MakeBSphere}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Fix();}
+\DoxyCodeLine{00146\ \ \ \ \ \};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\ \ \ \ \#include\ <unify/BBox.inl>}}
+\DoxyCodeLine{00149\ \}}
+
+\end{DoxyCode}

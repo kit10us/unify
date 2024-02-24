@@ -22,14 +22,13 @@
 
 #pragma once
 
-/// <summary>
-/// Allows streaming (serializing) of data
-/// </summary>
-
 #include <unify/Unify.h>
 
 namespace unify 
 {
+	/// <summary>
+	/// Type of stream access.
+	/// </summary>
 	enum StreamAccessType
 	{
 		STREAMACCESS_NONE,
@@ -44,6 +43,9 @@ namespace unify
 		STREAMACCESS_APPENDBINARY
 	};
 
+	/// <summary>
+	/// Position to seek from.
+	/// </summary>
 	enum StreamSeekType
 	{
 		STREAMSEEK_START,	// Seek from the start of the stream
@@ -51,6 +53,9 @@ namespace unify
 		STREAMSEEK_CURRENT	// Seek from our current position
 	};
 
+	/// <summary>
+	/// Allows streaming (serializing) of data.
+	/// </summary>
 	class Stream
 	{
 	public:

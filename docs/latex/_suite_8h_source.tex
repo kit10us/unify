@@ -1,0 +1,76 @@
+\doxysection{Suite.\+h}
+\hypertarget{_suite_8h_source}{}\label{_suite_8h_source}\index{unify/test/Suite.h@{unify/test/Suite.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Matrix.h>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <unify/test/IEventHandler.h>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <unify/test/IOutputHandler.h>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <unify/test/IAssertHandler.h>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{namespace\ }test}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1test_1_1_suite}{Suite}}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1test_1_1_suite}{Suite}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classunify_1_1test_1_1_suite}{\string~Suite}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1test_1_1_suite_a3933900c65165b299798bd3a6dac0877}{BeginSuite}}(\ std::string\ name\ );}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1test_1_1_suite_a4253541a8ff34419b3c31a6dcf2a586f}{EndSuite}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1test_1_1_suite_a11dbe56a98077c6d4f87931bf24bdc72}{BeginCase}}(\ std::string\ name\ );}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1test_1_1_suite_a6a2205dcc9bf9ca544f2d1828410889f}{EndCase}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1test_1_1_suite_addc5166428008b2afa932cb02915ff3b}{Info}}(\ std::string\ message\ );}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1test_1_1_suite_a4335fb5acaf1d14352cf16fb38c39709}{Warning}}(\ std::string\ message\ );}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1test_1_1_suite_accef319bdaea72911cdcb3c38f776fa0}{Assert}}(\ std::string\ message,\ \textcolor{keywordtype}{bool}\ test\ );}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1test_1_1_suite_a44ce7fe738abba3c773700466f7bb378}{TryCatch}}(\ std::string\ message,\ std::function<\ \textcolor{keywordtype}{void}()\ >\ test,\ \textcolor{keywordtype}{bool}\ passOnException\ );}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1test_1_1_suite_a13f0956bdefea037291afbcdc75aa7c3}{TryCatchAssert}}(\ std::string\ message,\ std::function<\ \textcolor{keywordtype}{bool}()\ >\ test\ );}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ m\_suiteName;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ m\_caseName;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ IEventHandler::ptr\ m\_eventHandler;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ IOutputHandler::ptr\ m\_outputHandler;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_assertCount;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ IAssertHandler::ptr\ m\_assertHandler;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \}}
+
+\end{DoxyCode}

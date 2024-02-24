@@ -1,0 +1,84 @@
+\doxysection{Stream.\+h}
+\hypertarget{_stream_8h_source}{}\label{_stream_8h_source}\index{unify/Stream.h@{unify/Stream.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}\ }
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417}{StreamAccessType}}}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ STREAMACCESS\_NONE,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ STREAMACCESS\_READ,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ STREAMACCESS\_WRITE,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ STREAMACCESS\_APPEND,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ STREAMACCESS\_READTEXT,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ STREAMACCESS\_WRITETEXT,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ STREAMACCESS\_APPENDTEXT,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ STREAMACCESS\_READBINARY,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ STREAMACCESS\_WRITEBINARY,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ STREAMACCESS\_APPENDBINARY}
+\DoxyCodeLine{00044\ \ \ \ \ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceunify_a384b8275876d58563e0ed7a141823264}{StreamSeekType}}}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ STREAMSEEK\_START,\ \ \ \textcolor{comment}{//\ Seek\ from\ the\ start\ of\ the\ stream}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ STREAMSEEK\_END,\ \ \ \ \ \textcolor{comment}{//\ Seek\ from\ the\ end\ of\ the\ stream}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ STREAMSEEK\_CURRENT\ \ \textcolor{comment}{//\ Seek\ from\ our\ current\ position}}
+\DoxyCodeLine{00054\ \ \ \ \ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_stream}{Stream}}}
+\DoxyCodeLine{00060\ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_stream}{Stream}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classunify_1_1_stream}{\string~Stream}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ Open(\ \mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417}{StreamAccessType}}\ access,\ \textcolor{keywordtype}{void}\ *\ pData\ );}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Close();\ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Read(\ \textcolor{keywordtype}{void}*\ pDest,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uLength\ );}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ReadPack(\ \textcolor{keywordtype}{void}*\ pDest,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uLength\ );}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Write(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ pSrc,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uLength\ );}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ WritePack(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ pSrc\ );}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ Seek(\ \mbox{\hyperlink{namespaceunify_a384b8275876d58563e0ed7a141823264}{StreamSeekType}}\ seek,\ \textcolor{keywordtype}{int}\ iOffset\ =\ 0\ );}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetFlags(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uFlags\ );}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ GetFlags();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ EndOfStream();}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ BytesWaiting();}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsOpen()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ FILE\ *\ m\_pStream;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417}{StreamAccessType}}\ m\_Access;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_uFlags;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_bEndOfStream;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_uBytesWaiting;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_isOpen;}
+\DoxyCodeLine{00085\ \ \ \ \ \};}
+\DoxyCodeLine{00086\ \}}
+\DoxyCodeLine{00087\ }
+
+\end{DoxyCode}

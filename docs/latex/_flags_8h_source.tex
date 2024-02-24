@@ -1,0 +1,86 @@
+\doxysection{Flags.\+h}
+\hypertarget{_flags_8h_source}{}\label{_flags_8h_source}\index{unify/Flags.h@{unify/Flags.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \mbox{\hyperlink{namespaceunify_aae31856ee9b86baac184363c6052d1aa}{Flags}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG00\ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG01\ \ \ \ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG02\ \ \ \ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG03\ \ \ \ \ \ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG04\ \ \ \ \ \ \ \ \ \ 0x00000008}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG05\ \ \ \ \ \ \ \ \ \ 0x00000010}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG06\ \ \ \ \ \ \ \ \ \ 0x00000020}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG07\ \ \ \ \ \ \ \ \ \ 0x00000040}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG08\ \ \ \ \ \ \ \ \ \ 0x00000080}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG09\ \ \ \ \ \ \ \ \ \ 0x00000100}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG10\ \ \ \ \ \ \ \ \ \ 0x00000200}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG11\ \ \ \ \ \ \ \ \ \ 0x00000400}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG12\ \ \ \ \ \ \ \ \ \ 0x00000800}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG13\ \ \ \ \ \ \ \ \ \ 0x00001000}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG14\ \ \ \ \ \ \ \ \ \ 0x00002000}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG15\ \ \ \ \ \ \ \ \ \ 0x00004000}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG16\ \ \ \ \ \ \ \ \ \ 0x00008000}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG17\ \ \ \ \ \ \ \ \ \ 0x00010000}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG18\ \ \ \ \ \ \ \ \ \ 0x00020000}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG19\ \ \ \ \ \ \ \ \ \ 0x00040000}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG20\ \ \ \ \ \ \ \ \ \ 0x00080000}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG21\ \ \ \ \ \ \ \ \ \ 0x00100000}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG22\ \ \ \ \ \ \ \ \ \ 0x00200000}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG23\ \ \ \ \ \ \ \ \ \ 0x00400000}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG24\ \ \ \ \ \ \ \ \ \ 0x00800000}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG25\ \ \ \ \ \ \ \ \ \ 0x01000000}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG26\ \ \ \ \ \ \ \ \ \ 0x02000000}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG27\ \ \ \ \ \ \ \ \ \ 0x03000000}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG28\ \ \ \ \ \ \ \ \ \ 0x08000000}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG29\ \ \ \ \ \ \ \ \ \ 0x10000000}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG30\ \ \ \ \ \ \ \ \ \ 0x20000000}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG31\ \ \ \ \ \ \ \ \ \ 0x40000000}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG32\ \ \ \ \ \ \ \ \ \ 0x80000000}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{inline}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ CheckFlag(\ \mbox{\hyperlink{namespaceunify_aae31856ee9b86baac184363c6052d1aa}{Flags}}\ flags,\ \mbox{\hyperlink{namespaceunify_aae31856ee9b86baac184363c6052d1aa}{Flags}}\ member\ )}
+\DoxyCodeLine{00070\ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ (flags\ \&\ member)\ ==\ member\ )}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\ \ \ \ \#define\ BITCOMPARE(b1,\ b2)\ \ \ \ \ \ (b2==(b1\ \&\ b2))\ \ \ \ \ }\textcolor{comment}{//\ Compare\ bits}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\ \ \ \ \#define\ BITSTATE(b1,\ b2)\ \ \ \ \ \ \ \ ((b1>>b2)\&1)\ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Get\ the\ state\ of\ a\ single\ bit}}
+\DoxyCodeLine{00083\ \}}
+
+\end{DoxyCode}

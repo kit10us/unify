@@ -1,0 +1,36 @@
+\doxysection{unify\+::Data\+Lock\+Access Struct Reference}
+\hypertarget{structunify_1_1_data_lock_access}{}\label{structunify_1_1_data_lock_access}\index{unify::DataLockAccess@{unify::DataLockAccess}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa}\label{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa} 
+enum {\bfseries TYPE} \{ {\bfseries None}
+, {\bfseries Readonly}
+, {\bfseries Writeonly}
+, {\bfseries Read\+Write}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structunify_1_1_data_lock_access_aa078192be1505665fa71ea75b704939a}\label{structunify_1_1_data_lock_access_aa078192be1505665fa71ea75b704939a} 
+static bool {\bfseries Read\+Access} (TYPE access)
+\begin{DoxyCompactList}\small\item\em Returns true if the access supports read mode. \end{DoxyCompactList}\item 
+\Hypertarget{structunify_1_1_data_lock_access_ab8bd196b2a1c9b86b6f2f92f01a93769}\label{structunify_1_1_data_lock_access_ab8bd196b2a1c9b86b6f2f92f01a93769} 
+static bool {\bfseries Write\+Access} (TYPE access)
+\begin{DoxyCompactList}\small\item\em Returns true if the access mode supports write access. \end{DoxyCompactList}\item 
+\Hypertarget{structunify_1_1_data_lock_access_ae8ccdf02074422b5b94c1702b9303f5a}\label{structunify_1_1_data_lock_access_ae8ccdf02074422b5b94c1702b9303f5a} 
+static bool {\bfseries Compatible} (TYPE a, TYPE b)
+\begin{DoxyCompactList}\small\item\em Retruns true if access \textquotesingle{}a\textquotesingle{} supports the access specified with \textquotesingle{}b\textquotesingle{}. \end{DoxyCompactList}\item 
+\Hypertarget{structunify_1_1_data_lock_access_a2f6c6f7ca9b9a169e23f81c5d96c361a}\label{structunify_1_1_data_lock_access_a2f6c6f7ca9b9a169e23f81c5d96c361a} 
+static TYPE {\bfseries From\+String} (std\+::string access)
+\item 
+\Hypertarget{structunify_1_1_data_lock_access_a1c57e54314f158e956207b5ac4475ac1}\label{structunify_1_1_data_lock_access_a1c57e54314f158e956207b5ac4475ac1} 
+static std\+::string {\bfseries To\+String} (TYPE access)
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unify/Data\+Lock.\+h\item 
+unify/Data\+Lock.\+cpp\end{DoxyCompactItemize}

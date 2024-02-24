@@ -1,0 +1,89 @@
+\doxysection{Parameters.\+inl}
+\hypertarget{_parameters_8inl_source}{}\label{_parameters_8inl_source}\index{unify/Parameters.inl@{unify/Parameters.inl}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >\ }
+\DoxyCodeLine{00024\ T\ Parameters::Get(\ std::string\ name\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00025\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00026\ \ \ \ \ ParameterMap::const\_iterator\ itr\ =\ m\_parameters.find(\ name\ );}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ itr\ ==\ m\_parameters.end()\ )}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ Exception(\ \textcolor{stringliteral}{"{}Failed\ to\ find\ Parameters:\ \(\backslash\)"{}"{}}\ +\ name\ +\ \textcolor{stringliteral}{"{}\(\backslash\)"{}!"{}}\ );}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \ \ m\_auditItemsUsed.insert(\ name\ );}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ T\ value\ \{\};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00035\ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ value\ =\ unify::any\_cast<\ T\ >(itr-\/>second.value);}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{catch}(\ ...\ )}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classunify_1_1_bad_cast}{unify::BadCast}}(\ std::string(\ \textcolor{stringliteral}{"{}Failed\ to\ cast\ \(\backslash\)"{}"{}}\ )\ +\ name\ +\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ of\ type\ "{}}\ +\ itr-\/>second.value.type().name()\ +\ \textcolor{stringliteral}{"{}!"{}}\ );}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{return}\ value;}
+\DoxyCodeLine{00044\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >\ }
+\DoxyCodeLine{00047\ T\ Parameters::Get(\ std::string\ name,\ \textcolor{keyword}{const}\ T\ \&\ defaultValue\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00048\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00049\ \ \ \ \ ParameterMap::const\_iterator\ itr\ =\ m\_parameters.find(\ name\ );}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{if}(\ itr\ ==\ m\_parameters.end()\ )}
+\DoxyCodeLine{00051\ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ defaultValue;}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ m\_auditItemsUsed.insert(\ name\ );}
+\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ T\ value;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00058\ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ value\ =\ unify::any\_cast<\ T\ >(itr-\/>second.value);}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{catch}(\ ...\ )}
+\DoxyCodeLine{00062\ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ BadCast(\ \textcolor{stringliteral}{"{}Failed\ to\ cast\ \(\backslash\)"{}"{}}\ +\ name\ +\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ of\ type\ "{}}\ +\ itr-\/>second.value.type().name()\ +\ \textcolor{stringliteral}{"{}!"{}}\ );}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{return}\ value;}
+\DoxyCodeLine{00066\ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >\ }
+\DoxyCodeLine{00069\ Parameters\ \&\ Parameters::Default(\ std::string\ name,\ \textcolor{keyword}{const}\ T\ \&\ value\ )}
+\DoxyCodeLine{00070\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{if}(\ m\_parameters.find(\ name\ )\ ==\ m\_parameters.end()\ )}
+\DoxyCodeLine{00072\ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ m\_parameters[\ name\ ]\ =\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(value);}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00076\ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >\ }
+\DoxyCodeLine{00079\ Parameters\ \&\ Parameters::Set(\ std::string\ name,\ \textcolor{keyword}{const}\ T\ \&\ value\ )}
+\DoxyCodeLine{00080\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ m\_parameters[\ name\ ].value\ =\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(value);}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00083\ \}}
+
+\end{DoxyCode}

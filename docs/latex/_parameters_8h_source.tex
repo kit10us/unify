@@ -1,0 +1,129 @@
+\doxysection{Parameters.\+h}
+\hypertarget{_parameters_8h_source}{}\label{_parameters_8h_source}\index{unify/Parameters.h@{unify/Parameters.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <unify/BadCast.h>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <unify/String.h>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <unify/Any.h>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structunify_1_1_parameter}{Parameter}}}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structunify_1_1_parameter}{Parameter}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structunify_1_1_parameter}{Parameter}}(\ std::string\ name,\ T\ value\ )}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ :\ name\{\ name\ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ value\{\ value\ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structunify_1_1_parameter}{Parameter}}(\ std::string\ name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ value\ )}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ :\ name\{\ name\ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ value\{\ std::string(value)\ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_any}{unify::Any}}\ value;}
+\DoxyCodeLine{00057\ \ \ \ \ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_parameters}{Parameters}}}
+\DoxyCodeLine{00060\ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_parameters}{Parameters}}();}
+\DoxyCodeLine{00063\ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_parameters}{Parameters}}(\ std::string\ name,\ T\ value\ );}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_parameters}{Parameters}}(\ std::initializer\_list<\ Parameter\ >\ parameters\ );}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classunify_1_1_parameters}{\string~Parameters}}();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classunify_1_1_parameters}{Parameters}}\ \&\ Reset();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classunify_1_1_parameters_a0b04fd280e3ddd7f5efe7e62bafdffab}{Count}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Default\ only\ sets\ a\ value\ if\ it\ hasn't\ already\ been\ set.\ }}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_parameters}{Parameters}}\ \&\ Default(\ std::string\ name,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_any}{unify::Any}}\ \&\ value\ );}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Default\ only\ sets\ a\ value\ if\ it\ hasn't\ already\ been\ set.\ }}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_parameters}{Parameters}}\ \&\ Default(\ std::string\ name,\ \textcolor{keyword}{const}\ T\ \&\ value\ );}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_parameters}{Parameters}}\ \&\ Set(\ std::string\ name,\ \textcolor{keyword}{const}\ T\ \&\ value\ );}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_parameters}{Parameters}}\ \&\ Set(\ std::string\ name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ value\ );}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_parameters}{Parameters}}\ \&\ Set(\ \mbox{\hyperlink{structunify_1_1_parameter}{Parameter}}\ parameter\ );}
+\DoxyCodeLine{00091\ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ Exists(\ std::string\ name\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >\ T\ Get(\ std::string\ name\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >\ T\ Get(\ std::string\ name,\ \textcolor{keyword}{const}\ T\ \&\ defaultValue\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >\ T\ \mbox{\hyperlink{classunify_1_1_parameters_ac83e60f34e87a40e969a235f8b3e9a59}{Cast}}(\ std::string\ name\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{comment}{//template<\ typename\ T\ >\ T\ Cast(\ std::string\ name,\ const\ T\ \&\ defaultValue\ )\ const;}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classunify_1_1_parameters_ae3fa08bb7b7493dd5fae0801972cfb61}{ToString}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ AuditCount()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classunify_1_1_parameters_ab7e9e18726557ee004e4a458a6bcd26f}{Audit}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_parameters}{Parameters}}\ \&\ operator+=(\ \mbox{\hyperlink{classunify_1_1_parameters}{Parameters}}\ \&\ parameters\ );}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_parameters}{Parameters}}\ operator+(\ \mbox{\hyperlink{classunify_1_1_parameters}{Parameters}}\ \&\ parameters\ );}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ std::map<\ std::string,\ Parameter,\ string::CaseInsensitiveLessThanEqualTest>\ ParameterMap;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ ParameterMap\ m\_parameters;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ std::set<\ std::string>\ m\_auditItemsUsed;\ \textcolor{comment}{//\ This\ helps\ reduce\ typos\ by\ ensuring\ every\ explicitly\ get\ and\ set\ value\ are\ paired.\ It\ is\ naturally\ ignored\ for\ defaults.}}
+\DoxyCodeLine{00124\ \ \ \ \ \};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{bool}\ Parameters::Cast<\ bool\ >(\ std::string\ name\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{char}\ Parameters::Cast<\ char\ >(\ std::string\ name\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ Parameters::Cast<\ unsigned\ char\ >(\ std::string\ name\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{int}\ Parameters::Cast<\ int\ >(\ std::string\ name\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Parameters::Cast<\ unsigned\ int\ >(\ std::string\ name\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{float}\ Parameters::Cast<\ float\ >(\ std::string\ name\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{double}\ Parameters::Cast<\ double\ >(\ std::string\ name\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\ \ \ \ \#include\ <unify/Parameters.inl>}}
+\DoxyCodeLine{00135\ \}}
+
+\end{DoxyCode}

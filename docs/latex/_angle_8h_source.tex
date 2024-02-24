@@ -1,0 +1,105 @@
+\doxysection{Angle.\+h}
+\hypertarget{_angle_8h_source}{}\label{_angle_8h_source}\index{unify/Angle.h@{unify/Angle.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_angle}{Angle}}}
+\DoxyCodeLine{00035\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \mbox{\hyperlink{classunify_1_1_angle_ad50b7254fb56e40cc763983e4d7176b4}{AngleInRadians}}(\ \textcolor{keywordtype}{float}\ radians\ );}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \mbox{\hyperlink{classunify_1_1_angle_aaef77280f0f320d6a87ac07b474b3815}{AngleInDegrees}}(\ \textcolor{keywordtype}{float}\ degrees\ );}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \mbox{\hyperlink{classunify_1_1_angle_a992aa06d0940da30c6ce03c30b21d1c1}{AnglePI}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \mbox{\hyperlink{classunify_1_1_angle_a5628ad1dcbc300e5b9bfb0f32fa587c9}{AnglePI2}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \mbox{\hyperlink{classunify_1_1_angle_a0f701690b0b61b8bc04fc211cabab117}{AnglePIHalf}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ m\_radians;\ \textcolor{comment}{//\ We\ store\ in\ radians,\ and\ convert\ what\ ever\ time\ delta\ format.}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle_aca3c6e1519b40835d31736430ca082a9}{Angle}}(\ \textcolor{keywordtype}{float}\ radians\ );}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle_aca3c6e1519b40835d31736430ca082a9}{Angle}}();}
+\DoxyCodeLine{00073\ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle_aca3c6e1519b40835d31736430ca082a9}{Angle}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ angle\ );}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle_aca3c6e1519b40835d31736430ca082a9}{Angle}}(\ std::string\ angle\ );}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ operator\ =\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ angle\ );}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ operator\ +=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ angle\ );}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ operator\ -\/=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ angle\ );}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ operator\ *=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ angle\ );}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ operator\ /=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ angle\ );}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ operator\ +\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ angle)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ operator\ -\/\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ angle\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ operator\ *\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ angle\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ operator\ /\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ angle\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ ==\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ angle\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ !=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ angle\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ operator\ *=\ (\ \textcolor{keywordtype}{float}\ scalar\ );}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ operator\ /=\ (\ \textcolor{keywordtype}{float}\ scalar\ );}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ operator\ *\ (\ \textcolor{keywordtype}{float}\ scalar\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ operator\ /\ (\ \textcolor{keywordtype}{float}\ scalar\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ >\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ angle\ );}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ >=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ angle\ );}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ <\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ angle\ );}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ <=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \&\ angle\ );}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classunify_1_1_angle_af5c7be28a33d8b76362df6569e5c0168}{ToRadians}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classunify_1_1_angle_a6c58b71abc62f8769771fdef36cc1f2d}{ToDegrees}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ Normalize();}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classunify_1_1_angle_a18d6ffd45d91030d09d48fff2a5232fa}{SinOf}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classunify_1_1_angle_ac2ace7a480a88d79ea2f604b7d2206f5}{CosOf}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classunify_1_1_angle_a5bba8d858af081aad239d911df255cb7}{ToString}}(\ \textcolor{keywordtype}{bool}\ radians\ =\ \textcolor{keyword}{true}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00139\ \ \ \ \ \};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \mbox{\hyperlink{namespaceunify_a310ca2f10f67a5acb3780afac5efeced}{AngleInRadians}}(\ \textcolor{keywordtype}{float}\ radians\ );}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00149\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \mbox{\hyperlink{namespaceunify_a2b470b9178b6fd7e9a660c8db1ce08d3}{AngleInDegrees}}(\ \textcolor{keywordtype}{float}\ degrees\ );}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00154\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \mbox{\hyperlink{namespaceunify_a5811d2f2a2ab0ca412a8521d3988cb21}{AnglePI}}();}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00159\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \mbox{\hyperlink{namespaceunify_a3698032eca29a2e08969c6657735ba8c}{AnglePI2}}();}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00164\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \mbox{\hyperlink{namespaceunify_a033d66502f09b42b0d35cc268d7ea107}{AnglePIHalf}}();}
+\DoxyCodeLine{00165\ \}}
+
+\end{DoxyCode}

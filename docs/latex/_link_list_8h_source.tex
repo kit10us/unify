@@ -1,0 +1,92 @@
+\doxysection{Link\+List.\+h}
+\hypertarget{_link_list_8h_source}{}\label{_link_list_8h_source}\index{unify/LinkList.h@{unify/LinkList.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/TLink.h>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <unify/Flags.h>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <unify/List.h>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <unify/String.h>}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}\ }
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\ \ \ \ \#define\ LINKLIST\_SORT\ \ \ \ \ \ \ \ \ \ \ FLAG01}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\ \ \ \ \#define\ LINKLIST\_SORTREVERSE\ \ \ \ (FLAG01|FLAG02)}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\ \ \ \ \#define\ LINKLIST\_SORT\_BYVALUE\ \ \ FLAG03}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\ \ \ \ \#define\ LINKLIST\_SORT\_BYNAME\ \ \ \ FLAG04}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\ \ \ \ \#define\ LINKLIST\_FORCENAMES\ \ \ \ \ FLAG05\ \ }\textcolor{comment}{//\ Forces\ list\ to\ use\ names}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_link_list}{LinkList}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classunify_1_1_q_list}{QList}}<\ T\ >}
+\DoxyCodeLine{00042\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_link_list}{LinkList}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_link_list}{\string~LinkList}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Count();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Clear();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ T\ *\ AddItem(\ T\ *\ item,\ std::string\ sName\ =\ \textcolor{stringliteral}{"{}"{}}\ );}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ T\ *\ AddItem(\ T\ *\ item,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uFlags,\ std::string\ sName\ =\ \textcolor{stringliteral}{"{}"{}}\ );}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ T\ *\ AddItem(\ T\ *\ item,\ \textcolor{keywordtype}{float}\ fSortValue,\ std::string\ sName\ =\ \textcolor{stringliteral}{"{}"{}}\ );}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ T\ *\ AddItem(\ T\ *\ item,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uFlags,\ \textcolor{keywordtype}{float}\ fSortValue,\ std::string\ sName\ =\ \textcolor{stringliteral}{"{}"{}}\ );}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ DeleteItem(\ std::string\ sName\ );}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ DeleteItem(\ \mbox{\hyperlink{classunify_1_1_t_link}{TLink<\ T\ >}}\ *\ \&pLink\ );}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ DeleteItem(\ T\ *\ pItem\ );}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetLisFlags(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uFlags\ );}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ GetLisFlags();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ Name(\ \textcolor{keyword}{const}\ T\ *\ pItem\ );}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ Name(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uIndex\ );}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ T\ *\ Find(\ std::string\ sName\ );}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ T\ *\ Find(\ \mbox{\hyperlink{classunify_1_1_query}{Query<\ T\ >}}\ *\ pQuery,\ std::string\ sName\ );}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ T\ *\ GotoFirst(\ \mbox{\hyperlink{classunify_1_1_query}{Query<\ T\ >}}\ *\ pQuery\ );}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ T\ *\ GotoLast(\ \mbox{\hyperlink{classunify_1_1_query}{Query<\ T\ >}}\ *\ pQuery\ );}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ T\ *\ GotoPrevious(\ \mbox{\hyperlink{classunify_1_1_query}{Query<\ T\ >}}\ *\ pQuery\ );}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ T\ *\ GotoNext(\ \mbox{\hyperlink{classunify_1_1_query}{Query<\ T\ >}}\ *\ pQuery\ );}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ T\ *\ Current();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ T\ *\ Item(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uIndex\ );}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_t_link}{TLink<\ T\ >}}\ *\ m\_pFirst;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_t_link}{TLink<\ T\ >}}\ *\ m\_pLast;}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_uCount;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_uLisFlags;}
+\DoxyCodeLine{00083\ \ \ \ \ \};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\ \ \ \ \#include\ <unify/LinkList.inl>}}
+\DoxyCodeLine{00086\ \}}
+
+\end{DoxyCode}

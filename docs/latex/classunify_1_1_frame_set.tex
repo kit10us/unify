@@ -1,0 +1,58 @@
+\doxysection{unify\+::Frame\+Set Class Reference}
+\hypertarget{classunify_1_1_frame_set}{}\label{classunify_1_1_frame_set}\index{unify::FrameSet@{unify::FrameSet}}
+
+
+A set of matrices, and connectivity between these matrices, used for mesh animations.  
+
+
+
+
+{\ttfamily \#include $<$Frame\+Set.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classunify_1_1_frame_set_1_1_for_each_functor}{For\+Each\+Functor}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_frame_set_ae6d524e1cb2cfd1481f239969c4265d9}\label{classunify_1_1_frame_set_ae6d524e1cb2cfd1481f239969c4265d9} 
+size\+\_\+t {\bfseries Add} (\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} model, size\+\_\+t parent, std\+::string name=std\+::string())
+\item 
+\Hypertarget{classunify_1_1_frame_set_a2b0a8de03ed0c26200d94cac221705c5}\label{classunify_1_1_frame_set_a2b0a8de03ed0c26200d94cac221705c5} 
+bool {\bfseries Exists} (std\+::string name) const
+\item 
+\Hypertarget{classunify_1_1_frame_set_a3758006f03037127ac6499ab83107058}\label{classunify_1_1_frame_set_a3758006f03037127ac6499ab83107058} 
+size\+\_\+t {\bfseries Find} (std\+::string name) const
+\item 
+\Hypertarget{classunify_1_1_frame_set_a9670dfaa272f3ca54bcf9da4a8ba4ddf}\label{classunify_1_1_frame_set_a9670dfaa272f3ca54bcf9da4a8ba4ddf} 
+size\+\_\+t {\bfseries Count} () const
+\item 
+\Hypertarget{classunify_1_1_frame_set_a2eb8ec90d296621e728eca948aea852d}\label{classunify_1_1_frame_set_a2eb8ec90d296621e728eca948aea852d} 
+std\+::string {\bfseries Name} (size\+\_\+t index) const
+\item 
+\Hypertarget{classunify_1_1_frame_set_aff9f20192e2bb9d6f44a76e5436bd5cb}\label{classunify_1_1_frame_set_aff9f20192e2bb9d6f44a76e5436bd5cb} 
+const \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \& {\bfseries Model} (size\+\_\+t index) const
+\item 
+\Hypertarget{classunify_1_1_frame_set_a9e433879fd9af43e2289a2ff3da39e44}\label{classunify_1_1_frame_set_a9e433879fd9af43e2289a2ff3da39e44} 
+const \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \& {\bfseries Local} (size\+\_\+t index) const
+\item 
+\Hypertarget{classunify_1_1_frame_set_ac8cc75a04dd29fe2f36eca67fe4faf29}\label{classunify_1_1_frame_set_ac8cc75a04dd29fe2f36eca67fe4faf29} 
+void {\bfseries For\+Each} (\mbox{\hyperlink{classunify_1_1_frame_set_1_1_for_each_functor}{For\+Each\+Functor}} \&functor) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_frame_set_a8652a0dd28f634b96bc6d15df08df7b4}\label{classunify_1_1_frame_set_a8652a0dd28f634b96bc6d15df08df7b4} 
+class {\bfseries Frame\+Set\+Instance}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A set of matrices, and connectivity between these matrices, used for mesh animations. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unify/Frame\+Set.\+h\item 
+unify/Frame\+Set.\+cpp\end{DoxyCompactItemize}

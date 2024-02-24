@@ -1,0 +1,64 @@
+\doxysection{unify\+::Any Class Reference}
+\hypertarget{classunify_1_1_any}{}\label{classunify_1_1_any}\index{unify::Any@{unify::Any}}
+
+
+\doxylink{classunify_1_1_any}{Any} allows us to simplify our interfaces when the type a function can consume is largely variable, or more importantly, extremely late, such as with an event system. Instead of creating tens to hundreds of member functions able to consume specific type, we generalize to to take an \doxylink{classunify_1_1_any}{Any} (think of it as an "{}anything"{}), then let the implementation verify the actual type and act accordingly. This pretty much just encapsulates RTTI and makes it feel more natural.  
+
+
+
+
+{\ttfamily \#include $<$Any.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_any_a0bbed4d27a884e2a6cc8db5a62f76e60}\label{classunify_1_1_any_a0bbed4d27a884e2a6cc8db5a62f76e60} 
+{\footnotesize template$<$typename Value\+Type $>$ }\\{\bfseries Any} (const Value\+Type \&value)
+\item 
+\Hypertarget{classunify_1_1_any_a5e80ac37f4dd7f425b91076aabbcbde3}\label{classunify_1_1_any_a5e80ac37f4dd7f425b91076aabbcbde3} 
+{\bfseries Any} (const \mbox{\hyperlink{classunify_1_1_any}{Any}} \&other)
+\item 
+\Hypertarget{classunify_1_1_any_ab06553f850a0499fbd2a6bcfacb8fc57}\label{classunify_1_1_any_ab06553f850a0499fbd2a6bcfacb8fc57} 
+{\bfseries Any} (\mbox{\hyperlink{classunify_1_1_any}{Any}} \&\&other) noexcept
+\item 
+\Hypertarget{classunify_1_1_any_aea4b223d7fa1ff9725f5b76aedb77192}\label{classunify_1_1_any_aea4b223d7fa1ff9725f5b76aedb77192} 
+{\footnotesize template$<$typename Value\+Type $>$ }\\{\bfseries Any} (Value\+Type \&\&value, typename std\+::enable\+\_\+if$<$ !std\+::is\+\_\+same$<$ \mbox{\hyperlink{classunify_1_1_any}{Any}} \&, Value\+Type $>$\+::value $>$\+::type \texorpdfstring{$\ast$}{*}=0, typename std\+::enable\+\_\+if$<$ !std\+::is\+\_\+const$<$ Value\+Type $>$\+::value $>$\+::type \texorpdfstring{$\ast$}{*}=0)
+\item 
+\Hypertarget{classunify_1_1_any_ad59e53e2e18dbc0ea13e27c6ff61f955}\label{classunify_1_1_any_ad59e53e2e18dbc0ea13e27c6ff61f955} 
+\mbox{\hyperlink{classunify_1_1_any}{Any}} \& {\bfseries swap} (\mbox{\hyperlink{classunify_1_1_any}{Any}} \&rhs) noexcept
+\item 
+\Hypertarget{classunify_1_1_any_a0240da517cdcb7e069ad1038ffad3c7e}\label{classunify_1_1_any_a0240da517cdcb7e069ad1038ffad3c7e} 
+\mbox{\hyperlink{classunify_1_1_any}{Any}} \& {\bfseries operator=} (const \mbox{\hyperlink{classunify_1_1_any}{Any}} \&rhs)
+\item 
+\Hypertarget{classunify_1_1_any_a5ff340c6644ae831ee2d2b3aabe263d3}\label{classunify_1_1_any_a5ff340c6644ae831ee2d2b3aabe263d3} 
+\mbox{\hyperlink{classunify_1_1_any}{Any}} \& {\bfseries operator=} (\mbox{\hyperlink{classunify_1_1_any}{Any}} \&\&rhs) noexcept
+\item 
+\Hypertarget{classunify_1_1_any_a0618d1ac22fca0dfe9d195de16ba8c42}\label{classunify_1_1_any_a0618d1ac22fca0dfe9d195de16ba8c42} 
+{\footnotesize template$<$class Value\+Type $>$ }\\\mbox{\hyperlink{classunify_1_1_any}{Any}} \& {\bfseries operator=} (Value\+Type \&\&rhs)
+\item 
+\Hypertarget{classunify_1_1_any_a65c2be9da70302722e4f5a9f2f9f7850}\label{classunify_1_1_any_a65c2be9da70302722e4f5a9f2f9f7850} 
+bool {\bfseries empty} () const noexcept
+\item 
+\Hypertarget{classunify_1_1_any_a5d3e14606a9341675886e55175818b5b}\label{classunify_1_1_any_a5d3e14606a9341675886e55175818b5b} 
+void {\bfseries clear} () noexcept
+\item 
+\Hypertarget{classunify_1_1_any_a6c83c9ed41be80663cfd6026a90c730d}\label{classunify_1_1_any_a6c83c9ed41be80663cfd6026a90c730d} 
+const std\+::type\+\_\+info \& {\bfseries type} () const noexcept
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classunify_1_1_any_a041ed0781198a00a6acbabdf41c0a279}\label{classunify_1_1_any_a041ed0781198a00a6acbabdf41c0a279} 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type \texorpdfstring{$\ast$}{*} {\bfseries any\+\_\+cast} (\mbox{\hyperlink{classunify_1_1_any}{Any}} \texorpdfstring{$\ast$}{*}) noexcept
+\item 
+\Hypertarget{classunify_1_1_any_aa7881ab8b27b506c3df6f7eafdcfda33}\label{classunify_1_1_any_aa7881ab8b27b506c3df6f7eafdcfda33} 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type \texorpdfstring{$\ast$}{*} {\bfseries unsafe\+\_\+any\+\_\+cast} (\mbox{\hyperlink{classunify_1_1_any}{Any}} \texorpdfstring{$\ast$}{*}) noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classunify_1_1_any}{Any} allows us to simplify our interfaces when the type a function can consume is largely variable, or more importantly, extremely late, such as with an event system. Instead of creating tens to hundreds of member functions able to consume specific type, we generalize to to take an \doxylink{classunify_1_1_any}{Any} (think of it as an "{}anything"{}), then let the implementation verify the actual type and act accordingly. This pretty much just encapsulates RTTI and makes it feel more natural. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+unify/Any.\+h\end{DoxyCompactItemize}
