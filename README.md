@@ -29,9 +29,9 @@ The formatting of the code within Unify is the culmination of research in code r
 # Source Code Requirements
 The following section covers requirements when developing within Unify. These are not standards, as much as compatibility requirements.
 
-## C++ Version Compatability
+## C++ Version Compatibility
 **Consideration**
-Ensure features beyond C++11 are guarded with __cplusplus defines, to ensure backwards compatability with C++11.
+Ensure features beyond C++11 are guarded with __cplusplus defines, to ensure backwards compatibility with C++11.
 
 _note: This can become tedious, especially with the growing number of C++ versions supported (14, 17, etc.). If, and then, how granular this is taken is under consideration. Consider this a **good to do** not a **must do** at the moment._
 
