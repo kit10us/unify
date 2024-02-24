@@ -1,0 +1,141 @@
+\doxysection{unify\+::string Namespace Reference}
+\hypertarget{namespaceunify_1_1string}{}\label{namespaceunify_1_1string}\index{unify::string@{unify::string}}
+
+
+Utilities to help with string and string related functionality.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classunify_1_1string_1_1_case_insensitive_less_than_equal_test}{Case\+Insensitive\+Less\+Than\+Equal\+Test}}
+\begin{DoxyCompactList}\small\item\em Binary functor for case insensitive string compares. Useful for maps. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classunify_1_1string_1_1_case_insensitive_less_than_equal_test_char_ptr}{Case\+Insensitive\+Less\+Than\+Equal\+Test\+Char\+Ptr}}
+\begin{DoxyCompactList}\small\item\em Binary functor for case insensitive string compares. Useful for maps. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespaceunify_1_1string_a279dc73a3b3948f8cbee245031f34a6b}\label{namespaceunify_1_1string_a279dc73a3b3948f8cbee245031f34a6b} 
+bool {\bfseries Is\+Alpha} (const char ch)
+\begin{DoxyCompactList}\small\item\em Test if a char is an alphabet character. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_acbcce0ef6d1d60656cf6ce1f40e443d4}\label{namespaceunify_1_1string_acbcce0ef6d1d60656cf6ce1f40e443d4} 
+bool {\bfseries Is\+Numeric} (const char ch)
+\begin{DoxyCompactList}\small\item\em Test if a char is a number. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_a9748ee7f5acfe91ceba26ad687e6d2d8}\label{namespaceunify_1_1string_a9748ee7f5acfe91ceba26ad687e6d2d8} 
+bool {\bfseries String\+Is} (std\+::string a, std\+::string is)
+\begin{DoxyCompactList}\small\item\em Compare two strings for equvilancy, ignoring case. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_a2e7cb622c48f4ab68b1c1a7417851cc6}\label{namespaceunify_1_1string_a2e7cb622c48f4ab68b1c1a7417851cc6} 
+{\footnotesize template$<$typename foo  = std\+::string, typename... bar$>$ }\\bool {\bfseries String\+Is} (std\+::string a, std\+::string is, std\+::string Rest...)
+\begin{DoxyCompactList}\small\item\em Compare mutliple strings for equvilancy, ignoring case. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_a8e3fe2b26d1070937b9d781ad64783ad}\label{namespaceunify_1_1string_a8e3fe2b26d1070937b9d781ad64783ad} 
+bool {\bfseries String\+Is\+Any} (std\+::string a, const std\+::list$<$ std\+::string $>$ \&list)
+\begin{DoxyCompactList}\small\item\em Compare a string for equvilancy with any of a list of strings, ignoring case. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_a3417284459884cfcc455c3c1de77280d}\label{namespaceunify_1_1string_a3417284459884cfcc455c3c1de77280d} 
+bool {\bfseries Begins\+With} (std\+::string source, std\+::string begins\+With)
+\begin{DoxyCompactList}\small\item\em Returns true if source begins with the string begins\+With. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_a9e5a320758dc30d34e119acd6914376b}\label{namespaceunify_1_1string_a9e5a320758dc30d34e119acd6914376b} 
+bool {\bfseries Ends\+With} (std\+::string source, std\+::string ends\+With)
+\begin{DoxyCompactList}\small\item\em Returns true if the source ends with the string ends\+With. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_a91e74acf87203afbe3bd627ca52334df}\label{namespaceunify_1_1string_a91e74acf87203afbe3bd627ca52334df} 
+bool {\bfseries String\+Is\+Int} (std\+::string s\+One)
+\item 
+\Hypertarget{namespaceunify_1_1string_a2e6c0b5dca9f67db8f718130a27e9734}\label{namespaceunify_1_1string_a2e6c0b5dca9f67db8f718130a27e9734} 
+bool {\bfseries String\+Is\+Float} (std\+::string s\+One)
+\item 
+\Hypertarget{namespaceunify_1_1string_af9ce41780532e238e34931b2e9372b45}\label{namespaceunify_1_1string_af9ce41780532e238e34931b2e9372b45} 
+std\+::string {\bfseries Trim\+Left} (std\+::string string\+In, const char chr)
+\begin{DoxyCompactList}\small\item\em Removes all instances of character \textquotesingle{}chr\textquotesingle{} from the left of \textquotesingle{}string\+In\textquotesingle{}. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_aee52e8670c3f742628433e3cda125e70}\label{namespaceunify_1_1string_aee52e8670c3f742628433e3cda125e70} 
+std\+::string {\bfseries Trim\+Right} (std\+::string string\+In, const char chr)
+\begin{DoxyCompactList}\small\item\em Removes all instances of character \textquotesingle{}chr\textquotesingle{} from the right of \textquotesingle{}string\+In\textquotesingle{}. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_a934f5d13665521384d98d7131dd06921}\label{namespaceunify_1_1string_a934f5d13665521384d98d7131dd06921} 
+std\+::string {\bfseries Trim} (std\+::string string\+In, const char chr=\textquotesingle{} \textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Performs both Trim\+Left and Trim\+Right... \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_a59b6ac5c7538e2453a4cc784f059e6b4}\label{namespaceunify_1_1string_a59b6ac5c7538e2453a4cc784f059e6b4} 
+std\+::string {\bfseries Trim\+From} (std\+::string string\+In, std\+::string to)
+\begin{DoxyCompactList}\small\item\em Retruns the trimmed string from a specific string, exclusive. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_a8e509f3e5d1cd15474e10ad1d0510b70}\label{namespaceunify_1_1string_a8e509f3e5d1cd15474e10ad1d0510b70} 
+std\+::string {\bfseries Trim\+To} (std\+::string string\+In, const char from)
+\begin{DoxyCompactList}\small\item\em Returns the trimmed string to a specific string, exclusive. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceunify_1_1string_add9fa074b1a8c0cd20f9ac452178bc25}{Right\+String}} (std\+::string string\+In, std\+::string\+::size\+\_\+type u\+Length)
+\begin{DoxyCompactList}\small\item\em Returns the right portion of a string. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_a91bc56c76e63f3c76eb6c48afe8f4199}\label{namespaceunify_1_1string_a91bc56c76e63f3c76eb6c48afe8f4199} 
+std\+::string {\bfseries Left\+String} (std\+::string string\+In, unsigned int u\+Length)
+\begin{DoxyCompactList}\small\item\em Returns the left portion of a string. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_a7fb913fbe9528ee1a0c505b49c80cf47}\label{namespaceunify_1_1string_a7fb913fbe9528ee1a0c505b49c80cf47} 
+std\+::string {\bfseries String\+Minus\+Left} (std\+::string s\+String\+In, unsigned int u\+Less\+Length)
+\begin{DoxyCompactList}\small\item\em Returns a string without a left portiong of the string. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_a49c11b61b7b2e44e02dc05a052ee20ee}\label{namespaceunify_1_1string_a49c11b61b7b2e44e02dc05a052ee20ee} 
+std\+::string {\bfseries String\+Minus\+Right} (std\+::string s\+String\+In, unsigned int u\+Less\+Length)
+\begin{DoxyCompactList}\small\item\em Returns a string without a right portion of the string. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_ad6284cdcb822256399c9243161aed01b}\label{namespaceunify_1_1string_ad6284cdcb822256399c9243161aed01b} 
+std\+::string {\bfseries String\+Replace} (const std\+::string in, std\+::string find, std\+::string replace)
+\begin{DoxyCompactList}\small\item\em Replace every instance of "{}find"{} within the "{}in"{} string with "{}replace"{}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceunify_1_1string_a33f823608532f7b183260c6eee104e05}{Clean\+Whitespace}} (std\+::string s\+In)
+\begin{DoxyCompactList}\small\item\em Returns a string where all sets (single or in a row) cariage returns, tabs or spaces are replaced with one space. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_a903e7e1ff6226f8c04948862660e267d}\label{namespaceunify_1_1string_a903e7e1ff6226f8c04948862660e267d} 
+std\+::string {\bfseries To\+Lower} (std\+::string in)
+\item 
+\Hypertarget{namespaceunify_1_1string_ae27f43f9474b5ba2d1f2032d2d9711d0}\label{namespaceunify_1_1string_ae27f43f9474b5ba2d1f2032d2d9711d0} 
+std\+::string {\bfseries To\+Upper} (std\+::string in)
+\item 
+\Hypertarget{namespaceunify_1_1string_a982c20c4024a9129858f6d7162c5c907}\label{namespaceunify_1_1string_a982c20c4024a9129858f6d7162c5c907} 
+std\+::string {\bfseries List\+Part} (std\+::string s\+String, std\+::vector$<$ char $>$ seperators, int i\+Part\+Index)
+\begin{DoxyCompactList}\small\item\em Considers a string as a part of a segmented list by a character, returns that part of the list... Returns ASAP. The first i\+Part\+Index is 0. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_ae1dd901864be944c0c31138a7f87eb19}\label{namespaceunify_1_1string_ae1dd901864be944c0c31138a7f87eb19} 
+unsigned int {\bfseries List\+Part\+Count} (std\+::string s\+String, std\+::vector$<$ char $>$ seperators)
+\item 
+\Hypertarget{namespaceunify_1_1string_a8153acc240ee51b660d1650bcbd3940e}\label{namespaceunify_1_1string_a8153acc240ee51b660d1650bcbd3940e} 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ {\bfseries Split} (std\+::string source\+String, const char delimitor)
+\item 
+\Hypertarget{namespaceunify_1_1string_a70309d9b196fbeff13589bd5f62ad63c}\label{namespaceunify_1_1string_a70309d9b196fbeff13589bd5f62ad63c} 
+std\+::vector$<$ char $>$ {\bfseries Split\+Whitespace} ()
+\begin{DoxyCompactList}\small\item\em Returns a vector of whitespace characters including space, newline, and tab. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespaceunify_1_1string_a8bdf2fb8a984a356e82b4acdc964c7d8}{Split}} (std\+::string source\+String, const std\+::vector$<$ char $>$ delimitors, bool include\+Empties=false)
+\begin{DoxyCompactList}\small\item\em Split a string into a vector of string pieces based on multiple delimitors. include\+Empties effectively includes empty strings if mutliple delimitors occur in a row. eq. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceunify_1_1string_a66b44e5f82a08b5564d3b0da88ce6556}\label{namespaceunify_1_1string_a66b44e5f82a08b5564d3b0da88ce6556} 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ {\bfseries Split\+On\+Whitespace} (std\+::string source\+String)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Utilities to help with string and string related functionality. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceunify_1_1string_a33f823608532f7b183260c6eee104e05}\label{namespaceunify_1_1string_a33f823608532f7b183260c6eee104e05} 
+\index{unify::string@{unify::string}!CleanWhitespace@{CleanWhitespace}}
+\index{CleanWhitespace@{CleanWhitespace}!unify::string@{unify::string}}
+\doxysubsubsection{\texorpdfstring{CleanWhitespace()}{CleanWhitespace()}}
+{\footnotesize\ttfamily std\+::string unify\+::string\+::\+Clean\+Whitespace (\begin{DoxyParamCaption}\item[{std\+::string}]{s\+In }\end{DoxyParamCaption})}
+
+
+
+Returns a string where all sets (single or in a row) cariage returns, tabs or spaces are replaced with one space. 
+
+\textbackslash{} Doesn\textquotesingle{}t reduce ANY single spaces\+: "{}\textbackslash{}n\textbackslash{}n\textbackslash{}n  \textbackslash{}t\textbackslash{}t\+Hello,  \textbackslash{}t\+World\textbackslash{}n!     \textbackslash{}t\textbackslash{}n "{} \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} "{}\+Hello, World!"{} \textbackslash{} note\+: no leading or training spaces either \Hypertarget{namespaceunify_1_1string_add9fa074b1a8c0cd20f9ac452178bc25}\label{namespaceunify_1_1string_add9fa074b1a8c0cd20f9ac452178bc25} 
+\index{unify::string@{unify::string}!RightString@{RightString}}
+\index{RightString@{RightString}!unify::string@{unify::string}}
+\doxysubsubsection{\texorpdfstring{RightString()}{RightString()}}
+{\footnotesize\ttfamily std\+::string unify\+::string\+::\+Right\+String (\begin{DoxyParamCaption}\item[{std\+::string}]{string\+In,  }\item[{std\+::string\+::size\+\_\+type}]{u\+Length }\end{DoxyParamCaption})}
+
+
+
+Returns the right portion of a string. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{namespaceunify_1_1string_a8bdf2fb8a984a356e82b4acdc964c7d8}\label{namespaceunify_1_1string_a8bdf2fb8a984a356e82b4acdc964c7d8} 
+\index{unify::string@{unify::string}!Split@{Split}}
+\index{Split@{Split}!unify::string@{unify::string}}
+\doxysubsubsection{\texorpdfstring{Split()}{Split()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ T $>$ unify\+::string\+::\+Split (\begin{DoxyParamCaption}\item[{std\+::string}]{source\+String,  }\item[{const std\+::vector$<$ char $>$}]{delimitors,  }\item[{bool}]{include\+Empties = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Split a string into a vector of string pieces based on multiple delimitors. include\+Empties effectively includes empty strings if mutliple delimitors occur in a row. eq. 
+
+"{}a,,b,c"{} = \mbox{[}"{}a"{}, "{}b"{}, "{}c"{} \mbox{]} \{ if include\+Emtpies = false \} else = \mbox{[}"{}a"{}, "{}"{}, "{}b"{}, "{}c"{}\mbox{]} (\textquotesingle{} \textquotesingle{}, \textquotesingle{}~\newline
+\textquotesingle{})"{}a b   c\textbackslash{}n  d"{} = \mbox{[} "{}a"{}, "{}b"{}, "{}c"{}, "{}d"{} \mbox{]}\{ if include\+Emtpies = false \} else = \mbox{[}"{}a"{}, "{}"{}, "{}"{}, "{}b"{}, "{}c"{}, "{}"{} (for \textquotesingle{}~\newline
+\textquotesingle{}), "{}"{}\mbox{]} 

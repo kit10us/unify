@@ -1,5 +1,42 @@
-\chapter{unify}
-\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{unify@{unify}}
-\label{md__r_e_a_d_m_e_autotoc_md0}%
-\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
-Unify is a library that attempts to help speed up the development time of C++ programs and libraries. To accomplish this, it provides a set of data structures and features that aim to standardize and reduce the code, and provide optimal and consistent program flow. 
+\chapter{README}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{README@{README}}
+{\bfseries{GNU GENERAL PUBLIC LICENSE}} (Version 3, 29 June 2007) \hypertarget{md__r_e_a_d_m_e_autotoc_md0}{}\doxysection{\texorpdfstring{Unify}{Unify}}\label{md__r_e_a_d_m_e_autotoc_md0}
+Unify is a library of 2D, 3D, and general data structures and functionality to support the creation of clearer, cleaner code, in a standard way.
+
+It attempts to accomplish this in several ways\+:
+\begin{DoxyItemize}
+\item Create common named data structure types specific to purpose and need. Such as {\itshape angles, vectors, data streams, etc}.
+\item Provide a place for common type functionality, reducing duplicate and possibly vague implementations.
+\item Support named functionality to provide clearer implementation intention. For example, instead of {\itshape float positionX, positionY} you have {\itshape V2 position}.
+\item Have a single place to support holistic functional improvements and fixes.
+\item Allow independence from 3rd party libraries which helps promote portable solutions.
+\item Reduce code complexity and verbosity by supporting function overloading. For example, instead of {\itshape Move\+Car\+Direction\+V2(float x, float y)} you have {\itshape Move\+Car(\+V2 direction)}.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{The History}{The History}}\label{md__r_e_a_d_m_e_autotoc_md1}
+Initially, the Unify library was for educational purposes. It provided a place where you could learn implementation details of game data structure functionality, without just relying on 3rd party libraries. Additionally, it was a place for public example, as many examples of these implementations are isolated pieces of code, disconnected from the greater picture and related example functionality.
+
+It continued to mature into a library of features that could be shared across multiple projects.\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{The Future}{The Future}}\label{md__r_e_a_d_m_e_autotoc_md2}
+The library continues to gain support for multiple platforms. Presently, the library is only used with Windows projects (especially the Mercury Engine) that depend on Direct-\/X renderers (both Direct-\/X 9 and Direct-\/X 11). There is a partial Open\+GL renderer, however, the development of the engine\textquotesingle{}s features and optimizations has trumped the need for Open\+GL, the only real viable method for supporting cross platform graphics rendering at the time. Now, Vulan is available and probably will supersede Open\+GL and will likely gain priority over the current renderers.
+
+There is also an ongoing effort to support additional rendering features, shared across all of the three most common graphics APIs, that have been introduced into Mercury, and required major changes to the engine\textquotesingle{}s render modules.\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{The Rub}{The Rub}}\label{md__r_e_a_d_m_e_autotoc_md3}
+All of this is to say that extreme optimization has not been a priority. It might become one in the future, however, at that point it could be necessary to reduce implementation clarity, in other words, it would become a poor example for learning.\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{Code Formatting}{Code Formatting}}\label{md__r_e_a_d_m_e_autotoc_md4}
+The formatting of the code within Unify is the culmination of research in code readability. This was also an objective with Unify. It was not only a place to practice and learn functional implementation, it was also a place to practice and learn code formatting and naming conventions. To those ends, it might look a little {\itshape funky} to many developers. It\textquotesingle{}s not following the general standard many in the C++ community use, or would prefer -\/ trust me {\itshape I\textquotesingle{}ve heard this already}. This is also a feature that might change in the future.\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{Source Code Requirements}{Source Code Requirements}}\label{md__r_e_a_d_m_e_autotoc_md5}
+The following section covers requirements when developing within Unify. These are not standards, as much as compatibility requirements.\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{\texorpdfstring{C++ Version Compatibility}{C++ Version Compatibility}}\label{md__r_e_a_d_m_e_autotoc_md6}
+{\bfseries{Consideration}} Ensure features beyond C++11 are guarded with \+\_\+\+\_\+cplusplus defines, to ensure backwards compatibility with C++11.
+
+{\itshape note\+: This can become tedious, especially with the growing number of C++ versions supported (14, 17, etc.). If, and then, how granular this is taken is under consideration. Consider this a {\bfseries{good to do}} not a {\bfseries{must do}} at the moment.}
+
+See \href{https://www.stroustrup.com/C++11FAQ.html\#11}{\texttt{ https\+://www.\+stroustrup.\+com/\+C++11\+FAQ.\+html\#11}}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{\texorpdfstring{In-\/line Document Generation Comments}{In-\/line Document Generation Comments}}\label{md__r_e_a_d_m_e_autotoc_md7}
+Code comments in Unify are in the xml doc format, see\+: \href{https://learn.microsoft.com/en-us/cpp/build/reference/xml-documentation-visual-cpp?view=msvc-170}{\texttt{ https\+://learn.\+microsoft.\+com/en-\/us/cpp/build/reference/xml-\/documentation-\/visual-\/cpp?view=msvc-\/170}}
+
+Inline code comments should only be within headers (whatever the extension is), and not within the c/cpp files.
+
+The following should be commented before pushing code into the repo\+:
+\begin{DoxyItemize}
+\item class and struct types with summaries
+\item enum types with summaries
+\item All functions, except for constructors, operators, functions only within c/cpp files
+\end{DoxyItemize}
+
+Additional, non-\/duplicate, comments should be added at the developers discretion where clarity requires.
+
+{\itshape Note\+: xml docs, such as vs doxygen, comment formatting is the current method for in-\/code commenting due to legacy Visual Studio support. Changing format is a consideration, however, doxygen supports this format, so this is not a priority.} 

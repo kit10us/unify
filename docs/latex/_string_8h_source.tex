@@ -23,94 +23,91 @@
 \DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
 \DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
-\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <unify/Cast.h>}}
-\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <sstream>}}
-\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <list>}}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
-\DoxyCodeLine{00033\ \{}
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{namespace\ }string}
-\DoxyCodeLine{00035\ \ \ \ \ \{}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Char}}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsAlpha(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ ch\ );}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsNumeric(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ ch\ );}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ StringIs(\ std::string\ a,\ std::string\ is\ );}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ foo\ =\ std::string,\ \textcolor{keyword}{typename}...\ bar\ >}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ StringIs(\ std::string\ a,\ std::string\ is,\ std::string\ Rest...\ );}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ StringIsAny(\ std::string\ a,\ \textcolor{keyword}{const}\ std::list<\ std::string\ >\ \&\ list\ );}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ BeginsWith(\ std::string\ source,\ std::string\ beginsWith\ );}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ EndsWith(\ std::string\ source,\ std::string\ endsWith\ );}
-\DoxyCodeLine{00065\ \ \ \ \ }
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ StringIsInt(\ std::string\ sOne\ );}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ StringIsFloat(\ std::string\ sOne\ );}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Cast.h>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{namespace\ }string}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceunify_1_1string_a279dc73a3b3948f8cbee245031f34a6b}{IsAlpha}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ ch\ );}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceunify_1_1string_acbcce0ef6d1d60656cf6ce1f40e443d4}{IsNumeric}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ ch\ );}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceunify_1_1string_a9748ee7f5acfe91ceba26ad687e6d2d8}{StringIs}}(\ std::string\ a,\ std::string\ is\ );}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ foo\ =\ std::string,\ \textcolor{keyword}{typename}...\ bar\ >}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceunify_1_1string_a9748ee7f5acfe91ceba26ad687e6d2d8}{StringIs}}(\ std::string\ a,\ std::string\ is,\ std::string\ Rest...\ );}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceunify_1_1string_a8e3fe2b26d1070937b9d781ad64783ad}{StringIsAny}}(\ std::string\ a,\ \textcolor{keyword}{const}\ std::list<\ std::string\ >\ \&\ list\ );}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceunify_1_1string_a3417284459884cfcc455c3c1de77280d}{BeginsWith}}(\ std::string\ source,\ std::string\ beginsWith\ );}
 \DoxyCodeLine{00068\ }
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ std::string\ TrimLeft(\ std::string\ stringIn,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ chr\ );}
-\DoxyCodeLine{00073\ }
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ std::string\ TrimRight(\ std::string\ stringIn,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ chr\ );}
-\DoxyCodeLine{00078\ }
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ std::string\ Trim(\ std::string\ stringIn,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ chr\ =\ \textcolor{charliteral}{'\ '}\ );}
-\DoxyCodeLine{00083\ }
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ std::string\ TrimFrom(\ std::string\ stringIn,\ std::string\ to\ );}
-\DoxyCodeLine{00088\ }
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ std::string\ TrimTo(\ std::string\ stringIn,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ from\ );}
-\DoxyCodeLine{00093\ }
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ std::string\ RightString(\ std::string\ stringIn,\ std::string::size\_type\ uLength\ );}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ std::string\ LeftString(\ std::string\ stringIn,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uLength\ );}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ std::string\ StringMinusLeft(\ std::string\ sStringIn,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uLessLength\ );}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ std::string\ StringMinusRight(\ std::string\ sStringIn,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uLessLength\ );}
-\DoxyCodeLine{00098\ }
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ std::string\ StringReplace(\ \textcolor{keyword}{const}\ std::string\ in,\ std::string\ find,\ std::string\ replace\ );}
-\DoxyCodeLine{00103\ \ \ \ \ }
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ std::string\ CleanWhitespace(\ std::string\ sIn\ );}
-\DoxyCodeLine{00110\ }
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ std::string\ ToLower(\ std::string\ in\ );}
-\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ std::string\ ToUpper(\ std::string\ in\ );}
-\DoxyCodeLine{00113\ \ \ \ \ }
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Considers\ a\ string\ as\ a\ part\ of\ a\ segmented\ list\ by\ a\ character,\ returns\ that\ part\ of\ the\ list...}}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ ASAP.}}
-\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ first\ iPartIndex\ is\ 0.}}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ std::string\ ListPart(\ std::string\ sString,\ std::vector<\ char\ >\ seperators,\ \textcolor{keywordtype}{int}\ iPartIndex\ );\ \ \ \ }
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ListPartCount(std::string\ sString,\ std::vector<\ char\ >\ seperators\ );}
-\DoxyCodeLine{00119\ }
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Binary\ functor\ for\ case\ insensitive\ string\ compares.\ Useful\ for\ maps.}}
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1string_1_1_case_insensitive_less_than_equal_test}{CaseInsensitiveLessThanEqualTest}}}
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator()\ (\textcolor{keyword}{const}\ std::string\ \&\ stringA,\ \textcolor{keyword}{const}\ std::string\ \&\ stringB)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \};\ \ }
-\DoxyCodeLine{00126\ }
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Binary\ functor\ for\ case\ insensitive\ string\ compares.\ Useful\ for\ maps.}}
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1string_1_1_case_insensitive_less_than_equal_test_char_ptr}{CaseInsensitiveLessThanEqualTestCharPtr}}}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator()\ (\ \textcolor{keywordtype}{char}\ *\ string1,\ \textcolor{keywordtype}{char}\ *\ string2\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{00133\ }
-\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ For\ our\ needs,\ multiple\ spaces\ as\ delimitors\ need\ to\ be\ considered\ as\ one.}}
-\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ std::vector<\ T\ >\ Split(\ std::string\ sourceString,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ delimitor\ );}
-\DoxyCodeLine{00137\ }
-\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ std::vector<\ char\ >\ SplitWhitespace();}
-\DoxyCodeLine{00141\ }
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ std::vector<\ T\ >\ Split(\ std::string\ sourceString,\ \textcolor{keyword}{const}\ std::vector<\ char\ >\ delimitors,\ \textcolor{keywordtype}{bool}\ includeEmpties\ =\ \textcolor{keyword}{false}\ );}
-\DoxyCodeLine{00152\ }
-\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ std::vector<\ T\ >\ SplitOnWhitespace(\ std::string\ sourceString\ );}
-\DoxyCodeLine{00155\ }
-\DoxyCodeLine{00156\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#include\ <unify/String.inl>}}
-\DoxyCodeLine{00157\ \ \ \ \ \}\ \textcolor{comment}{//\ namespace\ string}}
-\DoxyCodeLine{00158\ \}\ \textcolor{comment}{//\ namespace\ unify}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceunify_1_1string_a9e5a320758dc30d34e119acd6914376b}{EndsWith}}(\ std::string\ source,\ std::string\ endsWith\ );}
+\DoxyCodeLine{00073\ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ StringIsInt(\ std::string\ sOne\ );}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ StringIsFloat(\ std::string\ sOne\ );}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceunify_1_1string_af9ce41780532e238e34931b2e9372b45}{TrimLeft}}(\ std::string\ stringIn,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ chr\ );}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceunify_1_1string_aee52e8670c3f742628433e3cda125e70}{TrimRight}}(\ std::string\ stringIn,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ chr\ );}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceunify_1_1string_a934f5d13665521384d98d7131dd06921}{Trim}}(\ std::string\ stringIn,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ chr\ =\ \textcolor{charliteral}{'\ '}\ );}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceunify_1_1string_a59b6ac5c7538e2453a4cc784f059e6b4}{TrimFrom}}(\ std::string\ stringIn,\ std::string\ to\ );}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceunify_1_1string_a8e509f3e5d1cd15474e10ad1d0510b70}{TrimTo}}(\ std::string\ stringIn,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ from\ );}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceunify_1_1string_add9fa074b1a8c0cd20f9ac452178bc25}{RightString}}(\ std::string\ stringIn,\ std::string::size\_type\ uLength\ );}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceunify_1_1string_a91bc56c76e63f3c76eb6c48afe8f4199}{LeftString}}(\ std::string\ stringIn,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uLength\ );}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceunify_1_1string_a7fb913fbe9528ee1a0c505b49c80cf47}{StringMinusLeft}}(\ std::string\ sStringIn,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uLessLength\ );}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceunify_1_1string_a49c11b61b7b2e44e02dc05a052ee20ee}{StringMinusRight}}(\ std::string\ sStringIn,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uLessLength\ );}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceunify_1_1string_ad6284cdcb822256399c9243161aed01b}{StringReplace}}(\ \textcolor{keyword}{const}\ std::string\ in,\ std::string\ find,\ std::string\ replace\ );}
+\DoxyCodeLine{00127\ \ \ \ \ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceunify_1_1string_a33f823608532f7b183260c6eee104e05}{CleanWhitespace}}(\ std::string\ sIn\ );}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ std::string\ ToLower(\ std::string\ in\ );}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ std::string\ ToUpper(\ std::string\ in\ );}
+\DoxyCodeLine{00139\ \ \ \ \ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceunify_1_1string_a982c20c4024a9129858f6d7162c5c907}{ListPart}}(\ std::string\ sString,\ std::vector<\ char\ >\ seperators,\ \textcolor{keywordtype}{int}\ iPartIndex\ );\ \ \ \ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ListPartCount(std::string\ sString,\ std::vector<\ char\ >\ seperators\ );}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1string_1_1_case_insensitive_less_than_equal_test}{CaseInsensitiveLessThanEqualTest}}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator()\ (\textcolor{keyword}{const}\ std::string\ \&\ stringA,\ \textcolor{keyword}{const}\ std::string\ \&\ stringB)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \};\ \ }
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1string_1_1_case_insensitive_less_than_equal_test_char_ptr}{CaseInsensitiveLessThanEqualTestCharPtr}}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator()\ (\ \textcolor{keywordtype}{char}\ *\ string1,\ \textcolor{keywordtype}{char}\ *\ string2\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ For\ our\ needs,\ multiple\ spaces\ as\ delimitors\ need\ to\ be\ considered\ as\ one.}}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ std::vector<\ T\ >\ Split(\ std::string\ sourceString,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ delimitor\ );}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ std::vector<\ char\ >\ \mbox{\hyperlink{namespaceunify_1_1string_a70309d9b196fbeff13589bd5f62ad63c}{SplitWhitespace}}();}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ std::vector<\ T\ >\ Split(\ std::string\ sourceString,\ \textcolor{keyword}{const}\ std::vector<\ char\ >\ delimitors,\ \textcolor{keywordtype}{bool}\ includeEmpties\ =\ \textcolor{keyword}{false}\ );}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ std::vector<\ T\ >\ SplitOnWhitespace(\ std::string\ sourceString\ );}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#include\ <unify/String.inl>}}
+\DoxyCodeLine{00190\ \ \ \ \ \}\ \textcolor{comment}{//\ namespace\ string}}
+\DoxyCodeLine{00191\ \}\ \textcolor{comment}{//\ namespace\ unify}}
 
 \end{DoxyCode}

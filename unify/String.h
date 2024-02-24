@@ -19,7 +19,6 @@
  * along with Unify.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-
 #pragma once
 
 #include <unify/Unify.h>
@@ -31,10 +30,19 @@
 
 namespace unify
 {
+	/// <summary>
+	/// Utilities to help with string and string related functionality.
+	/// </summary>
 	namespace string
 	{
-		// Char
+		/// <summary>
+		/// Test if a char is an alphabet character.
+		/// </summary>
 		bool IsAlpha( const char ch );
+
+		/// <summary>
+		/// Test if a char is a number.
+		/// </summary>
 		bool IsNumeric( const char ch );
 
 		/// <summary>
@@ -91,9 +99,25 @@ namespace unify
 		/// </summary>
 		std::string TrimTo( std::string stringIn, const char from );
 
+		/// <summary>
+		/// Returns the right portion of a string.
+		/// </summary>
+		/// <returns></returns>
 		std::string RightString( std::string stringIn, std::string::size_type uLength );
+
+		/// <summary>
+		/// Returns the left portion of a string.
+		/// </summary>
 		std::string LeftString( std::string stringIn, unsigned int uLength );
+
+		/// <summary>
+		/// Returns a string without a left portiong of the string.
+		/// </summary>
 		std::string StringMinusLeft( std::string sStringIn, unsigned int uLessLength );
+
+		/// <summary>
+		/// Returns a string without a right portion of the string.
+		/// </summary>
 		std::string StringMinusRight( std::string sStringIn, unsigned int uLessLength );
 
 		/// <summary>
@@ -103,28 +127,36 @@ namespace unify
 	
 		/// <summary>
 		/// Returns a string where all sets (single or in a row) cariage returns, tabs or spaces are replaced with one space.
-		/// For example, "\n\n\n  \t\tHello,  \tWorld\n!     \t\n "  >>  "Hello, World!" (note: no leading or training spaces either)
-		/// Doesn't reduce ANY single spaces.
 		/// </summary>
+		/// <example>
+		/// \\ Doesn't reduce ANY single spaces:
+		/// "\n\n\n  \t\tHello,  \tWorld\n!     \t\n "  >>  "Hello, World!" \\ note: no leading or training spaces either
+		/// </example>
 		std::string CleanWhitespace( std::string sIn );
 
 		std::string ToLower( std::string in );
 		std::string ToUpper( std::string in );
 	
-		// Considers a string as a part of a segmented list by a character, returns that part of the list...
-		// Returns ASAP.
-		// The first iPartIndex is 0.
+		/// <summary>
+		/// Considers a string as a part of a segmented list by a character, returns that part of the list...
+		/// Returns ASAP.
+		/// The first iPartIndex is 0.
+		/// </summary>
 		std::string ListPart( std::string sString, std::vector< char > seperators, int iPartIndex );	
 		unsigned int ListPartCount(std::string sString, std::vector< char > seperators );
 
-		// Binary functor for case insensitive string compares. Useful for maps.
+		/// <summary>
+		/// Binary functor for case insensitive string compares. Useful for maps.
+		/// </summary>
 		class CaseInsensitiveLessThanEqualTest
 		{
 		public:
 			bool operator() (const std::string & stringA, const std::string & stringB) const;
 		};  
 
-		// Binary functor for case insensitive string compares. Useful for maps.
+		/// <summary>
+		/// Binary functor for case insensitive string compares. Useful for maps.
+		/// </summary>
 		class CaseInsensitiveLessThanEqualTestCharPtr
 		{
 		public:
@@ -135,8 +167,9 @@ namespace unify
 		template< typename T >
 		std::vector< T > Split( std::string sourceString, const char delimitor );
 
-		/// <summar>
+		/// <summary>
 		/// Returns a vector of whitespace characters including space, newline, and tab.
+		/// </summary>
 		std::vector< char > SplitWhitespace();
 
 		/// <summary>

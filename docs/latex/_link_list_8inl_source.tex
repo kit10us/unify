@@ -198,7 +198,7 @@
 \DoxyCodeLine{00198\ \ \ \ \ TLink<\ T\ >\ *\ pLink\ =\ m\_pFirst;}
 \DoxyCodeLine{00199\ }
 \DoxyCodeLine{00200\ \ \ \ \ \textcolor{comment}{//\ Find\ the\ link...}}
-\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordflow}{while}(\ pLink\ \&\&\ !StringIs(\ pLink-\/>m\_sName,\ sName\ )\ )}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordflow}{while}(\ pLink\ \&\&\ !\mbox{\hyperlink{namespaceunify_1_1string_a9748ee7f5acfe91ceba26ad687e6d2d8}{StringIs}}(\ pLink-\/>m\_sName,\ sName\ )\ )}
 \DoxyCodeLine{00202\ \ \ \ \ \{}
 \DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ pLink\ =\ pLink-\/>m\_pNext;}
 \DoxyCodeLine{00204\ \ \ \ \ \}}
@@ -255,7 +255,7 @@
 \DoxyCodeLine{00255\ \ \ \ \ TLink<\ T\ >\ *\ pLink\ =\ m\_pFirst;}
 \DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordflow}{while}(\ pLink\ )}
 \DoxyCodeLine{00257\ \ \ \ \ \{}
-\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ unify::string::StringIs(\ sName,\ pLink-\/>Name()\ )\ )\ \textcolor{keywordflow}{return}\ pLink-\/>Item();}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ \mbox{\hyperlink{namespaceunify_1_1string_a9748ee7f5acfe91ceba26ad687e6d2d8}{unify::string::StringIs}}(\ sName,\ pLink-\/>Name()\ )\ )\ \textcolor{keywordflow}{return}\ pLink-\/>Item();}
 \DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ pLink\ =\ pLink-\/>Next();}
 \DoxyCodeLine{00260\ \ \ \ \ \}}
 \DoxyCodeLine{00261\ \ \ \ \ }
@@ -268,7 +268,7 @@
 \DoxyCodeLine{00268\ \ \ \ \ pQuery-\/>m\_pCurrent\ =\ m\_pFirst;}
 \DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordflow}{while}(\ pQuery-\/>m\_pCurrent\ )}
 \DoxyCodeLine{00270\ \ \ \ \ \{}
-\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ unify::string::StringIs(\ sName,\ pQuery-\/>Name()\ )\ )\ \textcolor{keywordflow}{return}\ pQuery-\/>m\_pCurrent-\/>m\_pItem;}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ \mbox{\hyperlink{namespaceunify_1_1string_a9748ee7f5acfe91ceba26ad687e6d2d8}{unify::string::StringIs}}(\ sName,\ pQuery-\/>Name()\ )\ )\ \textcolor{keywordflow}{return}\ pQuery-\/>m\_pCurrent-\/>m\_pItem;}
 \DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ pQuery-\/>m\_pCurrent\ =\ pQuery-\/>m\_pCurrent-\/>m\_pNext;}
 \DoxyCodeLine{00273\ \ \ \ \ \}}
 \DoxyCodeLine{00274\ \ \ \ \ }

@@ -11,9 +11,16 @@ var searchData=
   ['size_8',['Size',['../classunify_1_1_size.html',1,'unify::Size&lt; T &gt;'],['../classunify_1_1_b_box.html#aac7ab7c0e98781a9d40bba62d21f75b8',1,'unify::BBox::Size()']]],
   ['size3_9',['Size3',['../classunify_1_1_size3.html',1,'unify']]],
   ['size_3c_20unsigned_20long_20_3e_10',['Size&lt; unsigned long &gt;',['../classunify_1_1_size.html',1,'unify']]],
-  ['split_11',['Split',['../classunify_1_1_path.html#a804e7c2e834fae2b0eda67c6326966c9',1,'unify::Path']]],
-  ['stream_12',['Stream',['../classunify_1_1_stream.html',1,'unify']]],
-  ['streamaccesstype_13',['StreamAccessType',['../namespaceunify.html#a5c97e638d26eea5413e8708b15af2417',1,'unify']]],
-  ['streamseektype_14',['StreamSeekType',['../namespaceunify.html#a384b8275876d58563e0ed7a141823264',1,'unify']]],
-  ['suite_15',['Suite',['../classunify_1_1test_1_1_suite.html',1,'unify::test']]]
+  ['source_20code_20requirements_11',['Source Code Requirements',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
+  ['split_12',['Split',['../classunify_1_1_path.html#a804e7c2e834fae2b0eda67c6326966c9',1,'unify::Path::Split()'],['../namespaceunify_1_1string.html#a8bdf2fb8a984a356e82b4acdc964c7d8',1,'unify::string::Split(std::string sourceString, const std::vector&lt; char &gt; delimitors, bool includeEmpties=false)']]],
+  ['splitwhitespace_13',['SplitWhitespace',['../namespaceunify_1_1string.html#a70309d9b196fbeff13589bd5f62ad63c',1,'unify::string']]],
+  ['stream_14',['Stream',['../classunify_1_1_stream.html',1,'unify']]],
+  ['streamaccesstype_15',['StreamAccessType',['../namespaceunify.html#a5c97e638d26eea5413e8708b15af2417',1,'unify']]],
+  ['streamseektype_16',['StreamSeekType',['../namespaceunify.html#a384b8275876d58563e0ed7a141823264',1,'unify']]],
+  ['stringis_17',['StringIs',['../namespaceunify_1_1string.html#a9748ee7f5acfe91ceba26ad687e6d2d8',1,'unify::string::StringIs(std::string a, std::string is)'],['../namespaceunify_1_1string.html#a2e7cb622c48f4ab68b1c1a7417851cc6',1,'unify::string::StringIs(std::string a, std::string is, std::string Rest...)']]],
+  ['stringisany_18',['StringIsAny',['../namespaceunify_1_1string.html#a8e3fe2b26d1070937b9d781ad64783ad',1,'unify::string']]],
+  ['stringminusleft_19',['StringMinusLeft',['../namespaceunify_1_1string.html#a7fb913fbe9528ee1a0c505b49c80cf47',1,'unify::string']]],
+  ['stringminusright_20',['StringMinusRight',['../namespaceunify_1_1string.html#a49c11b61b7b2e44e02dc05a052ee20ee',1,'unify::string']]],
+  ['stringreplace_21',['StringReplace',['../namespaceunify_1_1string.html#ad6284cdcb822256399c9243161aed01b',1,'unify::string']]],
+  ['suite_22',['Suite',['../classunify_1_1test_1_1_suite.html',1,'unify::test']]]
 ];
