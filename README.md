@@ -26,3 +26,14 @@ All of this is to say that extreme optimization has not been a priority. It migh
 # Code Formatting
 The formatting of the code within Unify is the culmination of research in code readability. This was also an objective with Unify. It was not only a place to practice and learn functional implementation, it was also a place to practice and learn code formatting and naming conventions. To those ends, it might look a little *funky* to many developers. It's not following the general standard many in the C++ community use, or would prefer - trust me *I've heard this already*. This is also a feature that might change in the future.
 
+# Source Code Requirements
+The following section covers requirements when developing within Unify. These are not standards, as much as compatibility requirements.
+
+## C++ Version Compatability
+**Consideration**
+Ensure features beyond C++11 are guarded with __cplusplus defines, to ensure backwards compatability with C++11.
+
+_note: This can become tedious, especially with the growing number of C++ versions supported (14, 17, etc.). If, and then, how granular this is taken is under consideration. Consider this a **good to do** not a **must do** at the moment._
+
+See https://www.stroustrup.com/C++11FAQ.html#11
+
