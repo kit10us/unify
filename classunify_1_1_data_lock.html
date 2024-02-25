@@ -137,27 +137,35 @@ template&lt;typename T &gt; </td></tr>
 <tr class="separator:a5d749544aeffe7e49551639a6ed0c7a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abff66190ba718c6f3a283d710d96e09a" id="r_abff66190ba718c6f3a283d710d96e09a"><td class="memItemLeft" align="right" valign="top"><a id="abff66190ba718c6f3a283d710d96e09a" name="abff66190ba718c6f3a283d710d96e09a"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>Count</b> () const</td></tr>
+<tr class="memdesc:abff66190ba718c6f3a283d710d96e09a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of items. <br /></td></tr>
 <tr class="separator:abff66190ba718c6f3a283d710d96e09a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff89b14fca9b1b7763a9165289a752fd" id="r_aff89b14fca9b1b7763a9165289a752fd"><td class="memItemLeft" align="right" valign="top"><a id="aff89b14fca9b1b7763a9165289a752fd" name="aff89b14fca9b1b7763a9165289a752fd"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>Stride</b> () const</td></tr>
+<tr class="memdesc:aff89b14fca9b1b7763a9165289a752fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the stride for each item. <br /></td></tr>
 <tr class="separator:aff89b14fca9b1b7763a9165289a752fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67868425b142525f9b999bbbaf472282" id="r_a67868425b142525f9b999bbbaf472282"><td class="memItemLeft" align="right" valign="top"><a id="a67868425b142525f9b999bbbaf472282" name="a67868425b142525f9b999bbbaf472282"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetSizeInBytes</b> () const</td></tr>
+<tr class="memdesc:a67868425b142525f9b999bbbaf472282"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of our data in bytes. <br /></td></tr>
 <tr class="separator:a67868425b142525f9b999bbbaf472282"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a890f8ac2b8b7786197c1fa3dd19b2159" id="r_a890f8ac2b8b7786197c1fa3dd19b2159"><td class="memItemLeft" align="right" valign="top"><a id="a890f8ac2b8b7786197c1fa3dd19b2159" name="a890f8ac2b8b7786197c1fa3dd19b2159"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>Slot</b> () const</td></tr>
+<tr class="memdesc:a890f8ac2b8b7786197c1fa3dd19b2159"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the slot our data refers to, when available. <br /></td></tr>
 <tr class="separator:a890f8ac2b8b7786197c1fa3dd19b2159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa0c4e2d1ed02aa7801c8a1193e8b71b" id="r_afa0c4e2d1ed02aa7801c8a1193e8b71b"><td class="memItemLeft" align="right" valign="top"><a id="afa0c4e2d1ed02aa7801c8a1193e8b71b" name="afa0c4e2d1ed02aa7801c8a1193e8b71b"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Invalidate</b> ()</td></tr>
+<tr class="memdesc:afa0c4e2d1ed02aa7801c8a1193e8b71b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidate our data lock. <br /></td></tr>
 <tr class="separator:afa0c4e2d1ed02aa7801c8a1193e8b71b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7076ec94e73ac1b1089225cc583d530d" id="r_a7076ec94e73ac1b1089225cc583d530d"><td class="memItemLeft" align="right" valign="top"><a id="a7076ec94e73ac1b1089225cc583d530d" name="a7076ec94e73ac1b1089225cc583d530d"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>CopyBytesFrom</b> (const void *source, size_t offset, size_t byteCount)</td></tr>
+<tr class="memdesc:a7076ec94e73ac1b1089225cc583d530d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data from a source into our data by a specified byte count. <br /></td></tr>
 <tr class="separator:a7076ec94e73ac1b1089225cc583d530d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2334241188e509752488d912f55a9c92" id="r_a2334241188e509752488d912f55a9c92"><td class="memItemLeft" align="right" valign="top"><a id="a2334241188e509752488d912f55a9c92" name="a2334241188e509752488d912f55a9c92"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>CopyItemFrom</b> (const void *source, size_t indexTo)</td></tr>
+<tr class="memdesc:a2334241188e509752488d912f55a9c92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy an item from a source into a specified index. <br /></td></tr>
 <tr class="separator:a2334241188e509752488d912f55a9c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6aedfa24dc795d497653ae900a990ecc" id="r_a6aedfa24dc795d497653ae900a990ecc"><td class="memItemLeft" align="right" valign="top"><a id="a6aedfa24dc795d497653ae900a990ecc" name="a6aedfa24dc795d497653ae900a990ecc"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>CopyItemFromTo</b> (size_t indexFrom, size_t indexTo)</td></tr>
+<tr class="memdesc:a6aedfa24dc795d497653ae900a990ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy an item from a source index into a specified index. <br /></td></tr>
 <tr class="separator:a6aedfa24dc795d497653ae900a990ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22612ac5a06ce8437ab249839d7ca10b" id="r_a22612ac5a06ce8437ab249839d7ca10b"><td class="memTemplParams" colspan="2"><a id="a22612ac5a06ce8437ab249839d7ca10b" name="a22612ac5a06ce8437ab249839d7ca10b"></a>
 template&lt;typename T &gt; </td></tr>
