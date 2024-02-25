@@ -94,14 +94,14 @@ namespace unify
 		template< typename T > T Get( std::string name ) const;
         template< typename T > T Get( std::string name, const T & defaultValue ) const;
 
-		/// <description>
+		/// <summary>
 		/// Specialization of unsigned int for similar type conversion.
-		/// </description>
+		/// </summary>
 		template< typename T > T Cast( std::string name ) const;
 
-		/// <description>
+		/// <summary>
 		/// Specialization of unsigned int for similar type conversion, with a default value.
-		/// </description>
+		/// </summary>
 		//template< typename T > T Cast( std::string name, const T & defaultValue ) const;
 
 		std::string ToString() const;

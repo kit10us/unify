@@ -110,20 +110,44 @@ namespace unify
 		template < typename T >
 		const T * GetItemReadonly( size_t index ) const;
 
+		/// <summary>
+		/// Returns the number of items.
+		/// </summary>
 		size_t Count() const;
 
+		/// <summary>
+		/// Returns the stride for each item.
+		/// </summary>
 		size_t Stride() const;
 
+		/// <summary>
+		/// Returns the size of our data in bytes.
+		/// </summary>
 		size_t GetSizeInBytes() const;
 
+		/// <summary>
+		/// Returns the slot our data refers to, when available.
+		/// </summary>
 		size_t Slot() const;
 
+		/// <summary>
+		/// Invalidate our data lock.
+		/// </summary>
 		virtual void Invalidate();
 
+		/// <summary>
+		/// Copy data from a source into our data by a specified byte count.
+		/// </summary>
 		virtual bool CopyBytesFrom( const void * source, size_t offset, size_t byteCount );
 
+		/// <summary>
+		/// Copy an item from a source into a specified index.
+		/// </summary>
 		virtual bool CopyItemFrom( const void * source, size_t indexTo ); 
 
+		/// <summary>
+		/// Copy an item from a source index into a specified index.
+		/// </summary>
 		virtual bool CopyItemFromTo( size_t indexFrom, size_t indexTo );
 
 		template< typename T, size_t T_OffsetInBytes = 0 >
@@ -251,9 +275,6 @@ namespace unify
 		size_t m_slot;
 	};
 
-	/// <summary>
-	/// Return the head pointer to the entire data lock.
-	/// </summary>
 	template < typename T >
 	T * DataLock::GetData()
 	{
@@ -305,4 +326,4 @@ namespace unify
 
 		return &GetDataReadOnly< T >()[ index ];
 	}
-} // namespace unify
+}

@@ -35,12 +35,24 @@ namespace unify
 	class Frame
 	{
 	public:
-		// Enabled or disables updating the entire tree if we are modified.
+		/// <summary>
+		/// Enabled or disables updating the entire tree if we are modified.
+		/// </summary>
 		static void UpdateOnChange( bool tf );
+
+		/// <summary>
+		/// Returns true if we update the entire tree upon modification.
+		/// </summary>
+		/// <returns></returns>
 		static bool UpdateOnChange();
 
+		/// <summary>
+		/// Create a duplicate hierarchy.
+		/// </summary>
 		static Frame * CreateDuplicateHierarchy( const Frame * in );
+
 		static void CreateIndexToFrameVector( std::vector< Frame * > & indexToFrameOut, Frame * frame );
+
 		static void CreateNameToIndexMap( std::map< std::string, size_t > & nameToIndexOut, const std::vector< Frame * > & indexToFrameIn );
 
 		Frame();

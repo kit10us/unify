@@ -28,58 +28,83 @@
 
 namespace unify
 {
-	enum FrustumCorner
+	/// <summary>
+	/// Enumeration of the corners of a frustum.
+	/// </summary>
+	class FrustumCorner
 	{
-		CORNER_xyz,
-		CORNER_Xyz,
-		CORNER_xYz,
-		CORNER_XYz,
-		CORNER_xyZ,
-		CORNER_XyZ,
-		CORNER_xYZ,
-		CORNER_XYZ,
-		CORNER_COUNT
+	public:
+		enum
+		{
+
+			xyz,
+			Xyz,
+			xYz,
+			XYz,
+			xyZ,
+			XyZ,
+			xYZ,
+			XYZ,
+			Count
+		};
 	};
 
-	enum FrustumPlane
+	/// <summary>
+	/// Enumeration of the planes of a frustum.
+	/// </summary>
+	class FrustumPlane
 	{
-		PLANE_NEAR,
-		PLANE_FAR,
-		PLANE_LEFT,
-		PLANE_RIGHT,
-		PLANE_TOP,
-		PLANE_BOTTOM,
-		PLANE_COUNT
+	public:
+		enum
+		{
+			Near,
+			Far,
+			Left,
+			Right,
+			Top,
+			Bottom,
+			Count
+		};
 	};
 
-	enum CULLSTATE
+	enum class CullState
 	{
-		CS_UNKNOWN,      // cull state not yet computed
-		CS_INSIDE,       // object bounding box is at least partly inside the frustum
-		CS_OUTSIDE,      // object bounding box is outside the frustum
-		CS_INSIDE_SLOW,  // OBB is inside frustum, but it took extensive testing to determine this
-		CS_OUTSIDE_SLOW, // OBB is outside frustum, but it took extensive testing to determine this
+		Unknown,		// Cull state not yet computed.
+		Inside,			// Object bounding box is at least partly inside the frustum.
+		Outside,		// Object bounding box is outside the frustum.
+		InsideSlow,		// OBB is inside frustum, but it took extensive testing to determine this.
+		OutsideSlow,	// OBB is outside frustum, but it took extensive testing to determine this.
 	};
 
-
+	/// <summary>
+	/// A view frustum, typically used for view point occlusion.
+	/// </summary>
 	class Frustum
 	{
 	public:
 		Frustum();
         Frustum( const unify::Matrix & worldViewProjection );
 
+		/// <summary>
+		/// Calcuate frustum from a WVM projection matrix.
+		/// </summary>
 		void Calculate( const unify::Matrix & worldViewProjection );
 
-        // Casts a unit point from across the frustum to a position at the front of the frustom, 
-        // and a direction along the frustum. Returns false if unit components are not in the range [ 0, 1 ].
+        /// <summary>
+		/// Casts a unit point from across the frustum to a position at the front of the frustom, 
+		/// and a direction along the frustum. Returns false if unit components are not in the range [ 0, 1 ].
+		/// </summary>
         bool CastPoint( const unify::V2< float > & unit, unify::Ray & rayOut );
 
-		CULLSTATE CullBBox( unify::BBox< float > * pBBox/*, unify::Plane * BBPlane*/ );
+		/// <summary>
+		/// Determine the culling characteristics of a bounding blox.
+		/// </summary>
+		CullState CullBBox( unify::BBox< float > * pBBox/*, unify::Plane * BBPlane*/ );
 
 	protected:
         unify::Matrix m_worldViewProjection;
-		unify::V3< float > m_vCorner[ CORNER_COUNT ];
-		unify::Plane m_Plane[ PLANE_COUNT ];
+		unify::V3< float > m_vCorner[ FrustumCorner::Count ];
+		unify::Plane m_Plane[ FrustumPlane::Count ];
 	};
 
 	bool EdgeIntersectsFace( unify::V3< float > * pEdges, unify::V3< float > * pFacePoints, unify::Plane * pPlane );

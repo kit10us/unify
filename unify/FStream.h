@@ -29,7 +29,7 @@
 namespace unify 
 {
 	/// <summary>
-	/// Perform stream operation on a file source.
+	/// Perform stream operation on a file.
 	/// </summary>
 	class FileStream : public Stream
 	{
@@ -37,21 +37,60 @@ namespace unify
 		FileStream();
 		~FileStream();
 
+		/// <summary>
+		/// Open a stream at a specified path.
+		/// </summary>
 		void Open( StreamAccessType access, unify::Path path );
+
+		/// <summary>
+		/// Close the stream.
+		/// </summary>
 		virtual void Close() override;
 		
-		virtual unsigned int Read( void * pDest, unsigned int uLength ) override;
-		virtual unsigned int ReadPack( void * pDest, unsigned int uLength ) override;
+		/// <summary>
+		/// Read from the stream.
+		/// </summary>
+		virtual unsigned int Read( void * pDest, unsigned int length ) override;
+
+		/// <summary>
+		/// Read a string of characters to and including the first NULL (or until the MaxLength-1 is reached)
+		/// Note that this may include a '\r' cariage return.
+		/// </summary>
+		virtual unsigned int ReadPack( void * dest, unsigned int length ) override;
 		
-		virtual void Write( const void * pSrc, unsigned int uLength ) override;
+		/// <summary>
+		/// Write to the stream.
+		/// </summary>
+		virtual void Write( const void * source, unsigned int length ) override;
+
+		/// <summary>
+		/// Write a null terminated string to the stream...
+		/// </summary>
 		virtual void WritePack( const void * pSrc ) override;
+
+		/// <summary>
+		/// Write a string to the stream.
+		/// </summary>
 		void Write( std::string out );
 
-		virtual bool Seek( StreamSeekType seek, int iOffset = 0 ) override;
+		/// <summary>
+		/// Seek to a position in the stream.
+		/// </summary>
+		virtual bool Seek( StreamSeekType seek, int offset = 0 ) override;
 
+		/// <summary>
+		/// Returns our position within the stream.
+		/// </summary>
 		bool Pos(fpos_t & pos);
+
+		/// <summary>
+		/// Set our position within a stream.
+		/// </summary>
 		bool SetPosition( fpos_t & pos );
 	};
 
-	int64_t FileLength( const char * pszFilename );
+	/// <summary>
+	/// Returns a fike's length.
+	/// </summary>
+	int64_t FileLength( const char * filename );
 }

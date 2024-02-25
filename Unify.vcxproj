@@ -55,12 +55,12 @@
     <ClInclude Include="unify\BadCast.h" />
     <ClInclude Include="unify\BBox.h" />
     <ClInclude Include="unify\BSphere.h" />
-    <ClInclude Include="unify\BSquare.h" />
+    <ClInclude Include="unify\BRectangle.h" />
     <ClInclude Include="unify\Cast.h" />
     <ClInclude Include="unify\Color.h" />
     <ClInclude Include="unify\ColorUnit.h" />
     <ClInclude Include="unify\DataLock.h" />
-    <ClInclude Include="unify\DefaultExceptionHandler.h" />
+    <ClInclude Include="unify\DefaultHandler.h" />
     <ClInclude Include="unify\IExceptionHandler.h" />
     <ClInclude Include="unify\KeyValuePair.h" />
     <ClInclude Include="unify\Lookup.h" />
@@ -113,7 +113,7 @@
   <ItemGroup>
     <None Include="unify\BBox.inl" />
     <None Include="unify\BSphere.inl" />
-    <None Include="unify\BSquare.inl" />
+    <None Include="unify\BRectangle.inl" />
     <None Include="unify\Cast.inl" />
     <None Include="unify\Lookup.inl" />
     <None Include="unify\LinkList.inl" />

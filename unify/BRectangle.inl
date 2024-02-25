@@ -21,27 +21,26 @@
 
 
 template< typename T >
-unify::BSquare::BSquare()
-	: BSquare({}, {})
+unify::BRectangle::BRectangle()
+	: BRectangle({}, {})
 {
 }
 
 template< typename T >
-unify::BSquare::BSquare( const unify::V2< T > & inInf, const unify::V2< T > & inSup )
+unify::BRectangle::BRectangle( const unify::V2< T > & inInf, const unify::V2< T > & inSup )
 	: inf{ inInf }
 	, sup{ inSup }
 {
 }
 
 template< typename T >
-unify::BSquare< T > unify::BSquare::operator * ( const unify::V2< T > & multiplicand )
+unify::BRectangle< T > unify::BRectangle::operator * ( const unify::V2< T > & multiplicand )
 {
-	return BSquare< T >( inf * multiplicand, sup * multiplicand );
+	return BRectangle< T >( inf * multiplicand, sup * multiplicand );
 }
 
-// Generate the 4 vertices that make up the bounding square...
 template< typename T >
-void BSquare::GenerateCorners( unify::V2< T > * bounds )
+void BRectangle::GenerateCorners( unify::V2< T > * bounds )
 {
 	bounds[ 0 ] = unify::V2< T >( inf.x, inf.y );
 	bounds[ 1 ] = unify::V2< T >( sup.x, inf.y );
@@ -50,7 +49,7 @@ void BSquare::GenerateCorners( unify::V2< T > * bounds )
 }
 
 template< typename T >
-void BSquare::AddPoint( const unify::V2< T > & point )
+void BRectangle::Add( const unify::V2< T > & point )
 {
 	if( point.x > sup.x ) sup.x = point.x;
 	else if( point.x < inf.x ) inf.x = point.x;
@@ -60,7 +59,7 @@ void BSquare::AddPoint( const unify::V2< T > & point )
 }
 
 template< typename T >
-bool BSquare::ContainsPoint( const unify::V2< T > & point )
+bool BRectangle::Contains( const unify::V2< T > & point )
 {
 	if( ( point.x < sup.x && point.x > inf.x ) && ( point.y < sup.y && point.y > inf.y ) )
 	{
@@ -71,7 +70,7 @@ bool BSquare::ContainsPoint( const unify::V2< T > & point )
 }
 
 template< typename T >
-unify::BSquare< T > & unify::BSquare::AddBSquare( const unify::BSquare< T > & boundingSquare )
+unify::BRectangle< T > & unify::BRectangle::Add( const unify::BRectangle< T > & boundingSquare )
 {
 	if( boundingSquare.sup.x > sup.x ) sup.x = boundingSquare.sup.x;
 	if( boundingSquare.inf.x < inf.x ) inf.x = boundingSquare.inf.x;
@@ -83,7 +82,7 @@ unify::BSquare< T > & unify::BSquare::AddBSquare( const unify::BSquare< T > & bo
 }
 
 template< typename T >
-const unify::V2< T > unify::BSquare::Size()
+const unify::V2< T > unify::BRectangle::Size()
 {
 	return unify::V2< T >( sup - inf );
 }

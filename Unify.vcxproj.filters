@@ -102,7 +102,7 @@
     <ClInclude Include="unify\BSphere.h">
       <Filter>unify</Filter>
     </ClInclude>
-    <ClInclude Include="unify\BSquare.h">
+    <ClInclude Include="unify\BRectangle.h">
       <Filter>unify</Filter>
     </ClInclude>
     <ClInclude Include="unify\Cast.h">
@@ -264,7 +264,7 @@
     <ClInclude Include="unify\IExceptionHandler.h">
       <Filter>unify</Filter>
     </ClInclude>
-    <ClInclude Include="unify\DefaultExceptionHandler.h">
+    <ClInclude Include="unify\DefaultHandler.h">
       <Filter>unify</Filter>
     </ClInclude>
   </ItemGroup>
@@ -272,7 +272,7 @@
     <None Include="unify\BBox.inl">
       <Filter>unify</Filter>
     </None>
-    <None Include="unify\BSquare.inl">
+    <None Include="unify\BRectangle.inl">
       <Filter>unify</Filter>
     </None>
     <None Include="unify\Cast.inl">

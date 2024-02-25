@@ -28,7 +28,7 @@
 namespace unify
 {
 	///	<summary>
-	/// A set of matrices, and connectivity between these matrices, used for mesh animations.
+	/// A set of matrices, and connectivity between those matrices, used for mesh animations.
 	/// </summary>
 	class FrameSet
 	{
@@ -46,13 +46,45 @@ namespace unify
 		FrameSet();
 		~FrameSet();
 
+		/// <summary>
+		/// Add a matrix with a specified index.
+		/// </summary>
 		size_t Add( Matrix model, size_t parent, std::string name = std::string() );
+
+		/// <summary>
+		/// Check if a matrix exists in our hierarchy. 
+		/// Use before calling other functions that reference frames by index to prevent failures.
+		/// </summary>
 		bool Exists( std::string name ) const;
+
+		/// <summary>
+		/// Returns the index of a frame by its name.
+		/// </summary>
 		size_t Find( std::string name ) const;
+
+		/// <summary>
+		/// Returns the count of frames in our hierarchy.
+		/// </summary>
 		size_t Count() const;
+
+		/// <summary>
+		/// Returns the name of a frame at a given index.
+		/// </summary>
 		std::string Name( size_t index ) const;
+
+		/// <summary>
+		/// Returns the model matrix for a given frame.
+		/// </summary>
 		const Matrix & Model( size_t index ) const;
+
+		/// <summary>
+		/// Returns the local matrix for a given frame.
+		/// </summary>
 		const Matrix & Local( size_t index ) const;
+
+		/// <summary>
+		/// Executes a function against all frames.
+		/// </summary>
 		void ForEach( ForEachFunctor & functor ) const;
 
 	private:

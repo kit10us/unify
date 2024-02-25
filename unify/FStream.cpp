@@ -125,8 +125,6 @@ unsigned int FileStream::Read( void * pDest, unsigned int uLength )
 	return u;
 }
 
-// Read a string of characters to and including the first NULL (or until the MaxLength-1 is reached)
-// Note that this may include a '\r' cariage return.
 unsigned int FileStream::ReadPack( void * pDest, unsigned int uMaxLength )
 {
 	if( m_Access != STREAMACCESS_READ && m_Access != STREAMACCESS_READTEXT )
@@ -150,7 +148,6 @@ unsigned int FileStream::ReadPack( void * pDest, unsigned int uMaxLength )
 	return u;
 }
 
-// Write uLength bytes to stream
 void FileStream::Write( const void * pSrc, unsigned int uLength )
 {
 	if( m_Access != STREAMACCESS_WRITE && m_Access != STREAMACCESS_WRITETEXT && m_Access != STREAMACCESS_APPEND )
@@ -165,7 +162,6 @@ void FileStream::Write( const void * pSrc, unsigned int uLength )
 	}
 }
 
-// Write a null terminated string to the stream...
 void FileStream::WritePack( const void* pSrc )
 {
 	if( m_Access != STREAMACCESS_WRITE && m_Access != STREAMACCESS_WRITETEXT && m_Access != STREAMACCESS_APPEND )

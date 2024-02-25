@@ -27,7 +27,7 @@
 namespace unify
 {
 	/// <summary>
-	/// A standardized exception.
+	/// An exception for a failed type cast.
 	/// </summary>
 	class BadCast : public Exception
     {

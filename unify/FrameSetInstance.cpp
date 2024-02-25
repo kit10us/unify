@@ -143,3 +143,8 @@ void FrameSetInstance::UpdateLocals()
 		m_dirty = false;
 	}
 }
+
+bool FrameSetInstance::IsDirty() const
+{
+	return m_dirty;
+}

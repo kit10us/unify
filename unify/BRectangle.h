@@ -27,26 +27,46 @@
 namespace unify
 {
 	/// <summary>
-	/// A boudning sphere.
+	/// A 2D bounding rectangle.
 	/// </summary>
 	template< typename T >
-	class BSquare
+	class BRectangle
 	{
 	public:
 		V2< T > sup;
 		V2< T > inf;
 
-		BSquare();
-		BSquare( const V2< T > & inf, const V2< T > & sup );
+		BRectangle();
+		BRectangle( const V2< T > & inf, const V2< T > & sup );
 
-		BSquare< T > operator * ( const V2< T > & muliplcand );
+		BRectangle < T > operator * (const V2< T >& muliplcand);
 		
+		/// <summary>
+		/// Generate a square from specified bounding corners.
+		/// </summary>
+		/// <param name="bounds"></param>
 		void GenerateCorners( V2< T > * bounds );
-		void AddPoint( const V2< T > & point );
-		BSquare & AddBSquare( const BSquare< T > & boundingSquare );
-		bool ContainsPoint( const V2< T > & point );
+
+		/// <summary>
+		/// Given a point, if that point is beyond our current bounds, increase our bounds to encompass it.
+		/// </summary>
+		void Add( const V2< T > & point );
+
+		/// <summary>
+		/// Given a bounding rectangle, if that bounding square is beyond our current bounds, increase our bounds to encompass it.
+		/// </summary>
+		BRectangle & Add( const BRectangle< T > & boundingRectangle );
+
+		/// <summary>
+		/// Returns true if a point is within our bounding rectangle.
+		/// </summary>
+		bool Contains( const V2< T > & point );
+		
+		/// <summary>
+		/// Returns the size of the rectangle.
+		/// </summary>
 		const V2< T > Size();
 	};
-	#include <unify/BSquare.inl>
+	#include <unify/BRectangle.inl>
 }
 

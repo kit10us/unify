@@ -28,7 +28,7 @@
 namespace unify
 {
 	/// <summary>
-	/// Order of color components.
+	/// A lite-weight frame without graph support.
 	/// </summary>
 	class FrameLite
 	{

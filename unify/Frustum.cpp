@@ -162,14 +162,14 @@ void Frustum::Calculate( const unify::Matrix & worldViewProjection )
 	unify::Matrix result = worldViewProjection;
 	result.Invert();
 
-	m_vCorner[CORNER_xyz] = unify::V3< float >(-1.0f, -1.0f,  0.0f);
-	m_vCorner[CORNER_Xyz] = unify::V3< float >( 1.0f, -1.0f,  0.0f);
-	m_vCorner[CORNER_xYz] = unify::V3< float >(-1.0f,  1.0f,  0.0f);
-	m_vCorner[CORNER_XYz] = unify::V3< float >( 1.0f,  1.0f,  0.0f);
-	m_vCorner[CORNER_xyZ] = unify::V3< float >(-1.0f, -1.0f,  1.0f);
-	m_vCorner[CORNER_XyZ] = unify::V3< float >( 1.0f, -1.0f,  1.0f);
-	m_vCorner[CORNER_xYZ] = unify::V3< float >(-1.0f,  1.0f,  1.0f);
-	m_vCorner[CORNER_XYZ] = unify::V3< float >( 1.0f,  1.0f,  1.0f);
+	m_vCorner[FrustumCorner::xyz] = unify::V3< float >(-1.0f, -1.0f,  0.0f);
+	m_vCorner[FrustumCorner::Xyz] = unify::V3< float >( 1.0f, -1.0f,  0.0f);
+	m_vCorner[FrustumCorner::xYz] = unify::V3< float >(-1.0f,  1.0f,  0.0f);
+	m_vCorner[FrustumCorner::XYz] = unify::V3< float >( 1.0f,  1.0f,  0.0f);
+	m_vCorner[FrustumCorner::xyZ] = unify::V3< float >(-1.0f, -1.0f,  1.0f);
+	m_vCorner[FrustumCorner::XyZ] = unify::V3< float >( 1.0f, -1.0f,  1.0f);
+	m_vCorner[FrustumCorner::xYZ] = unify::V3< float >(-1.0f,  1.0f,  1.0f);
+	m_vCorner[FrustumCorner::XYZ] = unify::V3< float >( 1.0f,  1.0f,  1.0f);
 
 	int i;
 	for( i = 0; i < 8; i++ )
@@ -177,12 +177,12 @@ void Frustum::Calculate( const unify::Matrix & worldViewProjection )
 		m_vCorner[i] = result.TransformCoord( m_vCorner[i] );
 	}
 
-	m_Plane[PLANE_NEAR] = unify::Plane::PlaneFromPoints( m_vCorner[ CORNER_xyz ], m_vCorner[ CORNER_Xyz ], m_vCorner[ CORNER_xYz ] );
-	m_Plane[PLANE_FAR] = unify::Plane::PlaneFromPoints( m_vCorner[ CORNER_xYZ ], m_vCorner[ CORNER_XYZ ], m_vCorner[ CORNER_XyZ ] );
-	m_Plane[PLANE_LEFT] = unify::Plane::PlaneFromPoints( m_vCorner[ CORNER_xYz ], m_vCorner[ CORNER_xYZ ], m_vCorner[ CORNER_xyZ ] );
-	m_Plane[PLANE_RIGHT] = unify::Plane::PlaneFromPoints( m_vCorner[ CORNER_XYZ ], m_vCorner[ CORNER_XYz ], m_vCorner[ CORNER_XyZ ] );
-	m_Plane[PLANE_TOP] = unify::Plane::PlaneFromPoints( m_vCorner[ CORNER_xYz ], m_vCorner[ CORNER_XYz ], m_vCorner[ CORNER_xYZ ] );
-	m_Plane[PLANE_BOTTOM] = unify::Plane::PlaneFromPoints( m_vCorner[ CORNER_Xyz ], m_vCorner[ CORNER_xyz ], m_vCorner[ CORNER_xyZ ] );
+	m_Plane[FrustumPlane::Near] = unify::Plane::PlaneFromPoints( m_vCorner[ FrustumCorner::xyz ], m_vCorner[ FrustumCorner::Xyz ], m_vCorner[ FrustumCorner::xYz ] );
+	m_Plane[FrustumPlane::Far] = unify::Plane::PlaneFromPoints( m_vCorner[ FrustumCorner::xYZ ], m_vCorner[ FrustumCorner::XYZ ], m_vCorner[ FrustumCorner::XyZ ] );
+	m_Plane[FrustumPlane::Left] = unify::Plane::PlaneFromPoints( m_vCorner[ FrustumCorner::xYz ], m_vCorner[ FrustumCorner::xYZ ], m_vCorner[ FrustumCorner::xyZ ] );
+	m_Plane[FrustumPlane::Right] = unify::Plane::PlaneFromPoints( m_vCorner[ FrustumCorner::XYZ ], m_vCorner[ FrustumCorner::XYz ], m_vCorner[ FrustumCorner::XyZ ] );
+	m_Plane[FrustumPlane::Top] = unify::Plane::PlaneFromPoints( m_vCorner[ FrustumCorner::xYz ], m_vCorner[ FrustumCorner::XYz ], m_vCorner[ FrustumCorner::xYZ ] );
+	m_Plane[FrustumPlane::Bottom] = unify::Plane::PlaneFromPoints( m_vCorner[ FrustumCorner::Xyz ], m_vCorner[ FrustumCorner::xyz ], m_vCorner[ FrustumCorner::xyZ ] );
 }
 
 bool Frustum::CastPoint( const unify::V2< float > & unit, unify::Ray & rayOut )
@@ -192,12 +192,12 @@ bool Frustum::CastPoint( const unify::V2< float > & unit, unify::Ray & rayOut )
         return false;
     }
 
-    unify::V3< float > vNear1 = unify::V3< float >::V3Lerp( m_vCorner[ CORNER_xYz ], m_vCorner[ CORNER_XYz ], unit.x );
-    unify::V3< float > vNear2 = unify::V3< float >::V3Lerp( m_vCorner[ CORNER_xyz ], m_vCorner[ CORNER_Xyz ], unit.x );
+    unify::V3< float > vNear1 = unify::V3< float >::V3Lerp( m_vCorner[FrustumCorner::xYz ], m_vCorner[ FrustumCorner::XYz ], unit.x );
+    unify::V3< float > vNear2 = unify::V3< float >::V3Lerp( m_vCorner[FrustumCorner::xyz ], m_vCorner[ FrustumCorner::Xyz ], unit.x );
     unify::V3< float > vNear = unify::V3< float >::V3Lerp( vNear1, vNear2, unit.y );
 
-    unify::V3< float > vFar1 = unify::V3< float >::V3Lerp( m_vCorner[ CORNER_xYZ ], m_vCorner[ CORNER_XYZ ], unit.x );
-    unify::V3< float > vFar2 = unify::V3< float >::V3Lerp( m_vCorner[ CORNER_xyZ ], m_vCorner[ CORNER_XyZ ], unit.x );
+    unify::V3< float > vFar1 = unify::V3< float >::V3Lerp( m_vCorner[FrustumCorner::xYZ ], m_vCorner[FrustumCorner::XYZ ], unit.x );
+    unify::V3< float > vFar2 = unify::V3< float >::V3Lerp( m_vCorner[FrustumCorner::xyZ ], m_vCorner[FrustumCorner::XyZ ], unit.x );
     unify::V3< float > vFar = unify::V3< float >::V3Lerp( vFar1, vFar2, unit.y );
 
     rayOut.origin = vNear;
@@ -207,7 +207,7 @@ bool Frustum::CastPoint( const unify::V2< float > & unit, unify::Ray & rayOut )
     return true;
 }
 
-CULLSTATE Frustum::CullBBox( unify::BBox< float > * pBBox/*, unify::Plane * BBPlane*/ )
+CullState Frustum::CullBBox( unify::BBox< float > * pBBox/*, unify::Plane * BBPlane*/ )
 {
 	unsigned char outside[8] {};
 
@@ -242,7 +242,7 @@ CULLSTATE Frustum::CullBBox( unify::BBox< float > * pBBox/*, unify::Plane * BBPl
 		// the frustum, so the object must be rendered.
 		if( outside[iPoint] == 0 )
 		{
-			return CS_INSIDE;
+			return CullState::Inside;
 		}
 	}
 
@@ -250,7 +250,7 @@ CULLSTATE Frustum::CullBBox( unify::BBox< float > * pBBox/*, unify::Plane * BBPl
 	// outside the frustum
 	if( (outside[0] & outside[1] & outside[2] & outside[3] & outside[4] & outside[5] & outside[6] & outside[7]) != 0 )
 	{
-		return CS_OUTSIDE;
+		return CullState::Outside;
 	}
 
 	// Now see if any of the frustum edges penetrate any of the faces of
@@ -289,7 +289,7 @@ CULLSTATE Frustum::CullBBox( unify::BBox< float > * pBBox/*, unify::Plane * BBPl
 		{
 			if( EdgeIntersectsFace( pEdge, pFace, &BBPlane[iFace] ) )
 			{
-				return CS_INSIDE_SLOW;
+				return CullState::InsideSlow;
 			}
 			pFace += 4;
 		}
@@ -330,7 +330,7 @@ CULLSTATE Frustum::CullBBox( unify::BBox< float > * pBBox/*, unify::Plane * BBPl
 		{
 			if( EdgeIntersectsFace( pEdge, pFace, &m_Plane[iFace] ) )
 			{
-				return CS_INSIDE_SLOW;
+				return CullState::InsideSlow;
 			}
 			pFace += 4;
 		}
@@ -348,11 +348,11 @@ CULLSTATE Frustum::CullBBox( unify::BBox< float > * pBBox/*, unify::Plane * BBPl
 			BBPlane[iPlane].c * m_vCorner[0].z +
 			BBPlane[iPlane].d  < 0 )
 		{
-			return CS_OUTSIDE_SLOW;
+			return CullState::OutsideSlow;
 		}
 	}
 
 	// Bounding box must contain the frustum, so render the object
-	return CS_INSIDE_SLOW;
+	return CullState::InsideSlow;
 }
 

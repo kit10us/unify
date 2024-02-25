@@ -65,6 +65,9 @@ namespace unify
 	#define FLAG31			0x40000000
 	#define FLAG32			0x80000000
 
+	/// <summary>
+	/// Check if a flag is set.
+	/// </summary>
 	inline
 	bool CheckFlag( Flags flags, Flags member )
 	{

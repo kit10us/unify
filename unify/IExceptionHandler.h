@@ -3,6 +3,9 @@
 
 namespace unify
 {
+	/// <summary>
+	/// And exception handler triggered upon an exception.
+	/// </summary>
 	class IExceptionHandler
 	{
 	public:

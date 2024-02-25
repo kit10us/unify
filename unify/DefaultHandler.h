@@ -2,6 +2,9 @@
 
 namespace unify
 {
+	/// <summary>
+	/// Default exception handler for execution exceptions/failures.
+	/// </summary>
 	class DefaultExceptionHandler : public IExceptionHandler
 	{
 	public:

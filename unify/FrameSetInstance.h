@@ -51,14 +51,53 @@ namespace unify
 		/// </summary>
 		void Reset( const FrameSet * frameSet = nullptr );
 
+		/// <summary>
+		/// Returns true of a frame with a specified name exists.
+		/// Use before calling other functions that reference frames by index to prevent failures.
+		/// </summary>
+		/// <param name="name"></param>
+		/// <returns></returns>
 		bool Exists( std::string name ) const;
+
+		/// <summary>
+		/// Returns the index of a frame by a specified name.
+		/// </summary>
 		size_t Find( std::string name ) const;
+
+		/// <summary>
+		/// Returns the combined model matrix for a given frame.
+		/// </summary>
 		const Matrix & Model( size_t index ) const;
+
+		/// <summary>
+		/// Returns the combined local matrix for a given frame.
+		/// </summary>
 		const Matrix & Local( size_t index ) const;
+
+		/// <summary>
+		/// Returns the model matrix for a given frame.
+		/// </summary>
 		const Matrix & OriginalModel( size_t ) const;
+
+		/// <summary>
+		/// Returns the local matrix for a given frame.
+		/// </summary>
 		const Matrix & OriginalLocal( size_t ) const;
+
+		/// <summary>
+		/// Transform a frame at a given index by a matrix.
+		/// </summary>
 		void Transform( size_t index, const Matrix & transform );
+
+		/// <summary>
+		/// Update this frames local matrix.
+		/// </summary>
 		void UpdateLocals();
+
+		/// <summary>
+		/// Returns true if this frame is dirty.
+		/// </summary>
+		bool IsDirty() const;
 
 	private:
 		const FrameSet * m_frameSet;
