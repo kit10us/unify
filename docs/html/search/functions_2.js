@@ -1,13 +1,22 @@
 var searchData=
 [
-  ['cast_0',['Cast',['../classunify_1_1_parameters.html#ac83e60f34e87a40e969a235f8b3e9a59',1,'unify::Parameters']]],
-  ['changeextension_1',['ChangeExtension',['../namespaceunify.html#a6a361acfab6f11541ecef5da6633e99a',1,'unify']]],
-  ['cleanwhitespace_2',['CleanWhitespace',['../namespaceunify_1_1string.html#a33f823608532f7b183260c6eee104e05',1,'unify::string']]],
-  ['clear_3',['Clear',['../classunify_1_1_b_box.html#a230d85250b36dfdd05270e64e26470af',1,'unify::BBox::Clear()'],['../classunify_1_1_lookup.html#aeec57461eb4d1d9445f282a49c735f45',1,'unify::Lookup::Clear()']]],
-  ['collides_4',['Collides',['../classunify_1_1_b_sphere.html#a673e1766ebbaf9e2abd31db214afe5ef',1,'unify::BSphere']]],
-  ['compatible_5',['Compatible',['../structunify_1_1_data_lock_access.html#ae8ccdf02074422b5b94c1702b9303f5a',1,'unify::DataLockAccess']]],
-  ['contains_6',['Contains',['../classunify_1_1_b_sphere.html#ad2f437dca29ba8c172392f58e6ce387e',1,'unify::BSphere']]],
-  ['containspoint_7',['ContainsPoint',['../classunify_1_1_b_box.html#a40b7bda6953a2b288c3b702449ea57dc',1,'unify::BBox']]],
-  ['cosof_8',['CosOf',['../classunify_1_1_angle.html#ac2ace7a480a88d79ea2f604b7d2206f5',1,'unify::Angle']]],
-  ['count_9',['Count',['../classunify_1_1_lookup.html#a2ff484526b53bb99ecfdbaf2b512acdc',1,'unify::Lookup::Count()'],['../classunify_1_1_parameters.html#a0b04fd280e3ddd7f5efe7e62bafdffab',1,'unify::Parameters::Count()']]]
+  ['calculate_0',['Calculate',['../classunify_1_1_frustum.html#aca02865835f9fc0da88cd60cf930cd36',1,'unify::Frustum']]],
+  ['cast_1',['Cast',['../classunify_1_1_parameters.html#ac83e60f34e87a40e969a235f8b3e9a59',1,'unify::Parameters']]],
+  ['castpoint_2',['CastPoint',['../classunify_1_1_frustum.html#acea70dc41764a26260da4a6fae07e212',1,'unify::Frustum']]],
+  ['changeextension_3',['ChangeExtension',['../namespaceunify.html#a6a361acfab6f11541ecef5da6633e99a',1,'unify']]],
+  ['checkflag_4',['CheckFlag',['../namespaceunify.html#ac18b8e5c2edbd85e99d79c978d3d0bac',1,'unify']]],
+  ['cleanwhitespace_5',['CleanWhitespace',['../namespaceunify_1_1string.html#a33f823608532f7b183260c6eee104e05',1,'unify::string']]],
+  ['clear_6',['Clear',['../classunify_1_1_b_box.html#a230d85250b36dfdd05270e64e26470af',1,'unify::BBox::Clear()'],['../classunify_1_1_lookup.html#aeec57461eb4d1d9445f282a49c735f45',1,'unify::Lookup::Clear()']]],
+  ['close_7',['Close',['../classunify_1_1_file_stream.html#a66a22e08429d6489442c9a9b845c1e85',1,'unify::FileStream']]],
+  ['collides_8',['Collides',['../classunify_1_1_b_sphere.html#a673e1766ebbaf9e2abd31db214afe5ef',1,'unify::BSphere']]],
+  ['compatible_9',['Compatible',['../structunify_1_1_data_lock_access.html#ae8ccdf02074422b5b94c1702b9303f5a',1,'unify::DataLockAccess']]],
+  ['contains_10',['Contains',['../classunify_1_1_b_rectangle.html#af3f61f2edd92819510534f3af2de36a8',1,'unify::BRectangle::Contains()'],['../classunify_1_1_b_sphere.html#ad2f437dca29ba8c172392f58e6ce387e',1,'unify::BSphere::Contains()']]],
+  ['containspoint_11',['ContainsPoint',['../classunify_1_1_b_box.html#a40b7bda6953a2b288c3b702449ea57dc',1,'unify::BBox']]],
+  ['copybytesfrom_12',['CopyBytesFrom',['../classunify_1_1_data_lock.html#a7076ec94e73ac1b1089225cc583d530d',1,'unify::DataLock']]],
+  ['copyitemfrom_13',['CopyItemFrom',['../classunify_1_1_data_lock.html#a2334241188e509752488d912f55a9c92',1,'unify::DataLock']]],
+  ['copyitemfromto_14',['CopyItemFromTo',['../classunify_1_1_data_lock.html#a6aedfa24dc795d497653ae900a990ecc',1,'unify::DataLock']]],
+  ['cosof_15',['CosOf',['../classunify_1_1_angle.html#ac2ace7a480a88d79ea2f604b7d2206f5',1,'unify::Angle']]],
+  ['count_16',['Count',['../classunify_1_1_data_lock.html#abff66190ba718c6f3a283d710d96e09a',1,'unify::DataLock::Count()'],['../classunify_1_1_frame_set.html#a9670dfaa272f3ca54bcf9da4a8ba4ddf',1,'unify::FrameSet::Count()'],['../classunify_1_1_lookup.html#a2ff484526b53bb99ecfdbaf2b512acdc',1,'unify::Lookup::Count()'],['../classunify_1_1_parameters.html#a0b04fd280e3ddd7f5efe7e62bafdffab',1,'unify::Parameters::Count()']]],
+  ['createduplicatehierarchy_17',['CreateDuplicateHierarchy',['../classunify_1_1_frame.html#a791b5449891d1690d56369e9593c3e96',1,'unify::Frame']]],
+  ['cullbbox_18',['CullBBox',['../classunify_1_1_frustum.html#ab3cb0181fb3ac3b872a8f9fdefab5b57',1,'unify::Frustum']]]
 ];

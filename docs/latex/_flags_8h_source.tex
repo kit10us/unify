@@ -66,21 +66,21 @@
 \DoxyCodeLine{00065\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG31\ \ \ \ \ \ \ \ \ \ 0x40000000}}
 \DoxyCodeLine{00066\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAG32\ \ \ \ \ \ \ \ \ \ 0x80000000}}
 \DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{inline}}
-\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ CheckFlag(\ \mbox{\hyperlink{namespaceunify_aae31856ee9b86baac184363c6052d1aa}{Flags}}\ flags,\ \mbox{\hyperlink{namespaceunify_aae31856ee9b86baac184363c6052d1aa}{Flags}}\ member\ )}
-\DoxyCodeLine{00070\ \ \ \ \ \{}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ (flags\ \&\ member)\ ==\ member\ )}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00079\ \ \ \ \ \}}
-\DoxyCodeLine{00080\ }
-\DoxyCodeLine{00081\ \textcolor{preprocessor}{\ \ \ \ \#define\ BITCOMPARE(b1,\ b2)\ \ \ \ \ \ (b2==(b1\ \&\ b2))\ \ \ \ \ }\textcolor{comment}{//\ Compare\ bits}}
-\DoxyCodeLine{00082\ \textcolor{preprocessor}{\ \ \ \ \#define\ BITSTATE(b1,\ b2)\ \ \ \ \ \ \ \ ((b1>>b2)\&1)\ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Get\ the\ state\ of\ a\ single\ bit}}
-\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{inline}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceunify_ac18b8e5c2edbd85e99d79c978d3d0bac}{CheckFlag}}(\ \mbox{\hyperlink{namespaceunify_aae31856ee9b86baac184363c6052d1aa}{Flags}}\ flags,\ \mbox{\hyperlink{namespaceunify_aae31856ee9b86baac184363c6052d1aa}{Flags}}\ member\ )}
+\DoxyCodeLine{00073\ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ (flags\ \&\ member)\ ==\ member\ )}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\ \ \ \ \#define\ BITCOMPARE(b1,\ b2)\ \ \ \ \ \ (b2==(b1\ \&\ b2))\ \ \ \ \ }\textcolor{comment}{//\ Compare\ bits}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\ \ \ \ \#define\ BITSTATE(b1,\ b2)\ \ \ \ \ \ \ \ ((b1>>b2)\&1)\ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Get\ the\ state\ of\ a\ single\ bit}}
+\DoxyCodeLine{00086\ \}}
 
 \end{DoxyCode}

@@ -1,0 +1,96 @@
+\doxysection{BRectangle.\+inl}
+\hypertarget{_b_rectangle_8inl_source}{}\label{_b_rectangle_8inl_source}\index{unify/BRectangle.inl@{unify/BRectangle.inl}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ https://github.com/kit10us/unify}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2002,\ Kit10\ Studios\ LLC}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ Unify\ Library\ (a.k.a.\ Unify)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Unify\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unify\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ along\ with\ Unify.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00024\ unify::BRectangle::BRectangle()}
+\DoxyCodeLine{00025\ \ \ \ \ :\ BRectangle(\{\},\ \{\})}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00030\ unify::BRectangle::BRectangle(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}\ \&\ inInf,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}\ \&\ inSup\ )}
+\DoxyCodeLine{00031\ \ \ \ \ :\ inf\{\ inInf\ \}}
+\DoxyCodeLine{00032\ \ \ \ \ ,\ sup\{\ inSup\ \}}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00037\ \mbox{\hyperlink{classunify_1_1_b_rectangle}{unify::BRectangle<\ T\ >}}\ unify::BRectangle::operator\ *\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}\ \&\ multiplicand\ )}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{return}\ BRectangle<\ T\ >(\ inf\ *\ multiplicand,\ sup\ *\ multiplicand\ );}
+\DoxyCodeLine{00040\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_b_rectangle_ada840716f0b5ac6dc92b203e9d519f67}{BRectangle::GenerateCorners}}(\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}\ *\ bounds\ )}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ bounds[\ 0\ ]\ =\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}(\ inf.x,\ inf.y\ );}
+\DoxyCodeLine{00046\ \ \ \ \ bounds[\ 1\ ]\ =\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}(\ sup.x,\ inf.y\ );}
+\DoxyCodeLine{00047\ \ \ \ \ bounds[\ 2\ ]\ =\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}(\ inf.x,\ sup.y\ );}
+\DoxyCodeLine{00048\ \ \ \ \ bounds[\ 3\ ]\ =\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}(\ sup.x,\ sup.y\ );}
+\DoxyCodeLine{00049\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_b_rectangle_a21458ababb9f44960d99e7e04fcaaa4f}{BRectangle::Add}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}\ \&\ point\ )}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{if}(\ point.x\ >\ sup.x\ )\ sup.x\ =\ point.x;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\ point.x\ <\ inf.x\ )\ inf.x\ =\ point.x;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{if}(\ point.y\ >\ sup.y\ )\ sup.y\ =\ point.y;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\ point.y\ <\ inf.y\ )\ inf.y\ =\ point.y;}
+\DoxyCodeLine{00059\ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_rectangle_af3f61f2edd92819510534f3af2de36a8}{BRectangle::Contains}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}\ \&\ point\ )}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{if}(\ (\ point.x\ <\ sup.x\ \&\&\ point.x\ >\ inf.x\ )\ \&\&\ (\ point.y\ <\ sup.y\ \&\&\ point.y\ >\ inf.y\ )\ )}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TRUE;}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{00070\ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00073\ \mbox{\hyperlink{classunify_1_1_b_rectangle}{unify::BRectangle<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_b_rectangle_a21458ababb9f44960d99e7e04fcaaa4f}{unify::BRectangle::Add}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_b_rectangle}{unify::BRectangle<\ T\ >}}\ \&\ boundingSquare\ )}
+\DoxyCodeLine{00074\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{if}(\ boundingSquare.sup.x\ >\ sup.x\ )\ sup.x\ =\ boundingSquare.sup.x;}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{if}(\ boundingSquare.inf.x\ <\ inf.x\ )\ inf.x\ =\ boundingSquare.inf.x;}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordflow}{if}(\ boundingSquare.sup.y\ >\ sup.y\ )\ sup.y\ =\ boundingSquare.sup.y;}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{if}(\ boundingSquare.inf.y\ <\ inf.y\ )\ inf.y\ =\ boundingSquare.inf.y;}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00082\ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
+\DoxyCodeLine{00085\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_b_rectangle_a595780c09f4dfb4020422f87ecb58ceb}{unify::BRectangle::Size}}()}
+\DoxyCodeLine{00086\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}(\ sup\ -\/\ inf\ );}
+\DoxyCodeLine{00088\ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ }
+
+\end{DoxyCode}

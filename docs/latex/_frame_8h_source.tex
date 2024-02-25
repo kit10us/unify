@@ -36,90 +36,92 @@
 \DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_frame}{Frame}}}
 \DoxyCodeLine{00036\ \ \ \ \ \{}
 \DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enabled\ or\ disables\ updating\ the\ entire\ tree\ if\ we\ are\ modified.}}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ UpdateOnChange(\ \textcolor{keywordtype}{bool}\ tf\ );}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ UpdateOnChange();}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ CreateDuplicateHierarchy(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ in\ );}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ CreateIndexToFrameVector(\ std::vector<\ Frame\ *\ >\ \&\ indexToFrameOut,\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ frame\ );}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ CreateNameToIndexMap(\ std::map<\ std::string,\ size\_t\ >\ \&\ nameToIndexOut,\ \textcolor{keyword}{const}\ std::vector<\ Frame\ *\ >\ \&\ indexToFrameIn\ );}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}();}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}(\ std::string\ sName\ );}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ frame\ );}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classunify_1_1_frame}{\string~Frame}}();}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ operator=(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ frame\ );}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetMatrix(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ );}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ AttachTo(\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ newParent\ );}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Update\ Frame\ and\ children\ frames}}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Update();}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ LookAt(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ at,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ up\ =\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}(\ 0,\ 1,\ 0\ )\ );}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ LookAt(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ at,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ up\ =\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}(\ 0,\ 1,\ 0\ )\ );}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ LookDirection(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ direction,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ left\ );}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ MoveBy(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ by\ );}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ Slide(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ axis,\ \textcolor{keywordtype}{float}\ amount\ );}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ \mbox{\hyperlink{classunify_1_1_frame_ae2efdcd61e03e97c76d0397a7859a807}{Orbit}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ origin,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ \&\ direction,\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ \mbox{\hyperlink{classunify_1_1_frame_ae2efdcd61e03e97c76d0397a7859a807}{Orbit}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ origin,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ \&\ orbit,\ \textcolor{keywordtype}{float}\ distance\ );}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ Rotate(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ axis,\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ Rotate(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ \&\ q\ );}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ RotateAbout(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ axis,\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
-\DoxyCodeLine{00075\ }
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ GetMatrix()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{classunify_1_1_frame_a1135631d472e8cee8e8d68ae97b3b36d}{GetFinalMatrix}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00082\ }
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetLeft()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetUp()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetForward()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ GetRotation()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetPosition()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00088\ }
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ SetLeft(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ left\ );}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ SetUp(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ up\ );}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ SetForward(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ direction\ );}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ SetRotation(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ \&\ rotation\ );}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ SetPosition(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ position\ );}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ Set(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ \&\ orientation,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ position,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ scale\ =\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}(\ 1,\ 1,\ 1\ )\ );}
-\DoxyCodeLine{00095\ }
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ GetParent();}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ GetChild();}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ GetPrevious();}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ GetNext();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_frame_ae2eaca99ff0927e2529406b5c65914a0}{UpdateOnChange}}(\ \textcolor{keywordtype}{bool}\ tf\ );}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_frame_ae2eaca99ff0927e2529406b5c65914a0}{UpdateOnChange}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ \mbox{\hyperlink{classunify_1_1_frame_a791b5449891d1690d56369e9593c3e96}{CreateDuplicateHierarchy}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ in\ );}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ CreateIndexToFrameVector(\ std::vector<\ Frame\ *\ >\ \&\ indexToFrameOut,\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ frame\ );}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ CreateNameToIndexMap(\ std::map<\ std::string,\ size\_t\ >\ \&\ nameToIndexOut,\ \textcolor{keyword}{const}\ std::vector<\ Frame\ *\ >\ \&\ indexToFrameIn\ );}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}(\ std::string\ sName\ );}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ frame\ );}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classunify_1_1_frame}{\string~Frame}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ operator=(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ frame\ );}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetMatrix(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ );}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ AttachTo(\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ newParent\ );}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Update\ Frame\ and\ children\ frames}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Update();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ LookAt(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ at,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ up\ =\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}(\ 0,\ 1,\ 0\ )\ );}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ LookAt(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ at,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ up\ =\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}(\ 0,\ 1,\ 0\ )\ );}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ LookDirection(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ direction,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ left\ );}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ MoveBy(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ by\ );}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ Slide(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ axis,\ \textcolor{keywordtype}{float}\ amount\ );}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ \mbox{\hyperlink{classunify_1_1_frame_ae2efdcd61e03e97c76d0397a7859a807}{Orbit}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ origin,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ \&\ direction,\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ \mbox{\hyperlink{classunify_1_1_frame_ae2efdcd61e03e97c76d0397a7859a807}{Orbit}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ origin,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ \&\ orbit,\ \textcolor{keywordtype}{float}\ distance\ );}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ Rotate(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ axis,\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ Rotate(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ \&\ q\ );}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ RotateAbout(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ axis,\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ GetMatrix()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{classunify_1_1_frame_a1135631d472e8cee8e8d68ae97b3b36d}{GetFinalMatrix}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetLeft()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetUp()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetForward()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ GetRotation()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetPosition()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00100\ }
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ GetParent()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ GetChild()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ GetPrevious()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ GetNext()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00105\ }
-\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ std::string\ GetName()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsDirty()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00108\ }
-\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ MakeDirty(\ \textcolor{keywordtype}{bool}\ dirtySiblings\ =\ \textcolor{keyword}{false}\ );}
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ AddChild(\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ frame\ );}
-\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ AddSibling(\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ frame\ );}
-\DoxyCodeLine{00113\ }
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ m\_child;}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ m\_previous;}
-\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ m\_next;}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ m\_parent;}
-\DoxyCodeLine{00118\ }
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ std::string\ m\_name;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ SetLeft(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ left\ );}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ SetUp(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ up\ );}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ SetForward(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ direction\ );}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ SetRotation(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ \&\ rotation\ );}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ SetPosition(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ position\ );}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ \&\ Set(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ \&\ orientation,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ position,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ scale\ =\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}(\ 1,\ 1,\ 1\ )\ );}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ GetParent();}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ GetChild();}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ GetPrevious();}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ GetNext();}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ GetParent()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ GetChild()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ GetPrevious()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ GetNext()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ std::string\ GetName()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsDirty()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00120\ }
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ m\_matrix;}
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ m\_finalCached;}
-\DoxyCodeLine{00123\ }
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ m\_isDirty;}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ MakeDirty(\ \textcolor{keywordtype}{bool}\ dirtySiblings\ =\ \textcolor{keyword}{false}\ );}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ AddChild(\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ frame\ );}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ AddSibling(\ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ frame\ );}
 \DoxyCodeLine{00125\ }
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ m\_updateOnChange;}
-\DoxyCodeLine{00127\ \ \ \ \ \};}
-\DoxyCodeLine{00128\ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ m\_child;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ m\_previous;}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ m\_next;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame}{Frame}}\ *\ m\_parent;}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ std::string\ m\_name;}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ m\_matrix;}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ m\_finalCached;}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ m\_isDirty;}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ m\_updateOnChange;}
+\DoxyCodeLine{00139\ \ \ \ \ \};}
+\DoxyCodeLine{00140\ \}}
 
 \end{DoxyCode}

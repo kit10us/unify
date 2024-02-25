@@ -17,13 +17,13 @@ class \mbox{\hyperlink{classunify_1_1_any}{Any}}
 class \mbox{\hyperlink{classunify_1_1bad__any__cast}{bad\+\_\+any\+\_\+cast}}
 \item 
 class \mbox{\hyperlink{classunify_1_1_bad_cast}{Bad\+Cast}}
-\begin{DoxyCompactList}\small\item\em A standardized exception. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em An exception for a failed type cast. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classunify_1_1_b_box}{BBox}}
 \begin{DoxyCompactList}\small\item\em A Bounding box. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classunify_1_1_b_rectangle}{BRectangle}}
+\begin{DoxyCompactList}\small\item\em A 2D bounding rectangle. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere}}
 \begin{DoxyCompactList}\small\item\em A sphere used to track a volume, typically of an object. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classunify_1_1_b_square}{BSquare}}
-\begin{DoxyCompactList}\small\item\em A boudning sphere. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classunify_1_1_color}{Color}}
 \begin{DoxyCompactList}\small\item\em A 32 bit color, 8 bits per component. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classunify_1_1_color_unit}{Color\+Unit}}
@@ -33,23 +33,27 @@ class \mbox{\hyperlink{classunify_1_1_data_lock}{Data\+Lock}}
 struct \mbox{\hyperlink{structunify_1_1_data_lock_access}{Data\+Lock\+Access}}
 \item 
 class \mbox{\hyperlink{classunify_1_1_default_exception_handler}{Default\+Exception\+Handler}}
-\item 
+\begin{DoxyCompactList}\small\item\em Default exception handler for execution exceptions/failures. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classunify_1_1_exception}{Exception}}
 \begin{DoxyCompactList}\small\item\em A standardized exception. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classunify_1_1_file_stream}{File\+Stream}}
-\begin{DoxyCompactList}\small\item\em Perform stream operation on a file source. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Perform stream operation on a file. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classunify_1_1_frame}{Frame}}
 \begin{DoxyCompactList}\small\item\em \doxylink{classunify_1_1_frame}{Frame} provides a hierarchical relationship structure for the purpose of providing relative transformation in a rendering or physics pipeline. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classunify_1_1_frame_lite}{Frame\+Lite}}
-\begin{DoxyCompactList}\small\item\em Order of color components. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em A lite-\/weight frame without graph support. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classunify_1_1_frame_set}{Frame\+Set}}
-\begin{DoxyCompactList}\small\item\em A set of matrices, and connectivity between these matrices, used for mesh animations. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em A set of matrices, and connectivity between those matrices, used for mesh animations. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classunify_1_1_frame_set_instance}{Frame\+Set\+Instance}}
 \begin{DoxyCompactList}\small\item\em A modified \doxylink{classunify_1_1_frame_set}{Frame\+Set}. Used with animations, separating animation changes into \doxylink{classunify_1_1_frame_set_instance}{Frame\+Set\+Instance}, while maintaining the original \doxylink{classunify_1_1_frame_set}{Frame\+Set}. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classunify_1_1_frustum}{Frustum}}
-\item 
+\begin{DoxyCompactList}\small\item\em A view frustum, typically used for view point occlusion. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classunify_1_1_frustum_corner}{Frustum\+Corner}}
+\begin{DoxyCompactList}\small\item\em Enumeration of the corners of a frustum. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classunify_1_1_frustum_plane}{Frustum\+Plane}}
+\begin{DoxyCompactList}\small\item\em Enumeration of the planes of a frustum. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classunify_1_1_i_exception_handler}{IException\+Handler}}
-\item 
+\begin{DoxyCompactList}\small\item\em And exception handler triggered upon an exception. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structunify_1_1_key_value_pair}{Key\+Value\+Pair}}
 \begin{DoxyCompactList}\small\item\em A generic key value pair. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classunify_1_1_link_list}{Link\+List}}
@@ -153,41 +157,14 @@ enum \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fb}{Order}} 
 , {\bfseries ABGR}
  \}
 \begin{DoxyCompactList}\small\item\em Order of color components. \end{DoxyCompactList}\item 
-\Hypertarget{namespaceunify_aba35a0c56cd4f41bc7292e2db0768230}\label{namespaceunify_aba35a0c56cd4f41bc7292e2db0768230} 
-enum {\bfseries Frustum\+Corner} \{ \newline
-{\bfseries CORNER\+\_\+xyz}
-, {\bfseries CORNER\+\_\+\+Xyz}
-, {\bfseries CORNER\+\_\+x\+Yz}
-, {\bfseries CORNER\+\_\+\+XYz}
+\Hypertarget{namespaceunify_af385be843c3779feb4af332ac46d2a3f}\label{namespaceunify_af385be843c3779feb4af332ac46d2a3f} 
+enum class {\bfseries Cull\+State} \{ \newline
+{\bfseries Unknown}
+, {\bfseries Inside}
+, {\bfseries Outside}
+, {\bfseries Inside\+Slow}
 , \newline
-{\bfseries CORNER\+\_\+xyZ}
-, {\bfseries CORNER\+\_\+\+XyZ}
-, {\bfseries CORNER\+\_\+x\+YZ}
-, {\bfseries CORNER\+\_\+\+XYZ}
-, \newline
-{\bfseries CORNER\+\_\+\+COUNT}
- \}
-\item 
-\Hypertarget{namespaceunify_abc91edbeb68bc9250b90ab0f45dafda6}\label{namespaceunify_abc91edbeb68bc9250b90ab0f45dafda6} 
-enum {\bfseries Frustum\+Plane} \{ \newline
-{\bfseries PLANE\+\_\+\+NEAR}
-, {\bfseries PLANE\+\_\+\+FAR}
-, {\bfseries PLANE\+\_\+\+LEFT}
-, {\bfseries PLANE\+\_\+\+RIGHT}
-, \newline
-{\bfseries PLANE\+\_\+\+TOP}
-, {\bfseries PLANE\+\_\+\+BOTTOM}
-, {\bfseries PLANE\+\_\+\+COUNT}
- \}
-\item 
-\Hypertarget{namespaceunify_a9e261688af6af4426ed19ccab90d5413}\label{namespaceunify_a9e261688af6af4426ed19ccab90d5413} 
-enum {\bfseries CULLSTATE} \{ \newline
-{\bfseries CS\+\_\+\+UNKNOWN}
-, {\bfseries CS\+\_\+\+INSIDE}
-, {\bfseries CS\+\_\+\+OUTSIDE}
-, {\bfseries CS\+\_\+\+INSIDE\+\_\+\+SLOW}
-, \newline
-{\bfseries CS\+\_\+\+OUTSIDE\+\_\+\+SLOW}
+{\bfseries Outside\+Slow}
  \}
 \item 
 \Hypertarget{namespaceunify_a6510a888bcad61b7955a60679dbc9fd3}\label{namespaceunify_a6510a888bcad61b7955a60679dbc9fd3} 
@@ -469,13 +446,13 @@ template$<$$>$ unify\+::\+Data\+Lock\+Access\+::\+TYPE {\bfseries Cast} (std\+::
 \item 
 \Hypertarget{namespaceunify_ac18b8e5c2edbd85e99d79c978d3d0bac}\label{namespaceunify_ac18b8e5c2edbd85e99d79c978d3d0bac} 
 bool {\bfseries Check\+Flag} (\mbox{\hyperlink{namespaceunify_aae31856ee9b86baac184363c6052d1aa}{Flags}} flags, \mbox{\hyperlink{namespaceunify_aae31856ee9b86baac184363c6052d1aa}{Flags}} member)
-\item 
+\begin{DoxyCompactList}\small\item\em Check if a flag is set. \end{DoxyCompactList}\item 
 \Hypertarget{namespaceunify_a9bc4ff0d4d6d8daace09140209a289d8}\label{namespaceunify_a9bc4ff0d4d6d8daace09140209a289d8} 
 bool {\bfseries Edge\+Intersects\+Face} (\mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ float $>$ \texorpdfstring{$\ast$}{*}p\+Edges, \mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ float $>$ \texorpdfstring{$\ast$}{*}p\+Face\+Points, \mbox{\hyperlink{classunify_1_1_plane}{unify\+::\+Plane}} \texorpdfstring{$\ast$}{*}p\+Plane)
 \item 
-\Hypertarget{namespaceunify_ab8df6918f321f3371b1b9af51e18ff15}\label{namespaceunify_ab8df6918f321f3371b1b9af51e18ff15} 
-int64\+\_\+t {\bfseries File\+Length} (const char \texorpdfstring{$\ast$}{*}psz\+Filename)
-\item 
+\Hypertarget{namespaceunify_a80717e5d5b266ccba5ecaa0fe350cc27}\label{namespaceunify_a80717e5d5b266ccba5ecaa0fe350cc27} 
+int64\+\_\+t {\bfseries File\+Length} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Returns a fike\textquotesingle{}s length. \end{DoxyCompactList}\item 
 \Hypertarget{namespaceunify_a33fa7aa51f24d0a9aa3be52b198c7169}\label{namespaceunify_a33fa7aa51f24d0a9aa3be52b198c7169} 
 {\footnotesize template$<$typename T $>$ }\\T {\bfseries Lerp} (T a, T b, float delta)
 \item 

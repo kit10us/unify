@@ -39,10 +39,12 @@ bool {\bfseries Exists} (std\+::string name) const
 \Hypertarget{classunify_1_1_parameters_a4b535f5a4b7eb53dfb040e3e93b6c2a7}\label{classunify_1_1_parameters_a4b535f5a4b7eb53dfb040e3e93b6c2a7} 
 {\footnotesize template$<$typename T $>$ }\\T {\bfseries Get} (std\+::string name, const T \&default\+Value) const
 \item 
-{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classunify_1_1_parameters_ac83e60f34e87a40e969a235f8b3e9a59}{Cast}} (std\+::string name) const
-\item 
-std\+::string \mbox{\hyperlink{classunify_1_1_parameters_ae3fa08bb7b7493dd5fae0801972cfb61}{To\+String}} () const
-\item 
+\Hypertarget{classunify_1_1_parameters_ac83e60f34e87a40e969a235f8b3e9a59}\label{classunify_1_1_parameters_ac83e60f34e87a40e969a235f8b3e9a59} 
+{\footnotesize template$<$typename T $>$ }\\T {\bfseries Cast} (std\+::string name) const
+\begin{DoxyCompactList}\small\item\em Specialization of unsigned int for similar type conversion. \end{DoxyCompactList}\item 
+\Hypertarget{classunify_1_1_parameters_ae3fa08bb7b7493dd5fae0801972cfb61}\label{classunify_1_1_parameters_ae3fa08bb7b7493dd5fae0801972cfb61} 
+std\+::string {\bfseries To\+String} () const
+\begin{DoxyCompactList}\small\item\em Specialization of unsigned int for similar type conversion, with a default value. \end{DoxyCompactList}\item 
 \Hypertarget{classunify_1_1_parameters_a5930c1aca28e2e0756f092c8aa600f5f}\label{classunify_1_1_parameters_a5930c1aca28e2e0756f092c8aa600f5f} 
 size\+\_\+t {\bfseries Audit\+Count} () const
 \item 
@@ -110,22 +112,6 @@ template$<$$>$ double {\bfseries Cast} (std\+::string name) const
 {\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classunify_1_1_parameters}{Parameters}} \& {\bfseries Set} (std\+::string name, const T \&value)
 \end{DoxyCompactItemize}
 
-
-\doxysubsection{Member Function Documentation}
-\Hypertarget{classunify_1_1_parameters_ac83e60f34e87a40e969a235f8b3e9a59}\label{classunify_1_1_parameters_ac83e60f34e87a40e969a235f8b3e9a59} 
-\index{unify::Parameters@{unify::Parameters}!Cast@{Cast}}
-\index{Cast@{Cast}!unify::Parameters@{unify::Parameters}}
-\doxysubsubsection{\texorpdfstring{Cast()}{Cast()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-T unify\+::\+Parameters\+::\+Cast (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption}) const}
-
-Specialization of unsigned int for similar type conversion.  \Hypertarget{classunify_1_1_parameters_ae3fa08bb7b7493dd5fae0801972cfb61}\label{classunify_1_1_parameters_ae3fa08bb7b7493dd5fae0801972cfb61} 
-\index{unify::Parameters@{unify::Parameters}!ToString@{ToString}}
-\index{ToString@{ToString}!unify::Parameters@{unify::Parameters}}
-\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
-{\footnotesize\ttfamily std\+::string Parameters\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-Specialization of unsigned int for similar type conversion, with a default value.  
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

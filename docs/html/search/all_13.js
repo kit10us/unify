@@ -14,13 +14,14 @@ var searchData=
   ['towstring_11',['ToWString',['../classunify_1_1_path.html#a5d042a2534d076e8a1795cbeedbaf8dc',1,'unify::Path::ToWString() const'],['../classunify_1_1_path.html#ac94bd93459b00ef03370e0e979fd6043',1,'unify::Path::ToWString(Slash direction) const']]],
   ['towxpath_12',['ToWXPath',['../classunify_1_1_path.html#a0d36d907651e47d4a85a3441bec6415c',1,'unify::Path::ToWXPath() const'],['../classunify_1_1_path.html#a97035f42ec16a1c9687638fb027ed80f',1,'unify::Path::ToWXPath(Slash direction) const']]],
   ['toxpath_13',['ToXPath',['../classunify_1_1_path.html#a4f20a117c0a03c7deed194dde19b8afa',1,'unify::Path']]],
-  ['tree_14',['Tree',['../classunify_1_1_tree.html',1,'unify']]],
-  ['triangle_15',['Triangle',['../classunify_1_1_triangle.html',1,'unify']]],
-  ['trim_16',['Trim',['../namespaceunify_1_1string.html#a934f5d13665521384d98d7131dd06921',1,'unify::string']]],
-  ['trimfrom_17',['TrimFrom',['../namespaceunify_1_1string.html#a59b6ac5c7538e2453a4cc784f059e6b4',1,'unify::string']]],
-  ['trimleft_18',['TrimLeft',['../namespaceunify_1_1string.html#af9ce41780532e238e34931b2e9372b45',1,'unify::string']]],
-  ['trimright_19',['TrimRight',['../namespaceunify_1_1string.html#aee52e8670c3f742628433e3cda125e70',1,'unify::string']]],
-  ['trimto_20',['TrimTo',['../namespaceunify_1_1string.html#a8e509f3e5d1cd15474e10ad1d0510b70',1,'unify::string']]],
-  ['trycatch_21',['TryCatch',['../classunify_1_1test_1_1_suite.html#a44ce7fe738abba3c773700466f7bb378',1,'unify::test::Suite']]],
-  ['trycatchassert_22',['TryCatchAssert',['../classunify_1_1test_1_1_suite.html#a13f0956bdefea037291afbcdc75aa7c3',1,'unify::test::Suite']]]
+  ['transform_14',['Transform',['../classunify_1_1_frame_set_instance.html#a808a9f0602a5bbd5f833ae0cc811ac4f',1,'unify::FrameSetInstance']]],
+  ['tree_15',['Tree',['../classunify_1_1_tree.html',1,'unify']]],
+  ['triangle_16',['Triangle',['../classunify_1_1_triangle.html',1,'unify']]],
+  ['trim_17',['Trim',['../namespaceunify_1_1string.html#a934f5d13665521384d98d7131dd06921',1,'unify::string']]],
+  ['trimfrom_18',['TrimFrom',['../namespaceunify_1_1string.html#a59b6ac5c7538e2453a4cc784f059e6b4',1,'unify::string']]],
+  ['trimleft_19',['TrimLeft',['../namespaceunify_1_1string.html#af9ce41780532e238e34931b2e9372b45',1,'unify::string']]],
+  ['trimright_20',['TrimRight',['../namespaceunify_1_1string.html#aee52e8670c3f742628433e3cda125e70',1,'unify::string']]],
+  ['trimto_21',['TrimTo',['../namespaceunify_1_1string.html#a8e509f3e5d1cd15474e10ad1d0510b70',1,'unify::string']]],
+  ['trycatch_22',['TryCatch',['../classunify_1_1test_1_1_suite.html#a44ce7fe738abba3c773700466f7bb378',1,'unify::test::Suite']]],
+  ['trycatchassert_23',['TryCatchAssert',['../classunify_1_1test_1_1_suite.html#a13f0956bdefea037291afbcdc75aa7c3',1,'unify::test::Suite']]]
 ];

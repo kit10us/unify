@@ -2,7 +2,7 @@
 \hypertarget{classunify_1_1_file_stream}{}\label{classunify_1_1_file_stream}\index{unify::FileStream@{unify::FileStream}}
 
 
-Perform stream operation on a file source.  
+Perform stream operation on a file.  
 
 
 
@@ -20,28 +20,28 @@ Inheritance diagram for unify\+::File\+Stream\+:\begin{figure}[H]
 \item 
 \Hypertarget{classunify_1_1_file_stream_abc903dfb8b3dbc4a687c961c4f4258e6}\label{classunify_1_1_file_stream_abc903dfb8b3dbc4a687c961c4f4258e6} 
 void {\bfseries Open} (\mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417}{Stream\+Access\+Type}} access, \mbox{\hyperlink{classunify_1_1_path}{unify\+::\+Path}} path)
-\item 
+\begin{DoxyCompactList}\small\item\em Open a stream at a specified path. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classunify_1_1_file_stream_a66a22e08429d6489442c9a9b845c1e85}{Close}} () override
-\item 
-virtual unsigned int \mbox{\hyperlink{classunify_1_1_file_stream_a1d23bc20a1194a9c875824d14af34140}{Read}} (void \texorpdfstring{$\ast$}{*}p\+Dest, unsigned int u\+Length) override
-\item 
-virtual unsigned int \mbox{\hyperlink{classunify_1_1_file_stream_a739d2bcfc548a9a1d444183dcc54394a}{Read\+Pack}} (void \texorpdfstring{$\ast$}{*}p\+Dest, unsigned int u\+Length) override
-\item 
-virtual void \mbox{\hyperlink{classunify_1_1_file_stream_a074cccdda4d46d5be1c80e78a3648222}{Write}} (const void \texorpdfstring{$\ast$}{*}p\+Src, unsigned int u\+Length) override
-\item 
+\begin{DoxyCompactList}\small\item\em Close the stream. \end{DoxyCompactList}\item 
+virtual unsigned int \mbox{\hyperlink{classunify_1_1_file_stream_a791411e71ee9bad44918fd4b73fccdf0}{Read}} (void \texorpdfstring{$\ast$}{*}p\+Dest, unsigned int length) override
+\begin{DoxyCompactList}\small\item\em Read from the stream. \end{DoxyCompactList}\item 
+virtual unsigned int \mbox{\hyperlink{classunify_1_1_file_stream_af9b081654fab8fccb9b15a763bbb9cae}{Read\+Pack}} (void \texorpdfstring{$\ast$}{*}dest, unsigned int length) override
+\begin{DoxyCompactList}\small\item\em Read a string of characters to and including the first NULL (or until the Max\+Length-\/1 is reached) Note that this may include a \textquotesingle{}\textbackslash{}r\textquotesingle{} cariage return. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classunify_1_1_file_stream_a60d299587e73c2041100d00e7e03ca6c}{Write}} (const void \texorpdfstring{$\ast$}{*}source, unsigned int length) override
+\begin{DoxyCompactList}\small\item\em Write to the stream. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classunify_1_1_file_stream_a15ebd83c13e275ca8779f591eb85ad14}{Write\+Pack}} (const void \texorpdfstring{$\ast$}{*}p\+Src) override
-\item 
+\begin{DoxyCompactList}\small\item\em Write a null terminated string to the stream... \end{DoxyCompactList}\item 
 \Hypertarget{classunify_1_1_file_stream_a018840da7e3b7dcdd50e66e86b41ce99}\label{classunify_1_1_file_stream_a018840da7e3b7dcdd50e66e86b41ce99} 
 void {\bfseries Write} (std\+::string out)
-\item 
-virtual bool \mbox{\hyperlink{classunify_1_1_file_stream_ab14a7efbbc77ffb100f2d7eebacafcf9}{Seek}} (\mbox{\hyperlink{namespaceunify_a384b8275876d58563e0ed7a141823264}{Stream\+Seek\+Type}} seek, int i\+Offset=0) override
-\item 
+\begin{DoxyCompactList}\small\item\em Write a string to the stream. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classunify_1_1_file_stream_a4cae93432c3815b7437a395fdc345227}{Seek}} (\mbox{\hyperlink{namespaceunify_a384b8275876d58563e0ed7a141823264}{Stream\+Seek\+Type}} seek, int offset=0) override
+\begin{DoxyCompactList}\small\item\em Seek to a position in the stream. \end{DoxyCompactList}\item 
 \Hypertarget{classunify_1_1_file_stream_a394332d7b8c17761c66db532b0a32b05}\label{classunify_1_1_file_stream_a394332d7b8c17761c66db532b0a32b05} 
 bool {\bfseries Pos} (fpos\+\_\+t \&pos)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns our position within the stream. \end{DoxyCompactList}\item 
 \Hypertarget{classunify_1_1_file_stream_aadc01e6ad4eb715861e1a815a8c4dd89}\label{classunify_1_1_file_stream_aadc01e6ad4eb715861e1a815a8c4dd89} 
 bool {\bfseries Set\+Position} (fpos\+\_\+t \&pos)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set our position within a stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classunify_1_1_stream}{unify\+::\+Stream}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -76,7 +76,7 @@ bool {\bfseries m\+\_\+is\+Open}
 
 
 \doxysubsection{Detailed Description}
-Perform stream operation on a file source. 
+Perform stream operation on a file. 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classunify_1_1_file_stream_a66a22e08429d6489442c9a9b845c1e85}\label{classunify_1_1_file_stream_a66a22e08429d6489442c9a9b845c1e85} 
@@ -87,43 +87,63 @@ Perform stream operation on a file source.
 
 
 
+Close the stream. 
+
+
+
 Reimplemented from \mbox{\hyperlink{classunify_1_1_stream}{unify\+::\+Stream}}.
 
-\Hypertarget{classunify_1_1_file_stream_a1d23bc20a1194a9c875824d14af34140}\label{classunify_1_1_file_stream_a1d23bc20a1194a9c875824d14af34140} 
+\Hypertarget{classunify_1_1_file_stream_a791411e71ee9bad44918fd4b73fccdf0}\label{classunify_1_1_file_stream_a791411e71ee9bad44918fd4b73fccdf0} 
 \index{unify::FileStream@{unify::FileStream}!Read@{Read}}
 \index{Read@{Read}!unify::FileStream@{unify::FileStream}}
 \doxysubsubsection{\texorpdfstring{Read()}{Read()}}
-{\footnotesize\ttfamily unsigned int File\+Stream\+::\+Read (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Dest,  }\item[{unsigned int}]{u\+Length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily unsigned int File\+Stream\+::\+Read (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Dest,  }\item[{unsigned int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Read from the stream. 
 
 
 
 Reimplemented from \mbox{\hyperlink{classunify_1_1_stream}{unify\+::\+Stream}}.
 
-\Hypertarget{classunify_1_1_file_stream_a739d2bcfc548a9a1d444183dcc54394a}\label{classunify_1_1_file_stream_a739d2bcfc548a9a1d444183dcc54394a} 
+\Hypertarget{classunify_1_1_file_stream_af9b081654fab8fccb9b15a763bbb9cae}\label{classunify_1_1_file_stream_af9b081654fab8fccb9b15a763bbb9cae} 
 \index{unify::FileStream@{unify::FileStream}!ReadPack@{ReadPack}}
 \index{ReadPack@{ReadPack}!unify::FileStream@{unify::FileStream}}
 \doxysubsubsection{\texorpdfstring{ReadPack()}{ReadPack()}}
-{\footnotesize\ttfamily unsigned int File\+Stream\+::\+Read\+Pack (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Dest,  }\item[{unsigned int}]{u\+Length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily unsigned int File\+Stream\+::\+Read\+Pack (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{dest,  }\item[{unsigned int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Read a string of characters to and including the first NULL (or until the Max\+Length-\/1 is reached) Note that this may include a \textquotesingle{}\textbackslash{}r\textquotesingle{} cariage return. 
 
 
 
 Reimplemented from \mbox{\hyperlink{classunify_1_1_stream}{unify\+::\+Stream}}.
 
-\Hypertarget{classunify_1_1_file_stream_ab14a7efbbc77ffb100f2d7eebacafcf9}\label{classunify_1_1_file_stream_ab14a7efbbc77ffb100f2d7eebacafcf9} 
+\Hypertarget{classunify_1_1_file_stream_a4cae93432c3815b7437a395fdc345227}\label{classunify_1_1_file_stream_a4cae93432c3815b7437a395fdc345227} 
 \index{unify::FileStream@{unify::FileStream}!Seek@{Seek}}
 \index{Seek@{Seek}!unify::FileStream@{unify::FileStream}}
 \doxysubsubsection{\texorpdfstring{Seek()}{Seek()}}
-{\footnotesize\ttfamily bool File\+Stream\+::\+Seek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a384b8275876d58563e0ed7a141823264}{Stream\+Seek\+Type}}}]{seek,  }\item[{int}]{i\+Offset = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily bool File\+Stream\+::\+Seek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a384b8275876d58563e0ed7a141823264}{Stream\+Seek\+Type}}}]{seek,  }\item[{int}]{offset = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Seek to a position in the stream. 
 
 
 
 Reimplemented from \mbox{\hyperlink{classunify_1_1_stream}{unify\+::\+Stream}}.
 
-\Hypertarget{classunify_1_1_file_stream_a074cccdda4d46d5be1c80e78a3648222}\label{classunify_1_1_file_stream_a074cccdda4d46d5be1c80e78a3648222} 
+\Hypertarget{classunify_1_1_file_stream_a60d299587e73c2041100d00e7e03ca6c}\label{classunify_1_1_file_stream_a60d299587e73c2041100d00e7e03ca6c} 
 \index{unify::FileStream@{unify::FileStream}!Write@{Write}}
 \index{Write@{Write}!unify::FileStream@{unify::FileStream}}
 \doxysubsubsection{\texorpdfstring{Write()}{Write()}}
-{\footnotesize\ttfamily void File\+Stream\+::\+Write (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{p\+Src,  }\item[{unsigned int}]{u\+Length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void File\+Stream\+::\+Write (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{source,  }\item[{unsigned int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Write to the stream. 
 
 
 
@@ -134,6 +154,10 @@ Reimplemented from \mbox{\hyperlink{classunify_1_1_stream}{unify\+::\+Stream}}.
 \index{WritePack@{WritePack}!unify::FileStream@{unify::FileStream}}
 \doxysubsubsection{\texorpdfstring{WritePack()}{WritePack()}}
 {\footnotesize\ttfamily void File\+Stream\+::\+Write\+Pack (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{p\+Src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Write a null terminated string to the stream... 
 
 
 

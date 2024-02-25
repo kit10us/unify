@@ -190,12 +190,12 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    {</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">if</span>( unify::CheckFlag(m_uLisFlags, LINKLIST_SORT) )</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">if</span>( <a class="code hl_function" href="namespaceunify.html#ac18b8e5c2edbd85e99d79c978d3d0bac">unify::CheckFlag</a>(m_uLisFlags, LINKLIST_SORT) )</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        {</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="comment">// Sort into list..</span></div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            TLink&lt; T &gt; * pLink = m_pFirst;</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="keywordflow">if</span>( unify::CheckFlag(m_uLisFlags, LINKLIST_SORTREVERSE) )</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="keywordflow">if</span>( <a class="code hl_function" href="namespaceunify.html#ac18b8e5c2edbd85e99d79c978d3d0bac">unify::CheckFlag</a>(m_uLisFlags, LINKLIST_SORTREVERSE) )</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            {</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                <span class="keywordflow">while</span>( pLink &amp;&amp; pLink-&gt;m_fSortValue &gt; pNewLink-&gt;m_fSortValue )</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                {</div>
@@ -406,6 +406,7 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>}</div>
 <div class="ttc" id="anamespaceunify_1_1string_html_a9748ee7f5acfe91ceba26ad687e6d2d8"><div class="ttname"><a href="namespaceunify_1_1string.html#a9748ee7f5acfe91ceba26ad687e6d2d8">unify::string::StringIs</a></div><div class="ttdeci">bool StringIs(std::string a, std::string is)</div><div class="ttdoc">Compare two strings for equvilancy, ignoring case.</div><div class="ttdef"><b>Definition</b> String.cpp:41</div></div>
+<div class="ttc" id="anamespaceunify_html_ac18b8e5c2edbd85e99d79c978d3d0bac"><div class="ttname"><a href="namespaceunify.html#ac18b8e5c2edbd85e99d79c978d3d0bac">unify::CheckFlag</a></div><div class="ttdeci">bool CheckFlag(Flags flags, Flags member)</div><div class="ttdoc">Check if a flag is set.</div><div class="ttdef"><b>Definition</b> Flags.h:72</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

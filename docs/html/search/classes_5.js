@@ -6,5 +6,7 @@ var searchData=
   ['framelite_3',['FrameLite',['../classunify_1_1_frame_lite.html',1,'unify']]],
   ['frameset_4',['FrameSet',['../classunify_1_1_frame_set.html',1,'unify']]],
   ['framesetinstance_5',['FrameSetInstance',['../classunify_1_1_frame_set_instance.html',1,'unify']]],
-  ['frustum_6',['Frustum',['../classunify_1_1_frustum.html',1,'unify']]]
+  ['frustum_6',['Frustum',['../classunify_1_1_frustum.html',1,'unify']]],
+  ['frustumcorner_7',['FrustumCorner',['../classunify_1_1_frustum_corner.html',1,'unify']]],
+  ['frustumplane_8',['FrustumPlane',['../classunify_1_1_frustum_plane.html',1,'unify']]]
 ];

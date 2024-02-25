@@ -47,22 +47,29 @@
 \DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame_set}{FrameSet}}();}
 \DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frame_set}{\string~FrameSet}}();}
 \DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ Add(\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ model,\ \textcolor{keywordtype}{size\_t}\ parent,\ std::string\ name\ =\ std::string()\ );}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ Exists(\ std::string\ name\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ Find(\ std::string\ name\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ Count()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ std::string\ Name(\ \textcolor{keywordtype}{size\_t}\ index\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ Model(\ \textcolor{keywordtype}{size\_t}\ index\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ Local(\ \textcolor{keywordtype}{size\_t}\ index\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ForEach(\ \mbox{\hyperlink{classunify_1_1_frame_set_1_1_for_each_functor}{ForEachFunctor}}\ \&\ functor\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ std::vector<\ size\_t\ >\ m\_parentIndex;}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ std::vector<\ Matrix\ >\ m\_models;}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ std::vector<\ Matrix\ >\ m\_locals;\ \textcolor{comment}{//\ local\ =\ parent\ *\ model}}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ std::map<\ std::string,\ size\_t\ >\ m\_nameToIndex;}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ std::map<\ size\_t,\ std::string\ >\ m\_indexToName;}
-\DoxyCodeLine{00064\ \ \ \ \ \};}
-\DoxyCodeLine{00065\ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classunify_1_1_frame_set_ae6d524e1cb2cfd1481f239969c4265d9}{Add}}(\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ model,\ \textcolor{keywordtype}{size\_t}\ parent,\ std::string\ name\ =\ std::string()\ );}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_frame_set_a2b0a8de03ed0c26200d94cac221705c5}{Exists}}(\ std::string\ name\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classunify_1_1_frame_set_a3758006f03037127ac6499ab83107058}{Find}}(\ std::string\ name\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classunify_1_1_frame_set_a9670dfaa272f3ca54bcf9da4a8ba4ddf}{Count}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classunify_1_1_frame_set_a2eb8ec90d296621e728eca948aea852d}{Name}}(\ \textcolor{keywordtype}{size\_t}\ index\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{classunify_1_1_frame_set_aff9f20192e2bb9d6f44a76e5436bd5cb}{Model}}(\ \textcolor{keywordtype}{size\_t}\ index\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{classunify_1_1_frame_set_a9e433879fd9af43e2289a2ff3da39e44}{Local}}(\ \textcolor{keywordtype}{size\_t}\ index\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_frame_set_ac8cc75a04dd29fe2f36eca67fe4faf29}{ForEach}}(\ \mbox{\hyperlink{classunify_1_1_frame_set_1_1_for_each_functor}{ForEachFunctor}}\ \&\ functor\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ std::vector<\ size\_t\ >\ m\_parentIndex;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ std::vector<\ Matrix\ >\ m\_models;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ std::vector<\ Matrix\ >\ m\_locals;\ \textcolor{comment}{//\ local\ =\ parent\ *\ model}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ std::map<\ std::string,\ size\_t\ >\ m\_nameToIndex;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ std::map<\ size\_t,\ std::string\ >\ m\_indexToName;}
+\DoxyCodeLine{00096\ \ \ \ \ \};}
+\DoxyCodeLine{00097\ \}}
 
 \end{DoxyCode}

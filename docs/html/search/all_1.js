@@ -6,6 +6,6 @@ var searchData=
   ['begincase_3',['BeginCase',['../classunify_1_1test_1_1_suite.html#a11dbe56a98077c6d4f87931bf24bdc72',1,'unify::test::Suite']]],
   ['beginsuite_4',['BeginSuite',['../classunify_1_1test_1_1_suite.html#a3933900c65165b299798bd3a6dac0877',1,'unify::test::Suite']]],
   ['beginswith_5',['BeginsWith',['../namespaceunify_1_1string.html#a3417284459884cfcc455c3c1de77280d',1,'unify::string']]],
-  ['bsphere_6',['BSphere',['../classunify_1_1_b_sphere.html',1,'unify']]],
-  ['bsquare_7',['BSquare',['../classunify_1_1_b_square.html',1,'unify']]]
+  ['brectangle_6',['BRectangle',['../classunify_1_1_b_rectangle.html',1,'unify']]],
+  ['bsphere_7',['BSphere',['../classunify_1_1_b_sphere.html',1,'unify']]]
 ];

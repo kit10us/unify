@@ -134,13 +134,12 @@ bool {\bfseries Is\+Dirty} () const
 \item 
 \Hypertarget{classunify_1_1_frame_a7ef385a9d1cfb2bc4cfb44f01fa9c59c}\label{classunify_1_1_frame_a7ef385a9d1cfb2bc4cfb44f01fa9c59c} 
 static void {\bfseries Update\+On\+Change} (bool tf)
-\item 
-\Hypertarget{classunify_1_1_frame_ae2eaca99ff0927e2529406b5c65914a0}\label{classunify_1_1_frame_ae2eaca99ff0927e2529406b5c65914a0} 
-static bool {\bfseries Update\+On\+Change} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Enabled or disables updating the entire tree if we are modified. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classunify_1_1_frame_ae2eaca99ff0927e2529406b5c65914a0}{Update\+On\+Change}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if we update the entire tree upon modification. \end{DoxyCompactList}\item 
 \Hypertarget{classunify_1_1_frame_a791b5449891d1690d56369e9593c3e96}\label{classunify_1_1_frame_a791b5449891d1690d56369e9593c3e96} 
 static \mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*} {\bfseries Create\+Duplicate\+Hierarchy} (const \mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*}in)
-\item 
+\begin{DoxyCompactList}\small\item\em Create a duplicate hierarchy. \end{DoxyCompactList}\item 
 \Hypertarget{classunify_1_1_frame_add4ca897d7add1058c0e27c85fe6b494}\label{classunify_1_1_frame_add4ca897d7add1058c0e27c85fe6b494} 
 static void {\bfseries Create\+Index\+To\+Frame\+Vector} (std\+::vector$<$ \mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*} $>$ \&index\+To\+Frame\+Out, \mbox{\hyperlink{classunify_1_1_frame}{Frame}} \texorpdfstring{$\ast$}{*}frame)
 \item 
@@ -196,6 +195,22 @@ static bool {\bfseries m\+\_\+update\+On\+Change} = true
 
 \doxysubsection{Detailed Description}
 \doxylink{classunify_1_1_frame}{Frame} provides a hierarchical relationship structure for the purpose of providing relative transformation in a rendering or physics pipeline. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classunify_1_1_frame_ae2eaca99ff0927e2529406b5c65914a0}\label{classunify_1_1_frame_ae2eaca99ff0927e2529406b5c65914a0} 
+\index{unify::Frame@{unify::Frame}!UpdateOnChange@{UpdateOnChange}}
+\index{UpdateOnChange@{UpdateOnChange}!unify::Frame@{unify::Frame}}
+\doxysubsubsection{\texorpdfstring{UpdateOnChange()}{UpdateOnChange()}}
+{\footnotesize\ttfamily bool Frame\+::\+Update\+On\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns true if we update the entire tree upon modification. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

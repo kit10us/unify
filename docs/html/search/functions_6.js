@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['generatecorners_0',['GenerateCorners',['../classunify_1_1_b_box.html#a348fee5a04dc45501ddeff41a888ab3d',1,'unify::BBox']]],
+  ['generatecorners_0',['GenerateCorners',['../classunify_1_1_b_box.html#a348fee5a04dc45501ddeff41a888ab3d',1,'unify::BBox::GenerateCorners()'],['../classunify_1_1_b_rectangle.html#ada840716f0b5ac6dc92b203e9d519f67',1,'unify::BRectangle::GenerateCorners()']]],
   ['getalpha_1',['GetAlpha',['../classunify_1_1_color.html#a4353eba6f8b8deb28a4fffa76c9954db',1,'unify::Color']]],
   ['getblue_2',['GetBlue',['../classunify_1_1_color.html#abc86295756a720d4917a87c165c6c059',1,'unify::Color']]],
   ['getcenter_3',['GetCenter',['../classunify_1_1_b_sphere.html#a2e00b6fb4f7cbe53e21e99e0a7e57164',1,'unify::BSphere']]],
@@ -14,6 +14,7 @@ var searchData=
   ['getname_11',['GetName',['../classunify_1_1_lookup.html#a68c43df76747785d69e893c6079359a0',1,'unify::Lookup']]],
   ['getradius_12',['GetRadius',['../classunify_1_1_b_sphere.html#a6e34412cd007563db4668bbb45134b7c',1,'unify::BSphere']]],
   ['getred_13',['GetRed',['../classunify_1_1_color.html#a3afff9e9a4a56289a229311050ebde09',1,'unify::Color']]],
-  ['gettype_14',['GetType',['../classunify_1_1_data_lock.html#a076c682239384abc2aa8d78df26d3302',1,'unify::DataLock']]],
-  ['getvalue_15',['GetValue',['../classunify_1_1_lookup.html#a50e172d477584e09e8df194b66f15580',1,'unify::Lookup::GetValue(size_t index) const'],['../classunify_1_1_lookup.html#ae6422b58d8ea799a409aef70e4b7fb4f',1,'unify::Lookup::GetValue(Key key) const']]]
+  ['getsizeinbytes_14',['GetSizeInBytes',['../classunify_1_1_data_lock.html#a67868425b142525f9b999bbbaf472282',1,'unify::DataLock']]],
+  ['gettype_15',['GetType',['../classunify_1_1_data_lock.html#a076c682239384abc2aa8d78df26d3302',1,'unify::DataLock']]],
+  ['getvalue_16',['GetValue',['../classunify_1_1_lookup.html#a50e172d477584e09e8df194b66f15580',1,'unify::Lookup::GetValue(size_t index) const'],['../classunify_1_1_lookup.html#ae6422b58d8ea799a409aef70e4b7fb4f',1,'unify::Lookup::GetValue(Key key) const']]]
 ];

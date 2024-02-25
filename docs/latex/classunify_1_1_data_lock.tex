@@ -46,28 +46,28 @@ Data\+Lock\+Access\+::\+TYPE {\bfseries Get\+Type} () const
 \begin{DoxyCompactList}\small\item\em Return a pointer to the head of a specific \textquotesingle{}item\textquotesingle{}, and item being determined by length of stride. \end{DoxyCompactList}\item 
 \Hypertarget{classunify_1_1_data_lock_abff66190ba718c6f3a283d710d96e09a}\label{classunify_1_1_data_lock_abff66190ba718c6f3a283d710d96e09a} 
 size\+\_\+t {\bfseries Count} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the number of items. \end{DoxyCompactList}\item 
 \Hypertarget{classunify_1_1_data_lock_aff89b14fca9b1b7763a9165289a752fd}\label{classunify_1_1_data_lock_aff89b14fca9b1b7763a9165289a752fd} 
 size\+\_\+t {\bfseries Stride} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the stride for each item. \end{DoxyCompactList}\item 
 \Hypertarget{classunify_1_1_data_lock_a67868425b142525f9b999bbbaf472282}\label{classunify_1_1_data_lock_a67868425b142525f9b999bbbaf472282} 
 size\+\_\+t {\bfseries Get\+Size\+In\+Bytes} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the size of our data in bytes. \end{DoxyCompactList}\item 
 \Hypertarget{classunify_1_1_data_lock_a890f8ac2b8b7786197c1fa3dd19b2159}\label{classunify_1_1_data_lock_a890f8ac2b8b7786197c1fa3dd19b2159} 
 size\+\_\+t {\bfseries Slot} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the slot our data refers to, when available. \end{DoxyCompactList}\item 
 \Hypertarget{classunify_1_1_data_lock_afa0c4e2d1ed02aa7801c8a1193e8b71b}\label{classunify_1_1_data_lock_afa0c4e2d1ed02aa7801c8a1193e8b71b} 
 virtual void {\bfseries Invalidate} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Invalidate our data lock. \end{DoxyCompactList}\item 
 \Hypertarget{classunify_1_1_data_lock_a7076ec94e73ac1b1089225cc583d530d}\label{classunify_1_1_data_lock_a7076ec94e73ac1b1089225cc583d530d} 
 virtual bool {\bfseries Copy\+Bytes\+From} (const void \texorpdfstring{$\ast$}{*}source, size\+\_\+t offset, size\+\_\+t byte\+Count)
-\item 
+\begin{DoxyCompactList}\small\item\em Copy data from a source into our data by a specified byte count. \end{DoxyCompactList}\item 
 \Hypertarget{classunify_1_1_data_lock_a2334241188e509752488d912f55a9c92}\label{classunify_1_1_data_lock_a2334241188e509752488d912f55a9c92} 
 virtual bool {\bfseries Copy\+Item\+From} (const void \texorpdfstring{$\ast$}{*}source, size\+\_\+t index\+To)
-\item 
+\begin{DoxyCompactList}\small\item\em Copy an item from a source into a specified index. \end{DoxyCompactList}\item 
 \Hypertarget{classunify_1_1_data_lock_a6aedfa24dc795d497653ae900a990ecc}\label{classunify_1_1_data_lock_a6aedfa24dc795d497653ae900a990ecc} 
 virtual bool {\bfseries Copy\+Item\+From\+To} (size\+\_\+t index\+From, size\+\_\+t index\+To)
-\item 
+\begin{DoxyCompactList}\small\item\em Copy an item from a source index into a specified index. \end{DoxyCompactList}\item 
 \Hypertarget{classunify_1_1_data_lock_a22612ac5a06ce8437ab249839d7ca10b}\label{classunify_1_1_data_lock_a22612ac5a06ce8437ab249839d7ca10b} 
 {\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classunify_1_1_data_lock_1_1iterator}{iterator}}$<$ T $>$ {\bfseries begin} ()
 \item 
