@@ -2,7 +2,7 @@
 # Unify
 Unify is a library of 2D, 3D, and general data structures and functionality to support the creation of clearer, cleaner code, in a standard way.
 
-[Source Code Documentation](https://htmlpreview.github.io/?https://github.com/kit10us/unify/blob/master/docs/html/annotated.html)
+[Source Code Documentation](https://kit10us.github.io/unify)
 
 It attempts to accomplish this in several ways:
 - Create common named data structure types specific to purpose and need. Such as *angles, vectors, data streams, etc*.
