@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Unify Library: unify::BadCast Class Reference</title>
+<title>Unify Library: unify::FrustumPlane Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,48 +72,41 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceunify.html">unify</a></li><li class="navelem"><a class="el" href="classunify_1_1BadCast.html">BadCast</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceunify.html">unify</a></li><li class="navelem"><a class="el" href="classunify_1_1FrustumPlane.html">FrustumPlane</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classunify_1_1BadCast-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">unify::BadCast Class Reference</div></div>
+<a href="#pub-types">Public Types</a> &#124;
+<a href="classunify_1_1FrustumPlane-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">unify::FrustumPlane Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>An exception for a failed type cast.  
+<p>Enumeration of the planes of a frustum.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="BadCast_8h_source.html">BadCast.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for unify::BadCast:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="classunify_1_1BadCast.png" usemap="#unify::BadCast_map" alt=""/>
-  <map id="unify::BadCast_map" name="unify::BadCast_map">
-<area href="classunify_1_1Exception.html" title="A standardized exception." alt="unify::Exception" shape="rect" coords="0,56,101,80"/>
-  </map>
-</div></div>
+<p><code>#include &lt;<a class="el" href="Frustum_8h_source.html">Frustum.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:abebafc6722662cc29e99f4f04a8af720" id="r_abebafc6722662cc29e99f4f04a8af720"><td class="memItemLeft" align="right" valign="top"><a id="abebafc6722662cc29e99f4f04a8af720" name="abebafc6722662cc29e99f4f04a8af720"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BadCast</b> (std::string what)</td></tr>
-<tr class="separator:abebafc6722662cc29e99f4f04a8af720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classunify_1_1Exception"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classunify_1_1Exception')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classunify_1_1Exception.html">unify::Exception</a></td></tr>
-<tr class="memitem:a377f0041eae47c0c4fac2e3f5e05a252 inherit pub_methods_classunify_1_1Exception" id="r_a377f0041eae47c0c4fac2e3f5e05a252"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>Exception</b> (std::string what)</td></tr>
-<tr class="separator:a377f0041eae47c0c4fac2e3f5e05a252 inherit pub_methods_classunify_1_1Exception"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d95e4dbf362c8c567f9df225344f0c9 inherit pub_methods_classunify_1_1Exception" id="r_a5d95e4dbf362c8c567f9df225344f0c9"><td class="memItemLeft" align="right" valign="top">
-virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>what</b> () const  throw ()</td></tr>
-<tr class="separator:a5d95e4dbf362c8c567f9df225344f0c9 inherit pub_methods_classunify_1_1Exception"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ac5f06533269c9ed24b38d7efa05d3f7e" id="r_ac5f06533269c9ed24b38d7efa05d3f7e"><td class="memItemLeft" align="right" valign="top"><a id="ac5f06533269c9ed24b38d7efa05d3f7e" name="ac5f06533269c9ed24b38d7efa05d3f7e"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<b>Near</b>
+, <b>Far</b>
+, <b>Left</b>
+, <b>Right</b>
+, <br />
+&#160;&#160;<b>Top</b>
+, <b>Bottom</b>
+, <b>Count</b>
+<br />
+ }</td></tr>
+<tr class="separator:ac5f06533269c9ed24b38d7efa05d3f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An exception for a failed type cast. </p>
+<div class="textblock"><p>Enumeration of the planes of a frustum. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>unify/<a class="el" href="BadCast_8h_source.html">BadCast.h</a></li>
+<li>unify/<a class="el" href="Frustum_8h_source.html">Frustum.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

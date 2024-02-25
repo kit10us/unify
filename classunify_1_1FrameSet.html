@@ -85,7 +85,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A set of matrices, and connectivity between these matrices, used for mesh animations.  
+<p>A set of matrices, and connectivity between those matrices, used for mesh animations.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="FrameSet_8h_source.html">FrameSet.h</a>&gt;</code></p>
@@ -99,27 +99,35 @@ Classes</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae6d524e1cb2cfd1481f239969c4265d9" id="r_ae6d524e1cb2cfd1481f239969c4265d9"><td class="memItemLeft" align="right" valign="top"><a id="ae6d524e1cb2cfd1481f239969c4265d9" name="ae6d524e1cb2cfd1481f239969c4265d9"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>Add</b> (<a class="el" href="classunify_1_1Matrix.html">Matrix</a> model, size_t parent, std::string name=std::string())</td></tr>
+<tr class="memdesc:ae6d524e1cb2cfd1481f239969c4265d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a matrix with a specified index. <br /></td></tr>
 <tr class="separator:ae6d524e1cb2cfd1481f239969c4265d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b0a8de03ed0c26200d94cac221705c5" id="r_a2b0a8de03ed0c26200d94cac221705c5"><td class="memItemLeft" align="right" valign="top"><a id="a2b0a8de03ed0c26200d94cac221705c5" name="a2b0a8de03ed0c26200d94cac221705c5"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>Exists</b> (std::string name) const</td></tr>
+<tr class="memdesc:a2b0a8de03ed0c26200d94cac221705c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a matrix exists in our hierarchy. Use before calling other functions that reference frames by index to prevent failures. <br /></td></tr>
 <tr class="separator:a2b0a8de03ed0c26200d94cac221705c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3758006f03037127ac6499ab83107058" id="r_a3758006f03037127ac6499ab83107058"><td class="memItemLeft" align="right" valign="top"><a id="a3758006f03037127ac6499ab83107058" name="a3758006f03037127ac6499ab83107058"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>Find</b> (std::string name) const</td></tr>
+<tr class="memdesc:a3758006f03037127ac6499ab83107058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index of a frame by its name. <br /></td></tr>
 <tr class="separator:a3758006f03037127ac6499ab83107058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9670dfaa272f3ca54bcf9da4a8ba4ddf" id="r_a9670dfaa272f3ca54bcf9da4a8ba4ddf"><td class="memItemLeft" align="right" valign="top"><a id="a9670dfaa272f3ca54bcf9da4a8ba4ddf" name="a9670dfaa272f3ca54bcf9da4a8ba4ddf"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>Count</b> () const</td></tr>
+<tr class="memdesc:a9670dfaa272f3ca54bcf9da4a8ba4ddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the count of frames in our hierarchy. <br /></td></tr>
 <tr class="separator:a9670dfaa272f3ca54bcf9da4a8ba4ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2eb8ec90d296621e728eca948aea852d" id="r_a2eb8ec90d296621e728eca948aea852d"><td class="memItemLeft" align="right" valign="top"><a id="a2eb8ec90d296621e728eca948aea852d" name="a2eb8ec90d296621e728eca948aea852d"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Name</b> (size_t index) const</td></tr>
+<tr class="memdesc:a2eb8ec90d296621e728eca948aea852d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of a frame at a given index. <br /></td></tr>
 <tr class="separator:a2eb8ec90d296621e728eca948aea852d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff9f20192e2bb9d6f44a76e5436bd5cb" id="r_aff9f20192e2bb9d6f44a76e5436bd5cb"><td class="memItemLeft" align="right" valign="top"><a id="aff9f20192e2bb9d6f44a76e5436bd5cb" name="aff9f20192e2bb9d6f44a76e5436bd5cb"></a>
 const <a class="el" href="classunify_1_1Matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Model</b> (size_t index) const</td></tr>
+<tr class="memdesc:aff9f20192e2bb9d6f44a76e5436bd5cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the model matrix for a given frame. <br /></td></tr>
 <tr class="separator:aff9f20192e2bb9d6f44a76e5436bd5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e433879fd9af43e2289a2ff3da39e44" id="r_a9e433879fd9af43e2289a2ff3da39e44"><td class="memItemLeft" align="right" valign="top"><a id="a9e433879fd9af43e2289a2ff3da39e44" name="a9e433879fd9af43e2289a2ff3da39e44"></a>
 const <a class="el" href="classunify_1_1Matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Local</b> (size_t index) const</td></tr>
+<tr class="memdesc:a9e433879fd9af43e2289a2ff3da39e44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the local matrix for a given frame. <br /></td></tr>
 <tr class="separator:a9e433879fd9af43e2289a2ff3da39e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8cc75a04dd29fe2f36eca67fe4faf29" id="r_ac8cc75a04dd29fe2f36eca67fe4faf29"><td class="memItemLeft" align="right" valign="top"><a id="ac8cc75a04dd29fe2f36eca67fe4faf29" name="ac8cc75a04dd29fe2f36eca67fe4faf29"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ForEach</b> (<a class="el" href="classunify_1_1FrameSet_1_1ForEachFunctor.html">ForEachFunctor</a> &amp;functor) const</td></tr>
+<tr class="memdesc:ac8cc75a04dd29fe2f36eca67fe4faf29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes a function against all frames. <br /></td></tr>
 <tr class="separator:ac8cc75a04dd29fe2f36eca67fe4faf29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
@@ -129,7 +137,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>FrameSetInstance</b>
 <tr class="separator:a8652a0dd28f634b96bc6d15df08df7b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A set of matrices, and connectivity between these matrices, used for mesh animations. </p>
+<div class="textblock"><p>A set of matrices, and connectivity between those matrices, used for mesh animations. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>unify/<a class="el" href="FrameSet_8h_source.html">FrameSet.h</a></li>
 <li>unify/<b>FrameSet.cpp</b></li>

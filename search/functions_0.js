@@ -1,7 +1,7 @@
 var searchData=
 [
   ['absolute_0',['Absolute',['../classunify_1_1V2.html#a9971f4b1032accf0bc24e4203d2080af',1,'unify::V2']]],
-  ['add_1',['Add',['../classunify_1_1Lookup.html#a270cd93d84f323c093f3ef2d120ac8cf',1,'unify::Lookup']]],
+  ['add_1',['Add',['../classunify_1_1BRectangle.html#a21458ababb9f44960d99e7e04fcaaa4f',1,'unify::BRectangle::Add(const V2&lt; T &gt; &amp;point)'],['../classunify_1_1BRectangle.html#a6c36badc93b222c0500c672893244f4e',1,'unify::BRectangle::Add(const BRectangle&lt; T &gt; &amp;boundingRectangle)'],['../classunify_1_1FrameSet.html#ae6d524e1cb2cfd1481f239969c4265d9',1,'unify::FrameSet::Add()'],['../classunify_1_1Lookup.html#a270cd93d84f323c093f3ef2d120ac8cf',1,'unify::Lookup::Add()']]],
   ['addbboxwithposition_2',['AddBBoxWithPosition',['../classunify_1_1BBox.html#ab8c4c9eef96286916ecdc6edd25936d1',1,'unify::BBox']]],
   ['addpoints_3',['AddPoints',['../classunify_1_1BBox.html#a3066fbf75b33560e3afae7e9d223cabb',1,'unify::BBox']]],
   ['angle_4',['Angle',['../classunify_1_1Angle.html#aca3c6e1519b40835d31736430ca082a9',1,'unify::Angle::Angle()'],['../classunify_1_1Angle.html#a1f7c46281e5d0d4d81db44e0f00071b2',1,'unify::Angle::Angle(const Angle &amp;angle)'],['../classunify_1_1Angle.html#a9e9bb3e2a8a93eee10c3a80f94ae4c25',1,'unify::Angle::Angle(std::string angle)'],['../classunify_1_1V2.html#ad11226ae1747d5908f199ea45ece6e6a',1,'unify::V2::Angle()']]],

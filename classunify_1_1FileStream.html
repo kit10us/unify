@@ -83,7 +83,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Perform stream operation on a file source.  
+<p>Perform stream operation on a file.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="FStream_8h_source.html">FStream.h</a>&gt;</code></p>
@@ -101,27 +101,37 @@ Inheritance diagram for unify::FileStream:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abc903dfb8b3dbc4a687c961c4f4258e6" id="r_abc903dfb8b3dbc4a687c961c4f4258e6"><td class="memItemLeft" align="right" valign="top"><a id="abc903dfb8b3dbc4a687c961c4f4258e6" name="abc903dfb8b3dbc4a687c961c4f4258e6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Open</b> (<a class="el" href="namespaceunify.html#a5c97e638d26eea5413e8708b15af2417">StreamAccessType</a> access, <a class="el" href="classunify_1_1Path.html">unify::Path</a> path)</td></tr>
+<tr class="memdesc:abc903dfb8b3dbc4a687c961c4f4258e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a stream at a specified path. <br /></td></tr>
 <tr class="separator:abc903dfb8b3dbc4a687c961c4f4258e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66a22e08429d6489442c9a9b845c1e85" id="r_a66a22e08429d6489442c9a9b845c1e85"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66a22e08429d6489442c9a9b845c1e85">Close</a> () override</td></tr>
+<tr class="memdesc:a66a22e08429d6489442c9a9b845c1e85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the stream.  <br /></td></tr>
 <tr class="separator:a66a22e08429d6489442c9a9b845c1e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d23bc20a1194a9c875824d14af34140" id="r_a1d23bc20a1194a9c875824d14af34140"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d23bc20a1194a9c875824d14af34140">Read</a> (void *pDest, unsigned int uLength) override</td></tr>
-<tr class="separator:a1d23bc20a1194a9c875824d14af34140"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a739d2bcfc548a9a1d444183dcc54394a" id="r_a739d2bcfc548a9a1d444183dcc54394a"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a739d2bcfc548a9a1d444183dcc54394a">ReadPack</a> (void *pDest, unsigned int uLength) override</td></tr>
-<tr class="separator:a739d2bcfc548a9a1d444183dcc54394a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a074cccdda4d46d5be1c80e78a3648222" id="r_a074cccdda4d46d5be1c80e78a3648222"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a074cccdda4d46d5be1c80e78a3648222">Write</a> (const void *pSrc, unsigned int uLength) override</td></tr>
-<tr class="separator:a074cccdda4d46d5be1c80e78a3648222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a791411e71ee9bad44918fd4b73fccdf0" id="r_a791411e71ee9bad44918fd4b73fccdf0"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a791411e71ee9bad44918fd4b73fccdf0">Read</a> (void *pDest, unsigned int length) override</td></tr>
+<tr class="memdesc:a791411e71ee9bad44918fd4b73fccdf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from the stream.  <br /></td></tr>
+<tr class="separator:a791411e71ee9bad44918fd4b73fccdf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9b081654fab8fccb9b15a763bbb9cae" id="r_af9b081654fab8fccb9b15a763bbb9cae"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9b081654fab8fccb9b15a763bbb9cae">ReadPack</a> (void *dest, unsigned int length) override</td></tr>
+<tr class="memdesc:af9b081654fab8fccb9b15a763bbb9cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a string of characters to and including the first NULL (or until the MaxLength-1 is reached) Note that this may include a '\r' cariage return.  <br /></td></tr>
+<tr class="separator:af9b081654fab8fccb9b15a763bbb9cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60d299587e73c2041100d00e7e03ca6c" id="r_a60d299587e73c2041100d00e7e03ca6c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60d299587e73c2041100d00e7e03ca6c">Write</a> (const void *source, unsigned int length) override</td></tr>
+<tr class="memdesc:a60d299587e73c2041100d00e7e03ca6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write to the stream.  <br /></td></tr>
+<tr class="separator:a60d299587e73c2041100d00e7e03ca6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15ebd83c13e275ca8779f591eb85ad14" id="r_a15ebd83c13e275ca8779f591eb85ad14"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15ebd83c13e275ca8779f591eb85ad14">WritePack</a> (const void *pSrc) override</td></tr>
+<tr class="memdesc:a15ebd83c13e275ca8779f591eb85ad14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a null terminated string to the stream...  <br /></td></tr>
 <tr class="separator:a15ebd83c13e275ca8779f591eb85ad14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a018840da7e3b7dcdd50e66e86b41ce99" id="r_a018840da7e3b7dcdd50e66e86b41ce99"><td class="memItemLeft" align="right" valign="top"><a id="a018840da7e3b7dcdd50e66e86b41ce99" name="a018840da7e3b7dcdd50e66e86b41ce99"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (std::string out)</td></tr>
+<tr class="memdesc:a018840da7e3b7dcdd50e66e86b41ce99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a string to the stream. <br /></td></tr>
 <tr class="separator:a018840da7e3b7dcdd50e66e86b41ce99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab14a7efbbc77ffb100f2d7eebacafcf9" id="r_ab14a7efbbc77ffb100f2d7eebacafcf9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab14a7efbbc77ffb100f2d7eebacafcf9">Seek</a> (<a class="el" href="namespaceunify.html#a384b8275876d58563e0ed7a141823264">StreamSeekType</a> seek, int iOffset=0) override</td></tr>
-<tr class="separator:ab14a7efbbc77ffb100f2d7eebacafcf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cae93432c3815b7437a395fdc345227" id="r_a4cae93432c3815b7437a395fdc345227"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cae93432c3815b7437a395fdc345227">Seek</a> (<a class="el" href="namespaceunify.html#a384b8275876d58563e0ed7a141823264">StreamSeekType</a> seek, int offset=0) override</td></tr>
+<tr class="memdesc:a4cae93432c3815b7437a395fdc345227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seek to a position in the stream.  <br /></td></tr>
+<tr class="separator:a4cae93432c3815b7437a395fdc345227"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a394332d7b8c17761c66db532b0a32b05" id="r_a394332d7b8c17761c66db532b0a32b05"><td class="memItemLeft" align="right" valign="top"><a id="a394332d7b8c17761c66db532b0a32b05" name="a394332d7b8c17761c66db532b0a32b05"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>Pos</b> (fpos_t &amp;pos)</td></tr>
+<tr class="memdesc:a394332d7b8c17761c66db532b0a32b05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns our position within the stream. <br /></td></tr>
 <tr class="separator:a394332d7b8c17761c66db532b0a32b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadc01e6ad4eb715861e1a815a8c4dd89" id="r_aadc01e6ad4eb715861e1a815a8c4dd89"><td class="memItemLeft" align="right" valign="top"><a id="aadc01e6ad4eb715861e1a815a8c4dd89" name="aadc01e6ad4eb715861e1a815a8c4dd89"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetPosition</b> (fpos_t &amp;pos)</td></tr>
+<tr class="memdesc:aadc01e6ad4eb715861e1a815a8c4dd89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set our position within a stream. <br /></td></tr>
 <tr class="separator:aadc01e6ad4eb715861e1a815a8c4dd89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classunify_1_1Stream"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classunify_1_1Stream')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classunify_1_1Stream.html">unify::Stream</a></td></tr>
 <tr class="memitem:aeefeff1dd2a436a0e2273469ab1dfd39 inherit pub_methods_classunify_1_1Stream" id="r_aeefeff1dd2a436a0e2273469ab1dfd39"><td class="memItemLeft" align="right" valign="top">
@@ -166,7 +176,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isOpen</b></td></tr
 <tr class="separator:a2223a7a358f03467c608b931e8e17a8a inherit pro_attribs_classunify_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Perform stream operation on a file source. </p>
+<div class="textblock"><p>Perform stream operation on a file. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a66a22e08429d6489442c9a9b845c1e85" name="a66a22e08429d6489442c9a9b845c1e85"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a66a22e08429d6489442c9a9b845c1e85">&#9670;&#160;</a></span>Close()</h2>
@@ -191,12 +201,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isOpen</b></td></tr
 </table>
 </div><div class="memdoc">
 
+<p>Close the stream. </p>
+
 <p>Reimplemented from <a class="el" href="classunify_1_1Stream.html">unify::Stream</a>.</p>
 
 </div>
 </div>
-<a id="a1d23bc20a1194a9c875824d14af34140" name="a1d23bc20a1194a9c875824d14af34140"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d23bc20a1194a9c875824d14af34140">&#9670;&#160;</a></span>Read()</h2>
+<a id="a791411e71ee9bad44918fd4b73fccdf0" name="a791411e71ee9bad44918fd4b73fccdf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a791411e71ee9bad44918fd4b73fccdf0">&#9670;&#160;</a></span>Read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -212,7 +224,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isOpen</b></td></tr
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>uLength</em></span>&#160;)</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -222,12 +234,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isOpen</b></td></tr
 </table>
 </div><div class="memdoc">
 
+<p>Read from the stream. </p>
+
 <p>Reimplemented from <a class="el" href="classunify_1_1Stream.html">unify::Stream</a>.</p>
 
 </div>
 </div>
-<a id="a739d2bcfc548a9a1d444183dcc54394a" name="a739d2bcfc548a9a1d444183dcc54394a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a739d2bcfc548a9a1d444183dcc54394a">&#9670;&#160;</a></span>ReadPack()</h2>
+<a id="af9b081654fab8fccb9b15a763bbb9cae" name="af9b081654fab8fccb9b15a763bbb9cae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9b081654fab8fccb9b15a763bbb9cae">&#9670;&#160;</a></span>ReadPack()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -238,12 +252,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isOpen</b></td></tr
         <tr>
           <td class="memname">unsigned int FileStream::ReadPack </td>
           <td>(</td>
-          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>pDest</em>, </span></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>dest</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>uLength</em></span>&#160;)</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -253,12 +267,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isOpen</b></td></tr
 </table>
 </div><div class="memdoc">
 
+<p>Read a string of characters to and including the first NULL (or until the MaxLength-1 is reached) Note that this may include a '\r' cariage return. </p>
+
 <p>Reimplemented from <a class="el" href="classunify_1_1Stream.html">unify::Stream</a>.</p>
 
 </div>
 </div>
-<a id="ab14a7efbbc77ffb100f2d7eebacafcf9" name="ab14a7efbbc77ffb100f2d7eebacafcf9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab14a7efbbc77ffb100f2d7eebacafcf9">&#9670;&#160;</a></span>Seek()</h2>
+<a id="a4cae93432c3815b7437a395fdc345227" name="a4cae93432c3815b7437a395fdc345227"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cae93432c3815b7437a395fdc345227">&#9670;&#160;</a></span>Seek()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,7 +290,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isOpen</b></td></tr
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>iOffset</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>offset</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -284,12 +300,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isOpen</b></td></tr
 </table>
 </div><div class="memdoc">
 
+<p>Seek to a position in the stream. </p>
+
 <p>Reimplemented from <a class="el" href="classunify_1_1Stream.html">unify::Stream</a>.</p>
 
 </div>
 </div>
-<a id="a074cccdda4d46d5be1c80e78a3648222" name="a074cccdda4d46d5be1c80e78a3648222"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a074cccdda4d46d5be1c80e78a3648222">&#9670;&#160;</a></span>Write()</h2>
+<a id="a60d299587e73c2041100d00e7e03ca6c" name="a60d299587e73c2041100d00e7e03ca6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60d299587e73c2041100d00e7e03ca6c">&#9670;&#160;</a></span>Write()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -300,12 +318,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isOpen</b></td></tr
         <tr>
           <td class="memname">void FileStream::Write </td>
           <td>(</td>
-          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>pSrc</em>, </span></td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>source</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>uLength</em></span>&#160;)</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -314,6 +332,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isOpen</b></td></tr
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Write to the stream. </p>
 
 <p>Reimplemented from <a class="el" href="classunify_1_1Stream.html">unify::Stream</a>.</p>
 
@@ -341,6 +361,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isOpen</b></td></tr
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Write a null terminated string to the stream... </p>
 
 <p>Reimplemented from <a class="el" href="classunify_1_1Stream.html">unify::Stream</a>.</p>
 
