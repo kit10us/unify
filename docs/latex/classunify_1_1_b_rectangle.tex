@@ -12,49 +12,93 @@ A 2D bounding rectangle.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classunify_1_1_b_rectangle_ae15566378b7ca112d8621e41b648250f}\label{classunify_1_1_b_rectangle_ae15566378b7ca112d8621e41b648250f} 
-{\bfseries BRectangle} (const \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ T $>$ \&inf, const \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ T $>$ \&sup)
+\mbox{\hyperlink{classunify_1_1_b_rectangle_acb34d574e5c08f8752402d52f6229a25}{BRectangle}} ()
 \item 
-\Hypertarget{classunify_1_1_b_rectangle_a52da532c0b3d4d03bd6f8e8e062be884}\label{classunify_1_1_b_rectangle_a52da532c0b3d4d03bd6f8e8e062be884} 
-\mbox{\hyperlink{classunify_1_1_b_rectangle}{BRectangle}}$<$ T $>$ {\bfseries operator\texorpdfstring{$\ast$}{*}} (const \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ T $>$ \&muliplcand)
+\mbox{\hyperlink{classunify_1_1_b_rectangle_ae15566378b7ca112d8621e41b648250f}{BRectangle}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \&\mbox{\hyperlink{classunify_1_1_b_rectangle_ad3a2763c47afecb8b1267fa48937f1ac}{inf}}, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \&\mbox{\hyperlink{classunify_1_1_b_rectangle_a1d01061ac1687970fc21b2d25939dc47}{sup}})
 \item 
-void \mbox{\hyperlink{classunify_1_1_b_rectangle_ada840716f0b5ac6dc92b203e9d519f67}{Generate\+Corners}} (\mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ T $>$ \texorpdfstring{$\ast$}{*}bounds)
+\mbox{\hyperlink{classunify_1_1_b_rectangle}{BRectangle}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \mbox{\hyperlink{classunify_1_1_b_rectangle_a52da532c0b3d4d03bd6f8e8e062be884}{operator\texorpdfstring{$\ast$}{*}}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{muliplcand}})
+\item 
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} \mbox{\hyperlink{classunify_1_1_b_rectangle_ada840716f0b5ac6dc92b203e9d519f67}{Generate\+Corners}} (\mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bounds}})
 \begin{DoxyCompactList}\small\item\em Generate a square from specified bounding corners. \end{DoxyCompactList}\item 
-\Hypertarget{classunify_1_1_b_rectangle_a21458ababb9f44960d99e7e04fcaaa4f}\label{classunify_1_1_b_rectangle_a21458ababb9f44960d99e7e04fcaaa4f} 
-void {\bfseries Add} (const \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ T $>$ \&point)
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} \mbox{\hyperlink{classunify_1_1_b_rectangle_a21458ababb9f44960d99e7e04fcaaa4f}{Add}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{point}})
 \begin{DoxyCompactList}\small\item\em Given a point, if that point is beyond our current bounds, increase our bounds to encompass it. \end{DoxyCompactList}\item 
-\Hypertarget{classunify_1_1_b_rectangle_a6c36badc93b222c0500c672893244f4e}\label{classunify_1_1_b_rectangle_a6c36badc93b222c0500c672893244f4e} 
-\mbox{\hyperlink{classunify_1_1_b_rectangle}{BRectangle}} \& {\bfseries Add} (const \mbox{\hyperlink{classunify_1_1_b_rectangle}{BRectangle}}$<$ T $>$ \&bounding\+Rectangle)
+\mbox{\hyperlink{classunify_1_1_b_rectangle}{BRectangle}} \& \mbox{\hyperlink{classunify_1_1_b_rectangle_a6c36badc93b222c0500c672893244f4e}{Add}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_b_rectangle}{BRectangle}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bounding\+Rectangle}})
 \begin{DoxyCompactList}\small\item\em Given a bounding rectangle, if that bounding square is beyond our current bounds, increase our bounds to encompass it. \end{DoxyCompactList}\item 
-\Hypertarget{classunify_1_1_b_rectangle_af3f61f2edd92819510534f3af2de36a8}\label{classunify_1_1_b_rectangle_af3f61f2edd92819510534f3af2de36a8} 
-bool {\bfseries Contains} (const \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ T $>$ \&point)
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} \mbox{\hyperlink{classunify_1_1_b_rectangle_af3f61f2edd92819510534f3af2de36a8}{Contains}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{point}})
 \begin{DoxyCompactList}\small\item\em Returns true if a point is within our bounding rectangle. \end{DoxyCompactList}\item 
-\Hypertarget{classunify_1_1_b_rectangle_a595780c09f4dfb4020422f87ecb58ceb}\label{classunify_1_1_b_rectangle_a595780c09f4dfb4020422f87ecb58ceb} 
-const \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ T $>$ {\bfseries Size} ()
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \mbox{\hyperlink{classunify_1_1_b_rectangle_a595780c09f4dfb4020422f87ecb58ceb}{Size}} ()
 \begin{DoxyCompactList}\small\item\em Returns the size of the rectangle. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classunify_1_1_b_rectangle_a1d01061ac1687970fc21b2d25939dc47}\label{classunify_1_1_b_rectangle_a1d01061ac1687970fc21b2d25939dc47} 
-\mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ T $>$ {\bfseries sup}
+\mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \mbox{\hyperlink{classunify_1_1_b_rectangle_a1d01061ac1687970fc21b2d25939dc47}{sup}}
 \item 
-\Hypertarget{classunify_1_1_b_rectangle_ad3a2763c47afecb8b1267fa48937f1ac}\label{classunify_1_1_b_rectangle_ad3a2763c47afecb8b1267fa48937f1ac} 
-\mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ T $>$ {\bfseries inf}
+\mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \mbox{\hyperlink{classunify_1_1_b_rectangle_ad3a2763c47afecb8b1267fa48937f1ac}{inf}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\subsubsection*{template$<$typename T$>$\newline
+\subsubsection*{template$<$\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typename}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}$>$\newline
 class unify\+::\+BRectangle$<$ T $>$}
 A 2D bounding rectangle. 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classunify_1_1_b_rectangle_acb34d574e5c08f8752402d52f6229a25}\label{classunify_1_1_b_rectangle_acb34d574e5c08f8752402d52f6229a25} 
+\index{unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}!BRectangle@{BRectangle}}
+\index{BRectangle@{BRectangle}!unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{BRectangle()}{BRectangle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typename}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \\
+\mbox{\hyperlink{classunify_1_1_b_rectangle}{unify\+::\+BRectangle}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$\+::\+BRectangle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_b_rectangle_ae15566378b7ca112d8621e41b648250f}\label{classunify_1_1_b_rectangle_ae15566378b7ca112d8621e41b648250f} 
+\index{unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}!BRectangle@{BRectangle}}
+\index{BRectangle@{BRectangle}!unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{BRectangle()}{BRectangle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typename}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \\
+\mbox{\hyperlink{classunify_1_1_b_rectangle}{unify\+::\+BRectangle}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$\+::\+BRectangle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \&}]{inf,  }\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \&}]{sup }\end{DoxyParamCaption})}
+
+
+
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classunify_1_1_b_rectangle_a6c36badc93b222c0500c672893244f4e}\label{classunify_1_1_b_rectangle_a6c36badc93b222c0500c672893244f4e} 
+\index{unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typename}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \\
+\mbox{\hyperlink{classunify_1_1_b_rectangle}{unify\+::\+BRectangle}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \& \mbox{\hyperlink{classunify_1_1_b_rectangle}{unify\+::\+BRectangle}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$\+::\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_b_rectangle}{BRectangle}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \&}]{bounding\+Rectangle }\end{DoxyParamCaption})}
+
+
+
+Given a bounding rectangle, if that bounding square is beyond our current bounds, increase our bounds to encompass it. 
+
+\Hypertarget{classunify_1_1_b_rectangle_a21458ababb9f44960d99e7e04fcaaa4f}\label{classunify_1_1_b_rectangle_a21458ababb9f44960d99e7e04fcaaa4f} 
+\index{unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typename}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \\
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} \mbox{\hyperlink{classunify_1_1_b_rectangle}{unify\+::\+BRectangle}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$\+::\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \&}]{point }\end{DoxyParamCaption})}
+
+
+
+Given a point, if that point is beyond our current bounds, increase our bounds to encompass it. 
+
+\Hypertarget{classunify_1_1_b_rectangle_af3f61f2edd92819510534f3af2de36a8}\label{classunify_1_1_b_rectangle_af3f61f2edd92819510534f3af2de36a8} 
+\index{unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}!Contains@{Contains}}
+\index{Contains@{Contains}!unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Contains()}{Contains()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typename}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \\
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} BRectangle\+::\+Contains (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \&}]{point }\end{DoxyParamCaption})}
+
+
+
+Returns true if a point is within our bounding rectangle. 
+
 \Hypertarget{classunify_1_1_b_rectangle_ada840716f0b5ac6dc92b203e9d519f67}\label{classunify_1_1_b_rectangle_ada840716f0b5ac6dc92b203e9d519f67} 
 \index{unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}!GenerateCorners@{GenerateCorners}}
 \index{GenerateCorners@{GenerateCorners}!unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{GenerateCorners()}{GenerateCorners()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-void BRectangle\+::\+Generate\+Corners (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classunify_1_1_v2}{unify\+::\+V2}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{bounds }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typename}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \\
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} BRectangle\+::\+Generate\+Corners (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classunify_1_1_v2}{unify\+::\+V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \texorpdfstring{$\ast$}{*}}]{bounds }\end{DoxyParamCaption})}
 
 
 
@@ -65,9 +109,44 @@ Generate a square from specified bounding corners.
 {\em bounds} & \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classunify_1_1_b_rectangle_a52da532c0b3d4d03bd6f8e8e062be884}\label{classunify_1_1_b_rectangle_a52da532c0b3d4d03bd6f8e8e062be884} 
+\index{unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typename}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \\
+\mbox{\hyperlink{classunify_1_1_b_rectangle}{unify\+::\+BRectangle}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \mbox{\hyperlink{classunify_1_1_b_rectangle}{unify\+::\+BRectangle}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{\+::operator}}\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \&}]{muliplcand }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_b_rectangle_a595780c09f4dfb4020422f87ecb58ceb}\label{classunify_1_1_b_rectangle_a595780c09f4dfb4020422f87ecb58ceb} 
+\index{unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}!Size@{Size}}
+\index{Size@{Size}!unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typename}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \\
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v2}{unify\+::\+V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \mbox{\hyperlink{classunify_1_1_b_rectangle}{unify\+::\+BRectangle}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the size of the rectangle. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classunify_1_1_b_rectangle_ad3a2763c47afecb8b1267fa48937f1ac}\label{classunify_1_1_b_rectangle_ad3a2763c47afecb8b1267fa48937f1ac} 
+\index{unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}!inf@{inf}}
+\index{inf@{inf}!unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{inf}{inf}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typename}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \\
+\mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \mbox{\hyperlink{classunify_1_1_b_rectangle}{unify\+::\+BRectangle}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$\+::inf}
+
+\Hypertarget{classunify_1_1_b_rectangle_a1d01061ac1687970fc21b2d25939dc47}\label{classunify_1_1_b_rectangle_a1d01061ac1687970fc21b2d25939dc47} 
+\index{unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}!sup@{sup}}
+\index{sup@{sup}!unify::BRectangle$<$ T $>$@{unify::BRectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sup}{sup}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typename}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \\
+\mbox{\hyperlink{classunify_1_1_v2}{V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$ \mbox{\hyperlink{classunify_1_1_b_rectangle}{unify\+::\+BRectangle}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}} $>$\+::sup}
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-unify/BRectangle.\+h\item 
-unify/BRectangle.\+inl\end{DoxyCompactItemize}
+unify/\mbox{\hyperlink{_b_rectangle_8h}{BRectangle.\+h}}\item 
+unify/\mbox{\hyperlink{_b_rectangle_8inl}{BRectangle.\+inl}}\end{DoxyCompactItemize}

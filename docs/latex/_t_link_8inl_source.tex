@@ -1,6 +1,6 @@
 \doxysection{TLink.\+inl}
 \hypertarget{_t_link_8inl_source}{}\label{_t_link_8inl_source}\index{unify/TLink.inl@{unify/TLink.inl}}
-
+\mbox{\hyperlink{_t_link_8inl}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
@@ -27,7 +27,7 @@
 \DoxyCodeLine{00024\ \textcolor{comment}{//\ TLink}}
 \DoxyCodeLine{00026\ }
 \DoxyCodeLine{00027\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00028\ TLink<\ T\ >::TLink()}
+\DoxyCodeLine{00028\ \mbox{\hyperlink{classunify_1_1_t_link}{TLink<\ T\ >::TLink}}()}
 \DoxyCodeLine{00029\ \ \ \ \ :\ m\_item\{\ nullptr\ \}}
 \DoxyCodeLine{00030\ \ \ \ \ ,\ m\_previous\{\ nullptr\ \}}
 \DoxyCodeLine{00031\ \ \ \ \ ,\ m\_next\{\ nullptr\ \}}
@@ -35,16 +35,16 @@
 \DoxyCodeLine{00033\ \}}
 \DoxyCodeLine{00034\ }
 \DoxyCodeLine{00035\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00036\ TLink<\ T\ >::TLink(\ T\ *\ item,\ std::string\ name\ )}
-\DoxyCodeLine{00037\ \ \ \ \ :\ m\_item\{\ item\ \}}
+\DoxyCodeLine{00036\ \mbox{\hyperlink{classunify_1_1_t_link_af5ddf004178c9a0d820213d578261a27}{TLink<\ T\ >::TLink}}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{item}},\ std::string\ name\ )}
+\DoxyCodeLine{00037\ \ \ \ \ :\ m\_item\{\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{item}}\ \}}
 \DoxyCodeLine{00038\ \ \ \ \ ,\ m\_name\{\ name\ \}}
-\DoxyCodeLine{00039\ \ \ \ \ ,\ m\_previous\{\ nullptr\ \}}
-\DoxyCodeLine{00040\ \ \ \ \ ,\ m\_next\{\ nullptr\ \}}
+\DoxyCodeLine{00039\ \ \ \ \ ,\ m\_previous\{\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{nullptr}}\ \}}
+\DoxyCodeLine{00040\ \ \ \ \ ,\ m\_next\{\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{nullptr}}\ \}}
 \DoxyCodeLine{00041\ \{}
 \DoxyCodeLine{00042\ \}}
 \DoxyCodeLine{00043\ }
 \DoxyCodeLine{00044\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00045\ TLink<\ T\ >::\string~TLink()}
+\DoxyCodeLine{00045\ \mbox{\hyperlink{classunify_1_1_t_link_aa22a34d780e454d276beea7020c7549a}{TLink<\ T\ >::\string~TLink}}()}
 \DoxyCodeLine{00046\ \{}
 \DoxyCodeLine{00047\ \ \ \ \ m\_item\ =\ \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{00048\ \ \ \ \ m\_previous\ =\ \textcolor{keyword}{nullptr};}
@@ -52,37 +52,37 @@
 \DoxyCodeLine{00050\ \}}
 \DoxyCodeLine{00051\ }
 \DoxyCodeLine{00052\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00053\ std::string\ TLink<\ T\ >::Name()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00053\ std::string\ \mbox{\hyperlink{classunify_1_1_t_link_a04add6622c647c5fb350a691a846b9a2}{TLink<\ T\ >::Name}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00054\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_name;}
 \DoxyCodeLine{00056\ \}}
 \DoxyCodeLine{00057\ }
 \DoxyCodeLine{00058\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00059\ T\ *\ TLink<\ T\ >::Item()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00059\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ *\ \mbox{\hyperlink{classunify_1_1_t_link_ae1b93b6f8e15309faf35f5495152bbb3}{TLink<\ T\ >::Item}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00060\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_item.get();}
 \DoxyCodeLine{00062\ \}}
 \DoxyCodeLine{00063\ }
 \DoxyCodeLine{00064\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00065\ TLink<\ T\ >\ *\ TLink<\ T\ >::Previous()}
+\DoxyCodeLine{00065\ \mbox{\hyperlink{classunify_1_1_t_link}{TLink<\ T\ >}}\ *\ \mbox{\hyperlink{classunify_1_1_t_link_a89e3865f848b6c129c0cc251e0f26b93}{TLink<\ T\ >::Previous}}()}
 \DoxyCodeLine{00066\ \{}
 \DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_previous;}
 \DoxyCodeLine{00068\ \}}
 \DoxyCodeLine{00069\ }
 \DoxyCodeLine{00070\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00071\ \textcolor{keyword}{const}\ TLink<\ T\ >\ *\ TLink<\ T\ >::Previous()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00071\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_t_link}{TLink<\ T\ >}}\ *\ \mbox{\hyperlink{classunify_1_1_t_link_a89e3865f848b6c129c0cc251e0f26b93}{TLink<\ T\ >::Previous}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00072\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_previous;}
 \DoxyCodeLine{00074\ \}}
 \DoxyCodeLine{00075\ }
 \DoxyCodeLine{00076\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00077\ TLink<\ T\ >\ *\ TLink<\ T\ >::Next()}
+\DoxyCodeLine{00077\ \mbox{\hyperlink{classunify_1_1_t_link}{TLink<\ T\ >}}\ *\ \mbox{\hyperlink{classunify_1_1_t_link_a64eced9ed06346ee224ffc6118186963}{TLink<\ T\ >::Next}}()}
 \DoxyCodeLine{00078\ \{}
 \DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_next;}
 \DoxyCodeLine{00080\ \}}
 \DoxyCodeLine{00081\ }
 \DoxyCodeLine{00082\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00083\ \textcolor{keyword}{const}\ TLink<\ T\ >\ *\ TLink<\ T\ >::Next()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00083\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_t_link}{TLink<\ T\ >}}\ *\ \mbox{\hyperlink{classunify_1_1_t_link_a64eced9ed06346ee224ffc6118186963}{TLink<\ T\ >::Next}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00084\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_next;}
 \DoxyCodeLine{00086\ \}}

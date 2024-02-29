@@ -1,6 +1,6 @@
 \doxysection{Range.\+h}
 \hypertarget{_range_8h_source}{}\label{_range_8h_source}\index{unify/Range.h@{unify/Range.h}}
-
+\mbox{\hyperlink{_range_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
@@ -26,8 +26,8 @@
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
-\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <unify/String.h>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_unify_8h}{unify/Unify.h}}>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_string_8h}{unify/String.h}}>}}
 \DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <algorithm>}}
 \DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <cassert>}}
 \DoxyCodeLine{00029\ }
@@ -37,30 +37,30 @@
 \DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_range}{Range}}}
 \DoxyCodeLine{00034\ \ \ \ \ \{}
 \DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_range}{Range}}();}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_range}{Range}}(\ T\ min,\ T\ max\ );}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_range}{Range}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_range}{Range}}\ \&\ range\ );}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classunify_1_1_range}{Range}}(\ std::string\ text\ );}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_range_aa4407a93074fbb726deb613f7a067983}{Range}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_range_aa4407a93074fbb726deb613f7a067983}{Range}}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{min}},\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{max}}\ );}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_range_aa4407a93074fbb726deb613f7a067983}{Range}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_range}{Range}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{range}}\ );}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classunify_1_1_range_aa4407a93074fbb726deb613f7a067983}{Range}}(\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
 \DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Clear();}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Add(\ T\ value\ );}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsSet()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ T\ Min()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ T\ Max()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_range_a8c12de653b937466af1019d531aa3fba}{Clear}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_range_ad7c0078b9236276a6b085b16f47a41cb}{Add}}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ value\ );}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_range_af5766c038e02b729360b6fb3523dd803}{IsSet}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{classunify_1_1_range_acfcb5be86acd3c592e788695d5afe681}{Min}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{classunify_1_1_range_a55602af1ef9f6928d0bad18eb6d740d7}{Max}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00046\ }
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_range_ab3f6ee8f9d63d88962f0a039cedab248}{IsWithin}}(\ \textcolor{keyword}{const}\ T\ \&\ value\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_range_ab3f6ee8f9d63d88962f0a039cedab248}{IsWithin}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \&\ value\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00051\ }
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_range}{Range}}\ \&\ operator=(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_range}{Range}}\ \&\ range\ );}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator==(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_range}{Range}}\ \&\ range\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator!=(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_range}{Range}}\ \&\ range\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_range}{Range}}\ \&\ \mbox{\hyperlink{classunify_1_1_range_a74c1854d30079e41af2018e532320743}{operator=}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_range}{Range}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{range}}\ );}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_range_a6c1be5bfd525d1ddbe190b9d7b75cb34}{operator==}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_range}{Range}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{range}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_range_a7a3620e9c40906359084d402c3c0cf33}{operator!=}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_range}{Range}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{range}}\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ operator+=(\ \textcolor{keyword}{const}\ T\ value\ );}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_range_a198bde566ad80cebd424a520a391d1d2}{operator+=}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ value\ );}
 \DoxyCodeLine{00057\ }
 \DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_isSet;}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ T\ m\_min,\ m\_max;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ m\_min,\ m\_max;}
 \DoxyCodeLine{00061\ \ \ \ \ \};}
-\DoxyCodeLine{00062\ \textcolor{preprocessor}{\ \ \ \ \#include\ <unify/Range.inl>}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\ \ \ \ \#include\ <\mbox{\hyperlink{_range_8inl}{unify/Range.inl}}>}}
 \DoxyCodeLine{00063\ \}}
 
 \end{DoxyCode}

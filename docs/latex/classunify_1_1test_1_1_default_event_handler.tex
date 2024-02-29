@@ -1,5 +1,9 @@
 \doxysection{unify\+::test\+::Default\+Event\+Handler Class Reference}
 \hypertarget{classunify_1_1test_1_1_default_event_handler}{}\label{classunify_1_1test_1_1_default_event_handler}\index{unify::test::DefaultEventHandler@{unify::test::DefaultEventHandler}}
+
+
+{\ttfamily \#include $<$Default\+Event\+Handlers.\+h$>$}
+
 Inheritance diagram for unify\+::test\+::Default\+Event\+Handler\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,14 +13,30 @@ Inheritance diagram for unify\+::test\+::Default\+Event\+Handler\+:\begin{figure
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \mbox{\hyperlink{classunify_1_1test_1_1_default_event_handler_a4623a8daa4be9a9821ab2c92c415ca73}{Event}} (IOutput\+Handler\+::ptr output, std\+::string name, \mbox{\hyperlink{namespaceunify_1_1test_a45a0260989c730681b7ca362b3add8ca}{Output\+Type}} type)
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{virtual}} \mbox{\hyperlink{classunify_1_1test_1_1_default_event_handler_ac7fbcc8ef342ae4d2db9097ce7b80636}{\texorpdfstring{$\sim$}{\string~}\+Default\+Event\+Handler}} ()
+\item 
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{virtual}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} \mbox{\hyperlink{classunify_1_1test_1_1_default_event_handler_a4623a8daa4be9a9821ab2c92c415ca73}{Event}} (\mbox{\hyperlink{classunify_1_1test_1_1_i_output_handler_afc3644430d736015f97fba9cb2329de5}{IOutput\+Handler\+::ptr}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{output}}, std\+::string name, \mbox{\hyperlink{namespaceunify_1_1test_a45a0260989c730681b7ca362b3add8ca}{Output\+Type}} type)
 \begin{DoxyCompactList}\small\item\em Called when a test event happens. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classunify_1_1test_1_1_i_event_handler}{unify\+::test\+::\+IEvent\+Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{virtual}} \mbox{\hyperlink{classunify_1_1test_1_1_i_event_handler_a913b97939016359ada177f430c7732a6}{\texorpdfstring{$\sim$}{\string~}\+IEvent\+Handler}} ()
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Public Types inherited from \mbox{\hyperlink{classunify_1_1test_1_1_i_event_handler}{unify\+::test\+::\+IEvent\+Handler}}}
 \begin{DoxyCompactItemize}
 \item 
-typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classunify_1_1test_1_1_i_event_handler}{IEvent\+Handler}} $>$ {\bfseries ptr}
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typedef}} std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classunify_1_1test_1_1_i_event_handler}{IEvent\+Handler}} $>$ \mbox{\hyperlink{classunify_1_1test_1_1_i_event_handler_a70a3082c749565672cbad3b107779766}{ptr}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classunify_1_1test_1_1_default_event_handler_ac7fbcc8ef342ae4d2db9097ce7b80636}\label{classunify_1_1test_1_1_default_event_handler_ac7fbcc8ef342ae4d2db9097ce7b80636} 
+\index{unify::test::DefaultEventHandler@{unify::test::DefaultEventHandler}!````~DefaultEventHandler@{\texorpdfstring{$\sim$}{\string~}DefaultEventHandler}}
+\index{````~DefaultEventHandler@{\texorpdfstring{$\sim$}{\string~}DefaultEventHandler}!unify::test::DefaultEventHandler@{unify::test::DefaultEventHandler}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DefaultEventHandler()}{\string~DefaultEventHandler()}}
+{\footnotesize\ttfamily Default\+Event\+Handler\+::\texorpdfstring{$\sim$}{\string~}\+Default\+Event\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -24,7 +44,7 @@ typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classunify_1_1test_1_1_i_even
 \index{unify::test::DefaultEventHandler@{unify::test::DefaultEventHandler}!Event@{Event}}
 \index{Event@{Event}!unify::test::DefaultEventHandler@{unify::test::DefaultEventHandler}}
 \doxysubsubsection{\texorpdfstring{Event()}{Event()}}
-{\footnotesize\ttfamily void Default\+Event\+Handler\+::\+Event (\begin{DoxyParamCaption}\item[{IOutput\+Handler\+::ptr}]{output,  }\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{namespaceunify_1_1test_a45a0260989c730681b7ca362b3add8ca}{Output\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} Default\+Event\+Handler\+::\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classunify_1_1test_1_1_i_output_handler_afc3644430d736015f97fba9cb2329de5}{IOutput\+Handler\+::ptr}}}]{output,  }\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{namespaceunify_1_1test_a45a0260989c730681b7ca362b3add8ca}{Output\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -43,5 +63,5 @@ Implements \mbox{\hyperlink{classunify_1_1test_1_1_i_event_handler_a50abc29aa651
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-unify/test/Default\+Event\+Handlers.\+h\item 
-unify/test/Default\+Event\+Handlers.\+cpp\end{DoxyCompactItemize}
+unify/test/\mbox{\hyperlink{_default_event_handlers_8h}{Default\+Event\+Handlers.\+h}}\item 
+unify/test/\mbox{\hyperlink{_default_event_handlers_8cpp}{Default\+Event\+Handlers.\+cpp}}\end{DoxyCompactItemize}

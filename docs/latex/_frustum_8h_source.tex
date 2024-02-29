@@ -1,6 +1,6 @@
 \doxysection{Frustum.\+h}
 \hypertarget{_frustum_8h_source}{}\label{_frustum_8h_source}\index{unify/Frustum.h@{unify/Frustum.h}}
-
+\mbox{\hyperlink{_frustum_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
@@ -26,9 +26,9 @@
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Matrix.h>}}
-\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <unify/Plane.h>}}
-\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <unify/BBox.h>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_matrix_8h}{unify/Matrix.h}}>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_plane_8h}{unify/Plane.h}}>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_b_box_8h}{unify/BBox.h}}>}}
 \DoxyCodeLine{00028\ }
 \DoxyCodeLine{00029\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
 \DoxyCodeLine{00030\ \{}
@@ -38,15 +38,15 @@
 \DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}}
 \DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ xyz,}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ Xyz,}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ xYz,}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ XYz,}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ xyZ,}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ XyZ,}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ xYZ,}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ XYZ,}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ Count}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_corner_a294128830048d3290240520243ce8b31a764dcde55dc1ce07c5ab41f72a3eebda}{xyz}},}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_corner_a294128830048d3290240520243ce8b31aa982d2a59af125545448451bbd73afd3}{Xyz}},}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_corner_a294128830048d3290240520243ce8b31a34b2bdedef4ba7404ed6a8641e6ddda0}{xYz}},}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_corner_a294128830048d3290240520243ce8b31a70a6c20d52f28e5ddf55439b4df26137}{XYz}},}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_corner_a294128830048d3290240520243ce8b31a3b3da7f8eb2aab12be56ab63c2a60b2b}{xyZ}},}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_corner_a294128830048d3290240520243ce8b31aed01a1927e89a4358e41449f29f3d5ff}{XyZ}},}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_corner_a294128830048d3290240520243ce8b31a55d4c2db7ff0656f9289b1ac64593608}{xYZ}},}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_corner_a294128830048d3290240520243ce8b31aa2f74387efa942e76a332b19960f1768}{XYZ}},}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_corner_a294128830048d3290240520243ce8b31a5b089a57c2b4e593e8416babe0a2cf67}{Count}}}
 \DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \};}
 \DoxyCodeLine{00050\ \ \ \ \ \};}
 \DoxyCodeLine{00051\ }
@@ -55,44 +55,44 @@
 \DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}}
 \DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ Near,}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ Far,}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ Left,}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ Right,}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ Top,}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ Bottom,}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ Count}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_plane_ac5f06533269c9ed24b38d7efa05d3f7eace11523ae3aee5a0816abe8aa4f10819}{Near}},}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_plane_ac5f06533269c9ed24b38d7efa05d3f7ea89b2090089c514be6ae1c4f4c229fe92}{Far}},}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_plane_ac5f06533269c9ed24b38d7efa05d3f7ea7b9409c67b81e2d77d5bf77fde1667e1}{Left}},}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_plane_ac5f06533269c9ed24b38d7efa05d3f7ea74d442a056ac3f1ee27fade0951f7b6a}{Right}},}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_plane_ac5f06533269c9ed24b38d7efa05d3f7eab492e9e1192e50e5d6e4c4346a2c244b}{Top}},}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_plane_ac5f06533269c9ed24b38d7efa05d3f7ea9adfb9b9f416b790821316bbc88c1455}{Bottom}},}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_plane_ac5f06533269c9ed24b38d7efa05d3f7eafeb31216fefd458b2fe72ec6beefb9f9}{Count}}}
 \DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \};}
 \DoxyCodeLine{00068\ \ \ \ \ \};}
 \DoxyCodeLine{00069\ }
-\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{enum\ class}\ CullState}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespaceunify_af385be843c3779feb4af332ac46d2a3f}{CullState}}}
 \DoxyCodeLine{00071\ \ \ \ \ \{}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ Unknown,\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cull\ state\ not\ yet\ computed.}}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ Inside,\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Object\ bounding\ box\ is\ at\ least\ partly\ inside\ the\ frustum.}}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ Outside,\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Object\ bounding\ box\ is\ outside\ the\ frustum.}}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ InsideSlow,\ \ \ \ \ \textcolor{comment}{//\ OBB\ is\ inside\ frustum,\ but\ it\ took\ extensive\ testing\ to\ determine\ this.}}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ OutsideSlow,\ \ \ \ \textcolor{comment}{//\ OBB\ is\ outside\ frustum,\ but\ it\ took\ extensive\ testing\ to\ determine\ this.}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_af385be843c3779feb4af332ac46d2a3fa88183b946cc5f0e8c96b2e66e1c74a7e}{Unknown}},\ \ \ \ \ \textcolor{comment}{//\ Cull\ state\ not\ yet\ computed.}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_af385be843c3779feb4af332ac46d2a3fa9b6d3000134648fc9f1e71094ae0847d}{Inside}},\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Object\ bounding\ box\ is\ at\ least\ partly\ inside\ the\ frustum.}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_af385be843c3779feb4af332ac46d2a3fa76fbf0ccd7fcd64879c2ff2119dc15a4}{Outside}},\ \ \ \ \ \textcolor{comment}{//\ Object\ bounding\ box\ is\ outside\ the\ frustum.}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_af385be843c3779feb4af332ac46d2a3facce9e1431588b8159398347b6baa2313}{InsideSlow}},\ \ \ \ \ \ \ \textcolor{comment}{//\ OBB\ is\ inside\ frustum,\ but\ it\ took\ extensive\ testing\ to\ determine\ this.}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_af385be843c3779feb4af332ac46d2a3fadd62db4ff5d4d00340bf8e1f362a38ed}{OutsideSlow}},\ \textcolor{comment}{//\ OBB\ is\ outside\ frustum,\ but\ it\ took\ extensive\ testing\ to\ determine\ this.}}
 \DoxyCodeLine{00077\ \ \ \ \ \};}
 \DoxyCodeLine{00078\ }
 \DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_frustum}{Frustum}}}
 \DoxyCodeLine{00083\ \ \ \ \ \{}
 \DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum}{Frustum}}();}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum}{Frustum}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{unify::Matrix}}\ \&\ worldViewProjection\ );}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_a172ae3492592e3ac891642299d628494}{Frustum}}();}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_frustum_a172ae3492592e3ac891642299d628494}{Frustum}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{unify::Matrix}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{worldViewProjection}}\ );}
 \DoxyCodeLine{00087\ }
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_frustum_aca02865835f9fc0da88cd60cf930cd36}{Calculate}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{unify::Matrix}}\ \&\ worldViewProjection\ );}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_frustum_aca02865835f9fc0da88cd60cf930cd36}{Calculate}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{unify::Matrix}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{worldViewProjection}}\ );}
 \DoxyCodeLine{00092\ }
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_frustum_acea70dc41764a26260da4a6fae07e212}{CastPoint}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ float\ >}}\ \&\ unit,\ \mbox{\hyperlink{classunify_1_1_ray}{unify::Ray}}\ \&\ rayOut\ );}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_frustum_acea70dc41764a26260da4a6fae07e212}{CastPoint}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{unit}},\ \mbox{\hyperlink{classunify_1_1_ray}{unify::Ray}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{rayOut}}\ );}
 \DoxyCodeLine{00098\ }
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ CullState\ \mbox{\hyperlink{classunify_1_1_frustum_ab3cb0181fb3ac3b872a8f9fdefab5b57}{CullBBox}}(\ \mbox{\hyperlink{classunify_1_1_b_box}{unify::BBox<\ float\ >}}\ *\ pBBox\textcolor{comment}{/*,\ unify::Plane\ *\ BBPlane*/}\ );}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_af385be843c3779feb4af332ac46d2a3f}{CullState}}\ \mbox{\hyperlink{classunify_1_1_frustum_ab3cb0181fb3ac3b872a8f9fdefab5b57}{CullBBox}}(\ \mbox{\hyperlink{classunify_1_1_b_box}{unify::BBox<\ float\ >}}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{pBBox}}\textcolor{comment}{/*,\ unify::Plane\ *\ BBPlane*/}\ );}
 \DoxyCodeLine{00103\ }
 \DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{protected}:}
 \DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{unify::Matrix}}\ m\_worldViewProjection;}
-\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ float\ >}}\ m\_vCorner[\ FrustumCorner::Count\ ];}
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_plane}{unify::Plane}}\ m\_Plane[\ FrustumPlane::Count\ ];}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ float\ >}}\ m\_vCorner[\ \mbox{\hyperlink{classunify_1_1_frustum_corner_a294128830048d3290240520243ce8b31a5b089a57c2b4e593e8416babe0a2cf67}{FrustumCorner::Count}}\ ];}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_plane}{unify::Plane}}\ m\_Plane[\ \mbox{\hyperlink{classunify_1_1_frustum_plane_ac5f06533269c9ed24b38d7efa05d3f7eafeb31216fefd458b2fe72ec6beefb9f9}{FrustumPlane::Count}}\ ];}
 \DoxyCodeLine{00108\ \ \ \ \ \};}
 \DoxyCodeLine{00109\ }
-\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{bool}\ EdgeIntersectsFace(\ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ float\ >}}\ *\ pEdges,\ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ float\ >}}\ *\ pFacePoints,\ \mbox{\hyperlink{classunify_1_1_plane}{unify::Plane}}\ *\ pPlane\ );}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceunify_a9bc4ff0d4d6d8daace09140209a289d8}{EdgeIntersectsFace}}(\ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ float\ >}}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{pEdges}},\ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ float\ >}}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{pFacePoints}},\ \mbox{\hyperlink{classunify_1_1_plane}{unify::Plane}}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{pPlane}}\ );}
 \DoxyCodeLine{00111\ \}}
 
 \end{DoxyCode}

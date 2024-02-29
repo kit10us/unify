@@ -1,6 +1,6 @@
 \doxysection{V2.\+inl}
 \hypertarget{_v2_8inl_source}{}\label{_v2_8inl_source}\index{unify/V2.inl@{unify/V2.inl}}
-
+\mbox{\hyperlink{_v2_8inl}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
@@ -25,26 +25,26 @@
 \DoxyCodeLine{00021\ }
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00024\ V2<\ T\ >::V2(\ T\ \_x,\ T\ \_y\ )}
+\DoxyCodeLine{00024\ \mbox{\hyperlink{classunify_1_1_v2_a83768981243adbe7ab3584b5343f65cf}{V2<\ T\ >::V2}}(\ T\ \_x,\ T\ \_y\ )}
 \DoxyCodeLine{00025\ \ \ \ \ :\ x\{\ \_x\ \}}
 \DoxyCodeLine{00026\ \ \ \ \ ,\ y\{\ \_y\ \}}
 \DoxyCodeLine{00027\ \{}
 \DoxyCodeLine{00028\ \}}
 \DoxyCodeLine{00029\ }
 \DoxyCodeLine{00030\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00031\ V2<\ T\ >::V2(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ vec\ )}
+\DoxyCodeLine{00031\ \mbox{\hyperlink{classunify_1_1_v2_a83768981243adbe7ab3584b5343f65cf}{V2<\ T\ >::V2}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ vec\ )}
 \DoxyCodeLine{00032\ \ \ \ \ :\ V2\{\ vec.x,\ vec.y\ \}}
 \DoxyCodeLine{00033\ \{}
 \DoxyCodeLine{00034\ \}}
 \DoxyCodeLine{00035\ }
 \DoxyCodeLine{00036\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00037\ V2<\ T\ >::V2(\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size\ )}
+\DoxyCodeLine{00037\ \mbox{\hyperlink{classunify_1_1_v2_a83768981243adbe7ab3584b5343f65cf}{V2<\ T\ >::V2}}(\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size\ )}
 \DoxyCodeLine{00038\ \ \ \ \ :\ V2\{\ size.width,\ size.height\ \}}
 \DoxyCodeLine{00039\ \{}
 \DoxyCodeLine{00040\ \}}
 \DoxyCodeLine{00041\ }
 \DoxyCodeLine{00042\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00043\ V2<\ T\ >::V2(\ std::string\ text\ )}
+\DoxyCodeLine{00043\ \mbox{\hyperlink{classunify_1_1_v2_a83768981243adbe7ab3584b5343f65cf}{V2<\ T\ >::V2}}(\ std::string\ text\ )}
 \DoxyCodeLine{00044\ \{}
 \DoxyCodeLine{00045\ \ \ \ \ std::vector<\ T\ >\ split\ =\ string::Split<\ T\ >(\ text,\ \textcolor{charliteral}{','}\ );}
 \DoxyCodeLine{00046\ \ \ \ \ x\ =\ split[\ 0\ ];}
@@ -62,7 +62,7 @@
 \DoxyCodeLine{00058\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
 \DoxyCodeLine{00059\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ V2<\ T\ >::operator\ =\ (\ \textcolor{keyword}{const}\ V3<\ T\ >\ \&\ vec3\ )}
 \DoxyCodeLine{00060\ \{}
-\DoxyCodeLine{00061\ \ \ \ \ x\ =\ vec3.x\ *\ vec3.z;}
+\DoxyCodeLine{00061\ \ \ \ \ x\ =\ vec3.\mbox{\hyperlink{classunify_1_1_v2_a3765c751d0bfbae6b3d665910d16a637}{x}}\ *\ vec3.z;}
 \DoxyCodeLine{00062\ \ \ \ \ y\ =\ vec3.y\ *\ vec3.z;}
 \DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00064\ \}}
@@ -70,40 +70,40 @@
 \DoxyCodeLine{00066\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
 \DoxyCodeLine{00067\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ V2<\ T\ >::operator\ =\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ vec\ )}
 \DoxyCodeLine{00068\ \{}
-\DoxyCodeLine{00069\ \ \ \ \ x\ =\ vec.x;}
-\DoxyCodeLine{00070\ \ \ \ \ y\ =\ vec.y;}
+\DoxyCodeLine{00069\ \ \ \ \ x\ =\ vec.\mbox{\hyperlink{classunify_1_1_v2_a3765c751d0bfbae6b3d665910d16a637}{x}};}
+\DoxyCodeLine{00070\ \ \ \ \ y\ =\ vec.\mbox{\hyperlink{classunify_1_1_v2_ab2bde3ec8548eba5202f937b8b8e8120}{y}};}
 \DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00072\ \}}
 \DoxyCodeLine{00073\ }
 \DoxyCodeLine{00074\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
 \DoxyCodeLine{00075\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ V2<\ T\ >::operator\ +=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ vec\ )}
 \DoxyCodeLine{00076\ \{}
-\DoxyCodeLine{00077\ \ \ \ \ x\ +=\ vec.x;}
-\DoxyCodeLine{00078\ \ \ \ \ y\ +=\ vec.y;}
+\DoxyCodeLine{00077\ \ \ \ \ x\ +=\ vec.\mbox{\hyperlink{classunify_1_1_v2_a3765c751d0bfbae6b3d665910d16a637}{x}};}
+\DoxyCodeLine{00078\ \ \ \ \ y\ +=\ vec.\mbox{\hyperlink{classunify_1_1_v2_ab2bde3ec8548eba5202f937b8b8e8120}{y}};}
 \DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00080\ \}}
 \DoxyCodeLine{00081\ }
 \DoxyCodeLine{00082\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
 \DoxyCodeLine{00083\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ V2<\ T\ >::operator\ -\/=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ vec\ )}
 \DoxyCodeLine{00084\ \{}
-\DoxyCodeLine{00085\ \ \ \ \ x\ -\/=\ vec.x;}
-\DoxyCodeLine{00086\ \ \ \ \ y\ -\/=\ vec.y;}
+\DoxyCodeLine{00085\ \ \ \ \ x\ -\/=\ vec.\mbox{\hyperlink{classunify_1_1_v2_a3765c751d0bfbae6b3d665910d16a637}{x}};}
+\DoxyCodeLine{00086\ \ \ \ \ y\ -\/=\ vec.\mbox{\hyperlink{classunify_1_1_v2_ab2bde3ec8548eba5202f937b8b8e8120}{y}};}
 \DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00088\ \}}
 \DoxyCodeLine{00089\ }
 \DoxyCodeLine{00090\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
 \DoxyCodeLine{00091\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ V2<\ T\ >::operator\ *=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ vec\ )}
 \DoxyCodeLine{00092\ \{}
-\DoxyCodeLine{00093\ \ \ \ \ x\ *=\ vec.x;}
-\DoxyCodeLine{00094\ \ \ \ \ y\ *=\ vec.y;}
+\DoxyCodeLine{00093\ \ \ \ \ x\ *=\ vec.\mbox{\hyperlink{classunify_1_1_v2_a3765c751d0bfbae6b3d665910d16a637}{x}};}
+\DoxyCodeLine{00094\ \ \ \ \ y\ *=\ vec.\mbox{\hyperlink{classunify_1_1_v2_ab2bde3ec8548eba5202f937b8b8e8120}{y}};}
 \DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00096\ \}}
 \DoxyCodeLine{00097\ }
 \DoxyCodeLine{00098\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
 \DoxyCodeLine{00099\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ V2<\ T\ >::operator\ /=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ vec\ )}
 \DoxyCodeLine{00100\ \{}
-\DoxyCodeLine{00101\ \ \ \ \ x\ /=\ vec.x;}
-\DoxyCodeLine{00102\ \ \ \ \ y\ /=\ vec.y;}
+\DoxyCodeLine{00101\ \ \ \ \ x\ /=\ vec.\mbox{\hyperlink{classunify_1_1_v2_a3765c751d0bfbae6b3d665910d16a637}{x}};}
+\DoxyCodeLine{00102\ \ \ \ \ y\ /=\ vec.\mbox{\hyperlink{classunify_1_1_v2_ab2bde3ec8548eba5202f937b8b8e8120}{y}};}
 \DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00104\ \}}
 \DoxyCodeLine{00105\ }
@@ -127,25 +127,25 @@
 \DoxyCodeLine{00123\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
 \DoxyCodeLine{00124\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ V2<\ T\ >::operator\ +\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ vec)\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00125\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}(\ x\ +\ vec.x,\ y\ +\ vec.y\ );}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}(\ x\ +\ vec.\mbox{\hyperlink{classunify_1_1_v2_a3765c751d0bfbae6b3d665910d16a637}{x}},\ y\ +\ vec.\mbox{\hyperlink{classunify_1_1_v2_ab2bde3ec8548eba5202f937b8b8e8120}{y}}\ );}
 \DoxyCodeLine{00127\ \}}
 \DoxyCodeLine{00128\ }
 \DoxyCodeLine{00129\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
 \DoxyCodeLine{00130\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ V2<\ T\ >::operator\ -\/\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ vec\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00131\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}(\ x\ -\/\ vec.x,\ y\ -\/\ vec.y\ );}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}(\ x\ -\/\ vec.\mbox{\hyperlink{classunify_1_1_v2_a3765c751d0bfbae6b3d665910d16a637}{x}},\ y\ -\/\ vec.\mbox{\hyperlink{classunify_1_1_v2_ab2bde3ec8548eba5202f937b8b8e8120}{y}}\ );}
 \DoxyCodeLine{00133\ \}}
 \DoxyCodeLine{00134\ }
 \DoxyCodeLine{00135\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
 \DoxyCodeLine{00136\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ V2<\ T\ >::operator\ *\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ vec\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00137\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}(\ x\ *\ vec.x,\ y\ *\ vec.y\ );}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}(\ x\ *\ vec.\mbox{\hyperlink{classunify_1_1_v2_a3765c751d0bfbae6b3d665910d16a637}{x}},\ y\ *\ vec.\mbox{\hyperlink{classunify_1_1_v2_ab2bde3ec8548eba5202f937b8b8e8120}{y}}\ );}
 \DoxyCodeLine{00139\ \}}
 \DoxyCodeLine{00140\ }
 \DoxyCodeLine{00141\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
 \DoxyCodeLine{00142\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ V2<\ T\ >::operator\ /\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ vec\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00143\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}(\ x\ /\ vec.x,\ y\ /\ vec.y\ );}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}(\ x\ /\ vec.\mbox{\hyperlink{classunify_1_1_v2_a3765c751d0bfbae6b3d665910d16a637}{x}},\ y\ /\ vec.\mbox{\hyperlink{classunify_1_1_v2_ab2bde3ec8548eba5202f937b8b8e8120}{y}}\ );}
 \DoxyCodeLine{00145\ \}}
 \DoxyCodeLine{00146\ }
 \DoxyCodeLine{00147\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
@@ -163,7 +163,7 @@
 \DoxyCodeLine{00159\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
 \DoxyCodeLine{00160\ \textcolor{keywordtype}{bool}\ V2<\ T\ >::operator\ ==\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\&\ vec\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00161\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordflow}{return}(\ x\ ==\ vec.x\ \&\&\ y\ ==\ vec.y\ );}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordflow}{return}(\ x\ ==\ vec.\mbox{\hyperlink{classunify_1_1_v2_a3765c751d0bfbae6b3d665910d16a637}{x}}\ \&\&\ y\ ==\ vec.\mbox{\hyperlink{classunify_1_1_v2_ab2bde3ec8548eba5202f937b8b8e8120}{y}}\ );}
 \DoxyCodeLine{00163\ \}}
 \DoxyCodeLine{00164\ }
 \DoxyCodeLine{00165\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
@@ -173,7 +173,7 @@
 \DoxyCodeLine{00169\ \}}
 \DoxyCodeLine{00170\ }
 \DoxyCodeLine{00171\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00172\ T\ \&\ V2<\ T\ >::operator[](\ \textcolor{keywordtype}{size\_t}\ i\ )}
+\DoxyCodeLine{00172\ T\ \&\ \mbox{\hyperlink{classunify_1_1_v2_ac4dce6c252a0b55ceb8bb0a9575b33e2}{V2<\ T\ >::operator[]}}(\ \textcolor{keywordtype}{size\_t}\ i\ )}
 \DoxyCodeLine{00173\ \{}
 \DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordflow}{switch}(\ i\ )}
 \DoxyCodeLine{00175\ \ \ \ \ \{}
@@ -187,7 +187,7 @@
 \DoxyCodeLine{00183\ \}}
 \DoxyCodeLine{00184\ }
 \DoxyCodeLine{00185\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00186\ \textcolor{keyword}{const}\ T\ \&\ V2<\ T\ >::operator[](\ \textcolor{keywordtype}{size\_t}\ i\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00186\ \textcolor{keyword}{const}\ T\ \&\ \mbox{\hyperlink{classunify_1_1_v2_ac4dce6c252a0b55ceb8bb0a9575b33e2}{V2<\ T\ >::operator[]}}(\ \textcolor{keywordtype}{size\_t}\ i\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00187\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordflow}{switch}(\ i\ )}
 \DoxyCodeLine{00189\ \ \ \ \ \{}
@@ -231,7 +231,7 @@
 \DoxyCodeLine{00227\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
 \DoxyCodeLine{00228\ T\ \mbox{\hyperlink{classunify_1_1_v2_ab0eb5522830218a7ba8c4860781191b4}{V2<\ T\ >::Dot}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ a)\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00229\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordflow}{return}\ x\ *\ a.x\ +\ y\ *\ a.y;}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordflow}{return}\ x\ *\ a.\mbox{\hyperlink{classunify_1_1_v2_a3765c751d0bfbae6b3d665910d16a637}{x}}\ +\ y\ *\ a.\mbox{\hyperlink{classunify_1_1_v2_ab2bde3ec8548eba5202f937b8b8e8120}{y}};}
 \DoxyCodeLine{00231\ \}}
 \DoxyCodeLine{00232\ }
 \DoxyCodeLine{00233\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
@@ -255,32 +255,32 @@
 \DoxyCodeLine{00251\ \textcolor{comment}{//\ Named\ constructors}}
 \DoxyCodeLine{00252\ }
 \DoxyCodeLine{00253\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00254\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ V2<\ T\ >::V2Zero()}
+\DoxyCodeLine{00254\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_v2_a9ef9d6b4955d7779519f1653a186b577}{V2<\ T\ >::V2Zero}}()}
 \DoxyCodeLine{00255\ \{}
 \DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordflow}{return}\ V2(\ 0,\ 0\ );}
 \DoxyCodeLine{00257\ \}\ \ \ }
 \DoxyCodeLine{00258\ }
 \DoxyCodeLine{00259\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00260\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ V2<\ T\ >::V2Lerp(\mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ first,\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ second,\ \textcolor{keywordtype}{float}\ ratio)}
+\DoxyCodeLine{00260\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_v2_aeb960872a74754582e2fd0db9d6df14f}{V2<\ T\ >::V2Lerp}}(\mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ first,\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ second,\ \textcolor{keywordtype}{float}\ ratio)}
 \DoxyCodeLine{00261\ \{}
 \DoxyCodeLine{00262\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ point(first\ +\ (\ second\ -\/\ first\ )\ *\ ratio);}
 \DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordflow}{return}\ point;}
 \DoxyCodeLine{00264\ \}}
 \DoxyCodeLine{00265\ }
 \DoxyCodeLine{00266\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00267\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ V2<\ T\ >::V2X(T\ x)}
+\DoxyCodeLine{00267\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_v2_a99dbb0cbb4c9c23bdd169cbf600b4ec8}{V2<\ T\ >::V2X}}(T\ x)}
 \DoxyCodeLine{00268\ \{}
 \DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}(x,\ 0,\ 0);}
 \DoxyCodeLine{00270\ \}}
 \DoxyCodeLine{00271\ }
 \DoxyCodeLine{00272\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00273\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ V2<\ T\ >::V2Y(T\ y)}
+\DoxyCodeLine{00273\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_v2_abdd5b5745e1ee9bceec449dc770106bf}{V2<\ T\ >::V2Y}}(T\ y)}
 \DoxyCodeLine{00274\ \{}
 \DoxyCodeLine{00275\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}(0,\ y,\ 0);}
 \DoxyCodeLine{00276\ \}}
 \DoxyCodeLine{00277\ }
 \DoxyCodeLine{00278\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00279\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ V2<\ T\ >::V2Normalized(\textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ in)}
+\DoxyCodeLine{00279\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_v2_a5c31e4414bbebc392d62750819bd18bc}{V2<\ T\ >::V2Normalized}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ in)}
 \DoxyCodeLine{00280\ \{}
 \DoxyCodeLine{00281\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ v(in);}
 \DoxyCodeLine{00282\ \ \ \ \ v.Normalize();}
@@ -288,13 +288,13 @@
 \DoxyCodeLine{00284\ \}}
 \DoxyCodeLine{00285\ }
 \DoxyCodeLine{00286\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00287\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ V2<\ T\ >::V2Inverse(\textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ in)}
+\DoxyCodeLine{00287\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_v2_a191faa2802cae3c530cfaae6b18ad423}{V2<\ T\ >::V2Inverse}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ in)}
 \DoxyCodeLine{00288\ \{}
-\DoxyCodeLine{00289\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}(\ -\/in.x,\ -\/in.y);}
+\DoxyCodeLine{00289\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}(\ -\/in.\mbox{\hyperlink{classunify_1_1_v2_a3765c751d0bfbae6b3d665910d16a637}{x}},\ -\/in.\mbox{\hyperlink{classunify_1_1_v2_ab2bde3ec8548eba5202f937b8b8e8120}{y}});}
 \DoxyCodeLine{00290\ \}}
 \DoxyCodeLine{00291\ }
 \DoxyCodeLine{00292\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00293\ T\ V2<\ T\ >::V2Dot(\textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ l,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ \ r)}
+\DoxyCodeLine{00293\ T\ \mbox{\hyperlink{classunify_1_1_v2_a286d1731f2859b28afae5d387fa0b8f4}{V2<\ T\ >::V2Dot}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ l,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ \ r)}
 \DoxyCodeLine{00294\ \{}
 \DoxyCodeLine{00295\ \ \ \ \ \textcolor{keywordflow}{return}\ l.\mbox{\hyperlink{classunify_1_1_v2_ab0eb5522830218a7ba8c4860781191b4}{Dot}}(r);}
 \DoxyCodeLine{00296\ \}}

@@ -1,6 +1,6 @@
 \doxysection{Lookup.\+inl}
 \hypertarget{_lookup_8inl_source}{}\label{_lookup_8inl_source}\index{unify/Lookup.inl@{unify/Lookup.inl}}
-
+\mbox{\hyperlink{_lookup_8inl}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
@@ -127,88 +127,88 @@
 \DoxyCodeLine{00123\ \}}
 \DoxyCodeLine{00124\ }
 \DoxyCodeLine{00125\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ Key,\ \textcolor{keyword}{typename}\ Value\ >}
-\DoxyCodeLine{00126\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator}{unify::Lookup<\ Key,\ Value\ >::iterator}}\ \mbox{\hyperlink{classunify_1_1_lookup}{unify::Lookup<\ Key,\ Value\ >::begin}}()}
+\DoxyCodeLine{00126\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator}{unify::Lookup<\ Key,\ Value\ >::iterator}}\ \mbox{\hyperlink{classunify_1_1_lookup_a2d2eb09ac12e662255db29b2d5de5887}{unify::Lookup<\ Key,\ Value\ >::begin}}()}
 \DoxyCodeLine{00127\ \{}
-\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordflow}{return}\ iterator(\ \textcolor{keyword}{this},\ 0\ );}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator}{iterator}}(\ \textcolor{keyword}{this},\ 0\ );}
 \DoxyCodeLine{00129\ \}}
 \DoxyCodeLine{00130\ }
 \DoxyCodeLine{00131\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ Key,\ \textcolor{keyword}{typename}\ Value\ >}
-\DoxyCodeLine{00132\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator}{unify::Lookup<\ Key,\ Value\ >::iterator}}\ \mbox{\hyperlink{classunify_1_1_lookup}{unify::Lookup<\ Key,\ Value\ >::end}}()}
+\DoxyCodeLine{00132\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator}{unify::Lookup<\ Key,\ Value\ >::iterator}}\ \mbox{\hyperlink{classunify_1_1_lookup_a036de8004b86301f1d5e4765cf3bebb6}{unify::Lookup<\ Key,\ Value\ >::end}}()}
 \DoxyCodeLine{00133\ \{}
-\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordflow}{return}\ iterator(\ \textcolor{keyword}{this},\ this-\/>Count()\ );}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator}{iterator}}(\ \textcolor{keyword}{this},\ this-\/>Count()\ );}
 \DoxyCodeLine{00135\ \}}
 \DoxyCodeLine{00136\ }
 \DoxyCodeLine{00137\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ Key,\ \textcolor{keyword}{typename}\ Value\ >}
-\DoxyCodeLine{00138\ \mbox{\hyperlink{classunify_1_1_lookup}{unify::Lookup<\ Key,\ Value\ >::iterator::iterator}}(\mbox{\hyperlink{classunify_1_1_lookup}{unify::Lookup<\ Key,\ Value\ >}}\ *\ lookup,\ \textcolor{keywordtype}{size\_t}\ index\ )}
+\DoxyCodeLine{00138\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator_aaabe5b77a1f68af65db6c7d840d325e2}{unify::Lookup<\ Key,\ Value\ >::iterator::iterator}}(\mbox{\hyperlink{classunify_1_1_lookup}{unify::Lookup<\ Key,\ Value\ >}}\ *\ lookup,\ \textcolor{keywordtype}{size\_t}\ index\ )}
 \DoxyCodeLine{00139\ \ \ \ \ :\ m\_lookup\{\ lookup\ \}}
 \DoxyCodeLine{00140\ \ \ \ \ ,\ m\_index\{\ index\ \}}
 \DoxyCodeLine{00141\ \{}
 \DoxyCodeLine{00142\ \}}
 \DoxyCodeLine{00143\ }
 \DoxyCodeLine{00144\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ Key,\ \textcolor{keyword}{typename}\ Value\ >}
-\DoxyCodeLine{00145\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classunify_1_1_lookup}{unify::Lookup<\ Key,\ Value\ >::iterator::operator++}}()}
+\DoxyCodeLine{00145\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator_ad0c5088f733a4baf0ff47425228b4b07}{unify::Lookup<\ Key,\ Value\ >::iterator::operator++}}()}
 \DoxyCodeLine{00146\ \{}
 \DoxyCodeLine{00147\ \ \ \ \ \textcolor{keyword}{auto}\ a\ =\ ++m\_index;}
 \DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00149\ \}}
 \DoxyCodeLine{00150\ }
 \DoxyCodeLine{00151\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ Key,\ \textcolor{keyword}{typename}\ Value\ >}
-\DoxyCodeLine{00152\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classunify_1_1_lookup}{unify::Lookup<\ Key,\ Value\ >::iterator::operator++}}(\ \textcolor{keywordtype}{int}\ )}
+\DoxyCodeLine{00152\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator_ad0c5088f733a4baf0ff47425228b4b07}{unify::Lookup<\ Key,\ Value\ >::iterator::operator++}}(\ \textcolor{keywordtype}{int}\ )}
 \DoxyCodeLine{00153\ \{}
-\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keyword}{auto}\ itr\ =\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{itr}}\ =\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00155\ \ \ \ \ m\_index++;}
-\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{return}\ itr;}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{itr}};}
 \DoxyCodeLine{00157\ \}}
 \DoxyCodeLine{00158\ }
 \DoxyCodeLine{00159\ }
 \DoxyCodeLine{00160\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ Key,\ \textcolor{keyword}{typename}\ Value\ >}
-\DoxyCodeLine{00161\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classunify_1_1_lookup}{unify::Lookup<\ Key,\ Value\ >::iterator::operator-\/-\/}}()}
+\DoxyCodeLine{00161\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator_a5e092feb9d7073e647fb7f7c60b15fc0}{unify::Lookup<\ Key,\ Value\ >::iterator::operator-\/-\/}}()}
 \DoxyCodeLine{00162\ \{}
 \DoxyCodeLine{00163\ \ \ \ \ -\/-\/m\_index;}
 \DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00165\ \}}
 \DoxyCodeLine{00166\ }
 \DoxyCodeLine{00167\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ Key,\ \textcolor{keyword}{typename}\ Value\ >}
-\DoxyCodeLine{00168\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classunify_1_1_lookup}{unify::Lookup<\ Key,\ Value\ >::iterator::operator-\/-\/}}(\ \textcolor{keywordtype}{int}\ )}
+\DoxyCodeLine{00168\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator_a5e092feb9d7073e647fb7f7c60b15fc0}{unify::Lookup<\ Key,\ Value\ >::iterator::operator-\/-\/}}(\ \textcolor{keywordtype}{int}\ )}
 \DoxyCodeLine{00169\ \{}
-\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keyword}{auto}\ itr\ =\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{itr}}\ =\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00171\ \ \ \ \ m\_index-\/-\/;}
-\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{return}\ itr;}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{itr}};}
 \DoxyCodeLine{00173\ \}}
 \DoxyCodeLine{00174\ }
 \DoxyCodeLine{00175\ }
 \DoxyCodeLine{00176\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ Key,\ \textcolor{keyword}{typename}\ Value\ >}
-\DoxyCodeLine{00177\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_lookup}{unify::Lookup<\ Key,\ Value\ >::iterator::operator==}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator}{unify::Lookup<\ Key,\ Value\ >::iterator}}\ \&\ itr\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00177\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator_ad37c1ceccaf1a4f01163def080fa7ce5}{unify::Lookup<\ Key,\ Value\ >::iterator::operator==}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator}{unify::Lookup<\ Key,\ Value\ >::iterator}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{itr}}\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00178\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_index\ ==\ itr.m\_index;}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_index\ ==\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{itr}}.m\_index;}
 \DoxyCodeLine{00180\ \}}
 \DoxyCodeLine{00181\ }
 \DoxyCodeLine{00182\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ Key,\ \textcolor{keyword}{typename}\ Value\ >}
-\DoxyCodeLine{00183\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_lookup}{unify::Lookup<\ Key,\ Value\ >::iterator::operator!=}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator}{unify::Lookup<\ Key,\ Value\ >::iterator}}\ \&\ itr\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00183\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator_a4e63eac11561c2e5b400a624a2cb964c}{unify::Lookup<\ Key,\ Value\ >::iterator::operator!=}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator}{unify::Lookup<\ Key,\ Value\ >::iterator}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{itr}}\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00184\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_index\ !=\ itr.m\_index;}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_index\ !=\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{itr}}.m\_index;}
 \DoxyCodeLine{00186\ \}}
 \DoxyCodeLine{00187\ }
 \DoxyCodeLine{00188\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ Key,\ \textcolor{keyword}{typename}\ Value\ >}
-\DoxyCodeLine{00189\ \mbox{\hyperlink{structunify_1_1_key_value_pair}{unify::KeyValuePair<\ Key,\ Value\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_lookup}{unify::Lookup<\ Key,\ Value\ >::iterator::operator*}}()}
+\DoxyCodeLine{00189\ \mbox{\hyperlink{structunify_1_1_key_value_pair}{unify::KeyValuePair<\ Key,\ Value\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator_a154071a3d998b6955df881b42d0301a8}{unify::Lookup<\ Key,\ Value\ >::iterator::operator*}}()}
 \DoxyCodeLine{00190\ \{}
 \DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_lookup-\/>m\_values[m\_index];}
 \DoxyCodeLine{00192\ \}}
 \DoxyCodeLine{00193\ }
 \DoxyCodeLine{00194\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ Key,\ \textcolor{keyword}{typename}\ Value\ >}
-\DoxyCodeLine{00195\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structunify_1_1_key_value_pair}{unify::KeyValuePair<\ Key,\ Value\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_lookup}{unify::Lookup<\ Key,\ Value\ >::iterator::operator*}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00195\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structunify_1_1_key_value_pair}{unify::KeyValuePair<\ Key,\ Value\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator_a154071a3d998b6955df881b42d0301a8}{unify::Lookup<\ Key,\ Value\ >::iterator::operator*}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00196\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_lookup-\/>m\_values[m\_index];}
 \DoxyCodeLine{00198\ \}}
 \DoxyCodeLine{00199\ }
 \DoxyCodeLine{00200\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ Key,\ \textcolor{keyword}{typename}\ Value\ >}
-\DoxyCodeLine{00201\ \mbox{\hyperlink{structunify_1_1_key_value_pair}{unify::KeyValuePair<\ Key,\ Value\ >}}\ *\ \mbox{\hyperlink{classunify_1_1_lookup}{unify::Lookup<\ Key,\ Value\ >::iterator::operator-\/>}}()}
+\DoxyCodeLine{00201\ \mbox{\hyperlink{structunify_1_1_key_value_pair}{unify::KeyValuePair<\ Key,\ Value\ >}}\ *\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator_a29a1d984481ada0df73a220ae8033ca0}{unify::Lookup<\ Key,\ Value\ >::iterator::operator-\/>}}()}
 \DoxyCodeLine{00202\ \{}
 \DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordflow}{return}\ \&m\_lookup-\/>m\_values[m\_index];}
 \DoxyCodeLine{00204\ \}}
 \DoxyCodeLine{00205\ }
 \DoxyCodeLine{00206\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ Key,\ \textcolor{keyword}{typename}\ Value\ >}
-\DoxyCodeLine{00207\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structunify_1_1_key_value_pair}{unify::KeyValuePair<\ Key,\ Value\ >}}\ *\ \mbox{\hyperlink{classunify_1_1_lookup}{unify::Lookup<\ Key,\ Value\ >::iterator::operator-\/>}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00207\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structunify_1_1_key_value_pair}{unify::KeyValuePair<\ Key,\ Value\ >}}\ *\ \mbox{\hyperlink{classunify_1_1_lookup_1_1iterator_a29a1d984481ada0df73a220ae8033ca0}{unify::Lookup<\ Key,\ Value\ >::iterator::operator-\/>}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00208\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordflow}{return}\ \&m\_lookup-\/>m\_values[m\_index];}
 \DoxyCodeLine{00210\ \}}

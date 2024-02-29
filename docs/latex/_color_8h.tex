@@ -1,0 +1,56 @@
+\doxysection{unify/\+Color.h File Reference}
+\hypertarget{_color_8h}{}\label{_color_8h}\index{unify/Color.h@{unify/Color.h}}
+{\ttfamily \#include $<$unify/\+Unify.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classunify_1_1_color}{unify\+::\+Color}}
+\begin{DoxyCompactList}\small\item\em A 32 bit color, 8 bits per component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceunify}{unify}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fb}{unify\+::\+Order}} \{ \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fba287566ddad210df6ae852a39bf72cf94}{unify\+::\+RGBA}}
+, \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fba197e484be88aa4455970b1c85eceea87}{unify\+::\+ARGB}}
+, \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fba5d0594e84962ef29d928c18cd5fbac51}{unify\+::\+BGRA}}
+, \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fba25220ab3268c4870cc7fdbb01757fa68}{unify\+::\+ABGR}}
+ \}
+\begin{DoxyCompactList}\small\item\em Order of color components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \mbox{\hyperlink{namespaceunify_a0c6e6421ddd9608187cd7353d9f35af5}{unify\+::\+Color\+RGBA}} (\mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} r, \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} g, \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} b, \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} a)
+\item 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \mbox{\hyperlink{namespaceunify_a15476c3aab0adb1e0d4365b551de3c6e}{unify\+::\+Color\+RGBA}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{unsigned}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{int}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{rgba}})
+\item 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \mbox{\hyperlink{namespaceunify_a5bdb75e8af49f28d6299f1474fd516cd}{unify\+::\+Color\+ARGB}} (\mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} a, \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} r, \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} g, \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} b)
+\item 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \mbox{\hyperlink{namespaceunify_acca9bb70ad35a78bdc10d2fb3540aac4}{unify\+::\+Color\+ARGB}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{unsigned}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{int}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{argb}})
+\item 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \mbox{\hyperlink{namespaceunify_a5827aa6a3f021306ab74eb2846886863}{unify\+::\+Color\+RGB}} (\mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} r, \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} g, \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} b)
+\item 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \mbox{\hyperlink{namespaceunify_a26f31474fb3e30785b7418ab4494b978}{unify\+::\+Color\+White}} (\mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} a=255)
+\item 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \mbox{\hyperlink{namespaceunify_a2aa811512516892bb83317da93b40daa}{unify\+::\+Color\+Red}} (\mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} r=255, \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} a=255)
+\item 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \mbox{\hyperlink{namespaceunify_a3d71ab49b910cc77ebac87a41f067875}{unify\+::\+Color\+Green}} (\mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} g=255, \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} a=255)
+\item 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \mbox{\hyperlink{namespaceunify_a973713cc9e6b9b2d8ae2b4a419053317}{unify\+::\+Color\+Blue}} (\mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} c=255, \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} a=255)
+\item 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \mbox{\hyperlink{namespaceunify_ad29b2bc9de949586293e2f7a82d1de2f}{unify\+::\+Color\+Yellow}} (\mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} y=255, \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} a=255)
+\item 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \mbox{\hyperlink{namespaceunify_a888270ef60794bdd17828ad2ba288088}{unify\+::\+Color\+Cyan}} (\mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} c=255, \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} a=255)
+\item 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \mbox{\hyperlink{namespaceunify_a269b98fd05b87ab9bf9a885ef3f12361}{unify\+::\+Color\+Magenta}} (\mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} m=255, \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} a=255)
+\item 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \mbox{\hyperlink{namespaceunify_a0cf70d02899527e66e1696278532c74f}{unify\+::\+Color\+Grey}} (\mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{grey}}, \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} a=255)
+\item 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \mbox{\hyperlink{namespaceunify_a6cb951e2bf0f701293a17f6e316ed806}{unify\+::\+Color\+Black}} (\mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color\+::\+Component}} a=255)
+\item 
+\mbox{\hyperlink{classunify_1_1_color}{Color}} \mbox{\hyperlink{namespaceunify_a1686569f201a633ef567d217446e9765}{unify\+::\+Color\+Zero}} ()
+\end{DoxyCompactItemize}

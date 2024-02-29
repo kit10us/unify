@@ -1,101 +1,265 @@
 \doxysection{unify\+::Quaternion Class Reference}
 \hypertarget{classunify_1_1_quaternion}{}\label{classunify_1_1_quaternion}\index{unify::Quaternion@{unify::Quaternion}}
+
+
+{\ttfamily \#include $<$Quaternion.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classunify_1_1_quaternion_a5221f4c6d40d191004c5b34038ba8244}\label{classunify_1_1_quaternion_a5221f4c6d40d191004c5b34038ba8244} 
-{\bfseries Quaternion} (\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ axis, \mbox{\hyperlink{classunify_1_1_angle}{Angle}} angle)
+\mbox{\hyperlink{classunify_1_1_quaternion_abcc01358aada56ea5f0db4da18aaf77d}{Quaternion}} ()
 \item 
-\Hypertarget{classunify_1_1_quaternion_af1293ea7f1913326a47270aa3a2092fe}\label{classunify_1_1_quaternion_af1293ea7f1913326a47270aa3a2092fe} 
-{\bfseries Quaternion} (float x, float y, float z, float w)
+\mbox{\hyperlink{classunify_1_1_quaternion_a5221f4c6d40d191004c5b34038ba8244}{Quaternion}} (\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{axis}}, \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{angle}})
 \item 
-\Hypertarget{classunify_1_1_quaternion_a918bff17494e0e42a036325819e9df78}\label{classunify_1_1_quaternion_a918bff17494e0e42a036325819e9df78} 
-{\bfseries Quaternion} (const \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&quaternion)
+\mbox{\hyperlink{classunify_1_1_quaternion_af1293ea7f1913326a47270aa3a2092fe}{Quaternion}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{classunify_1_1_quaternion_a4385f0b63d6f75e5940dffac3a9cf389}{x}}, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{classunify_1_1_quaternion_addc3a5572136ed21de58c00c8bd62fc4}{y}}, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{classunify_1_1_quaternion_aaca0e13b5954ce3eabdf8015cbb9248d}{z}}, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{classunify_1_1_quaternion_ae63503428f38ba23e731eb770d674e88}{w}})
 \item 
-\Hypertarget{classunify_1_1_quaternion_a6feac54dd55d932551e6ae14a5df5978}\label{classunify_1_1_quaternion_a6feac54dd55d932551e6ae14a5df5978} 
-{\bfseries Quaternion} (class \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} m)
+\mbox{\hyperlink{classunify_1_1_quaternion_a918bff17494e0e42a036325819e9df78}{Quaternion}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{quaternion}})
 \item 
-\Hypertarget{classunify_1_1_quaternion_a80d4ac93f2b06917a042a145fe313260}\label{classunify_1_1_quaternion_a80d4ac93f2b06917a042a145fe313260} 
-bool {\bfseries Is\+Identity} () const
+\mbox{\hyperlink{classunify_1_1_quaternion_a6feac54dd55d932551e6ae14a5df5978}{Quaternion}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{class}} \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} m)
 \item 
-\Hypertarget{classunify_1_1_quaternion_aa5333ab28dbe4d5ae15ab5dbc36b90ca}\label{classunify_1_1_quaternion_aa5333ab28dbe4d5ae15ab5dbc36b90ca} 
-\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} {\bfseries Conjugate} () const
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} \mbox{\hyperlink{classunify_1_1_quaternion_a80d4ac93f2b06917a042a145fe313260}{Is\+Identity}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_quaternion_a16841b42b0aa39e8b95dc1a089405424}\label{classunify_1_1_quaternion_a16841b42b0aa39e8b95dc1a089405424} 
-\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} {\bfseries Normalize} () const
+\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{classunify_1_1_quaternion_aa5333ab28dbe4d5ae15ab5dbc36b90ca}{Conjugate}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_quaternion_a9478c1d5b0ed3f6aac728eb63726b410}\label{classunify_1_1_quaternion_a9478c1d5b0ed3f6aac728eb63726b410} 
-\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ {\bfseries Up} () const
+\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{classunify_1_1_quaternion_a16841b42b0aa39e8b95dc1a089405424}{Normalize}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_quaternion_ade16ddb01e1f1b9c958962809f5acf05}\label{classunify_1_1_quaternion_ade16ddb01e1f1b9c958962809f5acf05} 
-\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \& {\bfseries operator+=} (const \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&quaternion)
+\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \mbox{\hyperlink{classunify_1_1_quaternion_a9478c1d5b0ed3f6aac728eb63726b410}{Up}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_quaternion_a399b7e75ce51fed4e0baf313b407a060}\label{classunify_1_1_quaternion_a399b7e75ce51fed4e0baf313b407a060} 
-\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \& {\bfseries operator-\/=} (const \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&quaternion)
+\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{classunify_1_1_quaternion_ade16ddb01e1f1b9c958962809f5acf05}{operator+=}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{quaternion}})
 \item 
-\Hypertarget{classunify_1_1_quaternion_a81376331adb86908883b47776c92a508}\label{classunify_1_1_quaternion_a81376331adb86908883b47776c92a508} 
-\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \& {\bfseries operator\texorpdfstring{$\ast$}{*}=} (const \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&quaternion)
+\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{classunify_1_1_quaternion_a399b7e75ce51fed4e0baf313b407a060}{operator-\/=}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{quaternion}})
 \item 
-\Hypertarget{classunify_1_1_quaternion_af4b05a0af6e369bfb19ed329a8bdf01e}\label{classunify_1_1_quaternion_af4b05a0af6e369bfb19ed329a8bdf01e} 
-\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \& {\bfseries operator\texorpdfstring{$\ast$}{*}=} (float value)
+\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{classunify_1_1_quaternion_a81376331adb86908883b47776c92a508}{operator\texorpdfstring{$\ast$}{*}=}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{quaternion}})
 \item 
-\Hypertarget{classunify_1_1_quaternion_aff8e9a7e646a8ef1be99989bff486117}\label{classunify_1_1_quaternion_aff8e9a7e646a8ef1be99989bff486117} 
-\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} {\bfseries operator+} (const \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&quaternion) const
+\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{classunify_1_1_quaternion_af4b05a0af6e369bfb19ed329a8bdf01e}{operator\texorpdfstring{$\ast$}{*}=}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} value)
 \item 
-\Hypertarget{classunify_1_1_quaternion_a70a6978ea48391640472057f6061d791}\label{classunify_1_1_quaternion_a70a6978ea48391640472057f6061d791} 
-\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} {\bfseries operator-\/} (const \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&quaternion) const
+\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{classunify_1_1_quaternion_aff8e9a7e646a8ef1be99989bff486117}{operator+}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{quaternion}}) \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_quaternion_a076aa0bbfd3a1fbceead26c64e19e34e}\label{classunify_1_1_quaternion_a076aa0bbfd3a1fbceead26c64e19e34e} 
-\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} {\bfseries operator\texorpdfstring{$\ast$}{*}} (const \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&quaternion) const
+\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{classunify_1_1_quaternion_a70a6978ea48391640472057f6061d791}{operator-\/}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{quaternion}}) \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_quaternion_a9e15ef64957a40af761f507e9f5cf48a}\label{classunify_1_1_quaternion_a9e15ef64957a40af761f507e9f5cf48a} 
-\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} {\bfseries operator\texorpdfstring{$\ast$}{*}} (float value) const
+\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{classunify_1_1_quaternion_a076aa0bbfd3a1fbceead26c64e19e34e}{operator\texorpdfstring{$\ast$}{*}}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{quaternion}}) \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_quaternion_a584e02789cc5163e8e2b47d94bd6ead4}\label{classunify_1_1_quaternion_a584e02789cc5163e8e2b47d94bd6ead4} 
-bool {\bfseries operator==} (const \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&quaternion) const
+\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{classunify_1_1_quaternion_a9e15ef64957a40af761f507e9f5cf48a}{operator\texorpdfstring{$\ast$}{*}}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} value) \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_quaternion_ad558705fa3b89b525f0c7cbfab288781}\label{classunify_1_1_quaternion_ad558705fa3b89b525f0c7cbfab288781} 
-bool {\bfseries operator!=} (const \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&quaternion) const
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} \mbox{\hyperlink{classunify_1_1_quaternion_a584e02789cc5163e8e2b47d94bd6ead4}{operator==}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{quaternion}}) \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_quaternion_aaf71f89c5b496f3bd4700daa48351db4}\label{classunify_1_1_quaternion_aaf71f89c5b496f3bd4700daa48351db4} 
-\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ {\bfseries operator\texorpdfstring{$\ast$}{*}=} (\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ v) const
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} \mbox{\hyperlink{classunify_1_1_quaternion_ad558705fa3b89b525f0c7cbfab288781}{operator!=}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{quaternion}}) \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_quaternion_a40b4e20ef7e3e77df461dcdc9d353924}\label{classunify_1_1_quaternion_a40b4e20ef7e3e77df461dcdc9d353924} 
-std\+::string {\bfseries To\+String} () const
+\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \mbox{\hyperlink{classunify_1_1_quaternion_aaf71f89c5b496f3bd4700daa48351db4}{operator\texorpdfstring{$\ast$}{*}=}} (\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ v) \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
+\item 
+std\+::string \mbox{\hyperlink{classunify_1_1_quaternion_a40b4e20ef7e3e77df461dcdc9d353924}{To\+String}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classunify_1_1_quaternion_a4385f0b63d6f75e5940dffac3a9cf389}\label{classunify_1_1_quaternion_a4385f0b63d6f75e5940dffac3a9cf389} 
-float {\bfseries x}
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{classunify_1_1_quaternion_a4385f0b63d6f75e5940dffac3a9cf389}{x}}
 \item 
-\Hypertarget{classunify_1_1_quaternion_addc3a5572136ed21de58c00c8bd62fc4}\label{classunify_1_1_quaternion_addc3a5572136ed21de58c00c8bd62fc4} 
-float {\bfseries y}
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{classunify_1_1_quaternion_addc3a5572136ed21de58c00c8bd62fc4}{y}}
 \item 
-\Hypertarget{classunify_1_1_quaternion_aaca0e13b5954ce3eabdf8015cbb9248d}\label{classunify_1_1_quaternion_aaca0e13b5954ce3eabdf8015cbb9248d} 
-float {\bfseries z}
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{classunify_1_1_quaternion_aaca0e13b5954ce3eabdf8015cbb9248d}{z}}
 \item 
-\Hypertarget{classunify_1_1_quaternion_ae63503428f38ba23e731eb770d674e88}\label{classunify_1_1_quaternion_ae63503428f38ba23e731eb770d674e88} 
-float {\bfseries w}
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{classunify_1_1_quaternion_ae63503428f38ba23e731eb770d674e88}{w}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classunify_1_1_quaternion_a95c52f3cf7d3c49381745b7f132d7b57}\label{classunify_1_1_quaternion_a95c52f3cf7d3c49381745b7f132d7b57} 
-\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} {\bfseries Quaternion\+Identity} ()
+\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{classunify_1_1_quaternion_a95c52f3cf7d3c49381745b7f132d7b57}{Quaternion\+Identity}} ()
 \item 
-\Hypertarget{classunify_1_1_quaternion_a581941f3f11d536c5dea0c10c9d893fb}\label{classunify_1_1_quaternion_a581941f3f11d536c5dea0c10c9d893fb} 
-\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} {\bfseries Quaternion\+From\+Euler} (const \mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ float $>$ \&euler)
+\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{classunify_1_1_quaternion_a581941f3f11d536c5dea0c10c9d893fb}{Quaternion\+From\+Euler}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{euler}})
 \item 
-\Hypertarget{classunify_1_1_quaternion_ae215c6eb6e7be6d0f99c0068bb8ddf13}\label{classunify_1_1_quaternion_ae215c6eb6e7be6d0f99c0068bb8ddf13} 
-\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} {\bfseries Quaternion\+Slerp} (const \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&quaternionA, const \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&quaternionB, float mix)
+\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{classunify_1_1_quaternion_ae215c6eb6e7be6d0f99c0068bb8ddf13}{Quaternion\+Slerp}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{quaternionA}}, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{quaternionB}}, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{mix}})
 \item 
-\Hypertarget{classunify_1_1_quaternion_aa1b0eed14b685ab9f2f39baad5bd2c00}\label{classunify_1_1_quaternion_aa1b0eed14b685ab9f2f39baad5bd2c00} 
-\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} {\bfseries Quaternion\+Look\+At} (\mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ float $>$ eye, \mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ float $>$ at, \mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ float $>$ up)
+\mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{classunify_1_1_quaternion_aa1b0eed14b685ab9f2f39baad5bd2c00}{Quaternion\+Look\+At}} (\mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{eye}}, \mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{at}}, \mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{up}})
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classunify_1_1_quaternion_abcc01358aada56ea5f0db4da18aaf77d}\label{classunify_1_1_quaternion_abcc01358aada56ea5f0db4da18aaf77d} 
+\index{unify::Quaternion@{unify::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_quaternion_a5221f4c6d40d191004c5b34038ba8244}\label{classunify_1_1_quaternion_a5221f4c6d40d191004c5b34038ba8244} 
+\index{unify::Quaternion@{unify::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$}]{axis,  }\item[{\mbox{\hyperlink{classunify_1_1_angle}{Angle}}}]{angle }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_quaternion_af1293ea7f1913326a47270aa3a2092fe}\label{classunify_1_1_quaternion_af1293ea7f1913326a47270aa3a2092fe} 
+\index{unify::Quaternion@{unify::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}}}]{x,  }\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}}}]{y,  }\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}}}]{z,  }\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}}}]{w }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_quaternion_a918bff17494e0e42a036325819e9df78}\label{classunify_1_1_quaternion_a918bff17494e0e42a036325819e9df78} 
+\index{unify::Quaternion@{unify::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&}]{quaternion }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_quaternion_a6feac54dd55d932551e6ae14a5df5978}\label{classunify_1_1_quaternion_a6feac54dd55d932551e6ae14a5df5978} 
+\index{unify::Quaternion@{unify::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{class}} \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}}]{m }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classunify_1_1_quaternion_aa5333ab28dbe4d5ae15ab5dbc36b90ca}\label{classunify_1_1_quaternion_aa5333ab28dbe4d5ae15ab5dbc36b90ca} 
+\index{unify::Quaternion@{unify::Quaternion}!Conjugate@{Conjugate}}
+\index{Conjugate@{Conjugate}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Conjugate()}{Conjugate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} Quaternion\+::\+Conjugate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_quaternion_a80d4ac93f2b06917a042a145fe313260}\label{classunify_1_1_quaternion_a80d4ac93f2b06917a042a145fe313260} 
+\index{unify::Quaternion@{unify::Quaternion}!IsIdentity@{IsIdentity}}
+\index{IsIdentity@{IsIdentity}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{IsIdentity()}{IsIdentity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} Quaternion\+::\+Is\+Identity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_quaternion_a16841b42b0aa39e8b95dc1a089405424}\label{classunify_1_1_quaternion_a16841b42b0aa39e8b95dc1a089405424} 
+\index{unify::Quaternion@{unify::Quaternion}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} Quaternion\+::\+Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_quaternion_ad558705fa3b89b525f0c7cbfab288781}\label{classunify_1_1_quaternion_ad558705fa3b89b525f0c7cbfab288781} 
+\index{unify::Quaternion@{unify::Quaternion}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} Quaternion\+::operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&}]{quaternion }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_quaternion_a076aa0bbfd3a1fbceead26c64e19e34e}\label{classunify_1_1_quaternion_a076aa0bbfd3a1fbceead26c64e19e34e} 
+\index{unify::Quaternion@{unify::Quaternion}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} Quaternion\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&}]{quaternion }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_quaternion_a9e15ef64957a40af761f507e9f5cf48a}\label{classunify_1_1_quaternion_a9e15ef64957a40af761f507e9f5cf48a} 
+\index{unify::Quaternion@{unify::Quaternion}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} Quaternion\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}}}]{value }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_quaternion_a81376331adb86908883b47776c92a508}\label{classunify_1_1_quaternion_a81376331adb86908883b47776c92a508} 
+\index{unify::Quaternion@{unify::Quaternion}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \& Quaternion\+::operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&}]{quaternion }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_quaternion_af4b05a0af6e369bfb19ed329a8bdf01e}\label{classunify_1_1_quaternion_af4b05a0af6e369bfb19ed329a8bdf01e} 
+\index{unify::Quaternion@{unify::Quaternion}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \& Quaternion\+::operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}}}]{value }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_quaternion_aaf71f89c5b496f3bd4700daa48351db4}\label{classunify_1_1_quaternion_aaf71f89c5b496f3bd4700daa48351db4} 
+\index{unify::Quaternion@{unify::Quaternion}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ Quaternion\+::operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$}]{v }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_quaternion_aff8e9a7e646a8ef1be99989bff486117}\label{classunify_1_1_quaternion_aff8e9a7e646a8ef1be99989bff486117} 
+\index{unify::Quaternion@{unify::Quaternion}!operator+@{operator+}}
+\index{operator+@{operator+}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} Quaternion\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&}]{quaternion }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_quaternion_ade16ddb01e1f1b9c958962809f5acf05}\label{classunify_1_1_quaternion_ade16ddb01e1f1b9c958962809f5acf05} 
+\index{unify::Quaternion@{unify::Quaternion}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \& Quaternion\+::operator+= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&}]{quaternion }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_quaternion_a70a6978ea48391640472057f6061d791}\label{classunify_1_1_quaternion_a70a6978ea48391640472057f6061d791} 
+\index{unify::Quaternion@{unify::Quaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} Quaternion\+::operator-\/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&}]{quaternion }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_quaternion_a399b7e75ce51fed4e0baf313b407a060}\label{classunify_1_1_quaternion_a399b7e75ce51fed4e0baf313b407a060} 
+\index{unify::Quaternion@{unify::Quaternion}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \& Quaternion\+::operator-\/= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&}]{quaternion }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_quaternion_a584e02789cc5163e8e2b47d94bd6ead4}\label{classunify_1_1_quaternion_a584e02789cc5163e8e2b47d94bd6ead4} 
+\index{unify::Quaternion@{unify::Quaternion}!operator==@{operator==}}
+\index{operator==@{operator==}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} Quaternion\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&}]{quaternion }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_quaternion_a40b4e20ef7e3e77df461dcdc9d353924}\label{classunify_1_1_quaternion_a40b4e20ef7e3e77df461dcdc9d353924} 
+\index{unify::Quaternion@{unify::Quaternion}!ToString@{ToString}}
+\index{ToString@{ToString}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily std\+::string Quaternion\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_quaternion_a9478c1d5b0ed3f6aac728eb63726b410}\label{classunify_1_1_quaternion_a9478c1d5b0ed3f6aac728eb63726b410} 
+\index{unify::Quaternion@{unify::Quaternion}!Up@{Up}}
+\index{Up@{Up}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Up()}{Up()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ Quaternion\+::\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classunify_1_1_quaternion_a581941f3f11d536c5dea0c10c9d893fb}\label{classunify_1_1_quaternion_a581941f3f11d536c5dea0c10c9d893fb} 
+\index{unify::Quaternion@{unify::Quaternion}!QuaternionFromEuler@{QuaternionFromEuler}}
+\index{QuaternionFromEuler@{QuaternionFromEuler}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{QuaternionFromEuler}{QuaternionFromEuler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} Quaternion\+From\+Euler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&}]{euler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{classunify_1_1_quaternion_a95c52f3cf7d3c49381745b7f132d7b57}\label{classunify_1_1_quaternion_a95c52f3cf7d3c49381745b7f132d7b57} 
+\index{unify::Quaternion@{unify::Quaternion}!QuaternionIdentity@{QuaternionIdentity}}
+\index{QuaternionIdentity@{QuaternionIdentity}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{QuaternionIdentity}{QuaternionIdentity}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} Quaternion\+Identity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{classunify_1_1_quaternion_aa1b0eed14b685ab9f2f39baad5bd2c00}\label{classunify_1_1_quaternion_aa1b0eed14b685ab9f2f39baad5bd2c00} 
+\index{unify::Quaternion@{unify::Quaternion}!QuaternionLookAt@{QuaternionLookAt}}
+\index{QuaternionLookAt@{QuaternionLookAt}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{QuaternionLookAt}{QuaternionLookAt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} Quaternion\+Look\+At (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$}]{eye,  }\item[{\mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$}]{at,  }\item[{\mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$}]{up }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{classunify_1_1_quaternion_ae215c6eb6e7be6d0f99c0068bb8ddf13}\label{classunify_1_1_quaternion_ae215c6eb6e7be6d0f99c0068bb8ddf13} 
+\index{unify::Quaternion@{unify::Quaternion}!QuaternionSlerp@{QuaternionSlerp}}
+\index{QuaternionSlerp@{QuaternionSlerp}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{QuaternionSlerp}{QuaternionSlerp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} Quaternion\+Slerp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&}]{quaternionA,  }\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}} \&}]{quaternionB,  }\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}}}]{mix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classunify_1_1_quaternion_ae63503428f38ba23e731eb770d674e88}\label{classunify_1_1_quaternion_ae63503428f38ba23e731eb770d674e88} 
+\index{unify::Quaternion@{unify::Quaternion}!w@{w}}
+\index{w@{w}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{w}{w}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} unify\+::\+Quaternion\+::w}
+
+\Hypertarget{classunify_1_1_quaternion_a4385f0b63d6f75e5940dffac3a9cf389}\label{classunify_1_1_quaternion_a4385f0b63d6f75e5940dffac3a9cf389} 
+\index{unify::Quaternion@{unify::Quaternion}!x@{x}}
+\index{x@{x}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} unify\+::\+Quaternion\+::x}
+
+\Hypertarget{classunify_1_1_quaternion_addc3a5572136ed21de58c00c8bd62fc4}\label{classunify_1_1_quaternion_addc3a5572136ed21de58c00c8bd62fc4} 
+\index{unify::Quaternion@{unify::Quaternion}!y@{y}}
+\index{y@{y}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} unify\+::\+Quaternion\+::y}
+
+\Hypertarget{classunify_1_1_quaternion_aaca0e13b5954ce3eabdf8015cbb9248d}\label{classunify_1_1_quaternion_aaca0e13b5954ce3eabdf8015cbb9248d} 
+\index{unify::Quaternion@{unify::Quaternion}!z@{z}}
+\index{z@{z}!unify::Quaternion@{unify::Quaternion}}
+\doxysubsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} unify\+::\+Quaternion\+::z}
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-unify/Quaternion.\+h\item 
-unify/Quaternion.\+cpp\end{DoxyCompactItemize}
+unify/\mbox{\hyperlink{_quaternion_8h}{Quaternion.\+h}}\item 
+unify/\mbox{\hyperlink{_quaternion_8cpp}{Quaternion.\+cpp}}\end{DoxyCompactItemize}

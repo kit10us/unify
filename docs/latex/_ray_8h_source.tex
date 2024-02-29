@@ -1,6 +1,6 @@
 \doxysection{Ray.\+h}
 \hypertarget{_ray_8h_source}{}\label{_ray_8h_source}\index{unify/Ray.h@{unify/Ray.h}}
-
+\mbox{\hyperlink{_ray_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
@@ -26,25 +26,25 @@
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
-\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <unify/V3.h>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_unify_8h}{unify/Unify.h}}>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_v3_8h}{unify/V3.h}}>}}
 \DoxyCodeLine{00027\ }
 \DoxyCodeLine{00028\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
 \DoxyCodeLine{00029\ \{}
 \DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_ray}{Ray}}}
 \DoxyCodeLine{00031\ \ \ \ \ \{}
 \DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ RayFromLineSegment(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ startPoint,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ endPoint\ );}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ RayFromOrginAndDirection(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ origin,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ direction\ );}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ \mbox{\hyperlink{classunify_1_1_ray_a167ceb61018182ea52e41c94267060db}{RayFromLineSegment}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{startPoint}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{endPoint}}\ );}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ \mbox{\hyperlink{classunify_1_1_ray_abb54685061a6ef51f1a5678bd706230a}{RayFromOrginAndDirection}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_ray_abe916018afe299184e25cd133e6e90d7}{origin}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_ray_a13a0fd828476061f157d7429f343d3f1}{direction}}\ );}
 \DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ origin;}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ direction;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \mbox{\hyperlink{classunify_1_1_ray_abe916018afe299184e25cd133e6e90d7}{origin}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \mbox{\hyperlink{classunify_1_1_ray_a13a0fd828476061f157d7429f343d3f1}{direction}};}
 \DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ InvDirection()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ int\ >}}\ Sign()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \mbox{\hyperlink{classunify_1_1_ray_a83b5228e023e7e59d0e0410bee481557}{InvDirection}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ int\ >}}\ \mbox{\hyperlink{classunify_1_1_ray_ad69c6f553a3f5aee9cd3d8b6e069b337}{Sign}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}();}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ originIn,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ directionIn\ );}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_ray_a2e3d2c29f2df4ab3da10da79d4acb852}{Ray}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_ray_a2e3d2c29f2df4ab3da10da79d4acb852}{Ray}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{originIn}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{directionIn}}\ );}
 \DoxyCodeLine{00044\ \ \ \ \ \};}
 \DoxyCodeLine{00045\ \}}
 

@@ -1,6 +1,6 @@
 \doxysection{Size.\+inl}
 \hypertarget{_size_8inl_source}{}\label{_size_8inl_source}\index{unify/Size.inl@{unify/Size.inl}}
-
+\mbox{\hyperlink{_size_8inl}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
@@ -25,202 +25,202 @@
 \DoxyCodeLine{00021\ }
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00024\ Size<\ T\ >::Size()}
+\DoxyCodeLine{00024\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >::Size}}()}
 \DoxyCodeLine{00025\ \{}
 \DoxyCodeLine{00026\ \}}
 \DoxyCodeLine{00027\ }
 \DoxyCodeLine{00028\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00029\ Size<\ T\ >::Size(\ T\ \_width,\ T\ \_height\ )}
+\DoxyCodeLine{00029\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >::Size}}(\ T\ \_width,\ T\ \_height\ )}
 \DoxyCodeLine{00030\ :\ width(\ \_width\ )}
 \DoxyCodeLine{00031\ ,\ height(\ \_height\ )}
 \DoxyCodeLine{00032\ \{}
 \DoxyCodeLine{00033\ \}}
 \DoxyCodeLine{00034\ }
 \DoxyCodeLine{00035\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00036\ Size<\ T\ >::Size(\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size\ )}
+\DoxyCodeLine{00036\ \mbox{\hyperlink{classunify_1_1_size_a05347a96b95d4b93dbe51d159c40c8db}{Size<\ T\ >::Size}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ size\ )}
 \DoxyCodeLine{00037\ :\ width(\ size.width\ )}
 \DoxyCodeLine{00038\ ,\ height(\ size.height\ )}
 \DoxyCodeLine{00039\ \{}
 \DoxyCodeLine{00040\ \}}
 \DoxyCodeLine{00041\ }
 \DoxyCodeLine{00042\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00043\ Size<\ T\ >::Size(\ std::string\ text\ )}
+\DoxyCodeLine{00043\ \mbox{\hyperlink{classunify_1_1_size_a05347a96b95d4b93dbe51d159c40c8db}{Size<\ T\ >::Size}}(\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ )}
 \DoxyCodeLine{00044\ \{}
-\DoxyCodeLine{00045\ \ \ \ \ std::vector<\ T\ >\ split\ =\ string::Split<\ T\ >(\ text,\ \textcolor{charliteral}{','}\ );}
-\DoxyCodeLine{00046\ \ \ \ \ width\ =\ split[\ 0\ ];}
-\DoxyCodeLine{00047\ \ \ \ \ height\ =\ split[\ 1\ ];}
+\DoxyCodeLine{00045\ \ \ \ \ std::vector<\ T\ >\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{split}}\ =\ string::Split<\ T\ >(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}},\ \textcolor{charliteral}{','}\ );}
+\DoxyCodeLine{00046\ \ \ \ \ width\ =\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{split}}[\ 0\ ];}
+\DoxyCodeLine{00047\ \ \ \ \ height\ =\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{split}}[\ 1\ ];}
 \DoxyCodeLine{00048\ \}}
 \DoxyCodeLine{00049\ }
 \DoxyCodeLine{00050\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00051\ T\ Size<\ T\ >::Width()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00051\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{classunify_1_1_size_a70e698af7c44623e79a012811749c61d}{Size<\ T\ >::Width}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00052\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{return}\ width;}
 \DoxyCodeLine{00054\ \}}
 \DoxyCodeLine{00055\ }
 \DoxyCodeLine{00056\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00057\ T\ Size<\ T\ >::Height()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00057\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{classunify_1_1_size_a09d9276f7cad1e44a10308c5c3cd804f}{Size<\ T\ >::Height}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00058\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{return}\ height;}
 \DoxyCodeLine{00060\ \}}
 \DoxyCodeLine{00061\ }
 \DoxyCodeLine{00062\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ Size<\ T\ >::Zero()}
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_size_a0d567c78d04a6757f6d9ec6e924e9546}{Size<\ T\ >::Zero}}()}
 \DoxyCodeLine{00064\ \{}
 \DoxyCodeLine{00065\ \ \ \ \ width\ =\ 0;}
 \DoxyCodeLine{00066\ \ \ \ \ height\ =\ 0;}
 \DoxyCodeLine{00067\ \}}
 \DoxyCodeLine{00068\ }
 \DoxyCodeLine{00069\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00070\ Size<\ T\ >\ \&\ Size<\ T\ >::operator\ =\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ vec\ )}
+\DoxyCodeLine{00070\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_size_ade1e12ccac1833dcdfedb02995a4f398}{Size<\ T\ >::operator\ =\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{vec}}\ )}
 \DoxyCodeLine{00071\ \{}
-\DoxyCodeLine{00072\ \ \ \ \ width\ =\ vec.x;}
-\DoxyCodeLine{00073\ \ \ \ \ height\ =\ vec.y;}
+\DoxyCodeLine{00072\ \ \ \ \ width\ =\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{vec}}.x;}
+\DoxyCodeLine{00073\ \ \ \ \ height\ =\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{vec}}.y;}
 \DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00075\ \}}
 \DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{00077\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00078\ Size<\ T\ >\ \&\ Size<\ T\ >::operator\ =\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size\ )}
+\DoxyCodeLine{00078\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_size_ade1e12ccac1833dcdfedb02995a4f398}{Size<\ T\ >::operator\ =\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ size\ )}
 \DoxyCodeLine{00079\ \{}
-\DoxyCodeLine{00080\ \ \ \ \ width\ =\ size.width;}
-\DoxyCodeLine{00081\ \ \ \ \ height\ =\ size.height;}
+\DoxyCodeLine{00080\ \ \ \ \ width\ =\ size.\mbox{\hyperlink{classunify_1_1_size_a9a451f9030bd55408acd1343a550af7c}{width}};}
+\DoxyCodeLine{00081\ \ \ \ \ height\ =\ size.\mbox{\hyperlink{classunify_1_1_size_a9d7f2081ffdd09aa01674fd480e2457e}{height}};}
 \DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00083\ \}}
 \DoxyCodeLine{00084\ }
 \DoxyCodeLine{00085\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00086\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >::operator\ +=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ size\ )}
+\DoxyCodeLine{00086\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_size_ab839ea9ce310448fcc238a312464abd5}{Size<\ T\ >::operator\ +=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ size\ )}
 \DoxyCodeLine{00087\ \{}
-\DoxyCodeLine{00088\ \ \ \ \ width\ +=\ size.width;}
-\DoxyCodeLine{00089\ \ \ \ \ height\ +=\ size.height;}
+\DoxyCodeLine{00088\ \ \ \ \ width\ +=\ size.\mbox{\hyperlink{classunify_1_1_size_a9a451f9030bd55408acd1343a550af7c}{width}};}
+\DoxyCodeLine{00089\ \ \ \ \ height\ +=\ size.\mbox{\hyperlink{classunify_1_1_size_a9d7f2081ffdd09aa01674fd480e2457e}{height}};}
 \DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00091\ \}}
 \DoxyCodeLine{00092\ }
 \DoxyCodeLine{00093\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00094\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >::operator\ -\/=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ size\ )}
+\DoxyCodeLine{00094\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_size_af14ae0957a68d1cefcce1106183f1001}{Size<\ T\ >::operator\ -\/=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ size\ )}
 \DoxyCodeLine{00095\ \{}
-\DoxyCodeLine{00096\ \ \ \ \ width\ -\/=\ size.width;}
-\DoxyCodeLine{00097\ \ \ \ \ height\ -\/=\ size.height;}
+\DoxyCodeLine{00096\ \ \ \ \ width\ -\/=\ size.\mbox{\hyperlink{classunify_1_1_size_a9a451f9030bd55408acd1343a550af7c}{width}};}
+\DoxyCodeLine{00097\ \ \ \ \ height\ -\/=\ size.\mbox{\hyperlink{classunify_1_1_size_a9d7f2081ffdd09aa01674fd480e2457e}{height}};}
 \DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00099\ \}}
 \DoxyCodeLine{00100\ }
 \DoxyCodeLine{00101\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00102\ Size<\ T\ >\ \&\ Size<\ T\ >::operator\ *=\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size\ )}
+\DoxyCodeLine{00102\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_size_a829e2f6604fb82683adbf0a690104108}{Size<\ T\ >::operator\ *=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ size\ )}
 \DoxyCodeLine{00103\ \{}
-\DoxyCodeLine{00104\ \ \ \ \ width\ *=\ size.width;}
-\DoxyCodeLine{00105\ \ \ \ \ height\ *=\ size.height;}
+\DoxyCodeLine{00104\ \ \ \ \ width\ *=\ size.\mbox{\hyperlink{classunify_1_1_size_a9a451f9030bd55408acd1343a550af7c}{width}};}
+\DoxyCodeLine{00105\ \ \ \ \ height\ *=\ size.\mbox{\hyperlink{classunify_1_1_size_a9d7f2081ffdd09aa01674fd480e2457e}{height}};}
 \DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00107\ \}}
 \DoxyCodeLine{00108\ }
 \DoxyCodeLine{00109\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00110\ Size<\ T\ >\ \&\ Size<\ T\ >::operator\ /=\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size\ )}
+\DoxyCodeLine{00110\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_size_a89b2bef40ab023c51c3d37360d31fc9f}{Size<\ T\ >::operator\ /=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ size\ )}
 \DoxyCodeLine{00111\ \{}
-\DoxyCodeLine{00112\ \ \ \ \ width\ /=\ size.width;}
-\DoxyCodeLine{00113\ \ \ \ \ height\ /=\ size.height;}
+\DoxyCodeLine{00112\ \ \ \ \ width\ /=\ size.\mbox{\hyperlink{classunify_1_1_size_a9a451f9030bd55408acd1343a550af7c}{width}};}
+\DoxyCodeLine{00113\ \ \ \ \ height\ /=\ size.\mbox{\hyperlink{classunify_1_1_size_a9d7f2081ffdd09aa01674fd480e2457e}{height}};}
 \DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00115\ \}}
 \DoxyCodeLine{00116\ }
 \DoxyCodeLine{00117\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00118\ Size<\ T\ >\ \&\ Size<\ T\ >::operator\ *=\ (\ T\ val\ )}
+\DoxyCodeLine{00118\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_size_a829e2f6604fb82683adbf0a690104108}{Size<\ T\ >::operator\ *=\ }}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{val}}\ )}
 \DoxyCodeLine{00119\ \{}
-\DoxyCodeLine{00120\ \ \ \ \ width\ *=\ val;}
-\DoxyCodeLine{00121\ \ \ \ \ height\ *=\ val;}
+\DoxyCodeLine{00120\ \ \ \ \ width\ *=\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{val}};}
+\DoxyCodeLine{00121\ \ \ \ \ height\ *=\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{val}};}
 \DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00123\ \}}
 \DoxyCodeLine{00124\ }
 \DoxyCodeLine{00125\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00126\ Size<\ T\ >\ \&\ Size<\ T\ >::operator\ /=\ (\ T\ val\ )}
+\DoxyCodeLine{00126\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_size_a89b2bef40ab023c51c3d37360d31fc9f}{Size<\ T\ >::operator\ /=\ }}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{val}}\ )}
 \DoxyCodeLine{00127\ \{}
-\DoxyCodeLine{00128\ \ \ \ \ width\ /=\ val;}
-\DoxyCodeLine{00129\ \ \ \ \ height\ /=\ val;}
+\DoxyCodeLine{00128\ \ \ \ \ width\ /=\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{val}};}
+\DoxyCodeLine{00129\ \ \ \ \ height\ /=\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{val}};}
 \DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00131\ \}}
 \DoxyCodeLine{00132\ }
 \DoxyCodeLine{00133\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00134\ Size<\ T\ >\ Size<\ T\ >::operator\ +\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00134\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_size_ad8cef370a182892c4034783d8c172329}{Size<\ T\ >::operator\ +\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ size)\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00135\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordflow}{return}\ Size<\ T\ >(\ width\ +\ size.width,\ height\ +\ size.height\ );}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{Size<\ T\ >}}(\ width\ +\ size.\mbox{\hyperlink{classunify_1_1_size_a9a451f9030bd55408acd1343a550af7c}{width}},\ height\ +\ size.\mbox{\hyperlink{classunify_1_1_size_a9d7f2081ffdd09aa01674fd480e2457e}{height}}\ );}
 \DoxyCodeLine{00137\ \}}
 \DoxyCodeLine{00138\ }
 \DoxyCodeLine{00139\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00140\ Size<\ T\ >\ Size<\ T\ >::operator\ -\/\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00140\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_size_ac929701975cc63ebf6a24eef647877a9}{Size<\ T\ >::operator\ -\/\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ size\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00141\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordflow}{return}\ Size<\ T\ >(\ width\ -\/\ size.width,\ height\ -\/\ size.height\ );}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{Size<\ T\ >}}(\ width\ -\/\ size.\mbox{\hyperlink{classunify_1_1_size_a9a451f9030bd55408acd1343a550af7c}{width}},\ height\ -\/\ size.\mbox{\hyperlink{classunify_1_1_size_a9d7f2081ffdd09aa01674fd480e2457e}{height}}\ );}
 \DoxyCodeLine{00143\ \}}
 \DoxyCodeLine{00144\ }
 \DoxyCodeLine{00145\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00146\ Size<\ T\ >\ Size<\ T\ >::operator\ *\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00146\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_size_ac91a689c73f5dd6cf750621b43fe5aa3}{Size<\ T\ >::operator\ *\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ size\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00147\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordflow}{return}\ Size<\ T\ >(\ width\ *\ size.width,\ height\ *\ size.height\ );}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{Size<\ T\ >}}(\ width\ *\ size.\mbox{\hyperlink{classunify_1_1_size_a9a451f9030bd55408acd1343a550af7c}{width}},\ height\ *\ size.\mbox{\hyperlink{classunify_1_1_size_a9d7f2081ffdd09aa01674fd480e2457e}{height}}\ );}
 \DoxyCodeLine{00149\ \}}
 \DoxyCodeLine{00150\ }
 \DoxyCodeLine{00151\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00152\ Size<\ T\ >\ Size<\ T\ >::operator\ /\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\ \&\ size\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00152\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_size_a6aab408f139772f271fec6dc04eae790}{Size<\ T\ >::operator\ /\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \&\ size\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00153\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{return}\ Size<\ T\ >(\ width\ /\ size.width,\ height\ /\ size.height\ );}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{Size<\ T\ >}}(\ width\ /\ size.\mbox{\hyperlink{classunify_1_1_size_a9a451f9030bd55408acd1343a550af7c}{width}},\ height\ /\ size.\mbox{\hyperlink{classunify_1_1_size_a9d7f2081ffdd09aa01674fd480e2457e}{height}}\ );}
 \DoxyCodeLine{00155\ \}}
 \DoxyCodeLine{00156\ }
 \DoxyCodeLine{00157\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00158\ Size<\ T\ >\ Size<\ T\ >::operator\ *\ (\ T\ val\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00158\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_size_ac91a689c73f5dd6cf750621b43fe5aa3}{Size<\ T\ >::operator\ *\ }}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{val}}\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00159\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordflow}{return}\ Size<\ T\ >(\ width\ *\ val,\ height\ *\ val\ );}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{Size<\ T\ >}}(\ width\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{val}},\ height\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{val}}\ );}
 \DoxyCodeLine{00161\ \}}
 \DoxyCodeLine{00162\ }
 \DoxyCodeLine{00163\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00164\ Size<\ T\ >\ Size<\ T\ >::operator\ /\ (\ T\ val\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00164\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_size_a6aab408f139772f271fec6dc04eae790}{Size<\ T\ >::operator\ /\ }}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{val}}\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00165\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordflow}{return}\ Size<\ T\ >(\ width\ /\ val,\ height\ /\ val\ );}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{Size<\ T\ >}}(\ width\ /\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{val}},\ height\ /\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{val}}\ );}
 \DoxyCodeLine{00167\ \}}
 \DoxyCodeLine{00168\ }
 \DoxyCodeLine{00169\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00170\ \textcolor{keywordtype}{bool}\ Size<\ T\ >::operator\ ==\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\&\ size\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00170\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_size_a10eae4a968a58c7e686dff356cdd6ce2}{Size<\ T\ >::operator\ ==\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\&\ size\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00171\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{return}(\ width\ ==\ size.width\ \&\&\ height\ ==\ size.height\ );}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{return}(\ width\ ==\ size.\mbox{\hyperlink{classunify_1_1_size_a9a451f9030bd55408acd1343a550af7c}{width}}\ \&\&\ height\ ==\ size.\mbox{\hyperlink{classunify_1_1_size_a9d7f2081ffdd09aa01674fd480e2457e}{height}}\ );}
 \DoxyCodeLine{00173\ \}}
 \DoxyCodeLine{00174\ }
 \DoxyCodeLine{00175\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00176\ \textcolor{keywordtype}{bool}\ Size<\ T\ >::operator\ !=\ (\ \textcolor{keyword}{const}\ Size<\ T\ >\&\ size\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00176\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_size_a8db7dfbeef6093307592f7994763bec2}{Size<\ T\ >::operator\ !=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >}}\&\ size\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00177\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordflow}{return}(\ width\ !=\ size.width\ ||\ height\ !=\ size.height\ );}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordflow}{return}(\ width\ !=\ size.\mbox{\hyperlink{classunify_1_1_size_a9a451f9030bd55408acd1343a550af7c}{width}}\ ||\ height\ !=\ size.\mbox{\hyperlink{classunify_1_1_size_a9d7f2081ffdd09aa01674fd480e2457e}{height}}\ );}
 \DoxyCodeLine{00179\ \}}
 \DoxyCodeLine{00180\ }
 \DoxyCodeLine{00181\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00182\ std::string\ Size<\ T\ >::ToString()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00182\ std::string\ \mbox{\hyperlink{classunify_1_1_size_a117ab5e2a0c87f2ec26ebcecf0b9d307}{Size<\ T\ >::ToString}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00183\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordflow}{return}\ Cast<\ std::string\ >(\ width\ )\ +\ \textcolor{stringliteral}{"{},\ "{}}\ +\ Cast<\ std::string\ >(\ height\ );}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{Cast<\ std::string\ >}}(\ width\ )\ +\ \textcolor{stringliteral}{"{},\ "{}}\ +\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{Cast<\ std::string\ >}}(\ height\ );}
 \DoxyCodeLine{00185\ \}}
 \DoxyCodeLine{00186\ }
 \DoxyCodeLine{00187\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00188\ T\ Size<\ T\ >::Units()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00188\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{classunify_1_1_size_a2807ff8da89c6a68f7064d09f5ece190}{Size<\ T\ >::Units}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00189\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordflow}{return}\ width\ *\ height;}
 \DoxyCodeLine{00191\ \}}
 \DoxyCodeLine{00192\ }
 \DoxyCodeLine{00193\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00194\ T\ Size<\ T\ >::LinearIndex(\ T\ h,\ T\ v\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00194\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{classunify_1_1_size_ae5d364063e0cc22613e444e7f1dc7595}{Size<\ T\ >::LinearIndex}}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{h}},\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ v\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00195\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordflow}{return}\ h\ +\ v\ *\ width;}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{h}}\ +\ v\ *\ width;}
 \DoxyCodeLine{00197\ \}}
 \DoxyCodeLine{00198\ }
 \DoxyCodeLine{00199\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00200\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >::LinearToV2}}(\ T\ index\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00200\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_size_aa93653c26f39a2b53748b32a9f3cfc12}{Size<\ T\ >::LinearToV2}}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{index}}\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00201\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00202\ \ \ \ \ T\ x\ =\ index\ /\ width;}
-\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}(\ x,\ index\ -\/\ (\ x\ *\ width\ )\ );}
+\DoxyCodeLine{00202\ \ \ \ \ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ x\ =\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{index}}\ /\ width;}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ T\ >}}(\ x,\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{index}}\ -\/\ (\ x\ *\ width\ )\ );}
 \DoxyCodeLine{00204\ \}}
 \DoxyCodeLine{00205\ }
 \DoxyCodeLine{00206\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00207\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classunify_1_1_size}{Size<\ T\ >::AspectRatioHW}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00207\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classunify_1_1_size_a24d68aa421e799ecf3f6cd105eb3ad58}{Size<\ T\ >::AspectRatioHW}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00208\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{float})height\ /\ width;}
 \DoxyCodeLine{00210\ \}}
 \DoxyCodeLine{00211\ }
 \DoxyCodeLine{00212\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00213\ \textcolor{keywordtype}{float}\ Size<\ T\ >::AspectRatioWH()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00213\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classunify_1_1_size_ad9777ffba2828e63b570549fc15679f3}{Size<\ T\ >::AspectRatioWH}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00214\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{float})width\ /\ height;}
 \DoxyCodeLine{00216\ \}}
 \DoxyCodeLine{00217\ }
 \DoxyCodeLine{00218\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00219\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_size}{unify::Size<\ T\ >::Center}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00219\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_size_a5ca3039631bbf25549705ae77d924d95}{unify::Size<\ T\ >::Center}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00220\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classunify_1_1_v2}{unify::V2<\ T\ >}}(\ width\ /\ 2,\ height\ /\ 2\ );}
 \DoxyCodeLine{00222\ \}}

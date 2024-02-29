@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['open_0',['Open',['../classunify_1_1_file_stream.html#abc903dfb8b3dbc4a687c961c4f4258e6',1,'unify::FileStream']]],
-  ['orbit_1',['Orbit',['../classunify_1_1_frame.html#ae2efdcd61e03e97c76d0397a7859a807',1,'unify::Frame']]],
-  ['originallocal_2',['OriginalLocal',['../classunify_1_1_frame_set_instance.html#a311049bc945f9ad7fed2ac66ce69b1e4',1,'unify::FrameSetInstance']]],
-  ['originalmodel_3',['OriginalModel',['../classunify_1_1_frame_set_instance.html#a71f3f0496afb25388e3aaaf88f5f0f88',1,'unify::FrameSetInstance']]],
-  ['output_4',['Output',['../classunify_1_1test_1_1_default_output_handler.html#aac25752ed7c0d7f5af5a6c5fa139b907',1,'unify::test::DefaultOutputHandler::Output()'],['../classunify_1_1test_1_1_i_output_handler.html#aa02e290acb790c75bca4cfe51abd6f1e',1,'unify::test::IOutputHandler::Output()']]]
+  ['name_0',['Name',['../classunify_1_1_frame_set.html#a2eb8ec90d296621e728eca948aea852d',1,'unify::FrameSet::Name()'],['../classunify_1_1_link_list.html#a455f1dfa9a16941d16ece6bea5b9ba4f',1,'unify::LinkList::Name(const T *pItem)'],['../classunify_1_1_link_list.html#a2369e8ab867c1831436eefb77375863b',1,'unify::LinkList::Name(unsigned int uIndex)'],['../classunify_1_1_query.html#a98bb2c184ec526e1110c21eb279a35dd',1,'unify::Query::Name()'],['../classunify_1_1_t_link.html#a04add6622c647c5fb350a691a846b9a2',1,'unify::TLink::Name() const']]],
+  ['next_1',['Next',['../classunify_1_1_t_link.html#a64eced9ed06346ee224ffc6118186963',1,'unify::TLink::Next()'],['../classunify_1_1_t_link.html#aec6f09d051931d11ede3da18c4e45835',1,'unify::TLink::Next() const']]],
+  ['normalize_2',['Normalize',['../classunify_1_1_angle.html#a30dff071dfcf2c23644b933a72a0d03d',1,'unify::Angle::Normalize()'],['../classunify_1_1_path.html#a5e13b5d0dbcc69908b0af09fe1c7391d',1,'unify::Path::Normalize()'],['../classunify_1_1_quaternion.html#a16841b42b0aa39e8b95dc1a089405424',1,'unify::Quaternion::Normalize()'],['../classunify_1_1_v2.html#a13dcdf8936d29fff11e9f6df07660379',1,'unify::V2::Normalize()'],['../classunify_1_1_v3.html#a4cd378715a49fa0ce8207ccff2b4b1f0',1,'unify::V3::Normalize()'],['../classunify_1_1_v3.html#ae5cccd0a22f32933442a7c8478868543',1,'unify::V3::Normalize(const V3&lt; T &gt; &amp;norm)'],['../classunify_1_1_v4.html#a454c67fbd289b1ef85833c2345c60507',1,'unify::V4::Normalize()']]]
 ];

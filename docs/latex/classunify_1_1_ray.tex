@@ -1,38 +1,94 @@
 \doxysection{unify\+::Ray Class Reference}
 \hypertarget{classunify_1_1_ray}{}\label{classunify_1_1_ray}\index{unify::Ray@{unify::Ray}}
+
+
+{\ttfamily \#include $<$Ray.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classunify_1_1_ray_a83b5228e023e7e59d0e0410bee481557}\label{classunify_1_1_ray_a83b5228e023e7e59d0e0410bee481557} 
-\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ {\bfseries Inv\+Direction} () const
+\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \mbox{\hyperlink{classunify_1_1_ray_a83b5228e023e7e59d0e0410bee481557}{Inv\+Direction}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_ray_ad69c6f553a3f5aee9cd3d8b6e069b337}\label{classunify_1_1_ray_ad69c6f553a3f5aee9cd3d8b6e069b337} 
-\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ int $>$ {\bfseries Sign} () const
+\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{int}} $>$ \mbox{\hyperlink{classunify_1_1_ray_ad69c6f553a3f5aee9cd3d8b6e069b337}{Sign}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_ray_ae479e9bf62a5651988cd5c515670b31b}\label{classunify_1_1_ray_ae479e9bf62a5651988cd5c515670b31b} 
-{\bfseries Ray} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&origin\+In, const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&direction\+In)
+\mbox{\hyperlink{classunify_1_1_ray_a2e3d2c29f2df4ab3da10da79d4acb852}{Ray}} ()
+\item 
+\mbox{\hyperlink{classunify_1_1_ray_ae479e9bf62a5651988cd5c515670b31b}{Ray}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{origin\+In}}, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{direction\+In}})
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classunify_1_1_ray_a167ceb61018182ea52e41c94267060db}\label{classunify_1_1_ray_a167ceb61018182ea52e41c94267060db} 
-static \mbox{\hyperlink{classunify_1_1_ray}{Ray}} {\bfseries Ray\+From\+Line\+Segment} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&start\+Point, const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&end\+Point)
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{static}} \mbox{\hyperlink{classunify_1_1_ray}{Ray}} \mbox{\hyperlink{classunify_1_1_ray_a167ceb61018182ea52e41c94267060db}{Ray\+From\+Line\+Segment}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{start\+Point}}, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{end\+Point}})
 \item 
-\Hypertarget{classunify_1_1_ray_abb54685061a6ef51f1a5678bd706230a}\label{classunify_1_1_ray_abb54685061a6ef51f1a5678bd706230a} 
-static \mbox{\hyperlink{classunify_1_1_ray}{Ray}} {\bfseries Ray\+From\+Orgin\+And\+Direction} (const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&origin, const \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ \&direction)
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{static}} \mbox{\hyperlink{classunify_1_1_ray}{Ray}} \mbox{\hyperlink{classunify_1_1_ray_abb54685061a6ef51f1a5678bd706230a}{Ray\+From\+Orgin\+And\+Direction}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&\mbox{\hyperlink{classunify_1_1_ray_abe916018afe299184e25cd133e6e90d7}{origin}}, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&\mbox{\hyperlink{classunify_1_1_ray_a13a0fd828476061f157d7429f343d3f1}{direction}})
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classunify_1_1_ray_abe916018afe299184e25cd133e6e90d7}\label{classunify_1_1_ray_abe916018afe299184e25cd133e6e90d7} 
-\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ {\bfseries origin}
+\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \mbox{\hyperlink{classunify_1_1_ray_abe916018afe299184e25cd133e6e90d7}{origin}}
 \item 
-\Hypertarget{classunify_1_1_ray_a13a0fd828476061f157d7429f343d3f1}\label{classunify_1_1_ray_a13a0fd828476061f157d7429f343d3f1} 
-\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ float $>$ {\bfseries direction}
+\mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \mbox{\hyperlink{classunify_1_1_ray_a13a0fd828476061f157d7429f343d3f1}{direction}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classunify_1_1_ray_a2e3d2c29f2df4ab3da10da79d4acb852}\label{classunify_1_1_ray_a2e3d2c29f2df4ab3da10da79d4acb852} 
+\index{unify::Ray@{unify::Ray}!Ray@{Ray}}
+\index{Ray@{Ray}!unify::Ray@{unify::Ray}}
+\doxysubsubsection{\texorpdfstring{Ray()}{Ray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Ray\+::\+Ray (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_ray_ae479e9bf62a5651988cd5c515670b31b}\label{classunify_1_1_ray_ae479e9bf62a5651988cd5c515670b31b} 
+\index{unify::Ray@{unify::Ray}!Ray@{Ray}}
+\index{Ray@{Ray}!unify::Ray@{unify::Ray}}
+\doxysubsubsection{\texorpdfstring{Ray()}{Ray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Ray\+::\+Ray (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&}]{origin\+In,  }\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&}]{direction\+In }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classunify_1_1_ray_a83b5228e023e7e59d0e0410bee481557}\label{classunify_1_1_ray_a83b5228e023e7e59d0e0410bee481557} 
+\index{unify::Ray@{unify::Ray}!InvDirection@{InvDirection}}
+\index{InvDirection@{InvDirection}!unify::Ray@{unify::Ray}}
+\doxysubsubsection{\texorpdfstring{InvDirection()}{InvDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ Ray\+::\+Inv\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_ray_a167ceb61018182ea52e41c94267060db}\label{classunify_1_1_ray_a167ceb61018182ea52e41c94267060db} 
+\index{unify::Ray@{unify::Ray}!RayFromLineSegment@{RayFromLineSegment}}
+\index{RayFromLineSegment@{RayFromLineSegment}!unify::Ray@{unify::Ray}}
+\doxysubsubsection{\texorpdfstring{RayFromLineSegment()}{RayFromLineSegment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_ray}{Ray}} Ray\+::\+Ray\+From\+Line\+Segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&}]{start\+Point,  }\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&}]{end\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classunify_1_1_ray_abb54685061a6ef51f1a5678bd706230a}\label{classunify_1_1_ray_abb54685061a6ef51f1a5678bd706230a} 
+\index{unify::Ray@{unify::Ray}!RayFromOrginAndDirection@{RayFromOrginAndDirection}}
+\index{RayFromOrginAndDirection@{RayFromOrginAndDirection}!unify::Ray@{unify::Ray}}
+\doxysubsubsection{\texorpdfstring{RayFromOrginAndDirection()}{RayFromOrginAndDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_ray}{Ray}} Ray\+::\+Ray\+From\+Orgin\+And\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&}]{origin,  }\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classunify_1_1_ray_ad69c6f553a3f5aee9cd3d8b6e069b337}\label{classunify_1_1_ray_ad69c6f553a3f5aee9cd3d8b6e069b337} 
+\index{unify::Ray@{unify::Ray}!Sign@{Sign}}
+\index{Sign@{Sign}!unify::Ray@{unify::Ray}}
+\doxysubsubsection{\texorpdfstring{Sign()}{Sign()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{int}} $>$ Ray\+::\+Sign (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classunify_1_1_ray_a13a0fd828476061f157d7429f343d3f1}\label{classunify_1_1_ray_a13a0fd828476061f157d7429f343d3f1} 
+\index{unify::Ray@{unify::Ray}!direction@{direction}}
+\index{direction@{direction}!unify::Ray@{unify::Ray}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ unify\+::\+Ray\+::direction}
+
+\Hypertarget{classunify_1_1_ray_abe916018afe299184e25cd133e6e90d7}\label{classunify_1_1_ray_abe916018afe299184e25cd133e6e90d7} 
+\index{unify::Ray@{unify::Ray}!origin@{origin}}
+\index{origin@{origin}!unify::Ray@{unify::Ray}}
+\doxysubsubsection{\texorpdfstring{origin}{origin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ unify\+::\+Ray\+::origin}
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-unify/Ray.\+h\item 
-unify/Ray.\+cpp\end{DoxyCompactItemize}
+unify/\mbox{\hyperlink{_ray_8h}{Ray.\+h}}\item 
+unify/\mbox{\hyperlink{_ray_8cpp}{Ray.\+cpp}}\end{DoxyCompactItemize}

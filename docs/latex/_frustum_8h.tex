@@ -1,0 +1,36 @@
+\doxysection{unify/\+Frustum.h File Reference}
+\hypertarget{_frustum_8h}{}\label{_frustum_8h}\index{unify/Frustum.h@{unify/Frustum.h}}
+{\ttfamily \#include $<$unify/\+Matrix.\+h$>$}\newline
+{\ttfamily \#include $<$unify/\+Plane.\+h$>$}\newline
+{\ttfamily \#include $<$unify/\+BBox.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classunify_1_1_frustum_corner}{unify\+::\+Frustum\+Corner}}
+\begin{DoxyCompactList}\small\item\em Enumeration of the corners of a frustum. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classunify_1_1_frustum_plane}{unify\+::\+Frustum\+Plane}}
+\begin{DoxyCompactList}\small\item\em Enumeration of the planes of a frustum. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classunify_1_1_frustum}{unify\+::\+Frustum}}
+\begin{DoxyCompactList}\small\item\em A view frustum, typically used for view point occlusion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceunify}{unify}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespaceunify_af385be843c3779feb4af332ac46d2a3f}{unify\+::\+Cull\+State}} \{ \newline
+\mbox{\hyperlink{namespaceunify_af385be843c3779feb4af332ac46d2a3fa88183b946cc5f0e8c96b2e66e1c74a7e}{unify\+::\+Unknown}}
+, \mbox{\hyperlink{namespaceunify_af385be843c3779feb4af332ac46d2a3fa9b6d3000134648fc9f1e71094ae0847d}{unify\+::\+Inside}}
+, \mbox{\hyperlink{namespaceunify_af385be843c3779feb4af332ac46d2a3fa76fbf0ccd7fcd64879c2ff2119dc15a4}{unify\+::\+Outside}}
+, \mbox{\hyperlink{namespaceunify_af385be843c3779feb4af332ac46d2a3facce9e1431588b8159398347b6baa2313}{unify\+::\+Inside\+Slow}}
+, \newline
+\mbox{\hyperlink{namespaceunify_af385be843c3779feb4af332ac46d2a3fadd62db4ff5d4d00340bf8e1f362a38ed}{unify\+::\+Outside\+Slow}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} \mbox{\hyperlink{namespaceunify_a9bc4ff0d4d6d8daace09140209a289d8}{unify\+::\+Edge\+Intersects\+Face}} (\mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{p\+Edges}}, \mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{p\+Face\+Points}}, \mbox{\hyperlink{classunify_1_1_plane}{unify\+::\+Plane}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{p\+Plane}})
+\end{DoxyCompactItemize}

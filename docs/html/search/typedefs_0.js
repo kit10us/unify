@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['flags_0',['Flags',['../namespaceunify.html#aae31856ee9b86baac184363c6052d1aa',1,'unify']]]
+  ['component_0',['Component',['../classunify_1_1_color.html#a28b48114f5fd2efb97a70dc3464e0f5d',1,'unify::Color']]]
 ];

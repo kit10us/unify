@@ -1,0 +1,44 @@
+\doxysection{unify/\+String.inl File Reference}
+\hypertarget{_string_8inl}{}\label{_string_8inl}\index{unify/String.inl@{unify/String.inl}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename foo , typename ... bar$>$ }\\bool \mbox{\hyperlink{_string_8inl_a7ce265010e13e31974a1de626c4a4a81}{String\+Is}} (std\+::string a, std\+::string b, std\+::string rest...)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{_string_8inl_a78a39e816a5c7ef95adc01fb11d9858f}{Split}} (std\+::string source\+String, const char delimitor)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{_string_8inl_aad3503055f582e5654cbed38699f1362}{Split}} (std\+::string source\+String, const std\+::vector$<$ char $>$ delimitors, bool include\+Empties)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{_string_8inl_a92443cbc7f32b1c60749ca47097566ac}{Split\+On\+Whitespace}} (std\+::string source\+String)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_string_8inl_a78a39e816a5c7ef95adc01fb11d9858f}\label{_string_8inl_a78a39e816a5c7ef95adc01fb11d9858f} 
+\index{String.inl@{String.inl}!Split@{Split}}
+\index{Split@{Split}!String.inl@{String.inl}}
+\doxysubsubsection{\texorpdfstring{Split()}{Split()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ T $>$ Split (\begin{DoxyParamCaption}\item[{std\+::string}]{source\+String,  }\item[{const char}]{delimitor }\end{DoxyParamCaption})}
+
+\Hypertarget{_string_8inl_aad3503055f582e5654cbed38699f1362}\label{_string_8inl_aad3503055f582e5654cbed38699f1362} 
+\index{String.inl@{String.inl}!Split@{Split}}
+\index{Split@{Split}!String.inl@{String.inl}}
+\doxysubsubsection{\texorpdfstring{Split()}{Split()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ T $>$ Split (\begin{DoxyParamCaption}\item[{std\+::string}]{source\+String,  }\item[{const std\+::vector$<$ char $>$}]{delimitors,  }\item[{bool}]{include\+Empties }\end{DoxyParamCaption})}
+
+\Hypertarget{_string_8inl_a92443cbc7f32b1c60749ca47097566ac}\label{_string_8inl_a92443cbc7f32b1c60749ca47097566ac} 
+\index{String.inl@{String.inl}!SplitOnWhitespace@{SplitOnWhitespace}}
+\index{SplitOnWhitespace@{SplitOnWhitespace}!String.inl@{String.inl}}
+\doxysubsubsection{\texorpdfstring{SplitOnWhitespace()}{SplitOnWhitespace()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ T $>$ Split\+On\+Whitespace (\begin{DoxyParamCaption}\item[{std\+::string}]{source\+String }\end{DoxyParamCaption})}
+
+\Hypertarget{_string_8inl_a7ce265010e13e31974a1de626c4a4a81}\label{_string_8inl_a7ce265010e13e31974a1de626c4a4a81} 
+\index{String.inl@{String.inl}!StringIs@{StringIs}}
+\index{StringIs@{StringIs}!String.inl@{String.inl}}
+\doxysubsubsection{\texorpdfstring{StringIs()}{StringIs()}}
+{\footnotesize\ttfamily template$<$typename foo , typename ... bar$>$ \\
+bool String\+Is (\begin{DoxyParamCaption}\item[{std\+::string}]{a,  }\item[{std\+::string}]{b,  }\item[{std\+::string}]{rest... }\end{DoxyParamCaption})}
+

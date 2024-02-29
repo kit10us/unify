@@ -1,6 +1,6 @@
 \doxysection{Cast.\+h}
 \hypertarget{_cast_8h_source}{}\label{_cast_8h_source}\index{unify/Cast.h@{unify/Cast.h}}
-
+\mbox{\hyperlink{_cast_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
@@ -26,9 +26,9 @@
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
-\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <unify/Path.h>}}
-\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <unify/TimeDelta.h>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_unify_8h}{unify/Unify.h}}>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_path_8h}{unify/Path.h}}>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_time_delta_8h}{unify/TimeDelta.h}}>}}
 \DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <typeinfo>}}
 \DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <cassert>}}
@@ -36,58 +36,58 @@
 \DoxyCodeLine{00032\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
 \DoxyCodeLine{00033\ \{}
 \DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ The\ default\ cast\ will\ throw\ (not\ a\ supported\ cast).}}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ TTo,\ \textcolor{keyword}{typename}\ TFrom\ >\ TTo\ Cast(\ \textcolor{keyword}{const}\ TFrom\ in\ );}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ TTo,\ \textcolor{keyword}{typename}\ TFrom\ >\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{TTo}}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{TFrom}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{in}}\ );}
 \DoxyCodeLine{00036\ }
 \DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ Casts\ from\ one\ type\ to\ std::string.}}
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ Cast(\ \textcolor{keyword}{const}\ std::string\ in\ );}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ Cast(\ \textcolor{keyword}{const}\ std::wstring\ in\ );}
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ in\ );}
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ in\ );}
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ in\ );}
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ in\ );}
-\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \_\_int64\ in\ );}
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ in\ );}
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ in\ );}
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ in\ );}
-\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ in\ );}
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{short}\ in\ );}
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ in\ );}
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ in\ );}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{in}}\ );}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ std::wstring\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{in}}\ );}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{in}}\ );}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{in}}\ );}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{in}}\ );}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{in}}\ );}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{\_\_int64}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{in}}\ );}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{in}}\ );}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{in}}\ );}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{in}}\ );}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{in}}\ );}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{in}}\ );}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{in}}\ );}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{in}}\ );}
 \DoxyCodeLine{00052\ }
 \DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ Casts\ from\ std::string\ to\ another\ type.}}
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{bool}\ Cast(\ \textcolor{keyword}{const}\ std::string\ text\ );}
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{char}\ Cast(\ \textcolor{keyword}{const}\ std::string\ text\ );}
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ Cast(\ \textcolor{keyword}{const}\ std::string\ text\ );}
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{int}\ Cast(\ \textcolor{keyword}{const}\ std::string\ text\ );}
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Cast(\ \textcolor{keyword}{const}\ std::string\ text\ );}
-\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{unsigned}\ \_\_int64\ Cast(\ \textcolor{keyword}{const}\ std::string\ text\ );}
-\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{float}\ Cast(\ \textcolor{keyword}{const}\ std::string\ text\ );}
-\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{double}\ Cast(\ \textcolor{keyword}{const}\ std::string\ text\ );}
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{wchar\_t}\ *\ Cast(\ \textcolor{keyword}{const}\ std::string\ text\ );}
-\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{short}\ Cast(\ \textcolor{keyword}{const}\ std::string\ text\ );}
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ Cast(\ \textcolor{keyword}{const}\ std::string\ text\ );}
-\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{template}<>\ std::wstring\ Cast(\ \textcolor{keyword}{const}\ std::string\ text\ );}
-\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{template}<>\ \mbox{\hyperlink{classunify_1_1_path}{unify::Path}}\ Cast(\ \textcolor{keyword}{const}\ std::string\ text\ );}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{\_\_int64}}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{wchar\_t}\ *\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{template}<>\ std::wstring\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{template}<>\ \mbox{\hyperlink{classunify_1_1_path}{unify::Path}}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
 \DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{bool}\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ text\ );}
-\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{char}\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ text\ );}
-\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ text\ );}
-\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{int}\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ text\ );}
-\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ text\ );}
-\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{unsigned}\ \_\_int64\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ text\ );}
-\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{float}\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ text\ );}
-\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{double}\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ text\ );}
-\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{wchar\_t}\ *\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ text\ );}
-\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ text\ );}
-\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ Cast(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *\ text\ );}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{\_\_int64}}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keywordtype}{wchar\_t}\ *\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{template}<>\ std::string\ \mbox{\hyperlink{namespaceunify_ad5d1421ffe84d8723a580a777a9c55b8}{Cast}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{wchar\_t}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
 \DoxyCodeLine{00079\ }
 \DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ Target,\ \textcolor{keyword}{typename}\ Source\ >}
-\DoxyCodeLine{00081\ \ \ \ \ Target\ polymorphic\_downcast(\ Source\ source\ )}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{Target}}\ \mbox{\hyperlink{namespaceunify_a43d2e815dd85c8938b09ded84b052d21}{polymorphic\_downcast}}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{Source}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{source}}\ )}
 \DoxyCodeLine{00082\ \ \ \ \ \{}
 \DoxyCodeLine{00083\ \textcolor{preprocessor}{\#ifdef\ \_DEBUG}}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ assert(\ \textcolor{keyword}{dynamic\_cast<}\ Target\ \textcolor{keyword}{>}(\ source\ )\ ==\ source\ );}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{assert}}(\ \textcolor{keyword}{dynamic\_cast<}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{Target}}\ \textcolor{keyword}{>}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{source}}\ )\ ==\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{source}}\ );}
 \DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}Target\ \textcolor{keyword}{>}(\ source\ );}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{Target}}\ \textcolor{keyword}{>}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{source}}\ );}
 \DoxyCodeLine{00087\ \ \ \ \ \}}
 \DoxyCodeLine{00088\ \}}
 

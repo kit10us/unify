@@ -1,0 +1,36 @@
+\doxysection{unify/\+Any.h File Reference}
+\hypertarget{_any_8h}{}\label{_any_8h}\index{unify/Any.h@{unify/Any.h}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$typeinfo$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classunify_1_1_any}{unify\+::\+Any}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classunify_1_1_any}{Any} allows us to simplify our interfaces when the type a function can consume is largely variable, or more importantly, extremely late, such as with an event system. Instead of creating tens to hundreds of member functions able to consume specific type, we generalize to to take an \doxylink{classunify_1_1_any}{Any} (think of it as an "{}anything"{}), then let the implementation verify the actual type and act accordingly. This pretty much just encapsulates RTTI and makes it feel more natural. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classunify_1_1bad__any__cast}{unify\+::bad\+\_\+any\+\_\+cast}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceunify}{unify}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} \mbox{\hyperlink{namespaceunify_a307711de33c218c1d30e4f47da2f14c0}{unify\+::swap}} (\mbox{\hyperlink{classunify_1_1_any}{Any}} \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{lhs}}, \mbox{\hyperlink{classunify_1_1_any}{Any}} \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{rhs}}) \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{noexcept}}
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{unify\+::any\+\_\+cast}} (\mbox{\hyperlink{classunify_1_1_any}{Any}} \texorpdfstring{$\ast$}{*}operand) noexcept
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\const Value\+Type \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespaceunify_a8c691e91859ea1162d24b0215bdb3d51}{unify\+::any\+\_\+cast}} (const \mbox{\hyperlink{classunify_1_1_any}{Any}} \texorpdfstring{$\ast$}{*}operand) noexcept
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type \mbox{\hyperlink{namespaceunify_ac9c6f388844576f1afef607728654a5a}{unify\+::any\+\_\+cast}} (\mbox{\hyperlink{classunify_1_1_any}{Any}} \&operand)
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type \mbox{\hyperlink{namespaceunify_a43a60fa2a5a185f3d198db197e943f74}{unify\+::any\+\_\+cast}} (const \mbox{\hyperlink{classunify_1_1_any}{Any}} \&operand)
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type \mbox{\hyperlink{namespaceunify_ad3d40f387f64b5bf706747a9ba67f1ec}{unify\+::any\+\_\+cast}} (\mbox{\hyperlink{classunify_1_1_any}{Any}} \&\&operand)
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typename}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{Value\+Type}} $>$ }\\\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{Value\+Type}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespaceunify_a8191da886b33c9d45a71460ebb684c94}{unify\+::unsafe\+\_\+any\+\_\+cast}} (\mbox{\hyperlink{classunify_1_1_any}{Any}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{operand}}) \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{noexcept}}
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typename}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{Value\+Type}} $>$ }\\\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{Value\+Type}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespaceunify_ad00561c21ed429afb015d08998ae98fc}{unify\+::unsafe\+\_\+any\+\_\+cast}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_any}{Any}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{operand}}) \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{noexcept}}
+\end{DoxyCompactItemize}

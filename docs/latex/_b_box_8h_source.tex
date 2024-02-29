@@ -1,6 +1,6 @@
 \doxysection{BBox.\+h}
 \hypertarget{_b_box_8h_source}{}\label{_b_box_8h_source}\index{unify/BBox.h@{unify/BBox.h}}
-
+\mbox{\hyperlink{_b_box_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
@@ -26,11 +26,11 @@
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
-\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <unify/V3.h>}}
-\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <unify/Size3.h>}}
-\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <unify/Ray.h>}}
-\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <unify/BSphere.h>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_unify_8h}{unify/Unify.h}}>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_v3_8h}{unify/V3.h}}>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_size3_8h}{unify/Size3.h}}>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_ray_8h}{unify/Ray.h}}>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_b_sphere_8h}{unify/BSphere.h}}>}}
 \DoxyCodeLine{00030\ }
 \DoxyCodeLine{00031\ \textcolor{preprocessor}{\#ifdef\ min}}
 \DoxyCodeLine{00032\ \textcolor{preprocessor}{\#undef\ min}}
@@ -46,48 +46,48 @@
 \DoxyCodeLine{00045\ \ \ \ \ \{}
 \DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Public\ members\ to\ reduce\ possible\ speed\ issues.}}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ sup;}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ inf;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_b_box_a713d7db8b80484376ce41c5453a6287e}{sup}};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_b_box_aba5489e9eb91ccbfd01929c789861ccd}{inf}};}
 \DoxyCodeLine{00050\ }
 \DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box_ae26e694ee88779b928e8d3726f8213a1}{BBox}}();}
 \DoxyCodeLine{00055\ }
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box_ae26e694ee88779b928e8d3726f8213a1}{BBox}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ inf,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ sup\ );}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box_ae26e694ee88779b928e8d3726f8213a1}{BBox}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_b_box_aba5489e9eb91ccbfd01929c789861ccd}{inf}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_b_box_a713d7db8b80484376ce41c5453a6287e}{sup}}\ );}
 \DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box_ae26e694ee88779b928e8d3726f8213a1}{BBox}}(\ T\ squareSize\ );}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box_ae26e694ee88779b928e8d3726f8213a1}{BBox}}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{squareSize}}\ );}
 \DoxyCodeLine{00065\ }
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ operator\ *\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ multiplicand\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ operator\ *=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ multiplicand\ );}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_b_box_a6ca8679758da723939b1e22764f84125}{operator\ *\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{multiplicand}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_b_box_a55b86bd9604cecbcb645341fa1ffeab4}{operator\ *=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{multiplicand}}\ );}
 \DoxyCodeLine{00068\ }
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ operator\ *\ (\ T\ multiplicand\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ operator\ *=\ (\ T\ multiplicand\ );}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_b_box_a6ca8679758da723939b1e22764f84125}{operator\ *\ }}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{multiplicand}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_b_box_a55b86bd9604cecbcb645341fa1ffeab4}{operator\ *=\ }}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{multiplicand}}\ );}
 \DoxyCodeLine{00071\ }
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ operator\ +\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ point\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ operator\ +=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ point\ );}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_b_box_a0aeec3de51547f9baaa61c129edf1916}{operator\ +\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{point}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_b_box_a8ac4e17e5ffdc50d4ebd3790f6deef15}{operator\ +=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{point}}\ );}
 \DoxyCodeLine{00074\ }
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ operator\ +\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ bbox\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ operator\ +=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ bbox\ );}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_b_box_a0aeec3de51547f9baaa61c129edf1916}{operator\ +\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bbox}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_b_box_a8ac4e17e5ffdc50d4ebd3790f6deef15}{operator\ +=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bbox}}\ );}
 \DoxyCodeLine{00077\ }
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_b_box_a348fee5a04dc45501ddeff41a888ab3d}{GenerateCorners}}(\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ *\ bounds\ );}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_b_box_a348fee5a04dc45501ddeff41a888ab3d}{GenerateCorners}}(\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bounds}}\ );}
 \DoxyCodeLine{00082\ }
 \DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_b_box_a230d85250b36dfdd05270e64e26470af}{Clear}}();}
 \DoxyCodeLine{00087\ }
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox}}\ \&\ \mbox{\hyperlink{classunify_1_1_b_box_ab8c4c9eef96286916ecdc6edd25936d1}{AddBBoxWithPosition}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ boundingBox,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ position\ );\ \ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox}}\ \&\ \mbox{\hyperlink{classunify_1_1_b_box_ab8c4c9eef96286916ecdc6edd25936d1}{AddBBoxWithPosition}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ T\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{boundingBox}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{position}}\ );\ \ }
 \DoxyCodeLine{00092\ }
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_b_box_a3066fbf75b33560e3afae7e9d223cabb}{AddPoints}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ T\ >}}\ *\ \textcolor{keyword}{const}\ points,\ \textcolor{keywordtype}{size\_t}\ size\ );}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_b_box_a3066fbf75b33560e3afae7e9d223cabb}{AddPoints}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ T\ >}}\ *\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{points}},\ \textcolor{keywordtype}{size\_t}\ size\ );}
 \DoxyCodeLine{00097\ }
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_box_a40b7bda6953a2b288c3b702449ea57dc}{ContainsPoint}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ point\ );}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_box_a40b7bda6953a2b288c3b702449ea57dc}{ContainsPoint}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{point}}\ );}
 \DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_size3}{Size3<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_b_box_aac7ab7c0e98781a9d40bba62d21f75b8}{Size}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00107\ }
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_box_a1ee05b7da5d5f45993c248c0b9518103}{Intersects}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ \&\ ray,\ \textcolor{keywordtype}{float}\ t0,\ \textcolor{keywordtype}{float}\ t1\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_box_a1ee05b7da5d5f45993c248c0b9518103}{Intersects}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{ray}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{t0}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{t1}}\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_box_a1ee05b7da5d5f45993c248c0b9518103}{Intersects}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ \&\ ray,\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ hitPoint\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_box_a1ee05b7da5d5f45993c248c0b9518103}{Intersects}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{ray}},\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{hitPoint}}\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00118\ }
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_box_a1ee05b7da5d5f45993c248c0b9518103}{Intersects}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ \&\ ray,\ \textcolor{keywordtype}{float}\ \&\ distance\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_box_a1ee05b7da5d5f45993c248c0b9518103}{Intersects}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{ray}},\ \textcolor{keywordtype}{float}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{distance}}\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00124\ }
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_box_a1ee05b7da5d5f45993c248c0b9518103}{Intersects}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ \&\ ray\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_box_a1ee05b7da5d5f45993c248c0b9518103}{Intersects}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{ray}}\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00129\ }
-\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_b_box_ab9da6a93000c5e0a22913e4464d0f2da}{ToBarrycentric}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ point\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_b_box_ab9da6a93000c5e0a22913e4464d0f2da}{ToBarrycentric}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{point}}\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00134\ }
 \DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_b_box_a1e6cd464ff354f8474c976d42fb8e651}{MakeBSphere}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00139\ }
@@ -96,7 +96,7 @@
 \DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Fix();}
 \DoxyCodeLine{00146\ \ \ \ \ \};}
 \DoxyCodeLine{00147\ }
-\DoxyCodeLine{00148\ \textcolor{preprocessor}{\ \ \ \ \#include\ <unify/BBox.inl>}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\ \ \ \ \#include\ <\mbox{\hyperlink{_b_box_8inl}{unify/BBox.inl}}>}}
 \DoxyCodeLine{00149\ \}}
 
 \end{DoxyCode}

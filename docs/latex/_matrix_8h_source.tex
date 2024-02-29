@@ -1,6 +1,6 @@
 \doxysection{Matrix.\+h}
 \hypertarget{_matrix_8h_source}{}\label{_matrix_8h_source}\index{unify/Matrix.h@{unify/Matrix.h}}
-
+\mbox{\hyperlink{_matrix_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
@@ -26,157 +26,157 @@
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
-\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <unify/V2.h>}}
-\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <unify/V3.h>}}
-\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <unify/V4.h>}}
-\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <unify/Ray.h>}}
-\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <unify/BBox.h>}}
-\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <unify/RowColumn.h>}}
-\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <unify/Quaternion.h>}}
-\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <unify/Angle.h>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_unify_8h}{unify/Unify.h}}>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_v2_8h}{unify/V2.h}}>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_v3_8h}{unify/V3.h}}>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_v4_8h}{unify/V4.h}}>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_ray_8h}{unify/Ray.h}}>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_b_box_8h}{unify/BBox.h}}>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_row_column_8h}{unify/RowColumn.h}}>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_quaternion_8h}{unify/Quaternion.h}}>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_angle_8h}{unify/Angle.h}}>}}
 \DoxyCodeLine{00034\ }
 \DoxyCodeLine{00035\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
 \DoxyCodeLine{00036\ \{}
 \DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}}
 \DoxyCodeLine{00038\ \ \ \ \ \{}
 \DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Named\ constructors...}}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixIdentity();}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixZero();}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixTranslate(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ vector\ );}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixOrthoOffCenterLH(\ \textcolor{keywordtype}{float}\ left,\ \textcolor{keywordtype}{float}\ right,\ \textcolor{keywordtype}{float}\ bottom,\ \textcolor{keywordtype}{float}\ top,\ \textcolor{keywordtype}{float}\ znear,\ \textcolor{keywordtype}{float}\ zfar\ );}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixScale(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ float\ >}}\ \&\ scale\ );}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixScale(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixScale(\ \textcolor{keywordtype}{float}\ scale\ );}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixRotationAboutAxis(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ axis,\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixPerspectiveFovLH(\ \textcolor{keywordtype}{float}\ fovy,\ \textcolor{keywordtype}{float}\ apsect,\ \textcolor{keywordtype}{float}\ zn,\ \textcolor{keywordtype}{float}\ zf\ );}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixRotationX(\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixRotationY(\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixRotationZ(\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixLookAtLH(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ eyePosition,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ at,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ up\ );}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_ab0c4d1693697b01d820a461167d0b648}{MatrixIdentity}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_a2f64bf4198d1f40152f7d42edc59fc0e}{MatrixZero}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_aed712908d9bbc7cb73e8c5afe71d2fd1}{MatrixTranslate}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{vector}}\ );}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_ab49e0fa99b0d874f351efbde14886191}{MatrixOrthoOffCenterLH}}(\ \textcolor{keywordtype}{float}\ left,\ \textcolor{keywordtype}{float}\ right,\ \textcolor{keywordtype}{float}\ bottom,\ \textcolor{keywordtype}{float}\ top,\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{znear}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{zfar}}\ );}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_a11a21fe63e92e2ebd485918b35690dc0}{MatrixScale}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{scale}}\ );}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_a49ad328d2f635c4adae54ef57f65e488}{MatrixScale}}(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_aca86e11ecd27bd4323e41186f85c6799}{MatrixScale}}(\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{scale}}\ );}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_ae6f7ea558dd29030829fa493874a608c}{MatrixRotationAboutAxis}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{axis}},\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{angle}}\ );}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_aa5389d27f3406d438670d4c0eb4dc7d5}{MatrixPerspectiveFovLH}}(\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{fovy}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{apsect}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{zn}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{zf}}\ );}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_acc197eecf047a886aaae2b52ba2ceb20}{MatrixRotationX}}(\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{angle}}\ );}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_a914876810f0ce4471971e1027c7ba4ce}{MatrixRotationY}}(\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{angle}}\ );}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_a770792b03f086577affd505c9d3e821f}{MatrixRotationZ}}(\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{angle}}\ );}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_ae0d5edda46ce5c3f3de1dfa4a3a7364a}{MatrixLookAtLH}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{eyePosition}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{at}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{up}}\ );}
 \DoxyCodeLine{00053\ }
 \DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}();}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ );}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}(\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ orientation,\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ position\ =\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}(\ 0,\ 0,\ 0\ )\ );}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}(\ std::string\ text\ );}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{\string~Matrix}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix_a2dba13c45127354c9f75ef576f49269b}{Matrix}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix_a2dba13c45127354c9f75ef576f49269b}{Matrix}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{matrix}}\ );}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classunify_1_1_matrix_a2dba13c45127354c9f75ef576f49269b}{Matrix}}(\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{orientation}},\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{position}}\ =\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}(\ 0,\ 0,\ 0\ )\ );}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix_a2dba13c45127354c9f75ef576f49269b}{Matrix}}(\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix_a9b1c3627f573d78a2f08623fdfef990f}{\string~Matrix}}();}
 \DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ operator\ =\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ );}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{classunify_1_1_matrix_a45e4814b752129bed1f1316632f8543a}{operator\ =\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{matrix}}\ );}
 \DoxyCodeLine{00063\ }
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ operator\ +=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ );}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ operator\ -\/=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ );}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ operator\ *=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ );}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ operator\ *=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ \&\ quaternion\ );}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ operator\ *=\ (\ \textcolor{keywordtype}{float}\ multiplier\ );}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ operator\ /=\ (\ \textcolor{keywordtype}{float}\ divisor\ );}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{classunify_1_1_matrix_aa1165a2fd2bb79730a21ce5f20a9f0e5}{operator\ +=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{matrix}}\ );}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{classunify_1_1_matrix_a1ceab31011f3b431ebb104345a79bcf5}{operator\ -\/=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{matrix}}\ );}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{classunify_1_1_matrix_a80aecf804632739bcf935d55160c075a}{operator\ *=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{matrix}}\ );}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{classunify_1_1_matrix_a80aecf804632739bcf935d55160c075a}{operator\ *=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{quaternion}}\ );}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{classunify_1_1_matrix_a80aecf804632739bcf935d55160c075a}{operator\ *=\ }}(\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{multiplier}}\ );}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{classunify_1_1_matrix_ad25d2af4fea65cdccc3e592a86e71b8f}{operator\ /=\ }}(\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{divisor}}\ );}
 \DoxyCodeLine{00070\ }
 \DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ binary\ operators}}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ operator\ +\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ operator\ -\/\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ operator\ *\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ operator\ *\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ \&\ quaternion\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ operator\ *\ (\ \textcolor{keywordtype}{float}\ multiplier\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ operator\ /\ (\ \textcolor{keywordtype}{float}\ divisor\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_ad78e8318ae579da460b8cbba549812f6}{operator\ +\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{matrix}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_ace5da0815f03aa0d67fd3dff3bb07fbe}{operator\ -\/\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{matrix}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_aa2f78f6d34450195fec250fee6172afd}{operator\ *\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{matrix}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_aa2f78f6d34450195fec250fee6172afd}{operator\ *\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{quaternion}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_aa2f78f6d34450195fec250fee6172afd}{operator\ *\ }}(\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{multiplier}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_afcfe5a6940fd69a1fc1e2358da9028c8}{operator\ /\ }}(\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{divisor}}\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00078\ }
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ ==\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ !=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_matrix_a27c99c4f83c485d26626e8312a650a2f}{operator\ ==\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{matrix}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_matrix_a2bed583ee556fb1204ca998a2c24d857}{operator\ !=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{matrix}}\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00081\ }
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \&\ \ operator()(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ unsigned\ int\ >}}\ \&\ rowColumn\ );}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \&\ operator()(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ column\ );}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \&\ \ \mbox{\hyperlink{classunify_1_1_matrix_a72d3c6ed43818460856fe24982780b00}{operator()}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ unsigned\ int\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{rowColumn}}\ );}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \&\ \mbox{\hyperlink{classunify_1_1_matrix_a72d3c6ed43818460856fe24982780b00}{operator()}}(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ column\ );}
 \DoxyCodeLine{00084\ }
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&\ operator()(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ unsigned\ int\ >}}\ \&\ rowColumn\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&\ operator()(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ column\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&\ \mbox{\hyperlink{classunify_1_1_matrix_a72d3c6ed43818460856fe24982780b00}{operator()}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_row_column}{RowColumn<\ unsigned\ int\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{rowColumn}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&\ \mbox{\hyperlink{classunify_1_1_matrix_a72d3c6ed43818460856fe24982780b00}{operator()}}(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ column\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00087\ }
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ \&\ operator()(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ row\ );}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ \&\ operator()(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ row\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_matrix_a72d3c6ed43818460856fe24982780b00}{operator()}}(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ row\ );}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_matrix_a72d3c6ed43818460856fe24982780b00}{operator()}}(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ row\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00090\ }
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ SetRotation(\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ quaternion\ );}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ Translate(\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ vector\ );}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ Scale(\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ vector\ );}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ Scale(\ \textcolor{keywordtype}{float}\ scale\ );}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{classunify_1_1_matrix_acb053062c9d731cd011fe68fbc097128}{SetRotation}}(\ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{quaternion}}\ );}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{classunify_1_1_matrix_a1437b0101dafadf610ecfb350f898a0e}{Translate}}(\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{vector}}\ );}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{classunify_1_1_matrix_ad7fde728725d7d0d9aa294bc1d1f203b}{Scale}}(\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{vector}}\ );}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{classunify_1_1_matrix_ad7fde728725d7d0d9aa294bc1d1f203b}{Scale}}(\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{scale}}\ );}
 \DoxyCodeLine{00095\ }
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Set(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ column,\ \textcolor{keywordtype}{float}\ value\ );}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_a6a8120565daf14be46b2378ca317b1a1}{Set}}(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ column,\ \textcolor{keywordtype}{float}\ value\ );}
 \DoxyCodeLine{00097\ }
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetLeft(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ vec\ );}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetUp(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ vec\ );}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetForward(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ vec\ );}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetPosition(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ vec\ );}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetLeft(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetUp(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetForward(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetPosition(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_a88c4676b520d69b861ab06eb48a3ecc1}{SetLeft}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{vec}}\ );}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_ad1952cc588bb851c72e5788a36473142}{SetUp}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{vec}}\ );}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_a102e60e8e01e676626f667676bc77404}{SetForward}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{vec}}\ );}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_a331b38d48b1ecec266b6b864f527ba56}{SetPosition}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{vec}}\ );}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_a88c4676b520d69b861ab06eb48a3ecc1}{SetLeft}}(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_ad1952cc588bb851c72e5788a36473142}{SetUp}}(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_a102e60e8e01e676626f667676bc77404}{SetForward}}(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_a331b38d48b1ecec266b6b864f527ba56}{SetPosition}}(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
 \DoxyCodeLine{00106\ }
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetRow(\ \textcolor{keywordtype}{size\_t}\ row,\ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ v4\ );}
-\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetColumn(\ \textcolor{keywordtype}{size\_t}\ column,\ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ v4\ );}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_a416877364f5b2b0beae4fe4d079dff80}{SetRow}}(\ \textcolor{keywordtype}{size\_t}\ row,\ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{v4}}\ );}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_aace9ba6ed4c18815dcb71eb9246ff409}{SetColumn}}(\ \textcolor{keywordtype}{size\_t}\ column,\ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{v4}}\ );}
 \DoxyCodeLine{00109\ }
-\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ GetRow(\ \textcolor{keywordtype}{size\_t}\ row\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ GetColumn(\ \textcolor{keywordtype}{size\_t}\ column\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ \mbox{\hyperlink{classunify_1_1_matrix_a289796292444fc9e00ec376bde927477}{GetRow}}(\ \textcolor{keywordtype}{size\_t}\ row\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v4}{unify::V4<\ float\ >}}\ \mbox{\hyperlink{classunify_1_1_matrix_ab01fdb225699ca694896d4a712d7164f}{GetColumn}}(\ \textcolor{keywordtype}{size\_t}\ column\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00112\ }
-\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetLeft()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetUp()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetForward()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetPosition()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ GetScale()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ GetRotation()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \mbox{\hyperlink{classunify_1_1_matrix_a34ff2464318db9f6e3d126ffd9162a4c}{GetLeft}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \mbox{\hyperlink{classunify_1_1_matrix_aa180466eab774cead968874170b469c8}{GetUp}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \mbox{\hyperlink{classunify_1_1_matrix_a16e2dadca49c08d895b95f54fc01f839}{GetForward}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \mbox{\hyperlink{classunify_1_1_matrix_a5295b2f64709f8658fcfe5c0f2e8476a}{GetPosition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \mbox{\hyperlink{classunify_1_1_matrix_aea3a3811aea8b4364171cae174a4f657}{GetScale}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_quaternion}{Quaternion}}\ \mbox{\hyperlink{classunify_1_1_matrix_acaefbad9ec6f48101f3841842ab8c236}{GetRotation}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00119\ }
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ Determinant()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsIdentity()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classunify_1_1_matrix_a66cd8cba36ae11e19a389124ffc82c29}{Determinant}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_matrix_a41d7acf1167dad3965cc896106c69575}{IsIdentity}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00122\ }
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ BecomeIdentity();}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Zero();}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_a2cf4360d70d4b1e4db61e3aff287de9b}{BecomeIdentity}}();}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_ad2a7540e0cbb6847ee5c45f02a3e717b}{Zero}}();}
 \DoxyCodeLine{00125\ }
 \DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_a008d1a5f99a91b477945fd7336ed6b0d}{Invert}}();}
 \DoxyCodeLine{00130\ }
 \DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \mbox{\hyperlink{classunify_1_1_matrix_ad5f101877c4a10988bf7f128a9c248d8}{Inverse}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00135\ }
-\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Transpose();}
-\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Transpose(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ matrix\ );}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_a350d12361c31ec650e667e8120da7274}{Transpose}}();}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_a350d12361c31ec650e667e8120da7274}{Transpose}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{matrix}}\ );}
 \DoxyCodeLine{00138\ }
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ TransformCoord(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ v2\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ TransformCoord(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ v3\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ \mbox{\hyperlink{classunify_1_1_matrix_ac2a12d15ac6759242e7797041ca49c50}{TransformCoord}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{v2}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \mbox{\hyperlink{classunify_1_1_matrix_ac2a12d15ac6759242e7797041ca49c50}{TransformCoord}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{v3}}\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00141\ }
-\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ TransformCoords(\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ *\ coords,\ \textcolor{keywordtype}{size\_t}\ size\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ TransformCoords(\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ *\ coords,\ \textcolor{keywordtype}{size\_t}\ size\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_af9ff029ee932aa2b043a563d9314701d}{TransformCoords}}(\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{coords}},\ \textcolor{keywordtype}{size\_t}\ size\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_af9ff029ee932aa2b043a563d9314701d}{TransformCoords}}(\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{coords}},\ \textcolor{keywordtype}{size\_t}\ size\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00144\ }
-\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ TransformNormal(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ v2\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ TransformNormal(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ v3\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ \mbox{\hyperlink{classunify_1_1_matrix_adac5f45b9ea73ce9ce3671f5da01a0d1}{TransformNormal}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{v2}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \mbox{\hyperlink{classunify_1_1_matrix_adac5f45b9ea73ce9ce3671f5da01a0d1}{TransformNormal}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{v3}}\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v4}{V4<\ float\ >}}\ Transform(\ \mbox{\hyperlink{classunify_1_1_v4}{V4<\ float\ >}}\ v4\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v4}{V4<\ float\ >}}\ \mbox{\hyperlink{classunify_1_1_matrix_a128497a3b0a07e464c7593b488aae05f}{Transform}}(\ \mbox{\hyperlink{classunify_1_1_v4}{V4<\ float\ >}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{v4}}\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00149\ \ \ \ \ }
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ TransformRay(\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ ray\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ float\ >}}\ TransformBBox(\ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ float\ >}}\ bbox\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ float\ >}}\ TransformBSphere(\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ float\ >}}\ bsphere\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ \mbox{\hyperlink{classunify_1_1_matrix_aebf231f26294ada606f28e8d7818d4cb}{TransformRay}}(\ \mbox{\hyperlink{classunify_1_1_ray}{Ray}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{ray}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ float\ >}}\ \mbox{\hyperlink{classunify_1_1_matrix_af7de9dde0ceac07876335f62a58c3c83}{TransformBBox}}(\ \mbox{\hyperlink{classunify_1_1_b_box}{BBox<\ float\ >}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bbox}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ float\ >}}\ \mbox{\hyperlink{classunify_1_1_matrix_adca53227d5492e30846386e465775802}{TransformBSphere}}(\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ float\ >}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bsphere}}\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00153\ }
-\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ RotateAboutAxis(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ axis,\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_a694affe2570cca0a22f73a88e68d71e9}{RotateAboutAxis}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{axis}},\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{angle}}\ );}
 \DoxyCodeLine{00155\ }
-\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ LookAtLH(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ at,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ up\ );}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_aba9fb7686e92d3c4051d4cc2c8bcfc8c}{LookAtLH}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{at}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{up}}\ );}
 \DoxyCodeLine{00157\ }
-\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Orbit(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ origin,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ \&\ direction,\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_a2aa37d492423fb1aba075ec006b09c6e}{Orbit}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ origin,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v2}{V2<\ float\ >}}\ \&\ direction,\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{angle}}\ );}
 \DoxyCodeLine{00159\ }
-\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ std::string\ ToString()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ FromString(\ std::string\ text\ );}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classunify_1_1_matrix_ad959783a9533518e236a2710c240b208}{ToString}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_matrix_a720671d75db32ea72a7b9a63e2f011d5}{FromString}}(\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}}\ );}
 \DoxyCodeLine{00162\ }
 \DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\{}
-\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ m[4][4];}
-\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ linear[16];}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classunify_1_1_matrix_a0c7f003ced6290e646bd46f9f0785f75}{m}}[4][4];}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classunify_1_1_matrix_a65acc2ed4035204e5fff0ed64e240438}{linear}}[16];}
 \DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \};}
 \DoxyCodeLine{00167\ \ \ \ \ \};}
 \DoxyCodeLine{00168\ }
-\DoxyCodeLine{00169\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixIdentity();}
-\DoxyCodeLine{00170\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixZero();}
-\DoxyCodeLine{00171\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixTranslate(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ vector\ );}
-\DoxyCodeLine{00172\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixOrthoOffCenterLH(\ \textcolor{keywordtype}{float}\ left,\ \textcolor{keywordtype}{float}\ right,\ \textcolor{keywordtype}{float}\ bottom,\ \textcolor{keywordtype}{float}\ top,\ \textcolor{keywordtype}{float}\ znear,\ \textcolor{keywordtype}{float}\ zfar\ );}
-\DoxyCodeLine{00173\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixScale(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ float\ >}}\ \&\ scale\ );}
-\DoxyCodeLine{00174\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixScale(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
-\DoxyCodeLine{00175\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixScale(\ \textcolor{keywordtype}{float}\ scale\ );}
-\DoxyCodeLine{00176\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixRotationAboutAxis(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ axis,\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
-\DoxyCodeLine{00177\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixPerspectiveFovLH(\ \textcolor{keywordtype}{float}\ fovy,\ \textcolor{keywordtype}{float}\ apsect,\ \textcolor{keywordtype}{float}\ zn,\ \textcolor{keywordtype}{float}\ zf\ );}
-\DoxyCodeLine{00178\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixRotationX(\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
-\DoxyCodeLine{00179\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixRotationY(\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
-\DoxyCodeLine{00180\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixRotationZ(\ \mbox{\hyperlink{classunify_1_1_angle}{Angle}}\ angle\ );}
-\DoxyCodeLine{00181\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_matrix}{Matrix}}\ MatrixLookAtLH(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ eyePosition,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ at,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ up\ );}
+\DoxyCodeLine{00169\ \ \ \ \ Matrix\ \mbox{\hyperlink{namespaceunify_aae406a6e63563ddb86073b9edef85b35}{MatrixIdentity}}();}
+\DoxyCodeLine{00170\ \ \ \ \ Matrix\ \mbox{\hyperlink{namespaceunify_ac091c5f16a156eaaf8b4af9bf4fef752}{MatrixZero}}();}
+\DoxyCodeLine{00171\ \ \ \ \ Matrix\ \mbox{\hyperlink{namespaceunify_a79bf19d4e39329a6e7d3cf49e7095e6a}{MatrixTranslate}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{vector}}\ );}
+\DoxyCodeLine{00172\ \ \ \ \ Matrix\ \mbox{\hyperlink{namespaceunify_a179834b7e0589e409f5ead79c30ade85}{MatrixOrthoOffCenterLH}}(\ \textcolor{keywordtype}{float}\ left,\ \textcolor{keywordtype}{float}\ right,\ \textcolor{keywordtype}{float}\ bottom,\ \textcolor{keywordtype}{float}\ top,\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{znear}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{zfar}}\ );}
+\DoxyCodeLine{00173\ \ \ \ \ Matrix\ \mbox{\hyperlink{namespaceunify_a5a78a158758cf71768b74855fb7fe131}{MatrixScale}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{scale}}\ );}
+\DoxyCodeLine{00174\ \ \ \ \ Matrix\ \mbox{\hyperlink{namespaceunify_a5a78a158758cf71768b74855fb7fe131}{MatrixScale}}(\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z\ );}
+\DoxyCodeLine{00175\ \ \ \ \ Matrix\ \mbox{\hyperlink{namespaceunify_a5a78a158758cf71768b74855fb7fe131}{MatrixScale}}(\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{scale}}\ );}
+\DoxyCodeLine{00176\ \ \ \ \ Matrix\ \mbox{\hyperlink{namespaceunify_a58da2cc36e8617252d880b6933867833}{MatrixRotationAboutAxis}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{axis}},\ Angle\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{angle}}\ );}
+\DoxyCodeLine{00177\ \ \ \ \ Matrix\ \mbox{\hyperlink{namespaceunify_af837547688ea241611e24bafd9ed492c}{MatrixPerspectiveFovLH}}(\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{fovy}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{apsect}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{zn}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{zf}}\ );}
+\DoxyCodeLine{00178\ \ \ \ \ Matrix\ \mbox{\hyperlink{namespaceunify_a0c7725f5800a942a336b879d84cfa99f}{MatrixRotationX}}(\ Angle\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{angle}}\ );}
+\DoxyCodeLine{00179\ \ \ \ \ Matrix\ \mbox{\hyperlink{namespaceunify_ae73458405e8dc21ac47262fe4f712377}{MatrixRotationY}}(\ Angle\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{angle}}\ );}
+\DoxyCodeLine{00180\ \ \ \ \ Matrix\ \mbox{\hyperlink{namespaceunify_ae35aa0d12b98d521a0899455f1ba48d9}{MatrixRotationZ}}(\ Angle\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{angle}}\ );}
+\DoxyCodeLine{00181\ \ \ \ \ Matrix\ \mbox{\hyperlink{namespaceunify_a0292ae51bc4a4d4b33d091afe224a82d}{MatrixLookAtLH}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{eyePosition}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{at}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ float\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{up}}\ );}
 \DoxyCodeLine{00182\ \}}
 
 \end{DoxyCode}

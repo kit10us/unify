@@ -1,0 +1,50 @@
+\doxysection{unify/\+Matrix.h File Reference}
+\hypertarget{_matrix_8h}{}\label{_matrix_8h}\index{unify/Matrix.h@{unify/Matrix.h}}
+{\ttfamily \#include $<$unify/\+Unify.\+h$>$}\newline
+{\ttfamily \#include $<$unify/\+V2.\+h$>$}\newline
+{\ttfamily \#include $<$unify/\+V3.\+h$>$}\newline
+{\ttfamily \#include $<$unify/\+V4.\+h$>$}\newline
+{\ttfamily \#include $<$unify/\+Ray.\+h$>$}\newline
+{\ttfamily \#include $<$unify/\+BBox.\+h$>$}\newline
+{\ttfamily \#include $<$unify/\+Row\+Column.\+h$>$}\newline
+{\ttfamily \#include $<$unify/\+Quaternion.\+h$>$}\newline
+{\ttfamily \#include $<$unify/\+Angle.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classunify_1_1_matrix}{unify\+::\+Matrix}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceunify}{unify}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \mbox{\hyperlink{namespaceunify_aae406a6e63563ddb86073b9edef85b35}{unify\+::\+Matrix\+Identity}} ()
+\item 
+\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \mbox{\hyperlink{namespaceunify_ac091c5f16a156eaaf8b4af9bf4fef752}{unify\+::\+Matrix\+Zero}} ()
+\item 
+\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \mbox{\hyperlink{namespaceunify_a79bf19d4e39329a6e7d3cf49e7095e6a}{unify\+::\+Matrix\+Translate}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{vector}})
+\item 
+\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \mbox{\hyperlink{namespaceunify_a179834b7e0589e409f5ead79c30ade85}{unify\+::\+Matrix\+Ortho\+Off\+Center\+LH}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} left, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} right, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} bottom, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} top, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{znear}}, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{zfar}})
+\item 
+\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \mbox{\hyperlink{namespaceunify_a5a78a158758cf71768b74855fb7fe131}{unify\+::\+Matrix\+Scale}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{scale}})
+\item 
+\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \mbox{\hyperlink{namespaceunify_a7e94b3eaae3edabef83119f9d1ec8688}{unify\+::\+Matrix\+Scale}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} x, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} y, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} z)
+\item 
+\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \mbox{\hyperlink{namespaceunify_ae93caca08fe0f1e8de2c621a9ab471c8}{unify\+::\+Matrix\+Scale}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{scale}})
+\item 
+\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \mbox{\hyperlink{namespaceunify_a58da2cc36e8617252d880b6933867833}{unify\+::\+Matrix\+Rotation\+About\+Axis}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{axis}}, \mbox{\hyperlink{classunify_1_1_angle}{Angle}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{angle}})
+\item 
+\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \mbox{\hyperlink{namespaceunify_af837547688ea241611e24bafd9ed492c}{unify\+::\+Matrix\+Perspective\+Fov\+LH}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{fovy}}, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{apsect}}, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{zn}}, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{zf}})
+\item 
+\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \mbox{\hyperlink{namespaceunify_a0c7725f5800a942a336b879d84cfa99f}{unify\+::\+Matrix\+RotationX}} (\mbox{\hyperlink{classunify_1_1_angle}{Angle}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{angle}})
+\item 
+\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \mbox{\hyperlink{namespaceunify_ae73458405e8dc21ac47262fe4f712377}{unify\+::\+Matrix\+RotationY}} (\mbox{\hyperlink{classunify_1_1_angle}{Angle}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{angle}})
+\item 
+\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \mbox{\hyperlink{namespaceunify_ae35aa0d12b98d521a0899455f1ba48d9}{unify\+::\+Matrix\+RotationZ}} (\mbox{\hyperlink{classunify_1_1_angle}{Angle}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{angle}})
+\item 
+\mbox{\hyperlink{classunify_1_1_matrix}{Matrix}} \mbox{\hyperlink{namespaceunify_a0292ae51bc4a4d4b33d091afe224a82d}{unify\+::\+Matrix\+Look\+At\+LH}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{eye\+Position}}, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{at}}, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v3}{V3}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{up}})
+\end{DoxyCompactItemize}

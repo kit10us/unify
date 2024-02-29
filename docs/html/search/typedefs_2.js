@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['ptr_0',['ptr',['../classunify_1_1_frame_set_instance.html#a4d0a863c4e115667a01cd06b699542c6',1,'unify::FrameSetInstance::ptr'],['../classunify_1_1_i_exception_handler.html#a06f502118ed181db63b0c5cd6b551a87',1,'unify::IExceptionHandler::ptr'],['../classunify_1_1_owner.html#a8075678e51fa19b2287925468aaeccf8',1,'unify::Owner::ptr'],['../classunify_1_1_owner_property.html#ace5a11cc31928e1ad52b69dfacd5cdbe',1,'unify::OwnerProperty::ptr'],['../classunify_1_1test_1_1_i_assert_handler.html#a8a4992534ff759990ab2403cb5066ea2',1,'unify::test::IAssertHandler::ptr'],['../classunify_1_1test_1_1_i_event_handler.html#a70a3082c749565672cbad3b107779766',1,'unify::test::IEventHandler::ptr'],['../classunify_1_1test_1_1_i_output_handler.html#afc3644430d736015f97fba9cb2329de5',1,'unify::test::IOutputHandler::ptr']]]
+];

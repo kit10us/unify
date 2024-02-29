@@ -18,113 +18,309 @@ Inheritance diagram for unify\+::Variant\+:\begin{figure}[H]
 \doxysubsubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}\label{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf} 
-enum {\bfseries TYPE} \{ \newline
-{\bfseries Type\+\_\+\+Undefined}
-, {\bfseries Type\+\_\+\+Bool}
-, {\bfseries Type\+\_\+\+Integer}
-, {\bfseries Type\+\_\+\+String}
+enum \mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}{TYPE}} \{ \newline
+\mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfa088c7122581fe5d4ef278e8db2ac29bb}{Type\+\_\+\+Undefined}}
+, \mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfab857b5a35b1b0e6dad87eba821756209}{Type\+\_\+\+Bool}}
+, \mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfa84fade5a718332ef2cdd2f3b4278d59d}{Type\+\_\+\+Integer}}
+, \mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfa9ee4586561e62d9d9a1b364700c4411a}{Type\+\_\+\+String}}
 , \newline
-{\bfseries Type\+\_\+\+Float}
-, {\bfseries Type\+\_\+\+Byte\+Data}
+\mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfa79ff8779f8a8586bb1e5ad7d37d1c13b}{Type\+\_\+\+Float}}
+, \mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfa0cdc51c850ff8488a3c856ad8cd3dfa2}{Type\+\_\+\+Byte\+Data}}
  \}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classunify_1_1_variant_ab0ae13117d959282f5a5b2e50a87da27}\label{classunify_1_1_variant_ab0ae13117d959282f5a5b2e50a87da27} 
-{\bfseries Variant} (const \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \&var)
+\mbox{\hyperlink{classunify_1_1_variant_af3cb79522facc25695a066af74a08fc2}{Variant}} ()
 \item 
-\Hypertarget{classunify_1_1_variant_add8b684ed34d56da72ba74eabd2cfe02}\label{classunify_1_1_variant_add8b684ed34d56da72ba74eabd2cfe02} 
-{\bfseries Variant} (const int source)
+\mbox{\hyperlink{classunify_1_1_variant_ab0ae13117d959282f5a5b2e50a87da27}{Variant}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{var}})
 \item 
-\Hypertarget{classunify_1_1_variant_af16e5b8d093fcef88b777a3a43adb7a0}\label{classunify_1_1_variant_af16e5b8d093fcef88b777a3a43adb7a0} 
-{\bfseries Variant} (std\+::string source)
+\mbox{\hyperlink{classunify_1_1_variant_add8b684ed34d56da72ba74eabd2cfe02}{Variant}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{int}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{source}})
 \item 
-\Hypertarget{classunify_1_1_variant_acaf0f2db0f70447e3ec5a0c181599573}\label{classunify_1_1_variant_acaf0f2db0f70447e3ec5a0c181599573} 
-{\bfseries Variant} (const float source)
+\mbox{\hyperlink{classunify_1_1_variant_af16e5b8d093fcef88b777a3a43adb7a0}{Variant}} (std\+::string \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{source}})
 \item 
-\Hypertarget{classunify_1_1_variant_a0b458443001f14258b3de2d13a9a19ff}\label{classunify_1_1_variant_a0b458443001f14258b3de2d13a9a19ff} 
-{\bfseries Variant} (void \texorpdfstring{$\ast$}{*}p\+Data, TYPE type, bool b\+Reference)
+\mbox{\hyperlink{classunify_1_1_variant_acaf0f2db0f70447e3ec5a0c181599573}{Variant}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{source}})
 \item 
-\Hypertarget{classunify_1_1_variant_aeaed361eec1013d08184e58b2885cb9f}\label{classunify_1_1_variant_aeaed361eec1013d08184e58b2885cb9f} 
-\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \& {\bfseries operator=} (const \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \&)
+\mbox{\hyperlink{classunify_1_1_variant_a0b458443001f14258b3de2d13a9a19ff}{Variant}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{p\+Data}}, \mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}{TYPE}} type, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{b\+Reference}})
 \item 
-\Hypertarget{classunify_1_1_variant_a47eae51acbea5780528f85d4a19826b4}\label{classunify_1_1_variant_a47eae51acbea5780528f85d4a19826b4} 
-\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set} (std\+::string s\+Source)
+\mbox{\hyperlink{classunify_1_1_variant_afefce84ee3f94c9154c69e2e9a62f0b0}{\texorpdfstring{$\sim$}{\string~}\+Variant}} ()
 \item 
-\Hypertarget{classunify_1_1_variant_a352f78c8d83ad57d342cdb61e1b6d094}\label{classunify_1_1_variant_a352f78c8d83ad57d342cdb61e1b6d094} 
-\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set} (const void \texorpdfstring{$\ast$}{*}p\+Void, TYPE type)
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \& \mbox{\hyperlink{classunify_1_1_variant_aeaed361eec1013d08184e58b2885cb9f}{operator=}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \&)
 \item 
-\Hypertarget{classunify_1_1_variant_a72726da9aaba2683be16b2b69b2dd7cc}\label{classunify_1_1_variant_a72726da9aaba2683be16b2b69b2dd7cc} 
-\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set\+Reference} (void \texorpdfstring{$\ast$}{*}p\+Void, TYPE type)
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classunify_1_1_variant_a47eae51acbea5780528f85d4a19826b4}{Set}} (std\+::string \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{s\+Source}})
 \item 
-\Hypertarget{classunify_1_1_variant_af9ecd7e28ea7e371c750587292b7e2ee}\label{classunify_1_1_variant_af9ecd7e28ea7e371c750587292b7e2ee} 
-\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set\+String} (std\+::string s\+Source)
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classunify_1_1_variant_a352f78c8d83ad57d342cdb61e1b6d094}{Set}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{p\+Void}}, \mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}{TYPE}} type)
 \item 
-\Hypertarget{classunify_1_1_variant_af53c366bacb035721449fdf1ca2fdc6b}\label{classunify_1_1_variant_af53c366bacb035721449fdf1ca2fdc6b} 
-\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set\+Int} (const int i\+Int)
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classunify_1_1_variant_a72726da9aaba2683be16b2b69b2dd7cc}{Set\+Reference}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{p\+Void}}, \mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}{TYPE}} type)
 \item 
-\Hypertarget{classunify_1_1_variant_af5e4b06b6b0ce90fab9c5c5cefa54dfb}\label{classunify_1_1_variant_af5e4b06b6b0ce90fab9c5c5cefa54dfb} 
-\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set\+Bool} (const bool b\+Bool)
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classunify_1_1_variant_af9ecd7e28ea7e371c750587292b7e2ee}{Set\+String}} (std\+::string \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{s\+Source}})
 \item 
-\Hypertarget{classunify_1_1_variant_aa13ee8de950868723a2cd60608eaad7f}\label{classunify_1_1_variant_aa13ee8de950868723a2cd60608eaad7f} 
-\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} {\bfseries Set\+Float} (const float f\+Float)
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classunify_1_1_variant_af53c366bacb035721449fdf1ca2fdc6b}{Set\+Int}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{int}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{i\+Int}})
 \item 
-\Hypertarget{classunify_1_1_variant_a0cc2ed671fd43b53b0273f6e97ad5c61}\label{classunify_1_1_variant_a0cc2ed671fd43b53b0273f6e97ad5c61} 
-TYPE {\bfseries Type} () const
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classunify_1_1_variant_af5e4b06b6b0ce90fab9c5c5cefa54dfb}{Set\+Bool}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{b\+Bool}})
 \item 
-\Hypertarget{classunify_1_1_variant_a8293fc459e2baedf36d88d83d2427167}\label{classunify_1_1_variant_a8293fc459e2baedf36d88d83d2427167} 
-std\+::string {\bfseries Type\+Name} () const
+\mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classunify_1_1_variant_aa13ee8de950868723a2cd60608eaad7f}{Set\+Float}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{f\+Float}})
 \item 
-\Hypertarget{classunify_1_1_variant_a54ebf4a965738cd27b609c7ff4dd3c28}\label{classunify_1_1_variant_a54ebf4a965738cd27b609c7ff4dd3c28} 
-bool {\bfseries Ge\+Bool} () const
+\mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}{TYPE}} \mbox{\hyperlink{classunify_1_1_variant_a0cc2ed671fd43b53b0273f6e97ad5c61}{Type}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_variant_a282413a741656fe33a434e10405870da}\label{classunify_1_1_variant_a282413a741656fe33a434e10405870da} 
-int {\bfseries Get\+Int} () const
+std\+::string \mbox{\hyperlink{classunify_1_1_variant_a8293fc459e2baedf36d88d83d2427167}{Type\+Name}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_variant_a79defbc8ef9b34b09f3bf2b3f6eb1fbb}\label{classunify_1_1_variant_a79defbc8ef9b34b09f3bf2b3f6eb1fbb} 
-std\+::string {\bfseries Get\+String} () const
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} \mbox{\hyperlink{classunify_1_1_variant_a54ebf4a965738cd27b609c7ff4dd3c28}{Ge\+Bool}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_variant_acbdeeb17c2a500bb39e5e5860bcdd9c1}\label{classunify_1_1_variant_acbdeeb17c2a500bb39e5e5860bcdd9c1} 
-float {\bfseries Get\+Float} () const
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{int}} \mbox{\hyperlink{classunify_1_1_variant_a282413a741656fe33a434e10405870da}{Get\+Int}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_variant_a9e72cf7c06d683b210c8cfb9f402d498}\label{classunify_1_1_variant_a9e72cf7c06d683b210c8cfb9f402d498} 
-void \texorpdfstring{$\ast$}{*} {\bfseries Get\+Address} () const
+std\+::string \mbox{\hyperlink{classunify_1_1_variant_a79defbc8ef9b34b09f3bf2b3f6eb1fbb}{Get\+String}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_variant_a6761d8a09b5fab64983dc969dece27af}\label{classunify_1_1_variant_a6761d8a09b5fab64983dc969dece27af} 
-void {\bfseries Free} ()
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} \mbox{\hyperlink{classunify_1_1_variant_acbdeeb17c2a500bb39e5e5860bcdd9c1}{Get\+Float}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_variant_a6fd3c494cdaabd6769299d1572598290}\label{classunify_1_1_variant_a6fd3c494cdaabd6769299d1572598290} 
-void {\bfseries Set\+Constant} (bool b\+Constant)
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classunify_1_1_variant_a9e72cf7c06d683b210c8cfb9f402d498}{Get\+Address}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_variant_acda5cc7f340956d3c875bc033f05f74b}\label{classunify_1_1_variant_acda5cc7f340956d3c875bc033f05f74b} 
-bool {\bfseries Constant} () const
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} \mbox{\hyperlink{classunify_1_1_variant_a6761d8a09b5fab64983dc969dece27af}{Free}} ()
 \item 
-\Hypertarget{classunify_1_1_variant_ab331a079d37fc27ab8d7f01baa87d528}\label{classunify_1_1_variant_ab331a079d37fc27ab8d7f01baa87d528} 
-bool {\bfseries Reference} () const
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} \mbox{\hyperlink{classunify_1_1_variant_a6fd3c494cdaabd6769299d1572598290}{Set\+Constant}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{b\+Constant}})
 \item 
-\Hypertarget{classunify_1_1_variant_aa07b97e01b9e0c180fd7ead6db4a65a8}\label{classunify_1_1_variant_aa07b97e01b9e0c180fd7ead6db4a65a8} 
-const bool {\bfseries Empty} () const
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} \mbox{\hyperlink{classunify_1_1_variant_acda5cc7f340956d3c875bc033f05f74b}{Constant}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \item 
-\Hypertarget{classunify_1_1_variant_a6048f3091b11421e6dc48a66bcdcf7b1}\label{classunify_1_1_variant_a6048f3091b11421e6dc48a66bcdcf7b1} 
-{\bfseries operator std\+::string} ()
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} \mbox{\hyperlink{classunify_1_1_variant_ab331a079d37fc27ab8d7f01baa87d528}{Reference}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
+\item 
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} \mbox{\hyperlink{classunify_1_1_variant_aa07b97e01b9e0c180fd7ead6db4a65a8}{Empty}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
+\item 
+\mbox{\hyperlink{classunify_1_1_variant_a6048f3091b11421e6dc48a66bcdcf7b1}{operator std\+::string}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classunify_1_1_variant_a2f829fb98021d21cbe0ae945b29b61c5}\label{classunify_1_1_variant_a2f829fb98021d21cbe0ae945b29b61c5} 
-static const std\+::string {\bfseries Type\+Name} (const TYPE type)
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{static}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} std\+::string \mbox{\hyperlink{classunify_1_1_variant_a2f829fb98021d21cbe0ae945b29b61c5}{Type\+Name}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}{TYPE}} type)
 \item 
-\Hypertarget{classunify_1_1_variant_acb8f15afe729e71731322de236d2c5b0}\label{classunify_1_1_variant_acb8f15afe729e71731322de236d2c5b0} 
-static const TYPE {\bfseries Type\+Enum} (std\+::string s\+Type)
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{static}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}{TYPE}} \mbox{\hyperlink{classunify_1_1_variant_acb8f15afe729e71731322de236d2c5b0}{Type\+Enum}} (std\+::string \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{s\+Type}})
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 A variant allowing simple storage and conversion amongst POD types. 
 
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}\label{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf} 
+\index{unify::Variant@{unify::Variant}!TYPE@{TYPE}}
+\index{TYPE@{TYPE}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{TYPE}{TYPE}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{enum}} \mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}{unify\+::\+Variant\+::\+TYPE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Type\_Undefined@{Type\_Undefined}!unify::Variant@{unify::Variant}}\index{unify::Variant@{unify::Variant}!Type\_Undefined@{Type\_Undefined}}}\Hypertarget{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfa088c7122581fe5d4ef278e8db2ac29bb}\label{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfa088c7122581fe5d4ef278e8db2ac29bb} 
+Type\+\_\+\+Undefined&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Type\_Bool@{Type\_Bool}!unify::Variant@{unify::Variant}}\index{unify::Variant@{unify::Variant}!Type\_Bool@{Type\_Bool}}}\Hypertarget{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfab857b5a35b1b0e6dad87eba821756209}\label{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfab857b5a35b1b0e6dad87eba821756209} 
+Type\+\_\+\+Bool&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Type\_Integer@{Type\_Integer}!unify::Variant@{unify::Variant}}\index{unify::Variant@{unify::Variant}!Type\_Integer@{Type\_Integer}}}\Hypertarget{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfa84fade5a718332ef2cdd2f3b4278d59d}\label{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfa84fade5a718332ef2cdd2f3b4278d59d} 
+Type\+\_\+\+Integer&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Type\_String@{Type\_String}!unify::Variant@{unify::Variant}}\index{unify::Variant@{unify::Variant}!Type\_String@{Type\_String}}}\Hypertarget{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfa9ee4586561e62d9d9a1b364700c4411a}\label{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfa9ee4586561e62d9d9a1b364700c4411a} 
+Type\+\_\+\+String&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Type\_Float@{Type\_Float}!unify::Variant@{unify::Variant}}\index{unify::Variant@{unify::Variant}!Type\_Float@{Type\_Float}}}\Hypertarget{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfa79ff8779f8a8586bb1e5ad7d37d1c13b}\label{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfa79ff8779f8a8586bb1e5ad7d37d1c13b} 
+Type\+\_\+\+Float&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Type\_ByteData@{Type\_ByteData}!unify::Variant@{unify::Variant}}\index{unify::Variant@{unify::Variant}!Type\_ByteData@{Type\_ByteData}}}\Hypertarget{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfa0cdc51c850ff8488a3c856ad8cd3dfa2}\label{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bfa0cdc51c850ff8488a3c856ad8cd3dfa2} 
+Type\+\_\+\+Byte\+Data&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classunify_1_1_variant_af3cb79522facc25695a066af74a08fc2}\label{classunify_1_1_variant_af3cb79522facc25695a066af74a08fc2} 
+\index{unify::Variant@{unify::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{Variant()}{Variant()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily Variant\+::\+Variant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_variant_ab0ae13117d959282f5a5b2e50a87da27}\label{classunify_1_1_variant_ab0ae13117d959282f5a5b2e50a87da27} 
+\index{unify::Variant@{unify::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{Variant()}{Variant()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily Variant\+::\+Variant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \&}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{classunify_1_1_variant_add8b684ed34d56da72ba74eabd2cfe02}\label{classunify_1_1_variant_add8b684ed34d56da72ba74eabd2cfe02} 
+\index{unify::Variant@{unify::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{Variant()}{Variant()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily Variant\+::\+Variant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{int}}}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{classunify_1_1_variant_af16e5b8d093fcef88b777a3a43adb7a0}\label{classunify_1_1_variant_af16e5b8d093fcef88b777a3a43adb7a0} 
+\index{unify::Variant@{unify::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{Variant()}{Variant()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily Variant\+::\+Variant (\begin{DoxyParamCaption}\item[{std\+::string}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{classunify_1_1_variant_acaf0f2db0f70447e3ec5a0c181599573}\label{classunify_1_1_variant_acaf0f2db0f70447e3ec5a0c181599573} 
+\index{unify::Variant@{unify::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{Variant()}{Variant()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily Variant\+::\+Variant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}}}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{classunify_1_1_variant_a0b458443001f14258b3de2d13a9a19ff}\label{classunify_1_1_variant_a0b458443001f14258b3de2d13a9a19ff} 
+\index{unify::Variant@{unify::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{Variant()}{Variant()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily Variant\+::\+Variant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} \texorpdfstring{$\ast$}{*}}]{p\+Data,  }\item[{\mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}{TYPE}}}]{type,  }\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}}}]{b\+Reference }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_variant_afefce84ee3f94c9154c69e2e9a62f0b0}\label{classunify_1_1_variant_afefce84ee3f94c9154c69e2e9a62f0b0} 
+\index{unify::Variant@{unify::Variant}!````~Variant@{\texorpdfstring{$\sim$}{\string~}Variant}}
+\index{````~Variant@{\texorpdfstring{$\sim$}{\string~}Variant}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Variant()}{\string~Variant()}}
+{\footnotesize\ttfamily Variant\+::\texorpdfstring{$\sim$}{\string~}\+Variant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classunify_1_1_variant_acda5cc7f340956d3c875bc033f05f74b}\label{classunify_1_1_variant_acda5cc7f340956d3c875bc033f05f74b} 
+\index{unify::Variant@{unify::Variant}!Constant@{Constant}}
+\index{Constant@{Constant}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{Constant()}{Constant()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} Variant\+::\+Constant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_variant_aa07b97e01b9e0c180fd7ead6db4a65a8}\label{classunify_1_1_variant_aa07b97e01b9e0c180fd7ead6db4a65a8} 
+\index{unify::Variant@{unify::Variant}!Empty@{Empty}}
+\index{Empty@{Empty}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} Variant\+::\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_variant_a6761d8a09b5fab64983dc969dece27af}\label{classunify_1_1_variant_a6761d8a09b5fab64983dc969dece27af} 
+\index{unify::Variant@{unify::Variant}!Free@{Free}}
+\index{Free@{Free}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{Free()}{Free()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} Variant\+::\+Free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_variant_a54ebf4a965738cd27b609c7ff4dd3c28}\label{classunify_1_1_variant_a54ebf4a965738cd27b609c7ff4dd3c28} 
+\index{unify::Variant@{unify::Variant}!GeBool@{GeBool}}
+\index{GeBool@{GeBool}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{GeBool()}{GeBool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} Variant\+::\+Ge\+Bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_variant_a9e72cf7c06d683b210c8cfb9f402d498}\label{classunify_1_1_variant_a9e72cf7c06d683b210c8cfb9f402d498} 
+\index{unify::Variant@{unify::Variant}!GetAddress@{GetAddress}}
+\index{GetAddress@{GetAddress}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{GetAddress()}{GetAddress()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} \texorpdfstring{$\ast$}{*} Variant\+::\+Get\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_variant_acbdeeb17c2a500bb39e5e5860bcdd9c1}\label{classunify_1_1_variant_acbdeeb17c2a500bb39e5e5860bcdd9c1} 
+\index{unify::Variant@{unify::Variant}!GetFloat@{GetFloat}}
+\index{GetFloat@{GetFloat}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{GetFloat()}{GetFloat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} Variant\+::\+Get\+Float (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_variant_a282413a741656fe33a434e10405870da}\label{classunify_1_1_variant_a282413a741656fe33a434e10405870da} 
+\index{unify::Variant@{unify::Variant}!GetInt@{GetInt}}
+\index{GetInt@{GetInt}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{GetInt()}{GetInt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{int}} Variant\+::\+Get\+Int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_variant_a79defbc8ef9b34b09f3bf2b3f6eb1fbb}\label{classunify_1_1_variant_a79defbc8ef9b34b09f3bf2b3f6eb1fbb} 
+\index{unify::Variant@{unify::Variant}!GetString@{GetString}}
+\index{GetString@{GetString}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{GetString()}{GetString()}}
+{\footnotesize\ttfamily std\+::string Variant\+::\+Get\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_variant_a6048f3091b11421e6dc48a66bcdcf7b1}\label{classunify_1_1_variant_a6048f3091b11421e6dc48a66bcdcf7b1} 
+\index{unify::Variant@{unify::Variant}!operator std::string@{operator std::string}}
+\index{operator std::string@{operator std::string}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{operator std::string()}{operator std::string()}}
+{\footnotesize\ttfamily Variant\+::operator std\+::string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_variant_aeaed361eec1013d08184e58b2885cb9f}\label{classunify_1_1_variant_aeaed361eec1013d08184e58b2885cb9f} 
+\index{unify::Variant@{unify::Variant}!operator=@{operator=}}
+\index{operator=@{operator=}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \& Variant\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \&}]{v\+Var }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_variant_ab331a079d37fc27ab8d7f01baa87d528}\label{classunify_1_1_variant_ab331a079d37fc27ab8d7f01baa87d528} 
+\index{unify::Variant@{unify::Variant}!Reference@{Reference}}
+\index{Reference@{Reference}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{Reference()}{Reference()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} Variant\+::\+Reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_variant_a352f78c8d83ad57d342cdb61e1b6d094}\label{classunify_1_1_variant_a352f78c8d83ad57d342cdb61e1b6d094} 
+\index{unify::Variant@{unify::Variant}!Set@{Set}}
+\index{Set@{Set}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} Variant\+::\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} \texorpdfstring{$\ast$}{*}}]{p\+Void,  }\item[{\mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}{TYPE}}}]{type }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_variant_a47eae51acbea5780528f85d4a19826b4}\label{classunify_1_1_variant_a47eae51acbea5780528f85d4a19826b4} 
+\index{unify::Variant@{unify::Variant}!Set@{Set}}
+\index{Set@{Set}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} Variant\+::\+Set (\begin{DoxyParamCaption}\item[{std\+::string}]{s\+Source }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_variant_af5e4b06b6b0ce90fab9c5c5cefa54dfb}\label{classunify_1_1_variant_af5e4b06b6b0ce90fab9c5c5cefa54dfb} 
+\index{unify::Variant@{unify::Variant}!SetBool@{SetBool}}
+\index{SetBool@{SetBool}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{SetBool()}{SetBool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} Variant\+::\+Set\+Bool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}}}]{b\+Bool }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_variant_a6fd3c494cdaabd6769299d1572598290}\label{classunify_1_1_variant_a6fd3c494cdaabd6769299d1572598290} 
+\index{unify::Variant@{unify::Variant}!SetConstant@{SetConstant}}
+\index{SetConstant@{SetConstant}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{SetConstant()}{SetConstant()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} Variant\+::\+Set\+Constant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}}}]{b\+Constant }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_variant_aa13ee8de950868723a2cd60608eaad7f}\label{classunify_1_1_variant_aa13ee8de950868723a2cd60608eaad7f} 
+\index{unify::Variant@{unify::Variant}!SetFloat@{SetFloat}}
+\index{SetFloat@{SetFloat}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{SetFloat()}{SetFloat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} Variant\+::\+Set\+Float (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}}}]{f\+Float }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_variant_af53c366bacb035721449fdf1ca2fdc6b}\label{classunify_1_1_variant_af53c366bacb035721449fdf1ca2fdc6b} 
+\index{unify::Variant@{unify::Variant}!SetInt@{SetInt}}
+\index{SetInt@{SetInt}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{SetInt()}{SetInt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} Variant\+::\+Set\+Int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{int}}}]{i\+Int }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_variant_a72726da9aaba2683be16b2b69b2dd7cc}\label{classunify_1_1_variant_a72726da9aaba2683be16b2b69b2dd7cc} 
+\index{unify::Variant@{unify::Variant}!SetReference@{SetReference}}
+\index{SetReference@{SetReference}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{SetReference()}{SetReference()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} Variant\+::\+Set\+Reference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} \texorpdfstring{$\ast$}{*}}]{p\+Void,  }\item[{\mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}{TYPE}}}]{type }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_variant_af9ecd7e28ea7e371c750587292b7e2ee}\label{classunify_1_1_variant_af9ecd7e28ea7e371c750587292b7e2ee} 
+\index{unify::Variant@{unify::Variant}!SetString@{SetString}}
+\index{SetString@{SetString}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{SetString()}{SetString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_variant}{Variant}} \texorpdfstring{$\ast$}{*} Variant\+::\+Set\+String (\begin{DoxyParamCaption}\item[{std\+::string}]{s\+Source }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_variant_a0cc2ed671fd43b53b0273f6e97ad5c61}\label{classunify_1_1_variant_a0cc2ed671fd43b53b0273f6e97ad5c61} 
+\index{unify::Variant@{unify::Variant}!Type@{Type}}
+\index{Type@{Type}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{Type()}{Type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}{Variant\+::\+TYPE}} Variant\+::\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_variant_acb8f15afe729e71731322de236d2c5b0}\label{classunify_1_1_variant_acb8f15afe729e71731322de236d2c5b0} 
+\index{unify::Variant@{unify::Variant}!TypeEnum@{TypeEnum}}
+\index{TypeEnum@{TypeEnum}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{TypeEnum()}{TypeEnum()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}{Variant\+::\+TYPE}} Variant\+::\+Type\+Enum (\begin{DoxyParamCaption}\item[{std\+::string}]{s\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classunify_1_1_variant_a8293fc459e2baedf36d88d83d2427167}\label{classunify_1_1_variant_a8293fc459e2baedf36d88d83d2427167} 
+\index{unify::Variant@{unify::Variant}!TypeName@{TypeName}}
+\index{TypeName@{TypeName}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{TypeName()}{TypeName()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string Variant\+::\+Type\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classunify_1_1_variant_a2f829fb98021d21cbe0ae945b29b61c5}\label{classunify_1_1_variant_a2f829fb98021d21cbe0ae945b29b61c5} 
+\index{unify::Variant@{unify::Variant}!TypeName@{TypeName}}
+\index{TypeName@{TypeName}!unify::Variant@{unify::Variant}}
+\doxysubsubsection{\texorpdfstring{TypeName()}{TypeName()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} std\+::string Variant\+::\+Type\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_variant_a71c3a6b0e344268ffa5e0ffc062174bf}{TYPE}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-unify/Variant.\+h\item 
-unify/Variant.\+cpp\end{DoxyCompactItemize}
+unify/\mbox{\hyperlink{_variant_8h}{Variant.\+h}}\item 
+unify/\mbox{\hyperlink{_variant_8cpp}{Variant.\+cpp}}\end{DoxyCompactItemize}

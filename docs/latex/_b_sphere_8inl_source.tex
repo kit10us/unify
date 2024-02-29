@@ -1,6 +1,6 @@
 \doxysection{BSphere.\+inl}
 \hypertarget{_b_sphere_8inl_source}{}\label{_b_sphere_8inl_source}\index{unify/BSphere.inl@{unify/BSphere.inl}}
-
+\mbox{\hyperlink{_b_sphere_8inl}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
@@ -25,47 +25,47 @@
 \DoxyCodeLine{00021\ }
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00024\ BSphere<\ T\ >::BSphere()}
-\DoxyCodeLine{00025\ \ \ \ \ :\ BSphere\{\ \{\ \{\},\ \{\},\ \{\}\ \}\ \}}
+\DoxyCodeLine{00024\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >::BSphere}}()}
+\DoxyCodeLine{00025\ \ \ \ \ :\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere}}\{\ \{\ \{\},\ \{\},\ \{\}\ \}\ \}}
 \DoxyCodeLine{00026\ \{}
 \DoxyCodeLine{00027\ \}}
 \DoxyCodeLine{00028\ }
 \DoxyCodeLine{00029\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00030\ BSphere<\ T\ >::BSphere(\ \textcolor{keyword}{const}\ V3<\ T\ >\ \&\ center\ )}
-\DoxyCodeLine{00031\ \ \ \ \ :\ BSphere\{\ center,\ \{\}\ \}}
+\DoxyCodeLine{00030\ \mbox{\hyperlink{classunify_1_1_b_sphere_ac766bc01af502b9bc067a2f6b88dda96}{BSphere<\ T\ >::BSphere}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ center\ )}
+\DoxyCodeLine{00031\ \ \ \ \ :\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere}}\{\ center,\ \{\}\ \}}
 \DoxyCodeLine{00032\ \{}
 \DoxyCodeLine{00033\ \}}
 \DoxyCodeLine{00034\ }
 \DoxyCodeLine{00035\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00036\ BSphere<\ T\ >::BSphere(\ \textcolor{keyword}{const}\ V3<\ T\ >\ \&\ center,\ \textcolor{keyword}{const}\ T\ \&\ radius\ )}
+\DoxyCodeLine{00036\ \mbox{\hyperlink{classunify_1_1_b_sphere_ac766bc01af502b9bc067a2f6b88dda96}{BSphere<\ T\ >::BSphere}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \&\ center,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \&\ radius\ )}
 \DoxyCodeLine{00037\ \ \ \ \ :\ center\{\ center\ \}}
 \DoxyCodeLine{00038\ \ \ \ \ ,\ radius\{\ radius\ \}}
 \DoxyCodeLine{00039\ \{}
 \DoxyCodeLine{00040\ \}}
 \DoxyCodeLine{00041\ }
 \DoxyCodeLine{00042\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00043\ BSphere<\ T\ >\ \&\ BSphere<\ T\ >::operator+=(\ \textcolor{keyword}{const}\ BSphere<\ T\ >\ \&\ sphere\ )}
+\DoxyCodeLine{00043\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_b_sphere_acaa7b6a1942d03dccb9a34ef60a95c1a}{BSphere<\ T\ >::operator+=}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{sphere}}\ )}
 \DoxyCodeLine{00044\ \{}
 \DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ Handle\ empty\ BSpheres...}}
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{if}(\ sphere.radius\ <\ std::numeric\_limits<\ T\ >::epsilon()\ )}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{if}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{sphere}}.radius\ <\ std::numeric\_limits<\ T\ >::epsilon()\ )}
 \DoxyCodeLine{00047\ \ \ \ \ \{}
 \DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
 \DoxyCodeLine{00049\ \ \ \ \ \}}
 \DoxyCodeLine{00050\ }
 \DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{if}(\ radius\ <\ std::numeric\_limits<\ T\ >::epsilon()\ )}
 \DoxyCodeLine{00052\ \ \ \ \ \{}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ radius\ =\ sphere.radius;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ radius\ =\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{sphere}}.\mbox{\hyperlink{classunify_1_1_b_sphere_afdbb8ae4d3181ad2c0cc49fb642c077f}{radius}};}
 \DoxyCodeLine{00054\ \ \ \ \ \}}
 \DoxyCodeLine{00055\ }
 \DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ Create\ extents\ and\ add\ them...}}
 \DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ T\ >}}\ a\{\ GetCenter()\ -\/\ sphere.GetCenter()\ \};}
-\DoxyCodeLine{00059\ \ \ \ \ a.Normalize();}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ T\ >}}\ a\{\ GetCenter()\ -\/\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{sphere}}.GetCenter()\ \};}
+\DoxyCodeLine{00059\ \ \ \ \ a.\mbox{\hyperlink{classunify_1_1_v3_a4cd378715a49fa0ce8207ccff2b4b1f0}{Normalize}}();}
 \DoxyCodeLine{00060\ \ \ \ \ a\ =\ center\ +=\ a\ *\ radius;}
 \DoxyCodeLine{00061\ \ \ \ \ }
-\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ T\ >}}\ b\{\ sphere.center\ -\/\ center\ \};}
-\DoxyCodeLine{00063\ \ \ \ \ b.Normalize();}
-\DoxyCodeLine{00064\ \ \ \ \ b\ =\ sphere.center\ +=\ b\ *\ sphere.radius;}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_v3}{unify::V3<\ T\ >}}\ b\{\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{sphere}}.center\ -\/\ center\ \};}
+\DoxyCodeLine{00063\ \ \ \ \ b.\mbox{\hyperlink{classunify_1_1_v3_a4cd378715a49fa0ce8207ccff2b4b1f0}{Normalize}}();}
+\DoxyCodeLine{00064\ \ \ \ \ b\ =\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{sphere}}.center\ +=\ b\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{sphere}}.radius;}
 \DoxyCodeLine{00065\ }
 \DoxyCodeLine{00066\ \ \ \ \ (\ *this\ )\ +=\ b;}
 \DoxyCodeLine{00067\ \ \ \ \ (\ *this\ )\ +=\ a;}
@@ -74,48 +74,48 @@
 \DoxyCodeLine{00070\ \}}
 \DoxyCodeLine{00071\ }
 \DoxyCodeLine{00072\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00073\ BSphere<\ T\ >\ \&\ BSphere<\ T\ >::operator+=(\ V3<\ T\ >\ point\ )}
+\DoxyCodeLine{00073\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_b_sphere_acaa7b6a1942d03dccb9a34ef60a95c1a}{BSphere<\ T\ >::operator+=}}(\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{point}}\ )}
 \DoxyCodeLine{00074\ \{}
-\DoxyCodeLine{00075\ \ \ \ \ T\ distanceFromCenter\ =\ center.DistanceTo(\ point\ );}
-\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{if}(\ distanceFromCenter\ >\ radius\ )}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{distanceFromCenter}}\ =\ center.DistanceTo(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{point}}\ );}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{if}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{distanceFromCenter}}\ >\ radius\ )}
 \DoxyCodeLine{00077\ \ \ \ \ \{}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ radius\ =\ distanceFromCenter;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ radius\ =\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{distanceFromCenter}};}
 \DoxyCodeLine{00079\ \ \ \ \ \}}
 \DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00081\ \}}
 \DoxyCodeLine{00082\ }
 \DoxyCodeLine{00083\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00084\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >::GetCenter}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00084\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_b_sphere_a2e00b6fb4f7cbe53e21e99e0a7e57164}{BSphere<\ T\ >::GetCenter}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00085\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{return}\ center;}
 \DoxyCodeLine{00087\ \}}
 \DoxyCodeLine{00088\ }
 \DoxyCodeLine{00089\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00090\ T\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >::GetRadius}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00090\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{classunify_1_1_b_sphere_a6e34412cd007563db4668bbb45134b7c}{BSphere<\ T\ >::GetRadius}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00091\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordflow}{return}\ radius;}
 \DoxyCodeLine{00093\ \}}
 \DoxyCodeLine{00094\ }
 \DoxyCodeLine{00095\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00096\ T\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >::GetDiameter}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00096\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{classunify_1_1_b_sphere_aab0a549bde28191c3c9f3262b91ef3a6}{BSphere<\ T\ >::GetDiameter}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00097\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordflow}{return}\ radius\ *\ 3.14159265f;}
 \DoxyCodeLine{00099\ \}}
 \DoxyCodeLine{00100\ }
 \DoxyCodeLine{00101\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00102\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >::Contains}}(\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ point\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00102\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_sphere_ad2f437dca29ba8c172392f58e6ce387e}{BSphere<\ T\ >::Contains}}(\ \mbox{\hyperlink{classunify_1_1_v3}{V3<\ T\ >}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{point}}\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00103\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00104\ \ \ \ \ T\ distanceFromCenter\ =\ center.DistanceTo(\ point\ );}
-\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordflow}{return}\ distanceFromCenter\ <=\ radius;}
+\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{T}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{distanceFromCenter}}\ =\ center.\mbox{\hyperlink{classunify_1_1_v3_a0f9cf043183d8407ad7aeefac4834e2f}{DistanceTo}}(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{point}}\ );}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{distanceFromCenter}}\ <=\ radius;}
 \DoxyCodeLine{00106\ \}}
 \DoxyCodeLine{00107\ }
 \DoxyCodeLine{00108\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00109\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >::Collides}}(\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >}}\ sphere\ )\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00109\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_b_sphere_a673e1766ebbaf9e2abd31db214afe5ef}{BSphere<\ T\ >::Collides}}(\ \mbox{\hyperlink{classunify_1_1_b_sphere}{BSphere<\ T\ >}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{sphere}}\ )\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00110\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{float}\ d\ =\ center.DistanceTo(\ sphere.center\ );}
-\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{float}\ rt\ =\ radius\ +\ sphere.radius;}
-\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{bool}\ collides\ =\ d\ <\ rt;}
-\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{return}\ collides;}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{float}\ d\ =\ center.DistanceTo(\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{sphere}}.center\ );}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{rt}}\ =\ radius\ +\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{sphere}}.radius;}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{collides}}\ =\ d\ <\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{rt}};}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{collides}};}
 \DoxyCodeLine{00115\ \}}
 
 \end{DoxyCode}

@@ -1,5 +1,9 @@
 \doxysection{unify\+::test\+::Default\+Assert\+Handler Class Reference}
 \hypertarget{classunify_1_1test_1_1_default_assert_handler}{}\label{classunify_1_1test_1_1_default_assert_handler}\index{unify::test::DefaultAssertHandler@{unify::test::DefaultAssertHandler}}
+
+
+{\ttfamily \#include $<$Default\+Assert\+Handler.\+h$>$}
+
 Inheritance diagram for unify\+::test\+::Default\+Assert\+Handler\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,14 +13,30 @@ Inheritance diagram for unify\+::test\+::Default\+Assert\+Handler\+:\begin{figur
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \mbox{\hyperlink{classunify_1_1test_1_1_default_assert_handler_a20753b12da7fa1ba9c2b560b329a76c2}{Assert}} (IOutput\+Handler\+::ptr output, std\+::string message, bool test)
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{virtual}} \mbox{\hyperlink{classunify_1_1test_1_1_default_assert_handler_a6d0c61c48ae9442363bee8c359d1c21c}{\texorpdfstring{$\sim$}{\string~}\+Default\+Assert\+Handler}} ()
+\item 
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{virtual}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} \mbox{\hyperlink{classunify_1_1test_1_1_default_assert_handler_a20753b12da7fa1ba9c2b560b329a76c2}{Assert}} (\mbox{\hyperlink{classunify_1_1test_1_1_i_output_handler_afc3644430d736015f97fba9cb2329de5}{IOutput\+Handler\+::ptr}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{output}}, std\+::string \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{message}}, \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} test)
 \begin{DoxyCompactList}\small\item\em Called when we perform an assertion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classunify_1_1test_1_1_i_assert_handler}{unify\+::test\+::\+IAssert\+Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{virtual}} \mbox{\hyperlink{classunify_1_1test_1_1_i_assert_handler_a5d7ac71316ce72a1ad76e754bd2456d2}{\texorpdfstring{$\sim$}{\string~}\+IAssert\+Handler}} ()
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Public Types inherited from \mbox{\hyperlink{classunify_1_1test_1_1_i_assert_handler}{unify\+::test\+::\+IAssert\+Handler}}}
 \begin{DoxyCompactItemize}
 \item 
-typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classunify_1_1test_1_1_i_assert_handler}{IAssert\+Handler}} $>$ {\bfseries ptr}
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typedef}} std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classunify_1_1test_1_1_i_assert_handler}{IAssert\+Handler}} $>$ \mbox{\hyperlink{classunify_1_1test_1_1_i_assert_handler_a8a4992534ff759990ab2403cb5066ea2}{ptr}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classunify_1_1test_1_1_default_assert_handler_a6d0c61c48ae9442363bee8c359d1c21c}\label{classunify_1_1test_1_1_default_assert_handler_a6d0c61c48ae9442363bee8c359d1c21c} 
+\index{unify::test::DefaultAssertHandler@{unify::test::DefaultAssertHandler}!````~DefaultAssertHandler@{\texorpdfstring{$\sim$}{\string~}DefaultAssertHandler}}
+\index{````~DefaultAssertHandler@{\texorpdfstring{$\sim$}{\string~}DefaultAssertHandler}!unify::test::DefaultAssertHandler@{unify::test::DefaultAssertHandler}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DefaultAssertHandler()}{\string~DefaultAssertHandler()}}
+{\footnotesize\ttfamily Default\+Assert\+Handler\+::\texorpdfstring{$\sim$}{\string~}\+Default\+Assert\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -24,7 +44,7 @@ typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classunify_1_1test_1_1_i_asse
 \index{unify::test::DefaultAssertHandler@{unify::test::DefaultAssertHandler}!Assert@{Assert}}
 \index{Assert@{Assert}!unify::test::DefaultAssertHandler@{unify::test::DefaultAssertHandler}}
 \doxysubsubsection{\texorpdfstring{Assert()}{Assert()}}
-{\footnotesize\ttfamily void Default\+Assert\+Handler\+::\+Assert (\begin{DoxyParamCaption}\item[{IOutput\+Handler\+::ptr}]{output,  }\item[{std\+::string}]{message,  }\item[{bool}]{test }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} Default\+Assert\+Handler\+::\+Assert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classunify_1_1test_1_1_i_output_handler_afc3644430d736015f97fba9cb2329de5}{IOutput\+Handler\+::ptr}}}]{output,  }\item[{std\+::string}]{message,  }\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}}}]{test }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -45,5 +65,5 @@ Implements \mbox{\hyperlink{classunify_1_1test_1_1_i_assert_handler_a5eb0f61b136
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-unify/test/Default\+Assert\+Handler.\+h\item 
-unify/test/Default\+Assert\+Handler.\+cpp\end{DoxyCompactItemize}
+unify/test/\mbox{\hyperlink{_default_assert_handler_8h}{Default\+Assert\+Handler.\+h}}\item 
+unify/test/\mbox{\hyperlink{_default_assert_handler_8cpp}{Default\+Assert\+Handler.\+cpp}}\end{DoxyCompactItemize}

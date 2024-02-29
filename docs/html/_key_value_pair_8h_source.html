@@ -84,7 +84,7 @@ $(function() { codefold.init(0); });
   <div class="headertitle"><div class="title">KeyValuePair.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<a href="_key_value_pair_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Unify Library</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * https://github.com/kit10us/unify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2002, Kit10 Studios LLC</span></div>
@@ -108,7 +108,7 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;unify/Unify.h&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;<a class="code" href="_unify_8h.html">unify/Unify.h</a>&gt;</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;map&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;string&gt;</span></div>
@@ -121,30 +121,43 @@ $(function() { codefold.init(0); });
 <div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structunify_1_1_key_value_pair.html">   38</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structunify_1_1_key_value_pair.html">KeyValuePair</a></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_struct" href="structunify_1_1_key_value_pair.html">KeyValuePair</a>( <span class="keyword">const</span> <a class="code hl_struct" href="structunify_1_1_key_value_pair.html">KeyValuePair&lt; Key, Value &gt;</a> &amp; keyValue )</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            : key{ keyValue.key }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            , value{ keyValue.value }</div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structunify_1_1_key_value_pair.html#aafb8f696cc85bd9b727fd7f2d7f83537">   40</a></span>        <a class="code hl_function" href="structunify_1_1_key_value_pair.html#aafb8f696cc85bd9b727fd7f2d7f83537">KeyValuePair</a>( <span class="keyword">const</span> <a class="code hl_struct" href="structunify_1_1_key_value_pair.html">KeyValuePair&lt; Key, Value &gt;</a> &amp; <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">keyValue</a> )</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            : <a class="code hl_variable" href="structunify_1_1_key_value_pair.html#a20bcbd75e793704af72250905715283e">key</a>{ <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">keyValue</a>.<a class="code hl_variable" href="structunify_1_1_key_value_pair.html#a20bcbd75e793704af72250905715283e">key</a> }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            , <a class="code hl_variable" href="structunify_1_1_key_value_pair.html#a65203514513932e72cb5d42bad94d0a3">value</a>{ <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">keyValue</a>.<a class="code hl_variable" href="structunify_1_1_key_value_pair.html#a65203514513932e72cb5d42bad94d0a3">value</a> }</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        {</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
+</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_struct" href="structunify_1_1_key_value_pair.html">KeyValuePair</a>( Key key, Value value )</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            : key{ key }</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            , value{ value }</div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structunify_1_1_key_value_pair.html#a6b75bbb2e6e151d9d8991ff2449ca6b7">   46</a></span>        <a class="code hl_function" href="structunify_1_1_key_value_pair.html#a6b75bbb2e6e151d9d8991ff2449ca6b7">KeyValuePair</a>( <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">Key</a> <a class="code hl_variable" href="structunify_1_1_key_value_pair.html#a20bcbd75e793704af72250905715283e">key</a>, <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">Value</a> <a class="code hl_variable" href="structunify_1_1_key_value_pair.html#a65203514513932e72cb5d42bad94d0a3">value</a> )</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            : <a class="code hl_variable" href="structunify_1_1_key_value_pair.html#a20bcbd75e793704af72250905715283e">key</a>{ <a class="code hl_variable" href="structunify_1_1_key_value_pair.html#a20bcbd75e793704af72250905715283e">key</a> }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            , <a class="code hl_variable" href="structunify_1_1_key_value_pair.html#a65203514513932e72cb5d42bad94d0a3">value</a>{ <a class="code hl_variable" href="structunify_1_1_key_value_pair.html#a65203514513932e72cb5d42bad94d0a3">value</a> }</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
+</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">bool</span> operator=( <span class="keyword">const</span> <a class="code hl_struct" href="structunify_1_1_key_value_pair.html">KeyValuePair</a> &amp; keyValue )</div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structunify_1_1_key_value_pair.html#a893429b256efe3575c70b5f4f28ac7f2">   52</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="structunify_1_1_key_value_pair.html#a893429b256efe3575c70b5f4f28ac7f2">operator=</a>( <span class="keyword">const</span> <a class="code hl_struct" href="structunify_1_1_key_value_pair.html">KeyValuePair</a> &amp; <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">keyValue</a> )</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">return</span> key == keyValue.key &amp;&amp; value == keyValue.value;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="structunify_1_1_key_value_pair.html#a20bcbd75e793704af72250905715283e">key</a> == <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">keyValue</a>.key &amp;&amp; <a class="code hl_variable" href="structunify_1_1_key_value_pair.html#a65203514513932e72cb5d42bad94d0a3">value</a> == <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">keyValue</a>.value;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
+</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">const</span> Key key;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        Value value;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structunify_1_1_key_value_pair.html#a20bcbd75e793704af72250905715283e">   57</a></span>        <span class="keyword">const</span> <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">Key</a> <a class="code hl_variable" href="structunify_1_1_key_value_pair.html#a20bcbd75e793704af72250905715283e">key</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structunify_1_1_key_value_pair.html#a65203514513932e72cb5d42bad94d0a3">   58</a></span>        <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">Value</a> <a class="code hl_variable" href="structunify_1_1_key_value_pair.html#a65203514513932e72cb5d42bad94d0a3">value</a>;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    };</div>
 </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
+<div class="ttc" id="a_unify_8h_html"><div class="ttname"><a href="_unify_8h.html">Unify.h</a></div></div>
 <div class="ttc" id="anamespaceunify_html"><div class="ttname"><a href="namespaceunify.html">unify</a></div><div class="ttdef"><b>Definition</b> Angle.h:28</div></div>
+<div class="ttc" id="anamespaceunify_html_a4f8a0a80ccca0f1412b3b08e30bc643b"><div class="ttname"><a href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">unify::any_cast</a></div><div class="ttdeci">ValueType * any_cast(Any *operand) noexcept</div><div class="ttdef"><b>Definition</b> Any.h:211</div></div>
 <div class="ttc" id="astructunify_1_1_key_value_pair_html"><div class="ttname"><a href="structunify_1_1_key_value_pair.html">unify::KeyValuePair</a></div><div class="ttdoc">A generic key value pair.</div><div class="ttdef"><b>Definition</b> KeyValuePair.h:39</div></div>
+<div class="ttc" id="astructunify_1_1_key_value_pair_html_a20bcbd75e793704af72250905715283e"><div class="ttname"><a href="structunify_1_1_key_value_pair.html#a20bcbd75e793704af72250905715283e">unify::KeyValuePair::key</a></div><div class="ttdeci">const Key key</div><div class="ttdef"><b>Definition</b> KeyValuePair.h:57</div></div>
+<div class="ttc" id="astructunify_1_1_key_value_pair_html_a65203514513932e72cb5d42bad94d0a3"><div class="ttname"><a href="structunify_1_1_key_value_pair.html#a65203514513932e72cb5d42bad94d0a3">unify::KeyValuePair::value</a></div><div class="ttdeci">Value value</div><div class="ttdef"><b>Definition</b> KeyValuePair.h:58</div></div>
+<div class="ttc" id="astructunify_1_1_key_value_pair_html_a6b75bbb2e6e151d9d8991ff2449ca6b7"><div class="ttname"><a href="structunify_1_1_key_value_pair.html#a6b75bbb2e6e151d9d8991ff2449ca6b7">unify::KeyValuePair::KeyValuePair</a></div><div class="ttdeci">KeyValuePair(Key key, Value value)</div><div class="ttdef"><b>Definition</b> KeyValuePair.h:46</div></div>
+<div class="ttc" id="astructunify_1_1_key_value_pair_html_a893429b256efe3575c70b5f4f28ac7f2"><div class="ttname"><a href="structunify_1_1_key_value_pair.html#a893429b256efe3575c70b5f4f28ac7f2">unify::KeyValuePair::operator=</a></div><div class="ttdeci">bool operator=(const KeyValuePair &amp;keyValue)</div><div class="ttdef"><b>Definition</b> KeyValuePair.h:52</div></div>
+<div class="ttc" id="astructunify_1_1_key_value_pair_html_aafb8f696cc85bd9b727fd7f2d7f83537"><div class="ttname"><a href="structunify_1_1_key_value_pair.html#aafb8f696cc85bd9b727fd7f2d7f83537">unify::KeyValuePair::KeyValuePair</a></div><div class="ttdeci">KeyValuePair(const KeyValuePair&lt; Key, Value &gt; &amp;keyValue)</div><div class="ttdef"><b>Definition</b> KeyValuePair.h:40</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

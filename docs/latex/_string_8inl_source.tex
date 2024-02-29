@@ -1,6 +1,6 @@
 \doxysection{String.\+inl}
 \hypertarget{_string_8inl_source}{}\label{_string_8inl_source}\index{unify/String.inl@{unify/String.inl}}
-
+\mbox{\hyperlink{_string_8inl}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
@@ -25,9 +25,9 @@
 \DoxyCodeLine{00021\ }
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ foo,\ \textcolor{keyword}{typename}\ ...\ bar\ >}
-\DoxyCodeLine{00024\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceunify_1_1string_a9748ee7f5acfe91ceba26ad687e6d2d8}{StringIs}}(\ std::string\ a,\ std::string\ b,\ std::string\ rest...\ )}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_string_8inl_a7ce265010e13e31974a1de626c4a4a81}{StringIs}}(\ std::string\ a,\ std::string\ b,\ std::string\ rest...\ )}
 \DoxyCodeLine{00025\ \{}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespaceunify_1_1string_a9748ee7f5acfe91ceba26ad687e6d2d8}{StringIs}}(a,\ b\ ))}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_string_8inl_a7ce265010e13e31974a1de626c4a4a81}{StringIs}}(a,\ b\ ))}
 \DoxyCodeLine{00027\ \ \ \ \ \{}
 \DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
 \DoxyCodeLine{00029\ \ \ \ \ \}}
@@ -35,7 +35,7 @@
 \DoxyCodeLine{00031\ \}}
 \DoxyCodeLine{00032\ }
 \DoxyCodeLine{00033\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00034\ std::vector<\ T\ >\ Split(\ std::string\ sourceString,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ delimitor\ )}
+\DoxyCodeLine{00034\ std::vector<\ T\ >\ \mbox{\hyperlink{_string_8inl_a78a39e816a5c7ef95adc01fb11d9858f}{Split}}(\ std::string\ sourceString,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ delimitor\ )}
 \DoxyCodeLine{00035\ \{}
 \DoxyCodeLine{00036\ \ \ \ \ std::vector<\ T\ >\ destination;}
 \DoxyCodeLine{00037\ \ \ \ \ std::stringstream\ ss(\ sourceString\ );}
@@ -48,7 +48,7 @@
 \DoxyCodeLine{00044\ \}}
 \DoxyCodeLine{00045\ }
 \DoxyCodeLine{00046\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00047\ std::vector<\ T\ >\ Split(\ std::string\ sourceString,\ \textcolor{keyword}{const}\ std::vector<\ char\ >\ delimitors,\ \textcolor{keywordtype}{bool}\ includeEmpties\ )}
+\DoxyCodeLine{00047\ std::vector<\ T\ >\ \mbox{\hyperlink{_string_8inl_a78a39e816a5c7ef95adc01fb11d9858f}{Split}}(\ std::string\ sourceString,\ \textcolor{keyword}{const}\ std::vector<\ char\ >\ delimitors,\ \textcolor{keywordtype}{bool}\ includeEmpties\ )}
 \DoxyCodeLine{00048\ \{}
 \DoxyCodeLine{00049\ \ \ \ \ std::vector<\ T\ >\ destination;}
 \DoxyCodeLine{00050\ }
@@ -99,7 +99,7 @@
 \DoxyCodeLine{00095\ \}}
 \DoxyCodeLine{00096\ }
 \DoxyCodeLine{00097\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00098\ std::vector<\ T\ >\ SplitOnWhitespace(\ std::string\ sourceString\ )}
+\DoxyCodeLine{00098\ std::vector<\ T\ >\ \mbox{\hyperlink{_string_8inl_a92443cbc7f32b1c60749ca47097566ac}{SplitOnWhitespace}}(\ std::string\ sourceString\ )}
 \DoxyCodeLine{00099\ \{}
 \DoxyCodeLine{00100\ \ \ \ \ std::vector<\ char\ >\ delimitors;}
 \DoxyCodeLine{00101\ \ \ \ \ delimitors.push\_back(\ \textcolor{charliteral}{'\ '}\ );}

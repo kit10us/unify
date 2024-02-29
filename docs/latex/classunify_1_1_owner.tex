@@ -12,30 +12,56 @@ Provides ownership symantics, where two or more objects can observer ownership o
 \doxysubsubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classunify_1_1_owner_a8075678e51fa19b2287925468aaeccf8}\label{classunify_1_1_owner_a8075678e51fa19b2287925468aaeccf8} 
-typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classunify_1_1_owner}{Owner}} $>$ {\bfseries ptr}
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typedef}} std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classunify_1_1_owner}{Owner}} $>$ \mbox{\hyperlink{classunify_1_1_owner_a8075678e51fa19b2287925468aaeccf8}{ptr}}
 \item 
-\Hypertarget{classunify_1_1_owner_a8144f3d94a6faa659e9cbaf20e83e00d}\label{classunify_1_1_owner_a8144f3d94a6faa659e9cbaf20e83e00d} 
-typedef std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classunify_1_1_owner}{Owner}} $>$ {\bfseries weak\+\_\+ptr}
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typedef}} std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classunify_1_1_owner}{Owner}} $>$ \mbox{\hyperlink{classunify_1_1_owner_a8144f3d94a6faa659e9cbaf20e83e00d}{weak\+\_\+ptr}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classunify_1_1_owner_a7de67ab46c9266d6411777cd94c6cceb}\label{classunify_1_1_owner_a7de67ab46c9266d6411777cd94c6cceb} 
-std\+::string {\bfseries Get\+Name} () const
+std\+::string \mbox{\hyperlink{classunify_1_1_owner_a7de67ab46c9266d6411777cd94c6cceb}{Get\+Name}} () \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classunify_1_1_owner_a723e455607a9204ce40cc471fd1c9548}\label{classunify_1_1_owner_a723e455607a9204ce40cc471fd1c9548} 
-static ptr {\bfseries Create} (std\+::string name)
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{static}} \mbox{\hyperlink{classunify_1_1_owner_a8075678e51fa19b2287925468aaeccf8}{ptr}} \mbox{\hyperlink{classunify_1_1_owner_a723e455607a9204ce40cc471fd1c9548}{Create}} (std\+::string name)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Provides ownership symantics, where two or more objects can observer ownership of memory or events. 
 
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classunify_1_1_owner_a8075678e51fa19b2287925468aaeccf8}\label{classunify_1_1_owner_a8075678e51fa19b2287925468aaeccf8} 
+\index{unify::Owner@{unify::Owner}!ptr@{ptr}}
+\index{ptr@{ptr}!unify::Owner@{unify::Owner}}
+\doxysubsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typedef}} std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classunify_1_1_owner}{Owner}} $>$ \mbox{\hyperlink{classunify_1_1_owner_a8075678e51fa19b2287925468aaeccf8}{unify\+::\+Owner\+::ptr}}}
+
+\Hypertarget{classunify_1_1_owner_a8144f3d94a6faa659e9cbaf20e83e00d}\label{classunify_1_1_owner_a8144f3d94a6faa659e9cbaf20e83e00d} 
+\index{unify::Owner@{unify::Owner}!weak\_ptr@{weak\_ptr}}
+\index{weak\_ptr@{weak\_ptr}!unify::Owner@{unify::Owner}}
+\doxysubsubsection{\texorpdfstring{weak\_ptr}{weak\_ptr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{typedef}} std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classunify_1_1_owner}{Owner}} $>$ \mbox{\hyperlink{classunify_1_1_owner_a8144f3d94a6faa659e9cbaf20e83e00d}{unify\+::\+Owner\+::weak\+\_\+ptr}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classunify_1_1_owner_a723e455607a9204ce40cc471fd1c9548}\label{classunify_1_1_owner_a723e455607a9204ce40cc471fd1c9548} 
+\index{unify::Owner@{unify::Owner}!Create@{Create}}
+\index{Create@{Create}!unify::Owner@{unify::Owner}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classunify_1_1_owner_a8075678e51fa19b2287925468aaeccf8}{Owner\+::ptr}} unify\+::\+Owner\+::\+Create (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classunify_1_1_owner_a7de67ab46c9266d6411777cd94c6cceb}\label{classunify_1_1_owner_a7de67ab46c9266d6411777cd94c6cceb} 
+\index{unify::Owner@{unify::Owner}!GetName@{GetName}}
+\index{GetName@{GetName}!unify::Owner@{unify::Owner}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily std\+::string Owner\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-unify/Owner.\+h\item 
-unify/Owner.\+cpp\end{DoxyCompactItemize}
+unify/\mbox{\hyperlink{_owner_8h}{Owner.\+h}}\item 
+unify/\mbox{\hyperlink{_owner_8cpp}{Owner.\+cpp}}\end{DoxyCompactItemize}

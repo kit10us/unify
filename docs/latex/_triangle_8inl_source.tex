@@ -1,6 +1,6 @@
 \doxysection{Triangle.\+inl}
 \hypertarget{_triangle_8inl_source}{}\label{_triangle_8inl_source}\index{unify/Triangle.inl@{unify/Triangle.inl}}
-
+\mbox{\hyperlink{_triangle_8inl}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
@@ -25,7 +25,7 @@
 \DoxyCodeLine{00021\ }
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{00024\ Triangle<\ T\ >::Triangle(\ \textcolor{keyword}{const}\ T\ \&\ v1,\ \textcolor{keyword}{const}\ T\ \&\ v2,\ \textcolor{keyword}{const}\ T\ \&\ v3\ )}
+\DoxyCodeLine{00024\ \mbox{\hyperlink{classunify_1_1_triangle}{Triangle<\ T\ >::Triangle}}(\ \textcolor{keyword}{const}\ T\ \&\ v1,\ \textcolor{keyword}{const}\ T\ \&\ v2,\ \textcolor{keyword}{const}\ T\ \&\ v3\ )}
 \DoxyCodeLine{00025\ \{}
 \DoxyCodeLine{00026\ \ \ \ \ v[\ 0\ ]\ =\ v1;}
 \DoxyCodeLine{00027\ \ \ \ \ v[\ 1\ ]\ =\ v2;}
@@ -33,25 +33,25 @@
 \DoxyCodeLine{00029\ \}}
 \DoxyCodeLine{00030\ }
 \DoxyCodeLine{00031\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{00032\ Triangle<\ T\ >\ \&\ Triangle<\ T\ >::operator\ =\ (\ \textcolor{keyword}{const}\ Triangle\ \&\ triangle\ )}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{classunify_1_1_triangle}{Triangle<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_triangle}{Triangle<\ T\ >::operator\ =\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_triangle}{Triangle}}\ \&\ triangle\ )}
 \DoxyCodeLine{00033\ \{}
-\DoxyCodeLine{00034\ \ \ \ \ v[\ 0\ ]\ =\ triangle.v[\ 0\ ];}
-\DoxyCodeLine{00035\ \ \ \ \ v[\ 1\ ]\ =\ triangle.v[\ 1\ ];}
-\DoxyCodeLine{00036\ \ \ \ \ v[\ 2\ ]\ =\ triangle.v[\ 2\ ];}
+\DoxyCodeLine{00034\ \ \ \ \ v[\ 0\ ]\ =\ triangle.\mbox{\hyperlink{classunify_1_1_triangle_aab83042063227b4f6a764ef281f60e90}{v}}[\ 0\ ];}
+\DoxyCodeLine{00035\ \ \ \ \ v[\ 1\ ]\ =\ triangle.\mbox{\hyperlink{classunify_1_1_triangle_aab83042063227b4f6a764ef281f60e90}{v}}[\ 1\ ];}
+\DoxyCodeLine{00036\ \ \ \ \ v[\ 2\ ]\ =\ triangle.\mbox{\hyperlink{classunify_1_1_triangle_aab83042063227b4f6a764ef281f60e90}{v}}[\ 2\ ];}
 \DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00038\ \}}
 \DoxyCodeLine{00039\ }
 \DoxyCodeLine{00040\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00041\ Triangle<\ T\ >\ \&\ Triangle<\ T\ >::operator+=(\ T\ value\ )}
+\DoxyCodeLine{00041\ \mbox{\hyperlink{classunify_1_1_triangle}{Triangle<\ T\ >}}\ \&\ \mbox{\hyperlink{classunify_1_1_triangle}{Triangle<\ T\ >::operator+=}}(\ T\ value\ )}
 \DoxyCodeLine{00042\ \{}
 \DoxyCodeLine{00043\ \ \ \ \ std::for\_each(\ \&v[\ 0\ ],\ \&v[\ 2\ ],\ std::bind2nd(\ std::plus<\ T\ >(),\ value\ )\ );}
 \DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{00045\ \}}
 \DoxyCodeLine{00046\ }
 \DoxyCodeLine{00047\ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ T\ >}
-\DoxyCodeLine{00048\ Triangle<\ T\ >\ Triangle<\ T\ >::operator+(\ T\ value\ )}
+\DoxyCodeLine{00048\ \mbox{\hyperlink{classunify_1_1_triangle}{Triangle<\ T\ >}}\ \mbox{\hyperlink{classunify_1_1_triangle}{Triangle<\ T\ >::operator+}}(\ T\ value\ )}
 \DoxyCodeLine{00049\ \{}
-\DoxyCodeLine{00050\ \ \ \ \ Triangle\ newTriangle(\ *\textcolor{keyword}{this}\ );}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_triangle}{Triangle}}\ newTriangle(\ *\textcolor{keyword}{this}\ );}
 \DoxyCodeLine{00051\ \ \ \ \ newTriangle\ +=\ value;}
 \DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{return}\ newTriangle;}
 \DoxyCodeLine{00053\ \}}

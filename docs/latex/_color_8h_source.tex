@@ -1,6 +1,6 @@
 \doxysection{Color.\+h}
 \hypertarget{_color_8h_source}{}\label{_color_8h_source}\index{unify/Color.h@{unify/Color.h}}
-
+\mbox{\hyperlink{_color_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
@@ -26,7 +26,7 @@
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_unify_8h}{unify/Unify.h}}>}}
 \DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{00027\ }
 \DoxyCodeLine{00028\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}}
@@ -34,112 +34,112 @@
 \DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{class\ }ColorUnit;}
 \DoxyCodeLine{00031\ }
 \DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fb}{Order}}\ \{}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ RGBA,}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ ARGB,}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ BGRA,}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ ABGR,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fba287566ddad210df6ae852a39bf72cf94}{RGBA}},}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fba197e484be88aa4455970b1c85eceea87}{ARGB}},}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fba5d0594e84962ef29d928c18cd5fbac51}{BGRA}},}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fba25220ab3268c4870cc7fdbb01757fa68}{ABGR}},}
 \DoxyCodeLine{00040\ \ \ \ \ \};}
 \DoxyCodeLine{00041\ }
 \DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_color}{Color}}}
 \DoxyCodeLine{00046\ \ \ \ \ \{}
 \DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ Component;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}};}
 \DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorRGBA(\ Component\ r,\ Component\ g,\ Component\ b,\ Component\ a\ );}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorRGBA(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ rgba\ );}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorARGB(\ Component\ a,\ Component\ r,\ Component\ g,\ Component\ b\ );}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorARGB(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ argb\ );}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorRGB(\ Component\ r,\ Component\ g,\ Component\ b\ );}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorWhite(\ Component\ a\ );}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorRed(\ Component\ r,\ Component\ a\ );}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorGreen(\ Component\ g,\ Component\ a\ );}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorBlue(\ Component\ c,\ Component\ a\ );}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorYellow(\ Component\ y,\ Component\ a\ );}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorCyan(\ Component\ c,\ Component\ a\ );}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorMagenta(\ Component\ m,\ Component\ a\ );}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorGrey(\ Component\ grey,\ Component\ a\ );}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorBlack(\ Component\ a\ );}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorZero();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_a976acc41772d67e9ca6493fd262212ac}{ColorRGBA}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a85d9a557abcf184f1478bc008c5273e5}{r}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a87cd6034838e35e5aeb0e67d9926d636}{g}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a7fae3a08f02090b11b680923ab37dcb3}{b}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_ae4aa506630e697e1af41c348543e3cb2}{a}}\ );}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_ab5d78d6830b9a50146d90631c77de91e}{ColorRGBA}}(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{rgba}}\ );}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_a0086694b6bb3e2f29308066f40925b90}{ColorARGB}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_ae4aa506630e697e1af41c348543e3cb2}{a}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a85d9a557abcf184f1478bc008c5273e5}{r}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a87cd6034838e35e5aeb0e67d9926d636}{g}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a7fae3a08f02090b11b680923ab37dcb3}{b}}\ );}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_a4465b6cd5936979b382655cf51bfead5}{ColorARGB}}(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{argb}}\ );}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_ae691d929e2d3fc118c0f84885a746832}{ColorRGB}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a85d9a557abcf184f1478bc008c5273e5}{r}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a87cd6034838e35e5aeb0e67d9926d636}{g}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a7fae3a08f02090b11b680923ab37dcb3}{b}}\ );}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_a415fbcc605b632871e9eab34dbda7790}{ColorWhite}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_ae4aa506630e697e1af41c348543e3cb2}{a}}\ );}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_a5089b0719b71c9e971d3a6de6f1d3dad}{ColorRed}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a85d9a557abcf184f1478bc008c5273e5}{r}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_ae4aa506630e697e1af41c348543e3cb2}{a}}\ );}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_aa0fa65ca92397cb40a94bec2c3c6500d}{ColorGreen}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a87cd6034838e35e5aeb0e67d9926d636}{g}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_ae4aa506630e697e1af41c348543e3cb2}{a}}\ );}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_a2730e30acca9eeb141ef80eae7a6a784}{ColorBlue}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_acd65aafed53fa45cdb4b71df83dfc09a}{c}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_ae4aa506630e697e1af41c348543e3cb2}{a}}\ );}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_aafb384fb6cbad766900759963acd4303}{ColorYellow}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ y,\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_ae4aa506630e697e1af41c348543e3cb2}{a}}\ );}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_a355b861ff6f8af5518d79ebb0cc34125}{ColorCyan}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_acd65aafed53fa45cdb4b71df83dfc09a}{c}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_ae4aa506630e697e1af41c348543e3cb2}{a}}\ );}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_aaf529194cef55130fc0104d5f3d3b743}{ColorMagenta}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ m,\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_ae4aa506630e697e1af41c348543e3cb2}{a}}\ );}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_ab66a1d8d27b0a8e1560f5967491f495e}{ColorGrey}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{grey}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_ae4aa506630e697e1af41c348543e3cb2}{a}}\ );}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_a2741901d145a50691d223f8380a97c46}{ColorBlack}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_ae4aa506630e697e1af41c348543e3cb2}{a}}\ );}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_ac91a81efa271ee003b0d242644ccaef9}{ColorZero}}();}
 \DoxyCodeLine{00065\ }
 \DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\{}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ c;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classunify_1_1_color_acd65aafed53fa45cdb4b71df83dfc09a}{c}};}
 \DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Component\ r;}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Component\ g;}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Component\ b;}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Component\ a;}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ component;}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ linear[4];}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a85d9a557abcf184f1478bc008c5273e5}{r}};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a87cd6034838e35e5aeb0e67d9926d636}{g}};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a7fae3a08f02090b11b680923ab37dcb3}{b}};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_ae4aa506630e697e1af41c348543e3cb2}{a}};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \mbox{\hyperlink{classunify_1_1_color_a1c237b8e419a8cd8db3c3a0c4d95aab9}{component}};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classunify_1_1_color_ad23887cc35c948d5bb34ce9520cf0fe5}{linear}}[4];}
 \DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \};}
 \DoxyCodeLine{00076\ }
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}();}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}(\ Component\ r,\ Component\ g,\ Component\ b,\ Component\ a\ );}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ color\ );}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}(\ std::string\ text,\ \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fb}{Order}}\ order\ =\ RGBA,\ Component\ defaultAlpha\ =\ 255\ );}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ \&\ colorUnit\ );}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_a9a742cbe9f9f4037f5d9f4e81a9b2428}{Color}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_a9a742cbe9f9f4037f5d9f4e81a9b2428}{Color}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a85d9a557abcf184f1478bc008c5273e5}{r}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a87cd6034838e35e5aeb0e67d9926d636}{g}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a7fae3a08f02090b11b680923ab37dcb3}{b}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_ae4aa506630e697e1af41c348543e3cb2}{a}}\ );}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_a9a742cbe9f9f4037f5d9f4e81a9b2428}{Color}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{color}}\ );}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classunify_1_1_color_a9a742cbe9f9f4037f5d9f4e81a9b2428}{Color}}(\ std::string\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{text}},\ \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fb}{Order}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{order}}\ =\ \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fba287566ddad210df6ae852a39bf72cf94}{RGBA}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{defaultAlpha}}\ =\ 255\ );}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classunify_1_1_color_a9a742cbe9f9f4037f5d9f4e81a9b2428}{Color}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{colorUnit}}\ );}
 \DoxyCodeLine{00082\ }
 \DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ CONVERSIONS}}
 \DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ \mbox{\hyperlink{classunify_1_1_color_unit}{ColorUnit}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ \textcolor{keywordtype}{unsigned}\ int()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{int}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00086\ }
 \DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Overloaded\ operators}}
 \DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Note:\ We\ use\ a\ larger\ type\ to\ provide\ clamping.\ This\ might\ affect\ performance.}}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ operator\ +=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ );}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ operator\ -\/=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ );}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ operator\ *=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ );}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ operator\ /=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ );}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ operator\ *=\ (\ \textcolor{keywordtype}{float}\ val\ );}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ operator\ /=\ (\ \textcolor{keywordtype}{float}\ val\ );}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ \mbox{\hyperlink{classunify_1_1_color_a07302cb348f125aa032c7947dd28353f}{operator\ +=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{col}}\ );}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ \mbox{\hyperlink{classunify_1_1_color_a975249eae03c3b3fff698ce278670345}{operator\ -\/=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{col}}\ );}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ \mbox{\hyperlink{classunify_1_1_color_af1ea86648f65b720778301206fe92846}{operator\ *=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{col}}\ );}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ \mbox{\hyperlink{classunify_1_1_color_ab56c3e10c325157a80245fd88b59d6c5}{operator\ /=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{col}}\ );}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ \mbox{\hyperlink{classunify_1_1_color_af1ea86648f65b720778301206fe92846}{operator\ *=\ }}(\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{val}}\ );}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ \mbox{\hyperlink{classunify_1_1_color_ab56c3e10c325157a80245fd88b59d6c5}{operator\ /=\ }}(\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{val}}\ );}
 \DoxyCodeLine{00095\ }
 \DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ binary\ operators}}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ operator\ +\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ operator\ -\/\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ operator\ *\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ operator\ /\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ operator\ *\ (\ \textcolor{keywordtype}{float}\ val\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ operator\ /\ (\ \textcolor{keywordtype}{float}\ val\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_aeac606905706425a7f7da965df77df9f}{operator\ +\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{col}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_a0d0d7cb9d2d9cb8df1c79198ec3de4c1}{operator\ -\/\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{col}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_aabd5d3b1a9e7a0f52b289c1f5c7f0ec7}{operator\ *\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{col}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_a890523531de61c1aec84e5b2a1307ef3}{operator\ /\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{col}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_aabd5d3b1a9e7a0f52b289c1f5c7f0ec7}{operator\ *\ }}(\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{val}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{classunify_1_1_color_a890523531de61c1aec84e5b2a1307ef3}{operator\ /\ }}(\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{val}}\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00103\ }
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ ==\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ )\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator\ !=\ (\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ col\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_color_ac91555626db81da379b3e2ecdca86292}{operator\ ==\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{col}}\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_color_af7a105f6ee16c7943ffc636424be6936}{operator\ !=\ }}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \&\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{col}}\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00106\ }
-\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a29f8f964e5782416c4abee28dbf594b6}{SetRGBA}}(\ Component\ r,\ Component\ g,\ Component\ b,\ Component\ a\ );}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a29f8f964e5782416c4abee28dbf594b6}{SetRGBA}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a85d9a557abcf184f1478bc008c5273e5}{r}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a87cd6034838e35e5aeb0e67d9926d636}{g}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a7fae3a08f02090b11b680923ab37dcb3}{b}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_ae4aa506630e697e1af41c348543e3cb2}{a}}\ );}
 \DoxyCodeLine{00111\ }
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ Component\ \mbox{\hyperlink{classunify_1_1_color_a3afff9e9a4a56289a229311050ebde09}{GetRed}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a3afff9e9a4a56289a229311050ebde09}{GetRed}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00116\ }
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ Component\ \mbox{\hyperlink{classunify_1_1_color_a3e8cc7a8d7dbd1f48c51393d37d409ed}{GetGreen}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a3e8cc7a8d7dbd1f48c51393d37d409ed}{GetGreen}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00121\ }
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ Component\ \mbox{\hyperlink{classunify_1_1_color_abc86295756a720d4917a87c165c6c059}{GetBlue}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_abc86295756a720d4917a87c165c6c059}{GetBlue}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00126\ }
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ Component\ \mbox{\hyperlink{classunify_1_1_color_a4353eba6f8b8deb28a4fffa76c9954db}{GetAlpha}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a4353eba6f8b8deb28a4fffa76c9954db}{GetAlpha}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00131\ }
-\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a37569aa8abb06eb2eef2aba698d7d4bc}{SetRed}}(\ Component\ r\ );}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a37569aa8abb06eb2eef2aba698d7d4bc}{SetRed}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a85d9a557abcf184f1478bc008c5273e5}{r}}\ );}
 \DoxyCodeLine{00136\ }
-\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a4884e9566d50fe926fa0e58d19fc47b5}{SetGreen}}(\ Component\ g\ );}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a4884e9566d50fe926fa0e58d19fc47b5}{SetGreen}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a87cd6034838e35e5aeb0e67d9926d636}{g}}\ );}
 \DoxyCodeLine{00141\ }
-\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a19c932020de62ccd1f6e9d205f45b271}{SetBlue}}(\ Component\ b\ );}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a19c932020de62ccd1f6e9d205f45b271}{SetBlue}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_a7fae3a08f02090b11b680923ab37dcb3}{b}}\ );}
 \DoxyCodeLine{00146\ }
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a0c336f199cf5c60b60b30022d54c5d77}{SetAlpha}}(\ Component\ a\ );}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a0c336f199cf5c60b60b30022d54c5d77}{SetAlpha}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Component}}\ \mbox{\hyperlink{classunify_1_1_color_ae4aa506630e697e1af41c348543e3cb2}{a}}\ );}
 \DoxyCodeLine{00151\ }
-\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a1df3727a270fb4dcc22749a3ee7febc3}{Interpulate}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ colorA,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ colorB,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ ratio\ );}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_color_a1df3727a270fb4dcc22749a3ee7febc3}{Interpulate}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{colorA}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{colorB}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{ratio}}\ );}
 \DoxyCodeLine{00155\ }
-\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classunify_1_1_color_ab6ba4294480ac7cfdfc22620b7d8a484}{ToString}}(\ \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fb}{Order}}\ order\ =\ RGBA\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classunify_1_1_color_ab6ba4294480ac7cfdfc22620b7d8a484}{ToString}}(\ \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fb}{Order}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{order}}\ =\ \mbox{\hyperlink{namespaceunify_a7e1d013ad187fee7ca653ea1f30f29fba287566ddad210df6ae852a39bf72cf94}{RGBA}}\ )\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00160\ \ \ \ \ \};}
 \DoxyCodeLine{00161\ }
-\DoxyCodeLine{00162\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorRGBA(\ Color::Component\ r,\ Color::Component\ g,\ Color::Component\ b,\ Color::Component\ a\ );}
-\DoxyCodeLine{00163\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorRGBA(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ rgba\ );}
-\DoxyCodeLine{00164\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorARGB(\ Color::Component\ a,\ Color::Component\ r,\ Color::Component\ g,\ Color::Component\ b\ );}
-\DoxyCodeLine{00165\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorARGB(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ argb\ );}
-\DoxyCodeLine{00166\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorRGB(\ Color::Component\ r,\ Color::Component\ g,\ Color::Component\ b\ );}
-\DoxyCodeLine{00167\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorWhite(\ Color::Component\ a\ =\ 255\ );}
-\DoxyCodeLine{00168\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorRed(\ Color::Component\ r\ =\ 255,\ Color::Component\ a\ =\ 255\ );}
-\DoxyCodeLine{00169\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorGreen(\ Color::Component\ g\ =\ 255,\ Color::Component\ a\ =\ 255\ );}
-\DoxyCodeLine{00170\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorBlue(\ Color::Component\ c\ =\ 255,\ Color::Component\ a\ =\ 255\ );}
-\DoxyCodeLine{00171\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorYellow(\ Color::Component\ y\ =\ 255,\ Color::Component\ a\ =\ 255\ );}
-\DoxyCodeLine{00172\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorCyan(\ Color::Component\ c\ =\ 255,\ Color::Component\ a\ =\ 255\ );}
-\DoxyCodeLine{00173\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorMagenta(\ Color::Component\ m\ =\ 255,\ Color::Component\ a\ =\ 255\ );}
-\DoxyCodeLine{00174\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorGrey(\ Color::Component\ grey,\ Color::Component\ a\ =\ 255\ );}
-\DoxyCodeLine{00175\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorBlack(\ Color::Component\ a\ =\ 255\ );}
-\DoxyCodeLine{00176\ \ \ \ \ \mbox{\hyperlink{classunify_1_1_color}{Color}}\ ColorZero();\ }
+\DoxyCodeLine{00162\ \ \ \ \ Color\ \mbox{\hyperlink{namespaceunify_a0c6e6421ddd9608187cd7353d9f35af5}{ColorRGBA}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ r,\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ g,\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ b,\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ a\ );}
+\DoxyCodeLine{00163\ \ \ \ \ Color\ \mbox{\hyperlink{namespaceunify_a0c6e6421ddd9608187cd7353d9f35af5}{ColorRGBA}}(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{rgba}}\ );}
+\DoxyCodeLine{00164\ \ \ \ \ Color\ \mbox{\hyperlink{namespaceunify_a5bdb75e8af49f28d6299f1474fd516cd}{ColorARGB}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ a,\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ r,\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ g,\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ b\ );}
+\DoxyCodeLine{00165\ \ \ \ \ Color\ \mbox{\hyperlink{namespaceunify_a5bdb75e8af49f28d6299f1474fd516cd}{ColorARGB}}(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{argb}}\ );}
+\DoxyCodeLine{00166\ \ \ \ \ Color\ \mbox{\hyperlink{namespaceunify_a5827aa6a3f021306ab74eb2846886863}{ColorRGB}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ r,\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ g,\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ b\ );}
+\DoxyCodeLine{00167\ \ \ \ \ Color\ \mbox{\hyperlink{namespaceunify_a26f31474fb3e30785b7418ab4494b978}{ColorWhite}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ a\ =\ 255\ );}
+\DoxyCodeLine{00168\ \ \ \ \ Color\ \mbox{\hyperlink{namespaceunify_a2aa811512516892bb83317da93b40daa}{ColorRed}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ r\ =\ 255,\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ a\ =\ 255\ );}
+\DoxyCodeLine{00169\ \ \ \ \ Color\ \mbox{\hyperlink{namespaceunify_a3d71ab49b910cc77ebac87a41f067875}{ColorGreen}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ g\ =\ 255,\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ a\ =\ 255\ );}
+\DoxyCodeLine{00170\ \ \ \ \ Color\ \mbox{\hyperlink{namespaceunify_a973713cc9e6b9b2d8ae2b4a419053317}{ColorBlue}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ c\ =\ 255,\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ a\ =\ 255\ );}
+\DoxyCodeLine{00171\ \ \ \ \ Color\ \mbox{\hyperlink{namespaceunify_ad29b2bc9de949586293e2f7a82d1de2f}{ColorYellow}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ y\ =\ 255,\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ a\ =\ 255\ );}
+\DoxyCodeLine{00172\ \ \ \ \ Color\ \mbox{\hyperlink{namespaceunify_a888270ef60794bdd17828ad2ba288088}{ColorCyan}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ c\ =\ 255,\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ a\ =\ 255\ );}
+\DoxyCodeLine{00173\ \ \ \ \ Color\ \mbox{\hyperlink{namespaceunify_a269b98fd05b87ab9bf9a885ef3f12361}{ColorMagenta}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ m\ =\ 255,\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ a\ =\ 255\ );}
+\DoxyCodeLine{00174\ \ \ \ \ Color\ \mbox{\hyperlink{namespaceunify_a0cf70d02899527e66e1696278532c74f}{ColorGrey}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{grey}},\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ a\ =\ 255\ );}
+\DoxyCodeLine{00175\ \ \ \ \ Color\ \mbox{\hyperlink{namespaceunify_a6cb951e2bf0f701293a17f6e316ed806}{ColorBlack}}(\ \mbox{\hyperlink{classunify_1_1_color_a28b48114f5fd2efb97a70dc3464e0f5d}{Color::Component}}\ a\ =\ 255\ );}
+\DoxyCodeLine{00176\ \ \ \ \ Color\ \mbox{\hyperlink{namespaceunify_a1686569f201a633ef567d217446e9765}{ColorZero}}();\ }
 \DoxyCodeLine{00177\ \}}
 
 \end{DoxyCode}

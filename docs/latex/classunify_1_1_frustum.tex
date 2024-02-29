@@ -12,36 +12,70 @@ A view frustum, typically used for view point occlusion.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classunify_1_1_frustum_a543a194e3f252526c4e8612a622ba1dc}\label{classunify_1_1_frustum_a543a194e3f252526c4e8612a622ba1dc} 
-{\bfseries Frustum} (const \mbox{\hyperlink{classunify_1_1_matrix}{unify\+::\+Matrix}} \&world\+View\+Projection)
+\mbox{\hyperlink{classunify_1_1_frustum_a172ae3492592e3ac891642299d628494}{Frustum}} ()
 \item 
-\Hypertarget{classunify_1_1_frustum_aca02865835f9fc0da88cd60cf930cd36}\label{classunify_1_1_frustum_aca02865835f9fc0da88cd60cf930cd36} 
-void {\bfseries Calculate} (const \mbox{\hyperlink{classunify_1_1_matrix}{unify\+::\+Matrix}} \&world\+View\+Projection)
+\mbox{\hyperlink{classunify_1_1_frustum_a543a194e3f252526c4e8612a622ba1dc}{Frustum}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_matrix}{unify\+::\+Matrix}} \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{world\+View\+Projection}})
+\item 
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} \mbox{\hyperlink{classunify_1_1_frustum_aca02865835f9fc0da88cd60cf930cd36}{Calculate}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_matrix}{unify\+::\+Matrix}} \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{world\+View\+Projection}})
 \begin{DoxyCompactList}\small\item\em Calcuate frustum from a WVM projection matrix. \end{DoxyCompactList}\item 
-\Hypertarget{classunify_1_1_frustum_acea70dc41764a26260da4a6fae07e212}\label{classunify_1_1_frustum_acea70dc41764a26260da4a6fae07e212} 
-bool {\bfseries Cast\+Point} (const \mbox{\hyperlink{classunify_1_1_v2}{unify\+::\+V2}}$<$ float $>$ \&unit, \mbox{\hyperlink{classunify_1_1_ray}{unify\+::\+Ray}} \&ray\+Out)
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} \mbox{\hyperlink{classunify_1_1_frustum_acea70dc41764a26260da4a6fae07e212}{Cast\+Point}} (\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v2}{unify\+::\+V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{unit}}, \mbox{\hyperlink{classunify_1_1_ray}{unify\+::\+Ray}} \&\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{ray\+Out}})
 \begin{DoxyCompactList}\small\item\em Casts a unit point from across the frustum to a position at the front of the frustom, and a direction along the frustum. Returns false if unit components are not in the range \mbox{[} 0, 1 \mbox{]}. \end{DoxyCompactList}\item 
-\Hypertarget{classunify_1_1_frustum_ab3cb0181fb3ac3b872a8f9fdefab5b57}\label{classunify_1_1_frustum_ab3cb0181fb3ac3b872a8f9fdefab5b57} 
-Cull\+State {\bfseries Cull\+BBox} (\mbox{\hyperlink{classunify_1_1_b_box}{unify\+::\+BBox}}$<$ float $>$ \texorpdfstring{$\ast$}{*}p\+BBox)
+\mbox{\hyperlink{namespaceunify_af385be843c3779feb4af332ac46d2a3f}{Cull\+State}} \mbox{\hyperlink{classunify_1_1_frustum_ab3cb0181fb3ac3b872a8f9fdefab5b57}{Cull\+BBox}} (\mbox{\hyperlink{classunify_1_1_b_box}{unify\+::\+BBox}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{p\+BBox}})
 \begin{DoxyCompactList}\small\item\em Determine the culling characteristics of a bounding blox. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\Hypertarget{classunify_1_1_frustum_a8ed703f4a607631703222b5d407ef67a}\label{classunify_1_1_frustum_a8ed703f4a607631703222b5d407ef67a} 
-\mbox{\hyperlink{classunify_1_1_matrix}{unify\+::\+Matrix}} {\bfseries m\+\_\+world\+View\+Projection}
-\item 
-\Hypertarget{classunify_1_1_frustum_a81fdfbfe81e2fb1c0a69368af9213157}\label{classunify_1_1_frustum_a81fdfbfe81e2fb1c0a69368af9213157} 
-\mbox{\hyperlink{classunify_1_1_v3}{unify\+::\+V3}}$<$ float $>$ {\bfseries m\+\_\+v\+Corner} \mbox{[}Frustum\+Corner\+::\+Count\mbox{]}
-\item 
-\Hypertarget{classunify_1_1_frustum_a9e3a261be8eabe49ba929e4ca3de4776}\label{classunify_1_1_frustum_a9e3a261be8eabe49ba929e4ca3de4776} 
-\mbox{\hyperlink{classunify_1_1_plane}{unify\+::\+Plane}} {\bfseries m\+\_\+\+Plane} \mbox{[}Frustum\+Plane\+::\+Count\mbox{]}
-\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 A view frustum, typically used for view point occlusion. 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classunify_1_1_frustum_a172ae3492592e3ac891642299d628494}\label{classunify_1_1_frustum_a172ae3492592e3ac891642299d628494} 
+\index{unify::Frustum@{unify::Frustum}!Frustum@{Frustum}}
+\index{Frustum@{Frustum}!unify::Frustum@{unify::Frustum}}
+\doxysubsubsection{\texorpdfstring{Frustum()}{Frustum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Frustum\+::\+Frustum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classunify_1_1_frustum_a543a194e3f252526c4e8612a622ba1dc}\label{classunify_1_1_frustum_a543a194e3f252526c4e8612a622ba1dc} 
+\index{unify::Frustum@{unify::Frustum}!Frustum@{Frustum}}
+\index{Frustum@{Frustum}!unify::Frustum@{unify::Frustum}}
+\doxysubsubsection{\texorpdfstring{Frustum()}{Frustum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Frustum\+::\+Frustum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_matrix}{unify\+::\+Matrix}} \&}]{world\+View\+Projection }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classunify_1_1_frustum_aca02865835f9fc0da88cd60cf930cd36}\label{classunify_1_1_frustum_aca02865835f9fc0da88cd60cf930cd36} 
+\index{unify::Frustum@{unify::Frustum}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!unify::Frustum@{unify::Frustum}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{void}} Frustum\+::\+Calculate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_matrix}{unify\+::\+Matrix}} \&}]{world\+View\+Projection }\end{DoxyParamCaption})}
+
+
+
+Calcuate frustum from a WVM projection matrix. 
+
+\Hypertarget{classunify_1_1_frustum_acea70dc41764a26260da4a6fae07e212}\label{classunify_1_1_frustum_acea70dc41764a26260da4a6fae07e212} 
+\index{unify::Frustum@{unify::Frustum}!CastPoint@{CastPoint}}
+\index{CastPoint@{CastPoint}!unify::Frustum@{unify::Frustum}}
+\doxysubsubsection{\texorpdfstring{CastPoint()}{CastPoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} Frustum\+::\+Cast\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{const}} \mbox{\hyperlink{classunify_1_1_v2}{unify\+::\+V2}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \&}]{unit,  }\item[{\mbox{\hyperlink{classunify_1_1_ray}{unify\+::\+Ray}} \&}]{ray\+Out }\end{DoxyParamCaption})}
+
+
+
+Casts a unit point from across the frustum to a position at the front of the frustom, and a direction along the frustum. Returns false if unit components are not in the range \mbox{[} 0, 1 \mbox{]}. 
+
+\Hypertarget{classunify_1_1_frustum_ab3cb0181fb3ac3b872a8f9fdefab5b57}\label{classunify_1_1_frustum_ab3cb0181fb3ac3b872a8f9fdefab5b57} 
+\index{unify::Frustum@{unify::Frustum}!CullBBox@{CullBBox}}
+\index{CullBBox@{CullBBox}!unify::Frustum@{unify::Frustum}}
+\doxysubsubsection{\texorpdfstring{CullBBox()}{CullBBox()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_af385be843c3779feb4af332ac46d2a3f}{Cull\+State}} Frustum\+::\+Cull\+BBox (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classunify_1_1_b_box}{unify\+::\+BBox}}$<$ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{float}} $>$ \texorpdfstring{$\ast$}{*}}]{p\+BBox }\end{DoxyParamCaption})}
+
+
+
+Determine the culling characteristics of a bounding blox. 
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-unify/Frustum.\+h\item 
-unify/Frustum.\+cpp\end{DoxyCompactItemize}
+unify/\mbox{\hyperlink{_frustum_8h}{Frustum.\+h}}\item 
+unify/\mbox{\hyperlink{_frustum_8cpp}{Frustum.\+cpp}}\end{DoxyCompactItemize}

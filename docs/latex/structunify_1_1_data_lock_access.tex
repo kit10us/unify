@@ -1,36 +1,106 @@
 \doxysection{unify\+::Data\+Lock\+Access Struct Reference}
 \hypertarget{structunify_1_1_data_lock_access}{}\label{structunify_1_1_data_lock_access}\index{unify::DataLockAccess@{unify::DataLockAccess}}
+
+
+{\ttfamily \#include $<$Data\+Lock.\+h$>$}
+
 \doxysubsubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa}\label{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa} 
-enum {\bfseries TYPE} \{ {\bfseries None}
-, {\bfseries Readonly}
-, {\bfseries Writeonly}
-, {\bfseries Read\+Write}
+enum \mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa}{TYPE}} \{ \mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffaaf45d49fb1cd5bead4cc63ed0d9f4bebc}{None}}
+, \mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffaabf9c8a267d44a45409d82232ae66294c}{Readonly}}
+, \mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffaab42c2327661ea68f7d18a486d6d06440}{Writeonly}}
+, \mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffaa9f14a25b8f3ce66a59806f16f4b6615f}{Read\+Write}}
  \}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{structunify_1_1_data_lock_access_aa078192be1505665fa71ea75b704939a}\label{structunify_1_1_data_lock_access_aa078192be1505665fa71ea75b704939a} 
-static bool {\bfseries Read\+Access} (TYPE access)
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{static}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} \mbox{\hyperlink{structunify_1_1_data_lock_access_aa078192be1505665fa71ea75b704939a}{Read\+Access}} (\mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa}{TYPE}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{access}})
 \begin{DoxyCompactList}\small\item\em Returns true if the access supports read mode. \end{DoxyCompactList}\item 
-\Hypertarget{structunify_1_1_data_lock_access_ab8bd196b2a1c9b86b6f2f92f01a93769}\label{structunify_1_1_data_lock_access_ab8bd196b2a1c9b86b6f2f92f01a93769} 
-static bool {\bfseries Write\+Access} (TYPE access)
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{static}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} \mbox{\hyperlink{structunify_1_1_data_lock_access_ab8bd196b2a1c9b86b6f2f92f01a93769}{Write\+Access}} (\mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa}{TYPE}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{access}})
 \begin{DoxyCompactList}\small\item\em Returns true if the access mode supports write access. \end{DoxyCompactList}\item 
-\Hypertarget{structunify_1_1_data_lock_access_ae8ccdf02074422b5b94c1702b9303f5a}\label{structunify_1_1_data_lock_access_ae8ccdf02074422b5b94c1702b9303f5a} 
-static bool {\bfseries Compatible} (TYPE a, TYPE b)
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{static}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} \mbox{\hyperlink{structunify_1_1_data_lock_access_ae8ccdf02074422b5b94c1702b9303f5a}{Compatible}} (\mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa}{TYPE}} a, \mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa}{TYPE}} b)
 \begin{DoxyCompactList}\small\item\em Retruns true if access \textquotesingle{}a\textquotesingle{} supports the access specified with \textquotesingle{}b\textquotesingle{}. \end{DoxyCompactList}\item 
-\Hypertarget{structunify_1_1_data_lock_access_a2f6c6f7ca9b9a169e23f81c5d96c361a}\label{structunify_1_1_data_lock_access_a2f6c6f7ca9b9a169e23f81c5d96c361a} 
-static TYPE {\bfseries From\+String} (std\+::string access)
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{static}} \mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa}{TYPE}} \mbox{\hyperlink{structunify_1_1_data_lock_access_a2f6c6f7ca9b9a169e23f81c5d96c361a}{From\+String}} (std\+::string \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{access}})
 \item 
-\Hypertarget{structunify_1_1_data_lock_access_a1c57e54314f158e956207b5ac4475ac1}\label{structunify_1_1_data_lock_access_a1c57e54314f158e956207b5ac4475ac1} 
-static std\+::string {\bfseries To\+String} (TYPE access)
+\mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{static}} std\+::string \mbox{\hyperlink{structunify_1_1_data_lock_access_a1c57e54314f158e956207b5ac4475ac1}{To\+String}} (\mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa}{TYPE}} \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{access}})
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa}\label{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa} 
+\index{unify::DataLockAccess@{unify::DataLockAccess}!TYPE@{TYPE}}
+\index{TYPE@{TYPE}!unify::DataLockAccess@{unify::DataLockAccess}}
+\doxysubsubsection{\texorpdfstring{TYPE}{TYPE}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{enum}} \mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa}{unify\+::\+Data\+Lock\+Access\+::\+TYPE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!unify::DataLockAccess@{unify::DataLockAccess}}\index{unify::DataLockAccess@{unify::DataLockAccess}!None@{None}}}\Hypertarget{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffaaf45d49fb1cd5bead4cc63ed0d9f4bebc}\label{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffaaf45d49fb1cd5bead4cc63ed0d9f4bebc} 
+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Readonly@{Readonly}!unify::DataLockAccess@{unify::DataLockAccess}}\index{unify::DataLockAccess@{unify::DataLockAccess}!Readonly@{Readonly}}}\Hypertarget{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffaabf9c8a267d44a45409d82232ae66294c}\label{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffaabf9c8a267d44a45409d82232ae66294c} 
+Readonly&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Writeonly@{Writeonly}!unify::DataLockAccess@{unify::DataLockAccess}}\index{unify::DataLockAccess@{unify::DataLockAccess}!Writeonly@{Writeonly}}}\Hypertarget{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffaab42c2327661ea68f7d18a486d6d06440}\label{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffaab42c2327661ea68f7d18a486d6d06440} 
+Writeonly&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReadWrite@{ReadWrite}!unify::DataLockAccess@{unify::DataLockAccess}}\index{unify::DataLockAccess@{unify::DataLockAccess}!ReadWrite@{ReadWrite}}}\Hypertarget{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffaa9f14a25b8f3ce66a59806f16f4b6615f}\label{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffaa9f14a25b8f3ce66a59806f16f4b6615f} 
+Read\+Write&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structunify_1_1_data_lock_access_ae8ccdf02074422b5b94c1702b9303f5a}\label{structunify_1_1_data_lock_access_ae8ccdf02074422b5b94c1702b9303f5a} 
+\index{unify::DataLockAccess@{unify::DataLockAccess}!Compatible@{Compatible}}
+\index{Compatible@{Compatible}!unify::DataLockAccess@{unify::DataLockAccess}}
+\doxysubsubsection{\texorpdfstring{Compatible()}{Compatible()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} Data\+Lock\+Access\+::\+Compatible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa}{TYPE}}}]{a,  }\item[{\mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa}{TYPE}}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retruns true if access \textquotesingle{}a\textquotesingle{} supports the access specified with \textquotesingle{}b\textquotesingle{}. 
+
+\Hypertarget{structunify_1_1_data_lock_access_a2f6c6f7ca9b9a169e23f81c5d96c361a}\label{structunify_1_1_data_lock_access_a2f6c6f7ca9b9a169e23f81c5d96c361a} 
+\index{unify::DataLockAccess@{unify::DataLockAccess}!FromString@{FromString}}
+\index{FromString@{FromString}!unify::DataLockAccess@{unify::DataLockAccess}}
+\doxysubsubsection{\texorpdfstring{FromString()}{FromString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa}{Data\+Lock\+Access\+::\+TYPE}} Data\+Lock\+Access\+::\+From\+String (\begin{DoxyParamCaption}\item[{std\+::string}]{access }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{structunify_1_1_data_lock_access_aa078192be1505665fa71ea75b704939a}\label{structunify_1_1_data_lock_access_aa078192be1505665fa71ea75b704939a} 
+\index{unify::DataLockAccess@{unify::DataLockAccess}!ReadAccess@{ReadAccess}}
+\index{ReadAccess@{ReadAccess}!unify::DataLockAccess@{unify::DataLockAccess}}
+\doxysubsubsection{\texorpdfstring{ReadAccess()}{ReadAccess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} Data\+Lock\+Access\+::\+Read\+Access (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa}{TYPE}}}]{access }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns true if the access supports read mode. 
+
+\Hypertarget{structunify_1_1_data_lock_access_a1c57e54314f158e956207b5ac4475ac1}\label{structunify_1_1_data_lock_access_a1c57e54314f158e956207b5ac4475ac1} 
+\index{unify::DataLockAccess@{unify::DataLockAccess}!ToString@{ToString}}
+\index{ToString@{ToString}!unify::DataLockAccess@{unify::DataLockAccess}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily std\+::string Data\+Lock\+Access\+::\+To\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa}{TYPE}}}]{access }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{structunify_1_1_data_lock_access_ab8bd196b2a1c9b86b6f2f92f01a93769}\label{structunify_1_1_data_lock_access_ab8bd196b2a1c9b86b6f2f92f01a93769} 
+\index{unify::DataLockAccess@{unify::DataLockAccess}!WriteAccess@{WriteAccess}}
+\index{WriteAccess@{WriteAccess}!unify::DataLockAccess@{unify::DataLockAccess}}
+\doxysubsubsection{\texorpdfstring{WriteAccess()}{WriteAccess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{bool}} Data\+Lock\+Access\+::\+Write\+Access (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structunify_1_1_data_lock_access_a7c54670bcfb159249fe7d4dba87a0ffa}{TYPE}}}]{access }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns true if the access mode supports write access. 
+
 
 
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-unify/Data\+Lock.\+h\item 
-unify/Data\+Lock.\+cpp\end{DoxyCompactItemize}
+unify/\mbox{\hyperlink{_data_lock_8h}{Data\+Lock.\+h}}\item 
+unify/\mbox{\hyperlink{_data_lock_8cpp}{Data\+Lock.\+cpp}}\end{DoxyCompactItemize}

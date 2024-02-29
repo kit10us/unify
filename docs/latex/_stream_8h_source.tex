@@ -1,6 +1,6 @@
 \doxysection{Stream.\+h}
 \hypertarget{_stream_8h_source}{}\label{_stream_8h_source}\index{unify/Stream.h@{unify/Stream.h}}
-
+\mbox{\hyperlink{_stream_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Unify\ Library}}
@@ -26,52 +26,52 @@
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <unify/Unify.h>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_unify_8h}{unify/Unify.h}}>}}
 \DoxyCodeLine{00026\ }
 \DoxyCodeLine{00027\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceunify}{unify}}\ }
 \DoxyCodeLine{00028\ \{}
 \DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417}{StreamAccessType}}}
 \DoxyCodeLine{00033\ \ \ \ \ \{}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ STREAMACCESS\_NONE,}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ STREAMACCESS\_READ,}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ STREAMACCESS\_WRITE,}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ STREAMACCESS\_APPEND,}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ STREAMACCESS\_READTEXT,}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ STREAMACCESS\_WRITETEXT,}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ STREAMACCESS\_APPENDTEXT,}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ STREAMACCESS\_READBINARY,}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ STREAMACCESS\_WRITEBINARY,}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ STREAMACCESS\_APPENDBINARY}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417a860b7e6a4d78414286ba8a89b13a9d36}{STREAMACCESS\_NONE}},}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417a3928eb08879c2bfca2458b77fbce38da}{STREAMACCESS\_READ}},}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417a0bc803c175d7c378d721c667a038f12a}{STREAMACCESS\_WRITE}},}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417a1270b0718aacee53d7777cd23236a995}{STREAMACCESS\_APPEND}},}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417ac56792fc2502b2cdea5a081267e0b75e}{STREAMACCESS\_READTEXT}},}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417a096354676023b5ac1d1d794c8739b296}{STREAMACCESS\_WRITETEXT}},}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417a1c3e74acc24e3f1f694c7d78a5112cb7}{STREAMACCESS\_APPENDTEXT}},}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417a0c8ebd0fc0a101a1a7c68203c97120a9}{STREAMACCESS\_READBINARY}},}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417af66debdf9145c42b55f278439644583f}{STREAMACCESS\_WRITEBINARY}},}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417a16c0dc3951665e5baa87f45ed098f4d3}{STREAMACCESS\_APPENDBINARY}}}
 \DoxyCodeLine{00044\ \ \ \ \ \};}
 \DoxyCodeLine{00045\ }
 \DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceunify_a384b8275876d58563e0ed7a141823264}{StreamSeekType}}}
 \DoxyCodeLine{00050\ \ \ \ \ \{}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ STREAMSEEK\_START,\ \ \ \textcolor{comment}{//\ Seek\ from\ the\ start\ of\ the\ stream}}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ STREAMSEEK\_END,\ \ \ \ \ \textcolor{comment}{//\ Seek\ from\ the\ end\ of\ the\ stream}}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ STREAMSEEK\_CURRENT\ \ \textcolor{comment}{//\ Seek\ from\ our\ current\ position}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a384b8275876d58563e0ed7a141823264a960cb8769b4f3c65e5aeaa3b4c531fbb}{STREAMSEEK\_START}},\ \ \ \textcolor{comment}{//\ Seek\ from\ the\ start\ of\ the\ stream}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a384b8275876d58563e0ed7a141823264a5d1e912b38fd7416ecacc1d985439f40}{STREAMSEEK\_END}},\ \ \ \ \ \ \ \textcolor{comment}{//\ Seek\ from\ the\ end\ of\ the\ stream}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a384b8275876d58563e0ed7a141823264ac999ed03a6cecb3c2916bc3ef0f3c667}{STREAMSEEK\_CURRENT}}\ \ \ \ \textcolor{comment}{//\ Seek\ from\ our\ current\ position}}
 \DoxyCodeLine{00054\ \ \ \ \ \};}
 \DoxyCodeLine{00055\ }
 \DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunify_1_1_stream}{Stream}}}
 \DoxyCodeLine{00060\ \ \ \ \ \{}
 \DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_stream}{Stream}}();}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classunify_1_1_stream}{\string~Stream}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classunify_1_1_stream_a8c3f05bd00361ec92627fa41f330a39b}{Stream}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classunify_1_1_stream_a6dc4517a9e6a87abb662fcd14c2ea969}{\string~Stream}}();}
 \DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ Open(\ \mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417}{StreamAccessType}}\ access,\ \textcolor{keywordtype}{void}\ *\ pData\ );}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Close();\ \ \ \ \ \ \ }
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Read(\ \textcolor{keywordtype}{void}*\ pDest,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uLength\ );}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ReadPack(\ \textcolor{keywordtype}{void}*\ pDest,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uLength\ );}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Write(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ pSrc,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uLength\ );}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ WritePack(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ pSrc\ );}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ Seek(\ \mbox{\hyperlink{namespaceunify_a384b8275876d58563e0ed7a141823264}{StreamSeekType}}\ seek,\ \textcolor{keywordtype}{int}\ iOffset\ =\ 0\ );}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetFlags(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uFlags\ );}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ GetFlags();}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ EndOfStream();}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ BytesWaiting();}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsOpen()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_stream_aeefeff1dd2a436a0e2273469ab1dfd39}{Open}}(\ \mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417}{StreamAccessType}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{access}},\ \textcolor{keywordtype}{void}\ *\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{pData}}\ );}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_stream_a2115306c7cdd49c20a8d5c0af5657859}{Close}}();\ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classunify_1_1_stream_a944171b695e86dc4525e7246d624fde4}{Read}}(\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{pDest}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{uLength}}\ );}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classunify_1_1_stream_a930237afb2514d5a8854c760d7a65a69}{ReadPack}}(\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{pDest}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{uLength}}\ );}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_stream_ae9e8b6d7ef8908f685b1fed39f44cbe8}{Write}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{pSrc}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{uLength}}\ );}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_stream_a7d651722c07dbdeac0858de5d6cbab3d}{WritePack}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{pSrc}}\ );}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_stream_aa37da7bc58e44e2800bab65a6e0091dd}{Seek}}(\ \mbox{\hyperlink{namespaceunify_a384b8275876d58563e0ed7a141823264}{StreamSeekType}}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{seek}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{iOffset}}\ =\ 0\ );}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classunify_1_1_stream_a9d53acecd5781cdafbeeec333b0e0a27}{SetFlags}}(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{uFlags}}\ );}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classunify_1_1_stream_ad66d12715723f199bb2932a5ec0a48ba}{GetFlags}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_stream_af58c2c2eb95ef2ace75a6da921b7b395}{EndOfStream}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classunify_1_1_stream_a2e980238146322db1db1aef1c799b4c1}{BytesWaiting}}();}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classunify_1_1_stream_a93619adf94bbeb4c4462b45b08af9f96}{IsOpen}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00077\ }
 \DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ FILE\ *\ m\_pStream;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a4f8a0a80ccca0f1412b3b08e30bc643b}{FILE}}\ *\ m\_pStream;}
 \DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceunify_a5c97e638d26eea5413e8708b15af2417}{StreamAccessType}}\ m\_Access;}
 \DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_uFlags;}
 \DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_bEndOfStream;}
