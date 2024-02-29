@@ -83,40 +83,194 @@ $(function() {
   <div class="headertitle"><div class="title">unify::DataLockAccess Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_data_lock_8h_source.html">DataLock.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a7c54670bcfb159249fe7d4dba87a0ffa" id="r_a7c54670bcfb159249fe7d4dba87a0ffa"><td class="memItemLeft" align="right" valign="top"><a id="a7c54670bcfb159249fe7d4dba87a0ffa" name="a7c54670bcfb159249fe7d4dba87a0ffa"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>TYPE</b> { <b>None</b>
-, <b>Readonly</b>
-, <b>Writeonly</b>
-, <b>ReadWrite</b>
+<tr class="memitem:a7c54670bcfb159249fe7d4dba87a0ffa" id="r_a7c54670bcfb159249fe7d4dba87a0ffa"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffa">TYPE</a> { <a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffaaf45d49fb1cd5bead4cc63ed0d9f4bebc">None</a>
+, <a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffaabf9c8a267d44a45409d82232ae66294c">Readonly</a>
+, <a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffaab42c2327661ea68f7d18a486d6d06440">Writeonly</a>
+, <a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffaa9f14a25b8f3ce66a59806f16f4b6615f">ReadWrite</a>
  }</td></tr>
 <tr class="separator:a7c54670bcfb159249fe7d4dba87a0ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aa078192be1505665fa71ea75b704939a" id="r_aa078192be1505665fa71ea75b704939a"><td class="memItemLeft" align="right" valign="top"><a id="aa078192be1505665fa71ea75b704939a" name="aa078192be1505665fa71ea75b704939a"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>ReadAccess</b> (TYPE access)</td></tr>
-<tr class="memdesc:aa078192be1505665fa71ea75b704939a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the access supports read mode. <br /></td></tr>
+<tr class="memitem:aa078192be1505665fa71ea75b704939a" id="r_aa078192be1505665fa71ea75b704939a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">static</a> <a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa078192be1505665fa71ea75b704939a">ReadAccess</a> (<a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffa">TYPE</a> <a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">access</a>)</td></tr>
+<tr class="memdesc:aa078192be1505665fa71ea75b704939a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the access supports read mode.  <br /></td></tr>
 <tr class="separator:aa078192be1505665fa71ea75b704939a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8bd196b2a1c9b86b6f2f92f01a93769" id="r_ab8bd196b2a1c9b86b6f2f92f01a93769"><td class="memItemLeft" align="right" valign="top"><a id="ab8bd196b2a1c9b86b6f2f92f01a93769" name="ab8bd196b2a1c9b86b6f2f92f01a93769"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAccess</b> (TYPE access)</td></tr>
-<tr class="memdesc:ab8bd196b2a1c9b86b6f2f92f01a93769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the access mode supports write access. <br /></td></tr>
+<tr class="memitem:ab8bd196b2a1c9b86b6f2f92f01a93769" id="r_ab8bd196b2a1c9b86b6f2f92f01a93769"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">static</a> <a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8bd196b2a1c9b86b6f2f92f01a93769">WriteAccess</a> (<a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffa">TYPE</a> <a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">access</a>)</td></tr>
+<tr class="memdesc:ab8bd196b2a1c9b86b6f2f92f01a93769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the access mode supports write access.  <br /></td></tr>
 <tr class="separator:ab8bd196b2a1c9b86b6f2f92f01a93769"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8ccdf02074422b5b94c1702b9303f5a" id="r_ae8ccdf02074422b5b94c1702b9303f5a"><td class="memItemLeft" align="right" valign="top"><a id="ae8ccdf02074422b5b94c1702b9303f5a" name="ae8ccdf02074422b5b94c1702b9303f5a"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>Compatible</b> (TYPE a, TYPE b)</td></tr>
-<tr class="memdesc:ae8ccdf02074422b5b94c1702b9303f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retruns true if access 'a' supports the access specified with 'b'. <br /></td></tr>
+<tr class="memitem:ae8ccdf02074422b5b94c1702b9303f5a" id="r_ae8ccdf02074422b5b94c1702b9303f5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">static</a> <a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8ccdf02074422b5b94c1702b9303f5a">Compatible</a> (<a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffa">TYPE</a> a, <a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffa">TYPE</a> b)</td></tr>
+<tr class="memdesc:ae8ccdf02074422b5b94c1702b9303f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retruns true if access 'a' supports the access specified with 'b'.  <br /></td></tr>
 <tr class="separator:ae8ccdf02074422b5b94c1702b9303f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f6c6f7ca9b9a169e23f81c5d96c361a" id="r_a2f6c6f7ca9b9a169e23f81c5d96c361a"><td class="memItemLeft" align="right" valign="top"><a id="a2f6c6f7ca9b9a169e23f81c5d96c361a" name="a2f6c6f7ca9b9a169e23f81c5d96c361a"></a>
-static TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>FromString</b> (std::string access)</td></tr>
+<tr class="memitem:a2f6c6f7ca9b9a169e23f81c5d96c361a" id="r_a2f6c6f7ca9b9a169e23f81c5d96c361a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">static</a> <a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffa">TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f6c6f7ca9b9a169e23f81c5d96c361a">FromString</a> (std::string <a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">access</a>)</td></tr>
 <tr class="separator:a2f6c6f7ca9b9a169e23f81c5d96c361a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c57e54314f158e956207b5ac4475ac1" id="r_a1c57e54314f158e956207b5ac4475ac1"><td class="memItemLeft" align="right" valign="top"><a id="a1c57e54314f158e956207b5ac4475ac1" name="a1c57e54314f158e956207b5ac4475ac1"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ToString</b> (TYPE access)</td></tr>
+<tr class="memitem:a1c57e54314f158e956207b5ac4475ac1" id="r_a1c57e54314f158e956207b5ac4475ac1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">static</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c57e54314f158e956207b5ac4475ac1">ToString</a> (<a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffa">TYPE</a> <a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">access</a>)</td></tr>
 <tr class="separator:a1c57e54314f158e956207b5ac4475ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a7c54670bcfb159249fe7d4dba87a0ffa" name="a7c54670bcfb159249fe7d4dba87a0ffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c54670bcfb159249fe7d4dba87a0ffa">&#9670;&#160;</a></span>TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">enum</a> <a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffa">unify::DataLockAccess::TYPE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7c54670bcfb159249fe7d4dba87a0ffaaf45d49fb1cd5bead4cc63ed0d9f4bebc" name="a7c54670bcfb159249fe7d4dba87a0ffaaf45d49fb1cd5bead4cc63ed0d9f4bebc"></a>None&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7c54670bcfb159249fe7d4dba87a0ffaabf9c8a267d44a45409d82232ae66294c" name="a7c54670bcfb159249fe7d4dba87a0ffaabf9c8a267d44a45409d82232ae66294c"></a>Readonly&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7c54670bcfb159249fe7d4dba87a0ffaab42c2327661ea68f7d18a486d6d06440" name="a7c54670bcfb159249fe7d4dba87a0ffaab42c2327661ea68f7d18a486d6d06440"></a>Writeonly&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7c54670bcfb159249fe7d4dba87a0ffaa9f14a25b8f3ce66a59806f16f4b6615f" name="a7c54670bcfb159249fe7d4dba87a0ffaa9f14a25b8f3ce66a59806f16f4b6615f"></a>ReadWrite&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae8ccdf02074422b5b94c1702b9303f5a" name="ae8ccdf02074422b5b94c1702b9303f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8ccdf02074422b5b94c1702b9303f5a">&#9670;&#160;</a></span>Compatible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">bool</a> DataLockAccess::Compatible </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffa">TYPE</a></td>          <td class="paramname"><span class="paramname"><em>a</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffa">TYPE</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retruns true if access 'a' supports the access specified with 'b'. </p>
+
+</div>
+</div>
+<a id="a2f6c6f7ca9b9a169e23f81c5d96c361a" name="a2f6c6f7ca9b9a169e23f81c5d96c361a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f6c6f7ca9b9a169e23f81c5d96c361a">&#9670;&#160;</a></span>FromString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffa">DataLockAccess::TYPE</a> DataLockAccess::FromString </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>access</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa078192be1505665fa71ea75b704939a" name="aa078192be1505665fa71ea75b704939a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa078192be1505665fa71ea75b704939a">&#9670;&#160;</a></span>ReadAccess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">bool</a> DataLockAccess::ReadAccess </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffa">TYPE</a></td>          <td class="paramname"><span class="paramname"><em>access</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if the access supports read mode. </p>
+
+</div>
+</div>
+<a id="a1c57e54314f158e956207b5ac4475ac1" name="a1c57e54314f158e956207b5ac4475ac1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c57e54314f158e956207b5ac4475ac1">&#9670;&#160;</a></span>ToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string DataLockAccess::ToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffa">TYPE</a></td>          <td class="paramname"><span class="paramname"><em>access</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8bd196b2a1c9b86b6f2f92f01a93769" name="ab8bd196b2a1c9b86b6f2f92f01a93769"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8bd196b2a1c9b86b6f2f92f01a93769">&#9670;&#160;</a></span>WriteAccess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">bool</a> DataLockAccess::WriteAccess </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a7c54670bcfb159249fe7d4dba87a0ffa">TYPE</a></td>          <td class="paramname"><span class="paramname"><em>access</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if the access mode supports write access. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li>unify/<a class="el" href="_data_lock_8h_source.html">DataLock.h</a></li>
-<li>unify/<b>DataLock.cpp</b></li>
+<li>unify/<a class="el" href="_data_lock_8cpp.html">DataLock.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

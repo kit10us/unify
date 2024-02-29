@@ -84,7 +84,7 @@ $(function() { codefold.init(0); });
   <div class="headertitle"><div class="title">TLink.inl</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<a href="_t_link_8inl.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Unify Library</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * https://github.com/kit10us/unify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2002, Kit10 Studios LLC</span></div>
@@ -109,65 +109,91 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// TLink</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>TLink&lt; T &gt;::TLink()</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classunify_1_1_t_link.html#af5ddf004178c9a0d820213d578261a27">   28</a></span><a class="code hl_class" href="classunify_1_1_t_link.html">TLink&lt; T &gt;::TLink</a>()</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    : m_item{ nullptr }</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    , m_previous{ nullptr }</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    , m_next{ nullptr }</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>{</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
+</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>TLink&lt; T &gt;::TLink( T * item, std::string name )</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    : m_item{ item }</div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classunify_1_1_t_link.html#a59b0c714b7b6c2c4a2241eae1dd6c367">   36</a></span><a class="code hl_function" href="classunify_1_1_t_link.html#af5ddf004178c9a0d820213d578261a27">TLink&lt; T &gt;::TLink</a>( <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">T</a> * <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">item</a>, std::string name )</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    : m_item{ <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">item</a> }</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    , m_name{ name }</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    , m_previous{ nullptr }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    , m_next{ nullptr }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    , m_previous{ <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">nullptr</a> }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    , m_next{ <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">nullptr</a> }</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
+</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>TLink&lt; T &gt;::~TLink()</div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classunify_1_1_t_link.html#aa22a34d780e454d276beea7020c7549a">   45</a></span><a class="code hl_function" href="classunify_1_1_t_link.html#aa22a34d780e454d276beea7020c7549a">TLink&lt; T &gt;::~TLink</a>()</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    m_item = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    m_previous = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    m_next = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>std::string TLink&lt; T &gt;::Name()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classunify_1_1_t_link.html#a04add6622c647c5fb350a691a846b9a2">   53</a></span>std::string <a class="code hl_function" href="classunify_1_1_t_link.html#a04add6622c647c5fb350a691a846b9a2">TLink&lt; T &gt;::Name</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">return</span> m_name;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>T * TLink&lt; T &gt;::Item()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classunify_1_1_t_link.html#ae1b93b6f8e15309faf35f5495152bbb3">   59</a></span><a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">T</a> * <a class="code hl_function" href="classunify_1_1_t_link.html#ae1b93b6f8e15309faf35f5495152bbb3">TLink&lt; T &gt;::Item</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">return</span> m_item.get();</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>TLink&lt; T &gt; * TLink&lt; T &gt;::Previous()</div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classunify_1_1_t_link.html#a89e3865f848b6c129c0cc251e0f26b93">   65</a></span><a class="code hl_class" href="classunify_1_1_t_link.html">TLink&lt; T &gt;</a> * <a class="code hl_function" href="classunify_1_1_t_link.html#a89e3865f848b6c129c0cc251e0f26b93">TLink&lt; T &gt;::Previous</a>()</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>{</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> m_previous;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">const</span> TLink&lt; T &gt; * TLink&lt; T &gt;::Previous()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classunify_1_1_t_link.html#aaf3e0c1a3a647738851f63cf9d77b384">   71</a></span><span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1_t_link.html">TLink&lt; T &gt;</a> * <a class="code hl_function" href="classunify_1_1_t_link.html#a89e3865f848b6c129c0cc251e0f26b93">TLink&lt; T &gt;::Previous</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">return</span> m_previous;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
+</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>TLink&lt; T &gt; * TLink&lt; T &gt;::Next()</div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classunify_1_1_t_link.html#a64eced9ed06346ee224ffc6118186963">   77</a></span><a class="code hl_class" href="classunify_1_1_t_link.html">TLink&lt; T &gt;</a> * <a class="code hl_function" href="classunify_1_1_t_link.html#a64eced9ed06346ee224ffc6118186963">TLink&lt; T &gt;::Next</a>()</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>{</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">return</span> m_next;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
+</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keyword">const</span> TLink&lt; T &gt; * TLink&lt; T &gt;::Next()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classunify_1_1_t_link.html#aec6f09d051931d11ede3da18c4e45835">   83</a></span><span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1_t_link.html">TLink&lt; T &gt;</a> * <a class="code hl_function" href="classunify_1_1_t_link.html#a64eced9ed06346ee224ffc6118186963">TLink&lt; T &gt;::Next</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">return</span> m_next;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
+</div>
+<div class="ttc" id="aclassunify_1_1_t_link_html"><div class="ttname"><a href="classunify_1_1_t_link.html">unify::TLink</a></div><div class="ttdef"><b>Definition</b> TLink.h:39</div></div>
+<div class="ttc" id="aclassunify_1_1_t_link_html_a04add6622c647c5fb350a691a846b9a2"><div class="ttname"><a href="classunify_1_1_t_link.html#a04add6622c647c5fb350a691a846b9a2">unify::TLink::Name</a></div><div class="ttdeci">std::string Name() const</div><div class="ttdef"><b>Definition</b> TLink.inl:53</div></div>
+<div class="ttc" id="aclassunify_1_1_t_link_html_a64eced9ed06346ee224ffc6118186963"><div class="ttname"><a href="classunify_1_1_t_link.html#a64eced9ed06346ee224ffc6118186963">unify::TLink::Next</a></div><div class="ttdeci">TLink&lt; T &gt; * Next()</div><div class="ttdef"><b>Definition</b> TLink.inl:77</div></div>
+<div class="ttc" id="aclassunify_1_1_t_link_html_a89e3865f848b6c129c0cc251e0f26b93"><div class="ttname"><a href="classunify_1_1_t_link.html#a89e3865f848b6c129c0cc251e0f26b93">unify::TLink::Previous</a></div><div class="ttdeci">TLink&lt; T &gt; * Previous()</div><div class="ttdef"><b>Definition</b> TLink.inl:65</div></div>
+<div class="ttc" id="aclassunify_1_1_t_link_html_aa22a34d780e454d276beea7020c7549a"><div class="ttname"><a href="classunify_1_1_t_link.html#aa22a34d780e454d276beea7020c7549a">unify::TLink::~TLink</a></div><div class="ttdeci">~TLink()</div><div class="ttdef"><b>Definition</b> TLink.inl:45</div></div>
+<div class="ttc" id="aclassunify_1_1_t_link_html_ae1b93b6f8e15309faf35f5495152bbb3"><div class="ttname"><a href="classunify_1_1_t_link.html#ae1b93b6f8e15309faf35f5495152bbb3">unify::TLink::Item</a></div><div class="ttdeci">T * Item() const</div><div class="ttdef"><b>Definition</b> TLink.inl:59</div></div>
+<div class="ttc" id="aclassunify_1_1_t_link_html_af5ddf004178c9a0d820213d578261a27"><div class="ttname"><a href="classunify_1_1_t_link.html#af5ddf004178c9a0d820213d578261a27">unify::TLink::TLink</a></div><div class="ttdeci">TLink()</div><div class="ttdef"><b>Definition</b> TLink.inl:28</div></div>
+<div class="ttc" id="anamespaceunify_html_a4f8a0a80ccca0f1412b3b08e30bc643b"><div class="ttname"><a href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">unify::any_cast</a></div><div class="ttdeci">ValueType * any_cast(Any *operand) noexcept</div><div class="ttdef"><b>Definition</b> Any.h:211</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

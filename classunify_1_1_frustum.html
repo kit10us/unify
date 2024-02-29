@@ -78,7 +78,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classunify_1_1_frustum-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">unify::Frustum Class Reference</div></div>
 </div><!--header-->
@@ -91,39 +90,122 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a543a194e3f252526c4e8612a622ba1dc" id="r_a543a194e3f252526c4e8612a622ba1dc"><td class="memItemLeft" align="right" valign="top"><a id="a543a194e3f252526c4e8612a622ba1dc" name="a543a194e3f252526c4e8612a622ba1dc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Frustum</b> (const <a class="el" href="classunify_1_1_matrix.html">unify::Matrix</a> &amp;worldViewProjection)</td></tr>
+<tr class="memitem:a172ae3492592e3ac891642299d628494" id="r_a172ae3492592e3ac891642299d628494"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a172ae3492592e3ac891642299d628494">Frustum</a> ()</td></tr>
+<tr class="separator:a172ae3492592e3ac891642299d628494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a543a194e3f252526c4e8612a622ba1dc" id="r_a543a194e3f252526c4e8612a622ba1dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a543a194e3f252526c4e8612a622ba1dc">Frustum</a> (<a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">const</a> <a class="el" href="classunify_1_1_matrix.html">unify::Matrix</a> &amp;<a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">worldViewProjection</a>)</td></tr>
 <tr class="separator:a543a194e3f252526c4e8612a622ba1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca02865835f9fc0da88cd60cf930cd36" id="r_aca02865835f9fc0da88cd60cf930cd36"><td class="memItemLeft" align="right" valign="top"><a id="aca02865835f9fc0da88cd60cf930cd36" name="aca02865835f9fc0da88cd60cf930cd36"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Calculate</b> (const <a class="el" href="classunify_1_1_matrix.html">unify::Matrix</a> &amp;worldViewProjection)</td></tr>
-<tr class="memdesc:aca02865835f9fc0da88cd60cf930cd36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcuate frustum from a WVM projection matrix. <br /></td></tr>
+<tr class="memitem:aca02865835f9fc0da88cd60cf930cd36" id="r_aca02865835f9fc0da88cd60cf930cd36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca02865835f9fc0da88cd60cf930cd36">Calculate</a> (<a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">const</a> <a class="el" href="classunify_1_1_matrix.html">unify::Matrix</a> &amp;<a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">worldViewProjection</a>)</td></tr>
+<tr class="memdesc:aca02865835f9fc0da88cd60cf930cd36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcuate frustum from a WVM projection matrix.  <br /></td></tr>
 <tr class="separator:aca02865835f9fc0da88cd60cf930cd36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acea70dc41764a26260da4a6fae07e212" id="r_acea70dc41764a26260da4a6fae07e212"><td class="memItemLeft" align="right" valign="top"><a id="acea70dc41764a26260da4a6fae07e212" name="acea70dc41764a26260da4a6fae07e212"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>CastPoint</b> (const <a class="el" href="classunify_1_1_v2.html">unify::V2</a>&lt; float &gt; &amp;unit, <a class="el" href="classunify_1_1_ray.html">unify::Ray</a> &amp;rayOut)</td></tr>
-<tr class="memdesc:acea70dc41764a26260da4a6fae07e212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts a unit point from across the frustum to a position at the front of the frustom, and a direction along the frustum. Returns false if unit components are not in the range [ 0, 1 ]. <br /></td></tr>
+<tr class="memitem:acea70dc41764a26260da4a6fae07e212" id="r_acea70dc41764a26260da4a6fae07e212"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acea70dc41764a26260da4a6fae07e212">CastPoint</a> (<a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">const</a> <a class="el" href="classunify_1_1_v2.html">unify::V2</a>&lt; <a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">float</a> &gt; &amp;<a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">unit</a>, <a class="el" href="classunify_1_1_ray.html">unify::Ray</a> &amp;<a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">rayOut</a>)</td></tr>
+<tr class="memdesc:acea70dc41764a26260da4a6fae07e212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts a unit point from across the frustum to a position at the front of the frustom, and a direction along the frustum. Returns false if unit components are not in the range [ 0, 1 ].  <br /></td></tr>
 <tr class="separator:acea70dc41764a26260da4a6fae07e212"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3cb0181fb3ac3b872a8f9fdefab5b57" id="r_ab3cb0181fb3ac3b872a8f9fdefab5b57"><td class="memItemLeft" align="right" valign="top"><a id="ab3cb0181fb3ac3b872a8f9fdefab5b57" name="ab3cb0181fb3ac3b872a8f9fdefab5b57"></a>
-CullState&#160;</td><td class="memItemRight" valign="bottom"><b>CullBBox</b> (<a class="el" href="classunify_1_1_b_box.html">unify::BBox</a>&lt; float &gt; *pBBox)</td></tr>
-<tr class="memdesc:ab3cb0181fb3ac3b872a8f9fdefab5b57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine the culling characteristics of a bounding blox. <br /></td></tr>
+<tr class="memitem:ab3cb0181fb3ac3b872a8f9fdefab5b57" id="r_ab3cb0181fb3ac3b872a8f9fdefab5b57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceunify.html#af385be843c3779feb4af332ac46d2a3f">CullState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3cb0181fb3ac3b872a8f9fdefab5b57">CullBBox</a> (<a class="el" href="classunify_1_1_b_box.html">unify::BBox</a>&lt; <a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">float</a> &gt; *<a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">pBBox</a>)</td></tr>
+<tr class="memdesc:ab3cb0181fb3ac3b872a8f9fdefab5b57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine the culling characteristics of a bounding blox.  <br /></td></tr>
 <tr class="separator:ab3cb0181fb3ac3b872a8f9fdefab5b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a8ed703f4a607631703222b5d407ef67a" id="r_a8ed703f4a607631703222b5d407ef67a"><td class="memItemLeft" align="right" valign="top"><a id="a8ed703f4a607631703222b5d407ef67a" name="a8ed703f4a607631703222b5d407ef67a"></a>
-<a class="el" href="classunify_1_1_matrix.html">unify::Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_worldViewProjection</b></td></tr>
-<tr class="separator:a8ed703f4a607631703222b5d407ef67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81fdfbfe81e2fb1c0a69368af9213157" id="r_a81fdfbfe81e2fb1c0a69368af9213157"><td class="memItemLeft" align="right" valign="top"><a id="a81fdfbfe81e2fb1c0a69368af9213157" name="a81fdfbfe81e2fb1c0a69368af9213157"></a>
-<a class="el" href="classunify_1_1_v3.html">unify::V3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_vCorner</b> [FrustumCorner::Count]</td></tr>
-<tr class="separator:a81fdfbfe81e2fb1c0a69368af9213157"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e3a261be8eabe49ba929e4ca3de4776" id="r_a9e3a261be8eabe49ba929e4ca3de4776"><td class="memItemLeft" align="right" valign="top"><a id="a9e3a261be8eabe49ba929e4ca3de4776" name="a9e3a261be8eabe49ba929e4ca3de4776"></a>
-<a class="el" href="classunify_1_1_plane.html">unify::Plane</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_Plane</b> [FrustumPlane::Count]</td></tr>
-<tr class="separator:a9e3a261be8eabe49ba929e4ca3de4776"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A view frustum, typically used for view point occlusion. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a172ae3492592e3ac891642299d628494" name="a172ae3492592e3ac891642299d628494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a172ae3492592e3ac891642299d628494">&#9670;&#160;</a></span>Frustum() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Frustum::Frustum </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a543a194e3f252526c4e8612a622ba1dc" name="a543a194e3f252526c4e8612a622ba1dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a543a194e3f252526c4e8612a622ba1dc">&#9670;&#160;</a></span>Frustum() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Frustum::Frustum </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">const</a> <a class="el" href="classunify_1_1_matrix.html">unify::Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>worldViewProjection</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aca02865835f9fc0da88cd60cf930cd36" name="aca02865835f9fc0da88cd60cf930cd36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca02865835f9fc0da88cd60cf930cd36">&#9670;&#160;</a></span>Calculate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">void</a> Frustum::Calculate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">const</a> <a class="el" href="classunify_1_1_matrix.html">unify::Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>worldViewProjection</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcuate frustum from a WVM projection matrix. </p>
+
+</div>
+</div>
+<a id="acea70dc41764a26260da4a6fae07e212" name="acea70dc41764a26260da4a6fae07e212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acea70dc41764a26260da4a6fae07e212">&#9670;&#160;</a></span>CastPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">bool</a> Frustum::CastPoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">const</a> <a class="el" href="classunify_1_1_v2.html">unify::V2</a>&lt; <a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">float</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>unit</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classunify_1_1_ray.html">unify::Ray</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rayOut</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Casts a unit point from across the frustum to a position at the front of the frustom, and a direction along the frustum. Returns false if unit components are not in the range [ 0, 1 ]. </p>
+
+</div>
+</div>
+<a id="ab3cb0181fb3ac3b872a8f9fdefab5b57" name="ab3cb0181fb3ac3b872a8f9fdefab5b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3cb0181fb3ac3b872a8f9fdefab5b57">&#9670;&#160;</a></span>CullBBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceunify.html#af385be843c3779feb4af332ac46d2a3f">CullState</a> Frustum::CullBBox </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classunify_1_1_b_box.html">unify::BBox</a>&lt; <a class="el" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">float</a> &gt; *</td>          <td class="paramname"><span class="paramname"><em>pBBox</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determine the culling characteristics of a bounding blox. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>unify/<a class="el" href="_frustum_8h_source.html">Frustum.h</a></li>
-<li>unify/<b>Frustum.cpp</b></li>
+<li>unify/<a class="el" href="_frustum_8cpp.html">Frustum.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

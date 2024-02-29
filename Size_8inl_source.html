@@ -84,7 +84,7 @@ $(function() { codefold.init(0); });
   <div class="headertitle"><div class="title">Size.inl</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<a href="Size_8inl.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Unify Library</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * https://github.com/kit10us/unify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2002, Kit10 Studios LLC</span></div>
@@ -107,211 +107,338 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>Size&lt; T &gt;::Size()</div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a05347a96b95d4b93dbe51d159c40c8db">   24</a></span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;::Size</a>()</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
+</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>Size&lt; T &gt;::Size( T _width, T _height )</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;::Size</a>( T _width, T _height )</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>: width( _width )</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>, height( _height )</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>{</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>Size&lt; T &gt;::Size( <span class="keyword">const</span> Size&lt; T &gt; &amp; size )</div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a3c37bb4846fc8009b060b2aafafee449">   36</a></span><a class="code hl_function" href="classunify_1_1Size.html#a05347a96b95d4b93dbe51d159c40c8db">Size&lt; T &gt;::Size</a>( <span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; size )</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>: width( size.width )</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>, height( size.height )</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a05347a96b95d4b93dbe51d159c40c8db">   39</a></span>{</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>Size&lt; T &gt;::Size( std::string text )</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    std::vector&lt; T &gt; split = string::Split&lt; T &gt;( text, <span class="charliteral">&#39;,&#39;</span> );</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    width = split[ 0 ];</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    height = split[ 1 ];</div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a3c37bb4846fc8009b060b2aafafee449">   41</a></span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#aefe4f38362ec1627b67ace5e7989187d">   42</a></span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#aefe4f38362ec1627b67ace5e7989187d">   43</a></span><a class="code hl_function" href="classunify_1_1Size.html#a05347a96b95d4b93dbe51d159c40c8db">Size&lt; T &gt;::Size</a>( std::string <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">text</a> )</div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a0d567c78d04a6757f6d9ec6e924e9546">   44</a></span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    std::vector&lt; T &gt; <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">split</a> = string::Split&lt; T &gt;( <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">text</a>, <span class="charliteral">&#39;,&#39;</span> );</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    width = <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">split</a>[ 0 ];</div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#ade1e12ccac1833dcdfedb02995a4f398">   47</a></span>    height = <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">split</a>[ 1 ];</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>T Size&lt; T &gt;::Width()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">return</span> width;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>T Size&lt; T &gt;::Height()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a80a1d1a7ada985c54c4d701a31741b5b">   50</a></span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a70e698af7c44623e79a012811749c61d">   51</a></span><a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">T</a> <a class="code hl_function" href="classunify_1_1Size.html#a70e698af7c44623e79a012811749c61d">Size&lt; T &gt;::Width</a>()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#ab839ea9ce310448fcc238a312464abd5">   52</a></span><span class="keyword"></span>{</div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#af14ae0957a68d1cefcce1106183f1001">   53</a></span>    <span class="keywordflow">return</span> width;</div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a829e2f6604fb82683adbf0a690104108">   54</a></span>}</div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a89b2bef40ab023c51c3d37360d31fc9f">   55</a></span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a0623b67813f4f7de0aff1c56bfa5a154">   56</a></span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a09d9276f7cad1e44a10308c5c3cd804f">   57</a></span><a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">T</a> <a class="code hl_function" href="classunify_1_1Size.html#a09d9276f7cad1e44a10308c5c3cd804f">Size&lt; T &gt;::Height</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">return</span> height;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keywordtype">void</span> Size&lt; T &gt;::Zero()</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>{</div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#ad8cef370a182892c4034783d8c172329">   59</a></span>    <span class="keywordflow">return</span> height;</div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#ac929701975cc63ebf6a24eef647877a9">   60</a></span>}</div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#ac91a689c73f5dd6cf750621b43fe5aa3">   61</a></span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a6aab408f139772f271fec6dc04eae790">   62</a></span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a40ff4f993cbe59d9515f927cc28e66bf">   63</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classunify_1_1Size.html#a0d567c78d04a6757f6d9ec6e924e9546">Size&lt; T &gt;::Zero</a>()</div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a940d97cce8979e29f956626a2f0672df">   64</a></span>{</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    width = 0;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    height = 0;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a10eae4a968a58c7e686dff356cdd6ce2">   66</a></span>    height = 0;</div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a8db7dfbeef6093307592f7994763bec2">   67</a></span>}</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>Size&lt; T &gt; &amp; Size&lt; T &gt;::operator = ( <span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1V2.html">V2&lt; T &gt;</a> &amp; vec )</div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#ade1e12ccac1833dcdfedb02995a4f398">   70</a></span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; <a class="code hl_function" href="classunify_1_1Size.html#ade1e12ccac1833dcdfedb02995a4f398">Size&lt; T &gt;::operator = </a>( <span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1V2.html">V2&lt; T &gt;</a> &amp; <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">vec</a> )</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>{</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    width = vec.x;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    height = vec.y;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    width = <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">vec</a>.x;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    height = <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">vec</a>.y;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a117ab5e2a0c87f2ec26ebcecf0b9d307">   75</a></span>}</div>
+</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>Size&lt; T &gt; &amp; Size&lt; T &gt;::operator = ( <span class="keyword">const</span> Size&lt; T &gt; &amp; size )</div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a70e698af7c44623e79a012811749c61d">   77</a></span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a09d9276f7cad1e44a10308c5c3cd804f">   78</a></span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; <a class="code hl_function" href="classunify_1_1Size.html#ade1e12ccac1833dcdfedb02995a4f398">Size&lt; T &gt;::operator = </a>( <span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; size )</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>{</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    width = size.width;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    height = size.height;</div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a2807ff8da89c6a68f7064d09f5ece190">   80</a></span>    width = size.<a class="code hl_variable" href="classunify_1_1Size.html#a9a451f9030bd55408acd1343a550af7c">width</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    height = size.<a class="code hl_variable" href="classunify_1_1Size.html#a9d7f2081ffdd09aa01674fd480e2457e">height</a>;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#ae5d364063e0cc22613e444e7f1dc7595">   83</a></span>}</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
 <div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#aa93653c26f39a2b53748b32a9f3cfc12">   86</a></span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;::operator += </a>( <span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; size )</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#aa93653c26f39a2b53748b32a9f3cfc12">   86</a></span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; <a class="code hl_function" href="classunify_1_1Size.html#ab839ea9ce310448fcc238a312464abd5">Size&lt; T &gt;::operator += </a>( <span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; size )</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>{</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    width += size.width;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    height += size.height;</div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a24d68aa421e799ecf3f6cd105eb3ad58">   88</a></span>    width += size.<a class="code hl_variable" href="classunify_1_1Size.html#a9a451f9030bd55408acd1343a550af7c">width</a>;</div>
+<div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#ad9777ffba2828e63b570549fc15679f3">   89</a></span>    height += size.<a class="code hl_variable" href="classunify_1_1Size.html#a9d7f2081ffdd09aa01674fd480e2457e">height</a>;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a5ca3039631bbf25549705ae77d924d95">   91</a></span>}</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;::operator -= </a>( <span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; size )</div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#af14ae0957a68d1cefcce1106183f1001">   94</a></span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; <a class="code hl_function" href="classunify_1_1Size.html#af14ae0957a68d1cefcce1106183f1001">Size&lt; T &gt;::operator -= </a>( <span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; size )</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>{</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    width -= size.width;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    height -= size.height;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    width -= size.<a class="code hl_variable" href="classunify_1_1Size.html#a9a451f9030bd55408acd1343a550af7c">width</a>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    height -= size.<a class="code hl_variable" href="classunify_1_1Size.html#a9d7f2081ffdd09aa01674fd480e2457e">height</a>;</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
+</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>Size&lt; T &gt; &amp; Size&lt; T &gt;::operator *= ( <span class="keyword">const</span> Size&lt; T &gt; &amp; size )</div>
+<div class="foldopen" id="foldopen00102" data-start="{" data-end="}">
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a829e2f6604fb82683adbf0a690104108">  102</a></span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; <a class="code hl_function" href="classunify_1_1Size.html#a829e2f6604fb82683adbf0a690104108">Size&lt; T &gt;::operator *= </a>( <span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; size )</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>{</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    width *= size.width;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    height *= size.height;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    width *= size.<a class="code hl_variable" href="classunify_1_1Size.html#a9a451f9030bd55408acd1343a550af7c">width</a>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    height *= size.<a class="code hl_variable" href="classunify_1_1Size.html#a9d7f2081ffdd09aa01674fd480e2457e">height</a>;</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
+</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>Size&lt; T &gt; &amp; Size&lt; T &gt;::operator /= ( <span class="keyword">const</span> Size&lt; T &gt; &amp; size )</div>
+<div class="foldopen" id="foldopen00110" data-start="{" data-end="}">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a89b2bef40ab023c51c3d37360d31fc9f">  110</a></span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; <a class="code hl_function" href="classunify_1_1Size.html#a89b2bef40ab023c51c3d37360d31fc9f">Size&lt; T &gt;::operator /= </a>( <span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; size )</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>{</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    width /= size.width;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    height /= size.height;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    width /= size.<a class="code hl_variable" href="classunify_1_1Size.html#a9a451f9030bd55408acd1343a550af7c">width</a>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    height /= size.<a class="code hl_variable" href="classunify_1_1Size.html#a9d7f2081ffdd09aa01674fd480e2457e">height</a>;</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>}</div>
+</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>Size&lt; T &gt; &amp; Size&lt; T &gt;::operator *= ( T val )</div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a0623b67813f4f7de0aff1c56bfa5a154">  118</a></span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; <a class="code hl_function" href="classunify_1_1Size.html#a829e2f6604fb82683adbf0a690104108">Size&lt; T &gt;::operator *= </a>( <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">T</a> <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">val</a> )</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>{</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    width *= val;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    height *= val;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    width *= <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">val</a>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    height *= <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">val</a>;</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>}</div>
+</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>Size&lt; T &gt; &amp; Size&lt; T &gt;::operator /= ( T val )</div>
+<div class="foldopen" id="foldopen00126" data-start="{" data-end="}">
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#ab154e9181a6c1a057e489b641b9acb43">  126</a></span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; <a class="code hl_function" href="classunify_1_1Size.html#a89b2bef40ab023c51c3d37360d31fc9f">Size&lt; T &gt;::operator /= </a>( <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">T</a> <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">val</a> )</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>{</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    width /= val;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    height /= val;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    width /= <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">val</a>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    height /= <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">val</a>;</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>}</div>
+</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>Size&lt; T &gt; Size&lt; T &gt;::operator + ( <span class="keyword">const</span> Size&lt; T &gt; &amp; size)<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00134" data-start="{" data-end="}">
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#ad8cef370a182892c4034783d8c172329">  134</a></span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> <a class="code hl_function" href="classunify_1_1Size.html#ad8cef370a182892c4034783d8c172329">Size&lt; T &gt;::operator + </a>( <span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; size)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordflow">return</span> Size&lt; T &gt;( width + size.width, height + size.height );</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">Size&lt; T &gt;</a>( width + size.<a class="code hl_variable" href="classunify_1_1Size.html#a9a451f9030bd55408acd1343a550af7c">width</a>, height + size.<a class="code hl_variable" href="classunify_1_1Size.html#a9d7f2081ffdd09aa01674fd480e2457e">height</a> );</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>}</div>
+</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>Size&lt; T &gt; Size&lt; T &gt;::operator - ( <span class="keyword">const</span> Size&lt; T &gt; &amp; size )<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00140" data-start="{" data-end="}">
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#ac929701975cc63ebf6a24eef647877a9">  140</a></span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> <a class="code hl_function" href="classunify_1_1Size.html#ac929701975cc63ebf6a24eef647877a9">Size&lt; T &gt;::operator - </a>( <span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; size )<span class="keyword"> const</span></div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">return</span> Size&lt; T &gt;( width - size.width, height - size.height );</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">Size&lt; T &gt;</a>( width - size.<a class="code hl_variable" href="classunify_1_1Size.html#a9a451f9030bd55408acd1343a550af7c">width</a>, height - size.<a class="code hl_variable" href="classunify_1_1Size.html#a9d7f2081ffdd09aa01674fd480e2457e">height</a> );</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>}</div>
+</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>Size&lt; T &gt; Size&lt; T &gt;::operator * ( <span class="keyword">const</span> Size&lt; T &gt; &amp; size )<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00146" data-start="{" data-end="}">
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#ac91a689c73f5dd6cf750621b43fe5aa3">  146</a></span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> <a class="code hl_function" href="classunify_1_1Size.html#ac91a689c73f5dd6cf750621b43fe5aa3">Size&lt; T &gt;::operator * </a>( <span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; size )<span class="keyword"> const</span></div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordflow">return</span> Size&lt; T &gt;( width * size.width, height * size.height );</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">Size&lt; T &gt;</a>( width * size.<a class="code hl_variable" href="classunify_1_1Size.html#a9a451f9030bd55408acd1343a550af7c">width</a>, height * size.<a class="code hl_variable" href="classunify_1_1Size.html#a9d7f2081ffdd09aa01674fd480e2457e">height</a> );</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>}</div>
+</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>Size&lt; T &gt; Size&lt; T &gt;::operator / ( <span class="keyword">const</span> Size&lt; T &gt; &amp; size )<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00152" data-start="{" data-end="}">
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a6aab408f139772f271fec6dc04eae790">  152</a></span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> <a class="code hl_function" href="classunify_1_1Size.html#a6aab408f139772f271fec6dc04eae790">Size&lt; T &gt;::operator / </a>( <span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> &amp; size )<span class="keyword"> const</span></div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordflow">return</span> Size&lt; T &gt;( width / size.width, height / size.height );</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">Size&lt; T &gt;</a>( width / size.<a class="code hl_variable" href="classunify_1_1Size.html#a9a451f9030bd55408acd1343a550af7c">width</a>, height / size.<a class="code hl_variable" href="classunify_1_1Size.html#a9d7f2081ffdd09aa01674fd480e2457e">height</a> );</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>}</div>
+</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>Size&lt; T &gt; Size&lt; T &gt;::operator * ( T val )<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00158" data-start="{" data-end="}">
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a40ff4f993cbe59d9515f927cc28e66bf">  158</a></span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> <a class="code hl_function" href="classunify_1_1Size.html#ac91a689c73f5dd6cf750621b43fe5aa3">Size&lt; T &gt;::operator * </a>( <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">T</a> <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">val</a> )<span class="keyword"> const</span></div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordflow">return</span> Size&lt; T &gt;( width * val, height * val );</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">Size&lt; T &gt;</a>( width * <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">val</a>, height * <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">val</a> );</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>}</div>
+</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>Size&lt; T &gt; Size&lt; T &gt;::operator / ( T val )<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00164" data-start="{" data-end="}">
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a940d97cce8979e29f956626a2f0672df">  164</a></span><a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a> <a class="code hl_function" href="classunify_1_1Size.html#a6aab408f139772f271fec6dc04eae790">Size&lt; T &gt;::operator / </a>( <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">T</a> <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">val</a> )<span class="keyword"> const</span></div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordflow">return</span> Size&lt; T &gt;( width / val, height / val );</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">Size&lt; T &gt;</a>( width / <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">val</a>, height / <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">val</a> );</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>}</div>
+</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="keywordtype">bool</span> Size&lt; T &gt;::operator == ( <span class="keyword">const</span> Size&lt; T &gt;&amp; size )<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00170" data-start="{" data-end="}">
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a10eae4a968a58c7e686dff356cdd6ce2">  170</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classunify_1_1Size.html#a10eae4a968a58c7e686dff356cdd6ce2">Size&lt; T &gt;::operator == </a>( <span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a>&amp; size )<span class="keyword"> const</span></div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordflow">return</span>( width == size.width &amp;&amp; height == size.height );</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordflow">return</span>( width == size.<a class="code hl_variable" href="classunify_1_1Size.html#a9a451f9030bd55408acd1343a550af7c">width</a> &amp;&amp; height == size.<a class="code hl_variable" href="classunify_1_1Size.html#a9d7f2081ffdd09aa01674fd480e2457e">height</a> );</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>}</div>
+</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="keywordtype">bool</span> Size&lt; T &gt;::operator != ( <span class="keyword">const</span> Size&lt; T &gt;&amp; size )<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00176" data-start="{" data-end="}">
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a8db7dfbeef6093307592f7994763bec2">  176</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classunify_1_1Size.html#a8db7dfbeef6093307592f7994763bec2">Size&lt; T &gt;::operator != </a>( <span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;</a>&amp; size )<span class="keyword"> const</span></div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">return</span>( width != size.width || height != size.height );</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">return</span>( width != size.<a class="code hl_variable" href="classunify_1_1Size.html#a9a451f9030bd55408acd1343a550af7c">width</a> || height != size.<a class="code hl_variable" href="classunify_1_1Size.html#a9d7f2081ffdd09aa01674fd480e2457e">height</a> );</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>}</div>
+</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>std::string Size&lt; T &gt;::ToString()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00182" data-start="{" data-end="}">
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a117ab5e2a0c87f2ec26ebcecf0b9d307">  182</a></span>std::string <a class="code hl_function" href="classunify_1_1Size.html#a117ab5e2a0c87f2ec26ebcecf0b9d307">Size&lt; T &gt;::ToString</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordflow">return</span> Cast&lt; std::string &gt;( width ) + <span class="stringliteral">&quot;, &quot;</span> + Cast&lt; std::string &gt;( height );</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">Cast&lt; std::string &gt;</a>( width ) + <span class="stringliteral">&quot;, &quot;</span> + <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">Cast&lt; std::string &gt;</a>( height );</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>}</div>
+</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>T Size&lt; T &gt;::Units()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00188" data-start="{" data-end="}">
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a2807ff8da89c6a68f7064d09f5ece190">  188</a></span><a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">T</a> <a class="code hl_function" href="classunify_1_1Size.html#a2807ff8da89c6a68f7064d09f5ece190">Size&lt; T &gt;::Units</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordflow">return</span> width * height;</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>}</div>
+</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>T Size&lt; T &gt;::LinearIndex( T h, T v )<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00194" data-start="{" data-end="}">
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#ae5d364063e0cc22613e444e7f1dc7595">  194</a></span><a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">T</a> <a class="code hl_function" href="classunify_1_1Size.html#ae5d364063e0cc22613e444e7f1dc7595">Size&lt; T &gt;::LinearIndex</a>( <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">T</a> <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">h</a>, <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">T</a> v )<span class="keyword"> const</span></div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordflow">return</span> h + v * width;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">h</a> + v * width;</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>}</div>
+</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
 <div class="foldopen" id="foldopen00200" data-start="{" data-end="}">
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#aa93653c26f39a2b53748b32a9f3cfc12">  200</a></span><a class="code hl_class" href="classunify_1_1V2.html">V2&lt; T &gt;</a> <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;::LinearToV2</a>( T index )<span class="keyword"> const</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#aa93653c26f39a2b53748b32a9f3cfc12">  200</a></span><a class="code hl_class" href="classunify_1_1V2.html">V2&lt; T &gt;</a> <a class="code hl_function" href="classunify_1_1Size.html#aa93653c26f39a2b53748b32a9f3cfc12">Size&lt; T &gt;::LinearToV2</a>( <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">T</a> <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">index</a> )<span class="keyword"> const</span></div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    T x = index / width;</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classunify_1_1V2.html">V2&lt; T &gt;</a>( x, index - ( x * width ) );</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">T</a> x = <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">index</a> / width;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classunify_1_1V2.html">V2&lt; T &gt;</a>( x, <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">index</a> - ( x * width ) );</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>}</div>
-</div>
 </div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="keywordtype">float</span> <a class="code hl_class" href="classunify_1_1Size.html">Size&lt; T &gt;::AspectRatioHW</a>()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00207" data-start="{" data-end="}">
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a24d68aa421e799ecf3f6cd105eb3ad58">  207</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="classunify_1_1Size.html#a24d68aa421e799ecf3f6cd105eb3ad58">Size&lt; T &gt;::AspectRatioHW</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)height / width;</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>}</div>
+</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="keywordtype">float</span> Size&lt; T &gt;::AspectRatioWH()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00213" data-start="{" data-end="}">
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#ad9777ffba2828e63b570549fc15679f3">  213</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="classunify_1_1Size.html#ad9777ffba2828e63b570549fc15679f3">Size&lt; T &gt;::AspectRatioWH</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)width / height;</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>}</div>
+</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><a class="code hl_class" href="classunify_1_1V2.html">unify::V2&lt; T &gt;</a> <a class="code hl_class" href="classunify_1_1Size.html">unify::Size&lt; T &gt;::Center</a>()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00219" data-start="{" data-end="}">
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="classunify_1_1Size.html#a5ca3039631bbf25549705ae77d924d95">  219</a></span><a class="code hl_class" href="classunify_1_1V2.html">unify::V2&lt; T &gt;</a> <a class="code hl_function" href="classunify_1_1Size.html#a5ca3039631bbf25549705ae77d924d95">unify::Size&lt; T &gt;::Center</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classunify_1_1V2.html">unify::V2&lt; T &gt;</a>( width / 2, height / 2 );</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="ttc" id="aclassunify_1_1Size_html"><div class="ttname"><a href="classunify_1_1Size.html">unify::Size</a></div><div class="ttdef"><b>Definition</b> Size.h:35</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_a05347a96b95d4b93dbe51d159c40c8db"><div class="ttname"><a href="classunify_1_1Size.html#a05347a96b95d4b93dbe51d159c40c8db">unify::Size::Size</a></div><div class="ttdeci">Size()</div><div class="ttdef"><b>Definition</b> Size.inl:24</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_a09d9276f7cad1e44a10308c5c3cd804f"><div class="ttname"><a href="classunify_1_1Size.html#a09d9276f7cad1e44a10308c5c3cd804f">unify::Size::Height</a></div><div class="ttdeci">T Height() const</div><div class="ttdef"><b>Definition</b> Size.inl:57</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_a0d567c78d04a6757f6d9ec6e924e9546"><div class="ttname"><a href="classunify_1_1Size.html#a0d567c78d04a6757f6d9ec6e924e9546">unify::Size::Zero</a></div><div class="ttdeci">void Zero()</div><div class="ttdef"><b>Definition</b> Size.inl:63</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_a10eae4a968a58c7e686dff356cdd6ce2"><div class="ttname"><a href="classunify_1_1Size.html#a10eae4a968a58c7e686dff356cdd6ce2">unify::Size::operator==</a></div><div class="ttdeci">bool operator==(const Size&lt; T &gt; &amp;size) const</div><div class="ttdef"><b>Definition</b> Size.inl:170</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_a117ab5e2a0c87f2ec26ebcecf0b9d307"><div class="ttname"><a href="classunify_1_1Size.html#a117ab5e2a0c87f2ec26ebcecf0b9d307">unify::Size::ToString</a></div><div class="ttdeci">std::string ToString() const</div><div class="ttdef"><b>Definition</b> Size.inl:182</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_a24d68aa421e799ecf3f6cd105eb3ad58"><div class="ttname"><a href="classunify_1_1Size.html#a24d68aa421e799ecf3f6cd105eb3ad58">unify::Size::AspectRatioHW</a></div><div class="ttdeci">float AspectRatioHW() const</div><div class="ttdef"><b>Definition</b> Size.inl:207</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_a2807ff8da89c6a68f7064d09f5ece190"><div class="ttname"><a href="classunify_1_1Size.html#a2807ff8da89c6a68f7064d09f5ece190">unify::Size::Units</a></div><div class="ttdeci">T Units() const</div><div class="ttdef"><b>Definition</b> Size.inl:188</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_a5ca3039631bbf25549705ae77d924d95"><div class="ttname"><a href="classunify_1_1Size.html#a5ca3039631bbf25549705ae77d924d95">unify::Size::Center</a></div><div class="ttdeci">unify::V2&lt; T &gt; Center() const</div><div class="ttdef"><b>Definition</b> Size.inl:219</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_a6aab408f139772f271fec6dc04eae790"><div class="ttname"><a href="classunify_1_1Size.html#a6aab408f139772f271fec6dc04eae790">unify::Size::operator/</a></div><div class="ttdeci">Size&lt; T &gt; operator/(const Size&lt; T &gt; &amp;size) const</div><div class="ttdef"><b>Definition</b> Size.inl:152</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_a70e698af7c44623e79a012811749c61d"><div class="ttname"><a href="classunify_1_1Size.html#a70e698af7c44623e79a012811749c61d">unify::Size::Width</a></div><div class="ttdeci">T Width() const</div><div class="ttdef"><b>Definition</b> Size.inl:51</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_a829e2f6604fb82683adbf0a690104108"><div class="ttname"><a href="classunify_1_1Size.html#a829e2f6604fb82683adbf0a690104108">unify::Size::operator*=</a></div><div class="ttdeci">Size&lt; T &gt; &amp; operator*=(const Size&lt; T &gt; &amp;size)</div><div class="ttdef"><b>Definition</b> Size.inl:102</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_a89b2bef40ab023c51c3d37360d31fc9f"><div class="ttname"><a href="classunify_1_1Size.html#a89b2bef40ab023c51c3d37360d31fc9f">unify::Size::operator/=</a></div><div class="ttdeci">Size&lt; T &gt; &amp; operator/=(const Size&lt; T &gt; &amp;size)</div><div class="ttdef"><b>Definition</b> Size.inl:110</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_a8db7dfbeef6093307592f7994763bec2"><div class="ttname"><a href="classunify_1_1Size.html#a8db7dfbeef6093307592f7994763bec2">unify::Size::operator!=</a></div><div class="ttdeci">bool operator!=(const Size&lt; T &gt; &amp;size) const</div><div class="ttdef"><b>Definition</b> Size.inl:176</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_a9a451f9030bd55408acd1343a550af7c"><div class="ttname"><a href="classunify_1_1Size.html#a9a451f9030bd55408acd1343a550af7c">unify::Size::width</a></div><div class="ttdeci">T width</div><div class="ttdef"><b>Definition</b> Size.h:37</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_a9d7f2081ffdd09aa01674fd480e2457e"><div class="ttname"><a href="classunify_1_1Size.html#a9d7f2081ffdd09aa01674fd480e2457e">unify::Size::height</a></div><div class="ttdeci">T height</div><div class="ttdef"><b>Definition</b> Size.h:37</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_aa93653c26f39a2b53748b32a9f3cfc12"><div class="ttname"><a href="classunify_1_1Size.html#aa93653c26f39a2b53748b32a9f3cfc12">unify::Size::LinearToV2</a></div><div class="ttdeci">V2&lt; T &gt; LinearToV2(T index) const</div><div class="ttdoc">Returns an interum point based on the linear index assuming horizontal major.</div><div class="ttdef"><b>Definition</b> Size.inl:200</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_ab839ea9ce310448fcc238a312464abd5"><div class="ttname"><a href="classunify_1_1Size.html#ab839ea9ce310448fcc238a312464abd5">unify::Size::operator+=</a></div><div class="ttdeci">Size&lt; T &gt; &amp; operator+=(const Size&lt; T &gt; &amp;size)</div><div class="ttdef"><b>Definition</b> Size.inl:86</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_ac91a689c73f5dd6cf750621b43fe5aa3"><div class="ttname"><a href="classunify_1_1Size.html#ac91a689c73f5dd6cf750621b43fe5aa3">unify::Size::operator*</a></div><div class="ttdeci">Size&lt; T &gt; operator*(const Size&lt; T &gt; &amp;size) const</div><div class="ttdef"><b>Definition</b> Size.inl:146</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_ac929701975cc63ebf6a24eef647877a9"><div class="ttname"><a href="classunify_1_1Size.html#ac929701975cc63ebf6a24eef647877a9">unify::Size::operator-</a></div><div class="ttdeci">Size&lt; T &gt; operator-(const Size&lt; T &gt; &amp;size) const</div><div class="ttdef"><b>Definition</b> Size.inl:140</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_ad8cef370a182892c4034783d8c172329"><div class="ttname"><a href="classunify_1_1Size.html#ad8cef370a182892c4034783d8c172329">unify::Size::operator+</a></div><div class="ttdeci">Size&lt; T &gt; operator+(const Size&lt; T &gt; &amp;size) const</div><div class="ttdef"><b>Definition</b> Size.inl:134</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_ad9777ffba2828e63b570549fc15679f3"><div class="ttname"><a href="classunify_1_1Size.html#ad9777ffba2828e63b570549fc15679f3">unify::Size::AspectRatioWH</a></div><div class="ttdeci">float AspectRatioWH() const</div><div class="ttdef"><b>Definition</b> Size.inl:213</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_ade1e12ccac1833dcdfedb02995a4f398"><div class="ttname"><a href="classunify_1_1Size.html#ade1e12ccac1833dcdfedb02995a4f398">unify::Size::operator=</a></div><div class="ttdeci">Size&lt; T &gt; &amp; operator=(const V2&lt; T &gt; &amp;vec)</div><div class="ttdef"><b>Definition</b> Size.inl:70</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_ae5d364063e0cc22613e444e7f1dc7595"><div class="ttname"><a href="classunify_1_1Size.html#ae5d364063e0cc22613e444e7f1dc7595">unify::Size::LinearIndex</a></div><div class="ttdeci">T LinearIndex(T h, T v) const</div><div class="ttdef"><b>Definition</b> Size.inl:194</div></div>
+<div class="ttc" id="aclassunify_1_1Size_html_af14ae0957a68d1cefcce1106183f1001"><div class="ttname"><a href="classunify_1_1Size.html#af14ae0957a68d1cefcce1106183f1001">unify::Size::operator-=</a></div><div class="ttdeci">Size&lt; T &gt; &amp; operator-=(const Size&lt; T &gt; &amp;size)</div><div class="ttdef"><b>Definition</b> Size.inl:94</div></div>
 <div class="ttc" id="aclassunify_1_1V2_html"><div class="ttname"><a href="classunify_1_1V2.html">unify::V2&lt; T &gt;</a></div></div>
+<div class="ttc" id="anamespaceunify_html_a4f8a0a80ccca0f1412b3b08e30bc643b"><div class="ttname"><a href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">unify::any_cast</a></div><div class="ttdeci">ValueType * any_cast(Any *operand) noexcept</div><div class="ttdef"><b>Definition</b> Any.h:211</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

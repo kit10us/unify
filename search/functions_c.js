@@ -1,5 +1,23 @@
 var searchData=
 [
-  ['name_0',['Name',['../classunify_1_1FrameSet.html#a2eb8ec90d296621e728eca948aea852d',1,'unify::FrameSet']]],
-  ['normalize_1',['Normalize',['../classunify_1_1Path.html#a5e13b5d0dbcc69908b0af09fe1c7391d',1,'unify::Path::Normalize()'],['../classunify_1_1V2.html#a13dcdf8936d29fff11e9f6df07660379',1,'unify::V2::Normalize()']]]
+  ['main_0',['main',['../01test01-General_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;01test01-General.cpp'],['../01test02-Strings_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;01test02-Strings.cpp'],['../01test03-TimeDelta_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;01test03-TimeDelta.cpp'],['../01test04-Any_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;01test04-Any.cpp'],['../01test05-Path_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;01test05-Path.cpp'],['../01test06-Geometry_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;01test06-Geometry.cpp'],['../01test07-Lookup_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;01test07-Lookup.cpp'],['../01test08-DataLock_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;01test08-DataLock.cpp'],['../01test09-Parameters_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;01test09-Parameters.cpp'],['../01test10-Cast_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;01test10-Cast.cpp']]],
+  ['makebsphere_1',['MakeBSphere',['../classunify_1_1BBox.html#a1e6cd464ff354f8474c976d42fb8e651',1,'unify::BBox']]],
+  ['makedirty_2',['MakeDirty',['../classunify_1_1Frame.html#ae544a8feb6f62740b6b1a5391869eb3e',1,'unify::Frame']]],
+  ['matrix_3',['Matrix',['../classunify_1_1Matrix.html#a2dba13c45127354c9f75ef576f49269b',1,'unify::Matrix::Matrix()'],['../classunify_1_1Matrix.html#a2b1fedfb1b076d4ae504d2c61019871f',1,'unify::Matrix::Matrix(const Matrix &amp;matrix)'],['../classunify_1_1Matrix.html#a77a1b0f53b107bf8dd02ec5b2cd03a49',1,'unify::Matrix::Matrix(Quaternion orientation, V3&lt; float &gt; position=V3&lt; float &gt;(0, 0, 0))'],['../classunify_1_1Matrix.html#a2e951bd025a560deb3ecf12b1611cfc2',1,'unify::Matrix::Matrix(std::string text)']]],
+  ['matrixidentity_4',['MatrixIdentity',['../namespaceunify.html#aae406a6e63563ddb86073b9edef85b35',1,'unify']]],
+  ['matrixlookatlh_5',['MatrixLookAtLH',['../namespaceunify.html#a0292ae51bc4a4d4b33d091afe224a82d',1,'unify']]],
+  ['matrixorthooffcenterlh_6',['MatrixOrthoOffCenterLH',['../namespaceunify.html#a179834b7e0589e409f5ead79c30ade85',1,'unify']]],
+  ['matrixperspectivefovlh_7',['MatrixPerspectiveFovLH',['../namespaceunify.html#af837547688ea241611e24bafd9ed492c',1,'unify']]],
+  ['matrixrotationaboutaxis_8',['MatrixRotationAboutAxis',['../namespaceunify.html#a58da2cc36e8617252d880b6933867833',1,'unify']]],
+  ['matrixrotationx_9',['MatrixRotationX',['../namespaceunify.html#a0c7725f5800a942a336b879d84cfa99f',1,'unify']]],
+  ['matrixrotationy_10',['MatrixRotationY',['../namespaceunify.html#ae73458405e8dc21ac47262fe4f712377',1,'unify']]],
+  ['matrixrotationz_11',['MatrixRotationZ',['../namespaceunify.html#ae35aa0d12b98d521a0899455f1ba48d9',1,'unify']]],
+  ['matrixscale_12',['MatrixScale',['../namespaceunify.html#a5a78a158758cf71768b74855fb7fe131',1,'unify::MatrixScale(const unify::V3&lt; float &gt; &amp;scale)'],['../namespaceunify.html#a7e94b3eaae3edabef83119f9d1ec8688',1,'unify::MatrixScale(float x, float y, float z)'],['../namespaceunify.html#ae93caca08fe0f1e8de2c621a9ab471c8',1,'unify::MatrixScale(float scale)']]],
+  ['matrixtranslate_13',['MatrixTranslate',['../namespaceunify.html#a79bf19d4e39329a6e7d3cf49e7095e6a',1,'unify']]],
+  ['matrixzero_14',['MatrixZero',['../namespaceunify.html#ac091c5f16a156eaaf8b4af9bf4fef752',1,'unify']]],
+  ['max_15',['Max',['../classunify_1_1Range.html#a55602af1ef9f6928d0bad18eb6d740d7',1,'unify::Range']]],
+  ['min_16',['Min',['../classunify_1_1Range.html#acfcb5be86acd3c592e788695d5afe681',1,'unify::Range']]],
+  ['model_17',['Model',['../classunify_1_1FrameSet.html#aff9f20192e2bb9d6f44a76e5436bd5cb',1,'unify::FrameSet::Model()'],['../classunify_1_1FrameSetInstance.html#a7ad01adc27c6c858225f8e0d3fa59533',1,'unify::FrameSetInstance::Model()']]],
+  ['moveby_18',['MoveBy',['../classunify_1_1Frame.html#a4679ccfb992a2d361ae64bfd2b713738',1,'unify::Frame::MoveBy()'],['../classunify_1_1FrameLite.html#abee2a7101acdfbba5aa4c49be354cecb',1,'unify::FrameLite::MoveBy()'],['../classunify_1_1Rect.html#a7bec4857bd4d52311ce81e9ebf55ee54',1,'unify::Rect::MoveBy(T x, T y)'],['../classunify_1_1Rect.html#aa976e6fbc8913d580dba62752864124c',1,'unify::Rect::MoveBy(const V2&lt; T &gt; &amp;pVec)']]],
+  ['moveto_19',['MoveTo',['../classunify_1_1Rect.html#a1d087688beca22ec62d97e825e81c955',1,'unify::Rect::MoveTo(T x, T y)'],['../classunify_1_1Rect.html#a7c1581d2ffb2250c746e99586ba49bcf',1,'unify::Rect::MoveTo(const V2&lt; T &gt; &amp;pVec)']]]
 ];

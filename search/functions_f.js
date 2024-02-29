@@ -1,9 +1,14 @@
 var searchData=
 [
-  ['read_0',['Read',['../classunify_1_1FileStream.html#a791411e71ee9bad44918fd4b73fccdf0',1,'unify::FileStream']]],
-  ['readaccess_1',['ReadAccess',['../structunify_1_1DataLockAccess.html#aa078192be1505665fa71ea75b704939a',1,'unify::DataLockAccess']]],
-  ['readpack_2',['ReadPack',['../classunify_1_1FileStream.html#af9b081654fab8fccb9b15a763bbb9cae',1,'unify::FileStream']]],
-  ['rename_3',['Rename',['../classunify_1_1Path.html#a22af7cc30a1b7c7ce0f8de4a61d8620d',1,'unify::Path']]],
-  ['reset_4',['Reset',['../classunify_1_1FrameSetInstance.html#a888c032f9a33b3d31f2df35fc4b3b07e',1,'unify::FrameSetInstance']]],
-  ['rightstring_5',['RightString',['../namespaceunify_1_1string.html#add9fa074b1a8c0cd20f9ac452178bc25',1,'unify::string']]]
+  ['parameter_0',['Parameter',['../structunify_1_1Parameter.html#aa2357b0b33eb279196186205bcb8b592',1,'unify::Parameter::Parameter()=default'],['../structunify_1_1Parameter.html#a403a48244cb493d60818415a17fb2a7c',1,'unify::Parameter::Parameter(std::string name, T value)'],['../structunify_1_1Parameter.html#ada4f336642146effdfee791399e8ef13',1,'unify::Parameter::Parameter(std::string name, const char *value)']]],
+  ['parameters_1',['Parameters',['../classunify_1_1Parameters.html#af4d94ee360ac0157d9065f78797fe9a1',1,'unify::Parameters::Parameters()'],['../classunify_1_1Parameters.html#a44cb3bc930ececf343b6aafa3f818dc4',1,'unify::Parameters::Parameters(std::string name, T value)'],['../classunify_1_1Parameters.html#af49d253b903cc4be86f16ac05dfad6c7',1,'unify::Parameters::Parameters(std::initializer_list&lt; Parameter &gt; parameters)']]],
+  ['path_2',['Path',['../classunify_1_1Path.html#af26cfab021ddf49af73da3b2beca85ac',1,'unify::Path::Path()'],['../classunify_1_1Path.html#a8f803bf40c71c7e2b75bc3c4cba3e73f',1,'unify::Path::Path(std::string path)'],['../classunify_1_1Path.html#a76d934a42399a33a8402696755eeecf7',1,'unify::Path::Path(char *path)'],['../classunify_1_1Path.html#a0b82f0de2cba12d825d9f2883a2acc28',1,'unify::Path::Path(Path left, Path right)'],['../classunify_1_1Path.html#abedffc92f88bade0d698a18a048e06bc',1,'unify::Path::Path(const std::vector&lt; std::string &gt; &amp;pathParts)']]],
+  ['plane_3',['Plane',['../classunify_1_1Plane.html#acac0d9c003e0ab10d07b146c3566a0c7',1,'unify::Plane::Plane()'],['../classunify_1_1Plane.html#a9a1420228e8baa632c7e8ba66f27772f',1,'unify::Plane::Plane(float a, float b, float c, float d)']]],
+  ['planefrompoints_4',['PlaneFromPoints',['../classunify_1_1Plane.html#a51f80eaecd1ef6a2b289a0abe36bc191',1,'unify::Plane']]],
+  ['polymorphic_5fdowncast_5',['polymorphic_downcast',['../namespaceunify.html#a43d2e815dd85c8938b09ded84b052d21',1,'unify']]],
+  ['pos_6',['Pos',['../classunify_1_1FileStream.html#a394332d7b8c17761c66db532b0a32b05',1,'unify::FileStream']]],
+  ['postmul_7',['PostMul',['../classunify_1_1FrameLite.html#a14de88a26ff6d223e76c8cfa67b64e3c',1,'unify::FrameLite::PostMul(Quaternion q)'],['../classunify_1_1FrameLite.html#a0665ff8122888a5f6e9dbdfa986032ef',1,'unify::FrameLite::PostMul(Matrix m)']]],
+  ['premul_8',['PreMul',['../classunify_1_1FrameLite.html#a551f73de5044b207516c09d7c671bb61',1,'unify::FrameLite::PreMul(Quaternion q)'],['../classunify_1_1FrameLite.html#abce45f00c7a4674679c96075e3aaffe9',1,'unify::FrameLite::PreMul(Matrix m)']]],
+  ['previous_9',['Previous',['../classunify_1_1TLink.html#a89e3865f848b6c129c0cc251e0f26b93',1,'unify::TLink::Previous()'],['../classunify_1_1TLink.html#aaf3e0c1a3a647738851f63cf9d77b384',1,'unify::TLink::Previous() const']]],
+  ['pushframeintovectorrecursive_10',['PushFrameIntoVectorRecursive',['../Frame_8cpp.html#aed0fd00cd52dd43de0da23321f702555',1,'Frame.cpp']]]
 ];

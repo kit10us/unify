@@ -84,7 +84,7 @@ $(function() { codefold.init(0); });
   <div class="headertitle"><div class="title">String.inl</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<a href="_string_8inl.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Unify Library</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * https://github.com/kit10us/unify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2002, Kit10 Studios LLC</span></div>
@@ -107,17 +107,20 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> foo, <span class="keyword">typename</span> ... bar &gt;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceunify_1_1string.html#a9748ee7f5acfe91ceba26ad687e6d2d8">StringIs</a>( std::string a, std::string b, std::string rest... )</div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="_string_8inl.html#a7ce265010e13e31974a1de626c4a4a81">   24</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="_string_8inl.html#a7ce265010e13e31974a1de626c4a4a81">StringIs</a>( std::string a, std::string b, std::string rest... )</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceunify_1_1string.html#a9748ee7f5acfe91ceba26ad687e6d2d8">StringIs</a>(a, b ))</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="_string_8inl.html#a7ce265010e13e31974a1de626c4a4a81">StringIs</a>(a, b ))</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    {</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">return</span> string::StringIs( a, rest );</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
+</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>std::vector&lt; T &gt; Split( std::string sourceString, <span class="keyword">const</span> <span class="keywordtype">char</span> delimitor )</div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="_string_8inl.html#a78a39e816a5c7ef95adc01fb11d9858f">   34</a></span>std::vector&lt; T &gt; <a class="code hl_function" href="_string_8inl.html#a78a39e816a5c7ef95adc01fb11d9858f">Split</a>( std::string sourceString, <span class="keyword">const</span> <span class="keywordtype">char</span> delimitor )</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    std::vector&lt; T &gt; destination;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    std::stringstream ss( sourceString );</div>
@@ -128,9 +131,11 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">return</span> destination;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>std::vector&lt; T &gt; Split( std::string sourceString, <span class="keyword">const</span> std::vector&lt; char &gt; delimitors, <span class="keywordtype">bool</span> includeEmpties )</div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="_string_8inl.html#aad3503055f582e5654cbed38699f1362">   47</a></span>std::vector&lt; T &gt; <a class="code hl_function" href="_string_8inl.html#a78a39e816a5c7ef95adc01fb11d9858f">Split</a>( std::string sourceString, <span class="keyword">const</span> std::vector&lt; char &gt; delimitors, <span class="keywordtype">bool</span> includeEmpties )</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::vector&lt; T &gt; destination;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
@@ -179,9 +184,11 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">return</span> destination;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
+</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>std::vector&lt; T &gt; SplitOnWhitespace( std::string sourceString )</div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="_string_8inl.html#a92443cbc7f32b1c60749ca47097566ac">   98</a></span>std::vector&lt; T &gt; <a class="code hl_function" href="_string_8inl.html#a92443cbc7f32b1c60749ca47097566ac">SplitOnWhitespace</a>( std::string sourceString )</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>{</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    std::vector&lt; char &gt; delimitors;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    delimitors.push_back( <span class="charliteral">&#39; &#39;</span> );</div>
@@ -189,7 +196,10 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    delimitors.push_back( <span class="charliteral">&#39;\n&#39;</span> );</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">return</span> string::Split&lt; T &gt;( sourceString, delimitors );</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
-<div class="ttc" id="anamespaceunify_1_1string_html_a9748ee7f5acfe91ceba26ad687e6d2d8"><div class="ttname"><a href="namespaceunify_1_1string.html#a9748ee7f5acfe91ceba26ad687e6d2d8">unify::string::StringIs</a></div><div class="ttdeci">bool StringIs(std::string a, std::string is)</div><div class="ttdoc">Compare two strings for equvilancy, ignoring case.</div><div class="ttdef"><b>Definition</b> String.cpp:41</div></div>
+</div>
+<div class="ttc" id="a_string_8inl_html_a78a39e816a5c7ef95adc01fb11d9858f"><div class="ttname"><a href="_string_8inl.html#a78a39e816a5c7ef95adc01fb11d9858f">Split</a></div><div class="ttdeci">std::vector&lt; T &gt; Split(std::string sourceString, const char delimitor)</div><div class="ttdef"><b>Definition</b> String.inl:34</div></div>
+<div class="ttc" id="a_string_8inl_html_a7ce265010e13e31974a1de626c4a4a81"><div class="ttname"><a href="_string_8inl.html#a7ce265010e13e31974a1de626c4a4a81">StringIs</a></div><div class="ttdeci">bool StringIs(std::string a, std::string b, std::string rest...)</div><div class="ttdef"><b>Definition</b> String.inl:24</div></div>
+<div class="ttc" id="a_string_8inl_html_a92443cbc7f32b1c60749ca47097566ac"><div class="ttname"><a href="_string_8inl.html#a92443cbc7f32b1c60749ca47097566ac">SplitOnWhitespace</a></div><div class="ttdeci">std::vector&lt; T &gt; SplitOnWhitespace(std::string sourceString)</div><div class="ttdef"><b>Definition</b> String.inl:98</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

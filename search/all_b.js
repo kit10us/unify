@@ -1,12 +1,6 @@
 var searchData=
 [
-  ['leftstring_0',['LeftString',['../namespaceunify_1_1string.html#a91bc56c76e63f3c76eb6c48afe8f4199',1,'unify::string']]],
-  ['length_1',['Length',['../classunify_1_1V2.html#a8159067a8bbab16d8e2ce171513c3a4f',1,'unify::V2']]],
-  ['line_20document_20generation_20comments_2',['In-line Document Generation Comments',['../md_README.html#autotoc_md7',1,'']]],
-  ['lineartov2_3',['LinearToV2',['../classunify_1_1Size.html#aa93653c26f39a2b53748b32a9f3cfc12',1,'unify::Size']]],
-  ['linklist_4',['LinkList',['../classunify_1_1LinkList.html',1,'unify']]],
-  ['listpart_5',['ListPart',['../namespaceunify_1_1string.html#a982c20c4024a9129858f6d7162c5c907',1,'unify::string']]],
-  ['local_6',['Local',['../classunify_1_1FrameSet.html#a9e433879fd9af43e2289a2ff3da39e44',1,'unify::FrameSet::Local()'],['../classunify_1_1FrameSetInstance.html#a71c38bfe12f26016174d2297d3dc9353',1,'unify::FrameSetInstance::Local()']]],
-  ['lookat_7',['LookAt',['../classunify_1_1FrameLite.html#a54a7407c8e3fb5abfe90cf1bf08df511',1,'unify::FrameLite::LookAt(const FrameLite &amp;at, const V3&lt; float &gt; &amp;up=V3&lt; float &gt;(0, 1, 0))'],['../classunify_1_1FrameLite.html#a948eeae99df854395873fc1be24c3b91',1,'unify::FrameLite::LookAt(const V3&lt; float &gt; &amp;at, const V3&lt; float &gt; &amp;up=V3&lt; float &gt;(0, 1, 0))']]],
-  ['lookup_8',['Lookup',['../classunify_1_1Lookup.html',1,'unify']]]
+  ['key_0',['key',['../structunify_1_1KeyValuePair.html#a20bcbd75e793704af72250905715283e',1,'unify::KeyValuePair']]],
+  ['keyvaluepair_1',['KeyValuePair',['../structunify_1_1KeyValuePair.html',1,'unify::KeyValuePair&lt; Key, Value &gt;'],['../structunify_1_1KeyValuePair.html#aafb8f696cc85bd9b727fd7f2d7f83537',1,'unify::KeyValuePair::KeyValuePair(const KeyValuePair&lt; Key, Value &gt; &amp;keyValue)'],['../structunify_1_1KeyValuePair.html#a6b75bbb2e6e151d9d8991ff2449ca6b7',1,'unify::KeyValuePair::KeyValuePair(Key key, Value value)']]],
+  ['keyvaluepair_2eh_2',['KeyValuePair.h',['../KeyValuePair_8h.html',1,'']]]
 ];

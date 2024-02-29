@@ -84,7 +84,7 @@ $(function() { codefold.init(0); });
   <div class="headertitle"><div class="title">Optional.inl</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<a href="Optional_8inl.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Unify Library</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * https://github.com/kit10us/unify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2002, Kit10 Studios LLC</span></div>
@@ -107,24 +107,31 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>Optional&lt; T &gt;::Optional()</div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classunify_1_1Optional.html#a741077c7426730657f78515208000493">   24</a></span><a class="code hl_class" href="classunify_1_1Optional.html">Optional&lt; T &gt;::Optional</a>()</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
+</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>Optional&lt; T &gt;::Optional( <span class="keyword">const</span> T &amp; value )</div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classunify_1_1Optional.html#a5482aea9d6dbe793b016edba4c232026">   29</a></span><a class="code hl_class" href="classunify_1_1Optional.html">Optional&lt; T &gt;::Optional</a>( <span class="keyword">const</span> T &amp; value )</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    : m_thing( new Keeper( value ) )</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>Optional&lt; T &gt;::~Optional()</div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classunify_1_1Optional.html#ae77aae6dba550b166802ee5ed2ac3fdc">   35</a></span><a class="code hl_function" href="classunify_1_1Optional.html#ae77aae6dba550b166802ee5ed2ac3fdc">Optional&lt; T &gt;::~Optional</a>()</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    m_thing.reset();</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
+</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">const</span> T &amp; Optional&lt; T &gt;::operator()()<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classunify_1_1Optional.html#a343ab08e83fdf0f326cac433acda4aa1">   41</a></span><span class="keyword">const</span> <a class="code hl_function" href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">T</a> &amp; <a class="code hl_function" href="classunify_1_1Optional.html#a343ab08e83fdf0f326cac433acda4aa1">Optional&lt; T &gt;::operator()</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">if</span> ( m_thing.empty() )</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
@@ -132,7 +139,12 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">return</span> m_thing.value;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+</div>
 <div class="ttc" id="aclassunify_1_1Exception_html"><div class="ttname"><a href="classunify_1_1Exception.html">unify::Exception</a></div><div class="ttdoc">A standardized exception.</div><div class="ttdef"><b>Definition</b> Exception.h:35</div></div>
+<div class="ttc" id="aclassunify_1_1Optional_html"><div class="ttname"><a href="classunify_1_1Optional.html">unify::Optional</a></div><div class="ttdef"><b>Definition</b> Optional.h:33</div></div>
+<div class="ttc" id="aclassunify_1_1Optional_html_a343ab08e83fdf0f326cac433acda4aa1"><div class="ttname"><a href="classunify_1_1Optional.html#a343ab08e83fdf0f326cac433acda4aa1">unify::Optional::operator()</a></div><div class="ttdeci">const T &amp; operator()() const</div><div class="ttdef"><b>Definition</b> Optional.inl:41</div></div>
+<div class="ttc" id="aclassunify_1_1Optional_html_ae77aae6dba550b166802ee5ed2ac3fdc"><div class="ttname"><a href="classunify_1_1Optional.html#ae77aae6dba550b166802ee5ed2ac3fdc">unify::Optional::~Optional</a></div><div class="ttdeci">~Optional()</div><div class="ttdef"><b>Definition</b> Optional.inl:35</div></div>
+<div class="ttc" id="anamespaceunify_html_a4f8a0a80ccca0f1412b3b08e30bc643b"><div class="ttname"><a href="namespaceunify.html#a4f8a0a80ccca0f1412b3b08e30bc643b">unify::any_cast</a></div><div class="ttdeci">ValueType * any_cast(Any *operand) noexcept</div><div class="ttdef"><b>Definition</b> Any.h:211</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
