@@ -2,7 +2,7 @@ var searchData=
 [
   ['ul_0',['UL',['../classunify_1_1Rect.html#a35b6386f06470b062bfc52ea09e436b7',1,'unify::Rect::UL()'],['../classunify_1_1TexArea.html#a752cbef4aa1330ecb7595834701109a1',1,'unify::TexArea::UL()']]],
   ['units_1',['Units',['../classunify_1_1Size.html#a2807ff8da89c6a68f7064d09f5ece190',1,'unify::Size::Units()'],['../classunify_1_1Size3.html#a38e97daaf97ed429954289f09be13049',1,'unify::Size3::Units()']]],
-  ['unsafe_5fany_5fcast_2',['unsafe_any_cast',['../namespaceunify.html#a8191da886b33c9d45a71460ebb684c94',1,'unify::unsafe_any_cast(Any *operand) noexcept'],['../namespaceunify.html#ad00561c21ed429afb015d08998ae98fc',1,'unify::unsafe_any_cast(const Any *operand) noexcept']]],
+  ['unsafe_5fany_5fcast_2',['unsafe_any_cast',['../namespaceunify.html#a132c292b6b16bf9c926d543b68af0539',1,'unify::unsafe_any_cast(Any *operand)'],['../namespaceunify.html#ad00561c21ed429afb015d08998ae98fc',1,'unify::unsafe_any_cast(const Any *operand) noexcept']]],
   ['up_3',['Up',['../classunify_1_1Quaternion.html#a9478c1d5b0ed3f6aac728eb63726b410',1,'unify::Quaternion']]],
   ['update_4',['Update',['../classunify_1_1Frame.html#ae28a971524a4793bc60ac4f5eca8b0e3',1,'unify::Frame']]],
   ['updatelocals_5',['UpdateLocals',['../classunify_1_1FrameSetInstance.html#a32f9c6bd73721a1b2c425c01fdeb1686',1,'unify::FrameSetInstance']]],

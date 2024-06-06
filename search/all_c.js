@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['left_0',['left',['../classunify_1_1Rect.html#ad34a7614482d6e1b9d0106ce206614c5',1,'unify::Rect']]],
-  ['left_1',['Left',['../classunify_1_1FrustumPlane.html#ac5f06533269c9ed24b38d7efa05d3f7ea7b9409c67b81e2d77d5bf77fde1667e1',1,'unify::FrustumPlane::Left'],['../structunify_1_1NinePoint.html#a47fc4f4242673361a16ab53737e38490a0925c54d20c9b211c20f7dbdd63db463',1,'unify::NinePoint::Left']]],
+  ['left_0',['Left',['../classunify_1_1FrustumPlane.html#ac5f06533269c9ed24b38d7efa05d3f7ea7b9409c67b81e2d77d5bf77fde1667e1',1,'unify::FrustumPlane::Left'],['../structunify_1_1NinePoint.html#a47fc4f4242673361a16ab53737e38490a0925c54d20c9b211c20f7dbdd63db463',1,'unify::NinePoint::Left']]],
+  ['left_1',['left',['../classunify_1_1Rect.html#ad34a7614482d6e1b9d0106ce206614c5',1,'unify::Rect']]],
   ['leftstring_2',['LeftString',['../namespaceunify_1_1string.html#a91bc56c76e63f3c76eb6c48afe8f4199',1,'unify::string']]],
-  ['length_3',['Length',['../classunify_1_1V2.html#a8159067a8bbab16d8e2ce171513c3a4f',1,'unify::V2::Length()'],['../classunify_1_1V3.html#af2f5e8cca6d7ada72c35c91356659133',1,'unify::V3::Length()'],['../classunify_1_1V4.html#a738e4e55637df805bb497ca16a9e845b',1,'unify::V4::Length()']]],
+  ['length_3',['Length',['../classunify_1_1V2.html#a30727de5a0408bea5a24948b216a2c20',1,'unify::V2::Length()'],['../classunify_1_1V3.html#af2f5e8cca6d7ada72c35c91356659133',1,'unify::V3::Length()'],['../classunify_1_1V4.html#a738e4e55637df805bb497ca16a9e845b',1,'unify::V4::Length()']]],
   ['lerp_4',['Lerp',['../namespaceunify.html#a33fa7aa51f24d0a9aa3be52b198c7169',1,'unify::Lerp()'],['../Math_8inl.html#a58816db2fa310eff725b5a65170518e3',1,'Lerp():&#160;Math.inl']]],
   ['line_20document_20generation_20comments_5',['In-line Document Generation Comments',['../md_README.html#autotoc_md7',1,'']]],
   ['linear_6',['linear',['../classunify_1_1Color.html#ad23887cc35c948d5bb34ce9520cf0fe5',1,'unify::Color::linear'],['../classunify_1_1ColorUnit.html#a241acb381db44b83008eb1a1537185b0',1,'unify::ColorUnit::linear'],['../classunify_1_1Matrix.html#a65acc2ed4035204e5fff0ed64e240438',1,'unify::Matrix::linear']]],
