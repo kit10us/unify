@@ -38,6 +38,7 @@
     <ClCompile Include="unify\Plane.cpp" />
     <ClCompile Include="unify\Quaternion.cpp" />
     <ClCompile Include="unify\Ray.cpp" />
+    <ClCompile Include="unify\Result.cpp" />
     <ClCompile Include="unify\Stream.cpp" />
     <ClCompile Include="unify\String.cpp" />
     <ClCompile Include="unify\test\DefaultEventHandlers.cpp" />
@@ -85,6 +86,7 @@
     <ClInclude Include="unify\Quaternion.h" />
     <ClInclude Include="unify\Ray.h" />
     <ClInclude Include="unify\Rect.h" />
+    <ClInclude Include="unify\Result.h" />
     <ClInclude Include="unify\RowColumn.h" />
     <ClInclude Include="unify\Size.h" />
     <ClInclude Include="unify\Size3.h" />
@@ -206,7 +208,6 @@
     <OutDir>$(ProjectDir)..\lib\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)..\intermediate\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
-  
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugWindows|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
@@ -289,7 +290,6 @@
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
-
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -88,6 +88,9 @@
     <ClCompile Include="unify\test\DefaultOutputHandlers.cpp">
       <Filter>test</Filter>
     </ClCompile>
+    <ClCompile Include="unify\Result.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="unify\Angle.h">
@@ -265,6 +268,9 @@
       <Filter>unify</Filter>
     </ClInclude>
     <ClInclude Include="unify\DefaultHandler.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="unify\Result.h">
       <Filter>unify</Filter>
     </ClInclude>
   </ItemGroup>
