@@ -80,10 +80,11 @@ var searchData=
   ['stringminusleft_77',['StringMinusLeft',['../namespaceunify_1_1string.html#a7fb913fbe9528ee1a0c505b49c80cf47',1,'unify::string']]],
   ['stringminusright_78',['StringMinusRight',['../namespaceunify_1_1string.html#a49c11b61b7b2e44e02dc05a052ee20ee',1,'unify::string']]],
   ['stringreplace_79',['StringReplace',['../namespaceunify_1_1string.html#ad6284cdcb822256399c9243161aed01b',1,'unify::string']]],
-  ['suite_80',['Suite',['../classunify_1_1test_1_1Suite.html',1,'unify::test::Suite'],['../classunify_1_1test_1_1Suite.html#ac6d5e58a508fcf431ea7448da070f802',1,'unify::test::Suite::Suite()']]],
-  ['suite_2ecpp_81',['Suite.cpp',['../Suite_8cpp.html',1,'']]],
-  ['suite_2eh_82',['Suite.h',['../Suite_8h.html',1,'']]],
-  ['sumcomponents_83',['SumComponents',['../classunify_1_1ColorUnit.html#a761bf6d69fd2f42c3704ba16ab03548b',1,'unify::ColorUnit']]],
-  ['sup_84',['sup',['../classunify_1_1BBox.html#a713d7db8b80484376ce41c5453a6287e',1,'unify::BBox::sup'],['../classunify_1_1BRectangle.html#a1d01061ac1687970fc21b2d25939dc47',1,'unify::BRectangle::sup']]],
-  ['swap_85',['swap',['../classunify_1_1Any.html#ad59e53e2e18dbc0ea13e27c6ff61f955',1,'unify::Any::swap()'],['../namespaceunify.html#a307711de33c218c1d30e4f47da2f14c0',1,'unify::swap()']]]
+  ['success_80',['Success',['../classunify_1_1Result.html#af917e6f73e07edc979cb23256d733108',1,'unify::Result']]],
+  ['suite_81',['Suite',['../classunify_1_1test_1_1Suite.html',1,'unify::test::Suite'],['../classunify_1_1test_1_1Suite.html#ac6d5e58a508fcf431ea7448da070f802',1,'unify::test::Suite::Suite()']]],
+  ['suite_2ecpp_82',['Suite.cpp',['../Suite_8cpp.html',1,'']]],
+  ['suite_2eh_83',['Suite.h',['../Suite_8h.html',1,'']]],
+  ['sumcomponents_84',['SumComponents',['../classunify_1_1ColorUnit.html#a761bf6d69fd2f42c3704ba16ab03548b',1,'unify::ColorUnit']]],
+  ['sup_85',['sup',['../classunify_1_1BBox.html#a713d7db8b80484376ce41c5453a6287e',1,'unify::BBox::sup'],['../classunify_1_1BRectangle.html#a1d01061ac1687970fc21b2d25939dc47',1,'unify::BRectangle::sup']]],
+  ['swap_86',['swap',['../classunify_1_1Any.html#ad59e53e2e18dbc0ea13e27c6ff61f955',1,'unify::Any::swap()'],['../namespaceunify.html#a307711de33c218c1d30e4f47da2f14c0',1,'unify::swap()']]]
 ];
