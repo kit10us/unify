@@ -88,9 +88,6 @@
     <ClCompile Include="unify\test\DefaultOutputHandlers.cpp">
       <Filter>test</Filter>
     </ClCompile>
-    <ClCompile Include="unify\Result.cpp">
-      <Filter>unify</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="unify\Angle.h">
@@ -352,5 +349,8 @@
     <Filter Include="test">
       <UniqueIdentifier>{a60ab5db-ade3-47b1-ab64-1c71cd6354cc}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeList.txt" />
   </ItemGroup>
 </Project>

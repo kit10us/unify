@@ -38,7 +38,6 @@
     <ClCompile Include="unify\Plane.cpp" />
     <ClCompile Include="unify\Quaternion.cpp" />
     <ClCompile Include="unify\Ray.cpp" />
-    <ClCompile Include="unify\Result.cpp" />
     <ClCompile Include="unify\Stream.cpp" />
     <ClCompile Include="unify\String.cpp" />
     <ClCompile Include="unify\test\DefaultEventHandlers.cpp" />
@@ -136,6 +135,9 @@
     <None Include="unify\V3.inl" />
     <None Include="unify\V4.inl" />
     <None Include="unify\Viewport.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeList.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectName>Unify</ProjectName>

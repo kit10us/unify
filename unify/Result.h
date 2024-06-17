@@ -23,34 +23,131 @@
 #pragma once
 
 #include <string>
-#include <memory>
+#include <functional>
+#include <variant>
 
 namespace unify
 {
-	/// <summary>
-	/// Used to track the result of any operation or functionality.
-	/// </summary>
-	class Result
+	class Failure
 	{
 	public:
-		typedef std::shared_ptr<Result> ptr;
+		Failure(std::string message)
+			: m_message{ message }
+		{
+		}
 
-		static Result::ptr FAILED(std::string message);
-
-		Result();
-
-		Result(bool success, std::string message = {});
-
-		bool operator()() const;
-
-		std::string Message() const;
-
-		bool Success() const;
-
-		bool Fail() const;
+		std::string GetMessage() const
+		{
+			return m_message;
+		}
 
 	private:
 		std::string m_message;
-		bool m_success;
+	};
+
+	template<typename T_SuccessType = bool>
+	class Result
+	{
+	public:
+		Result(T_SuccessType value)
+			: m_result{ value }
+		{
+		}
+
+		Result(Failure failure)
+			: m_result{ failure }
+		{
+		}
+
+		Result()
+			: Result(true)
+		{
+		}
+
+		bool Success() const
+		{
+			return std::holds_alternative<Failure>(m_result) ? false : true;
+		}
+
+		std::string Message() const
+		{
+			if (Success())
+			{
+				return {};
+			}
+			else
+			{
+				return std::get<Failure>(m_result).GetMessage();
+			}
+		}
+
+		T_SuccessType Value() const
+		{
+			return std::get<T_SuccessType>(m_result);
+		}
+
+		/// <summary>
+		/// Upon success, returns the parameter, else returns a failure.
+		/// </summary>
+		template<typename T_NewType>
+		Result<T_NewType> As(T_NewType success) const
+		{
+			if (Success())
+			{
+				return success;
+			}
+			else
+			{
+				return Failure{ Message() };
+			}
+		}
+
+		/// <summary>
+		/// Get the results.
+		/// Will throw if a failure. Use Failure() or Success() first to verify results.
+		/// </summary>
+		/// <returns></returns>
+		T_SuccessType operator()() const
+		{
+			return Value();
+		}
+
+		/// <summary>
+		/// Calls a function, passed as a parameter, upon a failure.
+		/// </summary>
+		void OnFailure(std::function< void(std::string message) > func) const
+		{
+			if (!Success())
+			{
+				func(Message());
+			}
+		}
+
+		/// <summary>
+		/// If successfull, returns the value, else calls a function upon a failure.
+		/// </summary>
+		T_SuccessType Else(std::function<void(std::string message)> func) const
+		{
+			if (!Success())
+			{
+				func(Message());
+			}
+			return (*this)();
+		}
+
+		/// <summary>
+		/// If successfull, returns the value, else calls a function upon a failure.
+		/// </summary>
+		T_SuccessType Else(std::function<void(void)> func) const
+		{
+			if (!Success())
+			{
+				func();
+			}
+			return (*this)();
+		}
+
+	public:
+		std::variant<T_SuccessType, Failure> m_result;
 	};
 }
