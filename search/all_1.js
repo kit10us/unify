@@ -24,12 +24,13 @@ var searchData=
   ['any_2eh_21',['Any.h',['../Any_8h.html',1,'']]],
   ['any_5fcast_22',['any_cast',['../classunify_1_1Any.html#aab5c5bda14d771914149eb1816562b8a',1,'unify::Any::any_cast'],['../namespaceunify.html#ab2ad816f36c52d1c389e8bf891872778',1,'unify::any_cast(Any *operand)'],['../namespaceunify.html#a8c691e91859ea1162d24b0215bdb3d51',1,'unify::any_cast(const Any *operand) noexcept'],['../namespaceunify.html#ac9c6f388844576f1afef607728654a5a',1,'unify::any_cast(Any &amp;operand)'],['../namespaceunify.html#a43a60fa2a5a185f3d198db197e943f74',1,'unify::any_cast(const Any &amp;operand)'],['../namespaceunify.html#ad3d40f387f64b5bf706747a9ba67f1ec',1,'unify::any_cast(Any &amp;&amp;operand)']]],
   ['argb_23',['ARGB',['../classunify_1_1ColorUnit.html#a04614e684f8dbe9c2f028313b9931be8abee44b6057f550c0bb99de0a8acc4021',1,'unify::ColorUnit::ARGB'],['../namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba197e484be88aa4455970b1c85eceea87',1,'unify::ARGB']]],
-  ['aspectratiohw_24',['AspectRatioHW',['../classunify_1_1Size.html#a24d68aa421e799ecf3f6cd105eb3ad58',1,'unify::Size']]],
-  ['aspectratiowh_25',['AspectRatioWH',['../classunify_1_1Size.html#ad9777ffba2828e63b570549fc15679f3',1,'unify::Size']]],
-  ['assert_26',['Assert',['../classunify_1_1test_1_1DefaultAssertHandler.html#a20753b12da7fa1ba9c2b560b329a76c2',1,'unify::test::DefaultAssertHandler::Assert()'],['../classunify_1_1test_1_1IAssertHandler.html#a5eb0f61b136cf06b54b0ea2280e6792e',1,'unify::test::IAssertHandler::Assert()'],['../classunify_1_1test_1_1Suite.html#accef319bdaea72911cdcb3c38f776fa0',1,'unify::test::Suite::Assert()']]],
-  ['assertfailed_27',['AssertFailed',['../namespaceunify_1_1test.html#a45a0260989c730681b7ca362b3add8caa3f5bb06fb656c141afc9af493ac6f122',1,'unify::test']]],
-  ['assertpassed_28',['AssertPassed',['../namespaceunify_1_1test.html#a45a0260989c730681b7ca362b3add8caad5ae443077407db708d097cb98c62363',1,'unify::test']]],
-  ['attachto_29',['AttachTo',['../classunify_1_1Frame.html#a3bd9155107de40d1c1310e03f9337e83',1,'unify::Frame::AttachTo()'],['../classunify_1_1Tree.html#ab2e61f69f30e2e8d1cdbbb44c611dc0e',1,'unify::Tree::AttachTo()']]],
-  ['audit_30',['Audit',['../classunify_1_1Parameters.html#ab7e9e18726557ee004e4a458a6bcd26f',1,'unify::Parameters']]],
-  ['auditcount_31',['AuditCount',['../classunify_1_1Parameters.html#a5930c1aca28e2e0756f092c8aa600f5f',1,'unify::Parameters']]]
+  ['as_24',['As',['../classunify_1_1Result.html#a5ef65fdafe7806ce85d076fffcbab717',1,'unify::Result']]],
+  ['aspectratiohw_25',['AspectRatioHW',['../classunify_1_1Size.html#a24d68aa421e799ecf3f6cd105eb3ad58',1,'unify::Size']]],
+  ['aspectratiowh_26',['AspectRatioWH',['../classunify_1_1Size.html#ad9777ffba2828e63b570549fc15679f3',1,'unify::Size']]],
+  ['assert_27',['Assert',['../classunify_1_1test_1_1DefaultAssertHandler.html#a20753b12da7fa1ba9c2b560b329a76c2',1,'unify::test::DefaultAssertHandler::Assert()'],['../classunify_1_1test_1_1IAssertHandler.html#a5eb0f61b136cf06b54b0ea2280e6792e',1,'unify::test::IAssertHandler::Assert()'],['../classunify_1_1test_1_1Suite.html#accef319bdaea72911cdcb3c38f776fa0',1,'unify::test::Suite::Assert()']]],
+  ['assertfailed_28',['AssertFailed',['../namespaceunify_1_1test.html#a45a0260989c730681b7ca362b3add8caa3f5bb06fb656c141afc9af493ac6f122',1,'unify::test']]],
+  ['assertpassed_29',['AssertPassed',['../namespaceunify_1_1test.html#a45a0260989c730681b7ca362b3add8caad5ae443077407db708d097cb98c62363',1,'unify::test']]],
+  ['attachto_30',['AttachTo',['../classunify_1_1Frame.html#a3bd9155107de40d1c1310e03f9337e83',1,'unify::Frame::AttachTo()'],['../classunify_1_1Tree.html#ab2e61f69f30e2e8d1cdbbb44c611dc0e',1,'unify::Tree::AttachTo()']]],
+  ['audit_31',['Audit',['../classunify_1_1Parameters.html#ab7e9e18726557ee004e4a458a6bcd26f',1,'unify::Parameters']]],
+  ['auditcount_32',['AuditCount',['../classunify_1_1Parameters.html#a5930c1aca28e2e0756f092c8aa600f5f',1,'unify::Parameters']]]
 ];

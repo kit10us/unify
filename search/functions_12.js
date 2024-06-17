@@ -51,7 +51,7 @@ var searchData=
   ['stringminusleft_48',['StringMinusLeft',['../namespaceunify_1_1string.html#a7fb913fbe9528ee1a0c505b49c80cf47',1,'unify::string']]],
   ['stringminusright_49',['StringMinusRight',['../namespaceunify_1_1string.html#a49c11b61b7b2e44e02dc05a052ee20ee',1,'unify::string']]],
   ['stringreplace_50',['StringReplace',['../namespaceunify_1_1string.html#ad6284cdcb822256399c9243161aed01b',1,'unify::string']]],
-  ['success_51',['Success',['../classunify_1_1Result.html#af917e6f73e07edc979cb23256d733108',1,'unify::Result']]],
+  ['success_51',['Success',['../classunify_1_1Result.html#aaac2d98751021fd7303e1780bf76ee67',1,'unify::Result']]],
   ['suite_52',['Suite',['../classunify_1_1test_1_1Suite.html#ac6d5e58a508fcf431ea7448da070f802',1,'unify::test::Suite']]],
   ['sumcomponents_53',['SumComponents',['../classunify_1_1ColorUnit.html#a761bf6d69fd2f42c3704ba16ab03548b',1,'unify::ColorUnit']]],
   ['swap_54',['swap',['../classunify_1_1Any.html#ad59e53e2e18dbc0ea13e27c6ff61f955',1,'unify::Any::swap()'],['../namespaceunify.html#a307711de33c218c1d30e4f47da2f14c0',1,'unify::swap()']]]

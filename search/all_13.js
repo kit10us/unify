@@ -80,7 +80,7 @@ var searchData=
   ['stringminusleft_77',['StringMinusLeft',['../namespaceunify_1_1string.html#a7fb913fbe9528ee1a0c505b49c80cf47',1,'unify::string']]],
   ['stringminusright_78',['StringMinusRight',['../namespaceunify_1_1string.html#a49c11b61b7b2e44e02dc05a052ee20ee',1,'unify::string']]],
   ['stringreplace_79',['StringReplace',['../namespaceunify_1_1string.html#ad6284cdcb822256399c9243161aed01b',1,'unify::string']]],
-  ['success_80',['Success',['../classunify_1_1Result.html#af917e6f73e07edc979cb23256d733108',1,'unify::Result']]],
+  ['success_80',['Success',['../classunify_1_1Result.html#aaac2d98751021fd7303e1780bf76ee67',1,'unify::Result']]],
   ['suite_81',['Suite',['../classunify_1_1test_1_1Suite.html',1,'unify::test::Suite'],['../classunify_1_1test_1_1Suite.html#ac6d5e58a508fcf431ea7448da070f802',1,'unify::test::Suite::Suite()']]],
   ['suite_2ecpp_82',['Suite.cpp',['../Suite_8cpp.html',1,'']]],
   ['suite_2eh_83',['Suite.h',['../Suite_8h.html',1,'']]],

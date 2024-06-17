@@ -89,20 +89,23 @@ $(function(){ initResizable(false); });
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">unify::Result Member List</div></div>
+  <div class="headertitle"><div class="title">unify::Result&lt; T_SuccessType &gt; Member List</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="classunify_1_1Result.html">unify::Result</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="classunify_1_1Result.html">unify::Result&lt; T_SuccessType &gt;</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classunify_1_1Result.html#a9b22033251a8013c3e4321b1e8c64164">Fail</a>() const</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classunify_1_1Result.html#a59ffbae389143007e57c7018fc9d1425">FAILED</a>(std::string message)</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classunify_1_1Result.html#a85d107d9787afa0780f01ac5fe75dd05">Message</a>() const</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classunify_1_1Result.html#ae19b2c0b788a7b61c85bea8a011c266a">operator()</a>() const</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classunify_1_1Result.html#a9b2e97a5d7e06265033e22e1aa06752a">ptr</a> typedef</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classunify_1_1Result.html#a90f44667e23d25ccdeac37f00a74657b">Result</a>()</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classunify_1_1Result.html#a612fc25644a195fb15e2eeb167d5b73f">Result</a>(bool success, std::string message={})</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classunify_1_1Result.html#af917e6f73e07edc979cb23256d733108">Success</a>() const</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classunify_1_1Result.html#a5ef65fdafe7806ce85d076fffcbab717">As</a>(T_NewType success) const</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result&lt; T_SuccessType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classunify_1_1Result.html#a8d3b299fe7f158aacaa3a2664a31c969">Else</a>(std::function&lt; void(std::string message)&gt; func) const</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result&lt; T_SuccessType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classunify_1_1Result.html#aebc7c26c1ec0183de609f0625994afde">Else</a>(std::function&lt; void(void)&gt; func) const</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result&lt; T_SuccessType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classunify_1_1Result.html#a0612899608eec020ae52c28ac0ded863">Message</a>() const</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result&lt; T_SuccessType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classunify_1_1Result.html#a559d2573727753dffed39aa05ebe0e4c">OnFailure</a>(std::function&lt; void(std::string message) &gt; func) const</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result&lt; T_SuccessType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classunify_1_1Result.html#a1775d5ab0d12a35641cc4e5fb432b0a8">operator()</a>() const</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result&lt; T_SuccessType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classunify_1_1Result.html#a0aeb1c1c14a6eb73537d4dd08e6dfd6b">Result</a>(T_SuccessType value)</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result&lt; T_SuccessType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classunify_1_1Result.html#ad6bd4cdeed329cead81154ed7ef28fdc">Result</a>(Failure failure)</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result&lt; T_SuccessType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classunify_1_1Result.html#a2a52f498ff6a828f5204af1411553b4a">Result</a>()</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result&lt; T_SuccessType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classunify_1_1Result.html#aaac2d98751021fd7303e1780bf76ee67">Success</a>() const</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result&lt; T_SuccessType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classunify_1_1Result.html#ac62121ac1c9d11462e48d182b325a8fb">Value</a>() const</td><td class="entry"><a class="el" href="classunify_1_1Result.html">unify::Result&lt; T_SuccessType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

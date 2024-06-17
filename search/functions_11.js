@@ -12,7 +12,7 @@ var searchData=
   ['reference_9',['Reference',['../classunify_1_1Variant.html#ab331a079d37fc27ab8d7f01baa87d528',1,'unify::Variant']]],
   ['rename_10',['Rename',['../classunify_1_1Path.html#a22af7cc30a1b7c7ce0f8de4a61d8620d',1,'unify::Path']]],
   ['reset_11',['Reset',['../classunify_1_1FrameSetInstance.html#a888c032f9a33b3d31f2df35fc4b3b07e',1,'unify::FrameSetInstance::Reset()'],['../classunify_1_1Parameters.html#af073d368b9e3fe24316727baab265b10',1,'unify::Parameters::Reset()']]],
-  ['result_12',['Result',['../classunify_1_1Result.html#a90f44667e23d25ccdeac37f00a74657b',1,'unify::Result::Result()'],['../classunify_1_1Result.html#a612fc25644a195fb15e2eeb167d5b73f',1,'unify::Result::Result(bool success, std::string message={})']]],
+  ['result_12',['Result',['../classunify_1_1Result.html#a0aeb1c1c14a6eb73537d4dd08e6dfd6b',1,'unify::Result::Result(T_SuccessType value)'],['../classunify_1_1Result.html#ad6bd4cdeed329cead81154ed7ef28fdc',1,'unify::Result::Result(Failure failure)'],['../classunify_1_1Result.html#a2a52f498ff6a828f5204af1411553b4a',1,'unify::Result::Result()']]],
   ['rightstring_13',['RightString',['../namespaceunify_1_1string.html#add9fa074b1a8c0cd20f9ac452178bc25',1,'unify::string']]],
   ['rotate_14',['Rotate',['../classunify_1_1Frame.html#ac190c08e7eeba13a2605413add73aaae',1,'unify::Frame::Rotate(const V3&lt; float &gt; &amp;axis, Angle angle)'],['../classunify_1_1Frame.html#a16a4a2500d9a1a0d3b1528946f0f1d32',1,'unify::Frame::Rotate(const Quaternion &amp;q)']]],
   ['rotateabout_15',['RotateAbout',['../classunify_1_1Frame.html#a4ce062427441b6773362ac1fdd9484b5',1,'unify::Frame']]],
