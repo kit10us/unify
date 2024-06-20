@@ -9,22 +9,35 @@
 *.userosscache
 *.sln.docstates
 
+# CMake generate files
+*.vcxproj
+*.vcxproj.user
+*.sln
+ALL_BUILD.*
+ZERO_CHECK.*
+*.cmake
+CMakeCache.txt
+**/CMakeFiles/
+
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
 # Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
+**/[Dd]ebug/
+**/[Dd]ebugPublic/
+**/[Rr]elease/
+**/[Rr]eleases/
+**/x64/
+**/x86/
 bld/
 [Bb]in/
 [Oo]bj/
-[Ll]og/
-intermediate/
-lib/
+[Ll]og/ 
+**/intermediate/
+**/lib/
+**/pdb/
+**/*.dir/
 
 # Visual Studio 2015 cache/options directory
 .vs/

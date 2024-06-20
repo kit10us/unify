@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\Angle.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\Cast.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\Color.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\ColorUnit.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\DataLock.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\FStream.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\Frame.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\FrameLite.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\FrameSet.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\FrameSetInstance.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\Frustum.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\Matrix.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\NinePoint.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\Owner.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\Parameters.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\Path.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\Plane.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\Quaternion.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\Ray.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\Stream.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\String.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\TexArea.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\TexCoords.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\TimeDelta.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\Variant.cpp">
+      <Filter>unify</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\test\DefaultAssertHandler.cpp">
+      <Filter>unify\test</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\test\DefaultEventHandlers.cpp">
+      <Filter>unify\test</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\test\DefaultOutputHandlers.cpp">
+      <Filter>unify\test</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ws\kit10us\Mercury\Unify\unify\test\Suite.cpp">
+      <Filter>unify\test</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Angle.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Any.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\BBox.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\BBox.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\BRectangle.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\BRectangle.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\BSphere.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\BSphere.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\BadCast.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Cast.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Cast.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Color.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\ColorUnit.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\DataLock.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\DefaultHandler.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Exception.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\FStream.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Flags.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Frame.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\FrameLite.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\FrameSet.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\FrameSetInstance.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Frustum.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\IExceptionHandler.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\KeyValuePair.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\LinkList.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\LinkList.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\List.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\List.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Lookup.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Lookup.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Math.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Math.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Matrix.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\NinePoint.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Optional.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Optional.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Owner.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Parameters.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Parameters.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Path.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Plane.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Quaternion.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Range.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Range.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Ray.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Rect.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Rect.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Result.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\RowColumn.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\RowColumn.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Size.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Size.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Size3.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Size3.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Stream.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\String.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\String.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\TLink.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\TLink.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\TexArea.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\TexCoords.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\TimeDelta.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Tree.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Tree.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Triangle.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Triangle.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Unify.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\V2.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\V2.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\V3.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\V3.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\V4.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\V4.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Variant.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Viewport.h">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\Viewport.inl">
+      <Filter>unify</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\test\DefaultAssertHandler.h">
+      <Filter>unify\test</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\test\DefaultEventHandlers.h">
+      <Filter>unify\test</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\test\DefaultOutputHandlers.h">
+      <Filter>unify\test</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\test\IAssertHandler.h">
+      <Filter>unify\test</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\test\IEventHandler.h">
+      <Filter>unify\test</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\test\IOutputHandler.h">
+      <Filter>unify\test</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ws\kit10us\Mercury\Unify\unify\test\Suite.h">
+      <Filter>unify\test</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="unify">
+      <UniqueIdentifier>{124EB9EB-C15F-32CD-A788-F1702E55AED1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unify\test">
+      <UniqueIdentifier>{2A3C25FD-151E-37E5-8CD5-7F31A7EC14FA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
