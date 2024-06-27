@@ -3,11 +3,16 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-# User-specific files
+# Visual Studio User-specific files
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
+
+# Mac
+.DS_Store
+unify.xcodeproj
+build/
 
 # CMake generate files
 *.vcxproj
@@ -18,7 +23,7 @@ ZERO_CHECK.*
 *.cmake
 CMakeCache.txt
 **/CMakeFiles/
-
+CMakeScripts/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
