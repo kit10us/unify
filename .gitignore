@@ -24,6 +24,7 @@ ZERO_CHECK.*
 CMakeCache.txt
 **/CMakeFiles/
 CMakeScripts/
+build/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

@@ -2,26 +2,31 @@ cmake_minimum_required (VERSION 3.29.0)
 
 option(TESTS "Include unit tests" FALSE)
 set(CMAKE_SUPPRESS_REGENERATION ON)
-	#NOT WORKING: set(CMAKE_CXX_STANDARD 17)
-	#NOT WORKING: set(CMAKE_CXX_STANDARD_REQUIRED ON)
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++17")
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHsc")
 
-message("="${CMAKE_CXX_COMPILER})
-
+if(${CMAKE_CXX_COMPILER})
+	message("CMAKE_CXX_COMPILER:" ${CMAKE_CXX_COMPILER})
+else()
+	message("CMAKE_CXX_COMPILER not set. Can impact project settings.")
+endif()
+message("")
 
 function(GenerateUnify)
 	project (unify)
 
 	set(TARGET_NAME ${PROJECT_NAME})
-	set(CMAKE_CXX_STANDARD 17)
-	set(CMAKE_CXX_STANDARD_REQUIRED ON)
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++17")
+		
+	# Specify build output directories.
 	set(PROJECT_BINARY_DIR lib/$(Platform)/$(Configuration)/)
 	set(PROJECT_LIBRARY_DIR lib/$(Platform)/$(Configuration)/$(ProjectName)/)
 	set(PROJECT_ARCHIVE_DIR lib/$(Platform)/$(Configuration)/)
 
 	if(WIN32)
+		# Enable C++17 support.
+		add_compile_options(/std:c++17)
+
+		# See https://learn.microsoft.com/en-us/cpp/build/reference/eh-exception-handling-model?view=msvc-170
+		add_compile_options(/EHsc)
+		
 		set(CMAKE_CONFIGURATION_TYPES 
 			"DebugWindows;ReleaseWindows"
 			CACHE STRING "" FORCE
@@ -32,6 +37,10 @@ function(GenerateUnify)
 			UNICODE
 			_LIB
 		)
+	elseif(APPLE)
+		# Enable C++17 support.
+		add_compile_options(-std=c++17)
+		# Older flag for Xcode: add_compile_options(-std=c++1z)
 	endif()
 
 	foreach(CONFIG ${CMAKE_CONFIGURATION_TYPES})
@@ -48,10 +57,12 @@ function(GenerateUnify)
 	
 	add_library(${PROJECT_NAME} ${UNIFY_SOURCES} ${TEST_SOURCES})
 
-	set_target_properties(${PROJECT_NAME} PROPERTIES 
-		PREFIX ""
-		SUFFIX ".lib"
-	)
+	if(WIN32)
+		set_target_properties(${PROJECT_NAME} PROPERTIES 
+			PREFIX ""
+			SUFFIX ".lib"
+		)
+	endif()
 
 	source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${UNIFY_SOURCES})
 	source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${TEST_SOURCES})
