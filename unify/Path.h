@@ -23,8 +23,10 @@
 #pragma once
 
 #include <unify/Unify.h>
+#include <filesystem>
 #include <string>
 #include <vector>
+#include <list>
 #include <iostream>
 
 namespace unify
@@ -148,6 +150,11 @@ namespace unify
 		std::wstring ToWXPath( Slash direction ) const;
 
 		/// <summary>
+		/// Returns a stl file path.
+		/// </summary>
+		std::filesystem::path ToPath() const;
+
+		/// <summary>
 		/// Delete a path.
 		/// </summary>
 		bool Delete();
@@ -156,6 +163,12 @@ namespace unify
 		/// Rename a path.
 		/// </summary>
 		bool Rename( unify::Path to );
+
+		/// <summary>
+		/// Returns a list of files in this paths directory.
+		/// If the path is not a directory, it returns the current file.
+		/// </summary>
+		std::list<Path> Files() const;
 
 	private:
 		std::string m_path;

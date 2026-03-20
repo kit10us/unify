@@ -1,0 +1,70 @@
+cmake_minimum_required (VERSION 3.30.0)
+
+function(AddTargetLibrary TARGET_NAME LIBRARY_NAME LIBRARY_DIR)
+	if(MSVC)
+		set(LIBRARY_VCXPROJ_FILE ${LIBRARY_DIR}/build/${LIBRARY_NAME}.vcxproj)
+		if(EXISTS ${LIBRARY_VCXPROJ_FILE})
+			message("Including ${LIBRARY_NAME} project")
+			include_external_msproject(${LIBRARY_NAME} ${LIBRARY_VCXPROJ_FILE})
+			add_dependencies(${TARGET_NAME} ${LIBRARY_NAME})
+		else()
+			message("Cannot find ${LIBRARY_NAME} project, skipping")
+		endif()		
+		target_include_directories(${TARGET_NAME} PUBLIC ${LIBRARY_DIR})
+		target_link_libraries(${TARGET_NAME} ${LIBRARY_NAME}.lib)
+	endif()
+endfunction()
+
+function(AddTargetLibraryOld TARGET_NAME LIBRARY_NAME LIBRARY_DIR)
+	if(MSVC)
+		set(LIBRARY_VCXPROJ_FILE ${LIBRARY_DIR}/${LIBRARY_NAME}.vcxproj)
+		if(EXISTS ${LIBRARY_VCXPROJ_FILE})
+			message("Including ${LIBRARY_NAME} project")
+			include_external_msproject(${LIBRARY_NAME} ${LIBRARY_VCXPROJ_FILE})
+			add_dependencies(${TARGET_NAME} ${LIBRARY_NAME})
+		else()
+			message("Cannot find ${LIBRARY_NAME} project, skipping")
+		endif()		
+		target_include_directories(${TARGET_NAME} PUBLIC ${LIBRARY_DIR})
+		target_link_libraries(${TARGET_NAME} ${LIBRARY_NAME}.lib)
+	endif()
+endfunction()
+
+function(AddStandardCompileOptions TARGET_NAME)
+	if(WIN32)
+		# Enable C++17 support.
+		add_compile_options(
+			/std:c++17
+			
+			# See https://learn.microsoft.com/en-us/cpp/build/reference/eh-exception-handling-model?view=msvc-170
+			/EHsc
+			
+			/Od
+			
+			/Fd${LOCAL_LIB_OUTPUT_DIRECTORY}${TARGET_NAME}.pdb
+			
+			$<$<CONFIG:Debug>:/Zi>
+			
+			#https://learn.microsoft.com/en-us/cpp/build/reference/md-mt-ld-use-run-time-library?view=msvc-170
+			$<$<CONFIG:Debug>:/MDd>			
+			$<$<CONFIG:Release>:/MD>
+		)
+		
+		add_compile_definitions(
+			_UNICODE
+			UNICODE
+			_LIB
+		)
+	elseif(APPLE)
+		# Enable C++17 support.
+		add_compile_options(-std=c++17)
+		# Older flag for Xcode: add_compile_options(-std=c++1z)
+	endif()
+endfunction()
+
+function(AddStandardCompileDefinitions TARGET_NAME)
+	target_compile_definitions(${TARGET_NAME} PRIVATE
+		$<$<CONFIG:Debug>:_DEBUG>
+		$<$<CONFIG:Release>:NDEBUG>
+	)
+endfunction()

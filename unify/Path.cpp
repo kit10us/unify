@@ -24,6 +24,7 @@
 #include <unify/String.h>
 #include <fstream>
 #include <stdio.h>
+#include <filesystem>
 
 using namespace unify;
 using namespace string;
@@ -178,8 +179,15 @@ Path & Path::Normalize()
 
 bool Path::Exists() const
 {
-	std::ifstream ifile( ToString() );
-	return ifile ? true : false;
+	if (IsDirectory())
+	{
+		return std::filesystem::is_directory(ToPath());
+	}
+	else
+	{
+		std::ifstream ifile(ToString());
+		return ifile ? true : false;
+	}
 }
 
 std::string Path::ExtensionOnly() const
@@ -187,14 +195,14 @@ std::string Path::ExtensionOnly() const
 	size_t i = m_path.find_last_of( "./\\" );
 	if ( i == std::string::npos )
 	{
-		return std::string();
+		return {};
 	}
 	else if ( m_path[ i ] == '.' )
 	{
 		return m_path.substr( i );
 	}
 
-	return std::string();
+	return {};
 }
 
 Path Path::DirectoryOnly() const
@@ -202,7 +210,7 @@ Path Path::DirectoryOnly() const
 	size_t i = m_path.find_last_of( ":/\\" );
 	if ( i == std::string::npos )
 	{
-		return Path();
+		return {};
 	}
 	else
 	{
@@ -384,6 +392,11 @@ std::wstring Path::ToWXPath( Slash direction ) const
 	return std::wstring( temp.begin(), temp.end() );
 }
 
+std::filesystem::path Path::ToPath() const
+{
+	return std::filesystem::path(ToString());
+}
+
 bool Path::Delete()
 {
 	return remove( ToString().c_str() ) ? false : true;
@@ -392,6 +405,23 @@ bool Path::Delete()
 bool Path::Rename( Path to )
 {
 	return rename( ToString().c_str(), to.ToString().c_str() ) ? false : true;
+}
+
+std::list<Path> Path::Files() const
+{
+	if (!IsDirectory())
+	{
+		return { *this };
+	}
+
+	std::list<Path> files{};
+	for (auto const& entry : std::filesystem::directory_iterator{DirectoryOnly().ToString()})
+	{
+		auto path = Path{ entry.path().string() };
+		files.push_back(path);
+	}
+
+	return files;
 }
 
 Path unify::ChangeExtension( Path path, std::string extension )
