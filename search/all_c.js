@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['left_0',['Left',['../classunify_1_1FrustumPlane.html#ac5f06533269c9ed24b38d7efa05d3f7ea7b9409c67b81e2d77d5bf77fde1667e1',1,'unify::FrustumPlane::Left'],['../structunify_1_1NinePoint.html#a47fc4f4242673361a16ab53737e38490a0925c54d20c9b211c20f7dbdd63db463',1,'unify::NinePoint::Left']]],
+  ['left_0',['Left',['../classunify_1_1FrustumPlane.html#a945eb2a3eb6d5d38b380bb4f2eeca442a7b9409c67b81e2d77d5bf77fde1667e1',1,'unify::FrustumPlane::Left'],['../structunify_1_1NinePoint.html#a47fc4f4242673361a16ab53737e38490a0925c54d20c9b211c20f7dbdd63db463',1,'unify::NinePoint::Left']]],
   ['left_1',['left',['../classunify_1_1Rect.html#ad34a7614482d6e1b9d0106ce206614c5',1,'unify::Rect']]],
   ['leftstring_2',['LeftString',['../namespaceunify_1_1string.html#a91bc56c76e63f3c76eb6c48afe8f4199',1,'unify::string']]],
   ['length_3',['Length',['../classunify_1_1V2.html#a30727de5a0408bea5a24948b216a2c20',1,'unify::V2::Length()'],['../classunify_1_1V3.html#af2f5e8cca6d7ada72c35c91356659133',1,'unify::V3::Length()'],['../classunify_1_1V4.html#a738e4e55637df805bb497ca16a9e845b',1,'unify::V4::Length()']]],
@@ -9,7 +9,7 @@ var searchData=
   ['linear_6',['linear',['../classunify_1_1Color.html#ad23887cc35c948d5bb34ce9520cf0fe5',1,'unify::Color::linear'],['../classunify_1_1ColorUnit.html#a241acb381db44b83008eb1a1537185b0',1,'unify::ColorUnit::linear'],['../classunify_1_1Matrix.html#a65acc2ed4035204e5fff0ed64e240438',1,'unify::Matrix::linear']]],
   ['linearindex_7',['LinearIndex',['../classunify_1_1Size.html#ae5d364063e0cc22613e444e7f1dc7595',1,'unify::Size::LinearIndex()'],['../classunify_1_1Size3.html#a4d5d9b5619b03cb7cf2a07cb46aaf0bd',1,'unify::Size3::LinearIndex()']]],
   ['lineartov2_8',['LinearToV2',['../classunify_1_1Size.html#aa93653c26f39a2b53748b32a9f3cfc12',1,'unify::Size']]],
-  ['linklist_9',['LinkList',['../classunify_1_1LinkList.html',1,'unify::LinkList&lt; T &gt;'],['../classunify_1_1TLink.html#a1fb37db15f64ff76492d6ca1ae27803b',1,'unify::TLink::LinkList'],['../classunify_1_1LinkList.html#a6331159b519d50257f3bca4d9269ef6a',1,'unify::LinkList::LinkList()']]],
+  ['linklist_9',['LinkList',['../classunify_1_1LinkList.html',1,'unify::LinkList&lt; T &gt;'],['../classunify_1_1TLink.html#a1fb37db15f64ff76492d6ca1ae27803b',1,'unify::TLink::LinkList()'],['../classunify_1_1LinkList.html#a6331159b519d50257f3bca4d9269ef6a',1,'unify::LinkList::LinkList()']]],
   ['linklist_2eh_10',['LinkList.h',['../LinkList_8h.html',1,'']]],
   ['linklist_2einl_11',['LinkList.inl',['../LinkList_8inl.html',1,'']]],
   ['linklist_5fforcenames_12',['LINKLIST_FORCENAMES',['../LinkList_8h.html#ac6f199b0b0c34d03dc584bf707d4d47c',1,'LinkList.h']]],

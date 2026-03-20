@@ -73,7 +73,7 @@ var searchData=
   ['string_2ecpp_70',['String.cpp',['../String_8cpp.html',1,'']]],
   ['string_2eh_71',['String.h',['../String_8h.html',1,'']]],
   ['string_2einl_72',['String.inl',['../String_8inl.html',1,'']]],
-  ['stringis_73',['StringIs',['../namespaceunify_1_1string.html#a9748ee7f5acfe91ceba26ad687e6d2d8',1,'unify::string::StringIs(std::string a, std::string is)'],['../namespaceunify_1_1string.html#a2e7cb622c48f4ab68b1c1a7417851cc6',1,'unify::string::StringIs(std::string a, std::string is, std::string Rest...)'],['../String_8inl.html#a7ce265010e13e31974a1de626c4a4a81',1,'StringIs():&#160;String.inl']]],
+  ['stringis_73',['StringIs',['../namespaceunify_1_1string.html#a9748ee7f5acfe91ceba26ad687e6d2d8',1,'unify::string::StringIs(std::string a, std::string is)'],['../namespaceunify_1_1string.html#a2e7cb622c48f4ab68b1c1a7417851cc6',1,'unify::string::StringIs(std::string a, std::string is, std::string Rest...)'],['../namespaceunify_1_1string.html#aa87b8193780c038c1f9b060de882810a',1,'unify::string::StringIs(std::string a, std::string b, std::string rest...)'],['../String_8inl.html#a7ce265010e13e31974a1de626c4a4a81',1,'StringIs():&#160;String.inl']]],
   ['stringisany_74',['StringIsAny',['../namespaceunify_1_1string.html#a8e3fe2b26d1070937b9d781ad64783ad',1,'unify::string']]],
   ['stringisfloat_75',['StringIsFloat',['../namespaceunify_1_1string.html#a2e6c0b5dca9f67db8f718130a27e9734',1,'unify::string']]],
   ['stringisint_76',['StringIsInt',['../namespaceunify_1_1string.html#a91e74acf87203afbe3bd627ca52334df',1,'unify::string']]],

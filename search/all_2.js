@@ -16,7 +16,7 @@ var searchData=
   ['bgra_13',['BGRA',['../classunify_1_1ColorUnit.html#a04614e684f8dbe9c2f028313b9931be8af620237336c6b8cf9688fe528b9c5338',1,'unify::ColorUnit::BGRA'],['../namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba5d0594e84962ef29d928c18cd5fbac51',1,'unify::BGRA']]],
   ['bitcompare_14',['BITCOMPARE',['../Flags_8h.html#ab973ce10d2c8a2c026e0f9beb2ab33c6',1,'Flags.h']]],
   ['bitstate_15',['BITSTATE',['../Flags_8h.html#a438025cdc7ecbbd9703fc836cee3d3b6',1,'Flags.h']]],
-  ['bottom_16',['Bottom',['../classunify_1_1FrustumPlane.html#ac5f06533269c9ed24b38d7efa05d3f7ea9adfb9b9f416b790821316bbc88c1455',1,'unify::FrustumPlane::Bottom'],['../structunify_1_1NinePoint.html#a47fc4f4242673361a16ab53737e38490a2c4b790dce29d3074f2130f4be30f5ff',1,'unify::NinePoint::Bottom']]],
+  ['bottom_16',['Bottom',['../classunify_1_1FrustumPlane.html#a945eb2a3eb6d5d38b380bb4f2eeca442a9adfb9b9f416b790821316bbc88c1455',1,'unify::FrustumPlane::Bottom'],['../structunify_1_1NinePoint.html#a47fc4f4242673361a16ab53737e38490a2c4b790dce29d3074f2130f4be30f5ff',1,'unify::NinePoint::Bottom']]],
   ['bottom_17',['bottom',['../classunify_1_1Rect.html#ac1b4dd2c9bee5398073c550cb723a3f2',1,'unify::Rect']]],
   ['bottomleft_18',['BottomLeft',['../structunify_1_1NinePoint.html#a47fc4f4242673361a16ab53737e38490a11d60b97be1748f1a653328a81e343aa',1,'unify::NinePoint']]],
   ['bottomright_19',['BottomRight',['../structunify_1_1NinePoint.html#a47fc4f4242673361a16ab53737e38490a9585a8d926be2b97d24735495f3bd59f',1,'unify::NinePoint']]],

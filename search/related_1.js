@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['colorargb_0',['ColorARGB',['../classunify_1_1Color.html#a2aa5eea10ec7cc1a24df2f8504ec2bae',1,'unify::Color::ColorARGB'],['../classunify_1_1Color.html#a4465b6cd5936979b382655cf51bfead5',1,'unify::Color::ColorARGB']]],
+  ['colorargb_0',['ColorARGB',['../classunify_1_1Color.html#a2aa5eea10ec7cc1a24df2f8504ec2bae',1,'unify::Color::ColorARGB(Color::Component a, Color::Component r, Color::Component g, Color::Component b)'],['../classunify_1_1Color.html#a4465b6cd5936979b382655cf51bfead5',1,'unify::Color::ColorARGB(unsigned int argb)']]],
   ['colorblack_1',['ColorBlack',['../classunify_1_1Color.html#ab9a54a7c791b7b72d8617eb9312d4613',1,'unify::Color']]],
   ['colorblue_2',['ColorBlue',['../classunify_1_1Color.html#aa75fa05d6429099c28ecd955adbc986d',1,'unify::Color']]],
   ['colorcyan_3',['ColorCyan',['../classunify_1_1Color.html#af00564d5887b24a1430436ec4af110ba',1,'unify::Color']]],
@@ -9,7 +9,7 @@ var searchData=
   ['colormagenta_6',['ColorMagenta',['../classunify_1_1Color.html#a260508c6f90552032ee5e06c55bd6cb5',1,'unify::Color']]],
   ['colorred_7',['ColorRed',['../classunify_1_1Color.html#a1851271e03287fb123a2c2ca23b33490',1,'unify::Color']]],
   ['colorrgb_8',['ColorRGB',['../classunify_1_1Color.html#af181af860cf4d32cb65d77a8d1709988',1,'unify::Color']]],
-  ['colorrgba_9',['ColorRGBA',['../classunify_1_1Color.html#ae70f8df67e9ee480c8fd85544ffe65d8',1,'unify::Color::ColorRGBA'],['../classunify_1_1Color.html#ab5d78d6830b9a50146d90631c77de91e',1,'unify::Color::ColorRGBA']]],
+  ['colorrgba_9',['ColorRGBA',['../classunify_1_1Color.html#ae70f8df67e9ee480c8fd85544ffe65d8',1,'unify::Color::ColorRGBA(Color::Component r, Color::Component g, Color::Component b, Color::Component a)'],['../classunify_1_1Color.html#ab5d78d6830b9a50146d90631c77de91e',1,'unify::Color::ColorRGBA(unsigned int rgba)']]],
   ['colorunitargb_10',['ColorUnitARGB',['../classunify_1_1ColorUnit.html#acac0d971934106aedb1f267bdfa95244',1,'unify::ColorUnit']]],
   ['colorunitblack_11',['ColorUnitBlack',['../classunify_1_1ColorUnit.html#a5ba05e71f7952ff506f37ba4d3ee198e',1,'unify::ColorUnit']]],
   ['colorunitblue_12',['ColorUnitBlue',['../classunify_1_1ColorUnit.html#a5d8dd77330a29e3b1d902ff74bde02d1',1,'unify::ColorUnit']]],

@@ -4,5 +4,5 @@ var searchData=
   ['center_1',['center',['../classunify_1_1BSphere.html#a9fc6217c6b7fae6d6009060c134f2455',1,'unify::BSphere']]],
   ['clipvolume_2',['clipVolume',['../classunify_1_1Viewport.html#a262bbe69589fac6227318d549768e8f7',1,'unify::Viewport']]],
   ['column_3',['column',['../classunify_1_1RowColumn.html#a17e3be1bab14efd4f8eef78a608ff541',1,'unify::RowColumn']]],
-  ['component_4',['component',['../classunify_1_1Color.html#a1c237b8e419a8cd8db3c3a0c4d95aab9',1,'unify::Color::component'],['../classunify_1_1ColorUnit.html#aa234525c8edd4d86554df01f3b54a8ec',1,'unify::ColorUnit::component']]]
+  ['component_4',['component',['../classunify_1_1Color.html#ad552b2027783e3ed7b8ee3d6c57d8f65',1,'unify::Color::component'],['../classunify_1_1ColorUnit.html#a08af336ca528e6062706ee963898bf75',1,'unify::ColorUnit::component']]]
 ];

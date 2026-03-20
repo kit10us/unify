@@ -44,7 +44,7 @@ var searchData=
   ['splitwhitespace_41',['SplitWhitespace',['../namespaceunify_1_1string.html#a70309d9b196fbeff13589bd5f62ad63c',1,'unify::string']]],
   ['stream_42',['Stream',['../classunify_1_1Stream.html#a8c3f05bd00361ec92627fa41f330a39b',1,'unify::Stream']]],
   ['stride_43',['Stride',['../classunify_1_1DataLock.html#aff89b14fca9b1b7763a9165289a752fd',1,'unify::DataLock']]],
-  ['stringis_44',['StringIs',['../namespaceunify_1_1string.html#a9748ee7f5acfe91ceba26ad687e6d2d8',1,'unify::string::StringIs(std::string a, std::string is)'],['../namespaceunify_1_1string.html#a2e7cb622c48f4ab68b1c1a7417851cc6',1,'unify::string::StringIs(std::string a, std::string is, std::string Rest...)'],['../String_8inl.html#a7ce265010e13e31974a1de626c4a4a81',1,'StringIs():&#160;String.inl']]],
+  ['stringis_44',['StringIs',['../namespaceunify_1_1string.html#a9748ee7f5acfe91ceba26ad687e6d2d8',1,'unify::string::StringIs(std::string a, std::string is)'],['../namespaceunify_1_1string.html#a2e7cb622c48f4ab68b1c1a7417851cc6',1,'unify::string::StringIs(std::string a, std::string is, std::string Rest...)'],['../namespaceunify_1_1string.html#aa87b8193780c038c1f9b060de882810a',1,'unify::string::StringIs(std::string a, std::string b, std::string rest...)'],['../String_8inl.html#a7ce265010e13e31974a1de626c4a4a81',1,'StringIs():&#160;String.inl']]],
   ['stringisany_45',['StringIsAny',['../namespaceunify_1_1string.html#a8e3fe2b26d1070937b9d781ad64783ad',1,'unify::string']]],
   ['stringisfloat_46',['StringIsFloat',['../namespaceunify_1_1string.html#a2e6c0b5dca9f67db8f718130a27e9734',1,'unify::string']]],
   ['stringisint_47',['StringIsInt',['../namespaceunify_1_1string.html#a91e74acf87203afbe3bd627ca52334df',1,'unify::string']]],
