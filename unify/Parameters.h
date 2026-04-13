@@ -59,7 +59,7 @@ namespace unify
     class Parameters
     {
     public:
-        Parameters();
+		Parameters() = default;
  
         template< typename T >
         Parameters( std::string name, T value );
@@ -115,7 +115,7 @@ namespace unify
         Parameters operator+( Parameters & parameters );
 
     private:
-        typedef std::map< std::string, Parameter, string::CaseInsensitiveLessThanEqualTest> ParameterMap;
+        typedef std::map< std::string, Parameter, String::CaseInsensitiveLessThanEqualTest> ParameterMap;
         ParameterMap m_parameters;
         mutable std::set< std::string> m_auditItemsUsed; // This helps reduce typos by ensuring every explicitly get and set value are paired. It is naturally ignored for defaults.
     };
@@ -127,6 +127,6 @@ namespace unify
 	template<> unsigned int Parameters::Cast< unsigned int >( std::string name ) const;
 	template<> float Parameters::Cast< float >( std::string name ) const;
 	template<> double Parameters::Cast< double >( std::string name ) const;
-
-	#include <unify/Parameters.inl>
 }
+
+#include <unify/Parameters.inl>

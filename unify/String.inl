@@ -20,86 +20,518 @@
  */
 
 
-template< typename foo, typename ... bar >
-bool StringIs( std::string a, std::string b, std::string rest... )
+namespace unify::String
 {
-	if (StringIs(a, b ))
+	template< typename foo, typename ... bar >
+	bool StringIs(std::string a, std::string b, std::string rest...)
 	{
-		return true;
-	}
-	return string::StringIs( a, rest );
-}
-
-template< typename T >
-std::vector< T > Split( std::string sourceString, const char delimitor )
-{
-	std::vector< T > destination;
-	std::stringstream ss( sourceString );
-	std::string item;
-	while( std::getline( ss, item, delimitor ) ) 
-	{
-		destination.push_back( Cast< T >( item ) );
-	}
-	return destination;
-}
-
-template< typename T >
-std::vector< T > Split( std::string sourceString, const std::vector< char > delimitors, bool includeEmpties )
-{
-	std::vector< T > destination;
-
-	size_t start = 0;
-	size_t end = 0;
-	for( end = 0; end < sourceString.size(); ++end )
-	{
-		// auto const itr = std::find_if(delimitors.cbegin(), delimitors.cend(), sourceString.at(end));
-		bool found{};
-		for (const auto c : delimitors)
+		if (StringIs(a, b))
 		{
-			if (c == sourceString[end])
+			return true;
+		}
+		return String::StringIs(a, rest);
+	}
+
+	template< typename T >
+	std::vector< T > Split(std::string sourceString, const char delimitor)
+	{
+		std::vector< T > destination;
+		std::stringstream ss(sourceString);
+		std::string item;
+		while (std::getline(ss, item, delimitor))
+		{
+			destination.push_back(Cast< T >(item));
+		}
+		return destination;
+	}
+
+	template< typename T >
+	std::vector< T > Split(std::string sourceString, const std::vector< char > delimitors, bool includeEmpties)
+	{
+		std::vector< T > destination;
+
+		size_t start = 0;
+		size_t end = 0;
+		for (end = 0; end < sourceString.size(); ++end)
+		{
+			// auto const itr = std::find_if(delimitors.cbegin(), delimitors.cend(), sourceString.at(end));
+			bool found{};
+			for (const auto c : delimitors)
 			{
-				found = true;
+				if (c == sourceString[end])
+				{
+					found = true;
+				}
+			}
+
+			if (found)
+			{
+				if (start == end)
+				{
+					if (includeEmpties)
+					{
+						destination.push_back(T());
+					}
+				}
+				else
+				{
+					destination.push_back(Cast< T >(sourceString.substr(start, end - start)));
+				}
+				start = end + 1;
 			}
 		}
 
-		if ( found )
+		if (start == end)
 		{
-			if ( start == end )
+			if (includeEmpties)
 			{
-				if ( includeEmpties )
-				{
-					destination.push_back( T() );
-				}
+				destination.push_back(T());
+			}
+		}
+		else
+		{
+			destination.push_back(Cast< T >(sourceString.substr(start, end - start)));
+		}
+
+		return destination;
+	}
+
+	template< typename T >
+	std::vector< T > SplitOnWhitespace(std::string sourceString)
+	{
+		std::vector< char > delimitors;
+		delimitors.push_back(' ');
+		delimitors.push_back('\t');
+		delimitors.push_back('\n');
+		return String::Split< T >(sourceString, delimitors);
+	}
+}
+
+namespace unify::String
+{
+	// IsAlpha (is a letter)
+	inline
+	bool IsAlpha(const char ch)
+	{
+		if (ch >= 'a' && ch <= 'z') return true;
+		if (ch >= 'A' && ch <= 'Z') return true;
+		return false;
+	}
+
+	// IsNumeric (is a number)
+	inline
+	bool IsNumeric(const char ch)
+	{
+		if (ch >= '0' && ch <= '9') return true;
+		return false;
+	}
+
+	inline
+	bool StringIs(std::string a, std::string b)
+	{
+		if (a.length() != b.length())
+		{
+			return false;
+		}
+
+		int length = (int)a.length();
+		for (int i = 0; i < length; i++)
+		{
+			char aa = a[i];
+			char bb = b[i];
+
+			if (aa >= 'A' && aa <= 'Z')
+			{
+				aa -= 'A';
+				aa += 'a';
+			}
+
+			if (bb >= 'A' && bb <= 'Z')
+			{
+				bb -= 'A';
+				bb += 'a';
+			}
+
+			if (aa != bb)
+			{
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	inline
+	bool StringIsAny(std::string a, const std::list< std::string >& list)
+	{
+		for (const auto& b : list)
+		{
+			if (StringIs(a, b))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	inline
+	bool BeginsWith(std::string source, std::string beginsWith)
+	{
+		if (source.length() < beginsWith.length()) return false;
+		return StringIs(source.substr(0, beginsWith.length()), beginsWith);
+	}
+
+	inline
+	bool EndsWith(std::string source, std::string endsWith)
+	{
+		if (source.length() < endsWith.length()) return false;
+		return StringIs(source.substr(source.length() - endsWith.length()), endsWith);
+	}
+
+	inline
+	bool StringIsInt(std::string sOne)
+	{
+		const char* pChar = sOne.c_str();
+		if (*pChar == '-') pChar++;
+		while (*pChar)
+		{
+			if (*pChar < '0' || *pChar > '9') return 0;
+			pChar++;
+		}
+		return 1;
+	}
+
+	inline
+	bool StringIsFloat(std::string sOne)
+	{
+		const char* pChar = sOne.c_str();
+		if (*pChar == '-') pChar++;
+		while (*pChar)
+		{
+			if ((*pChar < '0' || *pChar > '9') && *pChar != '.')
+			{
+				if ((*pChar == 'f' || *pChar == 'F') && pChar[1] == 0) return 1;
+				return 0;
+			}
+			pChar++;
+		}
+		return 1;
+	}
+
+	inline
+	std::string TrimLeft(std::string stringIn, char chr)
+	{
+		if (stringIn.empty()) return stringIn;
+		unsigned int uCount = 0;
+		for (uCount = 0; uCount < stringIn.length() && stringIn[uCount] == chr; uCount++);
+		return stringIn.erase(0, uCount);
+	}
+
+	inline
+	std::string TrimRight(std::string stringIn, char chr)
+	{
+		if (stringIn.empty()) return stringIn;
+		unsigned int uCount = 0;
+		for (uCount = 0; uCount >= 0 && stringIn[stringIn.length() - (uCount + 1)] == chr; uCount++);
+		return stringIn.erase(stringIn.length() - uCount, stringIn.length() - 1);
+	}
+
+	inline
+	std::string Trim(std::string stringIn, char chr)
+	{
+		return TrimRight(TrimLeft(stringIn, chr), chr);
+	}
+
+	inline
+	std::string TrimFrom(std::string stringIn, std::string from)
+	{
+		size_t i = stringIn.find(from);
+		if (i == std::string::npos)
+		{
+			return stringIn;
+		}
+		else
+		{
+			return stringIn.substr(0, stringIn.length() - i);
+		}
+	}
+
+	inline
+	std::string TrimTo(std::string stringIn, const char to)
+	{
+		size_t begins = 0;
+		size_t i = 0;
+		while ((i = stringIn.find(to)) != std::string::npos)
+		{
+			begins = i;
+		}
+		return stringIn.substr(begins);
+	}
+
+	// Returns a portion of a string (uLength)...
+	inline
+	std::string RightString(std::string stringIn, std::string::size_type uLength)
+	{
+		if (stringIn.length() == 0) return std::string();
+		if (uLength > stringIn.length()) uLength = (unsigned int)stringIn.length();
+		return stringIn.substr(stringIn.length() - uLength, uLength);
+	}
+
+	// Returns a portion of a string (uLength) from it's beginning...
+	inline
+	std::string LeftString(std::string stringIn, unsigned int uLength)
+	{
+		return stringIn.substr(0, uLength);
+	}
+
+	// Returns a string minus a portion from the front/left side of the string...
+	// new size = size - uLessLength
+	inline
+	std::string StringMinusLeft(std::string sStringIn, unsigned int uLessLength)
+	{
+		if (uLessLength >= sStringIn.length()) return std::string();
+		return sStringIn.substr(uLessLength, (unsigned int)sStringIn.length() - uLessLength);
+	}
+
+	// Returns a string minus a portion from the end/right side of the string...
+	inline
+	std::string StringMinusRight(std::string sStringIn, unsigned int uLessLength)
+	{
+		if (uLessLength >= sStringIn.length()) return std::string();
+		return sStringIn.substr(0, (unsigned int)sStringIn.length() - uLessLength);
+	}
+
+	inline
+	std::string StringReplace(const std::string in, std::string find, std::string replace)
+	{
+		if (find.length() == 0)
+		{
+			return in;
+		}
+
+		std::string out;
+
+		size_t left = 0; // Our search starting index.
+		size_t right = 0; // Our right, found/not found, end index.
+		do
+		{
+			right = in.find(find, left);
+
+			// Break out of loop as soon as we can't find any more instances of the string.
+			if (right == std::string::npos)
+			{
+				// Append the rest of the left over string.
+				out += in.substr(left, std::string::npos);
+				break;
+			}
+
+			// Replace instance of found value with replacement value.
+			out += in.substr(left, right - left) + replace;
+			left = right + find.length();
+		} while (right != std::string::npos); // Just an arbitrary catch all to ensure we don't loop infinitly, even if just to be clear.
+		return out;
+	}
+
+	inline
+	std::string CleanWhitespace(std::string in)
+	{
+		if (in.empty()) return std::string();
+
+		// Find the first and last non-whitespace character...
+		size_t left = 0, right = in.length();
+		for (; left < right && (in[left] == ' ' || in[left] == '\t' || in[left] == '\n'); ++left);
+		for (; left < (right - 1) && (in[right - 1] == ' ' || in[right - 1] == '\t' || in[right - 1] == '\n'); --right);
+
+		if (left == right) return std::string();
+
+		std::string out{};
+		bool skipSpace = false;
+		for (size_t i = left; i < right; ++i)
+		{
+			if (in[i] == ' ' || in[i] == '\t' || in[i] == '\n')
+			{
+				if (skipSpace) continue;
+				out.push_back(' ');
+				skipSpace = true;
 			}
 			else
 			{
-				destination.push_back( Cast< T >( sourceString.substr( start, end - start ) ) );
+				skipSpace = false;
+				out.push_back(in[i]);
 			}
-			start = end + 1;
 		}
+
+		return out;
 	}
 
-	if ( start == end )
+	inline
+	std::string ToLower(std::string in)
 	{
-		if ( includeEmpties )
+		std::string out(in);
+		for (std::size_t i = 0; i < in.length(); ++i)
 		{
-			destination.push_back( T() );
+			char c = in[i];
+			out[i] = (c >= 'A' && c <= 'Z') ? ('a' + (c - 'A')) : c;
 		}
+		return out;
 	}
-	else
+
+	inline
+	std::string ToUpper(std::string in)
 	{
-		destination.push_back( Cast< T >( sourceString.substr( start, end - start ) ) );
+		std::string out(in);
+		for (std::size_t i = 0; i < in.length(); ++i)
+		{
+			char c = in[i];
+			out[i] = (c >= 'a' && c <= 'z') ? ('A' + (c - 'a')) : c;
+		}
+		return out;
 	}
 
-	return destination;
-}
+	inline
+	std::string ListPart(std::string sString, std::vector< char > seperators, int iPartIndex)
+	{
+		if (sString == "") return "";
 
-template< typename T >
-std::vector< T > SplitOnWhitespace( std::string sourceString )
-{
-	std::vector< char > delimitors;
-	delimitors.push_back( ' ' );
-	delimitors.push_back( '\t' );
-	delimitors.push_back( '\n' );
-	return string::Split< T >( sourceString, delimitors );
+		auto isSeperator = [seperators](char c)
+			{
+				auto itr = seperators.begin(), end = seperators.end();
+				for (; itr != end && c != *itr; ++itr);
+				return itr != end;
+			};
+
+		int iInBrackets = 0;	// How deep in brackets we are
+		bool bInQuote = false;	// In quotations
+		int pc = 0;				//Part count ( part we are on)
+		int iStart = 0, iLenToCopy = 0;
+
+		for (int c = 0; c < (int)sString.length(); c++)
+		{
+			//Brackets... <...>
+			//if (!bInQuote && (szString[c] == '<' || szString[c] == '[' || szString[c] == '('))	iInBrackets++;
+			//if (!bInQuote && (szString[c] == '>' || szString[c] == ']' || szString[c] == ')')) iInBrackets--;
+			if (sString[c] == '\"') bInQuote = !bInQuote;
+
+			// Check for the seperator...
+			if (!bInQuote && !iInBrackets && isSeperator(sString[c])) {
+				pc++;
+
+				if (pc == iPartIndex) {
+					iStart = c + 1;	// Set our starting poit to the next character
+				}
+				if (pc > iPartIndex) break;
+			}
+			else if (pc == iPartIndex) iLenToCopy++;
+		}
+
+		// Check if our end has been set (if not, we never found our string
+		if (iLenToCopy == 0) return "";
+
+		return sString.substr(iStart, iLenToCopy);
+	}
+
+	inline
+	unsigned int ListPartCount(std::string sString, std::vector< char > seperators)
+	{
+		if (sString == "") return 0;
+
+		auto isSeperator = [seperators](char c)
+			{
+				auto itr = seperators.begin(), end = seperators.end();
+				for (; itr != end && c != *itr; ++itr)
+				{
+					// Do nothing here.
+				}
+				return itr != end;
+			};
+
+		int iInBrackets = 0;
+		bool bInQuote = false; //in quotations
+		unsigned int pc = 0; //Part count
+		for (int c = 0; c < (int)sString.length(); c++)
+		{
+
+			// Brackets... <...>
+			if (sString[c] == '<') {
+				iInBrackets++;
+				continue;
+			}
+			if (sString[c] == '>') {
+				iInBrackets--;
+				continue;
+			}
+			if (iInBrackets != 0) continue;
+
+			// Quotes...
+			if (sString[c] == '\"')
+			{
+				bInQuote = !bInQuote;
+				continue;
+			}
+
+			if (bInQuote) continue;
+
+			if (isSeperator(sString[c])) pc++;
+		}
+
+		return pc + 1;
+	}
+
+	struct nocase_compare
+	{
+		bool operator()(const unsigned char& c1, const unsigned char& c2) const
+		{
+			return tolower(c1) < tolower(c2);
+		}
+	};
+
+	inline
+	bool CaseInsensitiveLessThanEqualTest::operator() (const std::string& stringA, const std::string& stringB) const
+	{
+		return std::lexicographical_compare(stringA.begin(), stringA.end(), stringB.begin(), stringB.end(), nocase_compare());
+	}
+
+	inline
+	bool CaseInsensitiveLessThanEqualTestCharPtr::operator() (char* stringA, char* stringB) const
+	{
+		auto LowercaseChar = [](char a) -> char
+			{
+				return a >= 'A' && a <= 'Z' ? (a - 'A' + 'a') : a;
+			};
+
+		if (stringA == nullptr || stringA[0] == '0')
+		{
+			return true;
+		}
+
+		if (stringB == nullptr || stringB[0] == '0')
+		{
+			return false;
+		}
+
+		char* itrA = stringA;
+		char* itrB = stringB;
+		for (; *itrA != '0' && *itrB != '0'; itrA++, itrB++)
+		{
+			char a = LowercaseChar(*itrA);
+			char b = LowercaseChar(*itrB);
+			if (a == b)
+			{
+				continue;
+			}
+			return a < b;
+		}
+
+		return *itrA == '0';
+	}
+
+	inline
+	std::vector< char > SplitWhitespace()
+	{
+		std::vector< char > splitDelimitors;
+		splitDelimitors.push_back(' ');
+		splitDelimitors.push_back('\n');
+		splitDelimitors.push_back('\t');
+		return splitDelimitors;
+	}
 }

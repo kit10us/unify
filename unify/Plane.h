@@ -44,3 +44,5 @@ namespace unify
 		float a, b, c, d;
 	};
 }
+
+#include <unify/Plane.inl>

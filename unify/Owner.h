@@ -67,3 +67,5 @@ namespace unify
 		mutable std::list< Owner::weak_ptr > m_owners;
 	};
 }
+
+#include <unify/Owner.inl>

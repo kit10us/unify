@@ -27,8 +27,6 @@
 
 namespace unify
 {
-	class Color;
-
 	/// <summary>
 	// Definition of colors whose components are normalized (0.0 to 1.0) at common ranges.
 	/// </summary>
@@ -41,6 +39,8 @@ namespace unify
 			BGRA,
 			ABGR,
 		};
+
+		using Component = float;
 
 		// Named constructors...
 		friend ColorUnit ColorUnitRGBA( float r, float g, float b, float a );
@@ -72,9 +72,6 @@ namespace unify
 
 		void SetRGBA( float r, float g, float b, float a );
 
-		// CONVERSIONS
-		operator Color();
-
 		// Combines the various components into a single scalar using addition: result = a + r + g + b;
 		float SumComponents();
 
@@ -98,25 +95,40 @@ namespace unify
 		bool operator == ( const ColorUnit & col ) const;
 		bool operator != ( const ColorUnit & col ) const;
 
+		void Set(const float col[])
+		{
+			linear[0] = col[0];
+			linear[1] = col[1];
+			linear[2] = col[2];
+			linear[3] = col[3];
+		}
+
 		/// <summary>
 		/// Set the red component.
-		/// </summary
+		/// </summary>
 		void SetRed( float r );
 
 		/// <summary>
 		/// Set the green component.
-		/// </summary
+		/// </summary>
 		void SetGreen( float g );
 
 		/// <summary>
 		///Set the blue component.
-		/// </summary
+		/// </summary>
 		void SetBlue( float b );
 
 		/// <summary>
 		/// Set the alpha component.
-		/// </summary
+		/// </summary>
 		void SetAlpha( float a );
+
+		/// <summary>
+		/// Normalize color so that it scales to fit its max component to 1.0.
+		/// </summary>
+		/// <returns></returns>
+		inline
+		ColorUnit Normalize() const;
 
 		std::string ToString( Order order = RGBA ) const;
 	};
@@ -136,3 +148,5 @@ namespace unify
 	ColorUnit ColorUnitZero();
 	ColorUnit ColorUnitLerp( ColorUnit l, ColorUnit r, float ratio );
 }
+
+#include <unify/ColorUnit.inl>

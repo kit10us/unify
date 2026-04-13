@@ -23,11 +23,13 @@
 #pragma once
 
 #include <unify/Unify.h>
+#include <unify/String.h>
 #include <filesystem>
 #include <string>
 #include <vector>
 #include <list>
 #include <iostream>
+#include <fstream>
 
 namespace unify
 {
@@ -40,7 +42,8 @@ namespace unify
 	class Path	
 	{
 	public:
-		static const std::string XPathPrefix;
+		inline
+		static const std::string Path::XPathPrefix{ "file:///" };
 
 		/// <summary>
 		/// Returns true if the Path is a file.
@@ -181,3 +184,5 @@ namespace unify
 }
 
 std::ostream & operator<<( std::ostream & os, const unify::Path & path );
+
+#include <unify/Path.inl>

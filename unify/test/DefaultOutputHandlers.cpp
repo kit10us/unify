@@ -27,6 +27,8 @@
 #include <debugapi.h>
 #endif // _WIN32
 
+#include <iostream>
+
 using namespace unify;
 using namespace test;
 

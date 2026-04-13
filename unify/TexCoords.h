@@ -23,6 +23,7 @@
 #pragma once
 
 #include <unify/Unify.h>
+#include <unify/Cast.h>
 #include <string>
 
 namespace unify
@@ -62,7 +63,14 @@ namespace unify
 
         float & operator[]( size_t i );
         const float & operator[]( size_t i ) const;
-
-        std::string ToString() const;
 	};
+
+	template<>
+	inline
+	std::string Cast(const TexCoords coords)
+	{
+		return "{" + Cast< std::string >(coords.u) + ", " + Cast< std::string >(coords.v) + "}";
+	}
 }
+
+#include <unify/TexCoords.inl>

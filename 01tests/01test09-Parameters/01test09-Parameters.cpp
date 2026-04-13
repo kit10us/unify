@@ -170,7 +170,7 @@ int main( int argc, char ** argv )
 			suite.Assert( "Cast to double from double",			parameters.Cast< double >( "double" ) == 70.0 );
 
 			parameters.Set( { "new parameter", std::string("new value") } );
-			suite.Assert( "Parameter created via 'Set(Parameter)'", unify::string::StringIs( parameters.Get<std::string>( "new parameter" ), "new value" ) );
+			suite.Assert( "Parameter created via 'Set(Parameter)'", unify::String::StringIs( parameters.Get<std::string>( "new parameter" ), "new value" ) );
 		}
 		suite.EndCase();
 

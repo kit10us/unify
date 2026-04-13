@@ -255,7 +255,7 @@ T * LinkList< T >::Find( std::string sName )
 	TLink< T > * pLink = m_pFirst;
 	while( pLink )
 	{
-		if( unify::string::StringIs( sName, pLink->Name() ) ) return pLink->Item();
+		if( unify::String::StringIs( sName, pLink->Name() ) ) return pLink->Item();
 		pLink = pLink->Next();
 	}
 	
@@ -268,7 +268,7 @@ T * LinkList< T >::Find( Query< T > * pQuery, std::string sName )
 	pQuery->m_pCurrent = m_pFirst;
 	while( pQuery->m_pCurrent )
 	{
-		if( unify::string::StringIs( sName, pQuery->Name() ) ) return pQuery->m_pCurrent->m_pItem;
+		if( unify::String::StringIs( sName, pQuery->Name() ) ) return pQuery->m_pCurrent->m_pItem;
 		pQuery->m_pCurrent = pQuery->m_pCurrent->m_pNext;
 	}
 	

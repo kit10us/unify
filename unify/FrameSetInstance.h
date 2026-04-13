@@ -106,3 +106,5 @@ namespace unify
 		bool m_dirty;
 	};
 }
+
+#include <unify/FrameSetInstance.inl>

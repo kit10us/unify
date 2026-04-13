@@ -25,6 +25,7 @@
 #include <unify/Unify.h>
 #include <unify/Size.h>
 #include <unify/TexCoords.h>
+#include <unify/String.h>
 
 namespace unify
 {
@@ -34,9 +35,9 @@ namespace unify
 		TexCoords ul;
 		TexCoords dr;
 
-		TexArea();
+		TexArea() = default;
 		TexArea( float ul_u, float ul_v, float dr_u, float dr_v );
-		TexArea( const TexCoords&, const TexCoords& );
+		TexArea( const TexCoords ul, const TexCoords dr);
         explicit TexArea( const std::string text );
 
 		bool operator==( const TexArea & area ) const;
@@ -53,12 +54,16 @@ namespace unify
 		TexCoords DR() const;
 
 		bool IsZero() const;
-
-		std::string ToString() const;
 	};
 
 	TexArea TexAreaOne();
 	TexArea TexAreaZero();
 	TexArea TexAreaFull();
 	TexArea TexAreaDouble();
+
+	template<>
+	inline
+	std::string Cast  (const TexArea in);
 }
+
+#include <unify/TexArea.inl>

@@ -43,3 +43,5 @@ namespace unify
 		Ray( const V3< float > & originIn, const V3< float > & directionIn );
 	};
 }
+
+#include <unify/Ray.inl>

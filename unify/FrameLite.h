@@ -86,3 +86,5 @@ namespace unify
 		unify::Matrix m_mat;
 	};
 }
+
+#include <unify/FrameLite.inl>

@@ -85,3 +85,4 @@ namespace unify
 	};
 }
 
+#include <unify/Stream.inl>

@@ -28,164 +28,157 @@
 #include <vector>
 #include <list>
 
-namespace unify
+namespace unify::String
 {
 	/// <summary>
-	/// Utilities to help with string and string related functionality.
+	/// Test if a char is an alphabet character.
 	/// </summary>
-	namespace string
-	{
-		/// <summary>
-		/// Test if a char is an alphabet character.
-		/// </summary>
-		bool IsAlpha( const char ch );
+	bool IsAlpha( const char ch );
 
-		/// <summary>
-		/// Test if a char is a number.
-		/// </summary>
-		bool IsNumeric( const char ch );
+	/// <summary>
+	/// Test if a char is a number.
+	/// </summary>
+	bool IsNumeric( const char ch );
 
-		/// <summary>
-		/// Compare two strings for equvilancy, ignoring case.
-		/// </summary>
-		bool StringIs( std::string a, std::string is );
+	/// <summary>
+	/// Compare two strings for equvilancy, ignoring case.
+	/// </summary>
+	bool StringIs( std::string a, std::string is );
 			
-		/// <summary>
-		/// Compare mutliple strings for equvilancy, ignoring case.
-		/// </summary>
-		template< typename foo = std::string, typename... bar >
-		bool StringIs( std::string a, std::string is, std::string Rest... );
+	/// <summary>
+	/// Compare mutliple strings for equvilancy, ignoring case.
+	/// </summary>
+	template< typename foo = std::string, typename... bar >
+	bool StringIs( std::string a, std::string is, std::string Rest... );
 
-		/// <summary>
-		/// Compare a string for equvilancy with any of a list of strings, ignoring case.
-		/// </summary>
-		bool StringIsAny( std::string a, const std::list< std::string > & list );
+	/// <summary>
+	/// Compare a string for equvilancy with any of a list of strings, ignoring case.
+	/// </summary>
+	bool StringIsAny( std::string a, const std::list< std::string > & list );
 
-		/// <summary>
-		/// Returns true if source begins with the string beginsWith.
-		/// </summary>
-		bool BeginsWith( std::string source, std::string beginsWith );
+	/// <summary>
+	/// Returns true if source begins with the string beginsWith.
+	/// </summary>
+	bool BeginsWith( std::string source, std::string beginsWith );
 
-		/// <summary>
-		/// Returns true if the source ends with the string endsWith.
-		/// </summary>
-		bool EndsWith( std::string source, std::string endsWith );
+	/// <summary>
+	/// Returns true if the source ends with the string endsWith.
+	/// </summary>
+	bool EndsWith( std::string source, std::string endsWith );
 	
-		bool StringIsInt( std::string sOne );
-		bool StringIsFloat( std::string sOne );
+	bool StringIsInt( std::string sOne );
+	bool StringIsFloat( std::string sOne );
 
-		/// <summary>
-		/// Removes all instances of character 'chr' from the left of 'stringIn'.
-		/// </summary>
-		std::string TrimLeft( std::string stringIn, const char chr );
+	/// <summary>
+	/// Removes all instances of character 'chr' from the left of 'stringIn'.
+	/// </summary>
+	std::string TrimLeft( std::string stringIn, const char chr );
 
-		/// <summary>
-		/// Removes all instances of character 'chr' from the right of 'stringIn'.
-		/// </summary>
-		std::string TrimRight( std::string stringIn, const char chr );
+	/// <summary>
+	/// Removes all instances of character 'chr' from the right of 'stringIn'.
+	/// </summary>
+	std::string TrimRight( std::string stringIn, const char chr );
 
-		/// <summary>
-		/// Performs both TrimLeft and TrimRight...
-		/// </summary>
-		std::string Trim( std::string stringIn, const char chr = ' ' );
+	/// <summary>
+	/// Performs both TrimLeft and TrimRight...
+	/// </summary>
+	std::string Trim( std::string stringIn, const char chr = ' ' );
 
-		/// <summary>
-		/// Retruns the trimmed string from a specific string, exclusive.
-		/// </summary>
-		std::string TrimFrom( std::string stringIn, std::string to );
+	/// <summary>
+	/// Retruns the trimmed string from a specific string, exclusive.
+	/// </summary>
+	std::string TrimFrom( std::string stringIn, std::string to );
 
-		/// <summary>
-		/// Returns the trimmed string to a specific string, exclusive.
-		/// </summary>
-		std::string TrimTo( std::string stringIn, const char from );
+	/// <summary>
+	/// Returns the trimmed string to a specific string, exclusive.
+	/// </summary>
+	std::string TrimTo( std::string stringIn, const char from );
 
-		/// <summary>
-		/// Returns the right portion of a string.
-		/// </summary>
-		/// <returns></returns>
-		std::string RightString( std::string stringIn, std::string::size_type uLength );
+	/// <summary>
+	/// Returns the right portion of a string.
+	/// </summary>
+	/// <returns></returns>
+	std::string RightString( std::string stringIn, std::string::size_type uLength );
 
-		/// <summary>
-		/// Returns the left portion of a string.
-		/// </summary>
-		std::string LeftString( std::string stringIn, unsigned int uLength );
+	/// <summary>
+	/// Returns the left portion of a string.
+	/// </summary>
+	std::string LeftString( std::string stringIn, unsigned int uLength );
 
-		/// <summary>
-		/// Returns a string without a left portiong of the string.
-		/// </summary>
-		std::string StringMinusLeft( std::string sStringIn, unsigned int uLessLength );
+	/// <summary>
+	/// Returns a string without a left portiong of the string.
+	/// </summary>
+	std::string StringMinusLeft( std::string sStringIn, unsigned int uLessLength );
 
-		/// <summary>
-		/// Returns a string without a right portion of the string.
-		/// </summary>
-		std::string StringMinusRight( std::string sStringIn, unsigned int uLessLength );
+	/// <summary>
+	/// Returns a string without a right portion of the string.
+	/// </summary>
+	std::string StringMinusRight( std::string sStringIn, unsigned int uLessLength );
 
-		/// <summary>
-		/// Replace every instance of "find" within the "in" string with "replace".
-		/// </summary>
-		std::string StringReplace( const std::string in, std::string find, std::string replace );
+	/// <summary>
+	/// Replace every instance of "find" within the "in" string with "replace".
+	/// </summary>
+	std::string StringReplace( const std::string in, std::string find, std::string replace );
 	
-		/// <summary>
-		/// Returns a string where all sets (single or in a row) cariage returns, tabs or spaces are replaced with one space.
-		/// </summary>
-		/// <example>
-		/// \\ Doesn't reduce ANY single spaces:
-		/// "\n\n\n  \t\tHello,  \tWorld\n!     \t\n "  >>  "Hello, World!" \\ note: no leading or training spaces either
-		/// </example>
-		std::string CleanWhitespace( std::string sIn );
+	/// <summary>
+	/// Returns a string where all sets (single or in a row) cariage returns, tabs or spaces are replaced with one space.
+	/// </summary>
+	/// <example>
+	/// \\ Doesn't reduce ANY single spaces:
+	/// "\n\n\n  \t\tHello,  \tWorld\n!     \t\n "  >>  "Hello, World!" \\ note: no leading or training spaces either
+	/// </example>
+	std::string CleanWhitespace( std::string sIn );
 
-		std::string ToLower( std::string in );
-		std::string ToUpper( std::string in );
+	std::string ToLower( std::string in );
+	std::string ToUpper( std::string in );
 	
-		/// <summary>
-		/// Considers a string as a part of a segmented list by a character, returns that part of the list...
-		/// Returns ASAP.
-		/// The first iPartIndex is 0.
-		/// </summary>
-		std::string ListPart( std::string sString, std::vector< char > seperators, int iPartIndex );	
-		unsigned int ListPartCount(std::string sString, std::vector< char > seperators );
+	/// <summary>
+	/// Considers a string as a part of a segmented list by a character, returns that part of the list...
+	/// Returns ASAP.
+	/// The first iPartIndex is 0.
+	/// </summary>
+	std::string ListPart( std::string sString, std::vector< char > seperators, int iPartIndex );	
+	unsigned int ListPartCount(std::string sString, std::vector< char > seperators );
 
-		/// <summary>
-		/// Binary functor for case insensitive string compares. Useful for maps.
-		/// </summary>
-		class CaseInsensitiveLessThanEqualTest
-		{
-		public:
-			bool operator() (const std::string & stringA, const std::string & stringB) const;
-		};  
+	/// <summary>
+	/// Binary functor for case insensitive string compares. Useful for maps.
+	/// </summary>
+	class CaseInsensitiveLessThanEqualTest
+	{
+	public:
+		bool operator() (const std::string & stringA, const std::string & stringB) const;
+	};  
 
-		/// <summary>
-		/// Binary functor for case insensitive string compares. Useful for maps.
-		/// </summary>
-		class CaseInsensitiveLessThanEqualTestCharPtr
-		{
-		public:
-			bool operator() ( char * string1, char * string2 ) const;
-		};
+	/// <summary>
+	/// Binary functor for case insensitive string compares. Useful for maps.
+	/// </summary>
+	class CaseInsensitiveLessThanEqualTestCharPtr
+	{
+	public:
+		bool operator() ( char * string1, char * string2 ) const;
+	};
 
-		// TODO: For our needs, multiple spaces as delimitors need to be considered as one.
-		template< typename T >
-		std::vector< T > Split( std::string sourceString, const char delimitor );
+	// TODO: For our needs, multiple spaces as delimitors need to be considered as one.
+	template< typename T >
+	std::vector< T > Split( std::string sourceString, const char delimitor );
 
-		/// <summary>
-		/// Returns a vector of whitespace characters including space, newline, and tab.
-		/// </summary>
-		std::vector< char > SplitWhitespace();
+	/// <summary>
+	/// Returns a vector of whitespace characters including space, newline, and tab.
+	/// </summary>
+	std::vector< char > SplitWhitespace();
 
-		/// <summary>
-		/// Split a string into a vector of string pieces based on multiple delimitors. includeEmpties effectively includes empty strings if mutliple delimitors
-		/// occur in a row. eq. 
-		/// </summary>
-		/// <example>
-		/// "a,,b,c" = ["a", "b", "c" ] { if includeEmtpies = false } else = ["a", "", "b", "c"]
-		/// (' ', '\n')"a b   c\n  d" = [ "a", "b", "c", "d" ]{ if includeEmtpies = false } else = ["a", "", "", "b", "c", "" (for '\n'), ""]
-		/// </example>
-		template< typename T >
-		std::vector< T > Split( std::string sourceString, const std::vector< char > delimitors, bool includeEmpties = false );
+	/// <summary>
+	/// Split a string into a vector of string pieces based on multiple delimitors. includeEmpties effectively includes empty strings if mutliple delimitors
+	/// occur in a row. eq. 
+	/// </summary>
+	/// <example>
+	/// "a,,b,c" = ["a", "b", "c" ] { if includeEmtpies = false } else = ["a", "", "b", "c"]
+	/// (' ', '\n')"a b   c\n  d" = [ "a", "b", "c", "d" ]{ if includeEmtpies = false } else = ["a", "", "", "b", "c", "" (for '\n'), ""]
+	/// </example>
+	template< typename T >
+	std::vector< T > Split( std::string sourceString, const std::vector< char > delimitors, bool includeEmpties = false );
 
-		template< typename T >
-		std::vector< T > SplitOnWhitespace( std::string sourceString );
-
-		#include <unify/String.inl>
-	} // namespace string
+	template< typename T >
+	std::vector< T > SplitOnWhitespace( std::string sourceString );
 } // namespace unify
+#include <unify/String.inl>

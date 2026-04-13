@@ -31,6 +31,11 @@
 #include <unify/RowColumn.h>
 #include <unify/Quaternion.h>
 #include <unify/Angle.h>
+#include <unify/Cast.h>
+
+#include <unify/Cast.h>
+#include <cstring>
+
 
 namespace unify
 {
@@ -53,7 +58,7 @@ namespace unify
 
 	public:
 
-		Matrix();
+		Matrix() = default;
 		Matrix( const Matrix & matrix );
 		explicit Matrix( Quaternion orientation, V3< float > position = V3< float >( 0, 0, 0 ) );
 		Matrix( std::string text );
@@ -179,4 +184,56 @@ namespace unify
 	Matrix MatrixRotationY( Angle angle );
 	Matrix MatrixRotationZ( Angle angle );
 	Matrix MatrixLookAtLH( const V3< float > & eyePosition, const V3< float > & at, const V3< float > & up );
+
+	/// <summary>
+	/// Look at function that returns a quaternion instead of a matrix.
+	/// </summary>
+	/// <param name="eye">eye position</param>
+	/// <param name="at">at position</param>
+	/// <param name="up">up direction</param>
+	/// <returns></returns>
+	Quaternion QuaternionLookAt(unify::V3< float > eye, unify::V3< float > at, unify::V3< float > up);
+
+	inline
+	Quaternion ToQuaternion(const Matrix& mat)
+	{
+		Quaternion q;
+		float tr = mat.m[0][0] + mat.m[1][1] + mat.m[2][2];
+
+		if (tr > 0) 
+		{
+			float S = sqrt(tr + 1.0f) * 2.0f; // S=4*qw 
+			q.w = 0.25f * S;
+			q.x = (mat.m[1][2] - mat.m[2][1]) / S;
+			q.y = (mat.m[2][0] - mat.m[0][2]) / S;
+			q.z = (mat.m[0][1] - mat.m[1][0]) / S;
+		}
+		else if ((mat.m[0][0] > mat.m[1][1]) & (mat.m[0][0] > mat.m[2][2]))
+		{
+			float S = sqrt(1.0f + mat.m[0][0] - mat.m[1][1] - mat.m[2][2]) * 2.0f; // S=4*qx 
+			q.w = (mat.m[1][2] - mat.m[2][1]) / S;
+			q.x = 0.25f * S;
+			q.y = (mat.m[1][0] + mat.m[0][1]) / S;
+			q.z = (mat.m[2][0] + mat.m[0][2]) / S;
+		}
+		else if (mat.m[1][1] > mat.m[2][2]) 
+		{
+			float S = sqrt(1.0f + mat.m[1][1] - mat.m[0][0] - mat.m[2][2]) * 2.0f; // S=4*qy
+			q.w = (mat.m[2][0] - mat.m[0][2]) / S;
+			q.x = (mat.m[1][0] + mat.m[0][1]) / S;
+			q.y = 0.25f * S;
+			q.z = (mat.m[2][1] + mat.m[1][2]) / S;
+		}
+		else 
+		{
+			float S = sqrt(1.0f + mat.m[2][2] - mat.m[0][0] - mat.m[1][1]) * 2.0f; // S=4*qz
+			q.w = (mat.m[0][1] - mat.m[1][0]) / S;
+			q.x = (mat.m[2][0] + mat.m[0][2]) / S;
+			q.y = (mat.m[2][1] + mat.m[1][2]) / S;
+			q.z = 0.25f * S;
+		}
+		return q;
+	}
 }
+
+#include <unify/Matrix.inl>

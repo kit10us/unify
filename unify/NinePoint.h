@@ -51,3 +51,4 @@ namespace unify
     };
 }
 
+#include <unify/NinePoint.inl>

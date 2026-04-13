@@ -31,21 +31,16 @@ namespace unify
 {
 	class Quaternion
 	{
-		friend Quaternion QuaternionIdentity();
-		friend Quaternion QuaternionFromEuler( const unify::V3< float > & euler );
-		friend Quaternion QuaternionSlerp( const Quaternion & quaternionA, const Quaternion & quaternionB, float mix );
-		friend Quaternion QuaternionLookAt( unify::V3< float > eye, unify::V3< float > at, unify::V3< float > up );
 	public:
 		float x;
 		float y;
 		float z;
 		float w;
 
-		Quaternion();
+		Quaternion() = default;
 		Quaternion( V3< float > axis, Angle angle );
 		Quaternion( float x, float y, float z, float w );
 		Quaternion( const Quaternion & quaternion );
-		Quaternion( class Matrix m );
 
 		bool IsIdentity() const;
 
@@ -83,3 +78,5 @@ namespace unify
 	Quaternion QuaternionSlerp( const Quaternion & quaternionA, const Quaternion & quaternionB, float mix );
 	Quaternion QuaternionLookAt( unify::V3< float > eye, unify::V3< float > at, unify::V3< float > up );
 }
+
+#include <unify/Quaternion.inl>

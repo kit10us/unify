@@ -95,3 +95,5 @@ namespace unify
 		std::map< size_t, std::string > m_indexToName;
 	};
 }
+
+#include <unify/FrameSet.inl>

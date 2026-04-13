@@ -109,3 +109,5 @@ namespace unify
 
 	bool EdgeIntersectsFace( unify::V3< float > * pEdges, unify::V3< float > * pFacePoints, unify::Plane * pPlane );
 }
+
+#include <unify/Frustum.inl>

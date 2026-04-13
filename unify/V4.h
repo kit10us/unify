@@ -85,6 +85,7 @@ namespace unify
 
         std::string ToString() const;
 	};
-	#include <unify/V4.inl>
 }
+
+#include <unify/V4.inl>
 

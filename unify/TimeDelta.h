@@ -88,3 +88,5 @@ namespace unify
 	template<> TimeDelta Cast(const std::string text);
 	template<> TimeDelta Cast(const char* text);
 }
+
+#include <unify/TimeDelta.inl>

@@ -127,5 +127,12 @@ namespace unify
 		static V2< T > V2Inverse(const V2< T > & in);
 		static T V2Dot(const V2< T > & l, const V2< T > &  r);
 	};
-	#include <unify/V2.inl>
-}
+
+
+	template<typename T>
+	inline
+	std::string Cast(const V2<T> vec)
+	{
+		return "{" + Cast< std::string >(vec.x) + ", " + Cast< std::string >(vec.y) + "}";
+	}}
+#include <unify/V2.inl>

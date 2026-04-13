@@ -34,7 +34,8 @@ namespace unify
 	class FileStream : public Stream
 	{
 	public:
-		FileStream();
+		FileStream() = default;
+
 		~FileStream();
 
 		/// <summary>
@@ -94,3 +95,5 @@ namespace unify
 	/// </summary>
 	int64_t FileLength( const char * filename );
 }
+
+#include <unify/FStream.inl>
