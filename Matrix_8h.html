@@ -92,6 +92,9 @@ $(function() {
 <code>#include &lt;<a class="el" href="RowColumn_8h_source.html">unify/RowColumn.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="Quaternion_8h_source.html">unify/Quaternion.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="Angle_8h_source.html">unify/Angle.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="Cast_8h_source.html">unify/Cast.h</a>&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;<a class="el" href="Matrix_8inl_source.html">unify/Matrix.inl</a>&gt;</code><br />
 </div>
 <p><a href="Matrix_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -118,6 +121,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae73458405e8dc21ac47262fe4f712377" id="r_ae73458405e8dc21ac47262fe4f712377"><td class="memItemLeft"><a class="el" href="classunify_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="namespaceunify.html#ae73458405e8dc21ac47262fe4f712377">unify::MatrixRotationY</a> (<a class="el" href="classunify_1_1Angle.html">Angle</a> angle)</td></tr>
 <tr class="memitem:ae35aa0d12b98d521a0899455f1ba48d9" id="r_ae35aa0d12b98d521a0899455f1ba48d9"><td class="memItemLeft"><a class="el" href="classunify_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="namespaceunify.html#ae35aa0d12b98d521a0899455f1ba48d9">unify::MatrixRotationZ</a> (<a class="el" href="classunify_1_1Angle.html">Angle</a> angle)</td></tr>
 <tr class="memitem:a0292ae51bc4a4d4b33d091afe224a82d" id="r_a0292ae51bc4a4d4b33d091afe224a82d"><td class="memItemLeft"><a class="el" href="classunify_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="namespaceunify.html#a0292ae51bc4a4d4b33d091afe224a82d">unify::MatrixLookAtLH</a> (const <a class="el" href="classunify_1_1V3.html">V3</a>&lt; float &gt; &amp;eyePosition, const <a class="el" href="classunify_1_1V3.html">V3</a>&lt; float &gt; &amp;at, const <a class="el" href="classunify_1_1V3.html">V3</a>&lt; float &gt; &amp;up)</td></tr>
+<tr class="memitem:ac2d23f1b7183cc210bbba61db71394d0" id="r_ac2d23f1b7183cc210bbba61db71394d0"><td class="memItemLeft"><a class="el" href="classunify_1_1Quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight"><a class="el" href="namespaceunify.html#ac2d23f1b7183cc210bbba61db71394d0">unify::QuaternionLookAt</a> (<a class="el" href="classunify_1_1V3.html">unify::V3</a>&lt; float &gt; eye, <a class="el" href="classunify_1_1V3.html">unify::V3</a>&lt; float &gt; at, <a class="el" href="classunify_1_1V3.html">unify::V3</a>&lt; float &gt; up)</td></tr>
+<tr class="memdesc:ac2d23f1b7183cc210bbba61db71394d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look at function that returns a quaternion instead of a matrix.  <br /></td></tr>
+<tr class="memitem:a377ae6f7802a566934b57aa057b2236b" id="r_a377ae6f7802a566934b57aa057b2236b"><td class="memItemLeft"><a class="el" href="classunify_1_1Quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight"><a class="el" href="namespaceunify.html#a377ae6f7802a566934b57aa057b2236b">unify::ToQuaternion</a> (const <a class="el" href="classunify_1_1Matrix.html">Matrix</a> &amp;mat)</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

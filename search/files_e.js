@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['quaternion_2ecpp_0',['Quaternion.cpp',['../Quaternion_8cpp.html',1,'']]],
-  ['quaternion_2eh_1',['Quaternion.h',['../Quaternion_8h.html',1,'']]]
+  ['quaternion_2eh_0',['Quaternion.h',['../Quaternion_8h.html',1,'']]],
+  ['quaternion_2einl_1',['Quaternion.inl',['../Quaternion_8inl.html',1,'']]]
 ];

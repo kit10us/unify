@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['the_20future_0',['The Future',['../md_README.html#autotoc_md2',1,'']]],
-  ['the_20history_1',['The History',['../md_README.html#autotoc_md1',1,'']]],
-  ['the_20rub_2',['The Rub',['../md_README.html#autotoc_md3',1,'']]]
+  ['member_0',['&lt;em&gt;string_view&lt;/em&gt; as a member',['../md_README.html#autotoc_md11',1,'']]],
+  ['multi_20platform_20support_1',['Multi-platform Support',['../md_README.html#autotoc_md12',1,'']]]
 ];

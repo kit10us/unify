@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['document_20generation_20comments_0',['In-line Document Generation Comments',['../md_README.html#autotoc_md7',1,'']]]
+  ['by_20pointer_20by_20reference_0',['Pass parameter by-value Versus by-pointer (by-Reference)',['../md_README.html#autotoc_md2',1,'']]],
+  ['by_20reference_1',['Pass parameter by-value Versus by-pointer (by-Reference)',['../md_README.html#autotoc_md2',1,'']]],
+  ['by_20value_20versus_20by_20pointer_20by_20reference_2',['Pass parameter by-value Versus by-pointer (by-Reference)',['../md_README.html#autotoc_md2',1,'']]]
 ];

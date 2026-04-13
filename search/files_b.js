@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ninepoint_2ecpp_0',['NinePoint.cpp',['../NinePoint_8cpp.html',1,'']]],
-  ['ninepoint_2eh_1',['NinePoint.h',['../NinePoint_8h.html',1,'']]]
+  ['ninepoint_2eh_0',['NinePoint.h',['../NinePoint_8h.html',1,'']]],
+  ['ninepoint_2einl_1',['NinePoint.inl',['../NinePoint_8inl.html',1,'']]]
 ];

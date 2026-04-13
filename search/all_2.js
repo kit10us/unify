@@ -8,11 +8,11 @@ var searchData=
   ['bbox_5',['BBox',['../classunify_1_1BBox.html',1,'unify::BBox&lt; T &gt;'],['../classunify_1_1BBox.html#ae26e694ee88779b928e8d3726f8213a1',1,'unify::BBox::BBox()'],['../classunify_1_1BBox.html#a5f484133bda2a0b426a8e36556f3b1ba',1,'unify::BBox::BBox(const V3&lt; T &gt; &amp;inf, const V3&lt; T &gt; &amp;sup)'],['../classunify_1_1BBox.html#ae4c98398b9a700de1e20327886732697',1,'unify::BBox::BBox(T squareSize)']]],
   ['bbox_2eh_6',['BBox.h',['../BBox_8h.html',1,'']]],
   ['bbox_2einl_7',['BBox.inl',['../BBox_8inl.html',1,'']]],
-  ['becomeidentity_8',['BecomeIdentity',['../classunify_1_1Matrix.html#a2cf4360d70d4b1e4db61e3aff287de9b',1,'unify::Matrix']]],
-  ['begin_9',['begin',['../classunify_1_1DataLock.html#a22612ac5a06ce8437ab249839d7ca10b',1,'unify::DataLock::begin()'],['../classunify_1_1Lookup.html#a2d2eb09ac12e662255db29b2d5de5887',1,'unify::Lookup::begin()']]],
+  ['becomeidentity_8',['BecomeIdentity',['../classunify_1_1Matrix.html#ad40b284bc132a550d2718f936b7a7755',1,'unify::Matrix']]],
+  ['begin_9',['begin',['../classunify_1_1Lookup.html#a2d2eb09ac12e662255db29b2d5de5887',1,'unify::Lookup']]],
   ['begincase_10',['BeginCase',['../classunify_1_1test_1_1Suite.html#a11dbe56a98077c6d4f87931bf24bdc72',1,'unify::test::Suite::BeginCase()'],['../namespaceunify_1_1test.html#a45a0260989c730681b7ca362b3add8caae8037c378a9329bf482f703f9a8eb841',1,'unify::test::BeginCase']]],
   ['beginsuite_11',['BeginSuite',['../classunify_1_1test_1_1Suite.html#a3933900c65165b299798bd3a6dac0877',1,'unify::test::Suite::BeginSuite()'],['../namespaceunify_1_1test.html#a45a0260989c730681b7ca362b3add8caa36844156ecd3561c28f688e6d00ed3ba',1,'unify::test::BeginSuite']]],
-  ['beginswith_12',['BeginsWith',['../namespaceunify_1_1string.html#a3417284459884cfcc455c3c1de77280d',1,'unify::string']]],
+  ['beginswith_12',['BeginsWith',['../namespaceunify_1_1String.html#a23ec6b954eb53b6f233997ca1ddde012',1,'unify::String']]],
   ['bgra_13',['BGRA',['../classunify_1_1ColorUnit.html#a04614e684f8dbe9c2f028313b9931be8af620237336c6b8cf9688fe528b9c5338',1,'unify::ColorUnit::BGRA'],['../namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba5d0594e84962ef29d928c18cd5fbac51',1,'unify::BGRA']]],
   ['bitcompare_14',['BITCOMPARE',['../Flags_8h.html#ab973ce10d2c8a2c026e0f9beb2ab33c6',1,'Flags.h']]],
   ['bitstate_15',['BITSTATE',['../Flags_8h.html#a438025cdc7ecbbd9703fc836cee3d3b6',1,'Flags.h']]],
@@ -26,5 +26,8 @@ var searchData=
   ['bsphere_23',['BSphere',['../classunify_1_1BSphere.html',1,'unify::BSphere&lt; T &gt;'],['../classunify_1_1BSphere.html#ac766bc01af502b9bc067a2f6b88dda96',1,'unify::BSphere::BSphere()'],['../classunify_1_1BSphere.html#adb5e3b6ac4a851e21212e9d54130cd12',1,'unify::BSphere::BSphere(const V3&lt; T &gt; &amp;center)'],['../classunify_1_1BSphere.html#a98e076a6ed13074832606f36ff779bc3',1,'unify::BSphere::BSphere(const V3&lt; T &gt; &amp;center, const T &amp;radius)']]],
   ['bsphere_2eh_24',['BSphere.h',['../BSphere_8h.html',1,'']]],
   ['bsphere_2einl_25',['BSphere.inl',['../BSphere_8inl.html',1,'']]],
-  ['byteswaiting_26',['BytesWaiting',['../classunify_1_1Stream.html#a2e980238146322db1db1aef1c799b4c1',1,'unify::Stream']]]
+  ['by_20pointer_20by_20reference_26',['Pass parameter by-value Versus by-pointer (by-Reference)',['../md_README.html#autotoc_md2',1,'']]],
+  ['by_20reference_27',['Pass parameter by-value Versus by-pointer (by-Reference)',['../md_README.html#autotoc_md2',1,'']]],
+  ['by_20value_20versus_20by_20pointer_20by_20reference_28',['Pass parameter by-value Versus by-pointer (by-Reference)',['../md_README.html#autotoc_md2',1,'']]],
+  ['byteswaiting_29',['BytesWaiting',['../classunify_1_1Stream.html#ab091f1033abeeb2a22f315bbd6090b52',1,'unify::Stream']]]
 ];

@@ -93,96 +93,82 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a28b48114f5fd2efb97a70dc3464e0f5d" id="r_a28b48114f5fd2efb97a70dc3464e0f5d"><td class="memItemLeft">typedef unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a></td></tr>
+<tr class="memitem:a4a821e049590beb4def6d049abbb4f19" id="r_a4a821e049590beb4def6d049abbb4f19"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> = uint8_t</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9a742cbe9f9f4037f5d9f4e81a9b2428" id="r_a9a742cbe9f9f4037f5d9f4e81a9b2428"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> ()</td></tr>
-<tr class="memitem:a60d54fc74e7dd9070b8ce2b056f5a381" id="r_a60d54fc74e7dd9070b8ce2b056f5a381"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a60d54fc74e7dd9070b8ce2b056f5a381">Color</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a> <a class="el" href="#a85d9a557abcf184f1478bc008c5273e5">r</a>, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a> <a class="el" href="#a87cd6034838e35e5aeb0e67d9926d636">g</a>, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a> <a class="el" href="#a7fae3a08f02090b11b680923ab37dcb3">b</a>, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>)</td></tr>
-<tr class="memitem:a7b075d27e3bbdde7cbe648dc3b804261" id="r_a7b075d27e3bbdde7cbe648dc3b804261"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7b075d27e3bbdde7cbe648dc3b804261">Color</a> (const Color &amp;color)</td></tr>
-<tr class="memitem:ad31d9fd6c02d7d25d649e1e18c503f8c" id="r_ad31d9fd6c02d7d25d649e1e18c503f8c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad31d9fd6c02d7d25d649e1e18c503f8c">Color</a> (std::string text, <a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fb">Order</a> order=<a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba287566ddad210df6ae852a39bf72cf94">RGBA</a>, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a> defaultAlpha=255)</td></tr>
-<tr class="memitem:a56af7990e3c91e86124a6925703d5432" id="r_a56af7990e3c91e86124a6925703d5432"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a56af7990e3c91e86124a6925703d5432">Color</a> (const <a class="el" href="classunify_1_1ColorUnit.html">ColorUnit</a> &amp;colorUnit)</td></tr>
-<tr class="memitem:a88f22ab34b14e6976e6b9ef2177b90cf" id="r_a88f22ab34b14e6976e6b9ef2177b90cf"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a88f22ab34b14e6976e6b9ef2177b90cf">operator ColorUnit</a> () const</td></tr>
-<tr class="memitem:a1edba280b80fd28638dc8c8488f35fd5" id="r_a1edba280b80fd28638dc8c8488f35fd5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1edba280b80fd28638dc8c8488f35fd5">operator unsigned int</a> () const</td></tr>
-<tr class="memitem:a07302cb348f125aa032c7947dd28353f" id="r_a07302cb348f125aa032c7947dd28353f"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a07302cb348f125aa032c7947dd28353f">operator+=</a> (const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;col)</td></tr>
-<tr class="memitem:a975249eae03c3b3fff698ce278670345" id="r_a975249eae03c3b3fff698ce278670345"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a975249eae03c3b3fff698ce278670345">operator-=</a> (const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;col)</td></tr>
-<tr class="memitem:af1ea86648f65b720778301206fe92846" id="r_af1ea86648f65b720778301206fe92846"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af1ea86648f65b720778301206fe92846">operator*=</a> (const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;col)</td></tr>
-<tr class="memitem:ab56c3e10c325157a80245fd88b59d6c5" id="r_ab56c3e10c325157a80245fd88b59d6c5"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab56c3e10c325157a80245fd88b59d6c5">operator/=</a> (const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;col)</td></tr>
-<tr class="memitem:a6ed06b0955c675db2ca774d40407fe7a" id="r_a6ed06b0955c675db2ca774d40407fe7a"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6ed06b0955c675db2ca774d40407fe7a">operator*=</a> (float val)</td></tr>
-<tr class="memitem:a8b48c3483996eb5dc2bdb60582934cf8" id="r_a8b48c3483996eb5dc2bdb60582934cf8"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a8b48c3483996eb5dc2bdb60582934cf8">operator/=</a> (float val)</td></tr>
-<tr class="memitem:aeac606905706425a7f7da965df77df9f" id="r_aeac606905706425a7f7da965df77df9f"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#aeac606905706425a7f7da965df77df9f">operator+</a> (const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;col) const</td></tr>
-<tr class="memitem:a0d0d7cb9d2d9cb8df1c79198ec3de4c1" id="r_a0d0d7cb9d2d9cb8df1c79198ec3de4c1"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0d0d7cb9d2d9cb8df1c79198ec3de4c1">operator-</a> (const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;col) const</td></tr>
-<tr class="memitem:aabd5d3b1a9e7a0f52b289c1f5c7f0ec7" id="r_aabd5d3b1a9e7a0f52b289c1f5c7f0ec7"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#aabd5d3b1a9e7a0f52b289c1f5c7f0ec7">operator*</a> (const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;col) const</td></tr>
-<tr class="memitem:a890523531de61c1aec84e5b2a1307ef3" id="r_a890523531de61c1aec84e5b2a1307ef3"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a890523531de61c1aec84e5b2a1307ef3">operator/</a> (const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;col) const</td></tr>
-<tr class="memitem:afcf6c112ab6662955022a16f8845a2d8" id="r_afcf6c112ab6662955022a16f8845a2d8"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#afcf6c112ab6662955022a16f8845a2d8">operator*</a> (float val) const</td></tr>
-<tr class="memitem:a8ff9a5019af594f9fcade1c0080d98d7" id="r_a8ff9a5019af594f9fcade1c0080d98d7"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8ff9a5019af594f9fcade1c0080d98d7">operator/</a> (float val) const</td></tr>
-<tr class="memitem:ac91555626db81da379b3e2ecdca86292" id="r_ac91555626db81da379b3e2ecdca86292"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac91555626db81da379b3e2ecdca86292">operator==</a> (const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;col) const</td></tr>
-<tr class="memitem:af7a105f6ee16c7943ffc636424be6936" id="r_af7a105f6ee16c7943ffc636424be6936"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af7a105f6ee16c7943ffc636424be6936">operator!=</a> (const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;col) const</td></tr>
-<tr class="memitem:a29f8f964e5782416c4abee28dbf594b6" id="r_a29f8f964e5782416c4abee28dbf594b6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a29f8f964e5782416c4abee28dbf594b6">SetRGBA</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a> <a class="el" href="#a85d9a557abcf184f1478bc008c5273e5">r</a>, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a> <a class="el" href="#a87cd6034838e35e5aeb0e67d9926d636">g</a>, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a> <a class="el" href="#a7fae3a08f02090b11b680923ab37dcb3">b</a>, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>)</td></tr>
-<tr class="memdesc:a29f8f964e5782416c4abee28dbf594b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all color components.  <br /></td></tr>
-<tr class="memitem:a3afff9e9a4a56289a229311050ebde09" id="r_a3afff9e9a4a56289a229311050ebde09"><td class="memItemLeft"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3afff9e9a4a56289a229311050ebde09">GetRed</a> () const</td></tr>
-<tr class="memdesc:a3afff9e9a4a56289a229311050ebde09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the red color component.  <br /></td></tr>
-<tr class="memitem:a3e8cc7a8d7dbd1f48c51393d37d409ed" id="r_a3e8cc7a8d7dbd1f48c51393d37d409ed"><td class="memItemLeft"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3e8cc7a8d7dbd1f48c51393d37d409ed">GetGreen</a> () const</td></tr>
-<tr class="memdesc:a3e8cc7a8d7dbd1f48c51393d37d409ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the green color component.  <br /></td></tr>
-<tr class="memitem:abc86295756a720d4917a87c165c6c059" id="r_abc86295756a720d4917a87c165c6c059"><td class="memItemLeft"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a>&#160;</td><td class="memItemRight"><a class="el" href="#abc86295756a720d4917a87c165c6c059">GetBlue</a> () const</td></tr>
-<tr class="memdesc:abc86295756a720d4917a87c165c6c059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the blue color component.  <br /></td></tr>
-<tr class="memitem:a4353eba6f8b8deb28a4fffa76c9954db" id="r_a4353eba6f8b8deb28a4fffa76c9954db"><td class="memItemLeft"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4353eba6f8b8deb28a4fffa76c9954db">GetAlpha</a> () const</td></tr>
-<tr class="memdesc:a4353eba6f8b8deb28a4fffa76c9954db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the alpha color component.  <br /></td></tr>
-<tr class="memitem:a37569aa8abb06eb2eef2aba698d7d4bc" id="r_a37569aa8abb06eb2eef2aba698d7d4bc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a37569aa8abb06eb2eef2aba698d7d4bc">SetRed</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a> <a class="el" href="#a85d9a557abcf184f1478bc008c5273e5">r</a>)</td></tr>
-<tr class="memdesc:a37569aa8abb06eb2eef2aba698d7d4bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the red component of the color.  <br /></td></tr>
-<tr class="memitem:a4884e9566d50fe926fa0e58d19fc47b5" id="r_a4884e9566d50fe926fa0e58d19fc47b5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4884e9566d50fe926fa0e58d19fc47b5">SetGreen</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a> <a class="el" href="#a87cd6034838e35e5aeb0e67d9926d636">g</a>)</td></tr>
-<tr class="memdesc:a4884e9566d50fe926fa0e58d19fc47b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the green component of the color.  <br /></td></tr>
-<tr class="memitem:a19c932020de62ccd1f6e9d205f45b271" id="r_a19c932020de62ccd1f6e9d205f45b271"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a19c932020de62ccd1f6e9d205f45b271">SetBlue</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a> <a class="el" href="#a7fae3a08f02090b11b680923ab37dcb3">b</a>)</td></tr>
-<tr class="memdesc:a19c932020de62ccd1f6e9d205f45b271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the blue component of the color.  <br /></td></tr>
-<tr class="memitem:a0c336f199cf5c60b60b30022d54c5d77" id="r_a0c336f199cf5c60b60b30022d54c5d77"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0c336f199cf5c60b60b30022d54c5d77">SetAlpha</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>)</td></tr>
-<tr class="memdesc:a0c336f199cf5c60b60b30022d54c5d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the alpha component of the color.  <br /></td></tr>
-<tr class="memitem:a1df3727a270fb4dcc22749a3ee7febc3" id="r_a1df3727a270fb4dcc22749a3ee7febc3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1df3727a270fb4dcc22749a3ee7febc3">Interpulate</a> (const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> colorA, const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> colorB, const float ratio)</td></tr>
-<tr class="memdesc:a1df3727a270fb4dcc22749a3ee7febc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpulate between two colors colors.  <br /></td></tr>
-<tr class="memitem:ab6ba4294480ac7cfdfc22620b7d8a484" id="r_ab6ba4294480ac7cfdfc22620b7d8a484"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#ab6ba4294480ac7cfdfc22620b7d8a484">ToString</a> (<a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fb">Order</a> order=<a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba287566ddad210df6ae852a39bf72cf94">RGBA</a>) const</td></tr>
-<tr class="memdesc:ab6ba4294480ac7cfdfc22620b7d8a484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation fo a color.  <br /></td></tr>
+<tr class="memitem:ac28e95b187261fc882e4e19adce4b1b5" id="r_ac28e95b187261fc882e4e19adce4b1b5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> ()</td></tr>
+<tr class="memitem:a0059abd4c95be9047deca419b6a4e985" id="r_a0059abd4c95be9047deca419b6a4e985"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0059abd4c95be9047deca419b6a4e985">Color</a> (<a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> <a class="el" href="#a85d9a557abcf184f1478bc008c5273e5">r</a>, <a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> <a class="el" href="#a87cd6034838e35e5aeb0e67d9926d636">g</a>, <a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> <a class="el" href="#a7fae3a08f02090b11b680923ab37dcb3">b</a>, <a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>)</td></tr>
+<tr class="memitem:ab83ea87668850862ed45b30635e9b995" id="r_ab83ea87668850862ed45b30635e9b995"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab83ea87668850862ed45b30635e9b995">Color</a> (const Color &amp;color)</td></tr>
+<tr class="memitem:aae44bec4c60f33a6267547fca10cdf35" id="r_aae44bec4c60f33a6267547fca10cdf35"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aae44bec4c60f33a6267547fca10cdf35">Color</a> (std::string text, <a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fb">Order</a> order=<a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba287566ddad210df6ae852a39bf72cf94">RGBA</a>, <a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> defaultAlpha=255)</td></tr>
+<tr class="memitem:a6d717792d43099fe4e116f8b3b2d5e16" id="r_a6d717792d43099fe4e116f8b3b2d5e16"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6d717792d43099fe4e116f8b3b2d5e16">operator unsigned int</a> () const</td></tr>
+<tr class="memitem:a33bb5c8077155cadd360a6f15a452584" id="r_a33bb5c8077155cadd360a6f15a452584"><td class="memItemLeft"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a33bb5c8077155cadd360a6f15a452584">operator+=</a> (const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;col)</td></tr>
+<tr class="memitem:a9d7ae4d39961c94376717a3496a67e7b" id="r_a9d7ae4d39961c94376717a3496a67e7b"><td class="memItemLeft"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a9d7ae4d39961c94376717a3496a67e7b">operator-=</a> (const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;col)</td></tr>
+<tr class="memitem:af42e5b25ddd0479a76a393694a4bc315" id="r_af42e5b25ddd0479a76a393694a4bc315"><td class="memItemLeft"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af42e5b25ddd0479a76a393694a4bc315">operator*=</a> (const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;col)</td></tr>
+<tr class="memitem:ab2d12c485d8194f44708beb547f0bfb3" id="r_ab2d12c485d8194f44708beb547f0bfb3"><td class="memItemLeft"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab2d12c485d8194f44708beb547f0bfb3">operator/=</a> (const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;col)</td></tr>
+<tr class="memitem:a1406d33283ae4044e342a7819bdc89ca" id="r_a1406d33283ae4044e342a7819bdc89ca"><td class="memItemLeft"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1406d33283ae4044e342a7819bdc89ca">operator*=</a> (float val)</td></tr>
+<tr class="memitem:a7895cd933fcf3269d87c7487747cb779" id="r_a7895cd933fcf3269d87c7487747cb779"><td class="memItemLeft"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7895cd933fcf3269d87c7487747cb779">operator/=</a> (float val)</td></tr>
+<tr class="memitem:a1e325e885d2b62fc655fb67450715c9b" id="r_a1e325e885d2b62fc655fb67450715c9b"><td class="memItemLeft"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1e325e885d2b62fc655fb67450715c9b">operator+</a> (const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;col) const</td></tr>
+<tr class="memitem:a7080450722bc8ef39125d63b28df9f7c" id="r_a7080450722bc8ef39125d63b28df9f7c"><td class="memItemLeft"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7080450722bc8ef39125d63b28df9f7c">operator-</a> (const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;col) const</td></tr>
+<tr class="memitem:a70f8a858ac64e18d58863e36f4ba8b6a" id="r_a70f8a858ac64e18d58863e36f4ba8b6a"><td class="memItemLeft"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a70f8a858ac64e18d58863e36f4ba8b6a">operator*</a> (const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;col) const</td></tr>
+<tr class="memitem:a880ccf99cd340c31a7809927599d6d5d" id="r_a880ccf99cd340c31a7809927599d6d5d"><td class="memItemLeft"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a880ccf99cd340c31a7809927599d6d5d">operator/</a> (const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;col) const</td></tr>
+<tr class="memitem:aa4251d18420ba6e33348a491ed6acf53" id="r_aa4251d18420ba6e33348a491ed6acf53"><td class="memItemLeft"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa4251d18420ba6e33348a491ed6acf53">operator*</a> (float val) const</td></tr>
+<tr class="memitem:a38473a7a9ad1cd6c1260955d6c7e7489" id="r_a38473a7a9ad1cd6c1260955d6c7e7489"><td class="memItemLeft"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a38473a7a9ad1cd6c1260955d6c7e7489">operator/</a> (float val) const</td></tr>
+<tr class="memitem:a1009920d2aa05876096fbc6f14440649" id="r_a1009920d2aa05876096fbc6f14440649"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1009920d2aa05876096fbc6f14440649">operator==</a> (const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;col) const</td></tr>
+<tr class="memitem:a991b174f91fc2c98926df6d56892d48f" id="r_a991b174f91fc2c98926df6d56892d48f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a991b174f91fc2c98926df6d56892d48f">operator!=</a> (const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;col) const</td></tr>
+<tr class="memitem:acc5d4b6c66fb383befd83549b83a564e" id="r_acc5d4b6c66fb383befd83549b83a564e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acc5d4b6c66fb383befd83549b83a564e">SetRGBA</a> (<a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> <a class="el" href="#a85d9a557abcf184f1478bc008c5273e5">r</a>, <a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> <a class="el" href="#a87cd6034838e35e5aeb0e67d9926d636">g</a>, <a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> <a class="el" href="#a7fae3a08f02090b11b680923ab37dcb3">b</a>, <a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>)</td></tr>
+<tr class="memdesc:acc5d4b6c66fb383befd83549b83a564e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all color components.  <br /></td></tr>
+<tr class="memitem:a4ee81770f79294138e131af04dcbf92b" id="r_a4ee81770f79294138e131af04dcbf92b"><td class="memItemLeft"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4ee81770f79294138e131af04dcbf92b">GetRed</a> () const</td></tr>
+<tr class="memdesc:a4ee81770f79294138e131af04dcbf92b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the red color component.  <br /></td></tr>
+<tr class="memitem:a5dbdd74db852627af6c0ad9af8fa1413" id="r_a5dbdd74db852627af6c0ad9af8fa1413"><td class="memItemLeft"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5dbdd74db852627af6c0ad9af8fa1413">GetGreen</a> () const</td></tr>
+<tr class="memdesc:a5dbdd74db852627af6c0ad9af8fa1413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the green color component.  <br /></td></tr>
+<tr class="memitem:a6255f93c11e2972285bbdee509ddcb37" id="r_a6255f93c11e2972285bbdee509ddcb37"><td class="memItemLeft"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6255f93c11e2972285bbdee509ddcb37">GetBlue</a> () const</td></tr>
+<tr class="memdesc:a6255f93c11e2972285bbdee509ddcb37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the blue color component.  <br /></td></tr>
+<tr class="memitem:a149d3d05f82555750610c032123e7f16" id="r_a149d3d05f82555750610c032123e7f16"><td class="memItemLeft"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a>&#160;</td><td class="memItemRight"><a class="el" href="#a149d3d05f82555750610c032123e7f16">GetAlpha</a> () const</td></tr>
+<tr class="memdesc:a149d3d05f82555750610c032123e7f16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the alpha color component.  <br /></td></tr>
+<tr class="memitem:afbda80dfbcf4dcf1591c4ba46628a455" id="r_afbda80dfbcf4dcf1591c4ba46628a455"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afbda80dfbcf4dcf1591c4ba46628a455">SetRed</a> (<a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> <a class="el" href="#a85d9a557abcf184f1478bc008c5273e5">r</a>)</td></tr>
+<tr class="memdesc:afbda80dfbcf4dcf1591c4ba46628a455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the red component of the color.  <br /></td></tr>
+<tr class="memitem:a011f2471b16dbd6d4f292c7a0b9978fd" id="r_a011f2471b16dbd6d4f292c7a0b9978fd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a011f2471b16dbd6d4f292c7a0b9978fd">SetGreen</a> (<a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> <a class="el" href="#a87cd6034838e35e5aeb0e67d9926d636">g</a>)</td></tr>
+<tr class="memdesc:a011f2471b16dbd6d4f292c7a0b9978fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the green component of the color.  <br /></td></tr>
+<tr class="memitem:a3da58fbdf0846dbb3d533d62cf4f603c" id="r_a3da58fbdf0846dbb3d533d62cf4f603c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3da58fbdf0846dbb3d533d62cf4f603c">SetBlue</a> (<a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> <a class="el" href="#a7fae3a08f02090b11b680923ab37dcb3">b</a>)</td></tr>
+<tr class="memdesc:a3da58fbdf0846dbb3d533d62cf4f603c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the blue component of the color.  <br /></td></tr>
+<tr class="memitem:a7c2bb7eb64c3d6978d5b6340b07d7512" id="r_a7c2bb7eb64c3d6978d5b6340b07d7512"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7c2bb7eb64c3d6978d5b6340b07d7512">SetAlpha</a> (<a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>)</td></tr>
+<tr class="memdesc:a7c2bb7eb64c3d6978d5b6340b07d7512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the alpha component of the color.  <br /></td></tr>
+<tr class="memitem:af426c680b38592077e6a3adf82c7c8ca" id="r_af426c680b38592077e6a3adf82c7c8ca"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af426c680b38592077e6a3adf82c7c8ca">Interpolate</a> (const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> colorA, const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> colorB, const float ratio)</td></tr>
+<tr class="memdesc:af426c680b38592077e6a3adf82c7c8ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate between two colors colors.  <br /></td></tr>
+<tr class="memitem:a2a0649fad4bf15772fad9fbddbd6a4da" id="r_a2a0649fad4bf15772fad9fbddbd6a4da"><td class="memItemLeft"><a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fb">unify::Order</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2a0649fad4bf15772fad9fbddbd6a4da">Order</a> () const</td></tr>
+<tr class="memdesc:a2a0649fad4bf15772fad9fbddbd6a4da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the order of the color.  <br /></td></tr>
+<tr class="memitem:a3b12ca69f76025de36697aeb4453c9d9" id="r_a3b12ca69f76025de36697aeb4453c9d9"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a3b12ca69f76025de36697aeb4453c9d9">ToString</a> (<a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fb">unify::Order</a> order=<a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba287566ddad210df6ae852a39bf72cf94">RGBA</a>) const</td></tr>
+<tr class="memdesc:a3b12ca69f76025de36697aeb4453c9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation fo a color.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft anon">union {&#160;</td><td class="memItemRight"></td></tr>
 <tr class="memitem:ad55d1c79be50317df71aeffa46c3bff3" id="r_ad55d1c79be50317df71aeffa46c3bff3"><td class="memItemLeft anon">&#160;&#160;&#160;unsigned int&#160;&#160;&#160;<a class="el" href="#acd65aafed53fa45cdb4b71df83dfc09a">c</a>&#160;</td><td class="memItemRight"></td></tr>
 <tr class="memitem:"><td class="memItemLeft anon">&#160;&#160;&#160;struct {&#160;</td><td class="memItemRight"></td></tr>
-<tr class="memitem:ad3cddd8bccd6766ed88ad5981a39fe33" id="r_ad3cddd8bccd6766ed88ad5981a39fe33"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a>&#160;&#160;&#160;<a class="el" href="#a85d9a557abcf184f1478bc008c5273e5">r</a>&#160;</td><td class="memItemRight"></td></tr>
-<tr class="memitem:a26f5a5c774de41fe34f016afcba77efd" id="r_a26f5a5c774de41fe34f016afcba77efd"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a>&#160;&#160;&#160;<a class="el" href="#a87cd6034838e35e5aeb0e67d9926d636">g</a>&#160;</td><td class="memItemRight"></td></tr>
-<tr class="memitem:a61f66ed038e577c8714c7d4d754ee3a2" id="r_a61f66ed038e577c8714c7d4d754ee3a2"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a>&#160;&#160;&#160;<a class="el" href="#a7fae3a08f02090b11b680923ab37dcb3">b</a>&#160;</td><td class="memItemRight"></td></tr>
-<tr class="memitem:abed1defa39955aecadb9df9ec7a6aa53" id="r_abed1defa39955aecadb9df9ec7a6aa53"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a>&#160;&#160;&#160;<a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:ad3cddd8bccd6766ed88ad5981a39fe33" id="r_ad3cddd8bccd6766ed88ad5981a39fe33"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a>&#160;&#160;&#160;<a class="el" href="#a85d9a557abcf184f1478bc008c5273e5">r</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a26f5a5c774de41fe34f016afcba77efd" id="r_a26f5a5c774de41fe34f016afcba77efd"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a>&#160;&#160;&#160;<a class="el" href="#a87cd6034838e35e5aeb0e67d9926d636">g</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a61f66ed038e577c8714c7d4d754ee3a2" id="r_a61f66ed038e577c8714c7d4d754ee3a2"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a>&#160;&#160;&#160;<a class="el" href="#a7fae3a08f02090b11b680923ab37dcb3">b</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:abed1defa39955aecadb9df9ec7a6aa53" id="r_abed1defa39955aecadb9df9ec7a6aa53"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a>&#160;&#160;&#160;<a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>&#160;</td><td class="memItemRight"></td></tr>
 <tr class="memitem:a87202f145614ad43bb70f9989d266c78" id="r_a87202f145614ad43bb70f9989d266c78"><td class="memItemLeft anonEnd">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="#ad552b2027783e3ed7b8ee3d6c57d8f65">component</a></td></tr>
 <tr class="memitem:addfcb09ae99704cfc7254601f1082b61" id="r_addfcb09ae99704cfc7254601f1082b61"><td class="memItemLeft anon">&#160;&#160;&#160;unsigned char&#160;&#160;&#160;<a class="el" href="#ad23887cc35c948d5bb34ce9520cf0fe5">linear</a> [4]&#160;</td><td class="memItemRight"></td></tr>
 <tr class="memitem:aff5275609c928bf25f6dd2b644b5c3d8" id="r_aff5275609c928bf25f6dd2b644b5c3d8"><td class="memItemLeft anonEnd">};&#160;</td><td class="memItemRight"></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ae70f8df67e9ee480c8fd85544ffe65d8" id="r_ae70f8df67e9ee480c8fd85544ffe65d8"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae70f8df67e9ee480c8fd85544ffe65d8">ColorRGBA</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#a85d9a557abcf184f1478bc008c5273e5">r</a>, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#a87cd6034838e35e5aeb0e67d9926d636">g</a>, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#a7fae3a08f02090b11b680923ab37dcb3">b</a>, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>)</td></tr>
-<tr class="memitem:ab5d78d6830b9a50146d90631c77de91e" id="r_ab5d78d6830b9a50146d90631c77de91e"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab5d78d6830b9a50146d90631c77de91e">ColorRGBA</a> (unsigned int rgba)</td></tr>
-<tr class="memitem:a2aa5eea10ec7cc1a24df2f8504ec2bae" id="r_a2aa5eea10ec7cc1a24df2f8504ec2bae"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2aa5eea10ec7cc1a24df2f8504ec2bae">ColorARGB</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#a85d9a557abcf184f1478bc008c5273e5">r</a>, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#a87cd6034838e35e5aeb0e67d9926d636">g</a>, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#a7fae3a08f02090b11b680923ab37dcb3">b</a>)</td></tr>
-<tr class="memitem:a4465b6cd5936979b382655cf51bfead5" id="r_a4465b6cd5936979b382655cf51bfead5"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4465b6cd5936979b382655cf51bfead5">ColorARGB</a> (unsigned int argb)</td></tr>
-<tr class="memitem:af181af860cf4d32cb65d77a8d1709988" id="r_af181af860cf4d32cb65d77a8d1709988"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#af181af860cf4d32cb65d77a8d1709988">ColorRGB</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#a85d9a557abcf184f1478bc008c5273e5">r</a>, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#a87cd6034838e35e5aeb0e67d9926d636">g</a>, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#a7fae3a08f02090b11b680923ab37dcb3">b</a>)</td></tr>
-<tr class="memitem:acf7a70038f2e5edb8e27a573c408a447" id="r_acf7a70038f2e5edb8e27a573c408a447"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#acf7a70038f2e5edb8e27a573c408a447">ColorWhite</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>=255)</td></tr>
-<tr class="memitem:a1851271e03287fb123a2c2ca23b33490" id="r_a1851271e03287fb123a2c2ca23b33490"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1851271e03287fb123a2c2ca23b33490">ColorRed</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#a85d9a557abcf184f1478bc008c5273e5">r</a>=255, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>=255)</td></tr>
-<tr class="memitem:a2f29b27b85d03e8e04564e465fff37e0" id="r_a2f29b27b85d03e8e04564e465fff37e0"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2f29b27b85d03e8e04564e465fff37e0">ColorGreen</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#a87cd6034838e35e5aeb0e67d9926d636">g</a>=255, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>=255)</td></tr>
-<tr class="memitem:aa75fa05d6429099c28ecd955adbc986d" id="r_aa75fa05d6429099c28ecd955adbc986d"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa75fa05d6429099c28ecd955adbc986d">ColorBlue</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#acd65aafed53fa45cdb4b71df83dfc09a">c</a>=255, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>=255)</td></tr>
-<tr class="memitem:a72c412f1534bf9e7b924b3462cebf3fc" id="r_a72c412f1534bf9e7b924b3462cebf3fc"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a72c412f1534bf9e7b924b3462cebf3fc">ColorYellow</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> y=255, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>=255)</td></tr>
-<tr class="memitem:af00564d5887b24a1430436ec4af110ba" id="r_af00564d5887b24a1430436ec4af110ba"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#af00564d5887b24a1430436ec4af110ba">ColorCyan</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#acd65aafed53fa45cdb4b71df83dfc09a">c</a>=255, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>=255)</td></tr>
-<tr class="memitem:a260508c6f90552032ee5e06c55bd6cb5" id="r_a260508c6f90552032ee5e06c55bd6cb5"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a260508c6f90552032ee5e06c55bd6cb5">ColorMagenta</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> m=255, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>=255)</td></tr>
-<tr class="memitem:ae70294aae9c6f92a9f902b1b2869c4db" id="r_ae70294aae9c6f92a9f902b1b2869c4db"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae70294aae9c6f92a9f902b1b2869c4db">ColorGrey</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> grey, <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>=255)</td></tr>
-<tr class="memitem:ab9a54a7c791b7b72d8617eb9312d4613" id="r_ab9a54a7c791b7b72d8617eb9312d4613"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab9a54a7c791b7b72d8617eb9312d4613">ColorBlack</a> (<a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>=255)</td></tr>
-<tr class="memitem:ac91a81efa271ee003b0d242644ccaef9" id="r_ac91a81efa271ee003b0d242644ccaef9"><td class="memItemLeft"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac91a81efa271ee003b0d242644ccaef9">ColorZero</a> ()</td></tr>
+<tr class="memitem:ae70f8df67e9ee480c8fd85544ffe65d8" id="r_ae70f8df67e9ee480c8fd85544ffe65d8"><td class="memItemLeft"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae70f8df67e9ee480c8fd85544ffe65d8">ColorRGBA</a> (<a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> <a class="el" href="#a85d9a557abcf184f1478bc008c5273e5">r</a>, <a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> <a class="el" href="#a87cd6034838e35e5aeb0e67d9926d636">g</a>, <a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> <a class="el" href="#a7fae3a08f02090b11b680923ab37dcb3">b</a>, <a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> <a class="el" href="#ae4aa506630e697e1af41c348543e3cb2">a</a>)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A 32 bit color, 8 bits per component. </p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
-<a id="a28b48114f5fd2efb97a70dc3464e0f5d" name="a28b48114f5fd2efb97a70dc3464e0f5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28b48114f5fd2efb97a70dc3464e0f5d">&#9670;&#160;</a></span>Component</h2>
+<a id="a4a821e049590beb4def6d049abbb4f19" name="a4a821e049590beb4def6d049abbb4f19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a821e049590beb4def6d049abbb4f19">&#9670;&#160;</a></span>Component</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef unsigned char <a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">unify::Color::Component</a></td>
+          <td class="memname">using <a class="el" href="#a4a821e049590beb4def6d049abbb4f19">unify::Color::Component</a> = uint8_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -190,73 +176,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9a742cbe9f9f4037f5d9f4e81a9b2428" name="a9a742cbe9f9f4037f5d9f4e81a9b2428"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">&#9670;&#160;</a></span>Color() <span class="overload">[1/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Color::Color </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a60d54fc74e7dd9070b8ce2b056f5a381" name="a60d54fc74e7dd9070b8ce2b056f5a381"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60d54fc74e7dd9070b8ce2b056f5a381">&#9670;&#160;</a></span>Color() <span class="overload">[2/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Color::Color </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7b075d27e3bbdde7cbe648dc3b804261" name="a7b075d27e3bbdde7cbe648dc3b804261"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b075d27e3bbdde7cbe648dc3b804261">&#9670;&#160;</a></span>Color() <span class="overload">[3/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Color::Color </td>
-          <td>(</td>
-          <td class="paramtype">const Color &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad31d9fd6c02d7d25d649e1e18c503f8c" name="ad31d9fd6c02d7d25d649e1e18c503f8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad31d9fd6c02d7d25d649e1e18c503f8c">&#9670;&#160;</a></span>Color() <span class="overload">[4/5]</span></h2>
+<a id="ac28e95b187261fc882e4e19adce4b1b5" name="ac28e95b187261fc882e4e19adce4b1b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac28e95b187261fc882e4e19adce4b1b5">&#9670;&#160;</a></span>Color() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,32 +186,23 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Color::Color </td>
+          <td class="memname">unify::Color::Color </td>
           <td>(</td>
-          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fb">Order</a></td>          <td class="paramname"><span class="paramname"><em>order</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba287566ddad210df6ae852a39bf72cf94">RGBA</a></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>defaultAlpha</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a56af7990e3c91e86124a6925703d5432" name="a56af7990e3c91e86124a6925703d5432"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56af7990e3c91e86124a6925703d5432">&#9670;&#160;</a></span>Color() <span class="overload">[5/5]</span></h2>
+<a id="a0059abd4c95be9047deca419b6a4e985" name="a0059abd4c95be9047deca419b6a4e985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0059abd4c95be9047deca419b6a4e985">&#9670;&#160;</a></span>Color() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -299,15 +211,88 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Color::Color </td>
+          <td class="memname">unify::Color::Color </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classunify_1_1ColorUnit.html">ColorUnit</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>colorUnit</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab83ea87668850862ed45b30635e9b995" name="ab83ea87668850862ed45b30635e9b995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab83ea87668850862ed45b30635e9b995">&#9670;&#160;</a></span>Color() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unify::Color::Color </td>
+          <td>(</td>
+          <td class="paramtype">const Color &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae44bec4c60f33a6267547fca10cdf35" name="aae44bec4c60f33a6267547fca10cdf35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae44bec4c60f33a6267547fca10cdf35">&#9670;&#160;</a></span>Color() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unify::Color::Color </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fb">unify::Order</a></td>          <td class="paramname"><span class="paramname"><em>order</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba287566ddad210df6ae852a39bf72cf94">RGBA</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>defaultAlpha</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -315,97 +300,132 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a4353eba6f8b8deb28a4fffa76c9954db" name="a4353eba6f8b8deb28a4fffa76c9954db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4353eba6f8b8deb28a4fffa76c9954db">&#9670;&#160;</a></span>GetAlpha()</h2>
+<a id="a149d3d05f82555750610c032123e7f16" name="a149d3d05f82555750610c032123e7f16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a149d3d05f82555750610c032123e7f16">&#9670;&#160;</a></span>GetAlpha()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> Color::GetAlpha </td>
+          <td class="memname"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> unify::Color::GetAlpha </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns the alpha color component. </p>
 
 </div>
 </div>
-<a id="abc86295756a720d4917a87c165c6c059" name="abc86295756a720d4917a87c165c6c059"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc86295756a720d4917a87c165c6c059">&#9670;&#160;</a></span>GetBlue()</h2>
+<a id="a6255f93c11e2972285bbdee509ddcb37" name="a6255f93c11e2972285bbdee509ddcb37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6255f93c11e2972285bbdee509ddcb37">&#9670;&#160;</a></span>GetBlue()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> Color::GetBlue </td>
+          <td class="memname"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> unify::Color::GetBlue </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns the blue color component. </p>
 
 </div>
 </div>
-<a id="a3e8cc7a8d7dbd1f48c51393d37d409ed" name="a3e8cc7a8d7dbd1f48c51393d37d409ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e8cc7a8d7dbd1f48c51393d37d409ed">&#9670;&#160;</a></span>GetGreen()</h2>
+<a id="a5dbdd74db852627af6c0ad9af8fa1413" name="a5dbdd74db852627af6c0ad9af8fa1413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dbdd74db852627af6c0ad9af8fa1413">&#9670;&#160;</a></span>GetGreen()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> Color::GetGreen </td>
+          <td class="memname"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> unify::Color::GetGreen </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns the green color component. </p>
 
 </div>
 </div>
-<a id="a3afff9e9a4a56289a229311050ebde09" name="a3afff9e9a4a56289a229311050ebde09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3afff9e9a4a56289a229311050ebde09">&#9670;&#160;</a></span>GetRed()</h2>
+<a id="a4ee81770f79294138e131af04dcbf92b" name="a4ee81770f79294138e131af04dcbf92b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ee81770f79294138e131af04dcbf92b">&#9670;&#160;</a></span>GetRed()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a> Color::GetRed </td>
+          <td class="memname"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> unify::Color::GetRed </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns the red color component. </p>
 
 </div>
 </div>
-<a id="a1df3727a270fb4dcc22749a3ee7febc3" name="a1df3727a270fb4dcc22749a3ee7febc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1df3727a270fb4dcc22749a3ee7febc3">&#9670;&#160;</a></span>Interpulate()</h2>
+<a id="af426c680b38592077e6a3adf82c7c8ca" name="af426c680b38592077e6a3adf82c7c8ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af426c680b38592077e6a3adf82c7c8ca">&#9670;&#160;</a></span>Interpolate()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Color::Interpulate </td>
+          <td class="memname">void unify::Color::Interpolate </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a></td>          <td class="paramname"><span class="paramname"><em>colorA</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a></td>          <td class="paramname"><span class="paramname"><em>colorA</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a></td>          <td class="paramname"><span class="paramname"><em>colorB</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a></td>          <td class="paramname"><span class="paramname"><em>colorB</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -413,406 +433,590 @@ Friends</h2></td></tr>
           <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>ratio</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Interpulate between two colors colors. </p>
+<p>Interpolate between two colors colors. </p>
 
 </div>
 </div>
-<a id="a88f22ab34b14e6976e6b9ef2177b90cf" name="a88f22ab34b14e6976e6b9ef2177b90cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88f22ab34b14e6976e6b9ef2177b90cf">&#9670;&#160;</a></span>operator ColorUnit()</h2>
+<a id="a6d717792d43099fe4e116f8b3b2d5e16" name="a6d717792d43099fe4e116f8b3b2d5e16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d717792d43099fe4e116f8b3b2d5e16">&#9670;&#160;</a></span>operator unsigned int()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Color::operator <a class="el" href="classunify_1_1ColorUnit.html">ColorUnit</a> </td>
+          <td class="memname">unify::Color::operator unsigned int </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a1edba280b80fd28638dc8c8488f35fd5" name="a1edba280b80fd28638dc8c8488f35fd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1edba280b80fd28638dc8c8488f35fd5">&#9670;&#160;</a></span>operator unsigned int()</h2>
+<a id="a991b174f91fc2c98926df6d56892d48f" name="a991b174f91fc2c98926df6d56892d48f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a991b174f91fc2c98926df6d56892d48f">&#9670;&#160;</a></span>operator!=()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Color::operator unsigned int </td>
+          <td class="memname">bool unify::Color::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70f8a858ac64e18d58863e36f4ba8b6a" name="a70f8a858ac64e18d58863e36f4ba8b6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70f8a858ac64e18d58863e36f4ba8b6a">&#9670;&#160;</a></span>operator*() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> unify::Color::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4251d18420ba6e33348a491ed6acf53" name="aa4251d18420ba6e33348a491ed6acf53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4251d18420ba6e33348a491ed6acf53">&#9670;&#160;</a></span>operator*() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> unify::Color::operator* </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af42e5b25ddd0479a76a393694a4bc315" name="af42e5b25ddd0479a76a393694a4bc315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af42e5b25ddd0479a76a393694a4bc315">&#9670;&#160;</a></span>operator*=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp; unify::Color::operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1406d33283ae4044e342a7819bdc89ca" name="a1406d33283ae4044e342a7819bdc89ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1406d33283ae4044e342a7819bdc89ca">&#9670;&#160;</a></span>operator*=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp; unify::Color::operator*= </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e325e885d2b62fc655fb67450715c9b" name="a1e325e885d2b62fc655fb67450715c9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e325e885d2b62fc655fb67450715c9b">&#9670;&#160;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> unify::Color::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33bb5c8077155cadd360a6f15a452584" name="a33bb5c8077155cadd360a6f15a452584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33bb5c8077155cadd360a6f15a452584">&#9670;&#160;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp; unify::Color::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7080450722bc8ef39125d63b28df9f7c" name="a7080450722bc8ef39125d63b28df9f7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7080450722bc8ef39125d63b28df9f7c">&#9670;&#160;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> unify::Color::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d7ae4d39961c94376717a3496a67e7b" name="a9d7ae4d39961c94376717a3496a67e7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d7ae4d39961c94376717a3496a67e7b">&#9670;&#160;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp; unify::Color::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a880ccf99cd340c31a7809927599d6d5d" name="a880ccf99cd340c31a7809927599d6d5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a880ccf99cd340c31a7809927599d6d5d">&#9670;&#160;</a></span>operator/() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> unify::Color::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38473a7a9ad1cd6c1260955d6c7e7489" name="a38473a7a9ad1cd6c1260955d6c7e7489"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38473a7a9ad1cd6c1260955d6c7e7489">&#9670;&#160;</a></span>operator/() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> unify::Color::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2d12c485d8194f44708beb547f0bfb3" name="ab2d12c485d8194f44708beb547f0bfb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2d12c485d8194f44708beb547f0bfb3">&#9670;&#160;</a></span>operator/=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp; unify::Color::operator/= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7895cd933fcf3269d87c7487747cb779" name="a7895cd933fcf3269d87c7487747cb779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7895cd933fcf3269d87c7487747cb779">&#9670;&#160;</a></span>operator/=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp; unify::Color::operator/= </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1009920d2aa05876096fbc6f14440649" name="a1009920d2aa05876096fbc6f14440649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1009920d2aa05876096fbc6f14440649">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool unify::Color::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a0649fad4bf15772fad9fbddbd6a4da" name="a2a0649fad4bf15772fad9fbddbd6a4da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a0649fad4bf15772fad9fbddbd6a4da">&#9670;&#160;</a></span>Order()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fb">Order</a> unify::Color::Order </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Get the order of the color. </p>
+<dl class="section return"><dt>Returns</dt><dd>order</dd></dl>
 
 </div>
 </div>
-<a id="af7a105f6ee16c7943ffc636424be6936" name="af7a105f6ee16c7943ffc636424be6936"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7a105f6ee16c7943ffc636424be6936">&#9670;&#160;</a></span>operator!=()</h2>
+<a id="a7c2bb7eb64c3d6978d5b6340b07d7512" name="a7c2bb7eb64c3d6978d5b6340b07d7512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c2bb7eb64c3d6978d5b6340b07d7512">&#9670;&#160;</a></span>SetAlpha()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Color::operator!= </td>
+          <td class="memname">void unify::Color::SetAlpha </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aabd5d3b1a9e7a0f52b289c1f5c7f0ec7" name="aabd5d3b1a9e7a0f52b289c1f5c7f0ec7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabd5d3b1a9e7a0f52b289c1f5c7f0ec7">&#9670;&#160;</a></span>operator*() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> Color::operator* </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afcf6c112ab6662955022a16f8845a2d8" name="afcf6c112ab6662955022a16f8845a2d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcf6c112ab6662955022a16f8845a2d8">&#9670;&#160;</a></span>operator*() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> Color::operator* </td>
-          <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af1ea86648f65b720778301206fe92846" name="af1ea86648f65b720778301206fe92846"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1ea86648f65b720778301206fe92846">&#9670;&#160;</a></span>operator*=() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp; Color::operator*= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6ed06b0955c675db2ca774d40407fe7a" name="a6ed06b0955c675db2ca774d40407fe7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ed06b0955c675db2ca774d40407fe7a">&#9670;&#160;</a></span>operator*=() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp; Color::operator*= </td>
-          <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aeac606905706425a7f7da965df77df9f" name="aeac606905706425a7f7da965df77df9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeac606905706425a7f7da965df77df9f">&#9670;&#160;</a></span>operator+()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> Color::operator+ </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a07302cb348f125aa032c7947dd28353f" name="a07302cb348f125aa032c7947dd28353f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07302cb348f125aa032c7947dd28353f">&#9670;&#160;</a></span>operator+=()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp; Color::operator+= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0d0d7cb9d2d9cb8df1c79198ec3de4c1" name="a0d0d7cb9d2d9cb8df1c79198ec3de4c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d0d7cb9d2d9cb8df1c79198ec3de4c1">&#9670;&#160;</a></span>operator-()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> Color::operator- </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a975249eae03c3b3fff698ce278670345" name="a975249eae03c3b3fff698ce278670345"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a975249eae03c3b3fff698ce278670345">&#9670;&#160;</a></span>operator-=()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp; Color::operator-= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a890523531de61c1aec84e5b2a1307ef3" name="a890523531de61c1aec84e5b2a1307ef3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a890523531de61c1aec84e5b2a1307ef3">&#9670;&#160;</a></span>operator/() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> Color::operator/ </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8ff9a5019af594f9fcade1c0080d98d7" name="a8ff9a5019af594f9fcade1c0080d98d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ff9a5019af594f9fcade1c0080d98d7">&#9670;&#160;</a></span>operator/() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> Color::operator/ </td>
-          <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab56c3e10c325157a80245fd88b59d6c5" name="ab56c3e10c325157a80245fd88b59d6c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab56c3e10c325157a80245fd88b59d6c5">&#9670;&#160;</a></span>operator/=() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp; Color::operator/= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8b48c3483996eb5dc2bdb60582934cf8" name="a8b48c3483996eb5dc2bdb60582934cf8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b48c3483996eb5dc2bdb60582934cf8">&#9670;&#160;</a></span>operator/=() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp; Color::operator/= </td>
-          <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac91555626db81da379b3e2ecdca86292" name="ac91555626db81da379b3e2ecdca86292"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac91555626db81da379b3e2ecdca86292">&#9670;&#160;</a></span>operator==()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Color::operator== </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0c336f199cf5c60b60b30022d54c5d77" name="a0c336f199cf5c60b60b30022d54c5d77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c336f199cf5c60b60b30022d54c5d77">&#9670;&#160;</a></span>SetAlpha()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Color::SetAlpha </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Sets the alpha component of the color. </p>
 
 </div>
 </div>
-<a id="a19c932020de62ccd1f6e9d205f45b271" name="a19c932020de62ccd1f6e9d205f45b271"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19c932020de62ccd1f6e9d205f45b271">&#9670;&#160;</a></span>SetBlue()</h2>
+<a id="a3da58fbdf0846dbb3d533d62cf4f603c" name="a3da58fbdf0846dbb3d533d62cf4f603c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3da58fbdf0846dbb3d533d62cf4f603c">&#9670;&#160;</a></span>SetBlue()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Color::SetBlue </td>
+          <td class="memname">void unify::Color::SetBlue </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Sets the blue component of the color. </p>
 
 </div>
 </div>
-<a id="a4884e9566d50fe926fa0e58d19fc47b5" name="a4884e9566d50fe926fa0e58d19fc47b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4884e9566d50fe926fa0e58d19fc47b5">&#9670;&#160;</a></span>SetGreen()</h2>
+<a id="a011f2471b16dbd6d4f292c7a0b9978fd" name="a011f2471b16dbd6d4f292c7a0b9978fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a011f2471b16dbd6d4f292c7a0b9978fd">&#9670;&#160;</a></span>SetGreen()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Color::SetGreen </td>
+          <td class="memname">void unify::Color::SetGreen </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>g</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>g</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Sets the green component of the color. </p>
 
 </div>
 </div>
-<a id="a37569aa8abb06eb2eef2aba698d7d4bc" name="a37569aa8abb06eb2eef2aba698d7d4bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37569aa8abb06eb2eef2aba698d7d4bc">&#9670;&#160;</a></span>SetRed()</h2>
+<a id="afbda80dfbcf4dcf1591c4ba46628a455" name="afbda80dfbcf4dcf1591c4ba46628a455"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbda80dfbcf4dcf1591c4ba46628a455">&#9670;&#160;</a></span>SetRed()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Color::SetRed </td>
+          <td class="memname">void unify::Color::SetRed </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Sets the red component of the color. </p>
 
 </div>
 </div>
-<a id="a29f8f964e5782416c4abee28dbf594b6" name="a29f8f964e5782416c4abee28dbf594b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29f8f964e5782416c4abee28dbf594b6">&#9670;&#160;</a></span>SetRGBA()</h2>
+<a id="acc5d4b6c66fb383befd83549b83a564e" name="acc5d4b6c66fb383befd83549b83a564e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc5d4b6c66fb383befd83549b83a564e">&#9670;&#160;</a></span>SetRGBA()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Color::SetRGBA </td>
+          <td class="memname">void unify::Color::SetRGBA </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+          <td class="paramtype"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+          <td class="paramtype"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+          <td class="paramtype"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Set all color components. </p>
 
 </div>
 </div>
-<a id="ab6ba4294480ac7cfdfc22620b7d8a484" name="ab6ba4294480ac7cfdfc22620b7d8a484"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6ba4294480ac7cfdfc22620b7d8a484">&#9670;&#160;</a></span>ToString()</h2>
+<a id="a3b12ca69f76025de36697aeb4453c9d9" name="a3b12ca69f76025de36697aeb4453c9d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b12ca69f76025de36697aeb4453c9d9">&#9670;&#160;</a></span>ToString()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string Color::ToString </td>
+          <td class="memname">std::string unify::Color::ToString </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fb">Order</a></td>          <td class="paramname"><span class="paramname"><em>order</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba287566ddad210df6ae852a39bf72cf94">RGBA</a></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fb">unify::Order</a></td>          <td class="paramname"><span class="paramname"><em>order</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba287566ddad210df6ae852a39bf72cf94">RGBA</a></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns a string representation fo a color. </p>
@@ -820,305 +1024,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
-<a id="a2aa5eea10ec7cc1a24df2f8504ec2bae" name="a2aa5eea10ec7cc1a24df2f8504ec2bae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2aa5eea10ec7cc1a24df2f8504ec2bae">&#9670;&#160;</a></span>ColorARGB <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> ColorARGB </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4465b6cd5936979b382655cf51bfead5" name="a4465b6cd5936979b382655cf51bfead5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4465b6cd5936979b382655cf51bfead5">&#9670;&#160;</a></span>ColorARGB <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> ColorARGB </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>argb</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab9a54a7c791b7b72d8617eb9312d4613" name="ab9a54a7c791b7b72d8617eb9312d4613"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9a54a7c791b7b72d8617eb9312d4613">&#9670;&#160;</a></span>ColorBlack</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> ColorBlack </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa75fa05d6429099c28ecd955adbc986d" name="aa75fa05d6429099c28ecd955adbc986d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa75fa05d6429099c28ecd955adbc986d">&#9670;&#160;</a></span>ColorBlue</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> ColorBlue </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af00564d5887b24a1430436ec4af110ba" name="af00564d5887b24a1430436ec4af110ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af00564d5887b24a1430436ec4af110ba">&#9670;&#160;</a></span>ColorCyan</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> ColorCyan </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2f29b27b85d03e8e04564e465fff37e0" name="a2f29b27b85d03e8e04564e465fff37e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f29b27b85d03e8e04564e465fff37e0">&#9670;&#160;</a></span>ColorGreen</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> ColorGreen </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>g</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae70294aae9c6f92a9f902b1b2869c4db" name="ae70294aae9c6f92a9f902b1b2869c4db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae70294aae9c6f92a9f902b1b2869c4db">&#9670;&#160;</a></span>ColorGrey</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> ColorGrey </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>grey</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a260508c6f90552032ee5e06c55bd6cb5" name="a260508c6f90552032ee5e06c55bd6cb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a260508c6f90552032ee5e06c55bd6cb5">&#9670;&#160;</a></span>ColorMagenta</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> ColorMagenta </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>m</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1851271e03287fb123a2c2ca23b33490" name="a1851271e03287fb123a2c2ca23b33490"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1851271e03287fb123a2c2ca23b33490">&#9670;&#160;</a></span>ColorRed</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> ColorRed </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af181af860cf4d32cb65d77a8d1709988" name="af181af860cf4d32cb65d77a8d1709988"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af181af860cf4d32cb65d77a8d1709988">&#9670;&#160;</a></span>ColorRGB</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> ColorRGB </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ae70f8df67e9ee480c8fd85544ffe65d8" name="ae70f8df67e9ee480c8fd85544ffe65d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae70f8df67e9ee480c8fd85544ffe65d8">&#9670;&#160;</a></span>ColorRGBA <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae70f8df67e9ee480c8fd85544ffe65d8">&#9670;&#160;</a></span>ColorRGBA</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1127,128 +1034,24 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> ColorRGBA </td>
+          <td class="memname"><a class="el" href="#ac28e95b187261fc882e4e19adce4b1b5">Color</a> ColorRGBA </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+          <td class="paramtype"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+          <td class="paramtype"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+          <td class="paramtype"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab5d78d6830b9a50146d90631c77de91e" name="ab5d78d6830b9a50146d90631c77de91e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5d78d6830b9a50146d90631c77de91e">&#9670;&#160;</a></span>ColorRGBA <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> ColorRGBA </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>rgba</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="acf7a70038f2e5edb8e27a573c408a447" name="acf7a70038f2e5edb8e27a573c408a447"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf7a70038f2e5edb8e27a573c408a447">&#9670;&#160;</a></span>ColorWhite</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> ColorWhite </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a72c412f1534bf9e7b924b3462cebf3fc" name="a72c412f1534bf9e7b924b3462cebf3fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72c412f1534bf9e7b924b3462cebf3fc">&#9670;&#160;</a></span>ColorYellow</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> ColorYellow </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac91a81efa271ee003b0d242644ccaef9" name="ac91a81efa271ee003b0d242644ccaef9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac91a81efa271ee003b0d242644ccaef9">&#9670;&#160;</a></span>ColorZero</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a9a742cbe9f9f4037f5d9f4e81a9b2428">Color</a> ColorZero </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td class="paramtype"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Color::Component</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1282,7 +1085,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a> unify::Color::a</td>
+          <td class="memname"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> unify::Color::a</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1296,7 +1099,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a> unify::Color::b</td>
+          <td class="memname"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> unify::Color::b</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1338,7 +1141,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a> unify::Color::g</td>
+          <td class="memname"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> unify::Color::g</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1366,7 +1169,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a28b48114f5fd2efb97a70dc3464e0f5d">Component</a> unify::Color::r</td>
+          <td class="memname"><a class="el" href="#a4a821e049590beb4def6d049abbb4f19">Component</a> unify::Color::r</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1375,7 +1178,7 @@ Friends</h2></td></tr>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>unify/<a class="el" href="Color_8h_source.html">Color.h</a></li>
-<li>unify/<a class="el" href="Color_8cpp.html">Color.cpp</a></li>
+<li>unify/<a class="el" href="Color_8inl_source.html">Color.inl</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
