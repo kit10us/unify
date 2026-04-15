@@ -25,6 +25,7 @@
 #include <unify/Unify.h>
 #include <unify/String.h>
 #include <unify/Angle.h>
+#include <unify/Cast.h>
 #include <unify/Exception.h>
 
 namespace unify
@@ -50,7 +51,6 @@ namespace unify
 		
 		// Conversion operators...
 		V2< T > & operator = ( const Size< T > & size );
-		V2< T > & operator = ( const V3< T > & vec3 );
 
 		// binary operators
 		V2< T > & operator = ( const V2< T > & vec );
@@ -95,7 +95,7 @@ namespace unify
 		/// <summary>
 		/// Returns the distance to a vector.
 		/// </summary>
-		T DistanceTo(const V2<T> & to) const;
+		T Distance(const V2<T> & to) const;
 
 		/// <summary>
 		/// Returns the dot product (sum of products) of two vectors.
@@ -113,11 +113,6 @@ namespace unify
 		/// <returns></returns>
 		bool IsZero() const;
 
-        /// <summary>
-        /// Returns a string representation of the vector.
-        /// </summary>
-        std::string ToString() const;
-
 		// Named constructors
 		static V2< T > V2Zero();
 		static V2< T > V2Lerp(V2< T > first, V2< T > second, float ratio);
@@ -128,11 +123,11 @@ namespace unify
 		static T V2Dot(const V2< T > & l, const V2< T > &  r);
 	};
 
-
 	template<typename T>
-	inline
-	std::string Cast(const V2<T> vec)
+	inline std::string Cast(const V2<T> vec)
 	{
-		return "{" + Cast< std::string >(vec.x) + ", " + Cast< std::string >(vec.y) + "}";
-	}}
+		return Cast< std::string >(vec.x) + ", " + Cast< std::string >(vec.y);
+	}
+}
+
 #include <unify/V2.inl>

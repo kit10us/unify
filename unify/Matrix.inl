@@ -919,9 +919,9 @@ namespace unify
 	}
 
 	inline
-	Ray Matrix::TransformRay( Ray ray ) const
+	Ray< float > Matrix::TransformRay( Ray< float > ray ) const
 	{
-		Ray out{ ray };
+		Ray< float > out{ ray };
 		out.origin = TransformCoord( out.origin );
 		out.direction = TransformNormal( out.direction );
 		return out;
@@ -1002,33 +1002,33 @@ namespace unify
 	}
 
 	inline
-	void Matrix::FromString( std::string text )
-	{	
+	void Matrix::FromString( std::string_view text )
+	{ 
 		size_t index = 0;
 		size_t left = 0;
-		size_t right = 0;
-	
-		char sep = 0;
+		
+		// Determine separator
+		char sep = ( text.find( ',' ) != std::string_view::npos ) ? ',' : ' ';
 
-		if( sep == 0 && text.find( ',' ) != std::string::npos )
+		while ( index < 16 ) // Assuming 4x4 matrix
 		{
-			sep = ',';
-		}
-		if( sep == 0 && text.find( ' ' ) != std::string::npos )
-		{
-			sep = ' ';
-		}
+			size_t right = text.find( sep, left );
+			
+			// Extract view without allocation
+			std::string_view value_view = text.substr( left, right - left );
+			
+			// Trim leading/trailing whitespace if necessary
+			// value_view = Trim(value_view); 
 
-		assert( sep );
+			if ( !value_view.empty() )
+			{
+				linear[index] = Cast< float, std::string >(std::string(value_view.data(), value_view.size()));
+				index++;
+			}
 
-		do
-		{
-			right = text.find( sep, left );
-			std::string value = text.substr( left, right - left );
-			linear[index] = Cast< float >( value );
+			if ( right == std::string_view::npos ) break;
 			left = right + 1;
-			index++;
-		} while ( right != std::string::npos );
+		}
 	}
 
 	inline

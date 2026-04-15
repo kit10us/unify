@@ -71,15 +71,6 @@ namespace unify
 	}
 
 	template< typename T >
-	V3< T >::V3(std::string text)
-	{
-		std::vector< T > split = String::Split< T >(text, ',');
-		x = split[0];
-		y = split[1];
-		z = split[2];
-	}
-
-	template< typename T >
 	V3< T >& V3< T >::operator += (const V3< T >& vec)
 	{
 		x += vec.x;
@@ -278,7 +269,7 @@ namespace unify
 	}
 
 	template< typename T >
-	const T V3< T >::DistanceTo(const V3< T >& to) const
+	const T V3< T >::Distance(const V3< T >& to) const
 	{
 		V3<T> d;
 		d = to - *this;
@@ -295,12 +286,6 @@ namespace unify
 	Angle V3< T >::DotAngle(const V3< T >& a) const
 	{
 		return AngleInRadians(acos(Dot(a) / (Length() * a.Length())));
-	}
-
-	template< typename T >
-	std::string V3< T >::ToString() const
-	{
-		return Cast< std::string >(x) + ", " + Cast< std::string >(y) + ", " + Cast< std::string >(z);
 	}
 
 	template< typename T >

@@ -134,7 +134,10 @@ namespace unify
 		/// Ensures our value is within 360 degrees, without loss of precision (if we are 367, then we become 7, etc.).
 		/// Returns the change in magnitude relative to 360 (367 returns 1, -728 returns -2, etc.).
         ///</summary>
-		int Normalize();
+		///<returns>
+		/// The change in magnitude relative to 360 (367 returns 1, -728 returns -2, etc.).
+		///</returns>
+		float Normalize();
 
 		/// <summary>
 		/// Returns the sine of this angle.

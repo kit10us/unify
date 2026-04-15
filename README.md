@@ -1,75 +1,85 @@
-**GNU GENERAL PUBLIC LICENSE** (Version 3, 29 June 2007)
-# Unify
-Unify is a library of general purpose data structures and functionality to support the creation of cleaner, standized code. While it supports many general features, it is strongly developed for use with 2D and 3D graphical applications.
+## GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)
 
-The original interation of the library dates back to around C++98, and you will find some legacy mechanism and paradigms with it that are exist in their form to support features that have been integrated into existing projects. The project had a first major overhaul with the integration of C++11. Before this, it leaned heavily on Boost, such as for smart pointers, and other features (some are still included in one form or another to support legacy projects).
+# Unify Template Library (UTL)
+Unify Template Library is a general-purpose C++ library designed to facilitate cleaner, standardized code across complex systems. While it provides a broad range of utilities, it is architected with a specific focus on 2D and 3D graphical applications and real-time systems.
 
-While the library had been held together for over two decades, with step ups based on C++ version iterations and other techincal improvements, it is target for another major refactor to C++17. This update intends to remove many legacy features that have been superceeded by C++ language advances, that are best supported with other, more dedicated projects (such as https://www.etlcpp.com/), and those features that are niche or just don't fit the overall theme and responsibility of the Unify library.
+# Evolution and Vision
+Originating in the C++98 era, Unify has evolved through two decades of industry changes. After a major shift to C++11 to integrate smart pointers and modern memory management, the library is currently undergoing a strategic refactor to C++17/20.
 
-Attempts will be made throughout the transition to document alternatives to important features, and those other projects external to Unify have depended upon (such as the DataLock, Stream, and Containers/Buffers features).
+The goal of this update is to:
 
-[Source Code Documentation](https://kit10us.github.io/unify)
+Deprecate legacy mechanisms superseded by modern language standards.
 
-It attempts to accomplish this in several ways:
-- Create common named data structure types specific to purpose and need. Such as *angles, vectors, data streams, etc*.
-- Provide a place for common type functionality, reducing duplicate and possibly vague implementations.
-- Support named functionality to provide clearer implementation intention. For example, instead of *float positionX, positionY* you have *V2 position*.
-- Have a single place to support holistic functional improvements and fixes.
-- Allow independence from 3rd party libraries which helps promote portable solutions.
-- Reduce code complexity and verbosity by supporting function overloading. For example, instead of *MoveCarDirectionV2(float x, float y)* you have *MoveCar(V2 direction)*.
+Offload non-core responsibilities to specialized projects (e.g., ETL for embedded containers).
 
-# Optimizations
-Numerous classes are not implicitly initialized, such as the Color class. For some of these, these are optimization is a consideration, however, for others, it is for troubleshooting. Determining the default value is not typically straight forward for these types, and implicitly initializing them to a _reasonable_ value would likely hide bugs. For example, with a Color, initializing to components all 0s is trivial, and it could be argued that there is little to no performance related issues for doing so, however, if all components were 0, this could include the alpha channel. This could result in geometry not visably render at all. I could imagine that the color not having been set would be very low on the minds of the poor sole having to troubleshoot missing geometry. Worst case, and quite reasonably, the troubleshooting blame would fall on the naturally complex rendering pipeline, all for missing a one line, possibly one number, change. In this particular case, random garbage values would likely standout as the geometry would look akin to psychopharmacudical trip. This would apply to other types as well, such as vectors and rectables.
+Streamline the API to focus on high-performance math and system primitives.
 
-## Pass parameter by-value Versus by-pointer (by-Reference)
-When determining when parameters should be passed by value, or by reference, we should consider what is best for optimal performance. 
+[Source Code Documentation](https://kit10us.github.io/unify/html/annotated.html)
 
-- By-value avoids a pointers and references require derefrencing, which might cause a cache miss.
-- Modern x64 processors utilize 128-bit SIMD registers (such as XMM0 through XMM15). A 16-byte object (such as a 4-float quaternion) fits exactly into a single register. By passing these by value, the compiler can often keep the data entirely within the CPU's register file, avoideing the need to ever write the data to the stack or read it from memory.
+# Core Philosophy
+Unify achieves its goals through several architectural pillars:
 
-# The History
-Initially, the Unify library was for educational purposes. It provided a place where you could learn implementation details of game data structure functionality, without just relying on 3rd party libraries. Additionally, it was a place for public example, as many examples of these implementations are isolated pieces of code, disconnected from the greater picture and related example functionality.
+Purpose-Driven Types: Provides semantic types (Angles, Vectors, Streams) to replace vague primitives.
 
-It continued to mature into a library of features that could be shared across multiple projects.    
+Semantic Clarity: Promotes intent-based naming (e.g., using V2 instead of two independent floats).
+
+Dependency Isolation: Minimizes reliance on third-party libraries to ensure maximum portability.
+
+Complexity Reduction: Extensive use of function overloading to reduce API verbosity.
+
+# Features
+Multi-platform: First-class support for Windows (MSVC) and Linux (GCC/Clang).
+
+Unit Testing: Fully integrated GoogleTest (GTest) suite via CTest.
+
+# Setup and Development
+## Generate Project Files
+To generate build files for Windows (Visual Studio 2022):
+cmake -S . -B build -G "Visual Studio 17 2022"
+
+## Enable Unit Testing
+To include the test suite in your build:
+cmake -S . -B build -G "Visual Studio 17 2022" -DUNIFY_BUILD_TESTS=ON
+
+# Standards and Practices
+## Separation of Concerns
+Unify maintains strict isolation between domains. For example, CMake logic is compartmentalized into a dedicated /cmake folder, keeping the root CMakeLists.txt clean and high-level.
+
+## Directory and Naming Conventions
+Naming formats are domain-specific. While this may result in a "clash" between different sections (e.g., build system vs. source code), it ensures that a specialist in one area (like CMake) finds a familiar, standard environment for that specific domain.
+
+# Optimization Philosophy
+## Explicit Initialization
+Many Unify types (e.g., Color, V3) are not implicitly initialized. This is a deliberate architectural choice:
+
+1. Performance: Avoids redundant writes in tight loops where the data will be immediately overwritten.
+
+2. Debugging: Prevents silent bugs. For instance, initializing a Color to 0 (Transparent Black) could hide a rendering bug behind an invisible object. Random "garbage" values make initialization failures immediately obvious during visual testing.
+
+## Memory and Register Optimization
+Unify prioritizes CPU register efficiency:
+
+* Pass-by-Value: Small types (<= 16 bytes, such as V3 or Quaternion) are passed by value. This allows compilers to utilize 128-bit SIMD registers (XMM), keeping data within the CPU's register file and avoiding stack-frame overhead or potential cache misses from pointer dereferencing.
 
 # Source Code Requirements
-The following section covers requirements when developing within Unify. These are not standards, as much as compatibility requirements.
+## Implementation Isolation (.inl)
+To maintain clean, readable headers, complex template and function implementations are housed in separate files with a .inl extension. This preserves the header as a clear API reference.
 
-## Header Function Definitions
-To keep headers clean, and easier to reference for in-source documentation, function implementations should be housed in a separate header file with an _.inl_ extension. While a _.hpp_ file extension is often used for this purpose, files with that extension are commonfor various projects, and so we would like to prevent further confusion. The _.inl_ extension was used in legacy *(read: very old)* code, and is what the original Unify had used - for better or for worse.
+## Documentation Standards
+Unify uses the XML Documentation format for high portability between Visual Studio and Doxygen.
 
-## In-line Document Generation Comments
-Code comments in Unify are in the XML doc format, see: https://learn.microsoft.com/en-us/cpp/build/reference/xml-documentation-visual-cpp?view=msvc-170
+* Placement: All documentation resides in header files only to ensure IntelliSense support and prevent duplication.
 
-XML commenting is supported both with Visual Studio, as well as Doxygen, however, Doxygen style commenting is not well supported with Visual Studio, making XML commenting more portable. The XML comments are also more robust and allows for richer features like <remarks>, <seealso>, and <exception>.
-
-Inline code comments should only be within headers (whatever the extension is), and not within the c/cpp files. This is for a number of reasons:
-- Libraries are seldom distributed with their headers.
-- IDE supported (e.g. hover, intellisence).
-- To ensure no comment duplication.
-
-The following should be commented before pushing code into the repo:
-- class and struct types with (min req: summary).
-- enum types with (min req: summary).
-- All functions, except for constructors, operators, and simple accessors/mutators (getters/setters).
-
-Additional, non-duplicate, comments should be added at the developers discretion where clarity requires.
-
-## To/From String Conversions
-A DSL (Domain Specific Language) is used when casting to and from strings. All other options considered, this is the greatest option for speed and readability.
+* Requirements: All Classes, Structs, Enums, and non-trivial functions must include a <summary>.
 
 # Coding Caveats
-For every good practice in C++, there are exponentially that many bad practices. Be they by habbit, out-dated understandings, or inacurate knowledge propegation. This section will attempt to cover some the more common mal-practices.
+return string_view
+* Ownership: A string_view is a non-owning reference. Never return a string_view that points to a local function-scope string; doing so results in a dangling pointer.
 
-## Return string_view
-### *string_view* as a return
-A string_view is loosely a safe char pointer, as such that it doesn't have ownership of the memory for the string. This means that a temporary heap-allocated string does not move the life-time management responsibility to the string_view. When returning a temporary string, whose heap allocation has function scope lifetime, as a string_view, the contents of the string_view will become invalidated. This generally means that you should *only* return a string_view when it points to a string in the .rodata segment.
+* Usage: Only return a string_view when the underlying data is guaranteed to outlive the view (e.g., constants in the .rodata segment or persistent member variables).
 
-### *string_view* as a member
-Per the above section on string_view as a return type, and the lifetime/ownership of the memory, this goes for member variables as well. The string_view does not own the memory, it is basically just a pointer.
+## string_view as a Member
+Exercise extreme caution when using string_view as a class member. The class does not own the string memory; ensure the source data remains valid for the entire lifetime of the class instance.
 
-# Multi-platform Support
-Unify current can target both Windows and Linux. To support this, we make use of the CMake project generators.
-
-To generate a project for Windows:
-cmake -S . -B build -G "Visual Studio 17 2022"
+# Final Notes
+Unify is considered pre-release at the moment due to needing some modernization and optimizations. That being said, certain names of features will change **NOW** and be committed to for future revisions; this means we need to be pretty explicit in naming so we stick to **SOLID** development prinipals.

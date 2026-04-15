@@ -72,7 +72,7 @@ BSphere< T > & BSphere< T >::operator+=( const BSphere< T > & sphere )
 template< typename T >
 BSphere< T > & BSphere< T >::operator+=( V3< T > point )
 {
-	T distanceFromCenter = center.DistanceTo( point );
+	T distanceFromCenter = center.Distance( point );
 	if( distanceFromCenter > radius )
 	{
 		radius = distanceFromCenter;
@@ -101,14 +101,14 @@ T BSphere< T >::GetDiameter() const
 template< typename T >
 bool BSphere< T >::Contains( V3< T > point ) const
 {
-	T distanceFromCenter = center.DistanceTo( point );
+	T distanceFromCenter = center.Distance( point );
 	return distanceFromCenter <= radius;
 }
 
 template< typename T >
 bool BSphere< T >::Collides( BSphere< T > sphere ) const
 {
-	float d = center.DistanceTo( sphere.center );
+	float d = center.Distance( sphere.center );
 	float rt = radius + sphere.radius;
 	bool collides = d < rt;
 	return collides;

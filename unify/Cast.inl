@@ -40,11 +40,10 @@ inline constexpr bool k_always_false = false;
 template< typename TTo, class TFrom >
 TTo unify::Cast(const TFrom in )
 {
-	static_assert(sizeof(TFrom) > 16, "Cast type is larger than 16 bytes, use LargeCast.");
 	static_assert(k_always_false<TTo, TFrom>, "Unsupported cast type.");
 	throw std::bad_cast();
 }
-
+	
 template<>
 inline
 std::string unify::Cast(const std::string in)

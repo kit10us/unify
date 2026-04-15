@@ -27,6 +27,9 @@
 #include <unify/Size3.h>
 #include <unify/Ray.h>
 #include <unify/BSphere.h>
+#include <unify/LineSegment3.h>
+
+#include <optional>
 
 #ifdef min
 #undef min
@@ -37,6 +40,17 @@
 #endif
 namespace unify
 {
+	/// <summary>
+	/// A ray hit result.
+	/// </summary>
+	template< typename T >
+	struct RayHit
+	{
+		V3< T > point;
+		V3< T > normal;
+		float distance;
+	};
+
 	/// <summary>
 	/// A Bounding box.
 	/// </summary>
@@ -63,6 +77,11 @@ namespace unify
 		/// </summary>
 		BBox( T squareSize );
 
+		/// <summary>
+		/// Ensures our sup is superior and our inf, inferior.
+		/// </summary>
+		bool Fix();		
+
 		BBox< T > operator * ( const V3< T > & multiplicand ) const;
 		BBox< T > & operator *= ( const V3< T > & multiplicand );
 
@@ -81,14 +100,11 @@ namespace unify
 		void GenerateCorners( V3< T > * bounds );
 
 		/// <summary>
-		/// Reduces the bounding box to empty/zeros.
+		/// This function performs a Minkowski Sum of the current bounding box and a second, translated bounding box.
+		/// Purpose: Add bouding box with spatial locations (basically, just adds the corners + an offset). 
+		///          This allows us to be a BB of BBs.
 		/// </summary>
-		void Clear();
-
-		/// <summary>
-		/// Add bouding box with spatial locations (basically, just adds the corners + an offset). This allows us to be a BB of BBs.
-		/// </summary>
-		BBox & AddBBoxWithPosition( const BBox< T > & boundingBox, const V3< T > & position );  
+		BBox & Union( const BBox< T > boundingBox, const V3< T > position );  
 
 		/// <summary>
 		/// Ensure points are within the bounding box, else increase the bounding box to encompass them.
@@ -98,7 +114,12 @@ namespace unify
 		/// <summary>
 		/// Test if a point is withing the bounding box.
 		/// </summary>
-		bool ContainsPoint( const V3< T > & point );
+		bool ContainsPoint( const V3< T > point );
+
+		/// <summary>
+		/// Test if a bounding box is withing the bounding box.
+		/// </summary>
+		bool ContainsBBox( const BBox< T > & box );
 		
 		/// <summary>
 		/// Returns the dimensions of the bounding box.
@@ -106,44 +127,41 @@ namespace unify
 		const Size3< T > Size() const;
 
 		/// <summary>
-        /// Tests if a ray intersects with the bounding box.
+		/// Tests if a ray intersects with the bounding box.
+		/// Sets distance to the distance from the ray to the bounding box.
 		/// </summary>
-        bool Intersects( const Ray & ray, float t0, float t1 ) const;
-        
+		std::optional< RayHit< T > > Intersects( const Ray< T > & ray ) const;
+
+		/// <summary>
+		/// Tests if a ray intersects with the bounding box.
+		/// Returns the line segment of the ray that is within the bounding box.
+		/// </summary>
+		std::optional< LineSegment3< T > > Clip( const Ray< T > & ray ) const;
+
+		/// <summary>
+		/// Tests if a ray intersects with the bounding box.
+		/// </summary>
+		/// <note>
+		/// This is a faster version of Intersects() that only returns true or false, and does not calculate the hit point or distance.
+		/// </note>
+		bool Intersects( const Ray< T > & ray, T t0, T t1 ) const;
+
 		/// <summary>
 		/// Tests if a ray intersects with the bounding box.
 		/// Sets hitPoint to the first point of collision.
 		/// </summary>
-        bool Intersects( const Ray & ray, V3< float > & hitPoint ) const;
+		std::optional< RayHit< T > > Intersects( const LineSegment3< T > & segment ) const;
 
 		/// <summary>
-		/// Tests if a ray intersects with the bounding box.
-		/// Sets distance to the distance from the ray to the bounding box.
-		/// </summary>		
-		bool Intersects( const Ray & ray, float & distance ) const;
-
-		/// <summary>
-		/// Tests if a ray intersects with the bounding box.
-		/// </summary>		
-		bool Intersects( const Ray & ray ) const;
-
-		/// <summary>
-		/// Takes a point and returns a new point barrycentric to the bounding box.
+		/// Takes a point and returns a new point relative to the bounding box's inf corner.
 		/// </summary>
-		V3< T > ToBarrycentric( const V3< T > & point ) const;
+		V3< T > ToRelative( const V3< T > point ) const;
 
 		/// <summary>
 		/// Returns a bounding sphere that encompases the boundinh box.
 		/// </summary>		
 		BSphere< T > MakeBSphere() const;
-
-	private:
-
-		/// <summary>
-		/// Ensures our sup is superior and our inf, inferior.
-		/// </summary>
-		void Fix();
 	};
-
-	#include <unify/BBox.inl>
 }
+
+#include <unify/BBox.inl>

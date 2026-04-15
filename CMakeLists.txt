@@ -1,16 +1,34 @@
+#  Unify Library
+# https://github.com/kit10us/unify
+# Copyright (c) 2002, Kit10 Studios LLC
+# 
+# This file is part of Unify Library (a.k.a. Unify)
+# 
+# Unify is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# Unify is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with Unify.  If not, see <https://www.gnu.org/licenses/>.
+
 cmake_minimum_required (VERSION 3.29.0)
 
+project(unify_lib VERSION 1.0.0 LANGUAGES CXX)
+
+option(UNIFY_UNIT_TESTS "Build the Unify library unit tests" OFF)
 option(TESTS "Include unit tests" FALSE)
+
+include(cmake/ShowConfig.cmake)
+
 set(CMAKE_SUPPRESS_REGENERATION ON)
 
-if(${CMAKE_CXX_COMPILER})
-	message("CMAKE_CXX_COMPILER:" ${CMAKE_CXX_COMPILER})
-else()
-	message("CMAKE_CXX_COMPILER not set. Can impact project settings.")
-endif()
-message("")
-
-include(cmakeutil/Functions.txt)
+include(cmake/Functions.cmake)
 
 project(unify CXX)
 
@@ -21,38 +39,25 @@ function(GenerateMain)
 	
 	AddStandardCompileOptions(${TARGET_NAME})
 
-
-	file (GLOB MAIN_SOURCES "${NAMESPACE}/*.h" "${NAMESPACE}/*.cpp" "${NAMESPACE}/*.inl")
-	file (GLOB TEST_SOURCES "${NAMESPACE}/test/*.h" "${NAMESPACE}/test/*.cpp" "${NAMESPACE}/test/*.inl")
-	
-	add_library(${PROJECT_NAME} ${MAIN_SOURCES} ${TEST_SOURCES})
-	
-	# Remove unwanted compiler defintions
-	remove_definitions(
-		${UPPER_TARGET_NAME}_EXPORTS
+	file(GLOB_RECURSE ALL_SOURCES
+		"${CMAKE_CURRENT_SOURCE_DIR}/${NAMESPACE}/*.h"
+		"${CMAKE_CURRENT_SOURCE_DIR}/${NAMESPACE}/*.inl"
 	)
 
-	AddStandardCompileDefinitions(${TARGET_NAME})
+	add_library(${PROJECT_NAME} STATIC ${ALL_SOURCES})
 	
-	if(WIN32)
-		set_target_properties(${PROJECT_NAME} PROPERTIES 
-			PREFIX ""
-			SUFFIX ".lib"
-		)
-	endif()
-
-	source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${MAIN_SOURCES})
-	source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${TEST_SOURCES})
+	set_target_properties(${PROJECT_NAME} PROPERTIES
+		LINKER_LANGUAGE CXX
+		EXCLUDE_FROM_ALL TRUE
+	)
+	source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${ALL_SOURCES})
 
 	include_directories(.)
 endfunction()
 
-function(GenerateUnitTests)
-endfunction()
-
 GenerateMain()
 
-if(${TESTS})
+if(${UNIFY_UNIT_TESTS})
 	message("Including unit tests...")
-	GenerateUnitTests()
+	include(tests/CMakeLists.txt)
 endif()

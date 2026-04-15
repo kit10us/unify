@@ -25,42 +25,49 @@
 
 namespace unify
 {
+	template< typename T >
 	inline
-	Ray Ray::RayFromLineSegment( const V3< float > & startPoint, const V3< float > & endPoint )
+	Ray<T>::Ray()
+	: origin{}
+	, direction{0.0f, 0.0f, 1.0f}
 	{
-		return { startPoint, endPoint - startPoint };
-
 	}
 
+	template< typename T >
 	inline
-	Ray Ray::RayFromOrginAndDirection( const V3< float > & origin, const V3< float > & direction )
-	{
-		return { origin, direction };
-	}
-
-	inline
-	Ray::Ray()
-	{
-		// POD - no initialization.
-	}
-
-	inline
-	Ray::Ray( const V3< float > & originIn, const V3< float > & directionIn )
+	Ray<T>::Ray( const V3< T > originIn, const V3< T > directionIn )
 		: origin( originIn )
 		, direction( directionIn )
 	{
 	}
 
+	template< typename T >
 	inline
-	V3< float > Ray::InvDirection() const
+	V3< T > Ray<T>::Inverse() const
 	{
-		return V3< float >::V3Inverse( direction );
+		return V3< T >::V3Inverse( direction );
 	}
 
+	template< typename T >
 	inline
-	V3< int > Ray::Sign() const
+	V3< int > Ray<T>::Sign() const
 	{
-		V3< float > invDirection = InvDirection();
+		V3< T > invDirection = InvDirection();
 		return V3< int >( invDirection.x < 0, invDirection.y < 0, invDirection.z < 0 );
+	}
+
+	template< typename T >
+	inline
+	Ray<T> RayFromOriginAndDirection( const V3<T> origin, const V3<T> direction )
+	{
+		return { origin, direction };
+	}
+
+	template< typename T >
+	inline
+	Ray<T> RayFromLineSegment( const V3<T> startPoint, const V3<T> endPoint )
+	{
+		return { startPoint, endPoint - startPoint };
+
 	}
 }

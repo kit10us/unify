@@ -44,7 +44,6 @@ namespace unify
     	V3( const V3< T > & vec );
 		V3( const T arr[ 3 ] );
 		V3( const V2< T > & v2, float z = 0.0f );
-        explicit V3( std::string text );
 
 		// OPERATOR OVERLOADING MEMBER FUNCTIONS
 
@@ -74,13 +73,11 @@ namespace unify
         T & operator[]( size_t i );
         const T & operator[]( size_t i ) const;
 
-        std::string ToString() const;
-
         T Length() const;
 		T Normalize();
 		T Normalize( const V3< T > & norm );
 		V3< T > Absolute() const;
-		const T DistanceTo( const V3<T> & to ) const;
+		const T Distance( const V3<T> & to ) const;
 		T Dot( const V3< T > & a ) const;
 		Angle DotAngle( const V3< T > & a ) const;
 		bool IsZero() const;
@@ -104,6 +101,19 @@ namespace unify
 		static V3< T > V3Inverse( const V3< T > & v3 );
 		static V3< T > V3RotateAbout( V3< T > position, float distance, unify::Angle rotation, V3< T > pivot );
 	};
+
+	template<typename T>
+	inline std::string Cast(const V3<T> vec)
+	{
+		return Cast< std::string >(vec.x) + ", " + Cast< std::string >(vec.y) + ", " + Cast< std::string >(vec.z);
+	}
+
+	template<typename T>
+	static inline V3<T> V3FromString(const std::string& str)
+	{
+		std::vector< T > split = String::Split< T >(str, ',');
+		return V3<T>(split[0], split[1], split[2]);
+	}
 }
 
 #include <unify/V3.inl>

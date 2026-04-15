@@ -77,16 +77,6 @@ namespace unify
 	}
 
 	template< typename T >
-	V4< T >::V4(std::string text)
-	{
-		std::vector< T > split = string::Split< T >(text, ',');
-		x = split[0];
-		y = split[1];
-		z = split[2];
-		w = split[3];
-	}
-
-	template< typename T >
 	V4< T >& V4< T >::operator += (const V4< T >& vec)
 	{
 		x += vec.x;
@@ -231,7 +221,6 @@ namespace unify
 		}
 	}
 
-
 	template< typename T >
 	void V4< T >::Zero()
 	{
@@ -285,10 +274,4 @@ namespace unify
 		w = (v1.w & ~control.w) | (v2.w & control.w);
 	}
 	*/
-
-	template< typename T >
-	std::string V4< T >::ToString() const
-	{
-		return Cast< std::string >(x) + ", " + Cast< std::string >(y) + ", " + Cast< std::string >(z) + ", " + Cast< std::string >(w);
-	}
 }

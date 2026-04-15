@@ -40,14 +40,14 @@ namespace unify::String
 		std::string item;
 		while (std::getline(ss, item, delimitor))
 		{
-			destination.push_back(Cast< T >(item));
+			destination.push_back(Cast< T, std::string  >(item));
 		}
 		return destination;
 	}
 
 	template< typename T >
 	std::vector< T > Split(std::string sourceString, const std::vector< char > delimitors, bool includeEmpties)
-	{
+	{  
 		std::vector< T > destination;
 
 		size_t start = 0;
@@ -75,7 +75,7 @@ namespace unify::String
 				}
 				else
 				{
-					destination.push_back(Cast< T >(sourceString.substr(start, end - start)));
+					destination.push_back(Cast< T, std::string >(sourceString.substr(start, end - start)));
 				}
 				start = end + 1;
 			}
@@ -90,7 +90,7 @@ namespace unify::String
 		}
 		else
 		{
-			destination.push_back(Cast< T >(sourceString.substr(start, end - start)));
+			destination.push_back(Cast< T, std::string >(sourceString.substr(start, end - start)));
 		}
 
 		return destination;

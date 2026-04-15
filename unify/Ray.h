@@ -27,21 +27,42 @@
 
 namespace unify
 {
+	template< typename T = float >
 	class Ray
 	{
 	public:
-		static Ray RayFromLineSegment( const V3< float > & startPoint, const V3< float > & endPoint );
-		static Ray RayFromOrginAndDirection( const V3< float > & origin, const V3< float > & direction );
+		/// <summary>
+		/// Creates a ray from an origin and a direction.
+		/// </summary>
+		Ray( const V3<T> originIn, const V3<T> directionIn );
 
 		V3< float > origin;
 		V3< float > direction;
 
-		V3< float > InvDirection() const;
-		V3< int > Sign() const;
-
         Ray();
-		Ray( const V3< float > & originIn, const V3< float > & directionIn );
+
+		/// <summary>
+		/// Returns the inverse of the ray's direction.
+		/// </summary>
+		V3< T > Inverse() const;
+
+		/// <summary>
+		/// Returns the sign of the ray's direction components.
+		/// </summary>
+		V3< int > Sign() const;		
 	};
+
+	/// <summary>
+	/// Creates a ray from an origin and a direction.
+	/// </summary>
+	template< typename T >
+	Ray<T> RayFromOriginAndDirection( const V3<T> origin, const V3<T> direction );
+
+	/// <summary>
+	/// Creates a ray from a line segment.
+	/// </summary>
+	template< typename T >
+	Ray<T> RayFromLineSegment( const V3<T> startPoint, const V3<T> endPoint );
 }
 
 #include <unify/Ray.inl>

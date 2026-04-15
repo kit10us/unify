@@ -187,7 +187,7 @@ namespace unify
 	}
 
 	inline
-	bool Frustum::CastPoint(const unify::V2< float >& unit, unify::Ray& rayOut)
+	bool Frustum::CastPoint(const unify::V2< float >& unit, unify::Ray<float>& rayOut)
 	{
 		if (unit.x < 0 || unit.y < 0 || unit.x > 1.0f || unit.y > 1.0f)
 		{

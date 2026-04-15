@@ -23,21 +23,31 @@
 #pragma once
 
 #include <unify/Unify.h>
-#include <unify/String.h>
-#include <unify/Exception.h>
-#include <unify/test/IEventHandler.h>
-#include <unify/test/IOutputHandler.h>
-#include <memory>
+#include <unify/V3.h>
+
 
 namespace unify
 {
-	namespace test
+	/// <summary>
+	/// A line segment in 3D space.
+	/// </summary>
+	template< typename T = float >
+	class LineSegment3
 	{
-		class DefaultEventHandler : public IEventHandler
-		{
-		public:
-			virtual ~DefaultEventHandler();
-			virtual void Event( IOutputHandler::ptr output, std::string name, OutputType type );
-		};
-	}
+	public:
+		// Public members to reduce possible speed issues.
+		V3< T > begin;
+		V3< T > end;
+
+		LineSegment3() = default;
+
+		LineSegment3( const V3< T > begin, const V3< T > end );
+
+		/// <summary>
+		/// Returns the length of the line segment.
+		/// </summary>
+		T Length() const;
+    };
 }
+
+#include <unify/LineSegment3.inl>

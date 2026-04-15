@@ -23,6 +23,7 @@
 #pragma once
 
 #include <unify/Unify.h>
+#include <unify/Cast.h>
 #include <unify/String.h>
 #include <unify/Exception.h>
 
@@ -30,7 +31,7 @@ namespace unify
 {
 	template< typename T > class V3;
 
-	template< typename T >
+	template< typename T = float >
 	class V4
 	{
 	public:
@@ -42,7 +43,6 @@ namespace unify
 		V4( const V4< T > & v4 );
 		V4( const T arr[ 4 ] );
 		V4( const V3< T > & v3, float w = 1.0f );
-        explicit V4( std::string text );
 
 		void Zero();
 		T Length() const;
@@ -82,9 +82,21 @@ namespace unify
         const T & operator[]( size_t i ) const;
 
 		//void Select( const V4< T > & v1, const V4< T > & v2, const V4< float > & control );
-
-        std::string ToString() const;
 	};
+
+	template<typename T>
+	static inline V4<T> V4FromString(const std::string& str)
+	{
+		std::vector< T > split = String::Split< T >(str, ',');
+		return V4<T>(split[0], split[1], split[2], split[3]);
+	}
+
+
+	template< typename T >
+	std::string Cast(const V4< T > in)
+	{
+		return Cast< std::string >(in.x) + ", " + Cast< std::string >(in.y) + ", " + Cast< std::string >(in.z) + ", " + Cast< std::string >(in.w);
+	}
 }
 
 #include <unify/V4.inl>

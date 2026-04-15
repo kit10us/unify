@@ -94,7 +94,7 @@ namespace unify
 		/// Casts a unit point from across the frustum to a position at the front of the frustom, 
 		/// and a direction along the frustum. Returns false if unit components are not in the range [ 0, 1 ].
 		/// </summary>
-        bool CastPoint( const unify::V2< float > & unit, unify::Ray & rayOut );
+        bool CastPoint( const unify::V2< float > & unit, unify::Ray<float>& rayOut );
 
 		/// <summary>
 		/// Determine the culling characteristics of a bounding blox.

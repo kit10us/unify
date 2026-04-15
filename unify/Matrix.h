@@ -33,7 +33,6 @@
 #include <unify/Angle.h>
 #include <unify/Cast.h>
 
-#include <unify/Cast.h>
 #include <cstring>
 
 
@@ -152,7 +151,7 @@ namespace unify
 		
 		V4< float > Transform( V4< float > v4 ) const;
 	
-		Ray TransformRay( Ray ray ) const;
+		Ray< float > TransformRay( Ray< float > ray ) const;
 		BBox< float > TransformBBox( BBox< float > bbox ) const;
 		BSphere< float > TransformBSphere( BSphere< float > bsphere ) const;
 
@@ -163,7 +162,7 @@ namespace unify
 		void Orbit( const V3< float > & origin, const V2< float > & direction, Angle angle );
 
 		std::string ToString() const;
-		void FromString( std::string text );
+		void FromString( std::string_view text );
 
 		union {
 			float m[4][4];

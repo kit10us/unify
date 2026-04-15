@@ -19,26 +19,19 @@
  * along with Unify.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-#include <unify/test/DefaultAssertHandler.h>
 
-using namespace unify;
-using namespace test;
+ namespace unify
+ {
+    template< typename T >
+    LineSegment3< T >::LineSegment3( const V3< T > begin, const V3< T > end )
+        : begin( begin )
+        , end( end )
+    {
+    }
 
-DefaultAssertHandler::~DefaultAssertHandler()
-{
-}
-
-void DefaultAssertHandler::Assert( IOutputHandler::ptr output, std::string message, bool test )
-{
-	using namespace std;
-
-	if ( !test )
-	{
-		output->Output( message, OutputType::AssertFailed );
-		assert( false );
-	}
-	else
-	{
-		output->Output( message, OutputType::AssertPassed );
-	}
-}
+    template< typename T >
+    T LineSegment3< T >::Length() const
+    {
+        return V3< T >(begin).Distance(end );
+    }
+ }

@@ -25,6 +25,7 @@
 #include <unify/Unify.h>
 #include <unify/TimeDelta.h>
 #include <string>
+#include <string_view>
 #include <typeinfo>
 #include <cassert>
 #include <algorithm>

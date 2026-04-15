@@ -58,14 +58,6 @@ namespace unify
 	}
 
 	template< typename T >
-	V2< T >& V2< T >::operator = (const V3< T >& vec3)
-	{
-		x = vec3.x * vec3.z;
-		y = vec3.y * vec3.z;
-		return *this;
-	}
-
-	template< typename T >
 	V2< T >& V2< T >::operator = (const V2< T >& vec)
 	{
 		x = vec.x;
@@ -219,7 +211,7 @@ namespace unify
 	}
 
 	template< typename T >
-	T V2< T >::DistanceTo(const V2< T >& to) const
+	T V2< T >::Distance(const V2< T >& to) const
 	{
 		V2<T> d;
 		d = to - *this;
@@ -242,12 +234,6 @@ namespace unify
 	bool V2< T >::IsZero() const
 	{
 		return (x == 0) && (y == 0);
-	}
-
-	template< typename T >
-	std::string V2< T >::ToString() const
-	{
-		return Cast< std::string >(x) + ", " + Cast< std::string >(y);
 	}
 
 	// Named constructors

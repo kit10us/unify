@@ -22,8 +22,6 @@
 
 #pragma once
 
-#pragma comment( lib, "unify" )
-
 #include <unify/Undef.h>
 
 #include <limits>

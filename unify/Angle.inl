@@ -245,18 +245,18 @@ namespace unify
 	}
 
 	inline
-	int Angle::Normalize()
+	float Angle::Normalize()
 	{
-		int magnitude = 0;
+		float magnitude {};
 		while (m_radians > TAU)
 		{
 			m_radians -= TAU;
-			magnitude -= 1;
+			magnitude += 1.0f;
 		}
 		while (m_radians < 0)
 		{
 			m_radians += TAU;
-			magnitude += 1;
+			magnitude -= 1.0f;
 		}
 		return magnitude;
 	}
@@ -274,20 +274,10 @@ namespace unify
 	}
 
 	inline
-	std::string Angle::ToString(bool radians) const
+	std::string Angle::ToString( bool radians ) const
 	{
-		std::string out;
-		if (radians)
-		{
-			out = unify::Cast< std::string >(ToRadians());
-			out.push_back('r');
-		}
-		else
-		{
-			out = unify::Cast< std::string >(ToDegrees());
-			out.push_back('d');
-		}
-		return out;
+		std::string result = std::to_string(radians ? m_radians : ToDegrees());
+		result += radians ? "r" : "d";
+		return result;
 	}
-
 }
