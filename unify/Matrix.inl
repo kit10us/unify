@@ -976,58 +976,73 @@ namespace unify
 	std::string Matrix::ToString() const
 	{
 		using std::string;
-		string out;
-		out += "{";
-		for( int r = 0; r < 4; ++r )
+
+		try
 		{
+			string out;
 			out += "{";
-			for( int c = 0; c < 4; ++c )
+			for( int r = 0; r < 4; ++r )
 			{
-				out += unify::Cast<string>( (*this)(r, c) );
-				if( c < 3 )
+				out += "{";
+				for( int c = 0; c < 4; ++c )
 				{
-					out += ",";
+					out += *unify::ToString( (*this)(r, c) );
+					if( c < 3 )
+					{
+						out += ",";
+					}
+				}
+				if( r < 3 )
+				{
+					out += "}\n";
+				}
+				else
+				{
+					out += "}}";
 				}
 			}
-			if( r < 3 )
-			{
-				out += "}\n";
-			}
-			else
-			{
-				out += "}}";
-			}
+			return out;
 		}
-		return out;
+		catch( ... )
+		{
+			return "";
+		}
 	}
 
 	inline
 	void Matrix::FromString( std::string_view text )
 	{ 
-		size_t index = 0;
-		size_t left = 0;
-		
-		// Determine separator
-		char sep = ( text.find( ',' ) != std::string_view::npos ) ? ',' : ' ';
-
-		while ( index < 16 ) // Assuming 4x4 matrix
+		try
 		{
-			size_t right = text.find( sep, left );
+			size_t index = 0;
+			size_t left = 0;
 			
-			// Extract view without allocation
-			std::string_view value_view = text.substr( left, right - left );
-			
-			// Trim leading/trailing whitespace if necessary
-			// value_view = Trim(value_view); 
+			// Determine separator
+			char sep = ( text.find( ',' ) != std::string_view::npos ) ? ',' : ' ';
 
-			if ( !value_view.empty() )
+			while ( index < 16 ) // Assuming 4x4 matrix
 			{
-				linear[index] = Cast< float, std::string >(std::string(value_view.data(), value_view.size()));
-				index++;
-			}
+				size_t right = text.find( sep, left );
+				
+				// Extract view without allocation
+				std::string_view value_view = text.substr( left, right - left );
+				
+				// Trim leading/trailing whitespace if necessary
+				// value_view = Trim(value_view); 
 
-			if ( right == std::string_view::npos ) break;
-			left = right + 1;
+				if ( !value_view.empty() )
+				{
+					linear[index] = *unify::FromString<float>(value_view);
+					index++;
+				}
+
+				if ( right == std::string_view::npos ) break;
+				left = right + 1;
+			}
+		}
+		catch( ... )
+		{
+			// Do nothing.
 		}
 	}
 

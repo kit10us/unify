@@ -8,12 +8,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(FetchContent)
 FetchContent_Declare(
-    gtest
+    googletest
     GIT_REPOSITORY https://github.com/google/googletest.git
     GIT_TAG v1.17.0
 )
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(gtest)
+FetchContent_MakeAvailable(googletest)
 
 # 1. Add test source files
 add_executable(unify_unit_tests
@@ -25,6 +25,7 @@ add_executable(unify_unit_tests
     tests/tests_Ray.cpp
     tests/tests_BBox.cpp
     tests/tests_Matrix.cpp
+    tests/tests_Cast.cpp
     )
 
 target_include_directories(unify_unit_tests 
@@ -41,21 +42,26 @@ set(CMAKE_GTEST_DISCOVER_TESTS_DISCOVERY_MODE PRE_TEST)
 include(GoogleTest)
 
 # 2. Add test cases
-add_test(NAME Unify.Angle COMMAND unify_unit_tests --gtest_filter=AngleTests.*)
-add_test(NAME Unify.V2 COMMAND unify_unit_tests --gtest_filter=V2Tests.*)
-add_test(NAME Unify.V3 COMMAND unify_unit_tests --gtest_filter=V3Tests.*)
-add_test(NAME Unify.V4 COMMAND unify_unit_tests --gtest_filter=V4Tests.*)
-add_test(NAME Unify.LineSegment3 COMMAND unify_unit_tests --gtest_filter=LineSegment3Tests.*)
-add_test(NAME Unify.Ray COMMAND unify_unit_tests --gtest_filter=RayTests.*)
-add_test(NAME Unify.BBox COMMAND unify_unit_tests --gtest_filter=BBoxTests.*)
-add_test(NAME Unify.Matrix COMMAND unify_unit_tests --gtest_filter=MatrixTests.*)
+#add_test(NAME Unify.Angle COMMAND unify_unit_tests --gtest_filter=AngleTests.*)
+#add_test(NAME Unify.V2 COMMAND unify_unit_tests --gtest_filter=V2Tests.*)
+#add_test(NAME Unify.V3 COMMAND unify_unit_tests --gtest_filter=V3Tests.*)
+#add_test(NAME Unify.V4 COMMAND unify_unit_tests --gtest_filter=V4Tests.*)
+#add_test(NAME Unify.LineSegment3 COMMAND unify_unit_tests --gtest_filter=LineSegment3Tests.*)
+#add_test(NAME Unify.Ray COMMAND unify_unit_tests --gtest_filter=RayTests.*)
+#add_test(NAME Unify.BBox COMMAND unify_unit_tests --gtest_filter=BBoxTests.*)
+#add_test(NAME Unify.Matrix COMMAND unify_unit_tests --gtest_filter=MatrixTests.*)
+
+gtest_discover_tests(unify_unit_tests 
+    WORKING_DIRECTORY "$<TARGET_FILE_DIR:unify_unit_tests>"
+    TEST_PREFIX "Unify."
+)
 
 # 3. Set test properties (optional)
-set_tests_properties(Unify.Angle PROPERTIES LABELS "Angle")
-set_tests_properties(Unify.V2 PROPERTIES LABELS "V2")
-set_tests_properties(Unify.V3 PROPERTIES LABELS "V3")
-set_tests_properties(Unify.V4 PROPERTIES LABELS "V4")
-set_tests_properties(Unify.LineSegment3 PROPERTIES LABELS "LineSegment3")
-set_tests_properties(Unify.Ray PROPERTIES LABELS "Ray")
-set_tests_properties(Unify.BBox PROPERTIES LABELS "BBox")
-set_tests_properties(Unify.Matrix PROPERTIES LABELS "Matrix")
+#set_tests_properties(Unify.Angle PROPERTIES LABELS "Angle")
+#set_tests_properties(Unify.V2 PROPERTIES LABELS "V2")
+#set_tests_properties(Unify.V3 PROPERTIES LABELS "V3")
+#set_tests_properties(Unify.V4 PROPERTIES LABELS "V4")
+#set_tests_properties(Unify.LineSegment3 PROPERTIES LABELS "LineSegment3")
+#set_tests_properties(Unify.Ray PROPERTIES LABELS "Ray")
+#set_tests_properties(Unify.BBox PROPERTIES LABELS "BBox")
+#set_tests_properties(Unify.Matrix PROPERTIES LABELS "Matrix")

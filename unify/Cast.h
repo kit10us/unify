@@ -22,20 +22,37 @@
 
 #pragma once
 
-#include <unify/Unify.h>
-#include <unify/TimeDelta.h>
+//#include <unify/Unify.h>
+//#include <unify/TimeDelta.h>
 #include <string>
 #include <string_view>
+#include <charconv>
 #include <typeinfo>
 #include <cassert>
 #include <algorithm>
+#include <optional>
 
 namespace unify
 {
+	struct Char
+	{
+		Char(char c) : c{ c } {}
+		char c;
+	};
+
+	/*
 	/// <summary> 
 	/// Casts small types (<= 16 bytes) using register-optimized pass-by-value.
 	/// </summary>
-	template< typename TTo, typename TFrom > TTo Cast(const TFrom in );
+	template< typename TTo, typename TFrom > 
+	std::optional<TTo> Cast(const TFrom in ) noexcept = delete;
+	*/
+
+	template<typename TFrom> 
+	std::optional<std::string> ToString(const TFrom in ) noexcept = delete;
+
+	template<typename TTo> 
+	std::optional<TTo> FromString(std::string_view in ) noexcept = delete;
 
 	/// <summary>
 	/// Polymorphic downcast. In debug builds, this will assert if the cast is invalid. In release builds, this will perform a static_cast without checking.

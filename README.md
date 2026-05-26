@@ -1,7 +1,9 @@
 ## GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)
 
 # Unify Template Library (UTL)
-Unify Template Library is a general-purpose C++ library designed to facilitate cleaner, standardized code across complex systems. While it provides a broad range of utilities, it is architected with a specific focus on 2D and 3D graphical applications and real-time systems.
+Unify Template Library is a general-purpose C++ library designed to standardize 
+
+facilitate cleaner, standardized code across complex systems. While it provides a broad range of utilities, it is architected with a specific focus on 2D and 3D graphical applications and real-time systems.
 
 # Evolution and Vision
 Originating in the C++98 era, Unify has evolved through two decades of industry changes. After a major shift to C++11 to integrate smart pointers and modern memory management, the library is currently undergoing a strategic refactor to C++17/20.
@@ -19,13 +21,13 @@ Streamline the API to focus on high-performance math and system primitives.
 # Core Philosophy
 Unify achieves its goals through several architectural pillars:
 
-Purpose-Driven Types: Provides semantic types (Angles, Vectors, Streams) to replace vague primitives.
+1. Purpose-Driven Types: Provides semantic types (Angles, Vectors, Streams) to replace vague primitives.
 
-Semantic Clarity: Promotes intent-based naming (e.g., using V2 instead of two independent floats).
+2. Semantic Clarity: Promotes intent-based naming (e.g., using V2 instead of two independent floats).
 
-Dependency Isolation: Minimizes reliance on third-party libraries to ensure maximum portability.
+3. Dependency Isolation: Minimizes reliance on third-party libraries to ensure maximum portability.
 
-Complexity Reduction: Extensive use of function overloading to reduce API verbosity.
+4. Complexity Reduction: Extensive use of function overloading to reduce API verbosity.
 
 # Features
 Multi-platform: First-class support for Windows (MSVC) and Linux (GCC/Clang).

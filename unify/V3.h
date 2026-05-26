@@ -103,17 +103,30 @@ namespace unify
 	};
 
 	template<typename T>
-	inline std::string Cast(const V3<T> vec)
+	inline std::optional<std::string> ToString(const V3<T> vec) noexcept
 	{
-		return Cast< std::string >(vec.x) + ", " + Cast< std::string >(vec.y) + ", " + Cast< std::string >(vec.z);
+		try
+		{
+			return *ToString(vec.x) + ", " + *ToString(vec.y) + ", " + *ToString(vec.z);
+		}
+		catch(...)
+		{
+			return std::nullopt;
+		}
 	}
 
+	/*
 	template<typename T>
-	static inline V3<T> V3FromString(const std::string& str)
+	inline std::optional<V3<T>> FromString(std::string_view str)
 	{
-		std::vector< T > split = String::Split< T >(str, ',');
+		auto split = String::Split< T >(str, ',');
+		if (split.size() != 3)
+		{
+			return V3<T>();
+		}
 		return V3<T>(split[0], split[1], split[2]);
 	}
+	*/
 }
 
 #include <unify/V3.inl>

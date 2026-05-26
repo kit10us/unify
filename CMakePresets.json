@@ -1,0 +1,41 @@
+{
+    "version": 6,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 25,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "windows-msvc",
+            "displayName": "Windows x64 Debug",
+            "description": "Visual Studio 2022 Generator for Unity",
+            "generator": "Visual Studio 17 2022",
+            "architecture": "x64",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "UNIFY_UNIT_TESTS": "ON"
+            }
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "unify-stress-test",
+            "displayName": "Unify Stress Test (10x)",
+            "configurePreset": "windows-msvc",
+            "execution": {
+                "noTestsAction": "error",
+                "stopOnFailure": true,
+                "repeat": {
+                    "mode": "until-fail",
+                    "count": 10
+                }
+            },
+            "output": {
+                "shortProgress": true,
+                "verbosity": "extra"
+            }
+        }
+    ]    
+}

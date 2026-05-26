@@ -91,12 +91,20 @@ namespace unify
 		return V4<T>(split[0], split[1], split[2], split[3]);
 	}
 
-
-	template< typename T >
-	std::string Cast(const V4< T > in)
+	/*
+	template<typename T>
+	inline std::optional<std::string> ToString(const V4<T> vec) noexcept
 	{
-		return Cast< std::string >(in.x) + ", " + Cast< std::string >(in.y) + ", " + Cast< std::string >(in.z) + ", " + Cast< std::string >(in.w);
+		try
+		{
+			return *ToString< std::string >(vec.x) + ", " + *ToString< std::string >(vec.y) + ", " + *ToString<std::string>(vec.z) + ", " + *ToString<std::string>(vec.w);
+		}
+		catch(...)
+		{
+			return std::nullopt;
+		}
 	}
+	*/
 }
 
 #include <unify/V4.inl>

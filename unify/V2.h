@@ -124,9 +124,16 @@ namespace unify
 	};
 
 	template<typename T>
-	inline std::string Cast(const V2<T> vec)
+	inline std::optional<std::string> ToString(const V2<T> vec) noexcept
 	{
-		return Cast< std::string >(vec.x) + ", " + Cast< std::string >(vec.y);
+		try
+		{
+			return *ToString<T>(vec.x) + ", " + *ToString<T>(vec.y);
+		}
+		catch(...)
+		{
+			return std::nullopt;
+		}
 	}
 }
 

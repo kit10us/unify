@@ -23,7 +23,7 @@
 namespace unify::String
 {
 	template< typename foo, typename ... bar >
-	bool StringIs(std::string a, std::string b, std::string rest...)
+	bool StringIs(std::string_view a, std::string_view b, std::string_view rest...)
 	{
 		if (StringIs(a, b))
 		{
@@ -33,20 +33,41 @@ namespace unify::String
 	}
 
 	template< typename T >
-	std::vector< T > Split(std::string sourceString, const char delimitor)
+	std::vector<T> Split(std::string_view sourceString, const char delimitor)
 	{
-		std::vector< T > destination;
-		std::stringstream ss(sourceString);
+		std::vector<T > results;
 		std::string item;
-		while (std::getline(ss, item, delimitor))
+		size_t front = 0;
+		size_t i = 0;
+		for (i = 0; i < sourceString.size(); i++)
 		{
-			destination.push_back(Cast< T, std::string  >(item));
+			if (sourceString[i] == delimitor)
+			{
+				if (front == i)
+				{
+					results.push_back({});
+				}
+				else
+				{
+					results.push_back(FromString<T>({sourceString.begin() + front, i - front}));
+				}
+
+				front = i + 1;
+			}
 		}
-		return destination;
+
+		// Grab the last item.
+		if (front != end)
+		{
+			results.push_back(FromString<T>(sourceString.substr(front, i - front)));
+		}
+  
+		return results;
 	}
 
+	/*
 	template< typename T >
-	std::vector< T > Split(std::string sourceString, const std::vector< char > delimitors, bool includeEmpties)
+	std::vector< CastResult<T> > Split(std::string_view sourceString, const std::vector< char >& delimitors, bool includeEmpties)
 	{  
 		std::vector< T > destination;
 
@@ -75,7 +96,7 @@ namespace unify::String
 				}
 				else
 				{
-					destination.push_back(Cast< T, std::string >(sourceString.substr(start, end - start)));
+					destination.push_back(Cast< T, std::string >(std::string_view(sourceString.begin() + start, end - start)));
 				}
 				start = end + 1;
 			}
@@ -95,9 +116,10 @@ namespace unify::String
 
 		return destination;
 	}
+	*/
 
 	template< typename T >
-	std::vector< T > SplitOnWhitespace(std::string sourceString)
+	std::vector<T> SplitOnWhitespace(std::string sourceString)
 	{
 		std::vector< char > delimitors;
 		delimitors.push_back(' ');

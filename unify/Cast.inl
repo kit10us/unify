@@ -19,196 +19,383 @@
  * along with Unify.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-//#include <unify/String.h>
-
-// SAS TODO: Attempt to use constexpr and/or templates (need to take string_View)to reduce the amount of code here. This is a lot of code for something that should be simple. Also, consider using std::from_chars and std::to_chars instead of the C functions.
-
 #pragma warning(push)
 #pragma warning(disable : 4244) // 'argument' : conversion from ... to ..., possible loss of data
 
-template<>
-inline
-double unify::Cast(const std::string text);
-
-template<>
-inline
-unsigned int unify::Cast(const std::string text);
-
-template < typename...>
-inline constexpr bool k_always_false = false;
-
+/*
 template< typename TTo, class TFrom >
-TTo unify::Cast(const TFrom in )
-{
-	static_assert(k_always_false<TTo, TFrom>, "Unsupported cast type.");
-	throw std::bad_cast();
-}
-	
+std::optional<TTo> unify::Cast(const TFrom in) noexcept = delete;
+*/
+
+/*
 template<>
 inline
-std::string unify::Cast(const std::string in)
+std::optional<double> unify::FromString(std::string_view text) noexcept;
+
+template<>
+inline
+std::optional<unsigned int> unify::FromString(std::string_view text) noexcept;
+*/
+
+template<>
+inline
+std::optional<std::string> unify::ToString(const Char in) noexcept
 {
-	return in;
+	try
+	{
+		return std::string(1, in.c);
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-std::string unify::Cast(const std::wstring in)
+std::optional<std::string> unify::ToString(const std::string_view in) noexcept
 {
-	return std::string(in.begin(), in.end());
+	try
+	{
+		return {{in.data(), in.data() + in.size()}};
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-std::string unify::Cast(const bool in)
+std::optional<std::string> unify::ToString(const std::wstring in) noexcept
 {
-	return in ? "true" : "false";
+	try
+	{
+		return {std::string(in.begin(), in.end())};
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-std::string unify::Cast(const unsigned char in)
+std::optional<std::string> unify::ToString(const bool in) noexcept
 {
-	return std::to_string(in);
+	try
+	{
+		return {in ? "true" : "false"};
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-std::string unify::Cast(const char in)
+std::optional<std::string> unify::ToString(const uint8_t in) noexcept
 {
-	return std::to_string(in);
+	try
+	{
+		return {std::to_string(in)};
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-std::string unify::Cast(const unsigned int in)
+std::optional<std::string> unify::ToString(const char in) noexcept
 {
-	return std::to_string(in);
+	try
+	{
+		return {std::to_string(in)};
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-std::string unify::Cast(const unsigned __int64 in)
+std::optional<std::string> unify::ToString(const uint32_t in) noexcept
 {
-	return std::to_string(in);
+	try
+	{
+		return {std::to_string(in)};
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-std::string unify::Cast(const int in)
+std::optional<std::string> unify::ToString(const uint64_t in) noexcept
 {
-	return std::to_string(in);
+	try
+	{
+		return {std::to_string(in)};
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-std::string unify::Cast(const float in)
+std::optional<std::string> unify::ToString(const int32_t in) noexcept
 {
-	return std::to_string(in);
+	try
+	{
+		return {std::to_string(in)};
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-std::string unify::Cast(const double in)
+std::optional<std::string> unify::ToString(const int64_t in) noexcept
 {
-	return std::to_string(in);
+	try
+	{
+		return {std::to_string(in)};
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-std::string unify::Cast(const unsigned short in)
+std::optional<std::string> unify::ToString(const float in) noexcept
 {
-	return std::to_string(in);
+	try
+	{
+		return {std::to_string(in)};
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-std::string unify::Cast(const short in)
+std::optional<std::string> unify::ToString(const double in) noexcept
 {
-	return std::to_string(in);
+	try
+	{
+		return {std::to_string(in)};
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-std::string unify::Cast(const unsigned long in)
+std::optional<std::string> unify::ToString(const uint16_t in) noexcept
 {
-	return std::to_string(in);
+	try
+	{
+		return std::to_string(in);
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-std::string unify::Cast(const long in)
+std::optional<std::string> unify::ToString(const int16_t in) noexcept
 {
-	return std::to_string(in);
+	try
+	{
+		return std::to_string(in);
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-bool unify::Cast(std::string text)
+std::optional<std::string> unify::ToString(const unsigned long in) noexcept
 {
+	try
+	{
+		return std::to_string(in);
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
+}
+
+template<>
+inline
+std::optional<std::string> unify::ToString(const long in) noexcept
+{
+	try
+	{
+		return std::to_string(in);
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
+}
+
+template<>
+inline
+std::optional<bool> unify::FromString(std::string_view raw_text) noexcept
+{
+	std::string text(raw_text.data(), raw_text.data() + raw_text.size());
 	std::transform(text.begin(), text.end(), text.begin(), ::towlower);
 	if (text == "false" || text == "f" || text == "0" || text == "no" || text == "off")
 	{
 		return false;
 	}
-	else
+	else if (text == "true" || text == "t" || text == "1" || text == "yes" || text == "on")
 	{
 		return true;
+	}
+	else
+	{
+		return std::nullopt;
 	}
 }
 
 template<>
 inline
-char unify::Cast(const std::string text)
+std::optional<int8_t> unify::FromString(std::string_view text) noexcept
 {
-	return (char)(!text.empty() ? atoi(text.c_str()) : 0);
+	int8_t out{};
+	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
+	if (ec == std::errc{} && ptr == text.data() + text.size())
+	{
+		return out;
+	}
+	else
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-unsigned char unify::Cast(const std::string text)
+std::optional<uint8_t> unify::FromString(std::string_view text) noexcept
 {
-	return (unsigned char)Cast< unsigned int >(text);
+	uint8_t out{};
+	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
+	if (ec == std::errc{} && ptr == text.data() + text.size())
+	{
+		return out;
+	}
+	else
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-int unify::Cast(const std::string text)
+std::optional<int32_t> unify::FromString(std::string_view text) noexcept
 {
-	return(!text.empty() ? atoi(text.c_str()) : 0);
+	int32_t out{};
+	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
+	if (ec == std::errc{} && ptr == text.data() + text.size())
+	{
+		return out;
+	}
+	else
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-unsigned int unify::Cast(const std::string text)
+std::optional<uint32_t> unify::FromString(std::string_view text) noexcept
 {
-	return(!text.empty() ? strtoul(text.c_str(), 0, 0) : 0);
+	uint32_t out{};
+	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
+	if (ec == std::errc{} && ptr == text.data() + text.size())
+	{
+		return out;
+	}
+	else
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-unsigned __int64 unify::Cast(const std::string text)
+std::optional<unsigned __int64> unify::FromString(std::string_view text) noexcept
 {
-	return(!text.empty() ? strtoull(text.c_str(), 0, 0) : 0);
+	unsigned __int64 out{};
+	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
+	if (ec == std::errc{} && ptr == text.data() + text.size())
+	{
+		return out;
+	}
+	else
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-float unify::Cast(const std::string text)
+std::optional<float> unify::FromString(std::string_view text) noexcept
 {
-	return (float)Cast< double >(text);
+	float out{};
+	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
+	if (ec == std::errc{} && ptr == text.data() + text.size())
+	{
+		return out;
+	}
+	else
+	{
+		return std::nullopt;
+	}
 }
 
 template<>
 inline
-double unify::Cast(const std::string text)
+std::optional<double> unify::FromString(std::string_view text) noexcept
 {
-	return(!text.empty() ? atof(text.c_str()) : 0);
+	double out{};
+	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
+	if (ec == std::errc{} && ptr == text.data() + text.size())
+	{
+		return out;
+	}
+	else
+	{
+		return std::nullopt;
+	}
 }
-
+/*
 template<>
 inline
-wchar_t* unify::Cast(const std::string text)
+std::optional<wchar_t*> unify::Cast(const std::string text) noexcept
 {
 	if (text.empty()) return NULL;
 
@@ -226,103 +413,135 @@ wchar_t* unify::Cast(const std::string text)
 	lpszOut[uLength] = 0;
 	return lpszOut;
 }
+*/
 
 template<>
 inline
-short unify::Cast(const std::string text)
+std::optional<int16_t> unify::FromString(std::string_view text) noexcept
 {
-	return (short)(!text.empty() ? atoi(text.c_str()) : 0);
+{
+	int16_t out{};
+	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
+	if (ec == std::errc{} && ptr == text.data() + text.size())
+	{
+		return out;
+	}
+	else
+	{
+		return std::nullopt;
+	}
+}}
+
+template<>
+inline
+std::optional<uint16_t> unify::FromString(std::string_view text) noexcept
+{
+	uint16_t out{};
+	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
+	if (ec == std::errc{} && ptr == text.data() + text.size())
+	{
+		return out;
+	}
+	else
+	{
+		return std::nullopt;
+	}
 }
 
-template<>
-inline
-unsigned short unify::Cast(const std::string text)
-{
-	return(unsigned short)(!text.empty() ? strtoul(text.c_str(), 0, 0) : 0);
-}
 
 template<>
 inline
-std::wstring unify::Cast(const std::string text)
+std::optional<std::wstring> unify::FromString(std::string_view text) noexcept
 {
 	return std::wstring(text.begin(), text.end());
 }
 
+/*
 template<>
 inline
-bool unify::Cast(const char* text)
+std::optional<bool> unify::Cast(const char* text) noexcept
 {
-	return Cast< bool, std::string >(text);
+	return Cast< bool, std::string_view >(text);
 }
 
 template<>
 inline
-char unify::Cast(const char* text)
+std::optional<char> unify::Cast(const char* text) noexcept
 {
-	return Cast< char, std::string >(text);
+	return Cast<int8_t, std::string_view >(text);
 }
 
 template<>
 inline
-unsigned char unify::Cast(const char* text)
+std::optional<unsigned char> unify::Cast(const char* text) noexcept
 {
-	return Cast< unsigned char, std::string >(text);
+	return Cast<uint8_t, std::string_view>(text);
 }
 
 template<>
 inline
-int unify::Cast(const char* text)
+std::optional<int32_t> unify::Cast(const char* text) noexcept
 {
-	return Cast< int, std::string >(text);
+	return Cast<int32_t, std::string_view>(text);
 }
 
 template<>
 inline
-unsigned int unify::Cast(const char* text)
+std::optional<unsigned int> unify::Cast(const char* text) noexcept
 {
-	return Cast< unsigned int, std::string >(text);
+	return Cast< unsigned int, std::string_view>(text);
 }
 
 template<>
 inline
-unsigned __int64 unify::Cast(const char* text)
+std::optional<unsigned __int64> unify::Cast(const char* text) noexcept
 {
-	return Cast< unsigned __int64, std::string >(text);
+	return Cast<unsigned __int64, std::string_view>(text);
 }
 
 template<>
 inline
-float unify::Cast(const char* text)
+std::optional<float> unify::Cast(const char* text) noexcept
 {
-	return Cast< float, std::string >(text);
+	return Cast<float, std::string_view>(text);
 }
 
 template<>
 inline
-double unify::Cast(const char* text)
+std::optional<double> unify::Cast(const char* text) noexcept
 {
-	return Cast< double, std::string >(text);
+	return Cast<double, std::string_view>(text);
 }
+
+//template<>
+//inline
+//wchar_t* unify::Cast(const char* text) noexcept
+//{
+//	return Cast< wchar_t*, std::string >(text);
+//}
 
 template<>
 inline
-wchar_t* unify::Cast(const char* text)
+std::optional<std::string> unify::Cast(const char* text) noexcept
 {
-	return Cast< wchar_t*, std::string >(text);
+	try
+	{
+		std::string(text);
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
 }
+*/
 
+/*
 template<>
 inline
-std::string unify::Cast(const char* text)
+std::optional<std::string> unify::ToString(const wchar_t* text) noexcept
 {
-	return std::string(text);
+	return ToString<std::string>(std::wstring(text));
 }
-
-template<>
-inline
-std::string unify::Cast(const wchar_t* text)
-{
-	return Cast< std::string >(std::wstring(text));
-}
+*/
 
 #pragma warning(pop)
