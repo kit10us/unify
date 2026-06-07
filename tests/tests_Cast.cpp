@@ -120,21 +120,19 @@ TEST_F(CastTests, TestCasts)
     EXPECT_TRUE( std::string("32767") == unify::ToString((int16_t)std::numeric_limits<int16_t>::max()) );
     EXPECT_FALSE( std::string("0") == unify::ToString((int16_t)1) );
 
-    EXPECT_TRUE( true == unify::FromString<bool>("true") );
-    EXPECT_TRUE( true == unify::FromString<bool>("on") );
-    EXPECT_TRUE( true == unify::FromString<bool>("yes") );
-    EXPECT_TRUE( true == unify::FromString<bool>("1") );
-    EXPECT_TRUE( true == unify::FromString<bool>("123") );
-    EXPECT_TRUE( true == unify::FromString<bool>("-123") );
-    EXPECT_FALSE( true == unify::FromString<bool>("false") );
+    EXPECT_TRUE( *unify::FromString<bool>("true") );
+    EXPECT_TRUE( *unify::FromString<bool>("on") );
+    EXPECT_TRUE( *unify::FromString<bool>("yes") );
+    EXPECT_TRUE( *unify::FromString<bool>("1") );
+    EXPECT_TRUE( *unify::FromString<bool>("123") );
+    EXPECT_TRUE( *unify::FromString<bool>("-123") );
+    EXPECT_TRUE( *unify::FromString<bool>("TrUe") );
 
-    EXPECT_TRUE( false == unify::FromString<bool>("false") );
-    EXPECT_TRUE( false == unify::FromString<bool>("off") );
-    EXPECT_TRUE( false == unify::FromString<bool>("no") );
-    EXPECT_TRUE( false == unify::FromString<bool>("0") );
-    EXPECT_FALSE( false == unify::FromString<bool>("true") );
-
-
+    EXPECT_FALSE( *unify::FromString<bool>("false") );
+    EXPECT_FALSE( *unify::FromString<bool>("off") );
+    EXPECT_FALSE( *unify::FromString<bool>("no") );
+    EXPECT_FALSE( *unify::FromString<bool>("0") );
+    EXPECT_FALSE( *unify::FromString<bool>("FaLsE") );
 
     EXPECT_TRUE( (uint8_t)1 == unify::FromString<uint8_t>(std::string("1")) );
     EXPECT_TRUE( (uint8_t)12 == unify::FromString<uint8_t>(std::string("12")) );

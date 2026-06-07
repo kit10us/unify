@@ -266,18 +266,15 @@ inline
 std::optional<bool> unify::FromString(std::string_view raw_text) noexcept
 {
 	std::string text(raw_text.data(), raw_text.data() + raw_text.size());
-	std::transform(text.begin(), text.end(), text.begin(), ::towlower);
-	if (text == "false" || text == "f" || text == "0" || text == "no" || text == "off")
+	std::transform(text.begin(), text.end(), text.begin(), ::tolower);
+
+	if (text.empty() || text == "false" || text == "f" || text == "0" || text == "no" || text == "off")
 	{
 		return false;
 	}
-	else if (text == "true" || text == "t" || text == "1" || text == "yes" || text == "on")
-	{
-		return true;
-	}
 	else
 	{
-		return std::nullopt;
+		return true;
 	}
 }
 
