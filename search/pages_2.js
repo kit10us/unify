@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['caveats_0',['Coding Caveats',['../md_README.html#autotoc_md8',1,'']]],
-  ['code_20requirements_1',['Source Code Requirements',['../md_README.html#autotoc_md4',1,'']]],
-  ['coding_20caveats_2',['Coding Caveats',['../md_README.html#autotoc_md8',1,'']]],
-  ['comments_3',['In-line Document Generation Comments',['../md_README.html#autotoc_md6',1,'']]],
-  ['conversions_4',['To/From String Conversions',['../md_README.html#autotoc_md7',1,'']]]
+  ['3_2029_20june_202007_0',['3 29 June 2007',['../md_README.html',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)'],['../dir_59425e443f801f1f2fd8bbe4959a3ccf.html#autotoc_md24',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)']]],
+  ['3_20execution_1',['3. Execution',['../dir_59425e443f801f1f2fd8bbe4959a3ccf.html#autotoc_md29',1,'']]]
 ];

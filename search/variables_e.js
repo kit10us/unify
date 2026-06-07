@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['sample_5fsize_0',['sample_size',['../structme_1_1stats_1_1RateCapture.html#ad05410385fa98c31a96e44cb1d70d5a3',1,'me::stats::RateCapture']]],
-  ['samples_1',['samples',['../structme_1_1stats_1_1RateCapture.html#a881a7a8f60ac999c2d84d688da5d2642',1,'me::stats::RateCapture']]],
-  ['secondperms_2',['SecondPerMS',['../TimeDelta_8inl.html#af0378a7449dcbf2168b46a9944f57693',1,'TimeDelta.inl']]],
-  ['size_3',['size',['../classunify_1_1Viewport.html#a5fa27fca6fdb8f870eb7dd26093d7767',1,'unify::Viewport']]],
-  ['sup_4',['sup',['../classunify_1_1BBox.html#a713d7db8b80484376ce41c5453a6287e',1,'unify::BBox::sup'],['../classunify_1_1BRectangle.html#a1d01061ac1687970fc21b2d25939dc47',1,'unify::BRectangle::sup']]]
+  ['r_0',['r',['../classunify_1_1Color.html#a85d9a557abcf184f1478bc008c5273e5',1,'unify::Color::r'],['../classunify_1_1ColorUnit.html#a112d364c9c42ee4f4262d1ed34b42eaa',1,'unify::ColorUnit::r']]],
+  ['radius_1',['radius',['../classunify_1_1BSphere.html#afdbb8ae4d3181ad2c0cc49fb642c077f',1,'unify::BSphere']]],
+  ['rate_2',['rate',['../structme_1_1stats_1_1RateCapture.html#a9f8a3bad3f68e715fa0dbf1db0415c84',1,'me::stats::RateCapture']]],
+  ['right_3',['right',['../classunify_1_1Rect.html#a37183a91897c57e05cedbe62328a5d3c',1,'unify::Rect']]],
+  ['row_4',['row',['../classunify_1_1RowColumn.html#afe3c8336963a16f445caeac3aed7774f',1,'unify::RowColumn']]],
+  ['rtod_5',['RTOD',['../namespaceunify.html#ace2ef3716535f040a2c8e2b9c2c89b11',1,'unify']]]
 ];

@@ -2,9 +2,9 @@ var searchData=
 [
   ['range_0',['Range',['../classunify_1_1Range.html#aa4407a93074fbb726deb613f7a067983',1,'unify::Range::Range()'],['../classunify_1_1Range.html#a663fd549272a517625c6e165681e2369',1,'unify::Range::Range(T min, T max)'],['../classunify_1_1Range.html#adf717adb951d0d2ffbfa1442fd061d38',1,'unify::Range::Range(const Range &amp;range)'],['../classunify_1_1Range.html#aef179f68a7097395b19067c74ba17483',1,'unify::Range::Range(std::string text)']]],
   ['rate_1',['Rate',['../classme_1_1stats_1_1Rate.html#a16350e672cb7a000ef09a7814d264743',1,'me::stats::Rate']]],
-  ['ray_2',['Ray',['../classunify_1_1Ray.html#af0ec77d729fd30ba621c0db07288b7f0',1,'unify::Ray::Ray()'],['../classunify_1_1Ray.html#a02f61363c7e0ed8b45b273de095122e3',1,'unify::Ray::Ray(const V3&lt; float &gt; &amp;originIn, const V3&lt; float &gt; &amp;directionIn)']]],
-  ['rayfromlinesegment_3',['RayFromLineSegment',['../classunify_1_1Ray.html#a345f8d8e9ac6ed28f62df43307859c3f',1,'unify::Ray']]],
-  ['rayfromorginanddirection_4',['RayFromOrginAndDirection',['../classunify_1_1Ray.html#af9a65525c4e9cac8e3acecb6b7b83e04',1,'unify::Ray']]],
+  ['ray_2',['Ray',['../classunify_1_1Ray.html#a984838c11811a1e75a7ace6277bc7d85',1,'unify::Ray::Ray(const V3&lt; T &gt; originIn, const V3&lt; T &gt; directionIn)'],['../classunify_1_1Ray.html#ae580f7fd400b8fe7b2a9eb30bafca00c',1,'unify::Ray::Ray()']]],
+  ['rayfromlinesegment_3',['RayFromLineSegment',['../namespaceunify.html#a194922fafe510cd80b4e9f38e4c19de7',1,'unify']]],
+  ['rayfromoriginanddirection_4',['RayFromOriginAndDirection',['../namespaceunify.html#a29bab691c62d2405f6401e558d17ae48',1,'unify']]],
   ['read_5',['Read',['../classunify_1_1FileStream.html#accf0f07b758f08f2e299b6c663425335',1,'unify::FileStream::Read()'],['../classunify_1_1Stream.html#ad6e14a381244c968e9a7613c7b0ed95c',1,'unify::Stream::Read()']]],
   ['readmatrix_6',['ReadMatrix',['../classunify_1_1FrameLite.html#a4dee0c53d4442788aaecf34368eca9fb',1,'unify::FrameLite']]],
   ['readpack_7',['ReadPack',['../classunify_1_1FileStream.html#a441aedf2df0e6621b472dd87be24661d',1,'unify::FileStream::ReadPack()'],['../classunify_1_1Stream.html#aecfbafeeaa39732ad3a5466524ee22a0',1,'unify::Stream::ReadPack()']]],

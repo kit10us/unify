@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['near_0',['Near',['../classunify_1_1FrustumPlane.html#a945eb2a3eb6d5d38b380bb4f2eeca442ace11523ae3aee5a0816abe8aa4f10819',1,'unify::FrustumPlane']]]
+  ['outside_0',['Outside',['../namespaceunify.html#af385be843c3779feb4af332ac46d2a3fa76fbf0ccd7fcd64879c2ff2119dc15a4',1,'unify']]],
+  ['outsideslow_1',['OutsideSlow',['../namespaceunify.html#af385be843c3779feb4af332ac46d2a3fadd62db4ff5d4d00340bf8e1f362a38ed',1,'unify']]]
 ];

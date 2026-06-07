@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['outside_0',['Outside',['../namespaceunify.html#af385be843c3779feb4af332ac46d2a3fa76fbf0ccd7fcd64879c2ff2119dc15a4',1,'unify']]],
-  ['outsideslow_1',['OutsideSlow',['../namespaceunify.html#af385be843c3779feb4af332ac46d2a3fadd62db4ff5d4d00340bf8e1f362a38ed',1,'unify']]]
+  ['rgba_0',['RGBA',['../classunify_1_1ColorUnit.html#a04614e684f8dbe9c2f028313b9931be8a80266f465bd4a8bd23cd734aa87457e3',1,'unify::ColorUnit::RGBA'],['../namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba287566ddad210df6ae852a39bf72cf94',1,'unify::RGBA']]],
+  ['right_1',['Right',['../classunify_1_1FrustumPlane.html#a945eb2a3eb6d5d38b380bb4f2eeca442a74d442a056ac3f1ee27fade0951f7b6a',1,'unify::FrustumPlane::Right'],['../structunify_1_1NinePoint.html#a47fc4f4242673361a16ab53737e38490a857227ce32841474b74a23005ca566e1',1,'unify::NinePoint::Right']]]
 ];

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['x_0',['x',['../classunify_1_1Quaternion.html#a4385f0b63d6f75e5940dffac3a9cf389',1,'unify::Quaternion::x'],['../classunify_1_1V2.html#a3765c751d0bfbae6b3d665910d16a637',1,'unify::V2::x'],['../classunify_1_1V3.html#a15d0e150b950e286ef4e9d57b075399d',1,'unify::V3::x'],['../classunify_1_1V4.html#a693f0f7f7e271a5dd467122ba60d6f9d',1,'unify::V4::x']]]
+  ['w_0',['w',['../classunify_1_1Quaternion.html#ae63503428f38ba23e731eb770d674e88',1,'unify::Quaternion::w'],['../classunify_1_1V4.html#aa88d125d7fe63b38c38b8f1235de8f39',1,'unify::V4::w']]],
+  ['weekperms_1',['WeekPerMS',['../TimeDelta_8inl.html#abc5ce79d466e042bc69d34706ccc57e6',1,'TimeDelta.inl']]],
+  ['width_2',['width',['../classunify_1_1Size.html#a9a451f9030bd55408acd1343a550af7c',1,'unify::Size::width'],['../classunify_1_1Size3.html#a3a05612aa745529e8c11f0ac4dec1c6a',1,'unify::Size3::width']]]
 ];

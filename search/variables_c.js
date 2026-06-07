@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pi_0',['PI',['../namespaceunify.html#a072fdb91f746252a131ea88b2d292e7a',1,'unify']]]
+  ['origin_0',['origin',['../classunify_1_1Ray.html#aaab8db11fe8616eef1464691c1f27793',1,'unify::Ray']]]
 ];

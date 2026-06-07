@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['generatecorners_0',['GenerateCorners',['../classunify_1_1BBox.html#a348fee5a04dc45501ddeff41a888ab3d',1,'unify::BBox::GenerateCorners()'],['../classunify_1_1BRectangle.html#ada840716f0b5ac6dc92b203e9d519f67',1,'unify::BRectangle::GenerateCorners()']]],
+  ['generatecorners_0',['GenerateCorners',['../classunify_1_1BBox.html#a4b16552e99a9a67e3d2d8c33abe38939',1,'unify::BBox::GenerateCorners()'],['../classunify_1_1BRectangle.html#ada840716f0b5ac6dc92b203e9d519f67',1,'unify::BRectangle::GenerateCorners()']]],
   ['get_1',['Get',['../classunify_1_1Parameters.html#a5dbadc9bbeddf4937a3511e1bbb7353a',1,'unify::Parameters::Get(std::string name) const'],['../classunify_1_1Parameters.html#a4b535f5a4b7eb53dfb040e3e93b6c2a7',1,'unify::Parameters::Get(std::string name, const T &amp;defaultValue) const']]],
   ['getalpha_2',['GetAlpha',['../classunify_1_1Color.html#a149d3d05f82555750610c032123e7f16',1,'unify::Color']]],
   ['getblue_3',['GetBlue',['../classunify_1_1Color.html#a6255f93c11e2972285bbdee509ddcb37',1,'unify::Color']]],

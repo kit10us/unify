@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['a_20member_0',['&lt;em&gt;string_view&lt;/em&gt; as a member',['../md_README.html#autotoc_md11',1,'']]],
-  ['a_20return_1',['&lt;em&gt;string_view&lt;/em&gt; as a return',['../md_README.html#autotoc_md10',1,'']]],
-  ['as_20a_20member_2',['&lt;em&gt;string_view&lt;/em&gt; as a member',['../md_README.html#autotoc_md11',1,'']]],
-  ['as_20a_20return_3',['&lt;em&gt;string_view&lt;/em&gt; as a return',['../md_README.html#autotoc_md10',1,'']]]
+  ['1_20configuration_0',['1. Configuration',['../dir_59425e443f801f1f2fd8bbe4959a3ccf.html#autotoc_md27',1,'']]]
 ];

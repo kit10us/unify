@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['the_20history_0',['The History',['../md_README.html#autotoc_md3',1,'']]],
-  ['to_20from_20string_20conversions_1',['To/From String Conversions',['../md_README.html#autotoc_md7',1,'']]]
+  ['naming_20conventions_0',['Directory and Naming Conventions',['../md_README.html#autotoc_md10',1,'']]],
+  ['notes_1',['Final Notes',['../md_README.html#autotoc_md19',1,'']]]
 ];

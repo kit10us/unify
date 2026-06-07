@@ -1,7 +1,13 @@
 var searchData=
 [
-  ['z_0',['z',['../classunify_1_1Quaternion.html#aaca0e13b5954ce3eabdf8015cbb9248d',1,'unify::Quaternion::z'],['../classunify_1_1V3.html#a7943b8e5e21f6568d12ea662ad3f7caf',1,'unify::V3::z'],['../classunify_1_1V4.html#a8c47a2b25ea8e2ad0c538057c58bced2',1,'unify::V4::z']]],
-  ['zero_1',['Zero',['../classunify_1_1Matrix.html#a78f63f0f371696f26a5d7c316390dadb',1,'unify::Matrix::Zero()'],['../classunify_1_1RowColumn.html#a3e095eee7718a54cc494f65aa7a4e62f',1,'unify::RowColumn::Zero()'],['../classunify_1_1Size.html#a0d567c78d04a6757f6d9ec6e924e9546',1,'unify::Size::Zero()'],['../classunify_1_1Size3.html#aa62351c6038d87b12a065b596ed00e16',1,'unify::Size3::Zero()'],['../classunify_1_1V4.html#af9957f799236b6acd4a3982d88b093ba',1,'unify::V4::Zero()']]],
-  ['zxy_2',['zxy',['../classunify_1_1V3.html#a81859e887d3865f153c71eb3f1addbdb',1,'unify::V3']]],
-  ['zyx_3',['zyx',['../classunify_1_1V3.html#a296ed773c5dccf8d49df74216cb74059',1,'unify::V3']]]
+  ['x_0',['x',['../classunify_1_1Quaternion.html#a4385f0b63d6f75e5940dffac3a9cf389',1,'unify::Quaternion::x'],['../classunify_1_1V2.html#a3765c751d0bfbae6b3d665910d16a637',1,'unify::V2::x'],['../classunify_1_1V3.html#a15d0e150b950e286ef4e9d57b075399d',1,'unify::V3::x'],['../classunify_1_1V4.html#a693f0f7f7e271a5dd467122ba60d6f9d',1,'unify::V4::x']]],
+  ['xyz_1',['XYZ',['../classunify_1_1FrustumCorner.html#a084c2d536c41374f4121bd44b3a1b99faa2f74387efa942e76a332b19960f1768',1,'unify::FrustumCorner']]],
+  ['xyz_2',['XYz',['../classunify_1_1FrustumCorner.html#a084c2d536c41374f4121bd44b3a1b99fa70a6c20d52f28e5ddf55439b4df26137',1,'unify::FrustumCorner']]],
+  ['xyz_3',['XyZ',['../classunify_1_1FrustumCorner.html#a084c2d536c41374f4121bd44b3a1b99faed01a1927e89a4358e41449f29f3d5ff',1,'unify::FrustumCorner']]],
+  ['xyz_4',['Xyz',['../classunify_1_1FrustumCorner.html#a084c2d536c41374f4121bd44b3a1b99faa982d2a59af125545448451bbd73afd3',1,'unify::FrustumCorner']]],
+  ['xyz_5',['xYZ',['../classunify_1_1FrustumCorner.html#a084c2d536c41374f4121bd44b3a1b99fa55d4c2db7ff0656f9289b1ac64593608',1,'unify::FrustumCorner']]],
+  ['xyz_6',['xYz',['../classunify_1_1FrustumCorner.html#a084c2d536c41374f4121bd44b3a1b99fa34b2bdedef4ba7404ed6a8641e6ddda0',1,'unify::FrustumCorner']]],
+  ['xyz_7',['xyZ',['../classunify_1_1FrustumCorner.html#a084c2d536c41374f4121bd44b3a1b99fa3b3da7f8eb2aab12be56ab63c2a60b2b',1,'unify::FrustumCorner']]],
+  ['xyz_8',['xyz',['../classunify_1_1FrustumCorner.html#a084c2d536c41374f4121bd44b3a1b99fa764dcde55dc1ce07c5ab41f72a3eebda',1,'unify::FrustumCorner::xyz'],['../classunify_1_1V3.html#a33b11f0d75f7ad32bdbda25494aecfb7',1,'unify::V3::xyz() const']]],
+  ['xzy_9',['xzy',['../classunify_1_1V3.html#acc59e1dd4f1ec9ccf5ebc2d405334146',1,'unify::V3']]]
 ];

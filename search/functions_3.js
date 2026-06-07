@@ -7,7 +7,7 @@ var searchData=
   ['determinant_4',['Determinant',['../classunify_1_1Matrix.html#a4bf4c0790c44a973f317ab23cf1e821a',1,'unify::Matrix']]],
   ['determinantfunc_5',['DeterminantFunc',['../namespaceunify.html#a699d01f876322d4688956825c8428eb4',1,'unify']]],
   ['directoryonly_6',['DirectoryOnly',['../classunify_1_1Path.html#a7cf387e4cf538ee1abf69737fa80424a',1,'unify::Path']]],
-  ['distanceto_7',['DistanceTo',['../classunify_1_1V2.html#ac49faff57e691d19b56b388b236663da',1,'unify::V2::DistanceTo()'],['../classunify_1_1V3.html#aeed60d2dbdaba44ef66465a2ac77117d',1,'unify::V3::DistanceTo()']]],
+  ['distance_7',['Distance',['../classunify_1_1V2.html#a26d89699b8526249239795d990f1aaae',1,'unify::V2::Distance()'],['../classunify_1_1V3.html#ade9469cf1af37b90fce4ebf1139d07cf',1,'unify::V3::Distance()']]],
   ['dl_8',['DL',['../classunify_1_1Rect.html#a2bd2e41e664c74971789061dc983a014',1,'unify::Rect::DL()'],['../classunify_1_1TexArea.html#ae3198e5f6fa6322a097c09da6198c597',1,'unify::TexArea::DL()']]],
   ['dot_9',['Dot',['../classunify_1_1V2.html#ab0eb5522830218a7ba8c4860781191b4',1,'unify::V2::Dot()'],['../classunify_1_1V3.html#a2734d141a6b830ca089cc0486ac83e68',1,'unify::V3::Dot()'],['../classunify_1_1V4.html#a36b4e6cc6f809dccdfb8b2732a6fd90e',1,'unify::V4::Dot()']]],
   ['dotangle_10',['DotAngle',['../classunify_1_1V3.html#a91345a2dfcb4e3cc12070b7f5e478f9f',1,'unify::V3']]],

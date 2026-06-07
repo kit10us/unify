@@ -1,12 +1,23 @@
 var searchData=
 [
-  ['w_0',['w',['../classunify_1_1Quaternion.html#ae63503428f38ba23e731eb770d674e88',1,'unify::Quaternion::w'],['../classunify_1_1V4.html#aa88d125d7fe63b38c38b8f1235de8f39',1,'unify::V4::w']]],
-  ['warning_1',['Warning',['../classunify_1_1test_1_1Suite.html#a4335fb5acaf1d14352cf16fb38c39709',1,'unify::test::Suite::Warning()'],['../namespaceunify_1_1test.html#a45a0260989c730681b7ca362b3add8caa0eaadb4fcb48a0a0ed7bc9868be9fbaa',1,'unify::test::Warning']]],
-  ['weak_5fptr_2',['weak_ptr',['../classunify_1_1IExceptionHandler.html#a81941bd4921a5d227185530e9f03a5b8',1,'unify::IExceptionHandler::weak_ptr'],['../classunify_1_1Owner.html#a8144f3d94a6faa659e9cbaf20e83e00d',1,'unify::Owner::weak_ptr']]],
-  ['weekperms_3',['WeekPerMS',['../TimeDelta_8inl.html#abc5ce79d466e042bc69d34706ccc57e6',1,'TimeDelta.inl']]],
-  ['what_4',['what',['../classunify_1_1bad__any__cast.html#a2265a18ff782b77ffefe58f1445bfaaf',1,'unify::bad_any_cast::what()'],['../classunify_1_1Exception.html#a5d95e4dbf362c8c567f9df225344f0c9',1,'unify::Exception::what()']]],
-  ['width_5',['Width',['../classunify_1_1Rect.html#a943ab9af3f33da4abadb97820ec60e20',1,'unify::Rect::Width()'],['../classunify_1_1Size.html#a70e698af7c44623e79a012811749c61d',1,'unify::Size::Width()'],['../classunify_1_1TexArea.html#acd679555e72330a2a45f6675586c4048',1,'unify::TexArea::Width()']]],
-  ['width_6',['width',['../classunify_1_1Size.html#a9a451f9030bd55408acd1343a550af7c',1,'unify::Size::width'],['../classunify_1_1Size3.html#a3a05612aa745529e8c11f0ac4dec1c6a',1,'unify::Size3::width']]],
-  ['write_7',['Write',['../classunify_1_1FileStream.html#a8565025944c04ae2826df7c98b6209d1',1,'unify::FileStream::Write(const void *source, unsigned int length) override'],['../classunify_1_1FileStream.html#ae5574a25c44b3e3cabe590e9a2c489ae',1,'unify::FileStream::Write(std::string out)'],['../classunify_1_1Stream.html#afc7bc64489be0649c48e674ca722bacc',1,'unify::Stream::Write()']]],
-  ['writepack_8',['WritePack',['../classunify_1_1FileStream.html#a036eb4ef6798ee811ef0e80ff7b5cf90',1,'unify::FileStream::WritePack()'],['../classunify_1_1Stream.html#ae767bdddd271db5a06f21a7d8a5d9be6',1,'unify::Stream::WritePack()']]]
+  ['u_0',['u',['../classunify_1_1TexCoords.html#a447898a3d2f3db1ebd6ebf98df44dbff',1,'unify::TexCoords']]],
+  ['ul_1',['UL',['../classunify_1_1Rect.html#a35b6386f06470b062bfc52ea09e436b7',1,'unify::Rect::UL()'],['../classunify_1_1TexArea.html#af608d5674daa477d77a9f503f1afb15b',1,'unify::TexArea::UL() const']]],
+  ['ul_2',['ul',['../classunify_1_1TexArea.html#a4d0e98674cee51c04269e4474d83b79c',1,'unify::TexArea']]],
+  ['undef_2eh_3',['Undef.h',['../Undef_8h.html',1,'']]],
+  ['unify_4',['Testing Unify',['../dir_59425e443f801f1f2fd8bbe4959a3ccf.html#autotoc_md25',1,'']]],
+  ['unify_5',['unify',['../namespaceunify.html',1,'']]],
+  ['unify_20template_20library_20utl_6',['Unify Template Library (UTL)',['../md_README.html#autotoc_md1',1,'']]],
+  ['unify_2eh_7',['Unify.h',['../Unify_8h.html',1,'']]],
+  ['unify_3a_3astring_8',['String',['../namespaceunify_1_1String.html',1,'unify']]],
+  ['union_9',['Union',['../classunify_1_1BBox.html#a732854e8333a19db7d403cfbfa19fc7b',1,'unify::BBox']]],
+  ['unit_20testing_10',['Unit Testing',['../md_README.html#autotoc_md7',1,'Enable Unit Testing'],['../md_README.html#autotoc_md21',1,'Unit Testing']]],
+  ['units_11',['Units',['../classunify_1_1Size.html#a2807ff8da89c6a68f7064d09f5ece190',1,'unify::Size::Units()'],['../classunify_1_1Size3.html#a38e97daaf97ed429954289f09be13049',1,'unify::Size3::Units()']]],
+  ['unknown_12',['Unknown',['../namespaceunify.html#af385be843c3779feb4af332ac46d2a3fa88183b946cc5f0e8c96b2e66e1c74a7e',1,'unify']]],
+  ['unsafe_5fany_5fcast_13',['unsafe_any_cast',['../classunify_1_1Any.html#adab401ad131113090c5303ea3e7b1187',1,'unify::Any::unsafe_any_cast()'],['../namespaceunify.html#a132c292b6b16bf9c926d543b68af0539',1,'unify::unsafe_any_cast(Any *operand)'],['../namespaceunify.html#ad00561c21ed429afb015d08998ae98fc',1,'unify::unsafe_any_cast(const Any *operand) noexcept']]],
+  ['up_14',['Up',['../classunify_1_1Quaternion.html#a324aa5fd1f396c755aebf1c157c16769',1,'unify::Quaternion']]],
+  ['update_15',['Update',['../classunify_1_1Frame.html#aa0563dd11e9d6d1f22da6d35edf212f0',1,'unify::Frame']]],
+  ['updatelocals_16',['UpdateLocals',['../classunify_1_1FrameSetInstance.html#a0311b27e071e0c14cb2fbc3d3b7d6ab7',1,'unify::FrameSetInstance']]],
+  ['updateonchange_17',['UpdateOnChange',['../classunify_1_1Frame.html#aa8194ae009cfeb67ac305d727a168eb4',1,'unify::Frame::UpdateOnChange(bool tf)'],['../classunify_1_1Frame.html#a719eb2ef72e2eb7bf4a73a91b2522606',1,'unify::Frame::UpdateOnChange()']]],
+  ['ur_18',['UR',['../classunify_1_1Rect.html#a4840d87a5e88219049ebd5c0b3955996',1,'unify::Rect::UR()'],['../classunify_1_1TexArea.html#a7bf6023db7baccde4a484ca643755777',1,'unify::TexArea::UR()']]],
+  ['utl_19',['Unify Template Library (UTL)',['../md_README.html#autotoc_md1',1,'']]]
 ];

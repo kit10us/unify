@@ -1,31 +1,5 @@
 var searchData=
 [
-  ['left_0',['Left',['../classunify_1_1FrustumPlane.html#a945eb2a3eb6d5d38b380bb4f2eeca442a7b9409c67b81e2d77d5bf77fde1667e1',1,'unify::FrustumPlane::Left'],['../structunify_1_1NinePoint.html#a47fc4f4242673361a16ab53737e38490a0925c54d20c9b211c20f7dbdd63db463',1,'unify::NinePoint::Left']]],
-  ['left_1',['left',['../classunify_1_1Rect.html#ad34a7614482d6e1b9d0106ce206614c5',1,'unify::Rect']]],
-  ['leftstring_2',['LeftString',['../namespaceunify_1_1String.html#aa988c20146d0b102b280de77585908c5',1,'unify::String']]],
-  ['length_3',['Length',['../classunify_1_1V2.html#a8159067a8bbab16d8e2ce171513c3a4f',1,'unify::V2::Length()'],['../classunify_1_1V3.html#a4e32ac5683a0353413c93425f00e278b',1,'unify::V3::Length()'],['../classunify_1_1V4.html#afafff8c5c6ef3ccae58e116d2a672913',1,'unify::V4::Length()']]],
-  ['lerp_4',['Lerp',['../namespaceunify.html#a33fa7aa51f24d0a9aa3be52b198c7169',1,'unify::Lerp()'],['../Math_8inl.html#a58816db2fa310eff725b5a65170518e3',1,'Lerp():&#160;Math.inl']]],
-  ['line_20document_20generation_20comments_5',['In-line Document Generation Comments',['../md_README.html#autotoc_md6',1,'']]],
-  ['linear_6',['linear',['../classunify_1_1Color.html#ad23887cc35c948d5bb34ce9520cf0fe5',1,'unify::Color::linear'],['../classunify_1_1ColorUnit.html#a241acb381db44b83008eb1a1537185b0',1,'unify::ColorUnit::linear'],['../classunify_1_1Matrix.html#a65acc2ed4035204e5fff0ed64e240438',1,'unify::Matrix::linear']]],
-  ['linearindex_7',['LinearIndex',['../classunify_1_1Size.html#ae5d364063e0cc22613e444e7f1dc7595',1,'unify::Size::LinearIndex()'],['../classunify_1_1Size3.html#a4d5d9b5619b03cb7cf2a07cb46aaf0bd',1,'unify::Size3::LinearIndex()']]],
-  ['lineartov2_8',['LinearToV2',['../classunify_1_1Size.html#aa93653c26f39a2b53748b32a9f3cfc12',1,'unify::Size']]],
-  ['linklist_9',['LinkList',['../classunify_1_1LinkList.html',1,'unify::LinkList&lt; T &gt;'],['../classunify_1_1TLink.html#a1fb37db15f64ff76492d6ca1ae27803b',1,'unify::TLink::LinkList()'],['../classunify_1_1LinkList.html#a6331159b519d50257f3bca4d9269ef6a',1,'unify::LinkList::LinkList()']]],
-  ['linklist_2eh_10',['LinkList.h',['../LinkList_8h.html',1,'']]],
-  ['linklist_2einl_11',['LinkList.inl',['../LinkList_8inl.html',1,'']]],
-  ['linklist_5fforcenames_12',['LINKLIST_FORCENAMES',['../LinkList_8h.html#ac6f199b0b0c34d03dc584bf707d4d47c',1,'LinkList.h']]],
-  ['linklist_5fsort_13',['LINKLIST_SORT',['../LinkList_8h.html#a235cf910a0918c3d5c789662727f9691',1,'LinkList.h']]],
-  ['linklist_5fsort_5fbyname_14',['LINKLIST_SORT_BYNAME',['../LinkList_8h.html#aca907eae6f09f52382423483bfc865e7',1,'LinkList.h']]],
-  ['linklist_5fsort_5fbyvalue_15',['LINKLIST_SORT_BYVALUE',['../LinkList_8h.html#a70191f29519b5688aa197ddf19ce37d1',1,'LinkList.h']]],
-  ['linklist_5fsortreverse_16',['LINKLIST_SORTREVERSE',['../LinkList_8h.html#ab9fc115685b1ea939cb22f70df26025c',1,'LinkList.h']]],
-  ['list_2eh_17',['List.h',['../List_8h.html',1,'']]],
-  ['list_2einl_18',['List.inl',['../List_8inl.html',1,'']]],
-  ['listpart_19',['ListPart',['../namespaceunify_1_1String.html#a1ea82f1393e1b049796942f7e7d9c8a1',1,'unify::String']]],
-  ['listpartcount_20',['ListPartCount',['../namespaceunify_1_1String.html#a67b2426966e856d34f2addf90d0f1358',1,'unify::String']]],
-  ['local_21',['Local',['../classunify_1_1FrameSet.html#a19c947c713cae62e7321750e7a3425b5',1,'unify::FrameSet::Local()'],['../classunify_1_1FrameSetInstance.html#a557cc733077ac2ad08450aee5b8614fd',1,'unify::FrameSetInstance::Local()']]],
-  ['lookat_22',['LookAt',['../classunify_1_1Frame.html#ad550b52041c9989598c83cf6d314da6f',1,'unify::Frame::LookAt(const Frame &amp;at, const V3&lt; float &gt; &amp;up=V3&lt; float &gt;(0, 1, 0))'],['../classunify_1_1Frame.html#ae2fd605d49ca89ef63f606bffca8c36e',1,'unify::Frame::LookAt(const V3&lt; float &gt; &amp;at, const V3&lt; float &gt; &amp;up=V3&lt; float &gt;(0, 1, 0))'],['../classunify_1_1FrameLite.html#a7a674494453e7ca451a254ba59a4c681',1,'unify::FrameLite::LookAt(const FrameLite &amp;at, const V3&lt; float &gt; &amp;up=V3&lt; float &gt;(0, 1, 0))'],['../classunify_1_1FrameLite.html#a14c35d057c2c08d229ce59477061297e',1,'unify::FrameLite::LookAt(const V3&lt; float &gt; &amp;at, const V3&lt; float &gt; &amp;up=V3&lt; float &gt;(0, 1, 0))']]],
-  ['lookatlh_23',['LookAtLH',['../classunify_1_1Matrix.html#a4e5d40e16a797c601ade481d93846069',1,'unify::Matrix']]],
-  ['lookdirection_24',['LookDirection',['../classunify_1_1Frame.html#a24daae56dfd6823a789e6ff76296d791',1,'unify::Frame']]],
-  ['lookup_25',['Lookup',['../classunify_1_1Lookup.html',1,'unify']]],
-  ['lookup_2eh_26',['Lookup.h',['../Lookup_8h.html',1,'']]],
-  ['lookup_2einl_27',['Lookup.inl',['../Lookup_8inl.html',1,'']]]
+  ['join_0',['Join',['../classunify_1_1Path.html#a3d379f00b82a01df20e5d78434bc610e',1,'unify::Path']]],
+  ['june_202007_1',['June 2007',['../md_README.html',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)'],['../dir_59425e443f801f1f2fd8bbe4959a3ccf.html#autotoc_md24',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)']]]
 ];
