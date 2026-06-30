@@ -43,28 +43,28 @@ namespace unify::String
 	/// <summary>
 	/// Compare two strings for equvilancy, ignoring case.
 	/// </summary>
-	bool StringIs( std::string a, std::string is );
+	bool StringIs( std::string_view a, std::string_view b );
 			
 	/// <summary>
 	/// Compare mutliple strings for equvilancy, ignoring case.
 	/// </summary>
 	template< typename foo = std::string, typename... bar >
-	bool StringIs( std::string a, std::string is, std::string Rest... );
+	bool StringIs( std::string_view a, std::string_view b, std::string_view rest... );
 
 	/// <summary>
 	/// Compare a string for equvilancy with any of a list of strings, ignoring case.
 	/// </summary>
-	bool StringIsAny( std::string a, const std::list< std::string > & list );
+	bool StringIsAny( std::string_view a, const std::list< std::string_view > & list );
 
 	/// <summary>
 	/// Returns true if source begins with the string beginsWith.
 	/// </summary>
-	bool BeginsWith( std::string source, std::string beginsWith );
+	bool BeginsWith( std::string_view source, std::string_view beginsWith );
 
 	/// <summary>
 	/// Returns true if the source ends with the string endsWith.
 	/// </summary>
-	bool EndsWith( std::string source, std::string endsWith );
+	bool EndsWith( std::string_view source, std::string_view endsWith );
 	
 	bool StringIsInt( std::string sOne );
 	bool StringIsFloat( std::string sOne );

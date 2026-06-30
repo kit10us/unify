@@ -52,7 +52,7 @@ namespace unify
 	inline
 	V3< int > Ray<T>::Sign() const
 	{
-		V3< T > invDirection = InvDirection();
+		V3< T > invDirection = Inverse();
 		return V3< int >( invDirection.x < 0, invDirection.y < 0, invDirection.z < 0 );
 	}
 

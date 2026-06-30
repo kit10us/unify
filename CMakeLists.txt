@@ -21,43 +21,28 @@ cmake_minimum_required (VERSION 3.29.0)
 
 project(unify_lib VERSION 1.0.0 LANGUAGES CXX)
 
-option(UNIFY_UNIT_TESTS "Build the Unify library unit tests" OFF)
-option(TESTS "Include unit tests" FALSE)
-
-include(cmake/ShowConfig.cmake)
+#include(cmake/ShowConfig.cmake)
 
 set(CMAKE_SUPPRESS_REGENERATION ON)
 
-include(cmake/Functions.cmake)
-
 project(unify CXX)
 
-function(GenerateMain)
+set(TARGET_NAME ${PROJECT_NAME})
+set(NAMESPACE "unify")
 
-	set(TARGET_NAME ${PROJECT_NAME})
-	set(NAMESPACE "unify")
-	
-	AddStandardCompileOptions(${TARGET_NAME})
+file(GLOB_RECURSE ALL_SOURCES
+	"${CMAKE_CURRENT_SOURCE_DIR}/${NAMESPACE}/*.h"
+	"${CMAKE_CURRENT_SOURCE_DIR}/${NAMESPACE}/*.inl"
+)
 
-	file(GLOB_RECURSE ALL_SOURCES
-		"${CMAKE_CURRENT_SOURCE_DIR}/${NAMESPACE}/*.h"
-		"${CMAKE_CURRENT_SOURCE_DIR}/${NAMESPACE}/*.inl"
-	)
+add_library(${PROJECT_NAME} STATIC ${ALL_SOURCES})
 
-	add_library(${PROJECT_NAME} STATIC ${ALL_SOURCES})
-	
-	set_target_properties(${PROJECT_NAME} PROPERTIES
-		LINKER_LANGUAGE CXX
-		EXCLUDE_FROM_ALL TRUE
-	)
-	source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${ALL_SOURCES})
+set_target_properties(${PROJECT_NAME} PROPERTIES
+	LINKER_LANGUAGE CXX
+	EXCLUDE_FROM_ALL TRUE
+)
+source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${ALL_SOURCES})
 
-	include_directories(.)
-endfunction()
+include_directories(.)
 
-GenerateMain()
-
-if(${UNIFY_UNIT_TESTS})
-	message("Including unit tests...")
-	include(tests/CMakeLists.txt)
-endif()
+include(tests/CMakeLists.txt)

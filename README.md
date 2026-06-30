@@ -101,5 +101,5 @@ Unify utilizes ctest to execute unit testing.
 
 Run tests showing failures:
 ```
-    ctest --test-dir build -C Debug --output-on-failure
+ctest --test-dir build -C Debug --output-on-failure
 ```

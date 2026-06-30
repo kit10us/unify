@@ -44,7 +44,7 @@ Size3<T>::Size3( const Size3< T > & size )
 template< typename T >
 Size3< T >::Size3( std::string text )
 {
-	std::vector< T > split = string::Split< T >( text, ',' );
+	std::vector< T > split = String::Split< T >( text, ',' );
     width = split[ 0 ];
     height = split[ 1 ];
     depth = split[ 2 ];

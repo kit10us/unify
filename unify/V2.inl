@@ -44,7 +44,7 @@ namespace unify
 	template< typename T >
 	V2< T >::V2(std::string text)
 	{
-		std::vector< T > split = string::Split< T >(text, ',');
+		std::vector< T > split = String::Split< T >(text, ',');
 		x = split[0];
 		y = split[1];
 	}

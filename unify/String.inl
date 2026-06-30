@@ -39,6 +39,7 @@ namespace unify::String
 		std::string item;
 		size_t front = 0;
 		size_t i = 0;
+		const auto end = sourceString.size();
 		for (i = 0; i < sourceString.size(); i++)
 		{
 			if (sourceString[i] == delimitor)
@@ -149,7 +150,7 @@ namespace unify::String
 	}
 
 	inline
-	bool StringIs(std::string a, std::string b)
+	bool StringIs(std::string_view a, std::string_view b)
 	{
 		if (a.length() != b.length())
 		{
