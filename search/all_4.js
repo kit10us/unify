@@ -11,7 +11,7 @@ var searchData=
   ['bboxtests_8',['BBoxTests',['../classBBoxTests.html',1,'']]],
   ['becomeidentity_9',['BecomeIdentity',['../classunify_1_1Matrix.html#ad40b284bc132a550d2718f936b7a7755',1,'unify::Matrix']]],
   ['begin_10',['begin',['../classunify_1_1LineSegment3.html#a85afa9fe3c4c7931852c91dd73d01e18',1,'unify::LineSegment3::begin'],['../classunify_1_1Lookup.html#a2d2eb09ac12e662255db29b2d5de5887',1,'unify::Lookup::begin()']]],
-  ['beginswith_11',['BeginsWith',['../namespaceunify_1_1String.html#a23ec6b954eb53b6f233997ca1ddde012',1,'unify::String']]],
+  ['beginswith_11',['BeginsWith',['../namespaceunify_1_1String.html#a0df42cec7b62e798e620ca2eb8a40fb5',1,'unify::String::BeginsWith(std::string_view source, std::string_view beginsWith)'],['../namespaceunify_1_1String.html#a23ec6b954eb53b6f233997ca1ddde012',1,'unify::String::BeginsWith(std::string source, std::string beginsWith)']]],
   ['bgra_12',['BGRA',['../classunify_1_1ColorUnit.html#a04614e684f8dbe9c2f028313b9931be8af620237336c6b8cf9688fe528b9c5338',1,'unify::ColorUnit::BGRA'],['../namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba5d0594e84962ef29d928c18cd5fbac51',1,'unify::BGRA']]],
   ['bitcompare_13',['BITCOMPARE',['../Flags_8h.html#ab973ce10d2c8a2c026e0f9beb2ab33c6',1,'Flags.h']]],
   ['bitstate_14',['BITSTATE',['../Flags_8h.html#a438025cdc7ecbbd9703fc836cee3d3b6',1,'Flags.h']]],

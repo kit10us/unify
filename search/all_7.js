@@ -7,7 +7,7 @@ var searchData=
   ['enable_20unit_20testing_4',['Enable Unit Testing',['../md_README.html#autotoc_md7',1,'']]],
   ['end_5',['end',['../classunify_1_1LineSegment3.html#a0af115ebeecbab8d1c8692b8ba04b7f2',1,'unify::LineSegment3::end'],['../classunify_1_1Lookup.html#a036de8004b86301f1d5e4765cf3bebb6',1,'unify::Lookup::end()']]],
   ['endofstream_6',['EndOfStream',['../classunify_1_1Stream.html#ab489c13e2cc6b8a8d38117e82a3b1a87',1,'unify::Stream']]],
-  ['endswith_7',['EndsWith',['../namespaceunify_1_1String.html#a5bd5d26256eae0d2ec46c22f6a097975',1,'unify::String']]],
+  ['endswith_7',['EndsWith',['../namespaceunify_1_1String.html#abd13ead8f2eb5991ebb0e253a8cdad3c',1,'unify::String::EndsWith(std::string_view source, std::string_view endsWith)'],['../namespaceunify_1_1String.html#a5bd5d26256eae0d2ec46c22f6a097975',1,'unify::String::EndsWith(std::string source, std::string endsWith)']]],
   ['evolution_20and_20vision_8',['Evolution and Vision',['../md_README.html#autotoc_md2',1,'']]],
   ['exceedssamples_9',['ExceedsSamples',['../structme_1_1stats_1_1RateCapture.html#a467c82cb6ada855902b60595f943fdb2',1,'me::stats::RateCapture']]],
   ['exception_10',['Exception',['../classunify_1_1Exception.html',1,'unify::Exception'],['../classunify_1_1Exception.html#a377f0041eae47c0c4fac2e3f5e05a252',1,'unify::Exception::Exception()']]],
