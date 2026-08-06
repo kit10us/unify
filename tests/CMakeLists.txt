@@ -6,6 +6,8 @@ enable_testing()
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+include(GoogleTest)
+
 include(FetchContent)
 FetchContent_Declare(
     googletest
@@ -17,15 +19,16 @@ FetchContent_MakeAvailable(googletest)
 
 # 1. Add test source files
 add_executable(unify_unit_tests
-    tests/tests_Angle.cpp
-    tests/tests_V2.cpp
-    tests/tests_V3.cpp
-    tests/tests_V4.cpp
-    tests/tests_LineSegment3.cpp
-    tests/tests_Ray.cpp
-    tests/tests_BBox.cpp
-    tests/tests_Matrix.cpp
-    tests/tests_Cast.cpp
+    tests_Angle.cpp
+    tests_V2.cpp
+    tests_V3.cpp
+    tests_V4.cpp
+    tests_LineSegment3.cpp
+    tests_Ray.cpp
+    tests_BBox.cpp
+    tests_BRectangle.cpp
+    tests_Matrix.cpp
+    tests_Cast.cpp
     )
 
 target_include_directories(unify_unit_tests 
@@ -37,9 +40,7 @@ target_link_libraries(unify_unit_tests PRIVATE GTest::gtest_main)
 
 message("CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}/..")
 
-set(CMAKE_GTEST_DISCOVER_TESTS_DISCOVERY_MODE PRE_TEST)
-
-include(GoogleTest)
+#set(CMAKE_GTEST_DISCOVER_TESTS_DISCOVERY_MODE PRE_TEST)
 
 # 2. Add test cases
 #add_test(NAME Unify.Angle COMMAND unify_unit_tests --gtest_filter=AngleTests.*)
@@ -50,6 +51,7 @@ include(GoogleTest)
 #add_test(NAME Unify.Ray COMMAND unify_unit_tests --gtest_filter=RayTests.*)
 #add_test(NAME Unify.BBox COMMAND unify_unit_tests --gtest_filter=BBoxTests.*)
 #add_test(NAME Unify.Matrix COMMAND unify_unit_tests --gtest_filter=MatrixTests.*)
+
 
 gtest_discover_tests(unify_unit_tests 
     WORKING_DIRECTORY "$<TARGET_FILE_DIR:unify_unit_tests>"

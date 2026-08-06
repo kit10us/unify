@@ -19,30 +19,42 @@
 
 cmake_minimum_required (VERSION 3.29.0)
 
-project(unify_lib VERSION 1.0.0 LANGUAGES CXX)
+project(unify VERSION 1.0.0 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 #include(cmake/ShowConfig.cmake)
 
 set(CMAKE_SUPPRESS_REGENERATION ON)
 
-project(unify CXX)
-
 set(TARGET_NAME ${PROJECT_NAME})
 set(NAMESPACE "unify")
 
-file(GLOB_RECURSE ALL_SOURCES
+file(GLOB_RECURSE ALL_SOURCES CONFIGURE_DEPENDS
 	"${CMAKE_CURRENT_SOURCE_DIR}/${NAMESPACE}/*.h"
 	"${CMAKE_CURRENT_SOURCE_DIR}/${NAMESPACE}/*.inl"
 )
 
 add_library(${PROJECT_NAME} STATIC ${ALL_SOURCES})
 
+target_include_directories(${PROJECT_NAME}
+    PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+        $<INSTALL_INTERFACE:include>
+)
+
 set_target_properties(${PROJECT_NAME} PROPERTIES
 	LINKER_LANGUAGE CXX
-	EXCLUDE_FROM_ALL TRUE
 )
+
+#	EXCLUDE_FROM_ALL TRUE
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${ALL_SOURCES})
 
-include_directories(.)
+option(UNIFY_BUILD_TESTS "Build unit tests" ON) # Added
 
-include(tests/CMakeLists.txt)
+if(UNIFY_BUILD_TESTS)
+	message("Building unit tests...")
+	enable_testing()
+	add_subdirectory(tests)
+endif()

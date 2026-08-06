@@ -23,6 +23,7 @@
 #pragma once
 
 #include <unify/Unify.h>
+#include <unify/V2.h>
 
 namespace unify
 {
@@ -32,14 +33,28 @@ namespace unify
 	template< typename T >
 	class BRectangle
 	{
-	public:
-		V2< T > sup;
-		V2< T > inf;
+		public:
+		V2< T > ul;
+		V2< T > dr;
 
 		BRectangle();
-		BRectangle( const V2< T > & inf, const V2< T > & sup );
+		BRectangle( const V2< T > & ul, const V2< T > & dr );
 
 		BRectangle < T > operator * (const V2< T >& muliplcand);
+
+		bool operator == (const BRectangle& other) const;
+
+		/// <summary>
+		/// In-place normalize the bounding rectangle, ensuring that the ul is less than or equal to the dr.
+		/// </summary>
+		/// <returns> true if the bounding rectangle was changed, false if it was already normalized.</returns>
+		bool Normalize();
+
+		/// <summary>
+		/// Returns a normalized copy of the bounding rectangle, ensuring that the ul is less than or equal to the dr.
+		/// </summary>
+		/// <returns>a normalized copy of the bounding rectangle.</returns>
+		BRectangle Normalized() const;
 		
 		/// <summary>
 		/// Generate a square from specified bounding corners.
@@ -53,20 +68,25 @@ namespace unify
 		void Add( const V2< T > & point );
 
 		/// <summary>
-		/// Given a bounding rectangle, if that bounding square is beyond our current bounds, increase our bounds to encompass it.
-		/// </summary>
-		BRectangle & Add( const BRectangle< T > & boundingRectangle );
-
-		/// <summary>
 		/// Returns true if a point is within our bounding rectangle.
 		/// </summary>
 		bool Contains( const V2< T > & point );
 		
 		/// <summary>
+		/// Returns true if a point is within our bounding rectangle.
+		/// </summary>
+		bool Contains( const BRectangle< T > & brect );
+
+		/// <summary>
 		/// Returns the size of the rectangle.
 		/// </summary>
 		const V2< T > Size();
 	};
+
+	// For foreward compatibility, we will define BRect as an alias for BRectangle.
+	template<typename T>
+	using BRect = BRectangle<T>;
+
 	#include <unify/BRectangle.inl>
 }
 

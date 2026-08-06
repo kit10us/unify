@@ -86,6 +86,9 @@ Exercise extreme caution when using string_view as a class member. The class doe
 # Final Notes
 Unify is considered pre-release at the moment due to needing some modernization and optimizations. That being said, certain names of features will change **NOW** and be committed to for future revisions; this means we need to be pretty explicit in naming so we stick to **SOLID** development prinipals.
 
+# VSCode Utilization
+To build the tests press F7.
+
 # Testing
 ## Unit Testing
 Unify utilizes GoogleTest (GTest) for unit testing and CTest for test orchestration.
@@ -95,6 +98,9 @@ To build the test suite target:
 ```
 cmake --build build --config Debug --target unify_unit_tests
 ```
+
+## List Available Tests
+ctest --test-dir build -N   
 
 ## Executing Test
 Unify utilizes ctest to execute unit testing.

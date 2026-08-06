@@ -20,71 +20,102 @@
  */
 
 
-template< typename T >
-unify::BRectangle::BRectangle()
+template<typename T>
+unify::BRectangle< T >::BRectangle()
 	: BRectangle({}, {})
 {
 }
 
-template< typename T >
-unify::BRectangle::BRectangle( const unify::V2< T > & inInf, const unify::V2< T > & inSup )
-	: inf{ inInf }
-	, sup{ inSup }
+template<typename T>
+unify::BRectangle< T >::BRectangle( const unify::V2<T>& inUL, const unify::V2<T>& inDR )
+	: ul{ inUL }
+	, dr{ inDR }
 {
 }
 
-template< typename T >
-unify::BRectangle< T > unify::BRectangle::operator * ( const unify::V2< T > & multiplicand )
+template<typename T>
+unify::BRectangle<T> unify::BRectangle< T >::operator * ( const unify::V2<T>& multiplicand )
 {
-	return BRectangle< T >( inf * multiplicand, sup * multiplicand );
+	return BRectangle< T >( ul * multiplicand, dr * multiplicand );
 }
 
-template< typename T >
-void BRectangle::GenerateCorners( unify::V2< T > * bounds )
+template<typename T>
+bool unify::BRectangle< T >::operator == (const BRectangle& other) const
 {
-	bounds[ 0 ] = unify::V2< T >( inf.x, inf.y );
-	bounds[ 1 ] = unify::V2< T >( sup.x, inf.y );
-	bounds[ 2 ] = unify::V2< T >( inf.x, sup.y );
-	bounds[ 3 ] = unify::V2< T >( sup.x, sup.y );
+	return ul == other.ul && dr == other.dr;
 }
 
-template< typename T >
-void BRectangle::Add( const unify::V2< T > & point )
+template<typename T>
+bool unify::BRectangle< T >::Normalize()
 {
-	if( point.x > sup.x ) sup.x = point.x;
-	else if( point.x < inf.x ) inf.x = point.x;
+	bool changed = false;
 
-	if( point.y > sup.y ) sup.y = point.y;
-	else if( point.y < inf.y ) inf.y = point.y;
-}
-
-template< typename T >
-bool BRectangle::Contains( const unify::V2< T > & point )
-{
-	if( ( point.x < sup.x && point.x > inf.x ) && ( point.y < sup.y && point.y > inf.y ) )
+	if( ul.x > dr.x )
 	{
-		return TRUE;
+		std::swap( ul.x, dr.x );
+		changed = true;
 	}
 
-	return FALSE;
+	if( ul.y > dr.y )
+	{
+		std::swap( ul.y, dr.y );
+		changed = true;
+	}
+
+	return changed;
 }
 
-template< typename T >
-unify::BRectangle< T > & unify::BRectangle::Add( const unify::BRectangle< T > & boundingSquare )
+template<typename T>
+unify::BRectangle< T > unify::BRectangle< T >::Normalized() const
 {
-	if( boundingSquare.sup.x > sup.x ) sup.x = boundingSquare.sup.x;
-	if( boundingSquare.inf.x < inf.x ) inf.x = boundingSquare.inf.x;
-
-	if( boundingSquare.sup.y > sup.y ) sup.y = boundingSquare.sup.y;
-	if( boundingSquare.inf.y < inf.y ) inf.y = boundingSquare.inf.y;
-
-	return *this;
+	unify::BRectangle< T > normalized = *this;
+	normalized.Normalize();
+	return normalized;
 }
 
-template< typename T >
-const unify::V2< T > unify::BRectangle::Size()
+template<typename T>
+void unify::BRectangle< T >::GenerateCorners( unify::V2<T>* bounds )
 {
-	return unify::V2< T >( sup - inf );
+	bounds[ 0 ] = unify::V2< T >( ul.x, ul.y );
+	bounds[ 1 ] = unify::V2< T >( dr.x, ul.y );
+	bounds[ 2 ] = unify::V2< T >( ul.x, dr.y );
+	bounds[ 3 ] = unify::V2< T >( dr.x, dr.y );
 }
 
+template<typename T>
+void unify::BRectangle<T>::Add( const unify::V2<T>& point )
+{
+	if( point.x > dr.x ) dr.x = point.x;
+	else if( point.x < ul.x ) ul.x = point.x;
 
+	if( point.y > dr.y ) dr.y = point.y;
+	else if( point.y < ul.y ) ul.y = point.y;
+}
+
+template<typename T>
+bool unify::BRectangle<T>::Contains( const unify::V2<T>& point )
+{
+	if( ( point.x < dr.x && point.x > ul.x ) && ( point.y < dr.y && point.y > ul.y ) )
+	{
+		return true;
+	}
+
+	return false;
+}
+
+template<typename T>
+bool unify::BRectangle<T>::Contains( const unify::BRectangle<T>& brect )
+{
+	if( ( brect.ul.x >= ul.x && brect.dr.x <= dr.x ) && ( brect.ul.y >= ul.y && brect.dr.y <= dr.y ) )
+	{
+		return true;
+	}
+
+	return false;
+}
+
+template<typename T>
+const unify::V2<T>unify::BRectangle<T>::Size()
+{
+	return unify::V2< T >( dr - ul );
+}
