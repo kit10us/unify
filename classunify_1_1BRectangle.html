@@ -119,23 +119,28 @@ document.addEventListener('DOMContentLoaded', () => {
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acb34d574e5c08f8752402d52f6229a25" id="r_acb34d574e5c08f8752402d52f6229a25"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#acb34d574e5c08f8752402d52f6229a25">BRectangle</a> ()</td></tr>
-<tr class="memitem:ae15566378b7ca112d8621e41b648250f" id="r_ae15566378b7ca112d8621e41b648250f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae15566378b7ca112d8621e41b648250f">BRectangle</a> (const <a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; &amp;inf, const <a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; &amp;sup)</td></tr>
+<tr class="memitem:af25be324d267d490a1ded5e665e0a640" id="r_af25be324d267d490a1ded5e665e0a640"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af25be324d267d490a1ded5e665e0a640">BRectangle</a> (const <a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; &amp;ul, const <a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; &amp;dr)</td></tr>
 <tr class="memitem:a52da532c0b3d4d03bd6f8e8e062be884" id="r_a52da532c0b3d4d03bd6f8e8e062be884"><td class="memItemLeft"><a class="el" href="#acb34d574e5c08f8752402d52f6229a25">BRectangle</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a52da532c0b3d4d03bd6f8e8e062be884">operator*</a> (const <a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; &amp;muliplcand)</td></tr>
-<tr class="memitem:ada840716f0b5ac6dc92b203e9d519f67" id="r_ada840716f0b5ac6dc92b203e9d519f67"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ada840716f0b5ac6dc92b203e9d519f67">GenerateCorners</a> (<a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; *bounds)</td></tr>
-<tr class="memdesc:ada840716f0b5ac6dc92b203e9d519f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a square from specified bounding corners.  <br /></td></tr>
+<tr class="memitem:aa7416d2a2a0d841db604fd303d4aff27" id="r_aa7416d2a2a0d841db604fd303d4aff27"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa7416d2a2a0d841db604fd303d4aff27">operator==</a> (const <a class="el" href="#acb34d574e5c08f8752402d52f6229a25">BRectangle</a> &amp;other) const</td></tr>
+<tr class="memitem:ae980b5f5b1d172fdf9621e66ac715cbf" id="r_ae980b5f5b1d172fdf9621e66ac715cbf"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae980b5f5b1d172fdf9621e66ac715cbf">Normalize</a> ()</td></tr>
+<tr class="memdesc:ae980b5f5b1d172fdf9621e66ac715cbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">In-place normalize the bounding rectangle, ensuring that the ul is less than or equal to the dr.  <br /></td></tr>
+<tr class="memitem:a2f401d2ff6d1e968ae92a0b24704672e" id="r_a2f401d2ff6d1e968ae92a0b24704672e"><td class="memItemLeft"><a class="el" href="#acb34d574e5c08f8752402d52f6229a25">BRectangle</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2f401d2ff6d1e968ae92a0b24704672e">Normalized</a> () const</td></tr>
+<tr class="memdesc:a2f401d2ff6d1e968ae92a0b24704672e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a normalized copy of the bounding rectangle, ensuring that the ul is less than or equal to the dr.  <br /></td></tr>
+<tr class="memitem:adde6c6d5cfc582d46a9256eba458f65b" id="r_adde6c6d5cfc582d46a9256eba458f65b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adde6c6d5cfc582d46a9256eba458f65b">GenerateCorners</a> (<a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; *bounds)</td></tr>
+<tr class="memdesc:adde6c6d5cfc582d46a9256eba458f65b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a square from specified bounding corners.  <br /></td></tr>
 <tr class="memitem:a21458ababb9f44960d99e7e04fcaaa4f" id="r_a21458ababb9f44960d99e7e04fcaaa4f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a21458ababb9f44960d99e7e04fcaaa4f">Add</a> (const <a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; &amp;point)</td></tr>
 <tr class="memdesc:a21458ababb9f44960d99e7e04fcaaa4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a point, if that point is beyond our current bounds, increase our bounds to encompass it.  <br /></td></tr>
-<tr class="memitem:a6c36badc93b222c0500c672893244f4e" id="r_a6c36badc93b222c0500c672893244f4e"><td class="memItemLeft"><a class="el" href="#acb34d574e5c08f8752402d52f6229a25">BRectangle</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6c36badc93b222c0500c672893244f4e">Add</a> (const <a class="el" href="#acb34d574e5c08f8752402d52f6229a25">BRectangle</a>&lt; T &gt; &amp;boundingRectangle)</td></tr>
-<tr class="memdesc:a6c36badc93b222c0500c672893244f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a bounding rectangle, if that bounding square is beyond our current bounds, increase our bounds to encompass it.  <br /></td></tr>
-<tr class="memitem:af3f61f2edd92819510534f3af2de36a8" id="r_af3f61f2edd92819510534f3af2de36a8"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af3f61f2edd92819510534f3af2de36a8">Contains</a> (const <a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; &amp;point)</td></tr>
-<tr class="memdesc:af3f61f2edd92819510534f3af2de36a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a point is within our bounding rectangle.  <br /></td></tr>
+<tr class="memitem:a777f458e8159ce7f76aea504ab1d4f68" id="r_a777f458e8159ce7f76aea504ab1d4f68"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a777f458e8159ce7f76aea504ab1d4f68">Contains</a> (const <a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; &amp;point)</td></tr>
+<tr class="memdesc:a777f458e8159ce7f76aea504ab1d4f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a point is within our bounding rectangle.  <br /></td></tr>
+<tr class="memitem:afce71d1159508846b8d17f6b0a987f40" id="r_afce71d1159508846b8d17f6b0a987f40"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#afce71d1159508846b8d17f6b0a987f40">Contains</a> (const <a class="el" href="#acb34d574e5c08f8752402d52f6229a25">BRectangle</a>&lt; T &gt; &amp;brect)</td></tr>
+<tr class="memdesc:afce71d1159508846b8d17f6b0a987f40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a point is within our bounding rectangle.  <br /></td></tr>
 <tr class="memitem:a595780c09f4dfb4020422f87ecb58ceb" id="r_a595780c09f4dfb4020422f87ecb58ceb"><td class="memItemLeft">const <a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a595780c09f4dfb4020422f87ecb58ceb">Size</a> ()</td></tr>
 <tr class="memdesc:a595780c09f4dfb4020422f87ecb58ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the rectangle.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a1d01061ac1687970fc21b2d25939dc47" id="r_a1d01061ac1687970fc21b2d25939dc47"><td class="memItemLeft"><a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1d01061ac1687970fc21b2d25939dc47">sup</a></td></tr>
-<tr class="memitem:ad3a2763c47afecb8b1267fa48937f1ac" id="r_ad3a2763c47afecb8b1267fa48937f1ac"><td class="memItemLeft"><a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad3a2763c47afecb8b1267fa48937f1ac">inf</a></td></tr>
+<tr class="memitem:acd979961c2de5357172ba57c98cd2b2c" id="r_acd979961c2de5357172ba57c98cd2b2c"><td class="memItemLeft"><a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#acd979961c2de5357172ba57c98cd2b2c">ul</a></td></tr>
+<tr class="memitem:abc078eea693edc2e051c31571e408ad8" id="r_abc078eea693edc2e051c31571e408ad8"><td class="memItemLeft"><a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#abc078eea693edc2e051c31571e408ad8">dr</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
@@ -160,8 +165,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="ae15566378b7ca112d8621e41b648250f" name="ae15566378b7ca112d8621e41b648250f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae15566378b7ca112d8621e41b648250f">&#9670;&#160;</a></span>BRectangle() <span class="overload">[2/2]</span></h2>
+<a id="af25be324d267d490a1ded5e665e0a640" name="af25be324d267d490a1ded5e665e0a640"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af25be324d267d490a1ded5e665e0a640">&#9670;&#160;</a></span>BRectangle() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,12 +176,12 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classunify_1_1BRectangle.html">unify::BRectangle</a>&lt; T &gt;::BRectangle </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>inf</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ul</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sup</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dr</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -184,29 +189,8 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a6c36badc93b222c0500c672893244f4e" name="a6c36badc93b222c0500c672893244f4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c36badc93b222c0500c672893244f4e">&#9670;&#160;</a></span>Add() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classunify_1_1BRectangle.html">unify::BRectangle</a>&lt; T &gt; &amp; <a class="el" href="classunify_1_1BRectangle.html">unify::BRectangle</a>&lt; T &gt;::Add </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#acb34d574e5c08f8752402d52f6229a25">BRectangle</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>boundingRectangle</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Given a bounding rectangle, if that bounding square is beyond our current bounds, increase our bounds to encompass it. </p>
-
-</div>
-</div>
 <a id="a21458ababb9f44960d99e7e04fcaaa4f" name="a21458ababb9f44960d99e7e04fcaaa4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21458ababb9f44960d99e7e04fcaaa4f">&#9670;&#160;</a></span>Add() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a21458ababb9f44960d99e7e04fcaaa4f">&#9670;&#160;</a></span>Add()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,8 +210,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="af3f61f2edd92819510534f3af2de36a8" name="af3f61f2edd92819510534f3af2de36a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3f61f2edd92819510534f3af2de36a8">&#9670;&#160;</a></span>Contains()</h2>
+<a id="afce71d1159508846b8d17f6b0a987f40" name="afce71d1159508846b8d17f6b0a987f40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afce71d1159508846b8d17f6b0a987f40">&#9670;&#160;</a></span>Contains() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -235,7 +219,28 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool BRectangle::Contains </td>
+          <td class="memname">bool <a class="el" href="classunify_1_1BRectangle.html">unify::BRectangle</a>&lt; T &gt;::Contains </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#acb34d574e5c08f8752402d52f6229a25">BRectangle</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>brect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if a point is within our bounding rectangle. </p>
+
+</div>
+</div>
+<a id="a777f458e8159ce7f76aea504ab1d4f68" name="a777f458e8159ce7f76aea504ab1d4f68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a777f458e8159ce7f76aea504ab1d4f68">&#9670;&#160;</a></span>Contains() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classunify_1_1BRectangle.html">unify::BRectangle</a>&lt; T &gt;::Contains </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>point</em></span></td><td>)</td>
           <td></td>
@@ -247,8 +252,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="ada840716f0b5ac6dc92b203e9d519f67" name="ada840716f0b5ac6dc92b203e9d519f67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada840716f0b5ac6dc92b203e9d519f67">&#9670;&#160;</a></span>GenerateCorners()</h2>
+<a id="adde6c6d5cfc582d46a9256eba458f65b" name="adde6c6d5cfc582d46a9256eba458f65b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adde6c6d5cfc582d46a9256eba458f65b">&#9670;&#160;</a></span>GenerateCorners()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -256,7 +261,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void BRectangle::GenerateCorners </td>
+          <td class="memname">void <a class="el" href="classunify_1_1BRectangle.html">unify::BRectangle</a>&lt; T &gt;::GenerateCorners </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classunify_1_1V2.html">unify::V2</a>&lt; T &gt; *</td>          <td class="paramname"><span class="paramname"><em>bounds</em></span></td><td>)</td>
           <td></td>
@@ -274,6 +279,50 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="ae980b5f5b1d172fdf9621e66ac715cbf" name="ae980b5f5b1d172fdf9621e66ac715cbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae980b5f5b1d172fdf9621e66ac715cbf">&#9670;&#160;</a></span>Normalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classunify_1_1BRectangle.html">unify::BRectangle</a>&lt; T &gt;::Normalize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>In-place normalize the bounding rectangle, ensuring that the ul is less than or equal to the dr. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the bounding rectangle was changed, false if it was already normalized.</dd></dl>
+
+</div>
+</div>
+<a id="a2f401d2ff6d1e968ae92a0b24704672e" name="a2f401d2ff6d1e968ae92a0b24704672e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f401d2ff6d1e968ae92a0b24704672e">&#9670;&#160;</a></span>Normalized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classunify_1_1BRectangle.html">unify::BRectangle</a>&lt; T &gt; <a class="el" href="classunify_1_1BRectangle.html">unify::BRectangle</a>&lt; T &gt;::Normalized </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a normalized copy of the bounding rectangle, ensuring that the ul is less than or equal to the dr. </p>
+<dl class="section return"><dt>Returns</dt><dd>a normalized copy of the bounding rectangle.</dd></dl>
+
+</div>
+</div>
 <a id="a52da532c0b3d4d03bd6f8e8e062be884" name="a52da532c0b3d4d03bd6f8e8e062be884"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a52da532c0b3d4d03bd6f8e8e062be884">&#9670;&#160;</a></span>operator*()</h2>
 
@@ -287,6 +336,25 @@ template&lt;typename T&gt; </div>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>muliplcand</em></span></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7416d2a2a0d841db604fd303d4aff27" name="aa7416d2a2a0d841db604fd303d4aff27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7416d2a2a0d841db604fd303d4aff27">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classunify_1_1BRectangle.html">unify::BRectangle</a>&lt; T &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#acb34d574e5c08f8752402d52f6229a25">BRectangle</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -315,8 +383,8 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="ad3a2763c47afecb8b1267fa48937f1ac" name="ad3a2763c47afecb8b1267fa48937f1ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3a2763c47afecb8b1267fa48937f1ac">&#9670;&#160;</a></span>inf</h2>
+<a id="abc078eea693edc2e051c31571e408ad8" name="abc078eea693edc2e051c31571e408ad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc078eea693edc2e051c31571e408ad8">&#9670;&#160;</a></span>dr</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,15 +392,15 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; <a class="el" href="classunify_1_1BRectangle.html">unify::BRectangle</a>&lt; T &gt;::inf</td>
+          <td class="memname"><a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; <a class="el" href="classunify_1_1BRectangle.html">unify::BRectangle</a>&lt; T &gt;::dr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a1d01061ac1687970fc21b2d25939dc47" name="a1d01061ac1687970fc21b2d25939dc47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d01061ac1687970fc21b2d25939dc47">&#9670;&#160;</a></span>sup</h2>
+<a id="acd979961c2de5357172ba57c98cd2b2c" name="acd979961c2de5357172ba57c98cd2b2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd979961c2de5357172ba57c98cd2b2c">&#9670;&#160;</a></span>ul</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -340,7 +408,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; <a class="el" href="classunify_1_1BRectangle.html">unify::BRectangle</a>&lt; T &gt;::sup</td>
+          <td class="memname"><a class="el" href="classunify_1_1V2.html">V2</a>&lt; T &gt; <a class="el" href="classunify_1_1BRectangle.html">unify::BRectangle</a>&lt; T &gt;::ul</td>
         </tr>
       </table>
 </div><div class="memdoc">

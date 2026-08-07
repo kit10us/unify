@@ -184,14 +184,21 @@ string_view as a Member</h2>
 Final Notes</h1>
 <p>Unify is considered pre-release at the moment due to needing some modernization and optimizations. That being said, certain names of features will change <b>NOW</b> and be committed to for future revisions; this means we need to be pretty explicit in naming so we stick to <b>SOLID</b> development prinipals.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md20"></a>
+VSCode Utilization</h1>
+<p>To build the tests press F7.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
 Testing</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
 Unit Testing</h2>
 <p>Unify utilizes GoogleTest (GTest) for unit testing and CTest for test orchestration.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
 Building Tests</h2>
 <p>To build the test suite target: </p><div class="fragment"><div class="line">cmake --build build --config Debug --target unify_unit_tests</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
+List Available Tests</h2>
+<p>ctest &ndash;test-dir build -N <br  />
+</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
 Executing Test</h2>
 <p>Unify utilizes ctest to execute unit testing.</p>
 <p>Run tests showing failures: </p><div class="fragment"><div class="line">ctest --test-dir build -C Debug --output-on-failure</div>

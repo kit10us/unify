@@ -47,7 +47,7 @@ var searchData=
   ['colorzero_44',['ColorZero',['../namespaceunify.html#a1686569f201a633ef567d217446e9765',1,'unify']]],
   ['combine_45',['Combine',['../classunify_1_1Path.html#a2e53f3fbf88d741310a4ca8171c943f0',1,'unify::Path']]],
   ['conjugate_46',['Conjugate',['../classunify_1_1Quaternion.html#a924fc2c589fd98a1c1058282727b7d40',1,'unify::Quaternion']]],
-  ['contains_47',['Contains',['../classunify_1_1BRectangle.html#af3f61f2edd92819510534f3af2de36a8',1,'unify::BRectangle::Contains()'],['../classunify_1_1BSphere.html#ad2f437dca29ba8c172392f58e6ce387e',1,'unify::BSphere::Contains()']]],
+  ['contains_47',['Contains',['../classunify_1_1BRectangle.html#a777f458e8159ce7f76aea504ab1d4f68',1,'unify::BRectangle::Contains(const V2&lt; T &gt; &amp;point)'],['../classunify_1_1BRectangle.html#afce71d1159508846b8d17f6b0a987f40',1,'unify::BRectangle::Contains(const BRectangle&lt; T &gt; &amp;brect)'],['../classunify_1_1BSphere.html#ad2f437dca29ba8c172392f58e6ce387e',1,'unify::BSphere::Contains()']]],
   ['containsbbox_48',['ContainsBBox',['../classunify_1_1BBox.html#ae8904aef18418a676562993f56ebacd5',1,'unify::BBox']]],
   ['containspoint_49',['ContainsPoint',['../classunify_1_1BBox.html#a885a781f45d6ef09ba25e0ec2edfcf51',1,'unify::BBox']]],
   ['cosof_50',['CosOf',['../classunify_1_1Angle.html#a3fbb23ab3ee92e92c8fd2912cbc3ad03',1,'unify::Angle']]],

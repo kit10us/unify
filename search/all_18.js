@@ -33,11 +33,17 @@ var searchData=
   ['v4_2eh_30',['V4.h',['../V4_8h.html',1,'']]],
   ['v4_2einl_31',['V4.inl',['../V4_8inl.html',1,'']]],
   ['v4tests_32',['V4Tests',['../classV4Tests.html',1,'']]],
-  ['value_33',['Value',['../classunify_1_1Result.html#ac62121ac1c9d11462e48d182b325a8fb',1,'unify::Result']]],
+  ['value_33',['Value',['../classunify_1_1Result.html#aa1510c4614baba1ab9fce1d92030b654',1,'unify::Result']]],
   ['value_34',['value',['../structunify_1_1KeyValuePair.html#a65203514513932e72cb5d42bad94d0a3',1,'unify::KeyValuePair::value'],['../structunify_1_1Parameter.html#ad32683a8ab30669c30dfbdc3372ed0e4',1,'unify::Parameter::value']]],
-  ['version_203_2029_20june_202007_35',['Version 3 29 June 2007',['../md_README.html',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)'],['../dir_59425e443f801f1f2fd8bbe4959a3ccf.html#autotoc_md24',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)']]],
-  ['viewport_36',['Viewport',['../classunify_1_1Viewport.html',1,'unify']]],
-  ['viewport_2eh_37',['Viewport.h',['../Viewport_8h.html',1,'']]],
-  ['viewport_2einl_38',['Viewport.inl',['../Viewport_8inl.html',1,'']]],
-  ['vision_39',['Evolution and Vision',['../md_README.html#autotoc_md2',1,'']]]
+  ['value1_35',['Value1',['../tests__Result_8cpp.html#a94beb900defc123803319b326e764a0da7ee5a281b28d7ca1fab06b43d0b7d8ac',1,'tests_Result.cpp']]],
+  ['value2_36',['Value2',['../tests__Result_8cpp.html#a94beb900defc123803319b326e764a0da0fe13ed1638da4d4b1ef316729f3bb32',1,'tests_Result.cpp']]],
+  ['value3_37',['Value3',['../tests__Result_8cpp.html#a94beb900defc123803319b326e764a0da121bcef76aa7694f7d8ef4d381b86dad',1,'tests_Result.cpp']]],
+  ['valuefailure_38',['ValueFailure',['../tests__Result_8cpp.html#ac426bcdbfb64c6c512be2324878c2c13',1,'tests_Result.cpp']]],
+  ['valuesuccess_39',['ValueSuccess',['../tests__Result_8cpp.html#a730e656dba6c73a7a3f25892e0534199',1,'tests_Result.cpp']]],
+  ['version_203_2029_20june_202007_40',['Version 3 29 June 2007',['../md_README.html',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)'],['../dir_59425e443f801f1f2fd8bbe4959a3ccf.html#autotoc_md26',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)']]],
+  ['viewport_41',['Viewport',['../classunify_1_1Viewport.html',1,'unify']]],
+  ['viewport_2eh_42',['Viewport.h',['../Viewport_8h.html',1,'']]],
+  ['viewport_2einl_43',['Viewport.inl',['../Viewport_8inl.html',1,'']]],
+  ['vision_44',['Evolution and Vision',['../md_README.html#autotoc_md2',1,'']]],
+  ['vscode_20utilization_45',['VSCode Utilization',['../md_README.html#autotoc_md20',1,'']]]
 ];

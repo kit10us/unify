@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['failure_0',['Failure',['../classunify_1_1Failure.html',1,'unify::Failure'],['../classunify_1_1Failure.html#a9f4f28ad56c445a16c74883c5c713684',1,'unify::Failure::Failure()']]],
+  ['failure_0',['Failure',['../classunify_1_1Failure.html',1,'unify::Failure'],['../classunify_1_1Failure.html#a8eeb938195605eb456455a594c85fc96',1,'unify::Failure::Failure()'],['../classunify_1_1Failure.html#a9f4f28ad56c445a16c74883c5c713684',1,'unify::Failure::Failure(std::string message)']]],
   ['far_1',['Far',['../classunify_1_1FrustumPlane.html#a945eb2a3eb6d5d38b380bb4f2eeca442a89b2090089c514be6ae1c4f4c229fe92',1,'unify::FrustumPlane']]],
   ['features_2',['Features',['../md_README.html#autotoc_md4',1,'']]],
   ['filelength_3',['FileLength',['../namespaceunify.html#a80717e5d5b266ccba5ecaa0fe350cc27',1,'unify']]],

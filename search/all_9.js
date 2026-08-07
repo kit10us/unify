@@ -1,9 +1,9 @@
 var searchData=
 [
   ['g_0',['g',['../classunify_1_1Color.html#a87cd6034838e35e5aeb0e67d9926d636',1,'unify::Color::g'],['../classunify_1_1ColorUnit.html#a5ed1a1307c523fc0a52e4456f0b0d4e1',1,'unify::ColorUnit::g']]],
-  ['general_20public_20license_20version_203_2029_20june_202007_1',['GENERAL PUBLIC LICENSE Version 3 29 June 2007',['../md_README.html',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)'],['../dir_59425e443f801f1f2fd8bbe4959a3ccf.html#autotoc_md24',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)']]],
+  ['general_20public_20license_20version_203_2029_20june_202007_1',['GENERAL PUBLIC LICENSE Version 3 29 June 2007',['../md_README.html',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)'],['../dir_59425e443f801f1f2fd8bbe4959a3ccf.html#autotoc_md26',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)']]],
   ['generate_20project_20files_2',['Generate Project Files',['../md_README.html#autotoc_md6',1,'']]],
-  ['generatecorners_3',['GenerateCorners',['../classunify_1_1BBox.html#a4b16552e99a9a67e3d2d8c33abe38939',1,'unify::BBox::GenerateCorners()'],['../classunify_1_1BRectangle.html#ada840716f0b5ac6dc92b203e9d519f67',1,'unify::BRectangle::GenerateCorners()']]],
+  ['generatecorners_3',['GenerateCorners',['../classunify_1_1BBox.html#a4b16552e99a9a67e3d2d8c33abe38939',1,'unify::BBox::GenerateCorners()'],['../classunify_1_1BRectangle.html#adde6c6d5cfc582d46a9256eba458f65b',1,'unify::BRectangle::GenerateCorners()']]],
   ['get_4',['Get',['../classunify_1_1Parameters.html#a5dbadc9bbeddf4937a3511e1bbb7353a',1,'unify::Parameters::Get(std::string name) const'],['../classunify_1_1Parameters.html#a4b535f5a4b7eb53dfb040e3e93b6c2a7',1,'unify::Parameters::Get(std::string name, const T &amp;defaultValue) const']]],
   ['getalpha_5',['GetAlpha',['../classunify_1_1Color.html#a149d3d05f82555750610c032123e7f16',1,'unify::Color']]],
   ['getblue_6',['GetBlue',['../classunify_1_1Color.html#a6255f93c11e2972285bbdee509ddcb37',1,'unify::Color']]],
@@ -44,7 +44,7 @@ var searchData=
   ['getvalue_41',['GetValue',['../classunify_1_1Lookup.html#a50e172d477584e09e8df194b66f15580',1,'unify::Lookup::GetValue(size_t index) const'],['../classunify_1_1Lookup.html#ae6422b58d8ea799a409aef70e4b7fb4f',1,'unify::Lookup::GetValue(Key key) const']]],
   ['getweeks_42',['GetWeeks',['../classunify_1_1TimeDelta.html#a412bd97da0ff8a99752485ea0180296c',1,'unify::TimeDelta']]],
   ['getyears_43',['GetYears',['../classunify_1_1TimeDelta.html#a92016924b99a5b2c30a0d9ea995b964c',1,'unify::TimeDelta']]],
-  ['gnu_20general_20public_20license_20version_203_2029_20june_202007_44',['GNU GENERAL PUBLIC LICENSE Version 3 29 June 2007',['../md_README.html',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)'],['../dir_59425e443f801f1f2fd8bbe4959a3ccf.html#autotoc_md24',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)']]],
+  ['gnu_20general_20public_20license_20version_203_2029_20june_202007_44',['GNU GENERAL PUBLIC LICENSE Version 3 29 June 2007',['../md_README.html',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)'],['../dir_59425e443f801f1f2fd8bbe4959a3ccf.html#autotoc_md26',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)']]],
   ['gotofirst_45',['GotoFirst',['../classunify_1_1LinkList.html#a1e9397a9acfb4d877b5d299f3f3c7069',1,'unify::LinkList::GotoFirst()'],['../classunify_1_1QList.html#ae1115c5cec16f58fb8ae20bc6d56584e',1,'unify::QList::GotoFirst()']]],
   ['gotolast_46',['GotoLast',['../classunify_1_1LinkList.html#a03e0bd1d203c0a782245ab15227ebf33',1,'unify::LinkList::GotoLast()'],['../classunify_1_1QList.html#a264c697444795b7fde111bef269672e3',1,'unify::QList::GotoLast()']]],
   ['gotonext_47',['GotoNext',['../classunify_1_1LinkList.html#af0dbcd7d608538eb327f2948eec2c5ea',1,'unify::LinkList::GotoNext()'],['../classunify_1_1QList.html#a40564caeccb08ae545e162793889fc6a',1,'unify::QList::GotoNext()']]],

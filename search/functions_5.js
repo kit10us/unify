@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['failure_0',['Failure',['../classunify_1_1Failure.html#a9f4f28ad56c445a16c74883c5c713684',1,'unify::Failure']]],
+  ['failure_0',['Failure',['../classunify_1_1Failure.html#a8eeb938195605eb456455a594c85fc96',1,'unify::Failure::Failure()'],['../classunify_1_1Failure.html#a9f4f28ad56c445a16c74883c5c713684',1,'unify::Failure::Failure(std::string message)']]],
   ['filelength_1',['FileLength',['../namespaceunify.html#a80717e5d5b266ccba5ecaa0fe350cc27',1,'unify']]],
   ['filename_2',['Filename',['../classunify_1_1Path.html#a22746c02f85ff4cd08ae82d53a8e1cee',1,'unify::Path']]],
   ['filenamenoextension_3',['FilenameNoExtension',['../classunify_1_1Path.html#a52cfee844356cf5fc6a01eda698bbfb3',1,'unify::Path']]],

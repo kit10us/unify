@@ -16,7 +16,7 @@ var searchData=
   ['matrixtranslate_13',['MatrixTranslate',['../namespaceunify.html#a79bf19d4e39329a6e7d3cf49e7095e6a',1,'unify']]],
   ['matrixzero_14',['MatrixZero',['../namespaceunify.html#ac091c5f16a156eaaf8b4af9bf4fef752',1,'unify']]],
   ['max_15',['Max',['../classunify_1_1Range.html#a55602af1ef9f6928d0bad18eb6d740d7',1,'unify::Range']]],
-  ['message_16',['Message',['../classunify_1_1Result.html#a0612899608eec020ae52c28ac0ded863',1,'unify::Result']]],
+  ['message_16',['Message',['../classunify_1_1Result.html#a2b07552ca2105ca283a2ac1403f4dd5a',1,'unify::Result']]],
   ['min_17',['Min',['../classunify_1_1Range.html#acfcb5be86acd3c592e788695d5afe681',1,'unify::Range']]],
   ['model_18',['Model',['../classunify_1_1FrameSet.html#a3c763c7dbb21c366c818c138baf90791',1,'unify::FrameSet::Model()'],['../classunify_1_1FrameSetInstance.html#aa23d8fd211b2697837b4e506fea3a48c',1,'unify::FrameSetInstance::Model()']]],
   ['moveby_19',['MoveBy',['../classunify_1_1Frame.html#ae888c0fd2d9b747d13db5d9b675e553c',1,'unify::Frame::MoveBy()'],['../classunify_1_1FrameLite.html#a9381f1f6d38b6932bcfd704b458499e3',1,'unify::FrameLite::MoveBy()'],['../classunify_1_1Rect.html#a7bec4857bd4d52311ce81e9ebf55ee54',1,'unify::Rect::MoveBy(T x, T y)'],['../classunify_1_1Rect.html#aa976e6fbc8913d580dba62752864124c',1,'unify::Rect::MoveBy(const V2&lt; T &gt; &amp;pVec)']]],

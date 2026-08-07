@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Unify Library: unify::Result&lt; T_SuccessType &gt; Class Template Reference</title>
+<title>Unify Library: unify::Result&lt; T_SuccessType, T_Failure &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classunify_1_1Result-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">unify::Result&lt; T_SuccessType &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">unify::Result&lt; T_SuccessType, T_Failure &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -114,38 +114,30 @@ document.addEventListener('DOMContentLoaded', () => {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0aeb1c1c14a6eb73537d4dd08e6dfd6b" id="r_a0aeb1c1c14a6eb73537d4dd08e6dfd6b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0aeb1c1c14a6eb73537d4dd08e6dfd6b">Result</a> (T_SuccessType value)</td></tr>
-<tr class="memitem:ad6bd4cdeed329cead81154ed7ef28fdc" id="r_ad6bd4cdeed329cead81154ed7ef28fdc"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad6bd4cdeed329cead81154ed7ef28fdc">Result</a> (<a class="el" href="classunify_1_1Failure.html">Failure</a> failure)</td></tr>
-<tr class="memitem:a2a52f498ff6a828f5204af1411553b4a" id="r_a2a52f498ff6a828f5204af1411553b4a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2a52f498ff6a828f5204af1411553b4a">Result</a> ()</td></tr>
-<tr class="memitem:aaac2d98751021fd7303e1780bf76ee67" id="r_aaac2d98751021fd7303e1780bf76ee67"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aaac2d98751021fd7303e1780bf76ee67">Success</a> () const</td></tr>
-<tr class="memitem:a0612899608eec020ae52c28ac0ded863" id="r_a0612899608eec020ae52c28ac0ded863"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a0612899608eec020ae52c28ac0ded863">Message</a> () const</td></tr>
-<tr class="memitem:ac62121ac1c9d11462e48d182b325a8fb" id="r_ac62121ac1c9d11462e48d182b325a8fb"><td class="memItemLeft">T_SuccessType&#160;</td><td class="memItemRight"><a class="el" href="#ac62121ac1c9d11462e48d182b325a8fb">Value</a> () const</td></tr>
-<tr class="memitem:a5ef65fdafe7806ce85d076fffcbab717" id="r_a5ef65fdafe7806ce85d076fffcbab717"><td class="memTemplParams" colspan="2">template&lt;typename T_NewType&gt; </td></tr>
-<tr class="memitem:a5ef65fdafe7806ce85d076fffcbab717 template"><td class="memItemLeft"><a class="el" href="#a0aeb1c1c14a6eb73537d4dd08e6dfd6b">Result</a>&lt; T_NewType &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5ef65fdafe7806ce85d076fffcbab717">As</a> (T_NewType success) const</td></tr>
-<tr class="memdesc:a5ef65fdafe7806ce85d076fffcbab717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upon success, returns the parameter, else returns a failure.  <br /></td></tr>
-<tr class="memitem:a1775d5ab0d12a35641cc4e5fb432b0a8" id="r_a1775d5ab0d12a35641cc4e5fb432b0a8"><td class="memItemLeft">T_SuccessType&#160;</td><td class="memItemRight"><a class="el" href="#a1775d5ab0d12a35641cc4e5fb432b0a8">operator()</a> () const</td></tr>
-<tr class="memdesc:a1775d5ab0d12a35641cc4e5fb432b0a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the results. Will throw if a failure. Use Failure() or <a class="el" href="#aaac2d98751021fd7303e1780bf76ee67">Success()</a> first to verify results.  <br /></td></tr>
-<tr class="memitem:a559d2573727753dffed39aa05ebe0e4c" id="r_a559d2573727753dffed39aa05ebe0e4c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a559d2573727753dffed39aa05ebe0e4c">OnFailure</a> (std::function&lt; void(std::string message) &gt; func) const</td></tr>
-<tr class="memdesc:a559d2573727753dffed39aa05ebe0e4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls a function, passed as a parameter, upon a failure.  <br /></td></tr>
-<tr class="memitem:a8d3b299fe7f158aacaa3a2664a31c969" id="r_a8d3b299fe7f158aacaa3a2664a31c969"><td class="memItemLeft">T_SuccessType&#160;</td><td class="memItemRight"><a class="el" href="#a8d3b299fe7f158aacaa3a2664a31c969">Else</a> (std::function&lt; void(std::string message)&gt; func) const</td></tr>
-<tr class="memdesc:a8d3b299fe7f158aacaa3a2664a31c969"><td class="mdescLeft">&#160;</td><td class="mdescRight">If successfull, returns the value, else calls a function upon a failure.  <br /></td></tr>
-<tr class="memitem:aebc7c26c1ec0183de609f0625994afde" id="r_aebc7c26c1ec0183de609f0625994afde"><td class="memItemLeft">T_SuccessType&#160;</td><td class="memItemRight"><a class="el" href="#aebc7c26c1ec0183de609f0625994afde">Else</a> (std::function&lt; void(void)&gt; func) const</td></tr>
-<tr class="memdesc:aebc7c26c1ec0183de609f0625994afde"><td class="mdescLeft">&#160;</td><td class="mdescRight">If successfull, returns the value, else calls a function upon a failure.  <br /></td></tr>
+<tr class="memitem:a4681f1bf0f09a286cfea2450b776d420" id="r_a4681f1bf0f09a286cfea2450b776d420"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4681f1bf0f09a286cfea2450b776d420">Result</a> (T_SuccessType value)</td></tr>
+<tr class="memitem:a32823481b714003f89dc05ecf4e5192f" id="r_a32823481b714003f89dc05ecf4e5192f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a32823481b714003f89dc05ecf4e5192f">Result</a> (<a class="el" href="classunify_1_1Failure.html">Failure</a> failure)</td></tr>
+<tr class="memitem:ae7b85ba7856a5f4c995b0cdeef16915b" id="r_ae7b85ba7856a5f4c995b0cdeef16915b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae7b85ba7856a5f4c995b0cdeef16915b">Result</a> ()</td></tr>
+<tr class="memitem:ad9f06bdf8b0af91facefffb0de8493c8" id="r_ad9f06bdf8b0af91facefffb0de8493c8"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad9f06bdf8b0af91facefffb0de8493c8">Success</a> () const</td></tr>
+<tr class="memitem:a2b07552ca2105ca283a2ac1403f4dd5a" id="r_a2b07552ca2105ca283a2ac1403f4dd5a"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a2b07552ca2105ca283a2ac1403f4dd5a">Message</a> () const</td></tr>
+<tr class="memitem:aa1510c4614baba1ab9fce1d92030b654" id="r_aa1510c4614baba1ab9fce1d92030b654"><td class="memItemLeft">T_SuccessType&#160;</td><td class="memItemRight"><a class="el" href="#aa1510c4614baba1ab9fce1d92030b654">Value</a> () const</td></tr>
+<tr class="memitem:a73db7627e21dbb244fe406c5e30f5ca4" id="r_a73db7627e21dbb244fe406c5e30f5ca4"><td class="memItemLeft">T_SuccessType&#160;</td><td class="memItemRight"><a class="el" href="#a73db7627e21dbb244fe406c5e30f5ca4">operator()</a> () const</td></tr>
+<tr class="memdesc:a73db7627e21dbb244fe406c5e30f5ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the results. Will throw if a failure. Use Failure() or <a class="el" href="#ad9f06bdf8b0af91facefffb0de8493c8">Success()</a> first to verify results.  <br /></td></tr>
+<tr class="memitem:ae114ab3e4e526cdb66a0e5fa1d53ecae" id="r_ae114ab3e4e526cdb66a0e5fa1d53ecae"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae114ab3e4e526cdb66a0e5fa1d53ecae">operator!</a> () const</td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0aeb1c1c14a6eb73537d4dd08e6dfd6b" name="a0aeb1c1c14a6eb73537d4dd08e6dfd6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0aeb1c1c14a6eb73537d4dd08e6dfd6b">&#9670;&#160;</a></span>Result() <span class="overload">[1/3]</span></h2>
+<a id="a4681f1bf0f09a286cfea2450b776d420" name="a4681f1bf0f09a286cfea2450b776d420"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4681f1bf0f09a286cfea2450b776d420">&#9670;&#160;</a></span>Result() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool&gt; </div>
+template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType &gt;::Result </td>
+          <td class="memname"><a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType, T_Failure &gt;::Result </td>
           <td>(</td>
           <td class="paramtype">T_SuccessType</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -160,19 +152,19 @@ template&lt;typename T_SuccessType = bool&gt; </div>
 
 </div>
 </div>
-<a id="ad6bd4cdeed329cead81154ed7ef28fdc" name="ad6bd4cdeed329cead81154ed7ef28fdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6bd4cdeed329cead81154ed7ef28fdc">&#9670;&#160;</a></span>Result() <span class="overload">[2/3]</span></h2>
+<a id="a32823481b714003f89dc05ecf4e5192f" name="a32823481b714003f89dc05ecf4e5192f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32823481b714003f89dc05ecf4e5192f">&#9670;&#160;</a></span>Result() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool&gt; </div>
+template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType &gt;::Result </td>
+          <td class="memname"><a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType, T_Failure &gt;::Result </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classunify_1_1Failure.html">Failure</a></td>          <td class="paramname"><span class="paramname"><em>failure</em></span></td><td>)</td>
           <td></td>
@@ -187,19 +179,19 @@ template&lt;typename T_SuccessType = bool&gt; </div>
 
 </div>
 </div>
-<a id="a2a52f498ff6a828f5204af1411553b4a" name="a2a52f498ff6a828f5204af1411553b4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a52f498ff6a828f5204af1411553b4a">&#9670;&#160;</a></span>Result() <span class="overload">[3/3]</span></h2>
+<a id="ae7b85ba7856a5f4c995b0cdeef16915b" name="ae7b85ba7856a5f4c995b0cdeef16915b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7b85ba7856a5f4c995b0cdeef16915b">&#9670;&#160;</a></span>Result() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool&gt; </div>
+template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType &gt;::Result </td>
+          <td class="memname"><a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType, T_Failure &gt;::Result </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -215,108 +207,19 @@ template&lt;typename T_SuccessType = bool&gt; </div>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a5ef65fdafe7806ce85d076fffcbab717" name="a5ef65fdafe7806ce85d076fffcbab717"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ef65fdafe7806ce85d076fffcbab717">&#9670;&#160;</a></span>As()</h2>
+<a id="a2b07552ca2105ca283a2ac1403f4dd5a" name="a2b07552ca2105ca283a2ac1403f4dd5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b07552ca2105ca283a2ac1403f4dd5a">&#9670;&#160;</a></span>Message()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool&gt; </div>
-<div class="memtemplate">
-template&lt;typename T_NewType&gt; </div>
+template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a0aeb1c1c14a6eb73537d4dd08e6dfd6b">Result</a>&lt; T_NewType &gt; <a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType &gt;::As </td>
-          <td>(</td>
-          <td class="paramtype">T_NewType</td>          <td class="paramname"><span class="paramname"><em>success</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Upon success, returns the parameter, else returns a failure. </p>
-
-</div>
-</div>
-<a id="a8d3b299fe7f158aacaa3a2664a31c969" name="a8d3b299fe7f158aacaa3a2664a31c969"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d3b299fe7f158aacaa3a2664a31c969">&#9670;&#160;</a></span>Else() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T_SuccessType = bool&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T_SuccessType <a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType &gt;::Else </td>
-          <td>(</td>
-          <td class="paramtype">std::function&lt; void(std::string message)&gt;</td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>If successfull, returns the value, else calls a function upon a failure. </p>
-
-</div>
-</div>
-<a id="aebc7c26c1ec0183de609f0625994afde" name="aebc7c26c1ec0183de609f0625994afde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebc7c26c1ec0183de609f0625994afde">&#9670;&#160;</a></span>Else() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T_SuccessType = bool&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T_SuccessType <a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType &gt;::Else </td>
-          <td>(</td>
-          <td class="paramtype">std::function&lt; void(void)&gt;</td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>If successfull, returns the value, else calls a function upon a failure. </p>
-
-</div>
-</div>
-<a id="a0612899608eec020ae52c28ac0ded863" name="a0612899608eec020ae52c28ac0ded863"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0612899608eec020ae52c28ac0ded863">&#9670;&#160;</a></span>Message()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T_SuccessType = bool&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string <a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType &gt;::Message </td>
+          <td class="memname">std::string <a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType, T_Failure &gt;::Message </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -324,55 +227,26 @@ template&lt;typename T_SuccessType = bool&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a559d2573727753dffed39aa05ebe0e4c" name="a559d2573727753dffed39aa05ebe0e4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a559d2573727753dffed39aa05ebe0e4c">&#9670;&#160;</a></span>OnFailure()</h2>
+<a id="ae114ab3e4e526cdb66a0e5fa1d53ecae" name="ae114ab3e4e526cdb66a0e5fa1d53ecae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae114ab3e4e526cdb66a0e5fa1d53ecae">&#9670;&#160;</a></span>operator!()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool&gt; </div>
+template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType &gt;::OnFailure </td>
-          <td>(</td>
-          <td class="paramtype">std::function&lt; void(std::string message) &gt;</td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Calls a function, passed as a parameter, upon a failure. </p>
-
-</div>
-</div>
-<a id="a1775d5ab0d12a35641cc4e5fb432b0a8" name="a1775d5ab0d12a35641cc4e5fb432b0a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1775d5ab0d12a35641cc4e5fb432b0a8">&#9670;&#160;</a></span>operator()()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T_SuccessType = bool&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T_SuccessType <a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType &gt;::operator() </td>
+          <td class="memname">bool <a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType, T_Failure &gt;::operator! </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -380,29 +254,56 @@ template&lt;typename T_SuccessType = bool&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the results. Will throw if a failure. Use Failure() or <a class="el" href="#aaac2d98751021fd7303e1780bf76ee67">Success()</a> first to verify results. </p>
+</div>
+</div>
+<a id="a73db7627e21dbb244fe406c5e30f5ca4" name="a73db7627e21dbb244fe406c5e30f5ca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73db7627e21dbb244fe406c5e30f5ca4">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T_SuccessType <a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType, T_Failure &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the results. Will throw if a failure. Use Failure() or <a class="el" href="#ad9f06bdf8b0af91facefffb0de8493c8">Success()</a> first to verify results. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
-<a id="aaac2d98751021fd7303e1780bf76ee67" name="aaac2d98751021fd7303e1780bf76ee67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaac2d98751021fd7303e1780bf76ee67">&#9670;&#160;</a></span>Success()</h2>
+<a id="ad9f06bdf8b0af91facefffb0de8493c8" name="ad9f06bdf8b0af91facefffb0de8493c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9f06bdf8b0af91facefffb0de8493c8">&#9670;&#160;</a></span>Success()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool&gt; </div>
+template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType &gt;::Success </td>
+          <td class="memname">bool <a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType, T_Failure &gt;::Success </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -417,19 +318,19 @@ template&lt;typename T_SuccessType = bool&gt; </div>
 
 </div>
 </div>
-<a id="ac62121ac1c9d11462e48d182b325a8fb" name="ac62121ac1c9d11462e48d182b325a8fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac62121ac1c9d11462e48d182b325a8fb">&#9670;&#160;</a></span>Value()</h2>
+<a id="aa1510c4614baba1ab9fce1d92030b654" name="aa1510c4614baba1ab9fce1d92030b654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1510c4614baba1ab9fce1d92030b654">&#9670;&#160;</a></span>Value()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool&gt; </div>
+template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T_SuccessType <a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType &gt;::Value </td>
+          <td class="memname">T_SuccessType <a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType, T_Failure &gt;::Value </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -437,7 +338,7 @@ template&lt;typename T_SuccessType = bool&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

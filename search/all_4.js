@@ -19,12 +19,14 @@ var searchData=
   ['bottom_16',['bottom',['../classunify_1_1Rect.html#ac1b4dd2c9bee5398073c550cb723a3f2',1,'unify::Rect']]],
   ['bottomleft_17',['BottomLeft',['../structunify_1_1NinePoint.html#a47fc4f4242673361a16ab53737e38490a11d60b97be1748f1a653328a81e343aa',1,'unify::NinePoint']]],
   ['bottomright_18',['BottomRight',['../structunify_1_1NinePoint.html#a47fc4f4242673361a16ab53737e38490a9585a8d926be2b97d24735495f3bd59f',1,'unify::NinePoint']]],
-  ['brectangle_19',['BRectangle',['../classunify_1_1BRectangle.html',1,'unify::BRectangle&lt; T &gt;'],['../classunify_1_1BRectangle.html#acb34d574e5c08f8752402d52f6229a25',1,'unify::BRectangle::BRectangle()'],['../classunify_1_1BRectangle.html#ae15566378b7ca112d8621e41b648250f',1,'unify::BRectangle::BRectangle(const V2&lt; T &gt; &amp;inf, const V2&lt; T &gt; &amp;sup)']]],
-  ['brectangle_2eh_20',['BRectangle.h',['../BRectangle_8h.html',1,'']]],
-  ['brectangle_2einl_21',['BRectangle.inl',['../BRectangle_8inl.html',1,'']]],
-  ['bsphere_22',['BSphere',['../classunify_1_1BSphere.html',1,'unify::BSphere&lt; T &gt;'],['../classunify_1_1BSphere.html#ac766bc01af502b9bc067a2f6b88dda96',1,'unify::BSphere::BSphere()'],['../classunify_1_1BSphere.html#adb5e3b6ac4a851e21212e9d54130cd12',1,'unify::BSphere::BSphere(const V3&lt; T &gt; &amp;center)'],['../classunify_1_1BSphere.html#a98e076a6ed13074832606f36ff779bc3',1,'unify::BSphere::BSphere(const V3&lt; T &gt; &amp;center, const T &amp;radius)']]],
-  ['bsphere_2eh_23',['BSphere.h',['../BSphere_8h.html',1,'']]],
-  ['bsphere_2einl_24',['BSphere.inl',['../BSphere_8inl.html',1,'']]],
-  ['building_20tests_25',['Building Tests',['../md_README.html#autotoc_md22',1,'']]],
-  ['byteswaiting_26',['BytesWaiting',['../classunify_1_1Stream.html#ab091f1033abeeb2a22f315bbd6090b52',1,'unify::Stream']]]
+  ['brect_19',['BRect',['../namespaceunify.html#a7bfd994be349f57487500c330c26428b',1,'unify']]],
+  ['brectangle_20',['BRectangle',['../classunify_1_1BRectangle.html',1,'unify::BRectangle&lt; T &gt;'],['../classunify_1_1BRectangle.html#acb34d574e5c08f8752402d52f6229a25',1,'unify::BRectangle::BRectangle()'],['../classunify_1_1BRectangle.html#af25be324d267d490a1ded5e665e0a640',1,'unify::BRectangle::BRectangle(const V2&lt; T &gt; &amp;ul, const V2&lt; T &gt; &amp;dr)']]],
+  ['brectangle_2eh_21',['BRectangle.h',['../BRectangle_8h.html',1,'']]],
+  ['brectangle_2einl_22',['BRectangle.inl',['../BRectangle_8inl.html',1,'']]],
+  ['brectangletests_23',['BRectangleTests',['../classBRectangleTests.html',1,'']]],
+  ['bsphere_24',['BSphere',['../classunify_1_1BSphere.html',1,'unify::BSphere&lt; T &gt;'],['../classunify_1_1BSphere.html#ac766bc01af502b9bc067a2f6b88dda96',1,'unify::BSphere::BSphere()'],['../classunify_1_1BSphere.html#adb5e3b6ac4a851e21212e9d54130cd12',1,'unify::BSphere::BSphere(const V3&lt; T &gt; &amp;center)'],['../classunify_1_1BSphere.html#a98e076a6ed13074832606f36ff779bc3',1,'unify::BSphere::BSphere(const V3&lt; T &gt; &amp;center, const T &amp;radius)']]],
+  ['bsphere_2eh_25',['BSphere.h',['../BSphere_8h.html',1,'']]],
+  ['bsphere_2einl_26',['BSphere.inl',['../BSphere_8inl.html',1,'']]],
+  ['building_20tests_27',['Building Tests',['../md_README.html#autotoc_md23',1,'']]],
+  ['byteswaiting_28',['BytesWaiting',['../classunify_1_1Stream.html#ab091f1033abeeb2a22f315bbd6090b52',1,'unify::Stream']]]
 ];

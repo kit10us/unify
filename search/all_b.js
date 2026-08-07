@@ -3,7 +3,7 @@ var searchData=
   ['iexceptionhandler_0',['IExceptionHandler',['../classunify_1_1IExceptionHandler.html',1,'unify']]],
   ['iexceptionhandler_2eh_1',['IExceptionHandler.h',['../IExceptionHandler_8h.html',1,'']]],
   ['implementation_20isolation_20inl_2',['Implementation Isolation (.inl)',['../md_README.html#autotoc_md15',1,'']]],
-  ['inf_3',['inf',['../classunify_1_1BBox.html#aba5489e9eb91ccbfd01929c789861ccd',1,'unify::BBox::inf'],['../classunify_1_1BRectangle.html#ad3a2763c47afecb8b1267fa48937f1ac',1,'unify::BRectangle::inf']]],
+  ['inf_3',['inf',['../classunify_1_1BBox.html#aba5489e9eb91ccbfd01929c789861ccd',1,'unify::BBox']]],
   ['initialization_4',['Explicit Initialization',['../md_README.html#autotoc_md12',1,'']]],
   ['inl_5',['Implementation Isolation (.inl)',['../md_README.html#autotoc_md15',1,'']]],
   ['inside_6',['Inside',['../namespaceunify.html#af385be843c3779feb4af332ac46d2a3fa9b6d3000134648fc9f1e71094ae0847d',1,'unify']]],

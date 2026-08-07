@@ -19,5 +19,7 @@ var searchData=
   ['v3z_16',['V3Z',['../classunify_1_1V3.html#aee5d8b5c1869343ecba78c84099922df',1,'unify::V3']]],
   ['v3zero_17',['V3Zero',['../classunify_1_1V3.html#afbf787a866cffa823306adb3e913603f',1,'unify::V3']]],
   ['v4_18',['V4',['../classunify_1_1V4.html#a2c6004bffd2dccf0131a03cb299cbb60',1,'unify::V4::V4()'],['../classunify_1_1V4.html#ad8d4b0de6d843f6f0d48784f5e1f0676',1,'unify::V4::V4(T all)'],['../classunify_1_1V4.html#adb76c82da267dd27a62389fc5657bd34',1,'unify::V4::V4(T x, T y, T z, T w)'],['../classunify_1_1V4.html#ace0d91cea797d4bc1d435459516767f7',1,'unify::V4::V4(const V4&lt; T &gt; &amp;v4)'],['../classunify_1_1V4.html#a6de655b2ad38c3b689d7c9e32f9dc6ca',1,'unify::V4::V4(const T arr[4])'],['../classunify_1_1V4.html#ab873b792205b08648e0b3a6d4e28de5e',1,'unify::V4::V4(const V3&lt; T &gt; &amp;v3, float w=1.0f)']]],
-  ['value_19',['Value',['../classunify_1_1Result.html#ac62121ac1c9d11462e48d182b325a8fb',1,'unify::Result']]]
+  ['value_19',['Value',['../classunify_1_1Result.html#aa1510c4614baba1ab9fce1d92030b654',1,'unify::Result']]],
+  ['valuefailure_20',['ValueFailure',['../tests__Result_8cpp.html#ac426bcdbfb64c6c512be2324878c2c13',1,'tests_Result.cpp']]],
+  ['valuesuccess_21',['ValueSuccess',['../tests__Result_8cpp.html#a730e656dba6c73a7a3f25892e0534199',1,'tests_Result.cpp']]]
 ];

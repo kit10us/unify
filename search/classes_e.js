@@ -8,5 +8,6 @@ var searchData=
   ['raytests_5',['RayTests',['../classRayTests.html',1,'']]],
   ['rect_6',['Rect',['../classunify_1_1Rect.html',1,'unify']]],
   ['result_7',['Result',['../classunify_1_1Result.html',1,'unify']]],
-  ['rowcolumn_8',['RowColumn',['../classunify_1_1RowColumn.html',1,'unify']]]
+  ['resulttests_8',['ResultTests',['../classResultTests.html',1,'']]],
+  ['rowcolumn_9',['RowColumn',['../classunify_1_1RowColumn.html',1,'unify']]]
 ];
