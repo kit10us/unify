@@ -19,6 +19,7 @@ FetchContent_MakeAvailable(googletest)
 
 # 1. Add test source files
 add_executable(unify_unit_tests
+    tests_Result.cpp
     tests_Angle.cpp
     tests_V2.cpp
     tests_V3.cpp
