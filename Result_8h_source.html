@@ -234,11 +234,26 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
 </div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        std::variant&lt;T_SuccessType, T_Failure&gt; m_result;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    };</div>
+<div class="foldopen" id="foldopen00109" data-start="{" data-end="}">
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#a79105e6c6a14c3dca6117309f5df9045">  109</a></span>        T_SuccessType <a class="code hl_function" href="classunify_1_1Result.html#a79105e6c6a14c3dca6117309f5df9045">Or</a>(T_SuccessType&amp;&amp; value) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                <span class="keyword">auto</span> result = std::get&lt;T_SuccessType&gt;(m_result);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keywordflow">catch</span>(...)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                <span class="keywordflow">return</span> value;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        }</div>
 </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>}</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        std::variant&lt;T_SuccessType, T_Failure&gt; m_result;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    };</div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>}</div>
 <div class="ttc" id="aclassunify_1_1Failure_html"><div class="ttname"><a href="classunify_1_1Failure.html">unify::Failure</a></div><div class="ttdef"><b>Definition</b> Result.h:32</div></div>
 <div class="ttc" id="aclassunify_1_1Failure_html_a8eeb938195605eb456455a594c85fc96"><div class="ttname"><a href="classunify_1_1Failure.html#a8eeb938195605eb456455a594c85fc96">unify::Failure::Failure</a></div><div class="ttdeci">Failure()</div><div class="ttdef"><b>Definition</b> Result.h:34</div></div>
 <div class="ttc" id="aclassunify_1_1Failure_html_a9f4f28ad56c445a16c74883c5c713684"><div class="ttname"><a href="classunify_1_1Failure.html#a9f4f28ad56c445a16c74883c5c713684">unify::Failure::Failure</a></div><div class="ttdeci">Failure(std::string message)</div><div class="ttdef"><b>Definition</b> Result.h:39</div></div>
@@ -247,6 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="ttc" id="aclassunify_1_1Result_html_a32823481b714003f89dc05ecf4e5192f"><div class="ttname"><a href="classunify_1_1Result.html#a32823481b714003f89dc05ecf4e5192f">unify::Result::Result</a></div><div class="ttdeci">Result(Failure failure)</div><div class="ttdef"><b>Definition</b> Result.h:62</div></div>
 <div class="ttc" id="aclassunify_1_1Result_html_a4681f1bf0f09a286cfea2450b776d420"><div class="ttname"><a href="classunify_1_1Result.html#a4681f1bf0f09a286cfea2450b776d420">unify::Result::Result</a></div><div class="ttdeci">Result(T_SuccessType value)</div><div class="ttdef"><b>Definition</b> Result.h:57</div></div>
 <div class="ttc" id="aclassunify_1_1Result_html_a73db7627e21dbb244fe406c5e30f5ca4"><div class="ttname"><a href="classunify_1_1Result.html#a73db7627e21dbb244fe406c5e30f5ca4">unify::Result::operator()</a></div><div class="ttdeci">T_SuccessType operator()() const</div><div class="ttdoc">Get the results. Will throw if a failure. Use Failure() or Success() first to verify results.</div><div class="ttdef"><b>Definition</b> Result.h:99</div></div>
+<div class="ttc" id="aclassunify_1_1Result_html_a79105e6c6a14c3dca6117309f5df9045"><div class="ttname"><a href="classunify_1_1Result.html#a79105e6c6a14c3dca6117309f5df9045">unify::Result::Or</a></div><div class="ttdeci">T_SuccessType Or(T_SuccessType &amp;&amp;value) const noexcept</div><div class="ttdef"><b>Definition</b> Result.h:109</div></div>
 <div class="ttc" id="aclassunify_1_1Result_html_aa1510c4614baba1ab9fce1d92030b654"><div class="ttname"><a href="classunify_1_1Result.html#aa1510c4614baba1ab9fce1d92030b654">unify::Result::Value</a></div><div class="ttdeci">T_SuccessType Value() const</div><div class="ttdef"><b>Definition</b> Result.h:89</div></div>
 <div class="ttc" id="aclassunify_1_1Result_html_ad9f06bdf8b0af91facefffb0de8493c8"><div class="ttname"><a href="classunify_1_1Result.html#ad9f06bdf8b0af91facefffb0de8493c8">unify::Result::Success</a></div><div class="ttdeci">bool Success() const</div><div class="ttdef"><b>Definition</b> Result.h:72</div></div>
 <div class="ttc" id="aclassunify_1_1Result_html_ae114ab3e4e526cdb66a0e5fa1d53ecae"><div class="ttname"><a href="classunify_1_1Result.html#ae114ab3e4e526cdb66a0e5fa1d53ecae">unify::Result::operator!</a></div><div class="ttdeci">bool operator!() const</div><div class="ttdef"><b>Definition</b> Result.h:104</div></div>

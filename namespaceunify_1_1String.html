@@ -164,8 +164,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a1ea82f1393e1b049796942f7e7d9c8a1" id="r_a1ea82f1393e1b049796942f7e7d9c8a1"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a1ea82f1393e1b049796942f7e7d9c8a1">ListPart</a> (std::string sString, std::vector&lt; char &gt; seperators, int iPartIndex)</td></tr>
 <tr class="memdesc:a1ea82f1393e1b049796942f7e7d9c8a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Considers a string as a part of a segmented list by a character, returns that part of the list... Returns ASAP. The first iPartIndex is 0.  <br /></td></tr>
 <tr class="memitem:a67b2426966e856d34f2addf90d0f1358" id="r_a67b2426966e856d34f2addf90d0f1358"><td class="memItemLeft">unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a67b2426966e856d34f2addf90d0f1358">ListPartCount</a> (std::string sString, std::vector&lt; char &gt; seperators)</td></tr>
-<tr class="memitem:a0e94ba28ec99bb0a466ebafebd8534e9" id="r_a0e94ba28ec99bb0a466ebafebd8534e9"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a0e94ba28ec99bb0a466ebafebd8534e9 template"><td class="memItemLeft">std::vector&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0e94ba28ec99bb0a466ebafebd8534e9">Split</a> (std::string sourceString, const char delimitor)</td></tr>
+<tr class="memitem:adedc2f41ed4f63563a47e776d291346e" id="r_adedc2f41ed4f63563a47e776d291346e"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:adedc2f41ed4f63563a47e776d291346e template"><td class="memItemLeft">std::vector&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#adedc2f41ed4f63563a47e776d291346e">Split</a> (std::string sourceString, const char delimitor, bool trim=true)</td></tr>
 <tr class="memitem:a1641241be7ff1ad2dd0a418071c1da19" id="r_a1641241be7ff1ad2dd0a418071c1da19"><td class="memItemLeft">std::vector&lt; char &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1641241be7ff1ad2dd0a418071c1da19">SplitWhitespace</a> ()</td></tr>
 <tr class="memdesc:a1641241be7ff1ad2dd0a418071c1da19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of whitespace characters including space, newline, and tab.  <br /></td></tr>
 <tr class="memitem:a4d4505e4d6f43ccda62abe68bba8534f" id="r_a4d4505e4d6f43ccda62abe68bba8534f"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
@@ -176,8 +176,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a83df5f55c4002b23f70822c2c48d2864" id="r_a83df5f55c4002b23f70822c2c48d2864"><td class="memTemplParams" colspan="2">template&lt;typename foo, typename ... bar&gt; </td></tr>
 <tr class="memitem:a83df5f55c4002b23f70822c2c48d2864 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a83df5f55c4002b23f70822c2c48d2864">StringIs</a> (std::string_view a, std::string_view b, std::string_view rest...)</td></tr>
 <tr class="memdesc:a83df5f55c4002b23f70822c2c48d2864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare mutliple strings for equvilancy, ignoring case.  <br /></td></tr>
-<tr class="memitem:ac568f7cadfd315d76e3447f8acbc17c2" id="r_ac568f7cadfd315d76e3447f8acbc17c2"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:ac568f7cadfd315d76e3447f8acbc17c2 template"><td class="memItemLeft">std::vector&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac568f7cadfd315d76e3447f8acbc17c2">Split</a> (std::string_view sourceString, const char delimitor)</td></tr>
+<tr class="memitem:a5d9a3f647fff1911932f76873dcb02ae" id="r_a5d9a3f647fff1911932f76873dcb02ae"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a5d9a3f647fff1911932f76873dcb02ae template"><td class="memItemLeft">std::vector&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5d9a3f647fff1911932f76873dcb02ae">Split</a> (std::string_view sourceString, const char delimitor, bool trim=true)</td></tr>
 <tr class="memitem:ac69885a7a1a72d7be130772889b97d2a" id="r_ac69885a7a1a72d7be130772889b97d2a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac69885a7a1a72d7be130772889b97d2a">StringIsAny</a> (std::string a, const std::list&lt; std::string &gt; &amp;list)</td></tr>
 <tr class="memitem:a23ec6b954eb53b6f233997ca1ddde012" id="r_a23ec6b954eb53b6f233997ca1ddde012"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a23ec6b954eb53b6f233997ca1ddde012">BeginsWith</a> (std::string source, std::string beginsWith)</td></tr>
 <tr class="memitem:a5bd5d26256eae0d2ec46c22f6a097975" id="r_a5bd5d26256eae0d2ec46c22f6a097975"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5bd5d26256eae0d2ec46c22f6a097975">EndsWith</a> (std::string source, std::string endsWith)</td></tr>
@@ -497,8 +497,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a0e94ba28ec99bb0a466ebafebd8534e9" name="a0e94ba28ec99bb0a466ebafebd8534e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e94ba28ec99bb0a466ebafebd8534e9">&#9670;&#160;</a></span>Split() <span class="overload">[1/3]</span></h2>
+<a id="adedc2f41ed4f63563a47e776d291346e" name="adedc2f41ed4f63563a47e776d291346e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adedc2f41ed4f63563a47e776d291346e">&#9670;&#160;</a></span>Split() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -513,7 +513,12 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>delimitor</em></span>&#160;)</td>
+          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>delimitor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>trim</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -553,8 +558,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="ac568f7cadfd315d76e3447f8acbc17c2" name="ac568f7cadfd315d76e3447f8acbc17c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac568f7cadfd315d76e3447f8acbc17c2">&#9670;&#160;</a></span>Split() <span class="overload">[3/3]</span></h2>
+<a id="a5d9a3f647fff1911932f76873dcb02ae" name="a5d9a3f647fff1911932f76873dcb02ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d9a3f647fff1911932f76873dcb02ae">&#9670;&#160;</a></span>Split() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -569,7 +574,12 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>delimitor</em></span>&#160;)</td>
+          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>delimitor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>trim</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

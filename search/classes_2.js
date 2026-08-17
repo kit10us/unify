@@ -5,5 +5,7 @@ var searchData=
   ['casttests_2',['CastTests',['../classCastTests.html',1,'']]],
   ['char_3',['Char',['../structunify_1_1Char.html',1,'unify']]],
   ['color_4',['Color',['../classunify_1_1Color.html',1,'unify']]],
-  ['colorunit_5',['ColorUnit',['../classunify_1_1ColorUnit.html',1,'unify']]]
+  ['colortests_5',['ColorTests',['../classColorTests.html',1,'']]],
+  ['colorunit_6',['ColorUnit',['../classunify_1_1ColorUnit.html',1,'unify']]],
+  ['colorunittests_7',['ColorUnitTests',['../classColorUnitTests.html',1,'']]]
 ];

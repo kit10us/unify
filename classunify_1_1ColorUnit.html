@@ -155,7 +155,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8a4728a2900f0f00259106d52be6eee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the alpha component.  <br /></td></tr>
 <tr class="memitem:a9e2f9189033ae527e68cc30124ad7488" id="r_a9e2f9189033ae527e68cc30124ad7488"><td class="memItemLeft"><a class="el" href="#a1d95fc7a28b36100a3e76b8fd4d75ed8">ColorUnit</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9e2f9189033ae527e68cc30124ad7488">Normalize</a> () const</td></tr>
 <tr class="memdesc:a9e2f9189033ae527e68cc30124ad7488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize color so that it scales to fit its max component to 1.0.  <br /></td></tr>
-<tr class="memitem:a75e5426c13c1cc5f0f34a96ab41e50eb" id="r_a75e5426c13c1cc5f0f34a96ab41e50eb"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a75e5426c13c1cc5f0f34a96ab41e50eb">ToString</a> (<a class="el" href="#a04614e684f8dbe9c2f028313b9931be8">Order</a> order=<a class="el" href="#a04614e684f8dbe9c2f028313b9931be8a80266f465bd4a8bd23cd734aa87457e3">RGBA</a>) const</td></tr>
+<tr class="memitem:a71c5a1b30dcad95c66674e93c172cf28" id="r_a71c5a1b30dcad95c66674e93c172cf28"><td class="memItemLeft">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a71c5a1b30dcad95c66674e93c172cf28">ToString</a> (<a class="el" href="#a04614e684f8dbe9c2f028313b9931be8">Order</a> order=<a class="el" href="#a04614e684f8dbe9c2f028313b9931be8a80266f465bd4a8bd23cd734aa87457e3">RGBA</a>) const</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -165,7 +165,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a5b72e5d36759402a2c3b397d8721081c" id="r_a5b72e5d36759402a2c3b397d8721081c"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;float&#160;&#160;&#160;<a class="el" href="#a5ed1a1307c523fc0a52e4456f0b0d4e1">g</a>&#160;</td><td class="memItemRight"></td></tr>
 <tr class="memitem:aac6656816ffd797a0a6633a435379a79" id="r_aac6656816ffd797a0a6633a435379a79"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;float&#160;&#160;&#160;<a class="el" href="#a6e8b1524030e38aa2c89df511fd7336e">b</a>&#160;</td><td class="memItemRight"></td></tr>
 <tr class="memitem:a26c3bace09a262966a595044edd16190" id="r_a26c3bace09a262966a595044edd16190"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;float&#160;&#160;&#160;<a class="el" href="#a431e059ad855510e9846a2d6bfb297fb">a</a>&#160;</td><td class="memItemRight"></td></tr>
-<tr class="memitem:ab539ed6aac67adf094c8a4cb98efee6c" id="r_ab539ed6aac67adf094c8a4cb98efee6c"><td class="memItemLeft anonEnd">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="#a08af336ca528e6062706ee963898bf75">component</a></td></tr>
+<tr class="memitem:a7f08d903d4e4d4d6ce47de4afff1f927" id="r_a7f08d903d4e4d4d6ce47de4afff1f927"><td class="memItemLeft anonEnd">&#160;&#160;&#160;}&#160;</td><td class="memItemRight"></td></tr>
 <tr class="memitem:aa62ea21ac5afc2754a6c90fffebe457c" id="r_aa62ea21ac5afc2754a6c90fffebe457c"><td class="memItemLeft anon">&#160;&#160;&#160;float&#160;&#160;&#160;<a class="el" href="#a241acb381db44b83008eb1a1537185b0">linear</a> [4]&#160;</td><td class="memItemRight"></td></tr>
 <tr class="memitem:a2bd661a3cb58b905f5731a241218bf36" id="r_a2bd661a3cb58b905f5731a241218bf36"><td class="memItemLeft anonEnd">};&#160;</td><td class="memItemRight"></td></tr>
 </table><table class="memberdecls">
@@ -872,8 +872,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a75e5426c13c1cc5f0f34a96ab41e50eb" name="a75e5426c13c1cc5f0f34a96ab41e50eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75e5426c13c1cc5f0f34a96ab41e50eb">&#9670;&#160;</a></span>ToString()</h2>
+<a id="a71c5a1b30dcad95c66674e93c172cf28" name="a71c5a1b30dcad95c66674e93c172cf28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71c5a1b30dcad95c66674e93c172cf28">&#9670;&#160;</a></span>ToString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -882,7 +882,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string unify::ColorUnit::ToString </td>
+          <td class="memname">std::optional&lt; std::string &gt; unify::ColorUnit::ToString </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a04614e684f8dbe9c2f028313b9931be8">ColorUnit::Order</a></td>          <td class="paramname"><span class="paramname"><em>order</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a04614e684f8dbe9c2f028313b9931be8a80266f465bd4a8bd23cd734aa87457e3">RGBA</a></span></td><td>)</td>
           <td> const</td>
@@ -1359,20 +1359,6 @@ Friends</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">float unify::ColorUnit::b</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a08af336ca528e6062706ee963898bf75" name="a08af336ca528e6062706ee963898bf75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08af336ca528e6062706ee963898bf75">&#9670;&#160;</a></span>[struct]</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct  { ... }  unify::ColorUnit::component</td>
         </tr>
       </table>
 </div><div class="memdoc">
