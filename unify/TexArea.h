@@ -63,7 +63,7 @@ namespace unify
 
 	template<>
 	inline
-	std::string Cast  (const TexArea in);
+	std::optional<std::string> ToString(const TexArea in);
 }
 
 #include <unify/TexArea.inl>

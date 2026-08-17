@@ -33,14 +33,14 @@ namespace unify
 	inline
 	Color Cast(ColorUnit col)
 	{
-		auto cap = std::max<>({ col.component.r, col.component.g, col.component.b, col.component.a });
-		return Color(255 * unify::Color::Component(col.component.r / cap), 255 * unify::Color::Component(col.component.g / cap), 255 * unify::Color::Component(col.component.b / cap), 255 * unify::Color::Component(col.component.a / cap));
+		auto cap = std::max<>({ col.r, col.g, col.b, col.a });
+		return Color(255 * unify::Color::Component(col.r / cap), 255 * unify::Color::Component(col.g / cap), 255 * unify::Color::Component(col.b / cap), 255 * unify::Color::Component(col.a / cap));
 	}
 
 	template<>
 	inline
 	ColorUnit Cast(Color col)
 	{
-		return ColorUnit(255.0f / col.component.r, 255.0f / col.component.g, 255.0f / col.component.b, 255.0f / col.component.a);
+		return ColorUnit(255.0f / col.r, 255.0f / col.g, 255.0f / col.b, 255.0f / col.a);
 	}
 }

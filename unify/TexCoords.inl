@@ -29,6 +29,8 @@ namespace unify
 {
 	inline
 	TexCoords::TexCoords()
+	: u{}
+	, v{}
 	{
 	}
 

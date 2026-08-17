@@ -55,6 +55,8 @@ TEST_F(CastTests, TestCasts)
     */
 
     // TODO: wstring
+
+    EXPECT_STREQ( "Hello, world!", unify::ToString(std::string("Hello, world!")).value().c_str() );
     
     EXPECT_TRUE( std::string("true") == unify::ToString(true) );
     EXPECT_TRUE( std::string("false") == unify::ToString(false) );
@@ -133,6 +135,8 @@ TEST_F(CastTests, TestCasts)
     EXPECT_FALSE( *unify::FromString<bool>("no") );
     EXPECT_FALSE( *unify::FromString<bool>("0") );
     EXPECT_FALSE( *unify::FromString<bool>("FaLsE") );
+
+    EXPECT_STREQ( "from string", (*unify::FromString<std::string>("from string")).c_str() );
 
     EXPECT_TRUE( (uint8_t)1 == unify::FromString<uint8_t>(std::string("1")) );
     EXPECT_TRUE( (uint8_t)12 == unify::FromString<uint8_t>(std::string("12")) );

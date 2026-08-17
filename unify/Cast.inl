@@ -53,6 +53,13 @@ std::optional<std::string> unify::ToString(const Char in) noexcept
 
 template<>
 inline
+std::optional<std::string> unify::ToString(const std::string in) noexcept
+{
+	return in;
+}
+
+template<>
+inline
 std::optional<std::string> unify::ToString(const std::string_view in) noexcept
 {
 	try
@@ -502,7 +509,7 @@ std::optional<float> unify::Cast(const char* text) noexcept
 {
 	return Cast<float, std::string_view>(text);
 }
-
+	
 template<>
 inline
 std::optional<double> unify::Cast(const char* text) noexcept
@@ -540,5 +547,33 @@ std::optional<std::string> unify::ToString(const wchar_t* text) noexcept
 	return ToString<std::string>(std::wstring(text));
 }
 */
+
+template<>
+inline
+std::optional<std::string> unify::ToString(std::wstring_view in) noexcept
+{
+	try
+	{
+		return {std::string(in.begin(), in.end())};
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
+}
+
+template<>
+inline
+std::optional<std::string> unify::FromString(std::string_view in) noexcept
+{
+	try
+	{
+		return {std::string(in.begin(), in.end())};
+	}
+	catch(...)
+	{
+		return std::nullopt;
+	}
+}
 
 #pragma warning(pop)

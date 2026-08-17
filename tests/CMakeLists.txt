@@ -20,7 +20,10 @@ FetchContent_MakeAvailable(googletest)
 # 1. Add test source files
 add_executable(unify_unit_tests
     tests_Result.cpp
+    tests_String.cpp
     tests_Angle.cpp
+    tests_Color.cpp
+    tests_ColorUnit.cpp
     tests_V2.cpp
     tests_V3.cpp
     tests_V4.cpp
@@ -29,6 +32,7 @@ add_executable(unify_unit_tests
     tests_BBox.cpp
     tests_BRectangle.cpp
     tests_Matrix.cpp
+    tests_TexCoords.cpp
     tests_Cast.cpp
     )
 

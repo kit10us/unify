@@ -142,79 +142,79 @@ namespace unify
 	Color::Color(std::string text, unify::Order order, Color::Component defaultAlpha)
 	{
 		using namespace unify::String;
-		component.r = 0;
-		component.g = 0;
-		component.b = 0;
-		component.a = defaultAlpha;
+		r = 0;
+		g = 0;
+		b = 0;
+		a = defaultAlpha;
 
 		// Named colors.
 		if (StringIs(text, "red"))
 		{
-			component.r = 255;
+			r = 255;
 		}
 		else if (StringIs(text, "green"))
 		{
-			component.g = 255;
+			g = 255;
 		}
 		else if (StringIs(text, "blue"))
 		{
-			component.b = 255;
+			b = 255;
 		}
 		else if (StringIs(text, "white"))
 		{
-			component.r = 255;
-			component.g = 255;
-			component.b = 255;
+			r = 255;
+			g = 255;
+			b = 255;
 		}
 		else if (StringIs(text, "black"))
 		{
-			component.r = 0;
-			component.g = 0;
-			component.b = 0;
+			r = 0;
+			g = 0;
+			b = 0;
 		}
 		else if (StringIs(text, "clear"))
 		{
-			component.r = 0;
-			component.g = 0;
-			component.b = 0;
-			component.a = 0;
+			r = 0;
+			g = 0;
+			b = 0;
+			a = 0;
 		}
 		else
 		{
 			std::vector< unsigned char > split = Split< unsigned char >(text, ',');
 			if (split.size() == 3)
 			{
-				component.r = split[0];
-				component.g = split[1];
-				component.b = split[2];
+				r = split[0];
+				g = split[1];
+				b = split[2];
 			}
 			else if (split.size() == 4)
 			{
 				switch (order)
 				{
 				case RGBA:
-					component.r = split[0];
-					component.g = split[1];
-					component.b = split[2];
-					component.a = split[3];
+					r = split[0];
+					g = split[1];
+					b = split[2];
+					a = split[3];
 					break;
 				case ARGB:
-					component.a = split[0];
-					component.r = split[1];
-					component.g = split[2];
-					component.b = split[3];
+					a = split[0];
+					r = split[1];
+					g = split[2];
+					b = split[3];
 					break;
 				case BGRA:
-					component.b = split[0];
-					component.g = split[1];
-					component.r = split[2];
-					component.a = split[3];
+					b = split[0];
+					g = split[1];
+					r = split[2];
+					a = split[3];
 					break;
 				case ABGR:
-					component.a = split[0];
-					component.b = split[1];
-					component.g = split[2];
-					component.r = split[3];
+					a = split[0];
+					b = split[1];
+					g = split[2];
+					r = split[3];
 					break;
 				}
 			}
@@ -418,60 +418,60 @@ namespace unify
 	}
 
 	inline
-	void Color::SetRGBA(Color::Component r, Color::Component g, Color::Component b, Color::Component a)
+	void Color::SetRGBA(Color::Component r_in, Color::Component g_in, Color::Component b_in, Color::Component a_in)
 	{
-		component.r = r;
-		component.g = g;
-		component.b = b;
-		component.a = a;
+		r = r_in;
+		g = g_in;
+		b = b_in;
+		a = a_in;
 	}
 
 	inline
 	Color::Component Color::GetAlpha() const
 	{
-		return component.a;
+		return a;
 	}
 
 	inline
 	Color::Component Color::GetRed() const
 	{
-		return component.r;
+		return r;
 	}
 
 	inline
 	Color::Component Color::GetGreen() const
 	{
-		return component.g;
+		return g;
 	}
 
 	inline
 	Color::Component Color::GetBlue() const
 	{
-		return component.b;
+		return b;
 	}
 
 	inline
-	void Color::SetAlpha(Color::Component a)
+	void Color::SetAlpha(Color::Component a_in)
 	{
-		((Color::Component*)&c)[3] = a;
+		((Color::Component*)&c)[3] = a_in;
 	}
 
 	inline
-	void Color::SetRed(Color::Component r)
+	void Color::SetRed(Color::Component r_in)
 	{
-		((Color::Component*)&c)[2] = r;
+		((Color::Component*)&c)[2] = r_in;
 	}
 
 	inline
-	void Color::SetGreen(Color::Component g)
+	void Color::SetGreen(Color::Component g_in)
 	{
-		((Color::Component*)&c)[1] = g;
+		((Color::Component*)&c)[1] = g_in;
 	}
 
 	inline
-	void Color::SetBlue(Color::Component b)
+	void Color::SetBlue(Color::Component b_in)
 	{
-		((Color::Component*)&c)[0] = b;
+		((Color::Component*)&c)[0] = b_in;
 	}
 
 	inline
@@ -492,19 +492,29 @@ namespace unify
 	}
 
 	inline
-	std::string Color::ToString(unify::Order order) const
+	std::optional<std::string> Color::ToString(unify::Order order) const
 	{
+		auto rs = unify::ToString(r);
+		auto gs = unify::ToString(g);
+		auto bs = unify::ToString(b);
+		auto as = unify::ToString(a);
+
+		if (!rs || !gs || !bs || !as)
+		{
+			return std::nullopt;
+		}
+
 		switch (order)
 		{
 		case RGBA:
 		default:
-			return Cast< std::string >(component.r) + ", " + Cast< std::string >(component.g) + ", " + Cast< std::string >(component.b) + ", " + Cast< std::string >(component.a);
+			return *rs + ", " + *gs + ", " + *bs + ", " + *as;
 		case ARGB:
-			return Cast< std::string >(component.a) + ", " + Cast< std::string >(component.r) + ", " + Cast< std::string >(component.g) + ", " + Cast< std::string >(component.b);
+			return *as + ", " + *rs + ", " + *gs + ", " + *bs;
 		case BGRA:
-			return Cast< std::string >(component.b) + ", " + Cast< std::string >(component.g) + ", " + Cast< std::string >(component.r) + ", " + Cast< std::string >(component.a);
+			return *bs + ", " + *gs + ", " + *rs + ", " + *as;
 		case ABGR:
-			return Cast< std::string >(component.a) + ", " + Cast< std::string >(component.b) + ", " + Cast< std::string >(component.g) + ", " + Cast< std::string >(component.r);
+			return *as + ", " + *bs + ", " + *gs + ", " + *rs;
 		}
 	}
 }

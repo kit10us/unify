@@ -85,7 +85,7 @@ namespace unify
 	};
 
 	template<typename T>
-	static inline V4<T> V4FromString(const std::string& str)
+	static inline V4<T> V4FromString(const std::string& str) // noexcept(false)
 	{
 		std::vector< T > split = String::Split< T >(str, ',');
 		return V4<T>(split[0], split[1], split[2], split[3]);

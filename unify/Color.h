@@ -24,8 +24,11 @@
 
 #include <unify/Unify.h>
 #include <unify/String.h>
+#include <unify/Cast.h>
+#include <unify/Exception.h>
 #include <algorithm>
 #include <string>
+#include <cassert>
 
 namespace unify
 {
@@ -56,8 +59,8 @@ namespace unify
 				Component g;
 				Component b;
 				Component a;
-			} component;
-			unsigned char linear[4];
+			};
+			Component linear[4];
 		};
 
 		Color();
@@ -147,7 +150,7 @@ namespace unify
 		/// <summary>
 		/// Returns a string representation fo a color.
 		/// </summary>
-		std::string ToString(unify::Order order = RGBA) const;
+		std::optional<std::string> ToString(unify::Order order = RGBA) const;
 	};
 
 	inline Color ColorRGBA(Color::Component r, Color::Component g, Color::Component b, Color::Component a);

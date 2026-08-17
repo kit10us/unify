@@ -26,6 +26,8 @@
 #include <unify/Cast.h>
 #include <string>
 
+using namespace std::string_literals;
+
 namespace unify
 {
 	class TexCoords
@@ -65,11 +67,16 @@ namespace unify
         const float & operator[]( size_t i ) const;
 	};
 
-	template<>
-	inline
-	std::string Cast(const TexCoords coords)
+	std::optional<std::string> ToString(const TexCoords coords)
 	{
-		return "{" + Cast< std::string >(coords.u) + ", " + Cast< std::string >(coords.v) + "}";
+		auto coord_u = unify::ToString(coords.u);
+		auto coord_v = unify::ToString(coords.v);
+		if (!coord_u || !coord_v)
+		{
+			return std::nullopt;
+		}
+
+		return *coord_u + ", " + *coord_v;
 	}
 }
 

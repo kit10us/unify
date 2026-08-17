@@ -160,7 +160,7 @@ namespace unify::String
 
 	// TODO: For our needs, multiple spaces as delimitors need to be considered as one.
 	template< typename T >
-	std::vector< T > Split( std::string sourceString, const char delimitor );
+	std::vector< T > Split( std::string sourceString, const char delimitor, bool trim = true );
 
 	/// <summary>
 	/// Returns a vector of whitespace characters including space, newline, and tab.

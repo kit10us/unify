@@ -33,14 +33,14 @@ namespace unify::String
 	}
 
 	template< typename T >
-	std::vector<T> Split(std::string_view sourceString, const char delimitor)
+	std::vector<T> Split(std::string_view sourceString, const char delimitor, bool trim = true)
 	{
-		std::vector<T > results;
+		std::vector<T> results;
 		std::string item;
 		size_t front = 0;
 		size_t i = 0;
 		const auto end = sourceString.size();
-		for (i = 0; i < sourceString.size(); i++)
+		for (i = 0; i < end; i++)
 		{
 			if (sourceString[i] == delimitor)
 			{
@@ -50,7 +50,22 @@ namespace unify::String
 				}
 				else
 				{
-					results.push_back(FromString<T>({sourceString.begin() + front, i - front}));
+					std::string item = std::string{sourceString.substr(front, i - front)};
+					if (trim)
+					{
+						item = Trim(item);
+					}
+
+					std::cout << "------------" << item << std::endl;
+					std::optional<T> result = FromString<T>(item);
+					if (result.has_value())
+					{
+						results.push_back(result.value());
+					}
+					else
+					{
+						return {};
+					}
 				}
 
 				front = i + 1;
@@ -60,7 +75,22 @@ namespace unify::String
 		// Grab the last item.
 		if (front != end)
 		{
-			results.push_back(FromString<T>(sourceString.substr(front, i - front)));
+			std::string item = std::string{sourceString.substr(front, i - front)};
+			if (trim)
+			{
+				item = Trim(item);
+			}
+
+			std::cout << "------------" << item << std::endl;
+			std::optional<T> result = FromString<T>(item);
+			if (result.has_value())
+			{
+				results.push_back(result.value());
+			}
+			else
+			{
+				return {};
+			}
 		}
   
 		return results;

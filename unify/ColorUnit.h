@@ -23,6 +23,9 @@
 #pragma once
 
 #include <unify/Unify.h>
+#include <unify/String.h>
+#include <unify/Cast.h>
+#include <unify/Exception.h>
 #include <string>
 
 namespace unify
@@ -61,7 +64,7 @@ namespace unify
 		union {
 			struct {
 				float r, g, b, a;
-			} component;
+			};
 			float linear[4];
 		};
 
@@ -130,7 +133,7 @@ namespace unify
 		inline
 		ColorUnit Normalize() const;
 
-		std::string ToString( Order order = RGBA ) const;
+		std::optional<std::string> ToString( Order order = RGBA ) const;
 	};
 
 	ColorUnit ColorUnitRGBA( float r, float g, float b, float a );

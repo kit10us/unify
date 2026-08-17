@@ -106,6 +106,19 @@ namespace unify
 			return !Success();
 		}
 
+		T_SuccessType Or(T_SuccessType&& value) const noexcept
+		{
+			try
+			{
+				auto result = std::get<T_SuccessType>(m_result);
+				return result;
+			}
+			catch(...)
+			{
+				return value;
+			}
+		}
+
 	public:
 		std::variant<T_SuccessType, T_Failure> m_result;
 	};

@@ -40,14 +40,12 @@ namespace unify
 		char c;
 	};
 
-	/*
 	/// <summary> 
 	/// Casts small types (<= 16 bytes) using register-optimized pass-by-value.
 	/// </summary>
 	template< typename TTo, typename TFrom > 
-	std::optional<TTo> Cast(const TFrom in ) noexcept = delete;
-	*/
-
+	TTo Cast(const TFrom in ) noexcept = delete;
+	
 	template<typename TFrom> 
 	std::optional<std::string> ToString(const TFrom in ) noexcept = delete;
 

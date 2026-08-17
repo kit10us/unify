@@ -83,10 +83,10 @@ namespace unify
 	TimeDelta TimeDeltaInDays( float days );
 	TimeDelta TimeDeltaInYears( float years );
 
-	template< typename TTo, typename TFrom > TTo Cast(const TFrom in);
-	template<> std::string unify::Cast(const TimeDelta in);
-	template<> TimeDelta Cast(const std::string text);
-	template<> TimeDelta Cast(const char* text);
+	//template< typename TTo, typename TFrom > TTo Cast(const TFrom in);
+	template<> std::optional<std::string> unify::ToString(const TimeDelta in);
+	template<> std::optional<TimeDelta> FromString(std::string_view text);
+	//template<> TimeDelta Cast(const char* text);
 }
 
 #include <unify/TimeDelta.inl>

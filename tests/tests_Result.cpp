@@ -117,3 +117,9 @@ TEST_F(ResultTests, TestOperatorValueFailure)
     EXPECT_EQ(value_result.Message(), "Value failure.");
     EXPECT_THROW((value_result() == TestEnum::Value1), std::bad_variant_access);
 }
+
+TEST_F(ResultTests, TestOr)
+{
+    EXPECT_EQ(ValueFailure().Or(TestEnum::Value2), TestEnum::Value2);
+    EXPECT_EQ(ValueSuccess().Or(TestEnum::Value3), TestEnum::Value1);
+}
