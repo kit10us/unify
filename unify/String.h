@@ -27,6 +27,8 @@
 #include <sstream>
 #include <vector>
 #include <list>
+#include <optional>
+#include <ostream>
 
 namespace unify::String
 {

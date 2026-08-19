@@ -72,6 +72,7 @@ std::optional<std::string> unify::ToString(const std::string_view in) noexcept
 	}
 }
 
+/* SAS TODO: Need to work this out, disabled for now, do not commit.
 template<>
 inline
 std::optional<std::string> unify::ToString(const std::wstring in) noexcept
@@ -85,6 +86,7 @@ std::optional<std::string> unify::ToString(const std::wstring in) noexcept
 		return std::nullopt;
 	}
 }
+*/
 
 template<>
 inline
@@ -229,34 +231,6 @@ std::optional<std::string> unify::ToString(const uint16_t in) noexcept
 template<>
 inline
 std::optional<std::string> unify::ToString(const int16_t in) noexcept
-{
-	try
-	{
-		return std::to_string(in);
-	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
-}
-
-template<>
-inline
-std::optional<std::string> unify::ToString(const unsigned long in) noexcept
-{
-	try
-	{
-		return std::to_string(in);
-	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
-}
-
-template<>
-inline
-std::optional<std::string> unify::ToString(const long in) noexcept
 {
 	try
 	{

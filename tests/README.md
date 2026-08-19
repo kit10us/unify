@@ -21,6 +21,8 @@ Run all registered tests via CTest. Use the --output-on-failure flag to streamli
 
 ctest --test-dir build -C Debug --output-on-failure
 
+A task is available to execute the above (ctrl + shift + P, then "Run Tests Quick").
+
 # Troubleshooting
 * Missing GTest: The project uses FetchContent. Ensure you have an active internet connection during the first configuration to allow CMake to download the GTest dependency.
 

@@ -24,8 +24,6 @@ project(unify VERSION 1.0.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-#include(cmake/ShowConfig.cmake)
-
 set(CMAKE_SUPPRESS_REGENERATION ON)
 
 set(TARGET_NAME ${PROJECT_NAME})
@@ -41,7 +39,7 @@ add_library(${PROJECT_NAME} STATIC ${ALL_SOURCES})
 target_include_directories(${PROJECT_NAME}
     PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
-        $<INSTALL_INTERFACE:include>
+        $<INSTALL_INTERFACE:unify>
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
@@ -51,7 +49,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 #	EXCLUDE_FROM_ALL TRUE
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${ALL_SOURCES})
 
-option(UNIFY_BUILD_TESTS "Build unit tests" ON) # Added
+option(UNIFY_BUILD_TESTS "Build unit tests" ON)
 
 if(UNIFY_BUILD_TESTS)
 	message("Building unit tests...")
