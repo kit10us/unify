@@ -22,47 +22,74 @@
 
 #pragma once
 
+#include <memory>
+#include <cstring>
+#include <filesystem>
+#include <vector>
+#include <fstream>
+#include <tuple>
+#include <memory>
+#include <regex>
+
 #include <unify/Unify.h>
 #include <unify/String.h>
-#include <filesystem>
-#include <string>
-#include <vector>
-#include <list>
-#include <iostream>
-#include <fstream>
 
 namespace unify
 {
-	enum Slash
+	enum class Slash
 	{
 		Foward,
 		Backward
 	};
 
+	/// <summary>
+	/// Represents a path, or root identifier (such as a unique definition of an asset, ex. "texture:///", or file, ex/ "file://").
+	/// Follows RFC 8089: URI (Uniform Resource Identifier).
+	/// </summary>
+	/// <note>
+	/// Slash directions are not tracked within the path. They must be specified when extracting the full path.
+	/// </note>
 	class Path	
 	{
 	public:
-		inline
-		static const std::string Path::XPathPrefix{ "file:///" };
+		/// @brief Split a path, as a string, into a URI prefixm and the actual path.
+		/// @param path path with or without URI prefix.
+		/// @return a pair of strings with the scheme and the path.
+		inline static std::pair<std::string, std::string> URISplit(std::string_view path);
 
-		/// <summary>
-		/// Returns true if the Path is a file.
-		/// </summary>
-		static bool IsXPath( std::string path );
+		/// @brief Static constructor for a file path.
+		/// @return A file path.
+		inline static Path MakeFile(std::string_view filename = {});
 
 		Path();
 		explicit Path( std::string path );
 		explicit Path( char * path );
 		Path( Path left, Path right );
-		Path( const std::vector< std::string > & pathParts );
+		Path(const std::vector< std::string > & pathParts);
+		Path(std::string_view scheme, std::string_view path);
+
+		/// @brief Set the URI scheme.		
+		bool SetScheme(std::string_view scheme) noexcept;
+
+		/// @brief Get the URI prefix.
+		std::string GetScheme() const noexcept;
+
+		/// @brief Check if the path has a scheme (is URI).
+		bool HasScheme() const noexcept;
+
+		void SetPath(std::string_view path) noexcept;
+
+		/// @brief Get the path portion.
+		std::string GetPath() const noexcept;
+
+		/// @brief Check if path is empty. 
+		bool IsEmpty() const noexcept;
 
 		Path & operator=( const Path & path );
 		bool operator==( const Path & path ) const;
 		bool operator!=( const Path & path ) const;
 		Path operator+( const Path & path );
 		Path & operator+=( const Path & path );
-
-		bool Empty() const;
 
 		/// <summary>
 		/// Splits a path into individual parts. If the path begins with a slash, then the first part will be a slash.
@@ -120,12 +147,12 @@ namespace unify
 		/// <summary>
 		/// Returns a string representation of the path maintaining the original slash directions."
 		/// </summary>
-		std::string ToString() const;
+		std::string ToString() const noexcept;
 
 		/// <summary>
 		/// Returns a string with all slashes in a uniform direction.
 		/// </summary>
-		std::string ToString( Slash direction ) const;
+		std::string ToString( Slash direction ) const noexcept;
 
 		/// <summary>
 		/// Returns a wide string representation of the path maintaining the original slash directions."
@@ -171,9 +198,10 @@ namespace unify
 		/// Returns a list of files in this paths directory.
 		/// If the path is not a directory, it returns the current file.
 		/// </summary>
-		std::list<Path> Files() const;
+		std::vector<Path> Files() const;
 
 	private:
+		std::string m_scheme;
 		std::string m_path;
 	};
 
@@ -181,6 +209,16 @@ namespace unify
 	/// Return a path with a different extension.
 	/// </summary>
 	Path ChangeExtension( Path path, std::string extension );
+	
+	inline std::pair<std::string, std::string> Path::URISplit(std::string_view path)
+	{
+		return {"a", "b"};
+	}
+
+	inline Path Path::MakeFile(std::string_view file_path)
+	{ 
+		return unify::Path{"file", file_path};
+	}
 }
 
 std::ostream & operator<<( std::ostream & os, const unify::Path & path );

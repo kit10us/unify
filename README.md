@@ -30,9 +30,11 @@ Unify achieves its goals through several architectural pillars:
 4. Complexity Reduction: Extensive use of function overloading to reduce API verbosity.
 
 # Features
-Multi-platform: First-class support for Windows (MSVC) and Linux (GCC/Clang).
+* Multi-platform: First-class support for Windows (MSVC) and Linux (GCC/Clang).
 
-Unit Testing: Fully integrated GoogleTest (GTest) suite via CTest.
+* Unit Testing: Fully integrated GoogleTest (GTest) suite via CTest.
+
+* No exception: At worst, exceptions will be caught, but never re-thrown outside of public functions.
 
 # Setup and Development
 ## Generate Project Files

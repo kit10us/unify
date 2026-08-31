@@ -183,7 +183,7 @@ namespace unify
 	}
 
 	inline
-	V3< float > unify::operator * (V3 < float > v, Quaternion q)
+	V3< float > operator * (V3 < float > v, Quaternion q)
 	{
 		Quaternion vq(v.x, v.y, v.z, 0.0f);
 		Quaternion p = q.Conjugate() * vq * q;
@@ -191,20 +191,20 @@ namespace unify
 	}
 
 	inline
-	V3< float > unify::operator * (Quaternion q, V3< float > v)
+	V3< float > operator * (Quaternion q, V3< float > v)
 	{
-		return unify::operator*(v, q);
+		return operator*(v, q);
 	}
 
 	inline
-	Quaternion unify::QuaternionIdentity()
+	Quaternion QuaternionIdentity()
 	{
 		Quaternion q(0, 0, 0, 1);
 		return q;
 	}
 
 	inline
-	Quaternion unify::QuaternionFromEuler(const unify::V3< float >& euler)
+	Quaternion QuaternionFromEuler(const unify::V3< float >& euler)
 	{
 		Quaternion q;
 
@@ -224,7 +224,7 @@ namespace unify
 	}
 
 	inline
-	Quaternion unify::QuaternionSlerp(const Quaternion& qa, const Quaternion& qb, float t)
+	Quaternion QuaternionSlerp(const Quaternion& qa, const Quaternion& qb, float t)
 	{
 		Quaternion q;
 

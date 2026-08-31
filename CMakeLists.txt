@@ -22,10 +22,6 @@ cmake_minimum_required (VERSION 3.29.0)
 project(unify VERSION 1.0.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-set(CMAKE_SUPPRESS_REGENERATION ON)
-
 set(TARGET_NAME ${PROJECT_NAME})
 set(NAMESPACE "unify")
 
@@ -34,24 +30,34 @@ file(GLOB_RECURSE ALL_SOURCES CONFIGURE_DEPENDS
 	"${CMAKE_CURRENT_SOURCE_DIR}/${NAMESPACE}/*.inl"
 )
 
-add_library(${PROJECT_NAME} STATIC ${ALL_SOURCES})
+#add_library(${PROJECT_NAME} STATIC ${ALL_SOURCES})
+add_library(${PROJECT_NAME} INTERFACE)
 
-target_include_directories(${PROJECT_NAME}
-    PUBLIC
+target_include_directories(${PROJECT_NAME} INTERFACE
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
         $<INSTALL_INTERFACE:unify>
 )
 
-set_target_properties(${PROJECT_NAME} PROPERTIES
-	LINKER_LANGUAGE CXX
+target_compile_features(${PROJECT_NAME} INTERFACE
+	cxx_std_20
 )
 
 #	EXCLUDE_FROM_ALL TRUE
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${ALL_SOURCES})
+target_sources(${PROJECT_NAME} INTERFACE
+	PRIVATE
+		${ALL_SOURCES}
+)
 
-option(UNIFY_BUILD_TESTS "Build unit tests" ON)
+if(PROJECT_IS_TOP_LEVEL)
+	set(BUILD_TESTS_DEFAULT ON)
+else()
+	set(BUILD_TESTS_DEFAULT OFF)
+endif()
 
-if(UNIFY_BUILD_TESTS)
+option(BUILD_TESTS "Build unit tests" ${BUILD_TESTS_DEFAULT})
+
+if(BUILD_TESTS)
 	message("Building unit tests...")
 	enable_testing()
 	add_subdirectory(tests)

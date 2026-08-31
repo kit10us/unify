@@ -37,6 +37,10 @@ inline
 std::optional<unsigned int> unify::FromString(std::string_view text) noexcept;
 */
 
+/// @brief Convert a character into a string.
+/// @note As this is considering the character in as a ascii character, we need to box the char.
+/// @param in Char box
+/// @return string
 template<>
 inline
 std::optional<std::string> unify::ToString(const Char in) noexcept
@@ -72,7 +76,28 @@ std::optional<std::string> unify::ToString(const std::string_view in) noexcept
 	}
 }
 
-/* SAS TODO: Need to work this out, disabled for now, do not commit.
+inline
+std::optional<std::wstring> ToWString(std::string input_string)
+{
+    if (input_string.empty())
+    {
+        return std::wstring();
+    }
+
+    std::size_t size_needed = 0;
+    mbstowcs_s(&size_needed, nullptr, 0, input_string.c_str(), _TRUNCATE);
+
+    if (size_needed == 0)
+    {
+        return std::wstring();
+    }
+
+    std::wstring output_string(size_needed - 1, 0);
+    mbstowcs_s(nullptr, output_string.data(), size_needed, input_string.c_str(), _TRUNCATE);
+
+    return output_string;
+}
+
 template<>
 inline
 std::optional<std::string> unify::ToString(const std::wstring in) noexcept
@@ -86,7 +111,6 @@ std::optional<std::string> unify::ToString(const std::wstring in) noexcept
 		return std::nullopt;
 	}
 }
-*/
 
 template<>
 inline
@@ -325,9 +349,9 @@ std::optional<uint32_t> unify::FromString(std::string_view text) noexcept
 
 template<>
 inline
-std::optional<unsigned __int64> unify::FromString(std::string_view text) noexcept
+std::optional<std::uint64_t> unify::FromString(std::string_view text) noexcept
 {
-	unsigned __int64 out{};
+	std::uint64_t out{};
 	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
 	if (ec == std::errc{} && ptr == text.data() + text.size())
 	{

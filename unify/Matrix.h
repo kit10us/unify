@@ -161,6 +161,48 @@ namespace unify
 
 		void Orbit( const V3< float > & origin, const V2< float > & direction, Angle angle );
 
+		inline
+		Quaternion ToQuaternion() const
+		{
+			Quaternion q;
+			const auto& mat = *this;
+			float tr = mat.m[0][0] + mat.m[1][1] + mat.m[2][2];
+
+			if (tr > 0) 
+			{
+				float S = sqrt(tr + 1.0f) * 2.0f; // S=4*qw 
+				q.w = 0.25f * S;
+				q.x = (mat.m[1][2] - mat.m[2][1]) / S;
+				q.y = (mat.m[2][0] - mat.m[0][2]) / S;
+				q.z = (mat.m[0][1] - mat.m[1][0]) / S;
+			}
+			else if ((mat.m[0][0] > mat.m[1][1]) & (mat.m[0][0] > mat.m[2][2]))
+			{
+				float S = sqrt(1.0f + mat.m[0][0] - mat.m[1][1] - mat.m[2][2]) * 2.0f; // S=4*qx 
+				q.w = (mat.m[1][2] - mat.m[2][1]) / S;
+				q.x = 0.25f * S;
+				q.y = (mat.m[1][0] + mat.m[0][1]) / S;
+				q.z = (mat.m[2][0] + mat.m[0][2]) / S;
+			}
+			else if (mat.m[1][1] > mat.m[2][2]) 
+			{
+				float S = sqrt(1.0f + mat.m[1][1] - mat.m[0][0] - mat.m[2][2]) * 2.0f; // S=4*qy
+				q.w = (mat.m[2][0] - mat.m[0][2]) / S;
+				q.x = (mat.m[1][0] + mat.m[0][1]) / S;
+				q.y = 0.25f * S;
+				q.z = (mat.m[2][1] + mat.m[1][2]) / S;
+			}
+			else 
+			{
+				float S = sqrt(1.0f + mat.m[2][2] - mat.m[0][0] - mat.m[1][1]) * 2.0f; // S=4*qz
+				q.w = (mat.m[0][1] - mat.m[1][0]) / S;
+				q.x = (mat.m[2][0] + mat.m[0][2]) / S;
+				q.y = (mat.m[2][1] + mat.m[1][2]) / S;
+				q.z = 0.25f * S;
+			}
+			return q;		
+		}
+
 		std::string ToString() const;
 		void FromString( std::string_view text );
 

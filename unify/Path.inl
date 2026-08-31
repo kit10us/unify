@@ -22,25 +22,21 @@
 namespace unify
 {
 	inline
-	bool Path::IsXPath( std::string path )
-	{
-		return unify::String::BeginsWith( path, XPathPrefix );
-	}
-
-	inline
 	Path::Path()
 	{
 	}
 
 	inline
 	Path::Path( std::string path )
-		: m_path{ String::BeginsWith( path, XPathPrefix ) ? path : XPathPrefix + path }
+		//: m_path{ String::BeginsWith( path, XPathPrefix ) ? path : XPathPrefix + path }
 	{
+		auto split_path = URISplit(m_path);
+
 	}
 
 	inline
 	Path::Path( char * path )
-		: m_path{ String::BeginsWith( path, XPathPrefix ) ? path : XPathPrefix + path }
+		//: m_path{ String::BeginsWith( path, XPathPrefix ) ? path : XPathPrefix + path }
 	{
 	}
 
@@ -54,6 +50,63 @@ namespace unify
 	Path::Path( const std::vector< std::string > & pathParts )
 	{
 		Join( pathParts );
+	}
+
+	inline
+	Path::Path(std::string_view scheme, std::string_view path)
+	: m_scheme {scheme}
+	, m_path {path}
+	{		
+	}
+
+	/// @brief Set the URI identifier.
+	inline
+	bool Path::SetScheme(std::string_view scheme) noexcept
+	{
+		using svmatch = std::match_results<std::string_view::const_iterator>;
+		//using svsubmatch = std::sub_match<std::string_view::const_iterator>;
+
+		std::regex pattern { "^([A-Za-z0-9])(://$)?" };
+		svmatch match{};
+		auto is_uri = std::regex_search(scheme.begin(), scheme.end(), match, pattern);
+		if (!is_uri)
+		{
+			return false;
+		}
+
+		m_scheme = match[0];		
+		return true;
+	}
+
+	/// @brief Get the URI prefix.
+	inline
+	std::string Path::GetScheme() const noexcept
+	{
+		return m_scheme;
+	}
+
+	inline
+	bool Path::HasScheme() const noexcept
+	{
+		return !m_scheme.empty();
+	}
+
+	inline 
+	void Path::SetPath(std::string_view path) noexcept
+	{
+		m_path = path;
+	}
+
+	inline 
+	std::string Path::GetPath() const noexcept
+	{
+		return m_path;
+	}
+
+	inline
+	bool Path::IsEmpty() const noexcept
+	{
+		return m_path.empty();
 	}
 
 	inline
@@ -113,12 +166,6 @@ namespace unify
 	{
 		Combine( *this, path );
 		return *this;
-	}
-
-	inline
-	bool Path::Empty() const
-	{
-		return m_path.empty();
 	}
 
 	inline
@@ -274,12 +321,12 @@ namespace unify
 	Path & Path::Combine( const Path & left, const Path & right )
 	{
 		// If one or the other is empty, return the other.
-		if ( left.m_path.empty() || left.m_path == XPathPrefix )
+		if ( left.m_path.empty() || left.m_path == "file:///" )
 		{
 			m_path = right.ToXPath();
 			return *this;
 		}
-		else if ( right.m_path.empty() || right.m_path == XPathPrefix )
+		else if ( right.m_path.empty() || right.m_path == "file:///" )
 		{
 			m_path = left.ToXPath();
 			return *this;
@@ -360,26 +407,36 @@ namespace unify
 	}
 
 	inline
-	std::string Path::ToString() const
+	std::string Path::ToString() const noexcept
 	{
-		return String::BeginsWith( m_path, XPathPrefix) ? String::StringMinusLeft( m_path, (unsigned int)XPathPrefix.length() ) : m_path;
+		return ToString(Slash::Foward);
 	}
 
 	inline
-	std::string Path::ToString( Slash direction ) const
+	std::string Path::ToString( Slash direction ) const noexcept
 	{
 		std::string temp;
+
+		// SAS TODO: regex_replace
 
 		switch (direction)
 		{
 		case Slash::Foward:
-			temp = String::StringReplace( ToString(), "/", "\\" );
+			temp = String::StringReplace( m_path, "\\", "/" );
 			break;
 		case Slash::Backward:
-			temp = String::StringReplace( ToString(), "\\", "/" );
+			temp = String::StringReplace( m_path, "/", "\\" );
 			break;
 		}
-		return temp;
+
+		if (!m_scheme.empty())
+		{
+			return m_scheme + "://" + temp;
+		}
+		else
+		{
+			return temp;
+		}
 	}
 
 	inline
@@ -433,14 +490,14 @@ namespace unify
 	}
 
 	inline
-	std::list<Path> Path::Files() const
+	std::vector<Path> Path::Files() const
 	{
 		if (!IsDirectory())
 		{
 			return { *this };
 		}
 
-		std::list<Path> files{};
+		std::vector<Path> files{};
 		for (auto const& entry : std::filesystem::directory_iterator{DirectoryOnly().ToString()})
 		{
 			auto path = Path{ entry.path().string() };
@@ -451,7 +508,7 @@ namespace unify
 	}
 
 	inline
-	Path unify::ChangeExtension( Path path, std::string extension )
+	Path ChangeExtension( Path path, std::string extension )
 	{
 		Path outPath( path );
 		outPath.ChangeExtension( extension );

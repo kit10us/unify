@@ -21,14 +21,16 @@
 
 #pragma once
 
-#include <unify/Unify.h>
-#include <unify/Cast.h>
+#include <memory>
 #include <string>
 #include <sstream>
 #include <vector>
 #include <list>
 #include <optional>
 #include <ostream>
+
+#include <unify/Unify.h>
+#include <unify/Cast.h>
 
 namespace unify::String
 {
@@ -183,4 +185,5 @@ namespace unify::String
 	template< typename T >
 	std::vector< T > SplitOnWhitespace( std::string sourceString );
 } // namespace unify
+
 #include <unify/String.inl>

@@ -254,13 +254,13 @@ namespace unify
 	template< typename T >
 	V2< T > V2< T >::V2X(T x)
 	{
-		return unify::V2< T >(x, 0, 0);
+		return V2< T >(x, 0, 0);
 	}
 
 	template< typename T >
 	V2< T > V2< T >::V2Y(T y)
 	{
-		return unify::V2< T >(0, y, 0);
+		return V2< T >(0, y, 0);
 	}
 
 	template< typename T >

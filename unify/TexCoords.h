@@ -67,6 +67,7 @@ namespace unify
         const float & operator[]( size_t i ) const;
 	};
 
+	inline
 	std::optional<std::string> ToString(const TexCoords coords)
 	{
 		auto coord_u = unify::ToString(coords.u);

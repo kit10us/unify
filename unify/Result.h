@@ -54,6 +54,8 @@ namespace unify
 	class Result
 	{
 	public:
+		using ptr = std::shared_ptr<Result<T_SuccessType, T_Failure>>;
+
 		Result(T_SuccessType value)
 			: m_result{ value }
 		{
@@ -104,6 +106,11 @@ namespace unify
 		[[nodiscard]] bool operator!() const
 		{
 			return !Success();
+		}
+
+		[[nodiscard]] T_SuccessType operator*() const
+		{
+			return Value();
 		}
 
 		T_SuccessType Or(T_SuccessType&& value) const noexcept

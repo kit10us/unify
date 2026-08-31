@@ -56,7 +56,6 @@ namespace unify::String
 						item = Trim(item);
 					}
 
-					std::cout << "------------" << item << std::endl;
 					std::optional<T> result = FromString<T>(item);
 					if (result.has_value())
 					{
@@ -81,7 +80,6 @@ namespace unify::String
 				item = Trim(item);
 			}
 
-			std::cout << "------------" << item << std::endl;
 			std::optional<T> result = FromString<T>(item);
 			if (result.has_value())
 			{

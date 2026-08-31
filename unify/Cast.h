@@ -31,6 +31,9 @@
 #include <cassert>
 #include <algorithm>
 #include <optional>
+#include <cstdint>
+#include <cstdlib>
+
 
 namespace unify
 {

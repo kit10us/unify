@@ -60,6 +60,21 @@ TEST_F(CastTests, TestCasts)
     EXPECT_STREQ( "Hello, world!", ToString<std::string_view>("Hello, world!"sv).value().c_str() );
     EXPECT_STRNE( "!dlrow ,olleH", ToString<std::string_view>("Hello, world!"sv).value().c_str() );
 
+    {
+        auto wide = ToWString("Hello, world!");
+        EXPECT_TRUE(wide);
+
+        if (wide)
+        {
+            auto str = ToString(*wide);
+            EXPECT_TRUE(str);
+            if (str)
+            {
+                EXPECT_STREQ("Hello, world!", (*str).c_str());
+            }
+        }
+    }
+
     EXPECT_STREQ( "true", ToString<bool>(true).value().c_str() );
     EXPECT_STREQ( "false", ToString<bool>(false).value().c_str() );
     EXPECT_STRNE( "true", ToString<bool>(false).value().c_str() );
