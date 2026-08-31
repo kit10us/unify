@@ -10,5 +10,6 @@ var searchData=
   ['quaternionidentity_7',['QuaternionIdentity',['../namespaceunify.html#a69a140c4e394468967c04befdaa831bf',1,'unify']]],
   ['quaternionlookat_8',['QuaternionLookAt',['../namespaceunify.html#ac2d23f1b7183cc210bbba61db71394d0',1,'unify']]],
   ['quaternionslerp_9',['QuaternionSlerp',['../namespaceunify.html#a9519b1899930d8df8e90bdfefb521e4c',1,'unify']]],
-  ['query_10',['Query',['../classunify_1_1Query.html',1,'unify::Query&lt; T &gt;'],['../classunify_1_1Query.html#a4c1633236bdb9fa8d3fd3572a469889d',1,'unify::Query::Query()']]]
+  ['quaterniontests_10',['QuaternionTests',['../classQuaternionTests.html',1,'']]],
+  ['query_11',['Query',['../classunify_1_1Query.html',1,'unify::Query&lt; T &gt;'],['../classunify_1_1Query.html#a4c1633236bdb9fa8d3fd3572a469889d',1,'unify::Query::Query()']]]
 ];

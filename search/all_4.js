@@ -1,7 +1,7 @@
 var searchData=
 [
   ['b_0',['b',['../classunify_1_1Color.html#a7fae3a08f02090b11b680923ab37dcb3',1,'unify::Color::b'],['../classunify_1_1ColorUnit.html#a6e8b1524030e38aa2c89df511fd7336e',1,'unify::ColorUnit::b'],['../classunify_1_1Plane.html#a2ac4ce62813498c6a3623f91a9993221',1,'unify::Plane::b']]],
-  ['backward_1',['Backward',['../namespaceunify.html#a6510a888bcad61b7955a60679dbc9fd3acb5ec7c427db38ad147d7980fbd63dfb',1,'unify']]],
+  ['backward_1',['Backward',['../namespaceunify.html#a6510a888bcad61b7955a60679dbc9fd3ab3263eb38f8903efc271cc7a760da510',1,'unify']]],
   ['bad_5fany_5fcast_2',['bad_any_cast',['../classunify_1_1bad__any__cast.html',1,'unify']]],
   ['badcast_3',['BadCast',['../classunify_1_1BadCast.html',1,'unify::BadCast'],['../classunify_1_1BadCast.html#abebafc6722662cc29e99f4f04a8af720',1,'unify::BadCast::BadCast()']]],
   ['badcast_2eh_4',['BadCast.h',['../BadCast_8h.html',1,'']]],

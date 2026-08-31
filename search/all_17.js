@@ -19,6 +19,7 @@ var searchData=
   ['updatelocals_16',['UpdateLocals',['../classunify_1_1FrameSetInstance.html#a0311b27e071e0c14cb2fbc3d3b7d6ab7',1,'unify::FrameSetInstance']]],
   ['updateonchange_17',['UpdateOnChange',['../classunify_1_1Frame.html#aa8194ae009cfeb67ac305d727a168eb4',1,'unify::Frame::UpdateOnChange(bool tf)'],['../classunify_1_1Frame.html#a719eb2ef72e2eb7bf4a73a91b2522606',1,'unify::Frame::UpdateOnChange()']]],
   ['ur_18',['UR',['../classunify_1_1Rect.html#a4840d87a5e88219049ebd5c0b3955996',1,'unify::Rect::UR()'],['../classunify_1_1TexArea.html#a7bf6023db7baccde4a484ca643755777',1,'unify::TexArea::UR()']]],
-  ['utilization_19',['VSCode Utilization',['../md_README.html#autotoc_md20',1,'']]],
-  ['utl_20',['Unify Template Library (UTL)',['../md_README.html#autotoc_md1',1,'']]]
+  ['urisplit_19',['URISplit',['../classunify_1_1Path.html#a1a5e8f8531453dc5d8d86426999f0f1b',1,'unify::Path']]],
+  ['utilization_20',['VSCode Utilization',['../md_README.html#autotoc_md20',1,'']]],
+  ['utl_21',['Unify Template Library (UTL)',['../md_README.html#autotoc_md1',1,'']]]
 ];

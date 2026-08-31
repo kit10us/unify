@@ -171,102 +171,113 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html">   54</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classunify_1_1Result.html#a4681f1bf0f09a286cfea2450b776d420">Result</a></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#a4681f1bf0f09a286cfea2450b776d420">   57</a></span>        <a class="code hl_function" href="classunify_1_1Result.html#a4681f1bf0f09a286cfea2450b776d420">Result</a>(T_SuccessType value)</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            : m_result{ value }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#ab267cf9f32223a6375057967768d2411">   57</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="classunify_1_1Result.html#ab267cf9f32223a6375057967768d2411">ptr</a> = std::shared_ptr&lt;Result&lt;T_SuccessType, T_Failure&gt;&gt;;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#a4681f1bf0f09a286cfea2450b776d420">   59</a></span>        <a class="code hl_function" href="classunify_1_1Result.html#a4681f1bf0f09a286cfea2450b776d420">Result</a>(T_SuccessType value)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            : m_result{ value }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
 </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#a32823481b714003f89dc05ecf4e5192f">   62</a></span>        <a class="code hl_function" href="classunify_1_1Result.html#a32823481b714003f89dc05ecf4e5192f">Result</a>(<a class="code hl_class" href="classunify_1_1Failure.html">Failure</a> failure)</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            : m_result{ failure }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#a32823481b714003f89dc05ecf4e5192f">   64</a></span>        <a class="code hl_function" href="classunify_1_1Result.html#a32823481b714003f89dc05ecf4e5192f">Result</a>(<a class="code hl_class" href="classunify_1_1Failure.html">Failure</a> failure)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            : m_result{ failure }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
 </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#ae7b85ba7856a5f4c995b0cdeef16915b">   67</a></span>        <a class="code hl_function" href="classunify_1_1Result.html#ae7b85ba7856a5f4c995b0cdeef16915b">Result</a>()</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            : <a class="code hl_function" href="classunify_1_1Result.html#a4681f1bf0f09a286cfea2450b776d420">Result</a>(T_SuccessType{})</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#ae7b85ba7856a5f4c995b0cdeef16915b">   69</a></span>        <a class="code hl_function" href="classunify_1_1Result.html#ae7b85ba7856a5f4c995b0cdeef16915b">Result</a>()</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            : <a class="code hl_function" href="classunify_1_1Result.html#a4681f1bf0f09a286cfea2450b776d420">Result</a>(T_SuccessType{})</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
 </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#ad9f06bdf8b0af91facefffb0de8493c8">   72</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classunify_1_1Result.html#ad9f06bdf8b0af91facefffb0de8493c8">Success</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">return</span> std::holds_alternative&lt;Failure&gt;(m_result) ? false : <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#ad9f06bdf8b0af91facefffb0de8493c8">   74</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classunify_1_1Result.html#ad9f06bdf8b0af91facefffb0de8493c8">Success</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">return</span> std::holds_alternative&lt;Failure&gt;(m_result) ? false : <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
 </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#a2b07552ca2105ca283a2ac1403f4dd5a">   77</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="classunify_1_1Result.html#a2b07552ca2105ca283a2ac1403f4dd5a">Message</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classunify_1_1Result.html#ad9f06bdf8b0af91facefffb0de8493c8">Success</a>())</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                <span class="keywordflow">return</span> {};</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                <span class="keywordflow">return</span> std::get&lt;Failure&gt;(m_result).GetMessage();</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            }</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#a2b07552ca2105ca283a2ac1403f4dd5a">   79</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="classunify_1_1Result.html#a2b07552ca2105ca283a2ac1403f4dd5a">Message</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classunify_1_1Result.html#ad9f06bdf8b0af91facefffb0de8493c8">Success</a>())</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <span class="keywordflow">return</span> {};</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                <span class="keywordflow">return</span> std::get&lt;Failure&gt;(m_result).GetMessage();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
 </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#aa1510c4614baba1ab9fce1d92030b654">   89</a></span>        [[nodiscard]] T_SuccessType <a class="code hl_function" href="classunify_1_1Result.html#aa1510c4614baba1ab9fce1d92030b654">Value</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">return</span> std::get&lt;T_SuccessType&gt;(m_result);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#aa1510c4614baba1ab9fce1d92030b654">   91</a></span>        [[nodiscard]] T_SuccessType <a class="code hl_function" href="classunify_1_1Result.html#aa1510c4614baba1ab9fce1d92030b654">Value</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <span class="keywordflow">return</span> std::get&lt;T_SuccessType&gt;(m_result);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        }</div>
 </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
-<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#a73db7627e21dbb244fe406c5e30f5ca4">   99</a></span>        [[nodiscard]] T_SuccessType <a class="code hl_function" href="classunify_1_1Result.html#a73db7627e21dbb244fe406c5e30f5ca4">operator()</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classunify_1_1Result.html#aa1510c4614baba1ab9fce1d92030b654">Value</a>();</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
+<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#a73db7627e21dbb244fe406c5e30f5ca4">  101</a></span>        [[nodiscard]] T_SuccessType <a class="code hl_function" href="classunify_1_1Result.html#a73db7627e21dbb244fe406c5e30f5ca4">operator()</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classunify_1_1Result.html#aa1510c4614baba1ab9fce1d92030b654">Value</a>();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
 </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#ae114ab3e4e526cdb66a0e5fa1d53ecae">  104</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="classunify_1_1Result.html#ae114ab3e4e526cdb66a0e5fa1d53ecae">operator!</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="keywordflow">return</span> !<a class="code hl_function" href="classunify_1_1Result.html#ad9f06bdf8b0af91facefffb0de8493c8">Success</a>();</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#ae114ab3e4e526cdb66a0e5fa1d53ecae">  106</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="classunify_1_1Result.html#ae114ab3e4e526cdb66a0e5fa1d53ecae">operator!</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordflow">return</span> !<a class="code hl_function" href="classunify_1_1Result.html#ad9f06bdf8b0af91facefffb0de8493c8">Success</a>();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
 </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="foldopen" id="foldopen00109" data-start="{" data-end="}">
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#a79105e6c6a14c3dca6117309f5df9045">  109</a></span>        T_SuccessType <a class="code hl_function" href="classunify_1_1Result.html#a79105e6c6a14c3dca6117309f5df9045">Or</a>(T_SuccessType&amp;&amp; value) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">try</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            {</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                <span class="keyword">auto</span> result = std::get&lt;T_SuccessType&gt;(m_result);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            }</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keywordflow">catch</span>(...)</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            {</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                <span class="keywordflow">return</span> value;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            }</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#ac925381161f9583b51c0dac8ec22aff0">  111</a></span>        [[nodiscard]] T_SuccessType <a class="code hl_function" href="classunify_1_1Result.html#ac925381161f9583b51c0dac8ec22aff0">operator*</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classunify_1_1Result.html#aa1510c4614baba1ab9fce1d92030b654">Value</a>();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        }</div>
 </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        std::variant&lt;T_SuccessType, T_Failure&gt; m_result;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    };</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classunify_1_1Result.html#a79105e6c6a14c3dca6117309f5df9045">  116</a></span>        T_SuccessType <a class="code hl_function" href="classunify_1_1Result.html#a79105e6c6a14c3dca6117309f5df9045">Or</a>(T_SuccessType&amp;&amp; value) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                <span class="keyword">auto</span> result = std::get&lt;T_SuccessType&gt;(m_result);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="keywordflow">catch</span>(...)</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                <span class="keywordflow">return</span> value;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
 </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>}</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        std::variant&lt;T_SuccessType, T_Failure&gt; m_result;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    };</div>
+</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>}</div>
 <div class="ttc" id="aclassunify_1_1Failure_html"><div class="ttname"><a href="classunify_1_1Failure.html">unify::Failure</a></div><div class="ttdef"><b>Definition</b> Result.h:32</div></div>
 <div class="ttc" id="aclassunify_1_1Failure_html_a8eeb938195605eb456455a594c85fc96"><div class="ttname"><a href="classunify_1_1Failure.html#a8eeb938195605eb456455a594c85fc96">unify::Failure::Failure</a></div><div class="ttdeci">Failure()</div><div class="ttdef"><b>Definition</b> Result.h:34</div></div>
 <div class="ttc" id="aclassunify_1_1Failure_html_a9f4f28ad56c445a16c74883c5c713684"><div class="ttname"><a href="classunify_1_1Failure.html#a9f4f28ad56c445a16c74883c5c713684">unify::Failure::Failure</a></div><div class="ttdeci">Failure(std::string message)</div><div class="ttdef"><b>Definition</b> Result.h:39</div></div>
 <div class="ttc" id="aclassunify_1_1Failure_html_ae463809242f4dbba2d5120d4e72eced6"><div class="ttname"><a href="classunify_1_1Failure.html#ae463809242f4dbba2d5120d4e72eced6">unify::Failure::GetMessage</a></div><div class="ttdeci">std::string GetMessage() const</div><div class="ttdef"><b>Definition</b> Result.h:44</div></div>
-<div class="ttc" id="aclassunify_1_1Result_html_a2b07552ca2105ca283a2ac1403f4dd5a"><div class="ttname"><a href="classunify_1_1Result.html#a2b07552ca2105ca283a2ac1403f4dd5a">unify::Result::Message</a></div><div class="ttdeci">std::string Message() const</div><div class="ttdef"><b>Definition</b> Result.h:77</div></div>
-<div class="ttc" id="aclassunify_1_1Result_html_a32823481b714003f89dc05ecf4e5192f"><div class="ttname"><a href="classunify_1_1Result.html#a32823481b714003f89dc05ecf4e5192f">unify::Result::Result</a></div><div class="ttdeci">Result(Failure failure)</div><div class="ttdef"><b>Definition</b> Result.h:62</div></div>
-<div class="ttc" id="aclassunify_1_1Result_html_a4681f1bf0f09a286cfea2450b776d420"><div class="ttname"><a href="classunify_1_1Result.html#a4681f1bf0f09a286cfea2450b776d420">unify::Result::Result</a></div><div class="ttdeci">Result(T_SuccessType value)</div><div class="ttdef"><b>Definition</b> Result.h:57</div></div>
-<div class="ttc" id="aclassunify_1_1Result_html_a73db7627e21dbb244fe406c5e30f5ca4"><div class="ttname"><a href="classunify_1_1Result.html#a73db7627e21dbb244fe406c5e30f5ca4">unify::Result::operator()</a></div><div class="ttdeci">T_SuccessType operator()() const</div><div class="ttdoc">Get the results. Will throw if a failure. Use Failure() or Success() first to verify results.</div><div class="ttdef"><b>Definition</b> Result.h:99</div></div>
-<div class="ttc" id="aclassunify_1_1Result_html_a79105e6c6a14c3dca6117309f5df9045"><div class="ttname"><a href="classunify_1_1Result.html#a79105e6c6a14c3dca6117309f5df9045">unify::Result::Or</a></div><div class="ttdeci">T_SuccessType Or(T_SuccessType &amp;&amp;value) const noexcept</div><div class="ttdef"><b>Definition</b> Result.h:109</div></div>
-<div class="ttc" id="aclassunify_1_1Result_html_aa1510c4614baba1ab9fce1d92030b654"><div class="ttname"><a href="classunify_1_1Result.html#aa1510c4614baba1ab9fce1d92030b654">unify::Result::Value</a></div><div class="ttdeci">T_SuccessType Value() const</div><div class="ttdef"><b>Definition</b> Result.h:89</div></div>
-<div class="ttc" id="aclassunify_1_1Result_html_ad9f06bdf8b0af91facefffb0de8493c8"><div class="ttname"><a href="classunify_1_1Result.html#ad9f06bdf8b0af91facefffb0de8493c8">unify::Result::Success</a></div><div class="ttdeci">bool Success() const</div><div class="ttdef"><b>Definition</b> Result.h:72</div></div>
-<div class="ttc" id="aclassunify_1_1Result_html_ae114ab3e4e526cdb66a0e5fa1d53ecae"><div class="ttname"><a href="classunify_1_1Result.html#ae114ab3e4e526cdb66a0e5fa1d53ecae">unify::Result::operator!</a></div><div class="ttdeci">bool operator!() const</div><div class="ttdef"><b>Definition</b> Result.h:104</div></div>
-<div class="ttc" id="aclassunify_1_1Result_html_ae7b85ba7856a5f4c995b0cdeef16915b"><div class="ttname"><a href="classunify_1_1Result.html#ae7b85ba7856a5f4c995b0cdeef16915b">unify::Result::Result</a></div><div class="ttdeci">Result()</div><div class="ttdef"><b>Definition</b> Result.h:67</div></div>
+<div class="ttc" id="aclassunify_1_1Result_html_a2b07552ca2105ca283a2ac1403f4dd5a"><div class="ttname"><a href="classunify_1_1Result.html#a2b07552ca2105ca283a2ac1403f4dd5a">unify::Result::Message</a></div><div class="ttdeci">std::string Message() const</div><div class="ttdef"><b>Definition</b> Result.h:79</div></div>
+<div class="ttc" id="aclassunify_1_1Result_html_a32823481b714003f89dc05ecf4e5192f"><div class="ttname"><a href="classunify_1_1Result.html#a32823481b714003f89dc05ecf4e5192f">unify::Result::Result</a></div><div class="ttdeci">Result(Failure failure)</div><div class="ttdef"><b>Definition</b> Result.h:64</div></div>
+<div class="ttc" id="aclassunify_1_1Result_html_a4681f1bf0f09a286cfea2450b776d420"><div class="ttname"><a href="classunify_1_1Result.html#a4681f1bf0f09a286cfea2450b776d420">unify::Result::Result</a></div><div class="ttdeci">Result(T_SuccessType value)</div><div class="ttdef"><b>Definition</b> Result.h:59</div></div>
+<div class="ttc" id="aclassunify_1_1Result_html_a73db7627e21dbb244fe406c5e30f5ca4"><div class="ttname"><a href="classunify_1_1Result.html#a73db7627e21dbb244fe406c5e30f5ca4">unify::Result::operator()</a></div><div class="ttdeci">T_SuccessType operator()() const</div><div class="ttdoc">Get the results. Will throw if a failure. Use Failure() or Success() first to verify results.</div><div class="ttdef"><b>Definition</b> Result.h:101</div></div>
+<div class="ttc" id="aclassunify_1_1Result_html_a79105e6c6a14c3dca6117309f5df9045"><div class="ttname"><a href="classunify_1_1Result.html#a79105e6c6a14c3dca6117309f5df9045">unify::Result::Or</a></div><div class="ttdeci">T_SuccessType Or(T_SuccessType &amp;&amp;value) const noexcept</div><div class="ttdef"><b>Definition</b> Result.h:116</div></div>
+<div class="ttc" id="aclassunify_1_1Result_html_aa1510c4614baba1ab9fce1d92030b654"><div class="ttname"><a href="classunify_1_1Result.html#aa1510c4614baba1ab9fce1d92030b654">unify::Result::Value</a></div><div class="ttdeci">T_SuccessType Value() const</div><div class="ttdef"><b>Definition</b> Result.h:91</div></div>
+<div class="ttc" id="aclassunify_1_1Result_html_ab267cf9f32223a6375057967768d2411"><div class="ttname"><a href="classunify_1_1Result.html#ab267cf9f32223a6375057967768d2411">unify::Result::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Result&lt; T_SuccessType, T_Failure &gt; &gt; ptr</div><div class="ttdef"><b>Definition</b> Result.h:57</div></div>
+<div class="ttc" id="aclassunify_1_1Result_html_ac925381161f9583b51c0dac8ec22aff0"><div class="ttname"><a href="classunify_1_1Result.html#ac925381161f9583b51c0dac8ec22aff0">unify::Result::operator*</a></div><div class="ttdeci">T_SuccessType operator*() const</div><div class="ttdef"><b>Definition</b> Result.h:111</div></div>
+<div class="ttc" id="aclassunify_1_1Result_html_ad9f06bdf8b0af91facefffb0de8493c8"><div class="ttname"><a href="classunify_1_1Result.html#ad9f06bdf8b0af91facefffb0de8493c8">unify::Result::Success</a></div><div class="ttdeci">bool Success() const</div><div class="ttdef"><b>Definition</b> Result.h:74</div></div>
+<div class="ttc" id="aclassunify_1_1Result_html_ae114ab3e4e526cdb66a0e5fa1d53ecae"><div class="ttname"><a href="classunify_1_1Result.html#ae114ab3e4e526cdb66a0e5fa1d53ecae">unify::Result::operator!</a></div><div class="ttdeci">bool operator!() const</div><div class="ttdef"><b>Definition</b> Result.h:106</div></div>
+<div class="ttc" id="aclassunify_1_1Result_html_ae7b85ba7856a5f4c995b0cdeef16915b"><div class="ttname"><a href="classunify_1_1Result.html#ae7b85ba7856a5f4c995b0cdeef16915b">unify::Result::Result</a></div><div class="ttdeci">Result()</div><div class="ttdef"><b>Definition</b> Result.h:69</div></div>
 <div class="ttc" id="anamespaceunify_html"><div class="ttname"><a href="namespaceunify.html">unify</a></div><div class="ttdef"><b>Definition</b> Angle.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

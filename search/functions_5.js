@@ -4,7 +4,7 @@ var searchData=
   ['filelength_1',['FileLength',['../namespaceunify.html#a80717e5d5b266ccba5ecaa0fe350cc27',1,'unify']]],
   ['filename_2',['Filename',['../classunify_1_1Path.html#a22746c02f85ff4cd08ae82d53a8e1cee',1,'unify::Path']]],
   ['filenamenoextension_3',['FilenameNoExtension',['../classunify_1_1Path.html#a52cfee844356cf5fc6a01eda698bbfb3',1,'unify::Path']]],
-  ['files_4',['Files',['../classunify_1_1Path.html#a1ebb46f8c657babf012792e6795b3bc3',1,'unify::Path']]],
+  ['files_4',['Files',['../classunify_1_1Path.html#aa17dfb5e60e704f4134f2f854f9aa392',1,'unify::Path']]],
   ['filestream_5',['FileStream',['../classunify_1_1FileStream.html#a2b40d5b887832679c26c29bc604e95eb',1,'unify::FileStream']]],
   ['find_6',['Find',['../classunify_1_1FrameSet.html#a7e2d346a9728a1ee1eb4627c80472112',1,'unify::FrameSet::Find()'],['../classunify_1_1FrameSetInstance.html#a923855a446e8935a6078d91ae923b964',1,'unify::FrameSetInstance::Find()'],['../classunify_1_1LinkList.html#ada1fd874e305d4a283d9c0f8ce158787',1,'unify::LinkList::Find(std::string sName)'],['../classunify_1_1LinkList.html#a70b0240cf15f016b7fd5afe693bc5691',1,'unify::LinkList::Find(Query&lt; T &gt; *pQuery, std::string sName)'],['../classunify_1_1Lookup.html#ad934294575f8fa196644bfa2f5581aa1',1,'unify::Lookup::Find()']]],
   ['fix_7',['Fix',['../classunify_1_1BBox.html#a31e3d1428c4596636888c927ee34dcfc',1,'unify::BBox']]],

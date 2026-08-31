@@ -111,14 +111,15 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="headertitle"><div class="title">Path.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="Unify_8h_source.html">unify/Unify.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="String_8h_source.html">unify/String.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;filesystem&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;list&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
+<code>#include &lt;regex&gt;</code><br />
+<code>#include &lt;<a class="el" href="Unify_8h_source.html">unify/Unify.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="String_8h_source.html">unify/String.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="Path_8inl_source.html">unify/Path.inl</a>&gt;</code><br />
 </div>
 <p><a href="Path_8h_source.html">Go to the source code of this file.</a></p>
@@ -126,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:unify_3A_3APath" id="r_unify_3A_3APath"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classunify_1_1Path.html">unify::Path</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a path, or root identifier (such as a unique definition of an asset, ex. "texture:///", or file, ex/ "file://"). Follows RFC 8089: URI (Uniform Resource Identifier).  <a href="classunify_1_1Path.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -133,8 +135,8 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a6510a888bcad61b7955a60679dbc9fd3" id="r_a6510a888bcad61b7955a60679dbc9fd3"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="namespaceunify.html#a6510a888bcad61b7955a60679dbc9fd3">unify::Slash</a> { <a class="el" href="namespaceunify.html#a6510a888bcad61b7955a60679dbc9fd3ae8a4437f4535f80ea77c78490d0a5e35">unify::Foward</a>
-, <a class="el" href="namespaceunify.html#a6510a888bcad61b7955a60679dbc9fd3acb5ec7c427db38ad147d7980fbd63dfb">unify::Backward</a>
+<tr class="memitem:a6510a888bcad61b7955a60679dbc9fd3" id="r_a6510a888bcad61b7955a60679dbc9fd3"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespaceunify.html#a6510a888bcad61b7955a60679dbc9fd3">unify::Slash</a> { <a class="el" href="namespaceunify.html#a6510a888bcad61b7955a60679dbc9fd3a2d4b933faec4da1a5421a5036411f53b">unify::Foward</a>
+, <a class="el" href="namespaceunify.html#a6510a888bcad61b7955a60679dbc9fd3ab3263eb38f8903efc271cc7a760da510">unify::Backward</a>
  }</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>

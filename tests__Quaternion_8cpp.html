@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Unify Library: Namespace Members</title>
+<title>Unify Library: tests/tests_Quaternion.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -75,8 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
     </li>
   </ul>
 </div><!-- main-nav -->
-</div><!-- top -->
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -98,26 +96,81 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_59425e443f801f1f2fd8bbe4959a3ccf.html">tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">tests_Quaternion.cpp File Reference</div></div>
+</div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all namespace enum values with links to the namespace documentation for each enum value:</div><ul>
-<li>ABGR&#160;:&#160;<a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba25220ab3268c4870cc7fdbb01757fa68">unify</a></li>
-<li>ARGB&#160;:&#160;<a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba197e484be88aa4455970b1c85eceea87">unify</a></li>
-<li>BGRA&#160;:&#160;<a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba5d0594e84962ef29d928c18cd5fbac51">unify</a></li>
-<li>RGBA&#160;:&#160;<a class="el" href="namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba287566ddad210df6ae852a39bf72cf94">unify</a></li>
-<li>STREAMACCESS_APPEND&#160;:&#160;<a class="el" href="namespaceunify.html#a5c97e638d26eea5413e8708b15af2417a1270b0718aacee53d7777cd23236a995">unify</a></li>
-<li>STREAMACCESS_APPENDBINARY&#160;:&#160;<a class="el" href="namespaceunify.html#a5c97e638d26eea5413e8708b15af2417a16c0dc3951665e5baa87f45ed098f4d3">unify</a></li>
-<li>STREAMACCESS_APPENDTEXT&#160;:&#160;<a class="el" href="namespaceunify.html#a5c97e638d26eea5413e8708b15af2417a1c3e74acc24e3f1f694c7d78a5112cb7">unify</a></li>
-<li>STREAMACCESS_NONE&#160;:&#160;<a class="el" href="namespaceunify.html#a5c97e638d26eea5413e8708b15af2417a860b7e6a4d78414286ba8a89b13a9d36">unify</a></li>
-<li>STREAMACCESS_READ&#160;:&#160;<a class="el" href="namespaceunify.html#a5c97e638d26eea5413e8708b15af2417a3928eb08879c2bfca2458b77fbce38da">unify</a></li>
-<li>STREAMACCESS_READBINARY&#160;:&#160;<a class="el" href="namespaceunify.html#a5c97e638d26eea5413e8708b15af2417a0c8ebd0fc0a101a1a7c68203c97120a9">unify</a></li>
-<li>STREAMACCESS_READTEXT&#160;:&#160;<a class="el" href="namespaceunify.html#a5c97e638d26eea5413e8708b15af2417ac56792fc2502b2cdea5a081267e0b75e">unify</a></li>
-<li>STREAMACCESS_WRITE&#160;:&#160;<a class="el" href="namespaceunify.html#a5c97e638d26eea5413e8708b15af2417a0bc803c175d7c378d721c667a038f12a">unify</a></li>
-<li>STREAMACCESS_WRITEBINARY&#160;:&#160;<a class="el" href="namespaceunify.html#a5c97e638d26eea5413e8708b15af2417af66debdf9145c42b55f278439644583f">unify</a></li>
-<li>STREAMACCESS_WRITETEXT&#160;:&#160;<a class="el" href="namespaceunify.html#a5c97e638d26eea5413e8708b15af2417a096354676023b5ac1d1d794c8739b296">unify</a></li>
-<li>STREAMSEEK_CURRENT&#160;:&#160;<a class="el" href="namespaceunify.html#a384b8275876d58563e0ed7a141823264ac999ed03a6cecb3c2916bc3ef0f3c667">unify</a></li>
-<li>STREAMSEEK_END&#160;:&#160;<a class="el" href="namespaceunify.html#a384b8275876d58563e0ed7a141823264a5d1e912b38fd7416ecacc1d985439f40">unify</a></li>
-<li>STREAMSEEK_START&#160;:&#160;<a class="el" href="namespaceunify.html#a384b8275876d58563e0ed7a141823264a960cb8769b4f3c65e5aeaa3b4c531fbb">unify</a></li>
-</ul>
+<div class="textblock"><code>#include &lt;gtest/gtest.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="Quaternion_8h_source.html">unify/Quaternion.h</a>&gt;</code><br />
+<code>#include &lt;array&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:QuaternionTests" id="r_QuaternionTests"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classQuaternionTests.html">QuaternionTests</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a94931ecc00a22c9495c4d4028f61862b" id="r_a94931ecc00a22c9495c4d4028f61862b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a94931ecc00a22c9495c4d4028f61862b">TEST_F</a> (<a class="el" href="classQuaternionTests.html">QuaternionTests</a>, TestDefaultConstructor)</td></tr>
+<tr class="memdesc:a94931ecc00a22c9495c4d4028f61862b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests the default constructor of the BBox class, ensuring it initializes to zero.  <br /></td></tr>
+<tr class="memitem:abe17cf9a722f7c3876fee6a6d990019f" id="r_abe17cf9a722f7c3876fee6a6d990019f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#abe17cf9a722f7c3876fee6a6d990019f">TEST_F</a> (<a class="el" href="classQuaternionTests.html">QuaternionTests</a>, TestIdentityConstructor)</td></tr>
+<tr class="memdesc:abe17cf9a722f7c3876fee6a6d990019f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Quaterniion to identity.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a94931ecc00a22c9495c4d4028f61862b" name="a94931ecc00a22c9495c4d4028f61862b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94931ecc00a22c9495c4d4028f61862b">&#9670;&#160;</a></span>TEST_F() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classQuaternionTests.html">QuaternionTests</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TestDefaultConstructor</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tests the default constructor of the BBox class, ensuring it initializes to zero. </p>
+
+</div>
+</div>
+<a id="abe17cf9a722f7c3876fee6a6d990019f" name="abe17cf9a722f7c3876fee6a6d990019f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe17cf9a722f7c3876fee6a6d990019f">&#9670;&#160;</a></span>TEST_F() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classQuaternionTests.html">QuaternionTests</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TestIdentityConstructor</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize Quaterniion to identity. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

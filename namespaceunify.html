@@ -172,6 +172,7 @@ Classes</h2></td></tr>
 <tr class="memitem:Parameter" id="r_Parameter"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structunify_1_1Parameter.html">Parameter</a></td></tr>
 <tr class="memitem:Parameters" id="r_Parameters"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classunify_1_1Parameters.html">Parameters</a></td></tr>
 <tr class="memitem:Path" id="r_Path"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classunify_1_1Path.html">Path</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a path, or root identifier (such as a unique definition of an asset, ex. "texture:///", or file, ex/ "file://"). Follows RFC 8089: URI (Uniform Resource Identifier).  <a href="classunify_1_1Path.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Plane" id="r_Plane"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classunify_1_1Plane.html">Plane</a></td></tr>
 <tr class="memitem:QList" id="r_QList"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classunify_1_1QList.html">QList</a></td></tr>
 <tr class="memitem:Quaternion" id="r_Quaternion"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classunify_1_1Quaternion.html">Quaternion</a></td></tr>
@@ -226,8 +227,8 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="#af385be843c3779feb4af332ac46d2a3fadd62db4ff5d4d00340bf8e1f362a38ed">OutsideSlow</a>
 <br />
  }</td></tr>
-<tr class="memitem:a6510a888bcad61b7955a60679dbc9fd3" id="r_a6510a888bcad61b7955a60679dbc9fd3"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a6510a888bcad61b7955a60679dbc9fd3">Slash</a> { <a class="el" href="#a6510a888bcad61b7955a60679dbc9fd3ae8a4437f4535f80ea77c78490d0a5e35">Foward</a>
-, <a class="el" href="#a6510a888bcad61b7955a60679dbc9fd3acb5ec7c427db38ad147d7980fbd63dfb">Backward</a>
+<tr class="memitem:a6510a888bcad61b7955a60679dbc9fd3" id="r_a6510a888bcad61b7955a60679dbc9fd3"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a6510a888bcad61b7955a60679dbc9fd3">Slash</a> { <a class="el" href="#a6510a888bcad61b7955a60679dbc9fd3a2d4b933faec4da1a5421a5036411f53b">Foward</a>
+, <a class="el" href="#a6510a888bcad61b7955a60679dbc9fd3ab3263eb38f8903efc271cc7a760da510">Backward</a>
  }</td></tr>
 <tr class="memitem:a5c97e638d26eea5413e8708b15af2417" id="r_a5c97e638d26eea5413e8708b15af2417"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a5c97e638d26eea5413e8708b15af2417">StreamAccessType</a> { <br />
 &#160;&#160;<a class="el" href="#a5c97e638d26eea5413e8708b15af2417a860b7e6a4d78414286ba8a89b13a9d36">STREAMACCESS_NONE</a>
@@ -283,6 +284,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a43d2e815dd85c8938b09ded84b052d21" id="r_a43d2e815dd85c8938b09ded84b052d21"><td class="memTemplParams" colspan="2">template&lt;typename Target, typename Source&gt; </td></tr>
 <tr class="memitem:a43d2e815dd85c8938b09ded84b052d21 template"><td class="memItemLeft">Target&#160;</td><td class="memItemRight"><a class="el" href="#a43d2e815dd85c8938b09ded84b052d21">polymorphic_downcast</a> (Source source)</td></tr>
 <tr class="memdesc:a43d2e815dd85c8938b09ded84b052d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic downcast. In debug builds, this will assert if the cast is invalid. In release builds, this will perform a static_cast without checking.  <br /></td></tr>
+<tr class="memitem:a3dbe72090c5fea0a58d9afc7109b8784" id="r_a3dbe72090c5fea0a58d9afc7109b8784"><td class="memItemLeft">std::optional&lt; std::wstring &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a3dbe72090c5fea0a58d9afc7109b8784">ToWString</a> (std::string input_string)</td></tr>
 <tr class="memitem:a0c6e6421ddd9608187cd7353d9f35af5" id="r_a0c6e6421ddd9608187cd7353d9f35af5"><td class="memItemLeft"><a class="el" href="classunify_1_1Color.html">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0c6e6421ddd9608187cd7353d9f35af5">ColorRGBA</a> (<a class="el" href="classunify_1_1Color.html#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> r, <a class="el" href="classunify_1_1Color.html#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> g, <a class="el" href="classunify_1_1Color.html#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> b, <a class="el" href="classunify_1_1Color.html#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> a)</td></tr>
 <tr class="memitem:a15476c3aab0adb1e0d4365b551de3c6e" id="r_a15476c3aab0adb1e0d4365b551de3c6e"><td class="memItemLeft"><a class="el" href="classunify_1_1Color.html">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a15476c3aab0adb1e0d4365b551de3c6e">ColorRGBA</a> (unsigned int rgba)</td></tr>
 <tr class="memitem:a5bdb75e8af49f28d6299f1474fd516cd" id="r_a5bdb75e8af49f28d6299f1474fd516cd"><td class="memItemLeft"><a class="el" href="classunify_1_1Color.html">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5bdb75e8af49f28d6299f1474fd516cd">ColorARGB</a> (<a class="el" href="classunify_1_1Color.html#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> a, <a class="el" href="classunify_1_1Color.html#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> r, <a class="el" href="classunify_1_1Color.html#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> g, <a class="el" href="classunify_1_1Color.html#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> b)</td></tr>
@@ -502,15 +504,23 @@ template&lt;typename T&gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="#a6510a888bcad61b7955a60679dbc9fd3">unify::Slash</a></td>
+          <td class="memname">enum class <a class="el" href="#a6510a888bcad61b7955a60679dbc9fd3">unify::Slash</a></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6510a888bcad61b7955a60679dbc9fd3ae8a4437f4535f80ea77c78490d0a5e35" name="a6510a888bcad61b7955a60679dbc9fd3ae8a4437f4535f80ea77c78490d0a5e35"></a>Foward&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a6510a888bcad61b7955a60679dbc9fd3acb5ec7c427db38ad147d7980fbd63dfb" name="a6510a888bcad61b7955a60679dbc9fd3acb5ec7c427db38ad147d7980fbd63dfb"></a>Backward&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6510a888bcad61b7955a60679dbc9fd3a2d4b933faec4da1a5421a5036411f53b" name="a6510a888bcad61b7955a60679dbc9fd3a2d4b933faec4da1a5421a5036411f53b"></a>Foward&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6510a888bcad61b7955a60679dbc9fd3ab3263eb38f8903efc271cc7a760da510" name="a6510a888bcad61b7955a60679dbc9fd3ab3263eb38f8903efc271cc7a760da510"></a>Backward&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -3214,6 +3224,9 @@ template&lt;&gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::optional&lt; std::string &gt; unify::ToString </td>
@@ -3222,6 +3235,11 @@ template&lt;&gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -3301,6 +3319,31 @@ template&lt;typename T&gt; </div>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3dbe72090c5fea0a58d9afc7109b8784" name="a3dbe72090c5fea0a58d9afc7109b8784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dbe72090c5fea0a58d9afc7109b8784">&#9670;&#160;</a></span>ToWString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; std::wstring &gt; unify::ToWString </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>input_string</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
