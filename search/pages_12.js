@@ -5,5 +5,7 @@ var searchData=
   ['source_20code_20requirements_2',['Source Code Requirements',['../md_README.html#autotoc_md14',1,'']]],
   ['standards_3',['Documentation Standards',['../md_README.html#autotoc_md16',1,'']]],
   ['standards_20and_20practices_4',['Standards and Practices',['../md_README.html#autotoc_md8',1,'']]],
-  ['string_5fview_20as_20a_20member_5',['string_view as a Member',['../md_README.html#autotoc_md18',1,'']]]
+  ['string_5fview_20as_20a_20member_5',['string_view as a Member',['../md_README.html#autotoc_md19',1,'']]],
+  ['string_5fview_20as_20const_6',['string_view as Const',['../md_README.html#autotoc_md20',1,'']]],
+  ['string_5fview_20as_20return_20type_7',['string_view as Return Type',['../md_README.html#autotoc_md18',1,'']]]
 ];

@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>std::string Size3&lt; T &gt;::ToString()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordflow">return</span> Cast&lt; std::string &gt;( width ) + <span class="stringliteral">&quot;, &quot;</span> + Cast&lt; std::string &gt;( height ) + <span class="stringliteral">&quot;, &quot;</span> + Cast&lt; std::string &gt;( depth );</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordflow">return</span> *<a class="code hl_function" href="namespaceunify.html#a2a66909808f76f5cd490dfffe1c22ff4">ToString</a>( width ) + <span class="stringliteral">&quot;, &quot;</span> + *<a class="code hl_function" href="namespaceunify.html#a2a66909808f76f5cd490dfffe1c22ff4">ToString</a>( height ) + <span class="stringliteral">&quot;, &quot;</span> + *<a class="code hl_function" href="namespaceunify.html#a2a66909808f76f5cd490dfffe1c22ff4">ToString</a>( depth );</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>}</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
@@ -304,6 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordflow">return</span> h + v * width + d * width * height;</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>}</div>
+<div class="ttc" id="anamespaceunify_html_a2a66909808f76f5cd490dfffe1c22ff4"><div class="ttname"><a href="namespaceunify.html#a2a66909808f76f5cd490dfffe1c22ff4">unify::ToString</a></div><div class="ttdeci">std::optional&lt; std::string &gt; ToString(const TFrom in) noexcept=delete</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

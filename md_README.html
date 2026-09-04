@@ -175,33 +175,53 @@ Documentation Standards</h2>
 <li>Requirements: All Classes, Structs, Enums, and non-trivial functions must include a </li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
-Coding Caveats</h1>
-<p>return string_view</p><ul>
+Common Coding Caveats</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
+string_view as Return Type</h2>
+<ul>
 <li>Ownership: A string_view is a non-owning reference. Never return a string_view that points to a local function-scope string; doing so results in a dangling pointer.</li>
 <li>Usage: Only return a string_view when the underlying data is guaranteed to outlive the view (e.g., constants in the .rodata segment or persistent member variables).</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
 string_view as a Member</h2>
 <p>Exercise extreme caution when using string_view as a class member. The class does not own the string memory; ensure the source data remains valid for the entire lifetime of the class instance.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md20"></a>
+string_view as Const</h2>
+<p>Using const std::string_view—specifically as a value parameter or return type—is redundant and restricts view operations:</p>
+<ol type="1">
+<li><p class="startli">The Referenced Data Is Already Read-Only std::string_view is fundamentally an immutable view over a contiguous character sequence (const CharT* and size_t).</p>
+<p class="startli">None of the member functions allow mutation of the underlying characters. Adding const to the view itself only prevents mutating the view's internal pointer and size, not the characters being viewed.</p>
+</li>
+<li><p class="startli">Top-Level const Prevents Useful View Slicing Member functions like remove_prefix() and remove_suffix() mutate the internal pointer and lenength to slice the view without allocating or copying.</p>
+<p class="startli">Marking a parameter const std::string_view prohibits local slicing inside the function body, forcing you to create an additional copy of the string_view if you need to trim or parse substrings.</p>
+</li>
+<li><p class="startli">Inefficient When Used as const std::string_view&amp; std::string_view consists of two machine words (typically 16 bytes on 64-bit architectures).</p>
+<p class="startli">Passing by reference forces the compiler to pass an address and introduces pointer indirection at call sites. Passing by value (std::string_view) allows modern calling conventions (such as System V AMD64 or MSVC x64) to pass the view directly in CPU registers.</p>
+</li>
+<li><p class="startli">Top-Level const in Function Declarations Adds Noise Top-level cv-qualifiers on parameters are ignored by the compiler when determining function signatures.</p>
+<p class="startli">Declaring void Process(const std::string_view sv); in a header file is functionally identical to void Process(std::string_view sv); for callers and linker symbols, serving only as implementation noise.</p>
+</li>
+<li>Returning const std::string_view Disables Assignment and Triggers Warnings Returning a value type with top-level const prevents move assignment and causes modern compilers to issue warnings (such as -Wignored-qualifiers).</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
 Final Notes</h1>
 <p>Unify is considered pre-release at the moment due to needing some modernization and optimizations. That being said, certain names of features will change <b>NOW</b> and be committed to for future revisions; this means we need to be pretty explicit in naming so we stick to <b>SOLID</b> development prinipals.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md20"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
 VSCode Utilization</h1>
 <p>To build the tests press F7.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
 Testing</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
 Unit Testing</h2>
 <p>Unify utilizes GoogleTest (GTest) for unit testing and CTest for test orchestration.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
 Building Tests</h2>
 <p>To build the test suite target: </p><div class="fragment"><div class="line">cmake --build build --config Debug --target unify_unit_tests</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
 List Available Tests</h2>
 <p>ctest &ndash;test-dir build -N <br  />
 </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
 Executing Test</h2>
 <p>Unify utilizes ctest to execute unit testing.</p>
 <p>Run tests showing failures: </p><div class="fragment"><div class="line">ctest --test-dir build -C Debug --output-on-failure</div>

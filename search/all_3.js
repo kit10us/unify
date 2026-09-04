@@ -1,7 +1,7 @@
 var searchData=
 [
   ['a_0',['a',['../classunify_1_1Color.html#ae4aa506630e697e1af41c348543e3cb2',1,'unify::Color::a'],['../classunify_1_1ColorUnit.html#a431e059ad855510e9846a2d6bfb297fb',1,'unify::ColorUnit::a'],['../classunify_1_1Plane.html#a2807ebb5e8e913b6cc90d6a950a3bff6',1,'unify::Plane::a']]],
-  ['a_20member_1',['string_view as a Member',['../md_README.html#autotoc_md18',1,'']]],
+  ['a_20member_1',['string_view as a Member',['../md_README.html#autotoc_md19',1,'']]],
   ['abgr_2',['ABGR',['../classunify_1_1ColorUnit.html#a04614e684f8dbe9c2f028313b9931be8abbc7bebbf1a70f970f326eda3ea8b3e9',1,'unify::ColorUnit::ABGR'],['../namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba25220ab3268c4870cc7fdbb01757fa68',1,'unify::ABGR']]],
   ['absolute_3',['Absolute',['../classunify_1_1V2.html#a9971f4b1032accf0bc24e4203d2080af',1,'unify::V2::Absolute()'],['../classunify_1_1V3.html#adb4d35b340b1a7ace65290a7b08cc6ba',1,'unify::V3::Absolute()'],['../classunify_1_1V4.html#a8f2d7741c13668c708f852eebbad62a4',1,'unify::V4::Absolute()']]],
   ['add_4',['Add',['../classunify_1_1BRectangle.html#a21458ababb9f44960d99e7e04fcaaa4f',1,'unify::BRectangle::Add()'],['../classunify_1_1FrameSet.html#a4ac75daf8c804bf4e8f7e023a913997a',1,'unify::FrameSet::Add()'],['../classunify_1_1Lookup.html#a270cd93d84f323c093f3ef2d120ac8cf',1,'unify::Lookup::Add()'],['../classunify_1_1Range.html#ad7c0078b9236276a6b085b16f47a41cb',1,'unify::Range::Add()']]],
@@ -30,12 +30,14 @@ var searchData=
   ['any_2eh_27',['Any.h',['../Any_8h.html',1,'']]],
   ['any_5fcast_28',['any_cast',['../classunify_1_1Any.html#aab5c5bda14d771914149eb1816562b8a',1,'unify::Any::any_cast()'],['../namespaceunify.html#ab2ad816f36c52d1c389e8bf891872778',1,'unify::any_cast(Any *operand)'],['../namespaceunify.html#a8c691e91859ea1162d24b0215bdb3d51',1,'unify::any_cast(const Any *operand) noexcept'],['../namespaceunify.html#ac9c6f388844576f1afef607728654a5a',1,'unify::any_cast(Any &amp;operand)'],['../namespaceunify.html#a43a60fa2a5a185f3d198db197e943f74',1,'unify::any_cast(const Any &amp;operand)'],['../namespaceunify.html#ad3d40f387f64b5bf706747a9ba67f1ec',1,'unify::any_cast(Any &amp;&amp;operand)']]],
   ['argb_29',['ARGB',['../classunify_1_1ColorUnit.html#a04614e684f8dbe9c2f028313b9931be8abee44b6057f550c0bb99de0a8acc4021',1,'unify::ColorUnit::ARGB'],['../namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba197e484be88aa4455970b1c85eceea87',1,'unify::ARGB']]],
-  ['as_20a_20member_30',['string_view as a Member',['../md_README.html#autotoc_md18',1,'']]],
-  ['aspectratiohw_31',['AspectRatioHW',['../classunify_1_1Size.html#a24d68aa421e799ecf3f6cd105eb3ad58',1,'unify::Size']]],
-  ['aspectratiowh_32',['AspectRatioWH',['../classunify_1_1Size.html#ad9777ffba2828e63b570549fc15679f3',1,'unify::Size']]],
-  ['attachto_33',['AttachTo',['../classunify_1_1Frame.html#a4846e9930d40f3d0da7f3508ee05b814',1,'unify::Frame::AttachTo()'],['../classunify_1_1Tree.html#ab2e61f69f30e2e8d1cdbbb44c611dc0e',1,'unify::Tree::AttachTo()']]],
-  ['audit_34',['Audit',['../classunify_1_1Parameters.html#a48c801356e1b3627eca23ecbcfb5c478',1,'unify::Parameters']]],
-  ['auditcount_35',['AuditCount',['../classunify_1_1Parameters.html#aacaec7268d84538b5c5a183419a36f3f',1,'unify::Parameters']]],
-  ['available_20tests_36',['List Available Tests',['../md_README.html#autotoc_md24',1,'']]],
-  ['average_37',['average',['../structme_1_1stats_1_1RateCapture.html#ac3444848a7588c434fbf63c662f8b437',1,'me::stats::RateCapture']]]
+  ['as_20a_20member_30',['string_view as a Member',['../md_README.html#autotoc_md19',1,'']]],
+  ['as_20const_31',['string_view as Const',['../md_README.html#autotoc_md20',1,'']]],
+  ['as_20return_20type_32',['string_view as Return Type',['../md_README.html#autotoc_md18',1,'']]],
+  ['aspectratiohw_33',['AspectRatioHW',['../classunify_1_1Size.html#a24d68aa421e799ecf3f6cd105eb3ad58',1,'unify::Size']]],
+  ['aspectratiowh_34',['AspectRatioWH',['../classunify_1_1Size.html#ad9777ffba2828e63b570549fc15679f3',1,'unify::Size']]],
+  ['attachto_35',['AttachTo',['../classunify_1_1Frame.html#a4846e9930d40f3d0da7f3508ee05b814',1,'unify::Frame::AttachTo()'],['../classunify_1_1Tree.html#ab2e61f69f30e2e8d1cdbbb44c611dc0e',1,'unify::Tree::AttachTo()']]],
+  ['audit_36',['Audit',['../classunify_1_1Parameters.html#a48c801356e1b3627eca23ecbcfb5c478',1,'unify::Parameters']]],
+  ['auditcount_37',['AuditCount',['../classunify_1_1Parameters.html#aacaec7268d84538b5c5a183419a36f3f',1,'unify::Parameters']]],
+  ['available_20tests_38',['List Available Tests',['../md_README.html#autotoc_md26',1,'']]],
+  ['average_39',['average',['../structme_1_1stats_1_1RateCapture.html#ac3444848a7588c434fbf63c662f8b437',1,'me::stats::RateCapture']]]
 ];

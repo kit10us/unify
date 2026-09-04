@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['rgba_0',['RGBA',['../classunify_1_1ColorUnit.html#a04614e684f8dbe9c2f028313b9931be8a80266f465bd4a8bd23cd734aa87457e3',1,'unify::ColorUnit::RGBA'],['../namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba287566ddad210df6ae852a39bf72cf94',1,'unify::RGBA']]],
-  ['right_1',['Right',['../classunify_1_1FrustumPlane.html#a945eb2a3eb6d5d38b380bb4f2eeca442a74d442a056ac3f1ee27fade0951f7b6a',1,'unify::FrustumPlane::Right'],['../structunify_1_1NinePoint.html#a47fc4f4242673361a16ab53737e38490a857227ce32841474b74a23005ca566e1',1,'unify::NinePoint::Right']]]
+  ['readonly_0',['Readonly',['../namespaceunify.html#a95c1a80f0af8b845dcf88ba26d2faa86a060d84e58c348e44da6637e57e2e9201',1,'unify']]],
+  ['readwrite_1',['ReadWrite',['../namespaceunify.html#a95c1a80f0af8b845dcf88ba26d2faa86a70a2a84088d405a2e3f1e3accaa16723',1,'unify']]],
+  ['rgba_2',['RGBA',['../classunify_1_1ColorUnit.html#a04614e684f8dbe9c2f028313b9931be8a80266f465bd4a8bd23cd734aa87457e3',1,'unify::ColorUnit::RGBA'],['../namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba287566ddad210df6ae852a39bf72cf94',1,'unify::RGBA']]],
+  ['right_3',['Right',['../classunify_1_1FrustumPlane.html#a945eb2a3eb6d5d38b380bb4f2eeca442a74d442a056ac3f1ee27fade0951f7b6a',1,'unify::FrustumPlane::Right'],['../structunify_1_1NinePoint.html#a47fc4f4242673361a16ab53737e38490a857227ce32841474b74a23005ca566e1',1,'unify::NinePoint::Right']]]
 ];

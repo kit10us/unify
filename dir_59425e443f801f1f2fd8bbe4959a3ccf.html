@@ -115,6 +115,7 @@ Files</h2></td></tr>
 <tr class="memitem:tests_5FCast_2Ecpp" id="r_tests_5FCast_2Ecpp"><td class="memItemLeft"><span class="icondoc"><div class="doc-icon"></div></span>&#160;</td><td class="memItemRight"><a class="el" href="tests__Cast_8cpp.html">tests_Cast.cpp</a></td></tr>
 <tr class="memitem:tests_5FColor_2Ecpp" id="r_tests_5FColor_2Ecpp"><td class="memItemLeft"><span class="icondoc"><div class="doc-icon"></div></span>&#160;</td><td class="memItemRight"><a class="el" href="tests__Color_8cpp.html">tests_Color.cpp</a></td></tr>
 <tr class="memitem:tests_5FColorUnit_2Ecpp" id="r_tests_5FColorUnit_2Ecpp"><td class="memItemLeft"><span class="icondoc"><div class="doc-icon"></div></span>&#160;</td><td class="memItemRight"><a class="el" href="tests__ColorUnit_8cpp.html">tests_ColorUnit.cpp</a></td></tr>
+<tr class="memitem:tests_5FDataLock_2Ecpp" id="r_tests_5FDataLock_2Ecpp"><td class="memItemLeft"><span class="icondoc"><div class="doc-icon"></div></span>&#160;</td><td class="memItemRight"><a class="el" href="tests__DataLock_8cpp.html">tests_DataLock.cpp</a></td></tr>
 <tr class="memitem:tests_5FLineSegment3_2Ecpp" id="r_tests_5FLineSegment3_2Ecpp"><td class="memItemLeft"><span class="icondoc"><div class="doc-icon"></div></span>&#160;</td><td class="memItemRight"><a class="el" href="tests__LineSegment3_8cpp.html">tests_LineSegment3.cpp</a></td></tr>
 <tr class="memitem:tests_5FMatrix_2Ecpp" id="r_tests_5FMatrix_2Ecpp"><td class="memItemLeft"><span class="icondoc"><div class="doc-icon"></div></span>&#160;</td><td class="memItemRight"><a class="el" href="tests__Matrix_8cpp.html">tests_Matrix.cpp</a></td></tr>
 <tr class="memitem:tests_5FPath_2Ecpp" id="r_tests_5FPath_2Ecpp"><td class="memItemLeft"><span class="icondoc"><div class="doc-icon"></div></span>&#160;</td><td class="memItemRight"><a class="el" href="tests__Path_8cpp.html">tests_Path.cpp</a></td></tr>
@@ -128,28 +129,28 @@ Files</h2></td></tr>
 <tr class="memitem:tests_5FV4_2Ecpp" id="r_tests_5FV4_2Ecpp"><td class="memItemLeft"><span class="icondoc"><div class="doc-icon"></div></span>&#160;</td><td class="memItemRight"><a class="el" href="tests__V4_8cpp.html">tests_V4.cpp</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
+<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
 GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)</h1>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
 Testing Unify</h1>
 <p>This project utilizes GoogleTest (GTest) for unit testing and CTest for test orchestration. All developer-led testing should follow the standard CMake workflow outlined below.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
 Developer Workflow</h1>
 <p>To validate local changes, the project must be configured with testing enabled, built, and then executed via the CTest driver.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md31"></a>
 1. Configuration</h2>
 <p>Enable test generation by passing the UNIFY_BUILD_TESTS flag to CMake.</p>
 <p>cmake -S . -B build -G "Visual Studio 17 2022" -DUNIFY_BUILD_TESTS=ON</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md32"></a>
 2. Compilation</h2>
 <p>Build the test suite target.</p>
 <p>cmake &ndash;build build &ndash;config Debug &ndash;target unify_unit_tests</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md31"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md33"></a>
 3. Execution</h2>
 <p>Run all registered tests via CTest. Use the &ndash;output-on-failure flag to streamline debugging.</p>
 <p>ctest &ndash;test-dir build -C Debug &ndash;output-on-failure</p>
 <p>A task is available to execute the above (ctrl + shift + P, then "Run Tests Quick").</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md32"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md34"></a>
 Troubleshooting</h1>
 <ul>
 <li>Missing GTest: The project uses FetchContent. Ensure you have an active internet connection during the first configuration to allow CMake to download the GTest dependency.</li>

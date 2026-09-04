@@ -10,7 +10,7 @@ var searchData=
   ['bbox_2einl_7',['BBox.inl',['../BBox_8inl.html',1,'']]],
   ['bboxtests_8',['BBoxTests',['../classBBoxTests.html',1,'']]],
   ['becomeidentity_9',['BecomeIdentity',['../classunify_1_1Matrix.html#ad40b284bc132a550d2718f936b7a7755',1,'unify::Matrix']]],
-  ['begin_10',['begin',['../classunify_1_1LineSegment3.html#a85afa9fe3c4c7931852c91dd73d01e18',1,'unify::LineSegment3::begin'],['../classunify_1_1Lookup.html#a2d2eb09ac12e662255db29b2d5de5887',1,'unify::Lookup::begin()']]],
+  ['begin_10',['begin',['../classunify_1_1LineSegment3.html#a85afa9fe3c4c7931852c91dd73d01e18',1,'unify::LineSegment3::begin'],['../classunify_1_1DataLock.html#a94f33341c089dcec0ffc62fd40fd7d69',1,'unify::DataLock::begin()'],['../classunify_1_1Lookup.html#a2d2eb09ac12e662255db29b2d5de5887',1,'unify::Lookup::begin()']]],
   ['beginswith_11',['BeginsWith',['../namespaceunify_1_1String.html#a0df42cec7b62e798e620ca2eb8a40fb5',1,'unify::String::BeginsWith(std::string_view source, std::string_view beginsWith)'],['../namespaceunify_1_1String.html#a23ec6b954eb53b6f233997ca1ddde012',1,'unify::String::BeginsWith(std::string source, std::string beginsWith)']]],
   ['bgra_12',['BGRA',['../classunify_1_1ColorUnit.html#a04614e684f8dbe9c2f028313b9931be8af620237336c6b8cf9688fe528b9c5338',1,'unify::ColorUnit::BGRA'],['../namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fba5d0594e84962ef29d928c18cd5fbac51',1,'unify::BGRA']]],
   ['bitcompare_13',['BITCOMPARE',['../Flags_8h.html#ab973ce10d2c8a2c026e0f9beb2ab33c6',1,'Flags.h']]],
@@ -27,6 +27,6 @@ var searchData=
   ['bsphere_24',['BSphere',['../classunify_1_1BSphere.html',1,'unify::BSphere&lt; T &gt;'],['../classunify_1_1BSphere.html#ac766bc01af502b9bc067a2f6b88dda96',1,'unify::BSphere::BSphere()'],['../classunify_1_1BSphere.html#adb5e3b6ac4a851e21212e9d54130cd12',1,'unify::BSphere::BSphere(const V3&lt; T &gt; &amp;center)'],['../classunify_1_1BSphere.html#a98e076a6ed13074832606f36ff779bc3',1,'unify::BSphere::BSphere(const V3&lt; T &gt; &amp;center, const T &amp;radius)']]],
   ['bsphere_2eh_25',['BSphere.h',['../BSphere_8h.html',1,'']]],
   ['bsphere_2einl_26',['BSphere.inl',['../BSphere_8inl.html',1,'']]],
-  ['building_20tests_27',['Building Tests',['../md_README.html#autotoc_md23',1,'']]],
+  ['building_20tests_27',['Building Tests',['../md_README.html#autotoc_md25',1,'']]],
   ['byteswaiting_28',['BytesWaiting',['../classunify_1_1Stream.html#ab091f1033abeeb2a22f315bbd6090b52',1,'unify::Stream']]]
 ];
