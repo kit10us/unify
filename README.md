@@ -76,14 +76,41 @@ Unify uses the XML Documentation format for high portability between Visual Stud
 
 * Requirements: All Classes, Structs, Enums, and non-trivial functions must include a <summary>.
 
-# Coding Caveats
-return string_view
+# Common Coding Caveats
+## string_view as Return Type
 * Ownership: A string_view is a non-owning reference. Never return a string_view that points to a local function-scope string; doing so results in a dangling pointer.
 
 * Usage: Only return a string_view when the underlying data is guaranteed to outlive the view (e.g., constants in the .rodata segment or persistent member variables).
 
 ## string_view as a Member
 Exercise extreme caution when using string_view as a class member. The class does not own the string memory; ensure the source data remains valid for the entire lifetime of the class instance.
+
+## string_view as Const
+Using const std::string_view—specifically as a value parameter or return type—is redundant and restricts view operations:
+
+1. The Referenced Data Is Already Read-Only
+    std::string_view is fundamentally an immutable view over a contiguous character sequence (const CharT* and size_t).
+
+    None of the member functions allow mutation of the underlying characters. Adding const to the view itself only prevents mutating the view's internal pointer and size, not the characters being viewed.
+
+2. Top-Level const Prevents Useful View Slicing
+    Member functions like remove_prefix() and remove_suffix() mutate the internal pointer and lenength to slice the view without allocating or copying.
+
+    Marking a parameter const std::string_view prohibits local slicing inside the function body, forcing you to create an additional copy of the string_view if you need to trim or parse substrings.
+
+3. Inefficient When Used as const std::string_view&
+    std::string_view consists of two machine words (typically 16 bytes on 64-bit architectures).
+
+    Passing by reference forces the compiler to pass an address and introduces pointer indirection at call sites. Passing by value (std::string_view) allows modern calling conventions (such as System V AMD64 or MSVC x64) to pass the view directly in CPU registers.
+
+4. Top-Level const in Function Declarations Adds Noise
+    Top-level cv-qualifiers on parameters are ignored by the compiler when determining function signatures.
+
+    Declaring void Process(const std::string_view sv); in a header file is functionally identical to void Process(std::string_view sv); for callers and linker symbols, serving only as implementation noise.
+
+5. Returning const std::string_view Disables Assignment and Triggers Warnings
+    Returning a value type with top-level const prevents move assignment and causes modern compilers to issue warnings (such as -Wignored-qualifiers).
+
 
 # Final Notes
 Unify is considered pre-release at the moment due to needing some modernization and optimizations. That being said, certain names of features will change **NOW** and be committed to for future revisions; this means we need to be pretty explicit in naming so we stick to **SOLID** development prinipals.

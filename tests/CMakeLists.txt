@@ -21,23 +21,24 @@ FetchContent_MakeAvailable(googletest)
 
 # 1. Add test source files
 add_executable("${PROJECT_NAME}"
-    tests_Result.cpp
-    tests_String.cpp
     tests_Angle.cpp
+    tests_BBox.cpp
+    tests_BRectangle.cpp
+    tests_Cast.cpp
     tests_Color.cpp
     tests_ColorUnit.cpp
+    tests_DataLock.cpp
+    tests_LineSegment3.cpp
+    tests_Matrix.cpp
+    tests_Path.cpp
+    tests_Quaternion.cpp
+    tests_Ray.cpp
+    tests_Result.cpp
+    tests_String.cpp
+    tests_TexCoords.cpp
     tests_V2.cpp
     tests_V3.cpp
     tests_V4.cpp
-    tests_LineSegment3.cpp
-    tests_Ray.cpp
-    tests_BBox.cpp
-    tests_BRectangle.cpp
-    tests_Matrix.cpp
-    tests_TexCoords.cpp
-    tests_Quaternion.cpp
-    tests_Cast.cpp
-    tests_Path.cpp
     )
 
 target_include_directories("${PROJECT_NAME}" 

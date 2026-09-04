@@ -181,7 +181,7 @@ bool Size< T >::operator != ( const Size< T >& size ) const
 template< typename T >
 std::string Size< T >::ToString() const
 {
-	return Cast< std::string >( width ) + ", " + Cast< std::string >( height );
+	return *ToString( width ) + ", " + *ToString( height );
 }
 
 template< typename T >

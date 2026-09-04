@@ -182,7 +182,7 @@ bool Size3< T >::operator != ( const Size3< T >& size ) const
 template< typename T >
 std::string Size3< T >::ToString() const
 {
-	return Cast< std::string >( width ) + ", " + Cast< std::string >( height ) + ", " + Cast< std::string >( depth );
+	return *ToString( width ) + ", " + *ToString( height ) + ", " + *ToString( depth );
 }
 
 template< typename T >
