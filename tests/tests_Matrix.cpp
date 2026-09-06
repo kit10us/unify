@@ -40,7 +40,7 @@ protected:
 /// <summary>
 /// Tests the default constructor of the Matrix class (not identity for optimization).
 /// </summary>
-TEST_F(MatrixTests, TestDefaultConstructor)
+TEST_F(MatrixTests, DefaultConstructor)
 {
     unify::Matrix matrix{};
     EXPECT_FLOAT_EQ(matrix.m[0][0], 0.0f);
@@ -64,7 +64,7 @@ TEST_F(MatrixTests, TestDefaultConstructor)
     EXPECT_FLOAT_EQ(matrix.m[3][3], 0.0f);
 }
 
-TEST_F(MatrixTests, TestIdentityConstructor)
+TEST_F(MatrixTests, IdentityConstructor)
 {
     unify::Matrix matrix = unify::MatrixIdentity();
     EXPECT_FLOAT_EQ(matrix.m[0][0], 1.0f);

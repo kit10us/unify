@@ -40,7 +40,7 @@ protected:
 /// <summary>
 /// Tests the default constructor of the V2 class, ensuring it initializes to zero.
 /// </summary>
-TEST_F(V2Tests, TestDefaultConstructor)
+TEST_F(V2Tests, DefaultConstructor)
 {
     unify::V2 v2{};
     EXPECT_FLOAT_EQ(v2.x, 0.0);
@@ -50,7 +50,7 @@ TEST_F(V2Tests, TestDefaultConstructor)
 /// <summary>
 /// Tests the parameterized constructor of the V2 class, ensuring it initializes to the provided values.
 /// </summary>
-TEST_F(V2Tests, TestParameterizedConstructor)   
+TEST_F(V2Tests, ParameterizedConstructor)   
 {
     unify::V2 v2{3.0f, 4.0f};
     EXPECT_FLOAT_EQ(v2.x, 3.0);
@@ -60,7 +60,7 @@ TEST_F(V2Tests, TestParameterizedConstructor)
 /// <summary>
 /// Tests the operator[] of the V2 class, ensuring it correctly accesses the x and y components of the vector.
 /// </summary>
-TEST_F(V2Tests, TestOperatorIndex)
+TEST_F(V2Tests, OperatorIndex)
 {
     unify::V2 v2{3.0f, 4.0f};
     EXPECT_FLOAT_EQ(v2[0], 3.0);
@@ -73,7 +73,7 @@ TEST_F(V2Tests, TestOperatorIndex)
 /// <summary>
 /// Tests the Length() method of the V2 class, ensuring it calculates the correct length of the vector.
 /// </summary> 
-TEST_F(V2Tests, TestLength)
+TEST_F(V2Tests, Length)
 {
     unify::V2 v2{3.0f, 4.0f};
     EXPECT_FLOAT_EQ(v2.Length(), 5.0);
@@ -82,7 +82,7 @@ TEST_F(V2Tests, TestLength)
 /// <summary>
 /// Tests the Normalize() method of the V2 class, ensuring it normalizes the vector correctly.
 /// </summary>
-TEST_F(V2Tests, TestNormalize)
+TEST_F(V2Tests, Normalize)
 {
     unify::V2 v2{3.0f, 4.0f};
     v2.Normalize();
@@ -93,7 +93,7 @@ TEST_F(V2Tests, TestNormalize)
 /// <summary>
 /// Tests the Dot() method of the V2 class, ensuring it calculates the correct dot product of two vectors.
 /// </summary>
-TEST_F(V2Tests, TestDot)
+TEST_F(V2Tests, Dot)
 {
     unify::V2 v1{1.0f, 2.0f};
     unify::V2 v2{3.0f, 4.0f};
@@ -103,7 +103,7 @@ TEST_F(V2Tests, TestDot)
 /// <summary>
 /// Tests the Angle() method of the V2 class, ensuring it calculates the correct angle between two vectors.
 /// </summary>
-TEST_F(V2Tests, TestAngle)
+TEST_F(V2Tests, Angle)
 {
     unify::V2 v1{1.0f, 0.0f};
     unify::V2 v2{0.0f, 1.0f};
@@ -114,7 +114,7 @@ TEST_F(V2Tests, TestAngle)
 /// <summary>
 /// Tests the Distance() method of the V2 class, ensuring it calculates the correct distance between two vectors.
 /// </summary>
-TEST_F(V2Tests, TestDistance)
+TEST_F(V2Tests, Distance)
 {
     unify::V2 v1{1.0f, 2.0f};
     unify::V2 v2{4.0f, 6.0f};
@@ -124,7 +124,7 @@ TEST_F(V2Tests, TestDistance)
 /// <summary>
 /// Tests the IsZero() method of the V2 class, ensuring it correctly identifies a zero vector
 /// </summary>
-TEST_F(V2Tests, TestIsZero)
+TEST_F(V2Tests, IsZero)
 {
     unify::V2 v1{0.0f, 0.0f};
     unify::V2 v2{1.0f, 0.0f};
@@ -135,7 +135,7 @@ TEST_F(V2Tests, TestIsZero)
 /// <summary>
 /// Tests the Absolute() method of the V2 class, ensuring it returns the correct absolute value of the vector.
 /// </summary>
-TEST_F(V2Tests, TestAbsolute)
+TEST_F(V2Tests, Absolute)
 {
     unify::V2 v1{-3.0f, 4.0f};
     unify::V2 absV1 = v1.Absolute();
@@ -146,7 +146,7 @@ TEST_F(V2Tests, TestAbsolute)
 /// <summary>
 /// Tests the Cast() function for V2, ensuring it correctly converts a V2 to a string representation.
 /// </summary>
-TEST_F(V2Tests, TestCastToString)
+TEST_F(V2Tests, CastToString)
 {
     unify::V2<int> v1{3, 4};
     auto str = unify::ToString(v1);    

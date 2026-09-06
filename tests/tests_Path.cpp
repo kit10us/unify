@@ -40,7 +40,7 @@ protected:
 /// <summary>
 /// Tests the default constructor of the Path class, ensuring it initializes correctly.
 /// </summary>
-TEST_F(PathTests, TestConstructors)
+TEST_F(PathTests, Constructors)
 {
     unify::Path path{};
     EXPECT_TRUE(path.IsEmpty());
@@ -50,7 +50,7 @@ TEST_F(PathTests, TestConstructors)
 /// <summary>
 /// Test URI named constructors.
 /// </summary>
-TEST_F(PathTests, TestFileSchemeConstructorEmpty)
+TEST_F(PathTests, FileSchemeConstructorEmpty)
 {
     using namespace unify;
 
@@ -62,7 +62,7 @@ TEST_F(PathTests, TestFileSchemeConstructorEmpty)
     EXPECT_TRUE(path.HasScheme());
 }
 
-TEST_F(PathTests, TestFileSchemeConstructorPath)
+TEST_F(PathTests, FileSchemeConstructorPath)
 {
     using namespace unify;
     Path path = Path::MakeFile("/home/user");

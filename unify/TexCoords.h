@@ -24,6 +24,7 @@
 
 #include <unify/Unify.h>
 #include <unify/Cast.h>
+#include <unify/String.h>
 #include <string>
 
 using namespace std::string_literals;

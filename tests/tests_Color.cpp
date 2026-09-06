@@ -40,7 +40,7 @@ protected:
 /// <summary>
 /// Tests the parameterized constructor of the Color class, ensuring it initializes to the provided values.
 /// </summary>
-TEST_F(ColorTests, TestParameterizedConstructor)   
+TEST_F(ColorTests, ParameterizedConstructor)   
 {
     unify::Color color{10, 20, 40, 255};
     EXPECT_EQ(color.r, 10);
@@ -52,7 +52,7 @@ TEST_F(ColorTests, TestParameterizedConstructor)
 /// <summary>
 /// Tests the operator[] of the Color class, ensuring it correctly accesses the r, g, b, and a components of the color.
 /// </summary>
-TEST_F(ColorTests, TestOperatorIndex)
+TEST_F(ColorTests, OperatorIndex)
 {
     unify::Color color{10, 20, 40, 255};
     EXPECT_EQ(color.linear[0], 10);
@@ -61,7 +61,7 @@ TEST_F(ColorTests, TestOperatorIndex)
     EXPECT_EQ(color.linear[3], 255);
 }
 
-TEST_F(ColorTests, TestToString)
+TEST_F(ColorTests, ToString)
 {
     using namespace std::string_literals;
 

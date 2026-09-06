@@ -40,7 +40,7 @@ protected:
 /// <summary>
 /// Tests the default constructor of the Angle class, ensuring it initializes to zero radians and zero degrees.
 /// </summary>
-TEST_F(AngleTests, TestDefaultConstructor)
+TEST_F(AngleTests, DefaultConstructor)
 {
     unify::Angle angle;
     EXPECT_FLOAT_EQ(angle.ToRadians(), 0.0);
@@ -50,7 +50,7 @@ TEST_F(AngleTests, TestDefaultConstructor)
 /// <summary>
 /// Tests that PI in radians equates to 180 in degrees.
 /// </summary>
-TEST_F(AngleTests, TestRadiansPIDegrees180)
+TEST_F(AngleTests, RadiansPIDegrees180)
 {
     unify::Angle angle {unify::AnglePI()};
     EXPECT_FLOAT_EQ(angle.ToRadians(), unify::PI);
@@ -60,25 +60,25 @@ TEST_F(AngleTests, TestRadiansPIDegrees180)
 /// <summary>
 /// Tests multiplying an angle by a scalar, ensuring that multiplying 2*PI radians results in TAU radians.
 /// </summary>
-TEST_F(AngleTests, TestMultiply)
+TEST_F(AngleTests, Multiply)
 {
     unify::Angle angle {unify::AnglePI() * 2.0f};
     EXPECT_FLOAT_EQ(angle.ToRadians(), unify::TAU);
 }
 
-TEST_F(AngleTests, TestDivide)
+TEST_F(AngleTests, Divide)
 {
     unify::Angle angle {unify::AnglePI2() / 2.0f};
     EXPECT_FLOAT_EQ(angle.ToRadians(), unify::PI);
 }
 
-TEST_F(AngleTests, TestExcessPI)
+TEST_F(AngleTests, ExcessPI)
 {
     unify::Angle angle {unify::AnglePI2() + unify::AnglePI()};
     EXPECT_FLOAT_EQ(angle.ToRadians(), unify::TAU + unify::PI);
 }
 
-TEST_F(AngleTests, TestNormalize)
+TEST_F(AngleTests, Normalize)
 {
     unify::Angle angle {unify::AnglePI2() + unify::AnglePI()};
     auto magnitude = angle.Normalize();
@@ -86,25 +86,25 @@ TEST_F(AngleTests, TestNormalize)
     EXPECT_PRED_FORMAT2(::testing::FloatLE, (angle - unify::AngleInDegrees(180.0f)).ToDegrees(), 1.0f);
 }
 
-TEST_F(AngleTests, TestSineOf90Degrees)
+TEST_F(AngleTests, SineOf90Degrees)
 {
     unify::Angle angle {unify::AngleInDegrees(90.0f)};
     EXPECT_FLOAT_EQ(std::sin(angle.ToRadians()), 1.0f);
 }
 
-TEST_F(AngleTests, TestCosineOf180Degrees)
+TEST_F(AngleTests, CosineOf180Degrees)
 {
     unify::Angle angle {unify::AngleInDegrees(180.0f)};
     EXPECT_FLOAT_EQ(std::cos(angle.ToRadians()), -1.0f);
 }
 
-TEST_F(AngleTests, TestToStringRadians)
+TEST_F(AngleTests, ToStringRadians)
 {
     unify::Angle angle {unify::AnglePI()};
     EXPECT_STREQ(angle.ToString().c_str(), "3.141593r");
 }
 
-TEST_F(AngleTests, TestToStringDegrees)
+TEST_F(AngleTests, ToStringDegrees)
 {
     unify::Angle angle {unify::AngleInDegrees(90.0f)};
     EXPECT_STREQ(angle.ToString(false).c_str(), "90.000000d");

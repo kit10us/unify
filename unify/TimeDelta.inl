@@ -102,49 +102,49 @@ namespace unify
 	}
 
 	inline
-	float TimeDelta::GetMicros() const
+	float TimeDelta::AsMicros() const
 	{
 		return m_ms * MicrosPerMS;
 	}
 
 	inline
-	float TimeDelta::GetMS() const
+	float TimeDelta::AsMS() const
 	{
 		return m_ms;
 	}
 
 	inline
-	float TimeDelta::GetSeconds() const
+	float TimeDelta::AsSeconds() const
 	{
 		return m_ms * SecondPerMS;
 	}
 
 	inline
-	float TimeDelta::GetMinutes() const
+	float TimeDelta::AsMinutes() const
 	{
 		return m_ms * MinutePerMS;
 	}
 
 	inline
-	float TimeDelta::GetHours() const
+	float TimeDelta::AsHours() const
 	{
 		return m_ms * HourPerMS;
 	}
 
 	inline
-	float TimeDelta::GetWeeks() const
+	float TimeDelta::AsWeeks() const
 	{
 		return m_ms * WeekPerMS;
 	}
 
 	inline
-	float TimeDelta::GetDays() const
+	float TimeDelta::AsDays() const
 	{
 		return m_ms * DayPerMS;
 	}
 
 	inline
-	float TimeDelta::GetYears() const
+	float TimeDelta::AsYears() const
 	{
 		return m_ms * YearPerMS;
 	}
@@ -210,59 +210,54 @@ namespace unify
 	inline
 	bool TimeDelta::operator == (TimeDelta delta) const
 	{
-		return m_ms == delta.GetMS();
+		return m_ms == delta.AsMS();
 	}
 
 	inline
 	bool TimeDelta::operator != (TimeDelta delta) const
 	{
-		return m_ms != delta.GetMS();
+		return m_ms != delta.AsMS();
 	}
 
 	inline
 	bool TimeDelta::operator > (TimeDelta delta) const
 	{
-		return m_ms > delta.GetMS();
+		return m_ms > delta.AsMS();
 	}
 
 	inline
 	bool TimeDelta::operator < (TimeDelta delta) const
 	{
-		return m_ms < delta.GetMS();
+		return m_ms < delta.AsMS();
 	}
 
 	inline
 	bool TimeDelta::operator >= (TimeDelta delta) const
 	{
-		return m_ms >= delta.GetMS();
+		return m_ms >= delta.AsMS();
 	}
 
 	inline
 	bool TimeDelta::operator <= (TimeDelta delta) const
 	{
-		return m_ms <= delta.GetMS();
+		return m_ms <= delta.AsMS();
 	}
 
 	template<>
 	inline
 	std::string Cast(const TimeDelta in)
 	{
-		return std::to_string(in.GetSeconds());
+		return std::to_string(in.AsSeconds());
 	}
 
-	template<>
-	inline
-	TimeDelta Cast(const std::string text)
-	{
-		text; // unused
-		return TimeDelta{}; // SAS TODO: Need to convert to time delta from string.
-	}
 
-	template<>
-	inline
-	TimeDelta Cast(const char* text)
+	std::optional<std::string> ToString(const TimeDelta in)
 	{
-		text; // unused
-		return TimeDelta{}; // SAS TODO: Need to convert to time delta from string.
+		return std::nullopt;
+	}
+	
+	std::optional<TimeDelta> FromString(std::string_view text)
+	{
+		return std::nullopt;
 	}
 }

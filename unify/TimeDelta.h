@@ -43,14 +43,14 @@ namespace unify
 		TimeDelta(float ms);
 		TimeDelta();
 
-		float GetMicros() const;
-        float GetMS() const;
-        float GetSeconds() const;
-		float GetMinutes() const;
-		float GetHours() const;
-		float GetWeeks() const;
-		float GetDays() const;
-		float GetYears() const;
+		float AsMicros() const;
+        float AsMS() const;
+        float AsSeconds() const;
+		float AsMinutes() const;
+		float AsHours() const;
+		float AsWeeks() const;
+		float AsDays() const;
+		float AsYears() const;
 
 		TimeDelta operator+( TimeDelta delta ) const;
 		TimeDelta operator-( TimeDelta delta ) const;
@@ -83,10 +83,8 @@ namespace unify
 	TimeDelta TimeDeltaInDays( float days );
 	TimeDelta TimeDeltaInYears( float years );
 
-	//template< typename TTo, typename TFrom > TTo Cast(const TFrom in);
-	template<> std::optional<std::string> unify::ToString(const TimeDelta in);
-	template<> std::optional<TimeDelta> FromString(std::string_view text);
-	//template<> TimeDelta Cast(const char* text);
+	std::optional<std::string> ToString(const TimeDelta in);
+	std::optional<TimeDelta> FromString(std::string_view text);
 }
 
 #include <unify/TimeDelta.inl>

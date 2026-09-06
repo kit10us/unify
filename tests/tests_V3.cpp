@@ -40,7 +40,7 @@ protected:
 /// <summary>
 /// Tests the default constructor of the V3 class, ensuring it initializes to zero.
 /// </summary>
-TEST_F(V3Tests, TestDefaultConstructor)
+TEST_F(V3Tests, DefaultConstructor)
 {
     unify::V3 V3{};
     EXPECT_FLOAT_EQ(V3.x, 0.0);
@@ -51,7 +51,7 @@ TEST_F(V3Tests, TestDefaultConstructor)
 /// <summary>
 /// Tests the parameterized constructor of the V3 class, ensuring it initializes to the provided values.
 /// </summary>
-TEST_F(V3Tests, TestParameterizedConstructor)   
+TEST_F(V3Tests, ParameterizedConstructor)   
 {
     unify::V3 V3{3.0f, 4.0f, 5.0f};
     EXPECT_FLOAT_EQ(V3.x, 3.0);
@@ -62,7 +62,7 @@ TEST_F(V3Tests, TestParameterizedConstructor)
 /// <summary>
 /// Tests the operator[] of the V3 class, ensuring it correctly accesses the x, y, and z components of the vector.
 /// </summary>
-TEST_F(V3Tests, TestOperatorIndex)
+TEST_F(V3Tests, OperatorIndex)
 {
     unify::V3 V3{3.0f, 4.0f, 5.0f};
     EXPECT_FLOAT_EQ(V3[0], 3.0);
@@ -76,7 +76,7 @@ TEST_F(V3Tests, TestOperatorIndex)
 /// <summary>
 /// Tests the Length() method of the V3 class, ensuring it calculates the correct length of the vector.
 /// </summary> 
-TEST_F(V3Tests, TestLength)
+TEST_F(V3Tests, Length)
 {
     unify::V3 V3{3.0f, 4.0f, 5.0f};
     EXPECT_FLOAT_EQ(V3.Length(), 7.0710678118654755);
@@ -85,7 +85,7 @@ TEST_F(V3Tests, TestLength)
 /// <summary>
 /// Tests the Normalize() method of the V3 class, ensuring it normalizes the vector correctly.
 /// </summary>
-TEST_F(V3Tests, TestNormalize)
+TEST_F(V3Tests, Normalize)
 {
     unify::V3 V3{3.0f, 4.0f, 5.0f};
     V3.Normalize();
@@ -97,7 +97,7 @@ TEST_F(V3Tests, TestNormalize)
 /// <summary>
 /// Tests the Dot() method of the V3 class, ensuring it calculates the correct dot product of two vectors.
 /// </summary>
-TEST_F(V3Tests, TestDot)
+TEST_F(V3Tests, Dot)
 {
     unify::V3 v1{1.0f, 2.0f, 3.0f};
     unify::V3 V3{4.0f, 5.0f, 6.0f};
@@ -107,7 +107,7 @@ TEST_F(V3Tests, TestDot)
 /// <summary>
 /// Tests the Distance() method of the V3 class, ensuring it calculates the correct distance between two vectors.
 /// </summary>
-TEST_F(V3Tests, TestDistance)
+TEST_F(V3Tests, Distance)
 {
     unify::V3 v1{1.0f, 2.0f, 3.0f};
     unify::V3 V3{4.0f, 6.0f, 4.0f};
@@ -119,7 +119,7 @@ TEST_F(V3Tests, TestDistance)
 /// <summary>
 /// Tests the IsZero() method of the V3 class, ensuring it correctly identifies a zero vector
 /// </summary>
-TEST_F(V3Tests, TestIsZero)
+TEST_F(V3Tests, IsZero)
 {
     unify::V3 v1{0.0f, 0.0f, 0.0f};
     unify::V3 V3{1.0f, 0.0f, 0.0f};
@@ -130,7 +130,7 @@ TEST_F(V3Tests, TestIsZero)
 /// <summary>
 /// Tests the Absolute() method of the V3 class, ensuring it returns the correct absolute value of the vector.
 /// </summary>
-TEST_F(V3Tests, TestAbsolute)
+TEST_F(V3Tests, Absolute)
 {
     unify::V3 v1{-3.0f, 4.0f, 5.0f};
     unify::V3 absV1 = v1.Absolute();
@@ -142,7 +142,7 @@ TEST_F(V3Tests, TestAbsolute)
 /// <summary>
 /// Tests the Cast() function for V3, ensuring it correctly converts a V3 to a string representation.
 /// </summary>
-TEST_F(V3Tests, TestCastToString)
+TEST_F(V3Tests, CastToString)
 {
     unify::V3<int> v1{3, 4, 5};
     auto str = unify::ToString(v1);
@@ -158,7 +158,7 @@ TEST_F(V3Tests, TestCastToString)
 /// <summary>
 /// Tests the Cast() function for V3, ensuring it correctly converts a string representation to a V3.
 /// </summary>
-TEST_F(V3Tests, TestCastFromString)
+TEST_F(V3Tests, CastFromString)
 {
     std::string str = "3, 4, 5";
     auto V3 = unify::V3FromString<int>({str.data(), str.size()});

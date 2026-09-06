@@ -21,9 +21,9 @@
 
 #include <gtest/gtest.h>
 
-#include <unify/DataLock.h>
+#include <unify/TimeDelta.h>
 
-class DataLockTests : public ::testing::Test
+class TimeDeltaTests : public ::testing::Test
 { 
 protected:
     void SetUp() override
@@ -38,9 +38,26 @@ protected:
 };
 
 /// <summary>
-/// Tests the default constructor of the Angle class, ensuring it initializes to zero radians and zero degrees.
+/// Tests the default constructor of the TimeDelta class, ensuring it initializes to zero.
 /// </summary>
-TEST_F(DataLockTests, TestDefaultConstructor)
+TEST_F(TimeDeltaTests, DefaultConstructor)
 {
-    unify::DataLock data_lock;
+    unify::TimeDelta timeDelta{};
+    EXPECT_FLOAT_EQ(timeDelta.AsSeconds(), 0.0);
+    EXPECT_FLOAT_EQ(timeDelta.AsMS(), 0.0);
+    EXPECT_FLOAT_EQ(timeDelta.AsMicros(), 0.0);
+}
+
+TEST_F(TimeDeltaTests, ToString)
+{
+    unify::TimeDelta timeDelta{};
+    auto result = unify::ToString(timeDelta);
+    ASSERT_TRUE(!result); // Expecting std::nullopt since ToString is not implemented.
+}
+
+TEST_F(TimeDeltaTests, FromString)
+{
+    unify::TimeDelta timeDelta{};
+    auto result = unify::FromString("1.0");
+    ASSERT_TRUE(!result); // Expecting std::nullopt since FromString is not implemented.
 }

@@ -4,13 +4,13 @@
         {
             "label": "Generate VS2022",
             "type": "shell",
-            "command": "cmake -B build -G 'Visual Studio 17 2022' -A64",
+            "command": "cmake -B build -G 'Visual Studio 17 2022' -A x64",
             "problemMatcher": ["$msCompile"]
         },
         {
             "label": "Generate Unit Tests",
             "type": "shell",
-            "command": "cmake -B build -G 'Visual Studio 17 2022' -A64",
+            "command": "cmake -B build -G 'Visual Studio 17 2022' -A x64",
             "problemMatcher": ["$msCompile"]
         },
         {

@@ -42,7 +42,7 @@ protected:
 /// <summary>
 /// Tests the default constructor of the Brect class, ensuring it initializes to zero.
 /// </summary>
-TEST_F(BRectangleTests, TestDefaultConstructor)
+TEST_F(BRectangleTests, DefaultConstructor)
 {
     unify::BRectangle<float> brect{};
     EXPECT_FLOAT_EQ(brect.dr.x, 0.0f);
@@ -54,7 +54,7 @@ TEST_F(BRectangleTests, TestDefaultConstructor)
 /// <summary>
 /// Tests the parameterized constructor of the Brect class, ensuring it initializes to the provided values
 /// </summary>
-TEST_F(BRectangleTests, TestParameterizedConstructor)
+TEST_F(BRectangleTests, ParameterizedConstructor)
 {
     unify::V2<float> ul{1.0f, 2.0f};
     unify::V2<float> dr{3.0f, 4.0f};
@@ -69,7 +69,7 @@ TEST_F(BRectangleTests, TestParameterizedConstructor)
 /// Tests the Fix() method of the Brect class, ensuring it correctly identifies when the dr
 /// and ul corners are reversed and fixes them.
 /// </summary>
-TEST_F(BRectangleTests, TestNormalization)
+TEST_F(BRectangleTests, Normalization)
 {
     unify::BRectangle<float> brect{};
     brect.ul = {3.0f, 4.0f};
@@ -85,7 +85,7 @@ TEST_F(BRectangleTests, TestNormalization)
 /// <summary>
 /// Tests the Union() method of the Brect class, ensuring it correctly adds a bounding box with a position to the current bounding box.
 /// </summary>
-TEST_F(BRectangleTests, TestAddVector)
+TEST_F(BRectangleTests, AddVector)
 {
     unify::BRectangle<float> brect{{-3.0f, -4.0f}, {1.0f, 1.0f}};    
     unify::V2 position_inf{-40.0f, -50.0f};
@@ -108,7 +108,7 @@ TEST_F(BRectangleTests, TestAddVector)
 /// Tests the ContainsPoint() method of the Brect class, ensuring it correctly identifies when a
 /// point is within the bounding box.
 /// </summary>
-TEST_F(BRectangleTests, TestContainsPoint)
+TEST_F(BRectangleTests, ContainsPoint)
 {
     unify::BRectangle brect{unify::V2{1.0f, 2.0f}, unify::V2{4.0f, 5.0f}};
     EXPECT_TRUE(brect.Contains(unify::V2{2.0f, 3.0f}));
@@ -120,7 +120,7 @@ TEST_F(BRectangleTests, TestContainsPoint)
 /// Tests the ContainsBrect() method of the Brect class, ensuring it correctly identifies when a
 /// bounding box is within the bounding box.
 /// </summary>
-TEST_F(BRectangleTests, TestContainsBrect)
+TEST_F(BRectangleTests, ContainsBrect)
 {
     unify::BRectangle brect{unify::V2{1.0f, 2.0f}, unify::V2{4.0f, 5.0f}};
     unify::BRectangle innerBox{unify::V2{2.0f, 3.0f}, unify::V2{3.0f, 4.0f}};
@@ -129,7 +129,7 @@ TEST_F(BRectangleTests, TestContainsBrect)
     EXPECT_FALSE(brect.Contains(outerBox));
 }
 
-TEST_F(BRectangleTests, TestSize)
+TEST_F(BRectangleTests, Size)
 {
     unify::BRectangle brect{unify::V2{1.0f, 2.0f}, unify::V2{4.0f, 5.0f}};
     unify::V2 size = brect.Size();

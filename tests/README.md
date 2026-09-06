@@ -7,9 +7,9 @@ This project utilizes GoogleTest (GTest) for unit testing and CTest for test orc
 To validate local changes, the project must be configured with testing enabled, built, and then executed via the CTest driver.
 
 ## 1. Configuration
-Enable test generation by passing the UNIFY_BUILD_TESTS flag to CMake.
+Enable test generation by passing the BUILD_TESTS flag to CMake.
 
-cmake -S . -B build -G "Visual Studio 17 2022" -DUNIFY_BUILD_TESTS=ON
+cmake -S . -B build -G "Visual Studio 17 2022" -DBUILD_TESTS=ON
 
 ## 2. Compilation
 Build the test suite target.

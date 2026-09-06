@@ -38,7 +38,7 @@ protected:
     }  
 };
 
-TEST_F(StringTests, TestSplitInt)
+TEST_F(StringTests, SplitInt)
 {
     using namespace std::string_view_literals;
     auto correct_split = unify::String::Split<int>("1, 23, 456, 7890"sv, ',');

@@ -40,7 +40,7 @@ protected:
 /// <summary>
 /// Tests the default constructor of the V4 class, ensuring it initializes to zero.
 /// </summary>
-TEST_F(V4Tests, TestDefaultConstructor)
+TEST_F(V4Tests, DefaultConstructor)
 {
     unify::V4 V4{};
     EXPECT_FLOAT_EQ(V4.x, 0.0);
@@ -51,7 +51,7 @@ TEST_F(V4Tests, TestDefaultConstructor)
 /// <summary>
 /// Tests the parameterized constructor of the V4 class, ensuring it initializes to the provided values.
 /// </summary>
-TEST_F(V4Tests, TestParameterizedConstructor)   
+TEST_F(V4Tests, ParameterizedConstructor)   
 {
     unify::V4 V4{3.0f, 4.0f, 5.0f, 1.0f};
     EXPECT_FLOAT_EQ(V4.x, 3.0f);
@@ -63,7 +63,7 @@ TEST_F(V4Tests, TestParameterizedConstructor)
 /// <summary>
 /// Tests the operator[] of the V4 class, ensuring it correctly accesses the x, y, and z components of the vector.
 /// </summary>
-TEST_F(V4Tests, TestOperatorIndex)
+TEST_F(V4Tests, OperatorIndex)
 {
     unify::V4 V4{3.0f, 4.0f, 5.0f, 1.0f};
     EXPECT_FLOAT_EQ(V4[0], 3.0f);
@@ -78,7 +78,7 @@ TEST_F(V4Tests, TestOperatorIndex)
 /// <summary>
 /// Tests the Length() method of the V4 class, ensuring it calculates the correct length of the vector.
 /// </summary> 
-TEST_F(V4Tests, TestLength)
+TEST_F(V4Tests, Length)
 {
     unify::V4 V4{3.0f, 4.0f, 5.0f, 1.0f};
     
@@ -90,7 +90,7 @@ TEST_F(V4Tests, TestLength)
 /// <summary>
 /// Tests the Normalize() method of the V4 class, ensuring it normalizes the vector correctly.
 /// </summary>
-TEST_F(V4Tests, TestNormalize)
+TEST_F(V4Tests, Normalize)
 {
     unify::V4 V4{3.0f, 4.0f, 5.0f, 1.0f};
     V4.Normalize();
@@ -115,7 +115,7 @@ TEST_F(V4Tests, TestNormalize)
 /// <summary>
 /// Tests the Dot() method of the V4 class, ensuring it calculates the correct dot product of two vectors.
 /// </summary>
-TEST_F(V4Tests, TestDot)
+TEST_F(V4Tests, Dot)
 {
     unify::V4 v1{1.0f, 2.0f, 3.0f, 4.0f};
     unify::V4 V4{4.0f, 5.0f, 6.0f, 7.0f};
@@ -126,7 +126,7 @@ TEST_F(V4Tests, TestDot)
 /// <summary>
 /// Tests the IsZero() method of the V4 class, ensuring it correctly identifies a zero vector
 /// </summary>
-TEST_F(V4Tests, TestIsZero)
+TEST_F(V4Tests, IsZero)
 {
     unify::V4 v1{0.0f, 0.0f, 0.0f, 0.0f};
     unify::V4 V4{1.0f, 0.0f, 0.0f, 0.0f};
@@ -137,7 +137,7 @@ TEST_F(V4Tests, TestIsZero)
 /// <summary>
 /// Tests the Absolute() method of the V4 class, ensuring it returns the correct absolute value of the vector.
 /// </summary>
-TEST_F(V4Tests, TestAbsolute)
+TEST_F(V4Tests, Absolute)
 {
     unify::V4 v1{-3.0f, 4.0f, 5.0f, 1.0f};
     unify::V4 absV1 = v1.Absolute();

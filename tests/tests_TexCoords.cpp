@@ -40,7 +40,7 @@ protected:
 /// <summary>
 /// Tests the default constructor of the UV class, ensuring it initializes to zero.
 /// </summary>
-TEST_F(TexCoordsTests, TestDefaultConstructor)
+TEST_F(TexCoordsTests, DefaultConstructor)
 {
     unify::TexCoords uv{};
     EXPECT_FLOAT_EQ(uv.u, 0.0);
@@ -50,7 +50,7 @@ TEST_F(TexCoordsTests, TestDefaultConstructor)
 /// <summary>
 /// Tests the parameterized constructor of the UV class, ensuring it initializes to the provided values.
 /// </summary>
-TEST_F(TexCoordsTests, TestParameterizedConstructor)   
+TEST_F(TexCoordsTests, ParameterizedConstructor)   
 {
     unify::TexCoords uv{3.0f, 4.0f};
     EXPECT_FLOAT_EQ(uv.u, 3.0);
@@ -60,7 +60,7 @@ TEST_F(TexCoordsTests, TestParameterizedConstructor)
 /// <summary>
 /// Tests the operator[] of the UV class, ensuring it correctly accesses the x and y components of the vector.
 /// </summary>
-TEST_F(TexCoordsTests, TestOperatorIndex)
+TEST_F(TexCoordsTests, OperatorIndex)
 {
     unify::TexCoords uv{3.0f, 4.0f};
     EXPECT_FLOAT_EQ(uv[0], 3.0);
@@ -73,7 +73,7 @@ TEST_F(TexCoordsTests, TestOperatorIndex)
 /// <summary>
 /// Tests the Cast() function for UV, ensuring it correctly converts a UV to a string representation.
 /// </summary>
-TEST_F(TexCoordsTests, TestCastToString)
+TEST_F(TexCoordsTests, ToString)
 {
     unify::TexCoords uv{3.1, 4.2};
     auto str = unify::ToString(uv);    

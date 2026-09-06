@@ -41,7 +41,7 @@ protected:
 
 /// @brief
 /// Tests the default constructor of the BBox class, ensuring it initializes to zero.
-TEST_F(QuaternionTests, TestDefaultConstructor)
+TEST_F(QuaternionTests, DefaultConstructor)
 {
     unify::Quaternion q {};
     EXPECT_FLOAT_EQ(q.x, 0.0f);
@@ -52,7 +52,7 @@ TEST_F(QuaternionTests, TestDefaultConstructor)
 
 
 /// @brief Initialize Quaterniion to identity.
-TEST_F(QuaternionTests, TestIdentityConstructor)
+TEST_F(QuaternionTests, IdentityConstructor)
 {
     unify::Quaternion q {unify::QuaternionIdentity()};
     EXPECT_FLOAT_EQ(q.x, 0.0f);

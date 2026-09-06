@@ -40,7 +40,7 @@ protected:
 /// <summary>
 /// Tests the default constructor of the Ray class, ensuring it initializes origin facing forward (z-axis).
 /// </summary>
-TEST_F(RayTests, TestDefaultConstructor)
+TEST_F(RayTests, DefaultConstructor)
 {
     unify::Ray<float> ray{};
     EXPECT_FLOAT_EQ(ray.origin.x, 0.0f);
@@ -52,9 +52,9 @@ TEST_F(RayTests, TestDefaultConstructor)
 }
 
 /// <summary>
-/// Tests the default constructor of the Ray class, ensuring it initializes origin facing forward (z-axis).
+/// Tests the RayFromOriginAndDirection function, ensuring it initializes the ray correctly.
 /// </summary>
-TEST_F(RayTests, TestRayFromOriginAndDirection)
+TEST_F(RayTests, RayFromOriginAndDirection)
 {
     unify::Ray<float> ray = unify::RayFromOriginAndDirection<float>({1.0f, 2.0f, 3.0}, {4.0, 5.0, 6.0});
     EXPECT_FLOAT_EQ(ray.origin.x, 1.0f);

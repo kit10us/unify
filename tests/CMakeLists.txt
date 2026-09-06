@@ -27,7 +27,6 @@ add_executable("${PROJECT_NAME}"
     tests_Cast.cpp
     tests_Color.cpp
     tests_ColorUnit.cpp
-    tests_DataLock.cpp
     tests_LineSegment3.cpp
     tests_Matrix.cpp
     tests_Path.cpp
@@ -39,6 +38,7 @@ add_executable("${PROJECT_NAME}"
     tests_V2.cpp
     tests_V3.cpp
     tests_V4.cpp
+    tests_TimeDelta.cpp
     )
 
 target_include_directories("${PROJECT_NAME}" 

@@ -42,7 +42,7 @@ protected:
 
 using namespace unify;
 
-TEST_F(CastTests, TestCasts)
+TEST_F(CastTests, Casts)
 {
     using namespace std::string_literals;
     using namespace std::string_view_literals;

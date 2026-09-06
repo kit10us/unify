@@ -44,7 +44,7 @@ protected:
 /// <summary>
 /// Tests the default constructor of the BBox class, ensuring it initializes to zero.
 /// </summary>
-TEST_F(BBoxTests, TestDefaultConstructor)
+TEST_F(BBoxTests, DefaultConstructor)
 {
     unify::BBox bbox{};
     EXPECT_FLOAT_EQ(bbox.sup.x, 0.0f);
@@ -56,7 +56,7 @@ TEST_F(BBoxTests, TestDefaultConstructor)
 /// <summary>
 /// Tests the parameterized constructor of the BBox class, ensuring it initializes to the provided values
 /// </summary>
-TEST_F(BBoxTests, TestParameterizedConstructor)
+TEST_F(BBoxTests, ParameterizedConstructor)
 {
     unify::V3 sup{3.0f, 4.0f, 5.0f};
     unify::V3 inf{1.0f, 2.0f, 3.0f};
@@ -73,7 +73,7 @@ TEST_F(BBoxTests, TestParameterizedConstructor)
 /// Tests the square constructor of the BBox class, ensuring it initializes to a cube with the
 /// correct dimensions.
 /// </summary>
-TEST_F(BBoxTests, TestSquareConstructor)
+TEST_F(BBoxTests, SquareConstructor)
 {
     unify::BBox bbox{10.0f};
     EXPECT_FLOAT_EQ(bbox.sup.x, 5.0f);
@@ -88,7 +88,7 @@ TEST_F(BBoxTests, TestSquareConstructor)
 /// Tests the Fix() method of the BBox class, ensuring it correctly identifies when the sup
 /// and inf corners are reversed and fixes them.
 /// </summary>
-TEST_F(BBoxTests, TestFix)
+TEST_F(BBoxTests, Fix)
 {
     unify::BBox bbox{};
     bbox.inf = {3.0f, 4.0f, 5.0f};
@@ -107,7 +107,7 @@ TEST_F(BBoxTests, TestFix)
 /// Tests the GenerateCorners() method of the BBox class, ensuring it correctly generates the corners
 /// of the bounding box.
 /// </summary>
-TEST_F(BBoxTests, TestGenerateCorners)
+TEST_F(BBoxTests, GenerateCorners)
 {
     unify::BBox bbox{unify::V3{1.0f, 2.0f, 3.0f}, unify::V3{4.0f, 5.0f, 6.0f}};
     std::array<unify::V3<float>, 8> corners;
@@ -124,7 +124,7 @@ TEST_F(BBoxTests, TestGenerateCorners)
 /// Tests the ContainsPoint() method of the BBox class, ensuring it correctly identifies when a
 /// point is within the bounding box.
 /// </summary>
-TEST_F(BBoxTests, TestContainsPoint)
+TEST_F(BBoxTests, ContainsPoint)
 {
     unify::BBox bbox{unify::V3{1.0f, 2.0f, 3.0f}, unify::V3{4.0f, 5.0f, 6.0f}};
     EXPECT_TRUE(bbox.ContainsPoint(unify::V3{2.0f, 3.0f, 4.0f}));
@@ -136,7 +136,7 @@ TEST_F(BBoxTests, TestContainsPoint)
 /// Tests the ContainsBBox() method of the BBox class, ensuring it correctly identifies when a
 /// bounding box is within the bounding box.
 /// </summary>
-TEST_F(BBoxTests, TestContainsBBox)
+TEST_F(BBoxTests, ContainsBBox)
 {
     unify::BBox bbox{unify::V3{1.0f, 2.0f, 3.0f}, unify::V3{4.0f, 5.0f, 6.0f}};
     unify::BBox innerBox{unify::V3{2.0f, 3.0f, 4.0f}, unify::V3{3.0f, 4.0f, 5.0f}};
@@ -148,7 +148,7 @@ TEST_F(BBoxTests, TestContainsBBox)
 /// <summary>
 /// Tests the Union() method of the BBox class, ensuring it correctly adds a bounding box with a position to the current bounding box.
 /// </summary>
-TEST_F(BBoxTests, TestUnion)
+TEST_F(BBoxTests, Union)
 {
     unify::BBox bbox{{-3.0f, -4.0f, -5.0f}, {1.0f, 1.0f, 1.0f}};
     unify::BBox otherBBox{unify::V3{1.0f, 2.0f, 3.0f}, unify::V3{4.0f, 5.0f, 6.0f}};
@@ -174,7 +174,7 @@ TEST_F(BBoxTests, TestUnion)
 /// <summary>
 /// Tests the Intersects() method of the BBox class, ensuring it correctly identifies when a ray intersects with the bounding box.
 /// </summary>
-TEST_F(BBoxTests, TestIntersects)
+TEST_F(BBoxTests, Intersects)
 {
     unify::BBox bbox{{0.0f, 0.0f, 0.0f}, {1.0f, 1.0f, 1.0f}};
     unify::Ray ray = unify::RayFromOriginAndDirection<float>({-1.0f, 0.5f, 0.5f}, {1.0f, 0.0f, 0.0f});
@@ -186,7 +186,7 @@ TEST_F(BBoxTests, TestIntersects)
     EXPECT_FLOAT_EQ(hit->point.z, 0.5f);
 }
 
-TEST_F(BBoxTests, TestClip)
+TEST_F(BBoxTests, Clip)
 {
     unify::BBox bbox{{0.0f, 0.0f, 0.0f}, {1.0f, 1.0f, 1.0f}};
     unify::Ray ray = unify::RayFromOriginAndDirection<float>({-1.0f, 0.5f, 0.5f}, {1.0f, 0.0f, 0.0f});

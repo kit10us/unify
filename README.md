@@ -43,7 +43,7 @@ cmake -S . -B build -G "Visual Studio 17 2022"
 
 ## Enable Unit Testing
 To include the test suite in your build:
-cmake -S . -B build -G "Visual Studio 17 2022" -DUNIFY_BUILD_TESTS=ON
+cmake -S . -B build -G "Visual Studio 17 2022" -DBUILD_TESTS=ON
 
 # Standards and Practices
 ## Separation of Concerns

@@ -40,7 +40,7 @@ protected:
 /// <summary>
 /// Tests the default constructor of the LineSegment3 class, ensuring it initializes correctly.
 /// </summary>
-TEST_F(LineSegment3Tests, TestDefaultConstructor)
+TEST_F(LineSegment3Tests, DefaultConstructor)
 {
     unify::LineSegment3<float> segment;
     EXPECT_FLOAT_EQ(segment.begin.x, 0.0);
@@ -54,7 +54,7 @@ TEST_F(LineSegment3Tests, TestDefaultConstructor)
 /// <summary>
 /// Tests the parameterized constructor of the LineSegment3 class, ensuring it initializes to the provided values
 /// </summary>
-TEST_F(LineSegment3Tests, TestParameterizedConstructor)
+TEST_F(LineSegment3Tests, ParameterizedConstructor)
 {
     unify::V3<float> begin{1.0f, 2.0f, 3.0f};
     unify::V3<float> end{4.0f, 5.0f, 6.0f};
@@ -71,7 +71,7 @@ TEST_F(LineSegment3Tests, TestParameterizedConstructor)
 /// Tests the Length() method of the LineSegment3 class, ensuring it correctly calculates the length of
 /// the line segment.
 /// </summary>
-TEST_F(LineSegment3Tests, TestLength)
+TEST_F(LineSegment3Tests, Length)
 {
     unify::V3<float> begin{1.0f, 2.0f, 3.0f};
     unify::V3<float> end{4.0f, 6.0f, 8.0f};

@@ -33,7 +33,7 @@ namespace unify::String
 	}
 
 	template< typename T >
-	std::vector<T> Split(std::string_view sourceString, const char delimitor, bool trim = true)
+	std::vector<T> Split(std::string_view sourceString, const char delimitor, bool trim)
 	{
 		std::vector<T> results;
 		std::string item;
