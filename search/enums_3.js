@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['slash_0',['Slash',['../namespaceunify.html#a6510a888bcad61b7955a60679dbc9fd3',1,'unify']]],
-  ['streamaccesstype_1',['StreamAccessType',['../namespaceunify.html#a5c97e638d26eea5413e8708b15af2417',1,'unify']]],
-  ['streamseektype_2',['StreamSeekType',['../namespaceunify.html#a384b8275876d58563e0ed7a141823264',1,'unify']]]
+  ['testenum_0',['TestEnum',['../tests__Result_8cpp.html#a94beb900defc123803319b326e764a0d',1,'tests_Result.cpp']]],
+  ['type_1',['TYPE',['../structunify_1_1NinePoint.html#a47fc4f4242673361a16ab53737e38490',1,'unify::NinePoint']]]
 ];

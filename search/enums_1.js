@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['datalockaccess_0',['DataLockAccess',['../namespaceunify.html#a95c1a80f0af8b845dcf88ba26d2faa86',1,'unify']]]
+  ['order_0',['Order',['../classunify_1_1ColorUnit.html#a04614e684f8dbe9c2f028313b9931be8',1,'unify::ColorUnit::Order'],['../namespaceunify.html#a7e1d013ad187fee7ca653ea1f30f29fb',1,'unify::Order']]]
 ];

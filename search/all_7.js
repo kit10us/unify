@@ -3,7 +3,7 @@ var searchData=
   ['edgeintersectsface_0',['EdgeIntersectsFace',['../namespaceunify.html#a9bc4ff0d4d6d8daace09140209a289d8',1,'unify']]],
   ['empty_1',['empty',['../classunify_1_1Any.html#a65c2be9da70302722e4f5a9f2f9f7850',1,'unify::Any']]],
   ['enable_20unit_20testing_2',['Enable Unit Testing',['../md_README.html#autotoc_md7',1,'']]],
-  ['end_3',['end',['../classunify_1_1LineSegment3.html#a0af115ebeecbab8d1c8692b8ba04b7f2',1,'unify::LineSegment3::end'],['../classunify_1_1DataLock.html#a0c5c850ea8cd6b71ec8760b01b07c5ad',1,'unify::DataLock::end()'],['../classunify_1_1Lookup.html#a036de8004b86301f1d5e4765cf3bebb6',1,'unify::Lookup::end()']]],
+  ['end_3',['end',['../classunify_1_1LineSegment3.html#a0af115ebeecbab8d1c8692b8ba04b7f2',1,'unify::LineSegment3::end'],['../classunify_1_1Lookup.html#a036de8004b86301f1d5e4765cf3bebb6',1,'unify::Lookup::end()']]],
   ['endofstream_4',['EndOfStream',['../classunify_1_1Stream.html#ab489c13e2cc6b8a8d38117e82a3b1a87',1,'unify::Stream']]],
   ['endswith_5',['EndsWith',['../namespaceunify_1_1String.html#abd13ead8f2eb5991ebb0e253a8cdad3c',1,'unify::String::EndsWith(std::string_view source, std::string_view endsWith)'],['../namespaceunify_1_1String.html#a5bd5d26256eae0d2ec46c22f6a097975',1,'unify::String::EndsWith(std::string source, std::string endsWith)']]],
   ['evolution_20and_20vision_6',['Evolution and Vision',['../md_README.html#autotoc_md2',1,'']]],

@@ -8,7 +8,5 @@ var searchData=
   ['width_5',['width',['../classunify_1_1Size.html#a9a451f9030bd55408acd1343a550af7c',1,'unify::Size::width'],['../classunify_1_1Size3.html#a3a05612aa745529e8c11f0ac4dec1c6a',1,'unify::Size3::width']]],
   ['workflow_6',['Developer Workflow',['../dir_59425e443f801f1f2fd8bbe4959a3ccf.html#autotoc_md30',1,'']]],
   ['write_7',['Write',['../classunify_1_1FileStream.html#a8565025944c04ae2826df7c98b6209d1',1,'unify::FileStream::Write(const void *source, unsigned int length) override'],['../classunify_1_1FileStream.html#ae5574a25c44b3e3cabe590e9a2c489ae',1,'unify::FileStream::Write(std::string out)'],['../classunify_1_1Stream.html#afc7bc64489be0649c48e674ca722bacc',1,'unify::Stream::Write()']]],
-  ['writeaccess_8',['WriteAccess',['../namespaceunify.html#ab19a74b5c9092ba316ba904eaae966d6',1,'unify']]],
-  ['writeonly_9',['Writeonly',['../namespaceunify.html#a95c1a80f0af8b845dcf88ba26d2faa86abe47152df0662b76df1d057b39e2367b',1,'unify']]],
-  ['writepack_10',['WritePack',['../classunify_1_1FileStream.html#a036eb4ef6798ee811ef0e80ff7b5cf90',1,'unify::FileStream::WritePack()'],['../classunify_1_1Stream.html#ae767bdddd271db5a06f21a7d8a5d9be6',1,'unify::Stream::WritePack()']]]
+  ['writepack_8',['WritePack',['../classunify_1_1FileStream.html#a036eb4ef6798ee811ef0e80ff7b5cf90',1,'unify::FileStream::WritePack()'],['../classunify_1_1Stream.html#ae767bdddd271db5a06f21a7d8a5d9be6',1,'unify::Stream::WritePack()']]]
 ];

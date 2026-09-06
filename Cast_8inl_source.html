@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="keyword">inline</span></div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>std::optional&lt;bool&gt; <a class="code hl_function" href="namespaceunify.html#a97c24330972018b17c005089dd09a7da">unify::FromString</a>(std::string_view raw_text) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>std::optional&lt;bool&gt; <a class="code hl_function" href="namespaceunify.html#a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680">unify::FromString</a>(std::string_view raw_text) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>{</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    std::string text(raw_text.data(), raw_text.data() + raw_text.size());</div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    std::transform(text.begin(), text.end(), text.begin(), ::tolower);</div>
@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="keyword">inline</span></div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>std::optional&lt;int8_t&gt; <a class="code hl_function" href="namespaceunify.html#a97c24330972018b17c005089dd09a7da">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>std::optional&lt;int8_t&gt; <a class="code hl_function" href="namespaceunify.html#a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>{</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    int8_t out{};</div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    <span class="keyword">auto</span> [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);</div>
@@ -407,7 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="keyword">inline</span></div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>std::optional&lt;uint8_t&gt; <a class="code hl_function" href="namespaceunify.html#a97c24330972018b17c005089dd09a7da">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>std::optional&lt;uint8_t&gt; <a class="code hl_function" href="namespaceunify.html#a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>{</div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    uint8_t out{};</div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    <span class="keyword">auto</span> [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);</div>
@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="keyword">inline</span></div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>std::optional&lt;int32_t&gt; <a class="code hl_function" href="namespaceunify.html#a97c24330972018b17c005089dd09a7da">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>std::optional&lt;int32_t&gt; <a class="code hl_function" href="namespaceunify.html#a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>{</div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    int32_t out{};</div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    <span class="keyword">auto</span> [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);</div>
@@ -439,7 +439,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="keyword">inline</span></div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>std::optional&lt;uint32_t&gt; <a class="code hl_function" href="namespaceunify.html#a97c24330972018b17c005089dd09a7da">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>std::optional&lt;uint32_t&gt; <a class="code hl_function" href="namespaceunify.html#a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>{</div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    uint32_t out{};</div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    <span class="keyword">auto</span> [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);</div>
@@ -455,7 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="keyword">inline</span></div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>std::optional&lt;std::uint64_t&gt; <a class="code hl_function" href="namespaceunify.html#a97c24330972018b17c005089dd09a7da">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>std::optional&lt;std::uint64_t&gt; <a class="code hl_function" href="namespaceunify.html#a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>{</div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    std::uint64_t out{};</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    <span class="keyword">auto</span> [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);</div>
@@ -471,7 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span> </div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span><span class="keyword">inline</span></div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>std::optional&lt;float&gt; <a class="code hl_function" href="namespaceunify.html#a97c24330972018b17c005089dd09a7da">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>std::optional&lt;float&gt; <a class="code hl_function" href="namespaceunify.html#a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>{</div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    <span class="keywordtype">float</span> out{};</div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    <span class="keyword">auto</span> [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);</div>
@@ -487,7 +487,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span> </div>
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span><span class="keyword">inline</span></div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>std::optional&lt;double&gt; <a class="code hl_function" href="namespaceunify.html#a97c24330972018b17c005089dd09a7da">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>std::optional&lt;double&gt; <a class="code hl_function" href="namespaceunify.html#a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>{</div>
 <div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>    <span class="keywordtype">double</span> out{};</div>
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    <span class="keyword">auto</span> [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);</div>
@@ -525,7 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span> </div>
 <div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span><span class="keyword">inline</span></div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>std::optional&lt;int16_t&gt; <a class="code hl_function" href="namespaceunify.html#a97c24330972018b17c005089dd09a7da">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>std::optional&lt;int16_t&gt; <a class="code hl_function" href="namespaceunify.html#a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>{</div>
 <div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>{</div>
 <div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>    int16_t out{};</div>
@@ -542,7 +542,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span> </div>
 <div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span><span class="keyword">inline</span></div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>std::optional&lt;uint16_t&gt; <a class="code hl_function" href="namespaceunify.html#a97c24330972018b17c005089dd09a7da">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>std::optional&lt;uint16_t&gt; <a class="code hl_function" href="namespaceunify.html#a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>{</div>
 <div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>    uint16_t out{};</div>
 <div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>    <span class="keyword">auto</span> [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);</div>
@@ -559,7 +559,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span> </div>
 <div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span><span class="keyword">inline</span></div>
-<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>std::optional&lt;std::wstring&gt; <a class="code hl_function" href="namespaceunify.html#a97c24330972018b17c005089dd09a7da">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>std::optional&lt;std::wstring&gt; <a class="code hl_function" href="namespaceunify.html#a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680">unify::FromString</a>(std::string_view text) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>{</div>
 <div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>    <span class="keywordflow">return</span> std::wstring(text.begin(), text.end());</div>
 <div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>}</div>
@@ -668,7 +668,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span> </div>
 <div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span><span class="keyword">inline</span></div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>std::optional&lt;std::string&gt; <a class="code hl_function" href="namespaceunify.html#a97c24330972018b17c005089dd09a7da">unify::FromString</a>(std::string_view in) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>std::optional&lt;std::string&gt; <a class="code hl_function" href="namespaceunify.html#a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680">unify::FromString</a>(std::string_view in) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>{</div>
 <div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>    <span class="keywordflow">try</span></div>
 <div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>    {</div>
@@ -683,7 +683,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span><span class="preprocessor">#pragma warning(pop)</span></div>
 <div class="ttc" id="aCast_8inl_html_ad38027016b3a14d3715ff1aecfe26dd6"><div class="ttname"><a href="Cast_8inl.html#ad38027016b3a14d3715ff1aecfe26dd6">ToWString</a></div><div class="ttdeci">std::optional&lt; std::wstring &gt; ToWString(std::string input_string)</div><div class="ttdef"><b>Definition</b> Cast.inl:80</div></div>
 <div class="ttc" id="anamespaceunify_html_a2a66909808f76f5cd490dfffe1c22ff4"><div class="ttname"><a href="namespaceunify.html#a2a66909808f76f5cd490dfffe1c22ff4">unify::ToString</a></div><div class="ttdeci">std::optional&lt; std::string &gt; ToString(const TFrom in) noexcept=delete</div></div>
-<div class="ttc" id="anamespaceunify_html_a97c24330972018b17c005089dd09a7da"><div class="ttname"><a href="namespaceunify.html#a97c24330972018b17c005089dd09a7da">unify::FromString</a></div><div class="ttdeci">std::optional&lt; TTo &gt; FromString(std::string_view in) noexcept=delete</div><div class="ttdef"><b>Definition</b> DataLock.inl:67</div></div>
+<div class="ttc" id="anamespaceunify_html_a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680"><div class="ttname"><a href="namespaceunify.html#a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680">unify::FromString</a></div><div class="ttdeci">std::optional&lt; TTo &gt; FromString(std::string_view in) noexcept=delete</div><div class="ttdef"><b>Definition</b> TimeDelta.inl:259</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

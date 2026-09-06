@@ -17,9 +17,17 @@ var searchData=
   ['anglepihalf_14',['AnglePIHalf',['../namespaceunify.html#a033d66502f09b42b0d35cc268d7ea107',1,'unify']]],
   ['any_15',['Any',['../classunify_1_1Any.html#a6c4c6b1d3700f39ccf361d40aa5a400c',1,'unify::Any::Any() noexcept'],['../classunify_1_1Any.html#a0bbed4d27a884e2a6cc8db5a62f76e60',1,'unify::Any::Any(const ValueType &amp;value)'],['../classunify_1_1Any.html#a5e80ac37f4dd7f425b91076aabbcbde3',1,'unify::Any::Any(const Any &amp;other)'],['../classunify_1_1Any.html#ab06553f850a0499fbd2a6bcfacb8fc57',1,'unify::Any::Any(Any &amp;&amp;other) noexcept'],['../classunify_1_1Any.html#aea4b223d7fa1ff9725f5b76aedb77192',1,'unify::Any::Any(ValueType &amp;&amp;value, typename std::enable_if&lt; !std::is_same&lt; Any &amp;, ValueType &gt;::value &gt;::type *=0, typename std::enable_if&lt; !std::is_const&lt; ValueType &gt;::value &gt;::type *=0)']]],
   ['any_5fcast_16',['any_cast',['../namespaceunify.html#ab2ad816f36c52d1c389e8bf891872778',1,'unify::any_cast(Any *operand)'],['../namespaceunify.html#a8c691e91859ea1162d24b0215bdb3d51',1,'unify::any_cast(const Any *operand) noexcept'],['../namespaceunify.html#ac9c6f388844576f1afef607728654a5a',1,'unify::any_cast(Any &amp;operand)'],['../namespaceunify.html#a43a60fa2a5a185f3d198db197e943f74',1,'unify::any_cast(const Any &amp;operand)'],['../namespaceunify.html#ad3d40f387f64b5bf706747a9ba67f1ec',1,'unify::any_cast(Any &amp;&amp;operand)']]],
-  ['aspectratiohw_17',['AspectRatioHW',['../classunify_1_1Size.html#a24d68aa421e799ecf3f6cd105eb3ad58',1,'unify::Size']]],
-  ['aspectratiowh_18',['AspectRatioWH',['../classunify_1_1Size.html#ad9777ffba2828e63b570549fc15679f3',1,'unify::Size']]],
-  ['attachto_19',['AttachTo',['../classunify_1_1Frame.html#a4846e9930d40f3d0da7f3508ee05b814',1,'unify::Frame::AttachTo()'],['../classunify_1_1Tree.html#ab2e61f69f30e2e8d1cdbbb44c611dc0e',1,'unify::Tree::AttachTo()']]],
-  ['audit_20',['Audit',['../classunify_1_1Parameters.html#a48c801356e1b3627eca23ecbcfb5c478',1,'unify::Parameters']]],
-  ['auditcount_21',['AuditCount',['../classunify_1_1Parameters.html#aacaec7268d84538b5c5a183419a36f3f',1,'unify::Parameters']]]
+  ['asdays_17',['AsDays',['../classunify_1_1TimeDelta.html#adc5ce7762fe4e238aae96b83a3dd88e1',1,'unify::TimeDelta']]],
+  ['ashours_18',['AsHours',['../classunify_1_1TimeDelta.html#a448e1c7d0fb4cfeb455dacd1ebf790af',1,'unify::TimeDelta']]],
+  ['asmicros_19',['AsMicros',['../classunify_1_1TimeDelta.html#adb932c1f11ab00c446639ba174809044',1,'unify::TimeDelta']]],
+  ['asminutes_20',['AsMinutes',['../classunify_1_1TimeDelta.html#ae84aba4972c1525c708805fb7a9f3011',1,'unify::TimeDelta']]],
+  ['asms_21',['AsMS',['../classunify_1_1TimeDelta.html#a2c7785a2520dd441ebf0f30e2822867e',1,'unify::TimeDelta']]],
+  ['aspectratiohw_22',['AspectRatioHW',['../classunify_1_1Size.html#a24d68aa421e799ecf3f6cd105eb3ad58',1,'unify::Size']]],
+  ['aspectratiowh_23',['AspectRatioWH',['../classunify_1_1Size.html#ad9777ffba2828e63b570549fc15679f3',1,'unify::Size']]],
+  ['asseconds_24',['AsSeconds',['../classunify_1_1TimeDelta.html#a0cca41e1d572a0a28d8db1a33ef3420e',1,'unify::TimeDelta']]],
+  ['asweeks_25',['AsWeeks',['../classunify_1_1TimeDelta.html#adb67b416089ec5c7762e366c2547864a',1,'unify::TimeDelta']]],
+  ['asyears_26',['AsYears',['../classunify_1_1TimeDelta.html#ade7f98c7742de26a6918e6aaf30d8280',1,'unify::TimeDelta']]],
+  ['attachto_27',['AttachTo',['../classunify_1_1Frame.html#a4846e9930d40f3d0da7f3508ee05b814',1,'unify::Frame::AttachTo()'],['../classunify_1_1Tree.html#ab2e61f69f30e2e8d1cdbbb44c611dc0e',1,'unify::Tree::AttachTo()']]],
+  ['audit_28',['Audit',['../classunify_1_1Parameters.html#a48c801356e1b3627eca23ecbcfb5c478',1,'unify::Parameters']]],
+  ['auditcount_29',['AuditCount',['../classunify_1_1Parameters.html#aacaec7268d84538b5c5a183419a36f3f',1,'unify::Parameters']]]
 ];
