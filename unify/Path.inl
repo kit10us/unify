@@ -27,23 +27,79 @@ namespace unify
 	}
 
 	inline
-	Path::Path( std::string path )
-		//: m_path{ String::BeginsWith( path, XPathPrefix ) ? path : XPathPrefix + path }
+	Path::Path( std::string_view path_string )
+	: m_scheme{}
+	, m_path{}
 	{
-		auto split_path = URISplit(m_path);
-
+		std::regex pattern { "^([A-Za-z0-9]+)://(.*)$" };
+		std::match_results<std::string_view::const_iterator> match{};
+		auto is_uri = std::regex_search(path_string.begin(), path_string.end(), match, pattern);
+		if (is_uri)
+		{
+			m_scheme = match[1];
+			m_path = match[2];
+		}
+		else
+		{
+			m_path = path_string;
+		}
 	}
 
+	/*
 	inline
 	Path::Path( char * path )
 		//: m_path{ String::BeginsWith( path, XPathPrefix ) ? path : XPathPrefix + path }
 	{
 	}
+	*/
 
 	inline
-	Path::Path( Path left, Path right )
+	Path::Path( const Path& left, const Path& right )
+	: m_scheme{}
+	, m_path{}
 	{
-		Combine( left, right );
+		using namespace std::string_view_literals;
+
+		auto left_scheme = left.GetScheme();
+		auto right_scheme = right.GetScheme();
+
+		if ( ! left_scheme.empty() )
+		{
+			m_scheme = left_scheme;
+		}
+		else if ( ! right_scheme.empty() )
+		{
+			m_scheme = right_scheme;
+		}
+
+		auto left_path = left.GetPath();
+		auto right_path = right.GetPath();
+
+		if (left_path.empty())
+		{
+			m_path = right_path;
+		}
+		else if (right_path.empty())
+		{
+			m_path = left_path;
+		}
+		else
+		{
+			if (left_path.back() != '/' && left_path.back() != '\\' && right_path.front() != '/' && right_path.front() != '\\')
+			{
+				m_path = left_path + "/" + right_path;
+			}
+			else if ((left_path.back() == '/' || left_path.back() == '\\') && (right_path.front() == '/' || right_path.front() == '\\'))
+			{
+				m_path = left_path + right_path.substr(1);
+			}
+			else
+			{
+				m_path = left_path + right_path;
+			}
+		}
+
+		m_path = String::StringReplace(m_path, R"(\)", "/");
 	}
 
 	inline
@@ -204,7 +260,7 @@ namespace unify
 		m_path = std::string();
 		for ( std::vector< std::string >::const_iterator itr = pathParts.begin(), end = pathParts.end(); itr != end; ++itr )
 		{
-			Combine( *this, Path( *itr ) );
+			//Combine( *this, Path( *itr ) );
 		}
 		return *this;
 	}
@@ -409,7 +465,7 @@ namespace unify
 	inline
 	std::string Path::ToString() const noexcept
 	{
-		return ToString(Slash::Foward);
+		return ToString(Slash::Forward);
 	}
 
 	inline
@@ -421,7 +477,7 @@ namespace unify
 
 		switch (direction)
 		{
-		case Slash::Foward:
+		case Slash::Forward:
 			temp = String::StringReplace( m_path, "\\", "/" );
 			break;
 		case Slash::Backward:

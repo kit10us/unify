@@ -250,12 +250,13 @@ namespace unify
 		return std::to_string(in.AsSeconds());
 	}
 
-
+	inline
 	std::optional<std::string> ToString(const TimeDelta in)
 	{
 		return std::nullopt;
 	}
 	
+	inline
 	std::optional<TimeDelta> FromString(std::string_view text)
 	{
 		return std::nullopt;

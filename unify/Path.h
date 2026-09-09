@@ -38,9 +38,14 @@ namespace unify
 {
 	enum class Slash
 	{
-		Foward,
+		Forward,
 		Backward
 	};
+
+	/// @brief Split a path, as a string, into a URI prefixm and the actual path.
+	/// @param path path with or without URI prefix.
+	/// @return a pair of strings with the scheme and the path.
+	inline static std::pair<std::string, std::string> URISplit(std::string_view path);	
 
 	/// <summary>
 	/// Represents a path, or root identifier (such as a unique definition of an asset, ex. "texture:///", or file, ex/ "file://").
@@ -52,34 +57,40 @@ namespace unify
 	class Path	
 	{
 	public:
-		/// @brief Split a path, as a string, into a URI prefixm and the actual path.
-		/// @param path path with or without URI prefix.
-		/// @return a pair of strings with the scheme and the path.
-		inline static std::pair<std::string, std::string> URISplit(std::string_view path);
-
 		/// @brief Static constructor for a file path.
 		/// @return A file path.
 		inline static Path MakeFile(std::string_view filename = {});
 
 		Path();
-		explicit Path( std::string path );
-		explicit Path( char * path );
-		Path( Path left, Path right );
+
+		/// @brief Construct a path from a string, which may or may not have a URI prefix.
+		Path(std::string_view path);
+
+		/// @brief Construct a path from a left and right path, combining them.
+		/// @note 
+		/// The left path's scheme is used if it is present. If not, then the right path's scheme is used if it is present. If neither has a scheme, then the resulting path will not have a scheme. 
+		/// If they both have a scheme, then the left path's scheme is used.
+		/// @param left 
+		/// @param right 
+		Path( const Path& left, const Path& right );
+
 		Path(const std::vector< std::string > & pathParts);
+
 		Path(std::string_view scheme, std::string_view path);
 
-		/// @brief Set the URI scheme.		
+		/// @brief Set the URI scheme ("http", "file", etc.).
 		bool SetScheme(std::string_view scheme) noexcept;
 
-		/// @brief Get the URI prefix.
+		/// @brief Get the URI scheme ("http", "file", etc.).
 		std::string GetScheme() const noexcept;
 
-		/// @brief Check if the path has a scheme (is URI).
+		/// @brief Check if the path has a scheme (example: "http", "file").
 		bool HasScheme() const noexcept;
 
+		/// @brief Set the path portion ("/home/user", "www.example.com/site", etc.).
 		void SetPath(std::string_view path) noexcept;
 
-		/// @brief Get the path portion.
+		/// @brief Get the path portion ("/home/user", "www.example.com/site", etc.).
 		std::string GetPath() const noexcept;
 
 		/// @brief Check if path is empty. 
@@ -210,9 +221,12 @@ namespace unify
 	/// </summary>
 	Path ChangeExtension( Path path, std::string extension );
 	
-	inline std::pair<std::string, std::string> Path::URISplit(std::string_view path)
+	inline std::pair<std::string, std::string> URISplit(std::string_view path)
 	{
-		return {"a", "b"};
+		std::regex pattern { "^([A-Za-z0-9]+)://(.*)$" };
+		std::match_results<std::string_view::const_iterator> match{};
+		std::regex_search(path.begin(), path.end(), match, pattern);
+		return {match[1], match[2]};
 	}
 
 	inline Path Path::MakeFile(std::string_view file_path)

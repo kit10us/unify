@@ -62,9 +62,28 @@ TEST_F(PathTests, FileSchemeConstructorEmpty)
     EXPECT_TRUE(path.HasScheme());
 }
 
-TEST_F(PathTests, FileSchemeConstructorPath)
+TEST_F(PathTests, DefaultConstructor)
 {
     using namespace unify;
+    Path path = {};
+
+    EXPECT_TRUE(path.IsEmpty());
+
+    // An empty URI path is still a URI path format.
+    EXPECT_FALSE(path.HasScheme());
+
+    EXPECT_STREQ(path.GetScheme().c_str(), "");
+    
+    EXPECT_STREQ(path.GetPath().c_str(), "");
+
+    EXPECT_STREQ(path.ToString().c_str(), "");
+}
+
+TEST_F(PathTests, FileSchemeConstructor)
+{
+    using namespace unify;
+    using namespace std::string_view_literals;
+
     Path path = Path::MakeFile("/home/user");
 
     EXPECT_FALSE(path.IsEmpty());
@@ -78,5 +97,104 @@ TEST_F(PathTests, FileSchemeConstructorPath)
 
     EXPECT_STREQ(path.ToString().c_str(), "file:///home/user");
 
-    EXPECT_STREQ(path.ToString(Slash::Backward).c_str(), "file://\\home\\user");
+    EXPECT_STREQ(path.ToString(Slash::Backward).c_str(), R"(file://\home\user)");
+}
+
+TEST_F(PathTests, FileStringConstructorWithScheme)
+{
+    using namespace unify;
+    using namespace std::string_view_literals;
+
+    Path path = Path("file:///home/user");
+
+    EXPECT_FALSE(path.IsEmpty());
+
+    // An empty URI path is still a URI path format.
+    EXPECT_TRUE(path.HasScheme());
+
+    EXPECT_STREQ(path.GetScheme().c_str(), "file");
+    
+    EXPECT_STREQ(path.GetPath().c_str(), "/home/user");
+
+    EXPECT_STREQ(path.ToString().c_str(), "file:///home/user");
+
+    EXPECT_STREQ(path.ToString(Slash::Backward).c_str(), R"(file://\home\user)");
+}
+
+TEST_F(PathTests, CombineSameSchemeConstructor)
+{
+    using namespace unify;
+    using namespace std::string_view_literals;
+
+    Path path_combine = Path::Path(Path("file:///home/user"), Path("file://documents"));
+
+    EXPECT_FALSE(path_combine.IsEmpty());
+
+    // An empty URI path is still a URI path format.
+    EXPECT_TRUE(path_combine.HasScheme());
+
+    EXPECT_STREQ(path_combine.GetScheme().c_str(), "file");
+    
+    EXPECT_STREQ(path_combine.GetPath().c_str(), "/home/user/documents");
+
+    EXPECT_STREQ(path_combine.ToString().c_str(), "file:///home/user/documents");
+
+    EXPECT_STREQ(path_combine.ToString(Slash::Backward).c_str(), R"(file://\home\user\documents)");
+}
+
+TEST_F(PathTests, CombineLeftSchemeConstructor)
+{
+    using namespace unify;
+    using namespace std::string_view_literals;
+    
+    Path path_left_scheme = Path::Path(Path("file:///home/user"), Path("documents"));
+
+    EXPECT_FALSE(path_left_scheme.IsEmpty());
+
+    // An empty URI path is still a URI path format.
+    EXPECT_TRUE(path_left_scheme.HasScheme());
+
+    EXPECT_STREQ(path_left_scheme.GetScheme().c_str(), "file");
+    
+    EXPECT_STREQ(path_left_scheme.GetPath().c_str(), "/home/user/documents");
+
+    EXPECT_STREQ(path_left_scheme.ToString().c_str(), "file:///home/user/documents");
+
+    EXPECT_STREQ(path_left_scheme.ToString(Slash::Backward).c_str(), R"(file://\home\user\documents)");
+
+    Path path_right_scheme = Path::Path(Path("/home/user"), Path("file://documents"));
+
+    EXPECT_FALSE(path_right_scheme.IsEmpty());
+
+    // An empty URI path is still a URI path format.
+    EXPECT_TRUE(path_right_scheme.HasScheme());
+
+    EXPECT_STREQ(path_right_scheme.GetScheme().c_str(), "file");
+    
+    EXPECT_STREQ(path_right_scheme.GetPath().c_str(), "/home/user/documents");
+
+    EXPECT_STREQ(path_right_scheme.ToString().c_str(), "file:///home/user/documents");
+
+    EXPECT_STREQ(path_right_scheme.ToString(Slash::Backward).c_str(), R"(file://\home\user\documents)");
+}
+
+TEST_F(PathTests, CombineMixedSchemeConstructor)
+{
+    using namespace unify;
+    using namespace std::string_view_literals;
+
+    Path path_mixed_scheme = Path::Path(Path("http://www.example.com/site"), Path("file://documents"));
+
+    EXPECT_FALSE(path_mixed_scheme.IsEmpty());
+
+    // An empty URI path is still a URI path format.
+    EXPECT_TRUE(path_mixed_scheme.HasScheme());
+
+    EXPECT_STREQ(path_mixed_scheme.GetScheme().c_str(), "http");
+    
+    EXPECT_STREQ(path_mixed_scheme.GetPath().c_str(), "www.example.com/site/documents");
+
+    EXPECT_STREQ(path_mixed_scheme.ToString().c_str(), "http://www.example.com/site/documents");
+
+    EXPECT_STREQ(path_mixed_scheme.ToString(Slash::Forward).c_str(), R"(http://www.example.com/site/documents)");
 }

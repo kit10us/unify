@@ -94,7 +94,7 @@ Using const std::string_viewâ€”specifically as a value parameter or return typeâ
     None of the member functions allow mutation of the underlying characters. Adding const to the view itself only prevents mutating the view's internal pointer and size, not the characters being viewed.
 
 2. Top-Level const Prevents Useful View Slicing
-    Member functions like remove_prefix() and remove_suffix() mutate the internal pointer and lenength to slice the view without allocating or copying.
+    Member functions like remove_prefix() and remove_suffix() mutate the internal pointer and length to slice the view without allocating or copying.
 
     Marking a parameter const std::string_view prohibits local slicing inside the function body, forcing you to create an additional copy of the string_view if you need to trim or parse substrings.
 
