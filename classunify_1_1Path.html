@@ -119,20 +119,22 @@ document.addEventListener('DOMContentLoaded', () => {
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a353752641541eb7a72f68e6ba50de00d" id="r_a353752641541eb7a72f68e6ba50de00d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a353752641541eb7a72f68e6ba50de00d">Path</a> ()</td></tr>
-<tr class="memitem:a2453548b34f03f5e68743b52824810bc" id="r_a2453548b34f03f5e68743b52824810bc"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2453548b34f03f5e68743b52824810bc">Path</a> (std::string path)</td></tr>
-<tr class="memitem:a30e8da8dc69a7f6fcd7dce302fd52811" id="r_a30e8da8dc69a7f6fcd7dce302fd52811"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a30e8da8dc69a7f6fcd7dce302fd52811">Path</a> (char *path)</td></tr>
-<tr class="memitem:a15597556bb56f1acc59dbf8d2ee2cdc5" id="r_a15597556bb56f1acc59dbf8d2ee2cdc5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a15597556bb56f1acc59dbf8d2ee2cdc5">Path</a> (Path left, Path right)</td></tr>
+<tr class="memitem:a0e38ed2862ad562b732877e34bc824bd" id="r_a0e38ed2862ad562b732877e34bc824bd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0e38ed2862ad562b732877e34bc824bd">Path</a> (std::string_view path)</td></tr>
+<tr class="memdesc:a0e38ed2862ad562b732877e34bc824bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a path from a string, which may or may not have a URI prefix.  <br /></td></tr>
+<tr class="memitem:a9b35c376009fa52bcd1f35fd1851b72f" id="r_a9b35c376009fa52bcd1f35fd1851b72f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9b35c376009fa52bcd1f35fd1851b72f">Path</a> (const Path &amp;left, const Path &amp;right)</td></tr>
+<tr class="memdesc:a9b35c376009fa52bcd1f35fd1851b72f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a path from a left and right path, combining them.  <br /></td></tr>
 <tr class="memitem:af117db130c4a7635469a4d562ee6d74c" id="r_af117db130c4a7635469a4d562ee6d74c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af117db130c4a7635469a4d562ee6d74c">Path</a> (const std::vector&lt; std::string &gt; &amp;pathParts)</td></tr>
 <tr class="memitem:abbabf460a224771f8f1271611cd82706" id="r_abbabf460a224771f8f1271611cd82706"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#abbabf460a224771f8f1271611cd82706">Path</a> (std::string_view scheme, std::string_view path)</td></tr>
 <tr class="memitem:a5213847492d782c996f9eada8201d5ee" id="r_a5213847492d782c996f9eada8201d5ee"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5213847492d782c996f9eada8201d5ee">SetScheme</a> (std::string_view scheme) noexcept</td></tr>
-<tr class="memdesc:a5213847492d782c996f9eada8201d5ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the URI scheme.  <br /></td></tr>
+<tr class="memdesc:a5213847492d782c996f9eada8201d5ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the URI scheme ("http", "file", etc.).  <br /></td></tr>
 <tr class="memitem:a5d8d69c1afc43ca6e53bd49babd2ee35" id="r_a5d8d69c1afc43ca6e53bd49babd2ee35"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a5d8d69c1afc43ca6e53bd49babd2ee35">GetScheme</a> () const noexcept</td></tr>
-<tr class="memdesc:a5d8d69c1afc43ca6e53bd49babd2ee35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the URI prefix.  <br /></td></tr>
+<tr class="memdesc:a5d8d69c1afc43ca6e53bd49babd2ee35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the URI scheme ("http", "file", etc.).  <br /></td></tr>
 <tr class="memitem:ace6c89a767ab721dce829ceeac089f7d" id="r_ace6c89a767ab721dce829ceeac089f7d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ace6c89a767ab721dce829ceeac089f7d">HasScheme</a> () const noexcept</td></tr>
-<tr class="memdesc:ace6c89a767ab721dce829ceeac089f7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the path has a scheme (is URI).  <br /></td></tr>
+<tr class="memdesc:ace6c89a767ab721dce829ceeac089f7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the path has a scheme (example: "http", "file").  <br /></td></tr>
 <tr class="memitem:a32330d5e3147195f96119731d3f65a00" id="r_a32330d5e3147195f96119731d3f65a00"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a32330d5e3147195f96119731d3f65a00">SetPath</a> (std::string_view path) noexcept</td></tr>
+<tr class="memdesc:a32330d5e3147195f96119731d3f65a00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the path portion ("/home/user", "www.example.com/site", etc.).  <br /></td></tr>
 <tr class="memitem:a1e1d16dccb755b558ac8169d55d456ab" id="r_a1e1d16dccb755b558ac8169d55d456ab"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a1e1d16dccb755b558ac8169d55d456ab">GetPath</a> () const noexcept</td></tr>
-<tr class="memdesc:a1e1d16dccb755b558ac8169d55d456ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the path portion.  <br /></td></tr>
+<tr class="memdesc:a1e1d16dccb755b558ac8169d55d456ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the path portion ("/home/user", "www.example.com/site", etc.).  <br /></td></tr>
 <tr class="memitem:a2539346185f3e2fe518e673c7a1e04f2" id="r_a2539346185f3e2fe518e673c7a1e04f2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2539346185f3e2fe518e673c7a1e04f2">IsEmpty</a> () const noexcept</td></tr>
 <tr class="memdesc:a2539346185f3e2fe518e673c7a1e04f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if path is empty.  <br /></td></tr>
 <tr class="memitem:adf19e1ec28671e74688225cd9dd67a64" id="r_adf19e1ec28671e74688225cd9dd67a64"><td class="memItemLeft"><a class="el" href="#a353752641541eb7a72f68e6ba50de00d">Path</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#adf19e1ec28671e74688225cd9dd67a64">operator=</a> (const <a class="el" href="#a353752641541eb7a72f68e6ba50de00d">Path</a> &amp;path)</td></tr>
@@ -186,8 +188,6 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a1a5e8f8531453dc5d8d86426999f0f1b" id="r_a1a5e8f8531453dc5d8d86426999f0f1b"><td class="memItemLeft">static std::pair&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1a5e8f8531453dc5d8d86426999f0f1b">URISplit</a> (std::string_view path)</td></tr>
-<tr class="memdesc:a1a5e8f8531453dc5d8d86426999f0f1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a path, as a string, into a URI prefixm and the actual path.  <br /></td></tr>
 <tr class="memitem:af7340f86bea2d805108950331de4ee71" id="r_af7340f86bea2d805108950331de4ee71"><td class="memItemLeft">static <a class="el" href="#a353752641541eb7a72f68e6ba50de00d">Path</a>&#160;</td><td class="memItemRight"><a class="el" href="#af7340f86bea2d805108950331de4ee71">MakeFile</a> (std::string_view filename={})</td></tr>
 <tr class="memdesc:af7340f86bea2d805108950331de4ee71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static constructor for a file path.  <br /></td></tr>
 </table>
@@ -196,7 +196,7 @@ Static Public Member Functions</h2></td></tr>
 <p>&lt;note&gt; <a class="el" href="namespaceunify.html#a6510a888bcad61b7955a60679dbc9fd3">Slash</a> directions are not tracked within the path. They must be specified when extracting the full path. &lt;/note&gt; </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a353752641541eb7a72f68e6ba50de00d" name="a353752641541eb7a72f68e6ba50de00d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a353752641541eb7a72f68e6ba50de00d">&#9670;&#160;</a></span>Path() <span class="overload">[1/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a353752641541eb7a72f68e6ba50de00d">&#9670;&#160;</a></span>Path() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,8 +220,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2453548b34f03f5e68743b52824810bc" name="a2453548b34f03f5e68743b52824810bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2453548b34f03f5e68743b52824810bc">&#9670;&#160;</a></span>Path() <span class="overload">[2/6]</span></h2>
+<a id="a0e38ed2862ad562b732877e34bc824bd" name="a0e38ed2862ad562b732877e34bc824bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e38ed2862ad562b732877e34bc824bd">&#9670;&#160;</a></span>Path() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -232,62 +232,8 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">unify::Path::Path </td>
           <td>(</td>
-          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
           <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a30e8da8dc69a7f6fcd7dce302fd52811" name="a30e8da8dc69a7f6fcd7dce302fd52811"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30e8da8dc69a7f6fcd7dce302fd52811">&#9670;&#160;</a></span>Path() <span class="overload">[3/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unify::Path::Path </td>
-          <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a15597556bb56f1acc59dbf8d2ee2cdc5" name="a15597556bb56f1acc59dbf8d2ee2cdc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15597556bb56f1acc59dbf8d2ee2cdc5">&#9670;&#160;</a></span>Path() <span class="overload">[4/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unify::Path::Path </td>
-          <td>(</td>
-          <td class="paramtype">Path</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Path</td>          <td class="paramname"><span class="paramname"><em>right</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -297,10 +243,51 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Construct a path from a string, which may or may not have a URI prefix. </p>
+
+</div>
+</div>
+<a id="a9b35c376009fa52bcd1f35fd1851b72f" name="a9b35c376009fa52bcd1f35fd1851b72f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b35c376009fa52bcd1f35fd1851b72f">&#9670;&#160;</a></span>Path() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unify::Path::Path </td>
+          <td>(</td>
+          <td class="paramtype">const Path &amp;</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Path &amp;</td>          <td class="paramname"><span class="paramname"><em>right</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a path from a left and right path, combining them. </p>
+<dl class="section note"><dt>Note</dt><dd>The left path's scheme is used if it is present. If not, then the right path's scheme is used if it is present. If neither has a scheme, then the resulting path will not have a scheme. If they both have a scheme, then the left path's scheme is used. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left</td><td></td></tr>
+    <tr><td class="paramname">right</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="af117db130c4a7635469a4d562ee6d74c" name="af117db130c4a7635469a4d562ee6d74c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af117db130c4a7635469a4d562ee6d74c">&#9670;&#160;</a></span>Path() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af117db130c4a7635469a4d562ee6d74c">&#9670;&#160;</a></span>Path() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -325,7 +312,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="abbabf460a224771f8f1271611cd82706" name="abbabf460a224771f8f1271611cd82706"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbabf460a224771f8f1271611cd82706">&#9670;&#160;</a></span>Path() <span class="overload">[6/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abbabf460a224771f8f1271611cd82706">&#9670;&#160;</a></span>Path() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -641,7 +628,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the path portion. </p>
+<p>Get the path portion ("/home/user", "www.example.com/site", etc.). </p>
 
 </div>
 </div>
@@ -668,6 +655,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get the URI scheme ("http", "file", etc.). </p>
 <p>Get the URI prefix. </p>
 
 </div>
@@ -722,7 +710,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Check if the path has a scheme (is URI). </p>
+<p>Check if the path has a scheme (example: "http", "file"). </p>
 
 </div>
 </div>
@@ -1060,6 +1048,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Set the path portion ("/home/user", "www.example.com/site", etc.). </p>
+
 </div>
 </div>
 <a id="a5213847492d782c996f9eada8201d5ee" name="a5213847492d782c996f9eada8201d5ee"></a>
@@ -1085,7 +1075,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the URI scheme. </p>
+<p>Set the URI scheme ("http", "file", etc.). </p>
 <p>Set the URI identifier. </p>
 
 </div>
@@ -1330,40 +1320,6 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns an XPath string representation of the path maintaining the original slash directions.". </p>
-
-</div>
-</div>
-<a id="a1a5e8f8531453dc5d8d86426999f0f1b" name="a1a5e8f8531453dc5d8d86426999f0f1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a5e8f8531453dc5d8d86426999f0f1b">&#9670;&#160;</a></span>URISplit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::pair&lt; std::string, std::string &gt; unify::Path::URISplit </td>
-          <td>(</td>
-          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Split a path, as a string, into a URI prefixm and the actual path. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path</td><td>path with or without URI prefix. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a pair of strings with the scheme and the path. </dd></dl>
 
 </div>
 </div>
