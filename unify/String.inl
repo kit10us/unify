@@ -51,12 +51,7 @@ namespace unify::String
 				else
 				{
 					std::string item = std::string{sourceString.substr(front, i - front)};
-					if (trim)
-					{
-						item = Trim(item);
-					}
-
-					std::optional<T> result = FromString<T>(item);
+					std::optional<T> result = FromString<T>(item, trim);
 					if (result.has_value())
 					{
 						results.push_back(result.value());
@@ -75,12 +70,7 @@ namespace unify::String
 		if (front != end)
 		{
 			std::string item = std::string{sourceString.substr(front, i - front)};
-			if (trim)
-			{
-				item = Trim(item);
-			}
-
-			std::optional<T> result = FromString<T>(item);
+			std::optional<T> result = FromString<T>(item, trim);
 			if (result.has_value())
 			{
 				results.push_back(result.value());
@@ -291,6 +281,18 @@ namespace unify::String
 	std::string Trim(std::string stringIn, char chr)
 	{
 		return TrimRight(TrimLeft(stringIn, chr), chr);
+	}
+
+	inline void TrimWhitespace(std::string_view& text)
+	{
+		while (text.data()[0] == ' ' || text.data()[0] == '\t' || text.data()[0] == '\n')
+		{
+			text.remove_prefix(1);
+		}
+		while (text.data()[text.size() - 1] == ' ' || text.data()[text.size() - 1] == '\t' || text.data()[text.size() - 1] == '\n')
+		{
+			text.remove_suffix(1);
+		}
 	}
 
 	inline

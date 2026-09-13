@@ -42,7 +42,7 @@ protected:
 
 using namespace unify;
 
-TEST_F(CastTests, Casts)
+TEST_F(CastTests, ToString)
 {
     using namespace std::string_literals;
     using namespace std::string_view_literals;
@@ -140,7 +140,10 @@ TEST_F(CastTests, Casts)
     EXPECT_TRUE( std::string("-32768") == ToString((int16_t)std::numeric_limits<int16_t>::min()) );
     EXPECT_TRUE( std::string("32767") == ToString((int16_t)std::numeric_limits<int16_t>::max()) );
     EXPECT_FALSE( std::string("0") == ToString((int16_t)1) );
+}
 
+TEST_F(CastTests, FromString)
+{
     EXPECT_TRUE( *FromString<bool>("true") );
     EXPECT_TRUE( *FromString<bool>("on") );
     EXPECT_TRUE( *FromString<bool>("yes") );
@@ -148,18 +151,27 @@ TEST_F(CastTests, Casts)
     EXPECT_TRUE( *FromString<bool>("123") );
     EXPECT_TRUE( *FromString<bool>("-123") );
     EXPECT_TRUE( *FromString<bool>("TrUe") );
+    EXPECT_TRUE( *FromString<bool>("   true") );
+    EXPECT_TRUE( *FromString<bool>("true   ") );
+    EXPECT_TRUE( *FromString<bool>("   true  ") );
 
     EXPECT_FALSE( *FromString<bool>("false") );
     EXPECT_FALSE( *FromString<bool>("off") );
     EXPECT_FALSE( *FromString<bool>("no") );
     EXPECT_FALSE( *FromString<bool>("0") );
     EXPECT_FALSE( *FromString<bool>("FaLsE") );
+    EXPECT_FALSE( *FromString<bool>("   false") );
+    EXPECT_FALSE( *FromString<bool>("false   ") );
+    EXPECT_FALSE( *FromString<bool>("   false   ") );
 
     EXPECT_STREQ( "from string", (*FromString<std::string>("from string")).c_str() );
 
     EXPECT_TRUE( (uint8_t)1 == FromString<uint8_t>(std::string("1")) );
     EXPECT_TRUE( (uint8_t)12 == FromString<uint8_t>(std::string("12")) );
     EXPECT_FALSE( (uint8_t)12 == FromString<uint8_t>(std::string("21")) );
+    EXPECT_TRUE( (uint8_t)12 == FromString<uint8_t>(std::string("   12")) );
+    EXPECT_TRUE( (uint8_t)12 == FromString<uint8_t>(std::string("12   ")) );
+    EXPECT_TRUE( (uint8_t)12 == FromString<uint8_t>(std::string("   12   ")) );
 
     EXPECT_TRUE( (uint32_t)1 == FromString<uint32_t>("1") );
     EXPECT_TRUE( (uint32_t)1000 == FromString<uint32_t>("1000") );
@@ -185,6 +197,8 @@ TEST_F(CastTests, Casts)
     EXPECT_TRUE( (float)12.3456f == FromString<float>("12.345600") );
     EXPECT_TRUE( (float)-12.3456f == FromString<float>("-12.345600") );
     EXPECT_FALSE( (float)1.0f == FromString<float>("0.000000") );
+    EXPECT_TRUE( (float)1.0f == FromString<float>("   1.0") );
+    EXPECT_TRUE( (float)0.1f == FromString<float>("   0.1   ") );
 
     EXPECT_TRUE( (double)0.0 == FromString<double>("0.000000") );
     EXPECT_TRUE( (double)1.0 == FromString<double>("1.000000") );

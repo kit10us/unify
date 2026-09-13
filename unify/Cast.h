@@ -22,8 +22,7 @@
 
 #pragma once
 
-//#include <unify/Unify.h>
-//#include <unify/TimeDelta.h>
+#include <unify/String.h>
 #include <string>
 #include <string_view>
 #include <charconv>
@@ -53,7 +52,7 @@ namespace unify
 	std::optional<std::string> ToString(const TFrom in ) noexcept = delete;
 
 	template<typename TTo> 
-	std::optional<TTo> FromString(std::string_view in ) noexcept = delete;
+	std::optional<TTo> FromString(std::string_view in, bool trim = true ) noexcept = delete;
 
 	/// <summary>
 	/// Polymorphic downcast. In debug builds, this will assert if the cast is invalid. In release builds, this will perform a static_cast without checking.

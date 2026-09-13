@@ -24,6 +24,7 @@ add_executable("${PROJECT_NAME}"
     tests_Angle.cpp
     tests_BBox.cpp
     tests_BRectangle.cpp
+    tests_String.cpp
     tests_Cast.cpp
     tests_Color.cpp
     tests_ColorUnit.cpp
@@ -33,7 +34,6 @@ add_executable("${PROJECT_NAME}"
     tests_Quaternion.cpp
     tests_Ray.cpp
     tests_Result.cpp
-    tests_String.cpp
     tests_TexCoords.cpp
     tests_V2.cpp
     tests_V3.cpp

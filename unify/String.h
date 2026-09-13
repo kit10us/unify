@@ -30,7 +30,6 @@
 #include <ostream>
 
 #include <unify/Unify.h>
-#include <unify/Cast.h>
 
 namespace unify::String
 {
@@ -82,6 +81,12 @@ namespace unify::String
 	/// Removes all instances of character 'chr' from the right of 'stringIn'.
 	/// </summary>
 	std::string TrimRight( std::string stringIn, const char chr );
+
+	/// <summary>
+	/// Removes whitespace from the left and right of a string, in-place. This is a fast operation, as it does not create a new string.
+	/// It also does not return a string_view, which is an antipatten.
+	/// </summary>
+	void TrimWhitespace(std::string_view& text);
 
 	/// <summary>
 	/// Performs both TrimLeft and TrimRight...
