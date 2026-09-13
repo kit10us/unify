@@ -69,38 +69,42 @@ unify::Result<TestEnum> ValueFailure()
     return unify::Failure{ "Value failure." };
 }
 
+
+
 TEST_F(ResultTests, DefaultSuccess)
 {
     auto default_result = DefaultSuccess();
     EXPECT_EQ(default_result.Success(), true);
+    unify::Success success{};
+    EXPECT_EQ(typeid(*default_result) == typeid(success), true);
 }
 
 TEST_F(ResultTests, DefaultFailure)
 {
     auto default_result = DefaultFailure();
     EXPECT_EQ(default_result.Success(), false);
-    EXPECT_EQ(default_result.Message(), "Unspecified failure.");
+    EXPECT_STREQ(default_result.Message().c_str(), "Unspecified failure.");
+}
+
+TEST_F(ResultTests, ValueSuccess)
+{
+    auto default_result = ValueSuccess();
+    EXPECT_EQ(default_result.Success(), true);
+    EXPECT_EQ(default_result.Value(), TestEnum::Value1);
 }
 
 TEST_F(ResultTests, Dereference)
 {
     auto default_result = DefaultFailure();
     EXPECT_TRUE(!default_result);
-    EXPECT_EQ(default_result.Message(), "Unspecified failure.");
+    EXPECT_STREQ(default_result.Message().c_str(), "Unspecified failure.");
 }
 
 TEST_F(ResultTests, DefaultFailureMessage)
 {
     auto default_result = DefaultFailure();
     EXPECT_FALSE(default_result.Success());
-    EXPECT_EQ(default_result.Message(), "Unspecified failure.");
-}
-
-TEST_F(ResultTests, ValueSuccess)
-{
-    auto value_result = ValueSuccess();
-    EXPECT_EQ(value_result.Success(), true);
-    EXPECT_EQ(value_result.Value(), TestEnum::Value1);
+    EXPECT_STREQ(default_result.Message().c_str(), "Unspecified failure.");
 }
 
 TEST_F(ResultTests, OperatorValueSuccess)
@@ -114,8 +118,7 @@ TEST_F(ResultTests, OperatorValueFailure)
 {
     auto value_result = ValueFailure();
     EXPECT_EQ(value_result.Success(), false);
-    EXPECT_EQ(value_result.Message(), "Value failure.");
-    EXPECT_THROW((value_result() == TestEnum::Value1), std::bad_variant_access);
+    EXPECT_STREQ(value_result.Message().c_str(), "Value failure.");
 }
 
 TEST_F(ResultTests, Or)

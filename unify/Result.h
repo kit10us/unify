@@ -50,33 +50,39 @@ namespace unify
 		std::string m_message;
 	};
 
-	template<typename T_SuccessType = bool, typename T_Failure = Failure>
+	class Success
+	{
+	public:
+		Success() = default;
+	};
+
+	template<typename T_SuccessType = Success, typename T_Failure = Failure>
 	class Result
 	{
 	public:
 		using ptr = std::shared_ptr<Result<T_SuccessType, T_Failure>>;
 
-		Result(T_SuccessType value)
+		Result(T_SuccessType value) noexcept
 			: m_result{ value }
 		{
 		}
 
-		Result(Failure failure)
+		Result(Failure failure) noexcept
 			: m_result{ failure }
 		{
 		}
 
-		Result()
+		Result() noexcept
 			: Result(T_SuccessType{})
 		{
 		}
 
-		bool Success() const
+		bool Success() const noexcept
 		{
 			return std::holds_alternative<Failure>(m_result) ? false : true;
 		}
 
-		[[nodiscard]] std::string Message() const
+		[[nodiscard]] std::string Message() const noexcept
 		{
 			if (Success())
 			{
@@ -88,7 +94,7 @@ namespace unify
 			}
 		}
 
-		[[nodiscard]] T_SuccessType Value() const
+		[[nodiscard]] T_SuccessType Value() const noexcept
 		{
 			return std::get<T_SuccessType>(m_result);
 		}
@@ -98,17 +104,17 @@ namespace unify
 		/// Will throw if a failure. Use Failure() or Success() first to verify results.
 		/// </summary>
 		/// <returns></returns>
-		[[nodiscard]] T_SuccessType operator()() const
+		[[nodiscard]] T_SuccessType operator()() const noexcept
 		{
 			return Value();
 		}
 
-		[[nodiscard]] bool operator!() const
+		[[nodiscard]] bool operator!() const noexcept
 		{
 			return !Success();
 		}
 
-		[[nodiscard]] T_SuccessType operator*() const
+		[[nodiscard]] T_SuccessType operator*() const noexcept
 		{
 			return Value();
 		}
