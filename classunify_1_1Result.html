@@ -115,20 +115,20 @@ document.addEventListener('DOMContentLoaded', () => {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ab267cf9f32223a6375057967768d2411" id="r_ab267cf9f32223a6375057967768d2411"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#ab267cf9f32223a6375057967768d2411">ptr</a> = std::shared_ptr&lt;<a class="el" href="#a4681f1bf0f09a286cfea2450b776d420">Result</a>&lt;T_SuccessType, T_Failure&gt;&gt;</td></tr>
+<tr class="memitem:ab267cf9f32223a6375057967768d2411" id="r_ab267cf9f32223a6375057967768d2411"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#ab267cf9f32223a6375057967768d2411">ptr</a> = std::shared_ptr&lt;<a class="el" href="#a4c21ed759e045ba27d7485e0c5a0efc7">Result</a>&lt;T_SuccessType, T_Failure&gt;&gt;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4681f1bf0f09a286cfea2450b776d420" id="r_a4681f1bf0f09a286cfea2450b776d420"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4681f1bf0f09a286cfea2450b776d420">Result</a> (T_SuccessType value)</td></tr>
-<tr class="memitem:a32823481b714003f89dc05ecf4e5192f" id="r_a32823481b714003f89dc05ecf4e5192f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a32823481b714003f89dc05ecf4e5192f">Result</a> (<a class="el" href="classunify_1_1Failure.html">Failure</a> failure)</td></tr>
-<tr class="memitem:ae7b85ba7856a5f4c995b0cdeef16915b" id="r_ae7b85ba7856a5f4c995b0cdeef16915b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae7b85ba7856a5f4c995b0cdeef16915b">Result</a> ()</td></tr>
-<tr class="memitem:ad9f06bdf8b0af91facefffb0de8493c8" id="r_ad9f06bdf8b0af91facefffb0de8493c8"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad9f06bdf8b0af91facefffb0de8493c8">Success</a> () const</td></tr>
-<tr class="memitem:a2b07552ca2105ca283a2ac1403f4dd5a" id="r_a2b07552ca2105ca283a2ac1403f4dd5a"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a2b07552ca2105ca283a2ac1403f4dd5a">Message</a> () const</td></tr>
-<tr class="memitem:aa1510c4614baba1ab9fce1d92030b654" id="r_aa1510c4614baba1ab9fce1d92030b654"><td class="memItemLeft">T_SuccessType&#160;</td><td class="memItemRight"><a class="el" href="#aa1510c4614baba1ab9fce1d92030b654">Value</a> () const</td></tr>
-<tr class="memitem:a73db7627e21dbb244fe406c5e30f5ca4" id="r_a73db7627e21dbb244fe406c5e30f5ca4"><td class="memItemLeft">T_SuccessType&#160;</td><td class="memItemRight"><a class="el" href="#a73db7627e21dbb244fe406c5e30f5ca4">operator()</a> () const</td></tr>
-<tr class="memdesc:a73db7627e21dbb244fe406c5e30f5ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the results. Will throw if a failure. Use Failure() or <a class="el" href="#ad9f06bdf8b0af91facefffb0de8493c8">Success()</a> first to verify results.  <br /></td></tr>
-<tr class="memitem:ae114ab3e4e526cdb66a0e5fa1d53ecae" id="r_ae114ab3e4e526cdb66a0e5fa1d53ecae"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae114ab3e4e526cdb66a0e5fa1d53ecae">operator!</a> () const</td></tr>
-<tr class="memitem:ac925381161f9583b51c0dac8ec22aff0" id="r_ac925381161f9583b51c0dac8ec22aff0"><td class="memItemLeft">T_SuccessType&#160;</td><td class="memItemRight"><a class="el" href="#ac925381161f9583b51c0dac8ec22aff0">operator*</a> () const</td></tr>
+<tr class="memitem:a4c21ed759e045ba27d7485e0c5a0efc7" id="r_a4c21ed759e045ba27d7485e0c5a0efc7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4c21ed759e045ba27d7485e0c5a0efc7">Result</a> (T_SuccessType value) noexcept</td></tr>
+<tr class="memitem:a212a0775646713c51eb35968ae7b7782" id="r_a212a0775646713c51eb35968ae7b7782"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a212a0775646713c51eb35968ae7b7782">Result</a> (<a class="el" href="classunify_1_1Failure.html">Failure</a> failure) noexcept</td></tr>
+<tr class="memitem:a96e67504456afa1b3e300607b349ed37" id="r_a96e67504456afa1b3e300607b349ed37"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a96e67504456afa1b3e300607b349ed37">Result</a> () noexcept</td></tr>
+<tr class="memitem:ac7675d4807191a6e283d1edd49b01609" id="r_ac7675d4807191a6e283d1edd49b01609"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac7675d4807191a6e283d1edd49b01609">Success</a> () const noexcept</td></tr>
+<tr class="memitem:a2b67cdadd4fc175ec0658e4657d31643" id="r_a2b67cdadd4fc175ec0658e4657d31643"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a2b67cdadd4fc175ec0658e4657d31643">Message</a> () const noexcept</td></tr>
+<tr class="memitem:a01a1b98f5e091f4174bf88ded8e2a465" id="r_a01a1b98f5e091f4174bf88ded8e2a465"><td class="memItemLeft">T_SuccessType&#160;</td><td class="memItemRight"><a class="el" href="#a01a1b98f5e091f4174bf88ded8e2a465">Value</a> () const noexcept</td></tr>
+<tr class="memitem:a5bf50097727e16b7b134da6e93516cc9" id="r_a5bf50097727e16b7b134da6e93516cc9"><td class="memItemLeft">T_SuccessType&#160;</td><td class="memItemRight"><a class="el" href="#a5bf50097727e16b7b134da6e93516cc9">operator()</a> () const noexcept</td></tr>
+<tr class="memdesc:a5bf50097727e16b7b134da6e93516cc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the results. Will throw if a failure. Use Failure() or <a class="el" href="#ac7675d4807191a6e283d1edd49b01609">Success()</a> first to verify results.  <br /></td></tr>
+<tr class="memitem:a8e2535c836e2d443b52733ac8e9ec59e" id="r_a8e2535c836e2d443b52733ac8e9ec59e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8e2535c836e2d443b52733ac8e9ec59e">operator!</a> () const noexcept</td></tr>
+<tr class="memitem:a76309636c833717bdd57999c935ee234" id="r_a76309636c833717bdd57999c935ee234"><td class="memItemLeft">T_SuccessType&#160;</td><td class="memItemRight"><a class="el" href="#a76309636c833717bdd57999c935ee234">operator*</a> () const noexcept</td></tr>
 <tr class="memitem:a79105e6c6a14c3dca6117309f5df9045" id="r_a79105e6c6a14c3dca6117309f5df9045"><td class="memItemLeft">T_SuccessType&#160;</td><td class="memItemRight"><a class="el" href="#a79105e6c6a14c3dca6117309f5df9045">Or</a> (T_SuccessType &amp;&amp;value) const noexcept</td></tr>
 </table>
 <a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
@@ -138,10 +138,10 @@ Public Member Functions</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
+template&lt;typename T_SuccessType = Success, typename T_Failure = Failure&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType, T_Failure &gt;::ptr = std::shared_ptr&lt;<a class="el" href="#a4681f1bf0f09a286cfea2450b776d420">Result</a>&lt;T_SuccessType, T_Failure&gt;&gt;</td>
+          <td class="memname">using <a class="el" href="classunify_1_1Result.html">unify::Result</a>&lt; T_SuccessType, T_Failure &gt;::ptr = std::shared_ptr&lt;<a class="el" href="#a4c21ed759e045ba27d7485e0c5a0efc7">Result</a>&lt;T_SuccessType, T_Failure&gt;&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -149,13 +149,13 @@ template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </di
 </div>
 </div>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4681f1bf0f09a286cfea2450b776d420" name="a4681f1bf0f09a286cfea2450b776d420"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4681f1bf0f09a286cfea2450b776d420">&#9670;&#160;</a></span>Result() <span class="overload">[1/3]</span></h2>
+<a id="a4c21ed759e045ba27d7485e0c5a0efc7" name="a4c21ed759e045ba27d7485e0c5a0efc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c21ed759e045ba27d7485e0c5a0efc7">&#9670;&#160;</a></span>Result() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
+template&lt;typename T_SuccessType = Success, typename T_Failure = Failure&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -169,20 +169,20 @@ template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </di
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a32823481b714003f89dc05ecf4e5192f" name="a32823481b714003f89dc05ecf4e5192f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32823481b714003f89dc05ecf4e5192f">&#9670;&#160;</a></span>Result() <span class="overload">[2/3]</span></h2>
+<a id="a212a0775646713c51eb35968ae7b7782" name="a212a0775646713c51eb35968ae7b7782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a212a0775646713c51eb35968ae7b7782">&#9670;&#160;</a></span>Result() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
+template&lt;typename T_SuccessType = Success, typename T_Failure = Failure&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -196,20 +196,20 @@ template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </di
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ae7b85ba7856a5f4c995b0cdeef16915b" name="ae7b85ba7856a5f4c995b0cdeef16915b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7b85ba7856a5f4c995b0cdeef16915b">&#9670;&#160;</a></span>Result() <span class="overload">[3/3]</span></h2>
+<a id="a96e67504456afa1b3e300607b349ed37" name="a96e67504456afa1b3e300607b349ed37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96e67504456afa1b3e300607b349ed37">&#9670;&#160;</a></span>Result() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
+template&lt;typename T_SuccessType = Success, typename T_Failure = Failure&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -223,7 +223,7 @@ template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </di
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -231,13 +231,13 @@ template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </di
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a2b07552ca2105ca283a2ac1403f4dd5a" name="a2b07552ca2105ca283a2ac1403f4dd5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b07552ca2105ca283a2ac1403f4dd5a">&#9670;&#160;</a></span>Message()</h2>
+<a id="a2b67cdadd4fc175ec0658e4657d31643" name="a2b67cdadd4fc175ec0658e4657d31643"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b67cdadd4fc175ec0658e4657d31643">&#9670;&#160;</a></span>Message()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
+template&lt;typename T_SuccessType = Success, typename T_Failure = Failure&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -251,20 +251,20 @@ template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </di
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ae114ab3e4e526cdb66a0e5fa1d53ecae" name="ae114ab3e4e526cdb66a0e5fa1d53ecae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae114ab3e4e526cdb66a0e5fa1d53ecae">&#9670;&#160;</a></span>operator!()</h2>
+<a id="a8e2535c836e2d443b52733ac8e9ec59e" name="a8e2535c836e2d443b52733ac8e9ec59e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e2535c836e2d443b52733ac8e9ec59e">&#9670;&#160;</a></span>operator!()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
+template&lt;typename T_SuccessType = Success, typename T_Failure = Failure&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -278,20 +278,20 @@ template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </di
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a73db7627e21dbb244fe406c5e30f5ca4" name="a73db7627e21dbb244fe406c5e30f5ca4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73db7627e21dbb244fe406c5e30f5ca4">&#9670;&#160;</a></span>operator()()</h2>
+<a id="a5bf50097727e16b7b134da6e93516cc9" name="a5bf50097727e16b7b134da6e93516cc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bf50097727e16b7b134da6e93516cc9">&#9670;&#160;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
+template&lt;typename T_SuccessType = Success, typename T_Failure = Failure&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -305,23 +305,23 @@ template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </di
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the results. Will throw if a failure. Use Failure() or <a class="el" href="#ad9f06bdf8b0af91facefffb0de8493c8">Success()</a> first to verify results. </p>
+<p>Get the results. Will throw if a failure. Use Failure() or <a class="el" href="#ac7675d4807191a6e283d1edd49b01609">Success()</a> first to verify results. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
-<a id="ac925381161f9583b51c0dac8ec22aff0" name="ac925381161f9583b51c0dac8ec22aff0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac925381161f9583b51c0dac8ec22aff0">&#9670;&#160;</a></span>operator*()</h2>
+<a id="a76309636c833717bdd57999c935ee234" name="a76309636c833717bdd57999c935ee234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76309636c833717bdd57999c935ee234">&#9670;&#160;</a></span>operator*()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
+template&lt;typename T_SuccessType = Success, typename T_Failure = Failure&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -335,7 +335,7 @@ template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </di
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -348,7 +348,7 @@ template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </di
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
+template&lt;typename T_SuccessType = Success, typename T_Failure = Failure&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -369,13 +369,13 @@ template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </di
 
 </div>
 </div>
-<a id="ad9f06bdf8b0af91facefffb0de8493c8" name="ad9f06bdf8b0af91facefffb0de8493c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9f06bdf8b0af91facefffb0de8493c8">&#9670;&#160;</a></span>Success()</h2>
+<a id="ac7675d4807191a6e283d1edd49b01609" name="ac7675d4807191a6e283d1edd49b01609"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7675d4807191a6e283d1edd49b01609">&#9670;&#160;</a></span>Success()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
+template&lt;typename T_SuccessType = Success, typename T_Failure = Failure&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -389,20 +389,20 @@ template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </di
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aa1510c4614baba1ab9fce1d92030b654" name="aa1510c4614baba1ab9fce1d92030b654"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1510c4614baba1ab9fce1d92030b654">&#9670;&#160;</a></span>Value()</h2>
+<a id="a01a1b98f5e091f4174bf88ded8e2a465" name="a01a1b98f5e091f4174bf88ded8e2a465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01a1b98f5e091f4174bf88ded8e2a465">&#9670;&#160;</a></span>Value()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </div>
+template&lt;typename T_SuccessType = Success, typename T_Failure = Failure&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -416,7 +416,7 @@ template&lt;typename T_SuccessType = bool, typename T_Failure = Failure&gt; </di
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

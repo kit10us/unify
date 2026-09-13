@@ -5,5 +5,6 @@ var searchData=
   ['size_3c_20unsigned_20long_20_3e_2',['Size&lt; unsigned long &gt;',['../classunify_1_1Size.html',1,'unify']]],
   ['span_3',['span',['../classunify_1_1span.html',1,'unify']]],
   ['stream_4',['Stream',['../classunify_1_1Stream.html',1,'unify']]],
-  ['stringtests_5',['StringTests',['../classStringTests.html',1,'']]]
+  ['stringtests_5',['StringTests',['../classStringTests.html',1,'']]],
+  ['success_6',['Success',['../classunify_1_1Success.html',1,'unify']]]
 ];

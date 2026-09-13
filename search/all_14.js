@@ -27,7 +27,7 @@ var searchData=
   ['rename_24',['Rename',['../classunify_1_1Path.html#ab6fc4b42e5c1eff7b84865ec2f4ff6cd',1,'unify::Path']]],
   ['requirements_25',['Source Code Requirements',['../md_README.html#autotoc_md14',1,'']]],
   ['reset_26',['Reset',['../classunify_1_1FrameSetInstance.html#a4e5173bba6de3a844449bc83c1980215',1,'unify::FrameSetInstance::Reset()'],['../classunify_1_1Parameters.html#a25cee84773e6086fa5c5efd0e60231ec',1,'unify::Parameters::Reset()'],['../classme_1_1stats_1_1Rate.html#a5b9538fea050b038acc810942fed2c7d',1,'me::stats::Rate::Reset()']]],
-  ['result_27',['Result',['../classunify_1_1Result.html',1,'unify::Result&lt; T_SuccessType, T_Failure &gt;'],['../classunify_1_1Result.html#a4681f1bf0f09a286cfea2450b776d420',1,'unify::Result::Result(T_SuccessType value)'],['../classunify_1_1Result.html#a32823481b714003f89dc05ecf4e5192f',1,'unify::Result::Result(Failure failure)'],['../classunify_1_1Result.html#ae7b85ba7856a5f4c995b0cdeef16915b',1,'unify::Result::Result()']]],
+  ['result_27',['Result',['../classunify_1_1Result.html',1,'unify::Result&lt; T_SuccessType, T_Failure &gt;'],['../classunify_1_1Result.html#a4c21ed759e045ba27d7485e0c5a0efc7',1,'unify::Result::Result(T_SuccessType value) noexcept'],['../classunify_1_1Result.html#a212a0775646713c51eb35968ae7b7782',1,'unify::Result::Result(Failure failure) noexcept'],['../classunify_1_1Result.html#a96e67504456afa1b3e300607b349ed37',1,'unify::Result::Result() noexcept']]],
   ['result_2eh_28',['Result.h',['../Result_8h.html',1,'']]],
   ['resulttests_29',['ResultTests',['../classResultTests.html',1,'']]],
   ['return_20type_30',['string_view as Return Type',['../md_README.html#autotoc_md18',1,'']]],
