@@ -280,8 +280,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:a764ea3feeb099cabeb1e29e2a7283213"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts small types (&lt;= 16 bytes) using register-optimized pass-by-value.  <br /></td></tr>
 <tr class="memitem:a2a66909808f76f5cd490dfffe1c22ff4" id="r_a2a66909808f76f5cd490dfffe1c22ff4"><td class="memTemplParams" colspan="2">template&lt;typename TFrom&gt; </td></tr>
 <tr class="memitem:a2a66909808f76f5cd490dfffe1c22ff4 template"><td class="memItemLeft">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2a66909808f76f5cd490dfffe1c22ff4">ToString</a> (const TFrom in) noexcept=delete</td></tr>
-<tr class="memitem:a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680" id="r_a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680"><td class="memTemplParams" colspan="2">template&lt;typename TTo&gt; </td></tr>
-<tr class="memitem:a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680 template"><td class="memItemLeft">std::optional&lt; TTo &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680">FromString</a> (std::string_view in) noexcept=delete</td></tr>
+<tr class="memitem:a5d3cf7930f09883f7f5952c3dad67594" id="r_a5d3cf7930f09883f7f5952c3dad67594"><td class="memTemplParams" colspan="2">template&lt;typename TTo&gt; </td></tr>
+<tr class="memitem:a5d3cf7930f09883f7f5952c3dad67594 template"><td class="memItemLeft">std::optional&lt; TTo &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5d3cf7930f09883f7f5952c3dad67594">FromString</a> (std::string_view in, bool trim=true) noexcept=delete</td></tr>
 <tr class="memitem:a43d2e815dd85c8938b09ded84b052d21" id="r_a43d2e815dd85c8938b09ded84b052d21"><td class="memTemplParams" colspan="2">template&lt;typename Target, typename Source&gt; </td></tr>
 <tr class="memitem:a43d2e815dd85c8938b09ded84b052d21 template"><td class="memItemLeft">Target&#160;</td><td class="memItemRight"><a class="el" href="#a43d2e815dd85c8938b09ded84b052d21">polymorphic_downcast</a> (Source source)</td></tr>
 <tr class="memdesc:a43d2e815dd85c8938b09ded84b052d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic downcast. In debug builds, this will assert if the cast is invalid. In release builds, this will perform a static_cast without checking.  <br /></td></tr>
@@ -376,7 +376,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a5dd1dacd5beefec010e8e896bdd69d08" id="r_a5dd1dacd5beefec010e8e896bdd69d08"><td class="memItemLeft"><a class="el" href="classunify_1_1TimeDelta.html">TimeDelta</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5dd1dacd5beefec010e8e896bdd69d08">TimeDeltaInDays</a> (float days)</td></tr>
 <tr class="memitem:a2df42c2abbad00d9272427d81e91dab1" id="r_a2df42c2abbad00d9272427d81e91dab1"><td class="memItemLeft"><a class="el" href="classunify_1_1TimeDelta.html">TimeDelta</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2df42c2abbad00d9272427d81e91dab1">TimeDeltaInYears</a> (float years)</td></tr>
 <tr class="memitem:a4d033ebf18599bfa22a5170a5cda8952" id="r_a4d033ebf18599bfa22a5170a5cda8952"><td class="memItemLeft">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4d033ebf18599bfa22a5170a5cda8952">ToString</a> (const <a class="el" href="classunify_1_1TimeDelta.html">TimeDelta</a> in)</td></tr>
-<tr class="memitem:a4ffd41ef87e928a5fae1695073ea029b" id="r_a4ffd41ef87e928a5fae1695073ea029b"><td class="memItemLeft">std::optional&lt; <a class="el" href="classunify_1_1TimeDelta.html">TimeDelta</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4ffd41ef87e928a5fae1695073ea029b">FromString</a> (std::string_view text)</td></tr>
+<tr class="memitem:a60d492209dd306954924e08619832444" id="r_a60d492209dd306954924e08619832444"><td class="memItemLeft">std::optional&lt; <a class="el" href="classunify_1_1TimeDelta.html">TimeDelta</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a60d492209dd306954924e08619832444">FromString</a> (std::string_view text)</td></tr>
 <tr class="memitem:a5139981dcfbf72b3fd9bdf3a0dfef617" id="r_a5139981dcfbf72b3fd9bdf3a0dfef617"><td class="memItemLeft">template&lt;&gt; </td></tr>
 <tr class="memitem:a5139981dcfbf72b3fd9bdf3a0dfef617 template"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a5139981dcfbf72b3fd9bdf3a0dfef617">Cast</a> (const <a class="el" href="classunify_1_1TimeDelta.html">TimeDelta</a> in)</td></tr>
 <tr class="memitem:a430c6d7f03e2d9c28882e5fd93902933" id="r_a430c6d7f03e2d9c28882e5fd93902933"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
@@ -1955,8 +1955,8 @@ template&lt;&gt; </div>
 
 </div>
 </div>
-<a id="a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680" name="a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cfcdcf1f1bf9b7ccaa8fb8b4c53e680">&#9670;&#160;</a></span>FromString() <span class="overload">[1/2]</span></h2>
+<a id="a5d3cf7930f09883f7f5952c3dad67594" name="a5d3cf7930f09883f7f5952c3dad67594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d3cf7930f09883f7f5952c3dad67594">&#9670;&#160;</a></span>FromString() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1967,23 +1967,27 @@ template&lt;typename TTo&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt; <a class="el" href="classunify_1_1TimeDelta.html">TimeDelta</a> &gt; unify::FromString </td>
+          <td class="memname">std::optional&lt; TTo &gt; unify::FromString </td>
           <td>(</td>
-          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>in</em></span></td><td>)</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>trim</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel delete">delete</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel delete">delete</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a4ffd41ef87e928a5fae1695073ea029b" name="a4ffd41ef87e928a5fae1695073ea029b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ffd41ef87e928a5fae1695073ea029b">&#9670;&#160;</a></span>FromString() <span class="overload">[2/2]</span></h2>
+<a id="a60d492209dd306954924e08619832444" name="a60d492209dd306954924e08619832444"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60d492209dd306954924e08619832444">&#9670;&#160;</a></span>FromString() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1992,7 +1996,7 @@ template&lt;typename TTo&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt; std::string &gt; unify::FromString </td>
+          <td class="memname">std::optional&lt; <a class="el" href="classunify_1_1TimeDelta.html">TimeDelta</a> &gt; unify::FromString </td>
           <td>(</td>
           <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>text</em></span></td><td>)</td>
           <td></td>
@@ -2000,7 +2004,7 @@ template&lt;typename TTo&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

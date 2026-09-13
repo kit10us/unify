@@ -118,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
 <code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;<a class="el" href="Unify_8h_source.html">unify/Unify.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="Cast_8h_source.html">unify/Cast.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="String_8inl_source.html">unify/String.inl</a>&gt;</code><br />
 </div>
 <p><a href="String_8h_source.html">Go to the source code of this file.</a></p>
@@ -158,6 +157,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:a38fd28ea48e35d25d00e1374a0ab9c93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all instances of character 'chr' from the left of 'stringIn'.  <br /></td></tr>
 <tr class="memitem:aacdae8e73a0abd1539bd995d641e6d61" id="r_aacdae8e73a0abd1539bd995d641e6d61"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="namespaceunify_1_1String.html#aacdae8e73a0abd1539bd995d641e6d61">unify::String::TrimRight</a> (std::string stringIn, const char chr)</td></tr>
 <tr class="memdesc:aacdae8e73a0abd1539bd995d641e6d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all instances of character 'chr' from the right of 'stringIn'.  <br /></td></tr>
+<tr class="memitem:abbef82ff4304e60706bec5031c2fe323" id="r_abbef82ff4304e60706bec5031c2fe323"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespaceunify_1_1String.html#abbef82ff4304e60706bec5031c2fe323">unify::String::TrimWhitespace</a> (std::string_view &amp;text)</td></tr>
+<tr class="memdesc:abbef82ff4304e60706bec5031c2fe323"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes whitespace from the left and right of a string, in-place. This is a fast operation, as it does not create a new string. It also does not return a string_view, which is an antipatten.  <br /></td></tr>
 <tr class="memitem:a64f9e9723e7b8686df8245fb2b307fd1" id="r_a64f9e9723e7b8686df8245fb2b307fd1"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="namespaceunify_1_1String.html#a64f9e9723e7b8686df8245fb2b307fd1">unify::String::Trim</a> (std::string stringIn, const char chr=' ')</td></tr>
 <tr class="memdesc:a64f9e9723e7b8686df8245fb2b307fd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs both TrimLeft and TrimRight...  <br /></td></tr>
 <tr class="memitem:a869c9ef6d255d3de54672fdf96c7d121" id="r_a869c9ef6d255d3de54672fdf96c7d121"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="namespaceunify_1_1String.html#a869c9ef6d255d3de54672fdf96c7d121">unify::String::TrimFrom</a> (std::string stringIn, std::string to)</td></tr>
