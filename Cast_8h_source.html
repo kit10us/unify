@@ -171,9 +171,12 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>Target <span class="keyword">&gt;</span>( source );</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
 </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">    #include &lt;<a class="code" href="Cast_8inl.html">unify/Cast.inl</a>&gt;</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    std::vector&lt; T &gt; <a class="code hl_function" href="namespaceunify.html#acb099ba40efd0abfad490215e56be0bc">Split</a>( std::string_view sourceString, <span class="keyword">const</span> <span class="keywordtype">char</span> delimitor, <span class="keywordtype">bool</span> trim = <span class="keyword">true</span> );</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">    #include &lt;<a class="code" href="Cast_8inl.html">unify/Cast.inl</a>&gt;</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
 <div class="ttc" id="aCast_8inl_html"><div class="ttname"><a href="Cast_8inl.html">Cast.inl</a></div></div>
 <div class="ttc" id="aString_8h_html"><div class="ttname"><a href="String_8h.html">String.h</a></div></div>
 <div class="ttc" id="anamespaceunify_html"><div class="ttname"><a href="namespaceunify.html">unify</a></div><div class="ttdef"><b>Definition</b> Angle.h:33</div></div>
@@ -181,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="ttc" id="anamespaceunify_html_a43d2e815dd85c8938b09ded84b052d21"><div class="ttname"><a href="namespaceunify.html#a43d2e815dd85c8938b09ded84b052d21">unify::polymorphic_downcast</a></div><div class="ttdeci">Target polymorphic_downcast(Source source)</div><div class="ttdoc">Polymorphic downcast. In debug builds, this will assert if the cast is invalid. In release builds,...</div><div class="ttdef"><b>Definition</b> Cast.h:61</div></div>
 <div class="ttc" id="anamespaceunify_html_a5d3cf7930f09883f7f5952c3dad67594"><div class="ttname"><a href="namespaceunify.html#a5d3cf7930f09883f7f5952c3dad67594">unify::FromString</a></div><div class="ttdeci">std::optional&lt; TTo &gt; FromString(std::string_view in, bool trim=true) noexcept=delete</div></div>
 <div class="ttc" id="anamespaceunify_html_a764ea3feeb099cabeb1e29e2a7283213"><div class="ttname"><a href="namespaceunify.html#a764ea3feeb099cabeb1e29e2a7283213">unify::Cast</a></div><div class="ttdeci">TTo Cast(const TFrom in) noexcept=delete</div><div class="ttdoc">Casts small types (&lt;= 16 bytes) using register-optimized pass-by-value.</div></div>
+<div class="ttc" id="anamespaceunify_html_acb099ba40efd0abfad490215e56be0bc"><div class="ttname"><a href="namespaceunify.html#acb099ba40efd0abfad490215e56be0bc">unify::Split</a></div><div class="ttdeci">std::vector&lt; T &gt; Split(std::string_view sourceString, const char delimitor, bool trim=true)</div><div class="ttdoc">Split and cast strings into specified types.</div><div class="ttdef"><b>Definition</b> Cast.h:542</div></div>
 <div class="ttc" id="astructunify_1_1Char_html_a15d18e8f4c6530ce48120834c1c880b8"><div class="ttname"><a href="structunify_1_1Char.html#a15d18e8f4c6530ce48120834c1c880b8">unify::Char::c</a></div><div class="ttdeci">char c</div><div class="ttdef"><b>Definition</b> Cast.h:42</div></div>
 <div class="ttc" id="astructunify_1_1Char_html_aa8b2b4a430348f378a767dd6fea84f4c"><div class="ttname"><a href="structunify_1_1Char.html#aa8b2b4a430348f378a767dd6fea84f4c">unify::Char::Char</a></div><div class="ttdeci">Char(char c)</div><div class="ttdef"><b>Definition</b> Cast.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->

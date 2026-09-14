@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>Size3&lt; T &gt;::Size3( std::string text )</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    std::vector&lt; T &gt; split = String::Split&lt; T &gt;( text, <span class="charliteral">&#39;,&#39;</span> );</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    std::vector&lt; T &gt; split = <a class="code hl_function" href="Cast_8inl.html#ab31a6aa8a253548c7bb95a0568a4d640">Split&lt; T &gt;</a>( text, <span class="charliteral">&#39;,&#39;</span> );</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    width = split[ 0 ];</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    height = split[ 1 ];</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    depth = split[ 2 ];</div>
@@ -304,6 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordflow">return</span> h + v * width + d * width * height;</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>}</div>
+<div class="ttc" id="aCast_8inl_html_ab31a6aa8a253548c7bb95a0568a4d640"><div class="ttname"><a href="Cast_8inl.html#ab31a6aa8a253548c7bb95a0568a4d640">Split</a></div><div class="ttdeci">std::vector&lt; T &gt; Split(std::string_view sourceString, const char delimitor, bool trim)</div><div class="ttdef"><b>Definition</b> Cast.inl:541</div></div>
 <div class="ttc" id="anamespaceunify_html_a2a66909808f76f5cd490dfffe1c22ff4"><div class="ttname"><a href="namespaceunify.html#a2a66909808f76f5cd490dfffe1c22ff4">unify::ToString</a></div><div class="ttdeci">std::optional&lt; std::string &gt; ToString(const TFrom in) noexcept=delete</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
