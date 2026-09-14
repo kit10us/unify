@@ -19,6 +19,7 @@
  * along with Unify.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+#include <unify/Cast.h>
 #include <unify/String.h>
 
 namespace unify
@@ -135,8 +136,8 @@ namespace unify
 	inline
 	bool Parameters::Exists(std::string name) const
 	{
-		std::vector< std::string > split = String::Split< std::string >(name, ',');
-		for (std::vector< std::string >::iterator itr = split.begin(); itr != split.end(); ++itr)
+		auto split = unify::Split< std::string >(name, ',');
+		for (auto itr = split.begin(); itr != split.end(); ++itr)
 		{
 			if (m_parameters.find(*itr) == m_parameters.end())
 			{

@@ -49,7 +49,7 @@ namespace unify
 		}
 		else
 		{
-			std::vector< float > split = String::Split< float >(text, ',');
+			std::vector< float > split = Split< float >(text, ',');
 			ul.u = split[0];
 			ul.v = split[1];
 			dr.u = split[2];

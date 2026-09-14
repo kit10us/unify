@@ -66,5 +66,14 @@ namespace unify
 		return static_cast<Target >( source );
 	}
 
+	/// @brief Split and cast strings into specified types.
+	/// @tparam T 
+	/// @param sourceString string to split
+	/// @param delimitor delimitor for split
+	/// @param trim true to ignore white-spaces
+	/// @return vector of each value
+	template< typename T >
+	std::vector< T > Split( std::string_view sourceString, const char delimitor, bool trim = true );
+
 	#include <unify/Cast.inl>
 }

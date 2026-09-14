@@ -44,7 +44,7 @@ namespace unify
 	inline
 	TexCoords::TexCoords(std::string text)
 	{
-		std::vector< float > split = String::Split< float >(text, ',');
+		std::vector< float > split = unify::Split< float >(text, ',');
 		u = split[0];
 		v = split[1];
 	}

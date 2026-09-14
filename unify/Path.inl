@@ -414,6 +414,11 @@ namespace unify
 	inline
 	bool Path::IsDirectory() const
 	{
+		if (IsEmpty())
+		{
+			return false;
+		}
+
 		char lastChar = m_path[ m_path.length() - 1 ];
 		if ( lastChar == '\\' || lastChar == '/' )
 		{

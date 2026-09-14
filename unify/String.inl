@@ -33,118 +33,13 @@ namespace unify::String
 	}
 
 	template< typename T >
-	std::vector<T> Split(std::string_view sourceString, const char delimitor, bool trim)
-	{
-		std::vector<T> results;
-		std::string item;
-		size_t front = 0;
-		size_t i = 0;
-		const auto end = sourceString.size();
-		for (i = 0; i < end; i++)
-		{
-			if (sourceString[i] == delimitor)
-			{
-				if (front == i)
-				{
-					results.push_back({});
-				}
-				else
-				{
-					std::string item = std::string{sourceString.substr(front, i - front)};
-					std::optional<T> result = FromString<T>(item, trim);
-					if (result.has_value())
-					{
-						results.push_back(result.value());
-					}
-					else
-					{
-						return {};
-					}
-				}
-
-				front = i + 1;
-			}
-		}
-
-		// Grab the last item.
-		if (front != end)
-		{
-			std::string item = std::string{sourceString.substr(front, i - front)};
-			std::optional<T> result = FromString<T>(item, trim);
-			if (result.has_value())
-			{
-				results.push_back(result.value());
-			}
-			else
-			{
-				return {};
-			}
-		}
-  
-		return results;
-	}
-
-	/*
-	template< typename T >
-	std::vector< CastResult<T> > Split(std::string_view sourceString, const std::vector< char >& delimitors, bool includeEmpties)
-	{  
-		std::vector< T > destination;
-
-		size_t start = 0;
-		size_t end = 0;
-		for (end = 0; end < sourceString.size(); ++end)
-		{
-			// auto const itr = std::find_if(delimitors.cbegin(), delimitors.cend(), sourceString.at(end));
-			bool found{};
-			for (const auto c : delimitors)
-			{
-				if (c == sourceString[end])
-				{
-					found = true;
-				}
-			}
-
-			if (found)
-			{
-				if (start == end)
-				{
-					if (includeEmpties)
-					{
-						destination.push_back(T());
-					}
-				}
-				else
-				{
-					destination.push_back(Cast< T, std::string >(std::string_view(sourceString.begin() + start, end - start)));
-				}
-				start = end + 1;
-			}
-		}
-
-		if (start == end)
-		{
-			if (includeEmpties)
-			{
-				destination.push_back(T());
-			}
-		}
-		else
-		{
-			destination.push_back(Cast< T, std::string >(sourceString.substr(start, end - start)));
-		}
-
-		return destination;
-	}
-	*/
-
-	template< typename T >
 	std::vector<T> SplitOnWhitespace(std::string sourceString)
 	{
 		std::vector< char > delimitors;
 		delimitors.push_back(' ');
 		delimitors.push_back('\t');
 		delimitors.push_back('\n');
-		return String::Split< T >(sourceString, delimitors);
+		return Split< T >(sourceString, delimitors);
 	}
 }
 

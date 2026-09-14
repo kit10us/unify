@@ -206,3 +206,36 @@ TEST_F(CastTests, FromString)
     EXPECT_TRUE( (double)-12.3456 == FromString<double>("-12.345600") );
     EXPECT_FALSE( (double)1.0 == FromString<double>("0.000000") );
 }
+
+TEST_F(CastTests, SplitInt)
+{
+    using namespace std::string_view_literals;
+    auto correct_split = unify::Split<int>("1, 23, 456, 7890"sv, ',', true);
+    ASSERT_EQ(correct_split.size(), 4);
+    ASSERT_EQ(correct_split[0], 1);
+    ASSERT_EQ(correct_split[1], 23);
+    ASSERT_EQ(correct_split[2], 456);
+    ASSERT_EQ(correct_split[3], 7890);
+}
+
+TEST_F(CastTests, SplitString)
+{
+    using namespace std::string_view_literals;
+    auto correct_split = unify::Split<std::string>("one, two, three, four"sv, ',', false);
+    ASSERT_EQ(correct_split.size(), 4);
+    ASSERT_STREQ(correct_split[0].c_str(), "one");
+    ASSERT_STREQ(correct_split[1].c_str(), " two");
+    ASSERT_STREQ(correct_split[2].c_str(), " three");
+    ASSERT_STREQ(correct_split[3].c_str(), " four");
+}
+
+TEST_F(CastTests, SplitAndTrimString)
+{
+    using namespace std::string_view_literals;
+    auto correct_split = unify::Split<std::string>("one, two, three, four"sv, ',', true);
+    ASSERT_EQ(correct_split.size(), 4);
+    ASSERT_STREQ(correct_split[0].c_str(), "one");
+    ASSERT_STREQ(correct_split[1].c_str(), "two");
+    ASSERT_STREQ(correct_split[2].c_str(), "three");
+    ASSERT_STREQ(correct_split[3].c_str(), "four");
+}

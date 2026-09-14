@@ -118,7 +118,7 @@ namespace unify
 	template<typename T>
 	inline std::optional<V3<T>> V3FromString(std::string_view str)
 	{
-		auto split = String::Split< T >(str, ',');
+		auto split = Split< T >(str, ',');
 		if (split.size() != 3)
 		{
 			return std::nullopt;

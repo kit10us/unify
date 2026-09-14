@@ -167,10 +167,6 @@ namespace unify::String
 		bool operator() ( char * string1, char * string2 ) const;
 	};
 
-	// TODO: For our needs, multiple spaces as delimitors need to be considered as one.
-	template< typename T >
-	std::vector< T > Split( std::string_view sourceString, const char delimitor, bool trim = true );
-
 	/// <summary>
 	/// Returns a vector of whitespace characters including space, newline, and tab.
 	/// </summary>

@@ -536,4 +536,57 @@ std::optional<std::string> unify::FromString(std::string_view text, bool trim) n
 	}
 }
 
-#pragma warning(pop)
+
+	template< typename T >
+	std::vector<T> Split(std::string_view sourceString, const char delimitor, bool trim)
+	{
+		std::vector<T> results;
+		std::string item;
+		size_t front = 0;
+		size_t i = 0;
+		const auto end = sourceString.size();
+		for (i = 0; i < end; i++)
+		{
+			if (sourceString[i] == delimitor)
+			{
+				if (front == i)
+				{
+					results.push_back({});
+				}
+				else
+				{
+					std::string item = std::string{sourceString.substr(front, i - front)};
+					std::optional<T> result = FromString<T>(item, trim);
+					if (result.has_value())
+					{
+						results.push_back(result.value());
+					}
+					else
+					{
+						return {};
+					}
+				}
+
+				front = i + 1;
+			}
+		}
+
+		// Grab the last item.
+		if (front != end)
+		{
+			std::string item = std::string{sourceString.substr(front, i - front)};
+			std::optional<T> result = FromString<T>(item, trim);
+			if (result.has_value())
+			{
+				results.push_back(result.value());
+			}
+			else
+			{
+				return {};
+			}
+		}
+  
+		return results;
+	}
+	
+	#pragma warning(pop)

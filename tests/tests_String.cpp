@@ -37,36 +37,3 @@ protected:
         // Code here will be called immediately after each test (right before the destructor).
     }  
 };
-
-TEST_F(StringTests, SplitInt)
-{
-    using namespace std::string_view_literals;
-    auto correct_split = unify::String::Split<int>("1, 23, 456, 7890"sv, ',', true);
-    ASSERT_EQ(correct_split.size(), 4);
-    ASSERT_EQ(correct_split[0], 1);
-    ASSERT_EQ(correct_split[1], 23);
-    ASSERT_EQ(correct_split[2], 456);
-    ASSERT_EQ(correct_split[3], 7890);
-}
-
-TEST_F(StringTests, SplitString)
-{
-    using namespace std::string_view_literals;
-    auto correct_split = unify::String::Split<std::string>("one, two, three, four"sv, ',', false);
-    ASSERT_EQ(correct_split.size(), 4);
-    ASSERT_STREQ(correct_split[0].c_str(), "one");
-    ASSERT_STREQ(correct_split[1].c_str(), " two");
-    ASSERT_STREQ(correct_split[2].c_str(), " three");
-    ASSERT_STREQ(correct_split[3].c_str(), " four");
-}
-
-TEST_F(StringTests, SplitAndTrimString)
-{
-    using namespace std::string_view_literals;
-    auto correct_split = unify::String::Split<std::string>("one, two, three, four"sv, ',', true);
-    ASSERT_EQ(correct_split.size(), 4);
-    ASSERT_STREQ(correct_split[0].c_str(), "one");
-    ASSERT_STREQ(correct_split[1].c_str(), "two");
-    ASSERT_STREQ(correct_split[2].c_str(), "three");
-    ASSERT_STREQ(correct_split[3].c_str(), "four");
-}
