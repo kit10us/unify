@@ -274,12 +274,6 @@ namespace unify
 		{
 			parts.push_back(part);
 		}
-
-		for(auto&& str : parts)
-		{
-			std::cout << "[" << str << "]";
-		}
-		std::cout << "\n";
 		return parts;
 	}
 
