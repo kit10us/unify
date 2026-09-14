@@ -225,32 +225,61 @@ namespace unify
 	}
 
 	inline
-	std::vector< std::string > Path::Split() const
+	std::vector< std::string > Path::Split(Slash slash) const
 	{
 		std::vector< std::string > parts;
-		size_t start = 0;
-		size_t p;
-		std::string asString = ToString(); 
-		for ( p = 0; p != asString.size(); ++p )
+		char escape {};
+		std::string part;
+		std::string as_string = ToString(); 
+		for (auto&& ch: as_string)
 		{
-			if (asString.at( p ) == '\\' || asString.at( p ) == '/' )
+			if (escape)
 			{
-				std::string part;
-				if ( p != 0 )
+				if (ch == escape)
 				{
-					part = asString.substr( start, p - start );
+					escape = 0;
 				}
-
-				part += "/";
-				parts.push_back( part );
-				start = p + 1;
+				else
+				{
+					part += ch;
+				}
+			}
+			else if (ch == '\"' || ch == '\'')
+			{
+				escape = ch;
+			} 
+			else if (ch == '/' || ch == '\\')
+			{
+				if (!part.empty())
+				{
+					parts.push_back(part);
+					part.clear();
+				}
+				switch(slash)
+				{
+				case Slash::Backward:
+					parts.push_back("\\");
+					break;
+				case Slash::Forward:
+					parts.push_back("/");
+					break;
+				}
+			}
+			else
+			{
+				part += ch;
 			}
 		}
-		if ( p != 0 && p != start )
+		if (!part.empty())
 		{
-			parts.push_back( asString.substr( start, p - start ) );
-			start = p + 1;
+			parts.push_back(part);
 		}
+
+		for(auto&& str : parts)
+		{
+			std::cout << "[" << str << "]";
+		}
+		std::cout << "\n";
 		return parts;
 	}
 
@@ -287,6 +316,11 @@ namespace unify
 	inline
 	bool Path::Exists() const
 	{
+		if (IsEmpty())
+		{
+			return false;
+		}
+
 		if (IsDirectory())
 		{
 			return std::filesystem::is_directory(ToPath());
