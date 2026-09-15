@@ -181,8 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">inline</span></div>
-<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="Cast_8inl.html#ad38027016b3a14d3715ff1aecfe26dd6">   80</a></span>std::optional&lt;std::wstring&gt; <a class="code hl_function" href="Cast_8inl.html#ad38027016b3a14d3715ff1aecfe26dd6">ToWString</a>(std::string input_string)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>std::optional&lt;std::wstring&gt; <a class="code hl_function" href="namespaceunify.html#a3dbe72090c5fea0a58d9afc7109b8784">unify::ToWString</a>(std::string input_string)</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>{</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">if</span> (input_string.empty())</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
@@ -202,7 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">return</span> output_string;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
-</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">inline</span></div>
@@ -643,65 +641,66 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>}</div>
 <div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span> </div>
 <div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span> </div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>    <span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="foldopen" id="foldopen00541" data-start="{" data-end="}">
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno"><a class="line" href="Cast_8inl.html#ab31a6aa8a253548c7bb95a0568a4d640">  541</a></span>    std::vector&lt;T&gt; <a class="code hl_function" href="Cast_8inl.html#ab31a6aa8a253548c7bb95a0568a4d640">Split</a>(std::string_view sourceString, <span class="keyword">const</span> <span class="keywordtype">char</span> delimitor, <span class="keywordtype">bool</span> trim)</div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>    {</div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>        std::vector&lt;T&gt; results;</div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>        std::string item;</div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>        <span class="keywordtype">size_t</span> front = 0;</div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>        <span class="keywordtype">size_t</span> i = 0;</div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>        <span class="keyword">const</span> <span class="keyword">auto</span> end = sourceString.size();</div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>        <span class="keywordflow">for</span> (i = 0; i &lt; end; i++)</div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>        {</div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>            <span class="keywordflow">if</span> (sourceString[i] == delimitor)</div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>            {</div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>                <span class="keywordflow">if</span> (front == i)</div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>                {</div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>                    results.push_back({});</div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>                }</div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>                <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>                {</div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>                    std::string item = std::string{sourceString.substr(front, i - front)};</div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>                    std::optional&lt;T&gt; result = FromString&lt;T&gt;(item, trim);</div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>                    <span class="keywordflow">if</span> (result.has_value())</div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>                    {</div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>                        results.push_back(result.value());</div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>                    }</div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>                    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>                    {</div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>                        <span class="keywordflow">return</span> {};</div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>                    }</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span><span class="keyword">inline</span></div>
+<div class="foldopen" id="foldopen00542" data-start="{" data-end="}">
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno"><a class="line" href="Cast_8inl.html#ab31a6aa8a253548c7bb95a0568a4d640">  542</a></span>std::vector&lt;T&gt; <a class="code hl_function" href="Cast_8inl.html#ab31a6aa8a253548c7bb95a0568a4d640">Split</a>(std::string_view sourceString, <span class="keyword">const</span> <span class="keywordtype">char</span> delimitor, <span class="keywordtype">bool</span> trim)</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>{</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>    std::vector&lt;T&gt; results;</div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>    std::string item;</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>    <span class="keywordtype">size_t</span> front = 0;</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>    <span class="keywordtype">size_t</span> i = 0;</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>    <span class="keyword">const</span> <span class="keyword">auto</span> end = sourceString.size();</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>    <span class="keywordflow">for</span> (i = 0; i &lt; end; i++)</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>    {</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>        <span class="keywordflow">if</span> (sourceString[i] == delimitor)</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>        {</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>            <span class="keywordflow">if</span> (front == i)</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>            {</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>                results.push_back({});</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>            }</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>            {</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>                std::string item = std::string{sourceString.substr(front, i - front)};</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>                std::optional&lt;T&gt; result = FromString&lt;T&gt;(item, trim);</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>                <span class="keywordflow">if</span> (result.has_value())</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>                {</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>                    results.push_back(result.value());</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>                }</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>                {</div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>                    <span class="keywordflow">return</span> {};</div>
 <div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>                }</div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span> </div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>                front = i + 1;</div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>            }</div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>            }</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span> </div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>            front = i + 1;</div>
 <div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>        }</div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span> </div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>        <span class="comment">// Grab the last item.</span></div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>        <span class="keywordflow">if</span> (front != end)</div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>        {</div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>            std::string item = std::string{sourceString.substr(front, i - front)};</div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>            std::optional&lt;T&gt; result = FromString&lt;T&gt;(item, trim);</div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>            <span class="keywordflow">if</span> (result.has_value())</div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>            {</div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>                results.push_back(result.value());</div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>            }</div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>            {</div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>                <span class="keywordflow">return</span> {};</div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>            }</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>    }</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span> </div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>    <span class="comment">// Grab the last item.</span></div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>    <span class="keywordflow">if</span> (front != end)</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>    {</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>        std::string item = std::string{sourceString.substr(front, i - front)};</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>        std::optional&lt;T&gt; result = FromString&lt;T&gt;(item, trim);</div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>        <span class="keywordflow">if</span> (result.has_value())</div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>        {</div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>            results.push_back(result.value());</div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>        }</div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>        {</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>            <span class="keywordflow">return</span> {};</div>
 <div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>        }</div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>  </div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>        <span class="keywordflow">return</span> results;</div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>    }</div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>    }</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>  </div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>    <span class="keywordflow">return</span> results;</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>}</div>
 </div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>    </div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span><span class="preprocessor">    #pragma warning(pop)</span></div>
-<div class="ttc" id="aCast_8inl_html_ab31a6aa8a253548c7bb95a0568a4d640"><div class="ttname"><a href="Cast_8inl.html#ab31a6aa8a253548c7bb95a0568a4d640">Split</a></div><div class="ttdeci">std::vector&lt; T &gt; Split(std::string_view sourceString, const char delimitor, bool trim)</div><div class="ttdef"><b>Definition</b> Cast.inl:541</div></div>
-<div class="ttc" id="aCast_8inl_html_ad38027016b3a14d3715ff1aecfe26dd6"><div class="ttname"><a href="Cast_8inl.html#ad38027016b3a14d3715ff1aecfe26dd6">ToWString</a></div><div class="ttdeci">std::optional&lt; std::wstring &gt; ToWString(std::string input_string)</div><div class="ttdef"><b>Definition</b> Cast.inl:80</div></div>
-<div class="ttc" id="anamespaceunify_1_1String_html_abbef82ff4304e60706bec5031c2fe323"><div class="ttname"><a href="namespaceunify_1_1String.html#abbef82ff4304e60706bec5031c2fe323">unify::String::TrimWhitespace</a></div><div class="ttdeci">void TrimWhitespace(std::string_view &amp;text)</div><div class="ttdoc">Removes whitespace from the left and right of a string, in-place. This is a fast operation,...</div><div class="ttdef"><b>Definition</b> String.inl:181</div></div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>    </div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span><span class="preprocessor">    #pragma warning(pop)</span></div>
+<div class="ttc" id="aCast_8inl_html_ab31a6aa8a253548c7bb95a0568a4d640"><div class="ttname"><a href="Cast_8inl.html#ab31a6aa8a253548c7bb95a0568a4d640">Split</a></div><div class="ttdeci">std::vector&lt; T &gt; Split(std::string_view sourceString, const char delimitor, bool trim)</div><div class="ttdef"><b>Definition</b> Cast.inl:542</div></div>
+<div class="ttc" id="anamespaceunify_1_1String_html_abbef82ff4304e60706bec5031c2fe323"><div class="ttname"><a href="namespaceunify_1_1String.html#abbef82ff4304e60706bec5031c2fe323">unify::String::TrimWhitespace</a></div><div class="ttdeci">void TrimWhitespace(std::string_view &amp;text)</div><div class="ttdoc">Removes whitespace from the left and right of a string, in-place. This is a fast operation,...</div><div class="ttdef"><b>Definition</b> String.inl:172</div></div>
 <div class="ttc" id="anamespaceunify_html_a2a66909808f76f5cd490dfffe1c22ff4"><div class="ttname"><a href="namespaceunify.html#a2a66909808f76f5cd490dfffe1c22ff4">unify::ToString</a></div><div class="ttdeci">std::optional&lt; std::string &gt; ToString(const TFrom in) noexcept=delete</div></div>
+<div class="ttc" id="anamespaceunify_html_a3dbe72090c5fea0a58d9afc7109b8784"><div class="ttname"><a href="namespaceunify.html#a3dbe72090c5fea0a58d9afc7109b8784">unify::ToWString</a></div><div class="ttdeci">std::optional&lt; std::wstring &gt; ToWString(std::string input_string)</div><div class="ttdef"><b>Definition</b> Cast.h:81</div></div>
 <div class="ttc" id="anamespaceunify_html_a5d3cf7930f09883f7f5952c3dad67594"><div class="ttname"><a href="namespaceunify.html#a5d3cf7930f09883f7f5952c3dad67594">unify::FromString</a></div><div class="ttdeci">std::optional&lt; TTo &gt; FromString(std::string_view in, bool trim=true) noexcept=delete</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -158,33 +158,40 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TFrom&gt; </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="namespaceunify.html#a2a66909808f76f5cd490dfffe1c22ff4">   52</a></span>    std::optional&lt;std::string&gt; <a class="code hl_function" href="namespaceunify.html#a2a66909808f76f5cd490dfffe1c22ff4">ToString</a>(<span class="keyword">const</span> TFrom in ) <span class="keyword">noexcept</span> = <span class="keyword">delete</span>;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TTo&gt; </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="namespaceunify.html#a5d3cf7930f09883f7f5952c3dad67594">   55</a></span>    std::optional&lt;TTo&gt; <a class="code hl_function" href="namespaceunify.html#a5d3cf7930f09883f7f5952c3dad67594">FromString</a>(std::string_view in, <span class="keywordtype">bool</span> trim = <span class="keyword">true</span> ) noexcept = delete;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    template&lt; typename Target, typename Source &gt;</div>
-<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="namespaceunify.html#a43d2e815dd85c8938b09ded84b052d21">   61</a></span>    Target <a class="code hl_function" href="namespaceunify.html#a43d2e815dd85c8938b09ded84b052d21">polymorphic_downcast</a>( Source source )</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#ifdef _DEBUG</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        assert( <span class="keyword">dynamic_cast&lt;</span> Target <span class="keyword">&gt;</span>( source ) == source );</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>Target <span class="keyword">&gt;</span>( source );</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">inline</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    std::optional&lt;std::wstring&gt; <a class="code hl_function" href="namespaceunify.html#a3dbe72090c5fea0a58d9afc7109b8784">ToWString</a>(std::string input_string);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TTo&gt; </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="namespaceunify.html#a5d3cf7930f09883f7f5952c3dad67594">   59</a></span>    std::optional&lt;TTo&gt; <a class="code hl_function" href="namespaceunify.html#a5d3cf7930f09883f7f5952c3dad67594">FromString</a>(std::string_view in, <span class="keywordtype">bool</span> trim = <span class="keyword">true</span> ) noexcept = delete;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    template&lt; typename Target, typename Source &gt;</div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="namespaceunify.html#a43d2e815dd85c8938b09ded84b052d21">   65</a></span>    Target <a class="code hl_function" href="namespaceunify.html#a43d2e815dd85c8938b09ded84b052d21">polymorphic_downcast</a>( Source source )</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#ifdef _DEBUG</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        assert( <span class="keyword">dynamic_cast&lt;</span> Target <span class="keyword">&gt;</span>( source ) == source );</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>Target <span class="keyword">&gt;</span>( source );</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
 </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    std::vector&lt; T &gt; <a class="code hl_function" href="namespaceunify.html#acb099ba40efd0abfad490215e56be0bc">Split</a>( std::string_view sourceString, <span class="keyword">const</span> <span class="keywordtype">char</span> delimitor, <span class="keywordtype">bool</span> trim = <span class="keyword">true</span> );</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">    #include &lt;<a class="code" href="Cast_8inl.html">unify/Cast.inl</a>&gt;</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    std::vector&lt; T &gt; <a class="code hl_function" href="namespaceunify.html#a6fb354079e0852facdecdc4b2db77ee4">Split</a>( std::string_view sourceString, <span class="keyword">const</span> <span class="keywordtype">char</span> delimitor = <span class="charliteral">&#39;,&#39;</span>, <span class="keywordtype">bool</span> trim = <span class="keyword">true</span> );</div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="namespaceunify.html#a3dbe72090c5fea0a58d9afc7109b8784">   81</a></span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">    #include &lt;<a class="code" href="Cast_8inl.html">unify/Cast.inl</a>&gt;</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+</div>
 <div class="ttc" id="aCast_8inl_html"><div class="ttname"><a href="Cast_8inl.html">Cast.inl</a></div></div>
 <div class="ttc" id="aString_8h_html"><div class="ttname"><a href="String_8h.html">String.h</a></div></div>
 <div class="ttc" id="anamespaceunify_html"><div class="ttname"><a href="namespaceunify.html">unify</a></div><div class="ttdef"><b>Definition</b> Angle.h:33</div></div>
 <div class="ttc" id="anamespaceunify_html_a2a66909808f76f5cd490dfffe1c22ff4"><div class="ttname"><a href="namespaceunify.html#a2a66909808f76f5cd490dfffe1c22ff4">unify::ToString</a></div><div class="ttdeci">std::optional&lt; std::string &gt; ToString(const TFrom in) noexcept=delete</div></div>
-<div class="ttc" id="anamespaceunify_html_a43d2e815dd85c8938b09ded84b052d21"><div class="ttname"><a href="namespaceunify.html#a43d2e815dd85c8938b09ded84b052d21">unify::polymorphic_downcast</a></div><div class="ttdeci">Target polymorphic_downcast(Source source)</div><div class="ttdoc">Polymorphic downcast. In debug builds, this will assert if the cast is invalid. In release builds,...</div><div class="ttdef"><b>Definition</b> Cast.h:61</div></div>
+<div class="ttc" id="anamespaceunify_html_a3dbe72090c5fea0a58d9afc7109b8784"><div class="ttname"><a href="namespaceunify.html#a3dbe72090c5fea0a58d9afc7109b8784">unify::ToWString</a></div><div class="ttdeci">std::optional&lt; std::wstring &gt; ToWString(std::string input_string)</div><div class="ttdef"><b>Definition</b> Cast.h:81</div></div>
+<div class="ttc" id="anamespaceunify_html_a43d2e815dd85c8938b09ded84b052d21"><div class="ttname"><a href="namespaceunify.html#a43d2e815dd85c8938b09ded84b052d21">unify::polymorphic_downcast</a></div><div class="ttdeci">Target polymorphic_downcast(Source source)</div><div class="ttdoc">Polymorphic downcast. In debug builds, this will assert if the cast is invalid. In release builds,...</div><div class="ttdef"><b>Definition</b> Cast.h:65</div></div>
 <div class="ttc" id="anamespaceunify_html_a5d3cf7930f09883f7f5952c3dad67594"><div class="ttname"><a href="namespaceunify.html#a5d3cf7930f09883f7f5952c3dad67594">unify::FromString</a></div><div class="ttdeci">std::optional&lt; TTo &gt; FromString(std::string_view in, bool trim=true) noexcept=delete</div></div>
+<div class="ttc" id="anamespaceunify_html_a6fb354079e0852facdecdc4b2db77ee4"><div class="ttname"><a href="namespaceunify.html#a6fb354079e0852facdecdc4b2db77ee4">unify::Split</a></div><div class="ttdeci">std::vector&lt; T &gt; Split(std::string_view sourceString, const char delimitor=&#39;,&#39;, bool trim=true)</div><div class="ttdoc">Split and cast strings into specified types.</div><div class="ttdef"><b>Definition</b> Cast.h:543</div></div>
 <div class="ttc" id="anamespaceunify_html_a764ea3feeb099cabeb1e29e2a7283213"><div class="ttname"><a href="namespaceunify.html#a764ea3feeb099cabeb1e29e2a7283213">unify::Cast</a></div><div class="ttdeci">TTo Cast(const TFrom in) noexcept=delete</div><div class="ttdoc">Casts small types (&lt;= 16 bytes) using register-optimized pass-by-value.</div></div>
-<div class="ttc" id="anamespaceunify_html_acb099ba40efd0abfad490215e56be0bc"><div class="ttname"><a href="namespaceunify.html#acb099ba40efd0abfad490215e56be0bc">unify::Split</a></div><div class="ttdeci">std::vector&lt; T &gt; Split(std::string_view sourceString, const char delimitor, bool trim=true)</div><div class="ttdoc">Split and cast strings into specified types.</div><div class="ttdef"><b>Definition</b> Cast.h:542</div></div>
 <div class="ttc" id="astructunify_1_1Char_html_a15d18e8f4c6530ce48120834c1c880b8"><div class="ttname"><a href="structunify_1_1Char.html#a15d18e8f4c6530ce48120834c1c880b8">unify::Char::c</a></div><div class="ttdeci">char c</div><div class="ttdef"><b>Definition</b> Cast.h:42</div></div>
 <div class="ttc" id="astructunify_1_1Char_html_aa8b2b4a430348f378a767dd6fea84f4c"><div class="ttname"><a href="structunify_1_1Char.html#aa8b2b4a430348f378a767dd6fea84f4c">unify::Char::Char</a></div><div class="ttdeci">Char(char c)</div><div class="ttdef"><b>Definition</b> Cast.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->

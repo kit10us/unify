@@ -168,11 +168,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a67b2426966e856d34f2addf90d0f1358" id="r_a67b2426966e856d34f2addf90d0f1358"><td class="memItemLeft">unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a67b2426966e856d34f2addf90d0f1358">ListPartCount</a> (std::string sString, std::vector&lt; char &gt; seperators)</td></tr>
 <tr class="memitem:a1641241be7ff1ad2dd0a418071c1da19" id="r_a1641241be7ff1ad2dd0a418071c1da19"><td class="memItemLeft">std::vector&lt; char &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1641241be7ff1ad2dd0a418071c1da19">SplitWhitespace</a> ()</td></tr>
 <tr class="memdesc:a1641241be7ff1ad2dd0a418071c1da19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of whitespace characters including space, newline, and tab.  <br /></td></tr>
-<tr class="memitem:a36aa82a7a35bb9925bc9a71680365a96" id="r_a36aa82a7a35bb9925bc9a71680365a96"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a36aa82a7a35bb9925bc9a71680365a96 template"><td class="memItemLeft">std::vector&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a36aa82a7a35bb9925bc9a71680365a96">Split</a> (std::string_view sourceString, const std::vector&lt; char &gt; delimitors, bool includeEmpties=false)</td></tr>
-<tr class="memdesc:a36aa82a7a35bb9925bc9a71680365a96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a string into a vector of string pieces based on multiple delimitors. includeEmpties effectively includes empty strings if mutliple delimitors occur in a row. eq.  <br /></td></tr>
-<tr class="memitem:ad3e3a5fd42feb43ba2f0778bfe4939fe" id="r_ad3e3a5fd42feb43ba2f0778bfe4939fe"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:ad3e3a5fd42feb43ba2f0778bfe4939fe template"><td class="memItemLeft">std::vector&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad3e3a5fd42feb43ba2f0778bfe4939fe">SplitOnWhitespace</a> (std::string sourceString)</td></tr>
 <tr class="memitem:a83df5f55c4002b23f70822c2c48d2864" id="r_a83df5f55c4002b23f70822c2c48d2864"><td class="memTemplParams" colspan="2">template&lt;typename foo, typename ... bar&gt; </td></tr>
 <tr class="memitem:a83df5f55c4002b23f70822c2c48d2864 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a83df5f55c4002b23f70822c2c48d2864">StringIs</a> (std::string_view a, std::string_view b, std::string_view rest...)</td></tr>
 <tr class="memdesc:a83df5f55c4002b23f70822c2c48d2864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare mutliple strings for equvilancy, ignoring case.  <br /></td></tr>
@@ -495,66 +490,11 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a36aa82a7a35bb9925bc9a71680365a96" name="a36aa82a7a35bb9925bc9a71680365a96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36aa82a7a35bb9925bc9a71680365a96">&#9670;&#160;</a></span>Split()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; T &gt; unify::String::Split </td>
-          <td>(</td>
-          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>sourceString</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; char &gt;</td>          <td class="paramname"><span class="paramname"><em>delimitors</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>includeEmpties</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Split a string into a vector of string pieces based on multiple delimitors. includeEmpties effectively includes empty strings if mutliple delimitors occur in a row. eq. </p>
-<p>"a,,b,c" = ["a", "b", "c" ] { if includeEmtpies = false } else = ["a", "", "b", "c"] (' ', '<br  />
-')"a b   c\n  d" = [ "a", "b", "c", "d" ]{ if includeEmtpies = false } else = ["a", "", "", "b", "c", "" (for '<br  />
-'), ""] </p>
-
-</div>
-</div>
-<a id="ad3e3a5fd42feb43ba2f0778bfe4939fe" name="ad3e3a5fd42feb43ba2f0778bfe4939fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3e3a5fd42feb43ba2f0778bfe4939fe">&#9670;&#160;</a></span>SplitOnWhitespace()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; T &gt; unify::String::SplitOnWhitespace </td>
-          <td>(</td>
-          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>sourceString</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a1641241be7ff1ad2dd0a418071c1da19" name="a1641241be7ff1ad2dd0a418071c1da19"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1641241be7ff1ad2dd0a418071c1da19">&#9670;&#160;</a></span>SplitWhitespace()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt; char &gt; unify::String::SplitWhitespace </td>
@@ -563,11 +503,6 @@ template&lt;typename T&gt; </div>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Returns a vector of whitespace characters including space, newline, and tab. </p>

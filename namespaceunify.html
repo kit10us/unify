@@ -280,15 +280,15 @@ Functions</h2></td></tr>
 <tr class="memdesc:a764ea3feeb099cabeb1e29e2a7283213"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts small types (&lt;= 16 bytes) using register-optimized pass-by-value.  <br /></td></tr>
 <tr class="memitem:a2a66909808f76f5cd490dfffe1c22ff4" id="r_a2a66909808f76f5cd490dfffe1c22ff4"><td class="memTemplParams" colspan="2">template&lt;typename TFrom&gt; </td></tr>
 <tr class="memitem:a2a66909808f76f5cd490dfffe1c22ff4 template"><td class="memItemLeft">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2a66909808f76f5cd490dfffe1c22ff4">ToString</a> (const TFrom in) noexcept=delete</td></tr>
+<tr class="memitem:a3dbe72090c5fea0a58d9afc7109b8784" id="r_a3dbe72090c5fea0a58d9afc7109b8784"><td class="memItemLeft">std::optional&lt; std::wstring &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a3dbe72090c5fea0a58d9afc7109b8784">ToWString</a> (std::string input_string)</td></tr>
 <tr class="memitem:a5d3cf7930f09883f7f5952c3dad67594" id="r_a5d3cf7930f09883f7f5952c3dad67594"><td class="memTemplParams" colspan="2">template&lt;typename TTo&gt; </td></tr>
 <tr class="memitem:a5d3cf7930f09883f7f5952c3dad67594 template"><td class="memItemLeft">std::optional&lt; TTo &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5d3cf7930f09883f7f5952c3dad67594">FromString</a> (std::string_view in, bool trim=true) noexcept=delete</td></tr>
 <tr class="memitem:a43d2e815dd85c8938b09ded84b052d21" id="r_a43d2e815dd85c8938b09ded84b052d21"><td class="memTemplParams" colspan="2">template&lt;typename Target, typename Source&gt; </td></tr>
 <tr class="memitem:a43d2e815dd85c8938b09ded84b052d21 template"><td class="memItemLeft">Target&#160;</td><td class="memItemRight"><a class="el" href="#a43d2e815dd85c8938b09ded84b052d21">polymorphic_downcast</a> (Source source)</td></tr>
 <tr class="memdesc:a43d2e815dd85c8938b09ded84b052d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic downcast. In debug builds, this will assert if the cast is invalid. In release builds, this will perform a static_cast without checking.  <br /></td></tr>
-<tr class="memitem:acb099ba40efd0abfad490215e56be0bc" id="r_acb099ba40efd0abfad490215e56be0bc"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:acb099ba40efd0abfad490215e56be0bc template"><td class="memItemLeft">std::vector&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#acb099ba40efd0abfad490215e56be0bc">Split</a> (std::string_view sourceString, const char delimitor, bool trim=true)</td></tr>
-<tr class="memdesc:acb099ba40efd0abfad490215e56be0bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split and cast strings into specified types.  <br /></td></tr>
-<tr class="memitem:a3dbe72090c5fea0a58d9afc7109b8784" id="r_a3dbe72090c5fea0a58d9afc7109b8784"><td class="memItemLeft">std::optional&lt; std::wstring &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a3dbe72090c5fea0a58d9afc7109b8784">ToWString</a> (std::string input_string)</td></tr>
+<tr class="memitem:a6fb354079e0852facdecdc4b2db77ee4" id="r_a6fb354079e0852facdecdc4b2db77ee4"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a6fb354079e0852facdecdc4b2db77ee4 template"><td class="memItemLeft">std::vector&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6fb354079e0852facdecdc4b2db77ee4">Split</a> (std::string_view sourceString, const char delimitor=',', bool trim=true)</td></tr>
+<tr class="memdesc:a6fb354079e0852facdecdc4b2db77ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split and cast strings into specified types.  <br /></td></tr>
 <tr class="memitem:a0c6e6421ddd9608187cd7353d9f35af5" id="r_a0c6e6421ddd9608187cd7353d9f35af5"><td class="memItemLeft"><a class="el" href="classunify_1_1Color.html">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0c6e6421ddd9608187cd7353d9f35af5">ColorRGBA</a> (<a class="el" href="classunify_1_1Color.html#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> r, <a class="el" href="classunify_1_1Color.html#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> g, <a class="el" href="classunify_1_1Color.html#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> b, <a class="el" href="classunify_1_1Color.html#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> a)</td></tr>
 <tr class="memitem:a15476c3aab0adb1e0d4365b551de3c6e" id="r_a15476c3aab0adb1e0d4365b551de3c6e"><td class="memItemLeft"><a class="el" href="classunify_1_1Color.html">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a15476c3aab0adb1e0d4365b551de3c6e">ColorRGBA</a> (unsigned int rgba)</td></tr>
 <tr class="memitem:a5bdb75e8af49f28d6299f1474fd516cd" id="r_a5bdb75e8af49f28d6299f1474fd516cd"><td class="memItemLeft"><a class="el" href="classunify_1_1Color.html">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5bdb75e8af49f28d6299f1474fd516cd">ColorARGB</a> (<a class="el" href="classunify_1_1Color.html#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> a, <a class="el" href="classunify_1_1Color.html#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> r, <a class="el" href="classunify_1_1Color.html#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> g, <a class="el" href="classunify_1_1Color.html#a4a821e049590beb4def6d049abbb4f19">Color::Component</a> b)</td></tr>
@@ -2759,13 +2759,16 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="acb099ba40efd0abfad490215e56be0bc" name="acb099ba40efd0abfad490215e56be0bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb099ba40efd0abfad490215e56be0bc">&#9670;&#160;</a></span>Split()</h2>
+<a id="a6fb354079e0852facdecdc4b2db77ee4" name="a6fb354079e0852facdecdc4b2db77ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fb354079e0852facdecdc4b2db77ee4">&#9670;&#160;</a></span>Split()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt; T &gt; unify::Split </td>
@@ -2775,7 +2778,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>delimitor</em></span>, </td>
+          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>delimitor</em></span><span class="paramdefsep"> = </span><span class="paramdefval">','</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2783,6 +2786,11 @@ template&lt;typename T&gt; </div>
           <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>trim</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Split and cast strings into specified types. </p>

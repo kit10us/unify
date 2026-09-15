@@ -139,15 +139,15 @@ Functions</h2></td></tr>
 <tr class="memdesc:a764ea3feeb099cabeb1e29e2a7283213"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts small types (&lt;= 16 bytes) using register-optimized pass-by-value.  <br /></td></tr>
 <tr class="memitem:a2a66909808f76f5cd490dfffe1c22ff4" id="r_a2a66909808f76f5cd490dfffe1c22ff4"><td class="memTemplParams" colspan="2">template&lt;typename TFrom&gt; </td></tr>
 <tr class="memitem:a2a66909808f76f5cd490dfffe1c22ff4 template"><td class="memItemLeft">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespaceunify.html#a2a66909808f76f5cd490dfffe1c22ff4">unify::ToString</a> (const TFrom in) noexcept=delete</td></tr>
+<tr class="memitem:a3dbe72090c5fea0a58d9afc7109b8784" id="r_a3dbe72090c5fea0a58d9afc7109b8784"><td class="memItemLeft">std::optional&lt; std::wstring &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespaceunify.html#a3dbe72090c5fea0a58d9afc7109b8784">unify::ToWString</a> (std::string input_string)</td></tr>
 <tr class="memitem:a5d3cf7930f09883f7f5952c3dad67594" id="r_a5d3cf7930f09883f7f5952c3dad67594"><td class="memTemplParams" colspan="2">template&lt;typename TTo&gt; </td></tr>
 <tr class="memitem:a5d3cf7930f09883f7f5952c3dad67594 template"><td class="memItemLeft">std::optional&lt; TTo &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespaceunify.html#a5d3cf7930f09883f7f5952c3dad67594">unify::FromString</a> (std::string_view in, bool trim=true) noexcept=delete</td></tr>
 <tr class="memitem:a43d2e815dd85c8938b09ded84b052d21" id="r_a43d2e815dd85c8938b09ded84b052d21"><td class="memTemplParams" colspan="2">template&lt;typename Target, typename Source&gt; </td></tr>
 <tr class="memitem:a43d2e815dd85c8938b09ded84b052d21 template"><td class="memItemLeft">Target&#160;</td><td class="memItemRight"><a class="el" href="namespaceunify.html#a43d2e815dd85c8938b09ded84b052d21">unify::polymorphic_downcast</a> (Source source)</td></tr>
 <tr class="memdesc:a43d2e815dd85c8938b09ded84b052d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic downcast. In debug builds, this will assert if the cast is invalid. In release builds, this will perform a static_cast without checking.  <br /></td></tr>
-<tr class="memitem:acb099ba40efd0abfad490215e56be0bc" id="r_acb099ba40efd0abfad490215e56be0bc"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:acb099ba40efd0abfad490215e56be0bc template"><td class="memItemLeft">std::vector&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespaceunify.html#acb099ba40efd0abfad490215e56be0bc">unify::Split</a> (std::string_view sourceString, const char delimitor, bool trim=true)</td></tr>
-<tr class="memdesc:acb099ba40efd0abfad490215e56be0bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split and cast strings into specified types.  <br /></td></tr>
-<tr class="memitem:a3dbe72090c5fea0a58d9afc7109b8784" id="r_a3dbe72090c5fea0a58d9afc7109b8784"><td class="memItemLeft">std::optional&lt; std::wstring &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespaceunify.html#a3dbe72090c5fea0a58d9afc7109b8784">unify::ToWString</a> (std::string input_string)</td></tr>
+<tr class="memitem:a6fb354079e0852facdecdc4b2db77ee4" id="r_a6fb354079e0852facdecdc4b2db77ee4"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a6fb354079e0852facdecdc4b2db77ee4 template"><td class="memItemLeft">std::vector&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespaceunify.html#a6fb354079e0852facdecdc4b2db77ee4">unify::Split</a> (std::string_view sourceString, const char delimitor=',', bool trim=true)</td></tr>
+<tr class="memdesc:a6fb354079e0852facdecdc4b2db77ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split and cast strings into specified types.  <br /></td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
