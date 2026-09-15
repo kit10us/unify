@@ -32,15 +32,6 @@ namespace unify::String
 		return String::StringIs(a, rest);
 	}
 
-	template< typename T >
-	std::vector<T> SplitOnWhitespace(std::string sourceString)
-	{
-		std::vector< char > delimitors;
-		delimitors.push_back(' ');
-		delimitors.push_back('\t');
-		delimitors.push_back('\n');
-		return Split< T >(sourceString, delimitors);
-	}
 }
 
 namespace unify::String
@@ -472,7 +463,7 @@ namespace unify::String
 
 		return *itrA == '0';
 	}
-
+	/*
 	inline
 	std::vector< char > SplitWhitespace()
 	{
@@ -482,4 +473,5 @@ namespace unify::String
 		splitDelimitors.push_back('\t');
 		return splitDelimitors;
 	}
+	*/
 }

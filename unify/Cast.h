@@ -51,6 +51,10 @@ namespace unify
 	template<typename TFrom> 
 	std::optional<std::string> ToString(const TFrom in ) noexcept = delete;
 
+	inline
+	std::optional<std::wstring> ToWString(std::string input_string);
+
+
 	template<typename TTo> 
 	std::optional<TTo> FromString(std::string_view in, bool trim = true ) noexcept = delete;
 
@@ -73,7 +77,7 @@ namespace unify
 	/// @param trim true to ignore white-spaces
 	/// @return vector of each value
 	template< typename T >
-	std::vector< T > Split( std::string_view sourceString, const char delimitor, bool trim = true );
+	std::vector< T > Split( std::string_view sourceString, const char delimitor = ',', bool trim = true );
 
 	#include <unify/Cast.inl>
 }

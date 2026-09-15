@@ -193,7 +193,7 @@ namespace unify
 		/// <summary>
 		/// Returns a stl file path.
 		/// </summary>
-		std::filesystem::path ToPath() const;
+		std::filesystem::path ToFilePath() const;
 
 		/// <summary>
 		/// Delete a path.

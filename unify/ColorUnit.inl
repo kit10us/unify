@@ -179,7 +179,7 @@ namespace unify
 			std::vector< float > split = Split< float >(text, ',');
 			if (split.size() == 1)
 			{
-				split = SplitOnWhitespace< float >(text);
+				split = Split< float >(text);
 			}
 
 			if (split.size() == 3)

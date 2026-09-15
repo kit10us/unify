@@ -272,7 +272,7 @@ TEST_F(PathTests, SplitNoRoot)
 
 TEST_F(PathTests, SplitQuoted)
 {
-        using namespace unify;
+    using namespace unify;
     using namespace std::string_view_literals;
 
     Path back_slash_path = {R"(c:\one\two\"file with spaces.ext)"};
@@ -286,4 +286,28 @@ TEST_F(PathTests, SplitQuoted)
     EXPECT_STREQ(spliced[4].c_str(), "two");
     EXPECT_STREQ(spliced[5].c_str(), "\\");
     EXPECT_STREQ(spliced[6].c_str(), "file with spaces.ext");
+}
+
+TEST_F(PathTests, LastIsFilename)
+{
+    using namespace unify;
+    using namespace std::string_view_literals;
+
+    Path back_slash_path = {R"(c:\one\two\"file with spaces.ext)"};
+    auto spliced = back_slash_path.Split(Slash::Backward);
+
+    ASSERT_EQ(spliced.size(), 7);
+    EXPECT_STREQ(spliced.rbegin()->c_str(), "file with spaces.ext");
+}
+
+TEST_F(PathTests, AsFiletype)
+{
+    using namespace unify;
+    using namespace std::string_view_literals;
+
+    Path file_path = {R"(c:\one\two\file with spaces.ext)"};
+    auto cpp_path = file_path.ToFilePath();
+
+    EXPECT_STREQ(cpp_path.filename().string().c_str(), "file with spaces.ext");
+    EXPECT_STREQ(cpp_path.extension().string().c_str(), ".ext");
 }

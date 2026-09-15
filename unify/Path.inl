@@ -317,7 +317,7 @@ namespace unify
 
 		if (IsDirectory())
 		{
-			return std::filesystem::is_directory(ToPath());
+			return std::filesystem::is_directory(ToFilePath());
 		}
 		else
 		{
@@ -561,7 +561,7 @@ namespace unify
 	}
 
 	inline
-	std::filesystem::path Path::ToPath() const
+	std::filesystem::path Path::ToFilePath() const
 	{
 		return std::filesystem::path(ToString());
 	}
