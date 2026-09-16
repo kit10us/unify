@@ -42,9 +42,15 @@ var searchData=
   ['valuefailure_39',['ValueFailure',['../tests__Result_8cpp.html#ac426bcdbfb64c6c512be2324878c2c13',1,'tests_Result.cpp']]],
   ['valuesuccess_40',['ValueSuccess',['../tests__Result_8cpp.html#a730e656dba6c73a7a3f25892e0534199',1,'tests_Result.cpp']]],
   ['version_203_2029_20june_202007_41',['Version 3 29 June 2007',['../md_README.html',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)'],['../dir_59425e443f801f1f2fd8bbe4959a3ccf.html#autotoc_md27',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)']]],
-  ['viewport_42',['Viewport',['../classunify_1_1Viewport.html',1,'unify']]],
-  ['viewport_2eh_43',['Viewport.h',['../Viewport_8h.html',1,'']]],
-  ['viewport_2einl_44',['Viewport.inl',['../Viewport_8inl.html',1,'']]],
-  ['vision_45',['Evolution and Vision',['../md_README.html#autotoc_md2',1,'']]],
-  ['vscode_20utilization_46',['VSCode Utilization',['../md_README.html#autotoc_md21',1,'']]]
+  ['version_5fmajor_42',['VERSION_MAJOR',['../namespaceunify.html#ace6cc4f55e22dcc6084e61b306e34b78',1,'unify']]],
+  ['version_5fmajor_5fstr_43',['VERSION_MAJOR_STR',['../namespaceunify.html#ad0e25b4a54fbdbc33616468bd1be3dca',1,'unify']]],
+  ['version_5fminor_44',['VERSION_MINOR',['../namespaceunify.html#a15bd9670929f2a5e8d6bbfe58a59541b',1,'unify']]],
+  ['version_5fminor_5fstr_45',['VERSION_MINOR_STR',['../namespaceunify.html#a72d8b5adf0c59bd481a019dd7d718d3e',1,'unify']]],
+  ['version_5fpatch_46',['VERSION_PATCH',['../namespaceunify.html#a3db9470943c8b31476e2bf59588808f8',1,'unify']]],
+  ['version_5fpatch_5fstr_47',['VERSION_PATCH_STR',['../namespaceunify.html#ab33191492d530a15313c6eb61f492203',1,'unify']]],
+  ['viewport_48',['Viewport',['../classunify_1_1Viewport.html',1,'unify']]],
+  ['viewport_2eh_49',['Viewport.h',['../Viewport_8h.html',1,'']]],
+  ['viewport_2einl_50',['Viewport.inl',['../Viewport_8inl.html',1,'']]],
+  ['vision_51',['Evolution and Vision',['../md_README.html#autotoc_md2',1,'']]],
+  ['vscode_20utilization_52',['VSCode Utilization',['../md_README.html#autotoc_md21',1,'']]]
 ];

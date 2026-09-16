@@ -397,6 +397,12 @@ Variables</h2></td></tr>
 <tr class="memitem:a5036da01d2e9936ef9aa7a420176aff4" id="r_a5036da01d2e9936ef9aa7a420176aff4"><td class="memItemLeft">constexpr float&#160;</td><td class="memItemRight"><a class="el" href="#a5036da01d2e9936ef9aa7a420176aff4">DTOR</a> = (3.14159265f / 180.0f)</td></tr>
 <tr class="memitem:ace2ef3716535f040a2c8e2b9c2c89b11" id="r_ace2ef3716535f040a2c8e2b9c2c89b11"><td class="memItemLeft">constexpr float&#160;</td><td class="memItemRight"><a class="el" href="#ace2ef3716535f040a2c8e2b9c2c89b11">RTOD</a> = (180.0f / 3.14159265f)</td></tr>
 <tr class="memitem:a3fe9fc4ec73713f22342452eb7ac5c6b" id="r_a3fe9fc4ec73713f22342452eb7ac5c6b"><td class="memItemLeft">constexpr std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a3fe9fc4ec73713f22342452eb7ac5c6b">DynamicExtent</a> = -1</td></tr>
+<tr class="memitem:ace6cc4f55e22dcc6084e61b306e34b78" id="r_ace6cc4f55e22dcc6084e61b306e34b78"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="#ace6cc4f55e22dcc6084e61b306e34b78">VERSION_MAJOR</a> = 1</td></tr>
+<tr class="memitem:a15bd9670929f2a5e8d6bbfe58a59541b" id="r_a15bd9670929f2a5e8d6bbfe58a59541b"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="#a15bd9670929f2a5e8d6bbfe58a59541b">VERSION_MINOR</a> = 0</td></tr>
+<tr class="memitem:a3db9470943c8b31476e2bf59588808f8" id="r_a3db9470943c8b31476e2bf59588808f8"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="#a3db9470943c8b31476e2bf59588808f8">VERSION_PATCH</a> = 0</td></tr>
+<tr class="memitem:ad0e25b4a54fbdbc33616468bd1be3dca" id="r_ad0e25b4a54fbdbc33616468bd1be3dca"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#ad0e25b4a54fbdbc33616468bd1be3dca">VERSION_MAJOR_STR</a> = &quot;1&quot;</td></tr>
+<tr class="memitem:a72d8b5adf0c59bd481a019dd7d718d3e" id="r_a72d8b5adf0c59bd481a019dd7d718d3e"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a72d8b5adf0c59bd481a019dd7d718d3e">VERSION_MINOR_STR</a> = &quot;0&quot;</td></tr>
+<tr class="memitem:ab33191492d530a15313c6eb61f492203" id="r_ab33191492d530a15313c6eb61f492203"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#ab33191492d530a15313c6eb61f492203">VERSION_PATCH_STR</a> = &quot;0&quot;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>NOTICE: The contents of this header were pulled from the Boost library, modified to remove usage of Boost, and replace that usage with C++11. This was done as <a class="el" href="classunify_1_1Any.html" title="Any allows us to simplify our interfaces when the type a function can consume is largely variable,...">Any</a> is the last remaining feature from boost, not provided via C++11, that I like to use, and I do not want to have to continue to pull in a substantially large library for one tiny piece. All repsect to those who created an maintain this originally. I thus assume no rights, responsibility, nor credit for the contents here-in. </p>
@@ -3579,6 +3585,138 @@ template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">float unify::TAU = 6.28318530f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace6cc4f55e22dcc6084e61b306e34b78" name="ace6cc4f55e22dcc6084e61b306e34b78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace6cc4f55e22dcc6084e61b306e34b78">&#9670;&#160;</a></span>VERSION_MAJOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int unify::VERSION_MAJOR = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0e25b4a54fbdbc33616468bd1be3dca" name="ad0e25b4a54fbdbc33616468bd1be3dca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0e25b4a54fbdbc33616468bd1be3dca">&#9670;&#160;</a></span>VERSION_MAJOR_STR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view unify::VERSION_MAJOR_STR = &quot;1&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15bd9670929f2a5e8d6bbfe58a59541b" name="a15bd9670929f2a5e8d6bbfe58a59541b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15bd9670929f2a5e8d6bbfe58a59541b">&#9670;&#160;</a></span>VERSION_MINOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int unify::VERSION_MINOR = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72d8b5adf0c59bd481a019dd7d718d3e" name="a72d8b5adf0c59bd481a019dd7d718d3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72d8b5adf0c59bd481a019dd7d718d3e">&#9670;&#160;</a></span>VERSION_MINOR_STR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view unify::VERSION_MINOR_STR = &quot;0&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3db9470943c8b31476e2bf59588808f8" name="a3db9470943c8b31476e2bf59588808f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3db9470943c8b31476e2bf59588808f8">&#9670;&#160;</a></span>VERSION_PATCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int unify::VERSION_PATCH = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab33191492d530a15313c6eb61f492203" name="ab33191492d530a15313c6eb61f492203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab33191492d530a15313c6eb61f492203">&#9670;&#160;</a></span>VERSION_PATCH_STR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view unify::VERSION_PATCH_STR = &quot;0&quot;</td>
         </tr>
       </table>
   </td>
