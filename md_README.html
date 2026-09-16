@@ -204,24 +204,21 @@ string_view as Const</h2>
 <li>Returning const std::string_view Disables Assignment and Triggers Warnings Returning a value type with top-level const prevents move assignment and causes modern compilers to issue warnings (such as -Wignored-qualifiers).</li>
 </ol>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
-Final Notes</h1>
-<p>Unify is considered pre-release at the moment due to needing some modernization and optimizations. That being said, certain names of features will change <b>NOW</b> and be committed to for future revisions; this means we need to be pretty explicit in naming so we stick to <b>SOLID</b> development prinipals.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
 VSCode Utilization</h1>
-<p>To build the tests press F7.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
+<p>To build the tests press F7. Tsts</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
 Testing</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
 Unit Testing</h2>
-<p>Unify utilizes GoogleTest (GTest) for unit testing and CTest for test orchestration.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
+<p>Unify utilizes GoogleTest (GTest) for unit testing and CTest for test orchestration. Testing is fully supported on VSCode. You can access the testing menu in VSCode by clicking on the "Testing" button on the side buttons.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
 Building Tests</h2>
 <p>To build the test suite target: </p><div class="fragment"><div class="line">cmake --build build --config Debug --target unify_unit_tests</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
 List Available Tests</h2>
 <p>ctest &ndash;test-dir build -N <br  />
 </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
 Executing Test</h2>
 <p>Unify utilizes ctest to execute unit testing.</p>
 <p>Run tests showing failures: </p><div class="fragment"><div class="line">ctest --test-dir build -C Debug --output-on-failure</div>

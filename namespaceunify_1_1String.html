@@ -141,8 +141,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:a38fd28ea48e35d25d00e1374a0ab9c93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all instances of character 'chr' from the left of 'stringIn'.  <br /></td></tr>
 <tr class="memitem:aacdae8e73a0abd1539bd995d641e6d61" id="r_aacdae8e73a0abd1539bd995d641e6d61"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#aacdae8e73a0abd1539bd995d641e6d61">TrimRight</a> (std::string stringIn, const char chr)</td></tr>
 <tr class="memdesc:aacdae8e73a0abd1539bd995d641e6d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all instances of character 'chr' from the right of 'stringIn'.  <br /></td></tr>
-<tr class="memitem:abbef82ff4304e60706bec5031c2fe323" id="r_abbef82ff4304e60706bec5031c2fe323"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abbef82ff4304e60706bec5031c2fe323">TrimWhitespace</a> (std::string_view &amp;text)</td></tr>
-<tr class="memdesc:abbef82ff4304e60706bec5031c2fe323"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes whitespace from the left and right of a string, in-place. This is a fast operation, as it does not create a new string. It also does not return a string_view, which is an antipatten.  <br /></td></tr>
+<tr class="memitem:a66e295bb61d08d8fd31e109f1c088f1b" id="r_a66e295bb61d08d8fd31e109f1c088f1b"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a66e295bb61d08d8fd31e109f1c088f1b">TrimWhitespace</a> (std::string_view text)</td></tr>
+<tr class="memdesc:a66e295bb61d08d8fd31e109f1c088f1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes whitespace (including spaces, tabs and carriage returns) from the left and right of a string, in-place. This is a fast operation, as it does not create a new string. It also does not return a string_view, which is an antipatten.  <br /></td></tr>
 <tr class="memitem:a64f9e9723e7b8686df8245fb2b307fd1" id="r_a64f9e9723e7b8686df8245fb2b307fd1"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a64f9e9723e7b8686df8245fb2b307fd1">Trim</a> (std::string stringIn, const char chr=' ')</td></tr>
 <tr class="memdesc:a64f9e9723e7b8686df8245fb2b307fd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs both TrimLeft and TrimRight...  <br /></td></tr>
 <tr class="memitem:a869c9ef6d255d3de54672fdf96c7d121" id="r_a869c9ef6d255d3de54672fdf96c7d121"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a869c9ef6d255d3de54672fdf96c7d121">TrimFrom</a> (std::string stringIn, std::string to)</td></tr>
@@ -1005,8 +1005,8 @@ template&lt;typename foo, typename ... bar&gt; </div>
 
 </div>
 </div>
-<a id="abbef82ff4304e60706bec5031c2fe323" name="abbef82ff4304e60706bec5031c2fe323"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbef82ff4304e60706bec5031c2fe323">&#9670;&#160;</a></span>TrimWhitespace()</h2>
+<a id="a66e295bb61d08d8fd31e109f1c088f1b" name="a66e295bb61d08d8fd31e109f1c088f1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66e295bb61d08d8fd31e109f1c088f1b">&#9670;&#160;</a></span>TrimWhitespace()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1015,20 +1015,20 @@ template&lt;typename foo, typename ... bar&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void unify::String::TrimWhitespace </td>
+          <td class="memname">std::string unify::String::TrimWhitespace </td>
           <td>(</td>
-          <td class="paramtype">std::string_view &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em></span></td><td>)</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>text</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Removes whitespace from the left and right of a string, in-place. This is a fast operation, as it does not create a new string. It also does not return a string_view, which is an antipatten. </p>
+<p>Removes whitespace (including spaces, tabs and carriage returns) from the left and right of a string, in-place. This is a fast operation, as it does not create a new string. It also does not return a string_view, which is an antipatten. </p>
 
 </div>
 </div>

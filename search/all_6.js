@@ -14,7 +14,7 @@ var searchData=
   ['detach_11',['Detach',['../classunify_1_1Tree.html#a82973082e71d18f536241837a713c667',1,'unify::Tree']]],
   ['determinant_12',['Determinant',['../classunify_1_1Matrix.html#a4bf4c0790c44a973f317ab23cf1e821a',1,'unify::Matrix']]],
   ['determinantfunc_13',['DeterminantFunc',['../namespaceunify.html#a699d01f876322d4688956825c8428eb4',1,'unify']]],
-  ['developer_20workflow_14',['Developer Workflow',['../dir_59425e443f801f1f2fd8bbe4959a3ccf.html#autotoc_md30',1,'']]],
+  ['developer_20workflow_14',['Developer Workflow',['../dir_59425e443f801f1f2fd8bbe4959a3ccf.html#autotoc_md29',1,'']]],
   ['development_15',['Setup and Development',['../md_README.html#autotoc_md5',1,'']]],
   ['direction_16',['direction',['../classunify_1_1Ray.html#a0a56b6cb30384393f32ff38e47486a28',1,'unify::Ray']]],
   ['directory_20and_20naming_20conventions_17',['Directory and Naming Conventions',['../md_README.html#autotoc_md10',1,'']]],
