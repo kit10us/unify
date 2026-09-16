@@ -169,16 +169,26 @@ namespace unify::String
 		return TrimRight(TrimLeft(stringIn, chr), chr);
 	}
 
-	inline void TrimWhitespace(std::string_view& text)
+	inline [[nodiscard]]
+	std::string TrimWhitespace(std::string_view text)
 	{
-		while (text.data()[0] == ' ' || text.data()[0] == '\t' || text.data()[0] == '\n')
+		if (text.empty())
 		{
-			text.remove_prefix(1);
+			return std::string{};
 		}
-		while (text.data()[text.size() - 1] == ' ' || text.data()[text.size() - 1] == '\t' || text.data()[text.size() - 1] == '\n')
+
+		size_t front {};
+		size_t end {text.length()};
+		while (front != end && (text[front] == ' ' || text[front] == '\t' || text[front] == '\n'))
 		{
-			text.remove_suffix(1);
+			front++;
 		}
+		while (end != front && (text[end - 1]  == ' ' || text[end - 1] == '\t' || text[end - 1] == '\n'))
+		{
+			end--;
+		}
+
+		return std::string{text.substr(front, end - front)};
 	}
 
 	inline

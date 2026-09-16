@@ -39,6 +39,16 @@
             "problemMatcher": ["$msCompile"]
         },
         {
+            "label": "Run Tests SLOW",
+            "type": "shell",
+            "command": "ctest --test-dir build -C Debug --output-on-failure",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": ["$msCompile"]
+        },
+        {
             "label": "Clean Build",
             "type": "shell",
             "command": "cmake --build build --target clean",

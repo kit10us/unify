@@ -111,16 +111,14 @@ Using const std::string_viewâ€”specifically as a value parameter or return typeâ
 5. Returning const std::string_view Disables Assignment and Triggers Warnings
     Returning a value type with top-level const prevents move assignment and causes modern compilers to issue warnings (such as -Wignored-qualifiers).
 
-
-# Final Notes
-Unify is considered pre-release at the moment due to needing some modernization and optimizations. That being said, certain names of features will change **NOW** and be committed to for future revisions; this means we need to be pretty explicit in naming so we stick to **SOLID** development prinipals.
-
 # VSCode Utilization
 To build the tests press F7.
+Tsts
 
 # Testing
 ## Unit Testing
-Unify utilizes GoogleTest (GTest) for unit testing and CTest for test orchestration.
+Unify utilizes GoogleTest (GTest) for unit testing and CTest for test orchestration. Testing is fully supported on VSCode.
+You can access the testing menu in VSCode by clicking on the "Testing" button on the side buttons.
 
 ## Building Tests
 To build the test suite target:

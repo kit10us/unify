@@ -284,11 +284,15 @@ template<>
 inline
 std::optional<bool> unify::FromString(std::string_view raw_text, bool trim) noexcept
 {
+	std::string text{};
 	if (trim)
 	{
-		unify::String::TrimWhitespace(raw_text);
+		text = unify::String::TrimWhitespace(raw_text);
 	}
-	std::string text(raw_text.data(), raw_text.data() + raw_text.size());
+	else
+	{
+		text = raw_text;
+	}
 	std::transform(text.begin(), text.end(), text.begin(), ::tolower);
 
 	if (text.empty() || text == "false" || text == "f" || text == "0" || text == "no" || text == "off")
@@ -303,11 +307,16 @@ std::optional<bool> unify::FromString(std::string_view raw_text, bool trim) noex
 
 template<>
 inline
-std::optional<int8_t> unify::FromString(std::string_view text, bool trim) noexcept
+std::optional<int8_t> unify::FromString(std::string_view text_sv, bool trim) noexcept
 {
+	std::string text ;
 	if (trim)
 	{
-		unify::String::TrimWhitespace(text);
+		text = unify::String::TrimWhitespace(text_sv);
+	}
+	else
+	{
+		text = text_sv;
 	}
 
 	int8_t out{};
@@ -324,13 +333,19 @@ std::optional<int8_t> unify::FromString(std::string_view text, bool trim) noexce
 
 template<>
 inline
-std::optional<uint8_t> unify::FromString(std::string_view text, bool trim) noexcept
+std::optional<uint8_t> unify::FromString(std::string_view text_sv, bool trim) noexcept
 {
 	uint8_t out{};
+	std::string text ;
 	if (trim)
 	{
-		unify::String::TrimWhitespace(text);
+		text = unify::String::TrimWhitespace(text_sv);
 	}
+	else
+	{
+		text = text_sv;
+	}
+
 	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
 	if (ec == std::errc{} && ptr == text.data() + text.size())
 	{
@@ -344,13 +359,19 @@ std::optional<uint8_t> unify::FromString(std::string_view text, bool trim) noexc
 
 template<>
 inline
-std::optional<int32_t> unify::FromString(std::string_view text, bool trim) noexcept
+std::optional<int32_t> unify::FromString(std::string_view text_sv, bool trim) noexcept
 {
 	int32_t out{};
+	std::string text ;
 	if (trim)
 	{
-		unify::String::TrimWhitespace(text);
+		text = unify::String::TrimWhitespace(text_sv);
 	}
+	else
+	{
+		text = text_sv;
+	}
+
 	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
 	if (ec == std::errc{} && ptr == text.data() + text.size())
 	{
@@ -364,13 +385,20 @@ std::optional<int32_t> unify::FromString(std::string_view text, bool trim) noexc
 
 template<>
 inline
-std::optional<uint32_t> unify::FromString(std::string_view text, bool trim) noexcept
+std::optional<uint32_t> unify::FromString(std::string_view text_sv, bool trim) noexcept
 {
 	uint32_t out{};
+	std::string text ;
 	if (trim)
 	{
-		unify::String::TrimWhitespace(text);
+		text = unify::String::TrimWhitespace(text_sv);
 	}
+	else
+	{
+		text = text_sv;
+	}
+
+
 	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
 	if (ec == std::errc{} && ptr == text.data() + text.size())
 	{
@@ -384,13 +412,19 @@ std::optional<uint32_t> unify::FromString(std::string_view text, bool trim) noex
 
 template<>
 inline
-std::optional<std::uint64_t> unify::FromString(std::string_view text, bool trim) noexcept
+std::optional<std::uint64_t> unify::FromString(std::string_view text_sv, bool trim) noexcept
 {
 	std::uint64_t out{};
+	std::string text ;
 	if (trim)
 	{
-		unify::String::TrimWhitespace(text);
+		text = unify::String::TrimWhitespace(text_sv);
 	}
+	else
+	{
+		text = text_sv;
+	}
+
 	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
 	if (ec == std::errc{} && ptr == text.data() + text.size())
 	{
@@ -404,13 +438,19 @@ std::optional<std::uint64_t> unify::FromString(std::string_view text, bool trim)
 
 template<>
 inline
-std::optional<float> unify::FromString(std::string_view text, bool trim) noexcept
+std::optional<float> unify::FromString(std::string_view text_sv, bool trim) noexcept
 {
 	float out{};
+	std::string text ;
 	if (trim)
 	{
-		unify::String::TrimWhitespace(text);
+		text = unify::String::TrimWhitespace(text_sv);
 	}
+	else
+	{
+		text = text_sv;
+	}
+
 	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
 	if (ec == std::errc{} && ptr == text.data() + text.size())
 	{
@@ -424,13 +464,19 @@ std::optional<float> unify::FromString(std::string_view text, bool trim) noexcep
 
 template<>
 inline
-std::optional<double> unify::FromString(std::string_view text, bool trim) noexcept
+std::optional<double> unify::FromString(std::string_view text_sv, bool trim) noexcept
 {
 	double out{};
+	std::string text ;
 	if (trim)
 	{
-		unify::String::TrimWhitespace(text);
+		text = unify::String::TrimWhitespace(text_sv);
 	}
+	else
+	{
+		text = text_sv;
+	}
+
 	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
 	if (ec == std::errc{} && ptr == text.data() + text.size())
 	{
@@ -466,14 +512,19 @@ std::optional<wchar_t*> unify::Cast(const std::string text, bool trim) noexcept
 
 template<>
 inline
-std::optional<int16_t> unify::FromString(std::string_view text, bool trim) noexcept
-{
+std::optional<int16_t> unify::FromString(std::string_view text_sv, bool trim) noexcept
 {
 	int16_t out{};
+	std::string text ;
 	if (trim)
 	{
-		unify::String::TrimWhitespace(text);
+		text = unify::String::TrimWhitespace(text_sv);
 	}
+	else
+	{
+		text = text_sv;
+	}
+
 	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
 	if (ec == std::errc{} && ptr == text.data() + text.size())
 	{
@@ -483,17 +534,23 @@ std::optional<int16_t> unify::FromString(std::string_view text, bool trim) noexc
 	{
 		return std::nullopt;
 	}
-}}
+}
 
 template<>
 inline
-std::optional<uint16_t> unify::FromString(std::string_view text, bool trim) noexcept
+std::optional<uint16_t> unify::FromString(std::string_view text_sv, bool trim) noexcept
 {
 	uint16_t out{};
+	std::string text ;
 	if (trim)
 	{
-		unify::String::TrimWhitespace(text);
+		text = unify::String::TrimWhitespace(text_sv);
 	}
+	else
+	{
+		text = text_sv;
+	}
+
 	auto [ptr, ec] = std::from_chars(text.data(), text.data() + text.size(), out);
 	if (ec == std::errc{} && ptr == text.data() + text.size())
 	{
@@ -508,32 +565,37 @@ std::optional<uint16_t> unify::FromString(std::string_view text, bool trim) noex
 
 template<>
 inline
-std::optional<std::wstring> unify::FromString(std::string_view text, bool trim) noexcept
+std::optional<std::wstring> unify::FromString(std::string_view text_sv, bool trim) noexcept
 {
+	std::string text;
 	if (trim)
 	{
-		unify::String::TrimWhitespace(text);
+		text = unify::String::TrimWhitespace(text_sv);
 	}
+	else
+	{
+		text = text_sv;
+	}
+
 	return std::wstring(text.begin(), text.end());
 }
 
 
 template<>
 inline
-std::optional<std::string> unify::FromString(std::string_view text, bool trim) noexcept
+std::optional<std::string> unify::FromString(std::string_view text_sv, bool trim) noexcept
 {
+	std::string text ;
 	if (trim)
 	{
-		unify::String::TrimWhitespace(text);
+		text = unify::String::TrimWhitespace(text_sv);
 	}
-	try
+	else
 	{
-		return {std::string(text.begin(), text.end())};
+		text = text_sv;
 	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
+
+	return text;
 }
 
 

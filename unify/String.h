@@ -83,10 +83,12 @@ namespace unify::String
 	std::string TrimRight( std::string stringIn, const char chr );
 
 	/// <summary>
-	/// Removes whitespace from the left and right of a string, in-place. This is a fast operation, as it does not create a new string.
+	/// Removes whitespace (including spaces, tabs and carriage returns) from the left 
+	/// and right of a string, in-place. This is a fast operation, as it does not create a new string.
 	/// It also does not return a string_view, which is an antipatten.
 	/// </summary>
-	void TrimWhitespace(std::string_view& text);
+	[[nodiscard]]
+	std::string TrimWhitespace(std::string_view text);
 
 	/// <summary>
 	/// Performs both TrimLeft and TrimRight...

@@ -37,3 +37,32 @@ protected:
         // Code here will be called immediately after each test (right before the destructor).
     }  
 };
+
+TEST_F(StringTests, NoTrim)
+{
+    std::string str {};
+    ASSERT_NO_THROW((str = unify::String::TrimWhitespace(str)));
+    EXPECT_TRUE(str.empty());
+
+}
+
+TEST_F(StringTests, TrimSpacesFront)
+{
+    std::string str {"   One, Two, Three"};
+    str = unify::String::TrimWhitespace(str);
+    EXPECT_STREQ(str.c_str(), "One, Two, Three");
+}
+
+TEST_F(StringTests, TrimSpacesEnd)
+{
+    std::string str {"One, Two, Three   "};
+    str = unify::String::TrimWhitespace(str);
+    EXPECT_STREQ(str.c_str(), "One, Two, Three");
+}
+
+TEST_F(StringTests, TrimSpacesBoth)
+{
+    std::string str {"   One, Two, Three   "};
+    str = unify::String::TrimWhitespace(str);
+    EXPECT_STREQ(str.c_str(), "One, Two, Three");
+}
