@@ -23,3 +23,14 @@
 #pragma once
 
 #include <unify/Undef.h>
+
+namespace unify
+{
+    constexpr int VERSION_MAJOR = 1;
+    constexpr int VERSION_MINOR = 0;
+    constexpr int VERSION_PATCH = 0;
+
+    constexpr std::string_view VERSION_MAJOR_STR = "1";
+    constexpr std::string_view VERSION_MINOR_STR = "0";
+    constexpr std::string_view VERSION_PATCH_STR = "0";
+}
