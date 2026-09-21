@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Unify Library: tests/tests_Cast.cpp File Reference</title>
+<title>Unify Library: tests/tests_Size.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -106,29 +106,28 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">tests_Cast.cpp File Reference</div></div>
+  <div class="headertitle"><div class="title">tests_Size.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;gtest/gtest.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="Cast_8h_source.html">unify/Cast.h</a>&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;<a class="el" href="Size_8h_source.html">unify/Size.h</a>&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:CastTests" id="r_CastTests"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classCastTests.html">CastTests</a></td></tr>
+<tr class="memitem:SizeTests" id="r_SizeTests"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classSizeTests.html">SizeTests</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a246038b4e148fa8e1a432d548d1d1cac" id="r_a246038b4e148fa8e1a432d548d1d1cac"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a246038b4e148fa8e1a432d548d1d1cac">TEST_F</a> (<a class="el" href="classCastTests.html">CastTests</a>, <a class="el" href="namespaceunify.html#aed8f9570b0ebedebb19a611422bdc2d7">ToString</a>)</td></tr>
-<tr class="memitem:a65693f965c2882807a3c0a84ce06b2ac" id="r_a65693f965c2882807a3c0a84ce06b2ac"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a65693f965c2882807a3c0a84ce06b2ac">TEST_F</a> (<a class="el" href="classCastTests.html">CastTests</a>, <a class="el" href="namespaceunify.html#a5d3cf7930f09883f7f5952c3dad67594">FromString</a>)</td></tr>
-<tr class="memitem:a6e561e8f1d8740a786a75dc28559835a" id="r_a6e561e8f1d8740a786a75dc28559835a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6e561e8f1d8740a786a75dc28559835a">TEST_F</a> (<a class="el" href="classCastTests.html">CastTests</a>, SplitInt)</td></tr>
-<tr class="memitem:aca3adee3d9420a24c8a446de2d07fcfa" id="r_aca3adee3d9420a24c8a446de2d07fcfa"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aca3adee3d9420a24c8a446de2d07fcfa">TEST_F</a> (<a class="el" href="classCastTests.html">CastTests</a>, SplitString)</td></tr>
-<tr class="memitem:af5eb927db27a4aa0825d32ba95b019db" id="r_af5eb927db27a4aa0825d32ba95b019db"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af5eb927db27a4aa0825d32ba95b019db">TEST_F</a> (<a class="el" href="classCastTests.html">CastTests</a>, SplitAndTrimString)</td></tr>
+<tr class="memitem:ade1f3371496ac84ff648edc0454f240b" id="r_ade1f3371496ac84ff648edc0454f240b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ade1f3371496ac84ff648edc0454f240b">TEST_F</a> (<a class="el" href="classSizeTests.html">SizeTests</a>, DefaultConstructor)</td></tr>
+<tr class="memdesc:ade1f3371496ac84ff648edc0454f240b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests the default constructor of the SIZE class, ensuring it initializes to zero.  <br /></td></tr>
+<tr class="memitem:ae7ee319245a708bd158ec3e544719e26" id="r_ae7ee319245a708bd158ec3e544719e26"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae7ee319245a708bd158ec3e544719e26">TEST_F</a> (<a class="el" href="classSizeTests.html">SizeTests</a>, ParameterizedConstructor)</td></tr>
+<tr class="memdesc:ae7ee319245a708bd158ec3e544719e26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests the parameterized constructor of the SIZE class, ensuring it initializes to the provided values.  <br /></td></tr>
+<tr class="memitem:a9079fed6a5d7c6e68f9941034a0be78b" id="r_a9079fed6a5d7c6e68f9941034a0be78b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9079fed6a5d7c6e68f9941034a0be78b">TEST_F</a> (<a class="el" href="classSizeTests.html">SizeTests</a>, CastToString)</td></tr>
+<tr class="memdesc:a9079fed6a5d7c6e68f9941034a0be78b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests the Cast() function for SIZE, ensuring it correctly converts a SIZE to a string representation.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a65693f965c2882807a3c0a84ce06b2ac" name="a65693f965c2882807a3c0a84ce06b2ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65693f965c2882807a3c0a84ce06b2ac">&#9670;&#160;</a></span>TEST_F() <span class="overload">[1/5]</span></h2>
+<a id="a9079fed6a5d7c6e68f9941034a0be78b" name="a9079fed6a5d7c6e68f9941034a0be78b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9079fed6a5d7c6e68f9941034a0be78b">&#9670;&#160;</a></span>TEST_F() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,20 +135,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_F </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classCastTests.html">CastTests</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="classSizeTests.html">SizeTests</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceunify.html#a5d3cf7930f09883f7f5952c3dad67594">FromString</a></td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">CastToString</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Tests the Cast() function for SIZE, ensuring it correctly converts a SIZE to a string representation. </p>
+
 </div>
 </div>
-<a id="af5eb927db27a4aa0825d32ba95b019db" name="af5eb927db27a4aa0825d32ba95b019db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5eb927db27a4aa0825d32ba95b019db">&#9670;&#160;</a></span>TEST_F() <span class="overload">[2/5]</span></h2>
+<a id="ade1f3371496ac84ff648edc0454f240b" name="ade1f3371496ac84ff648edc0454f240b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade1f3371496ac84ff648edc0454f240b">&#9670;&#160;</a></span>TEST_F() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -157,20 +158,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_F </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classCastTests.html">CastTests</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="classSizeTests.html">SizeTests</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">SplitAndTrimString</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">DefaultConstructor</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Tests the default constructor of the SIZE class, ensuring it initializes to zero. </p>
+
 </div>
 </div>
-<a id="a6e561e8f1d8740a786a75dc28559835a" name="a6e561e8f1d8740a786a75dc28559835a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e561e8f1d8740a786a75dc28559835a">&#9670;&#160;</a></span>TEST_F() <span class="overload">[3/5]</span></h2>
+<a id="ae7ee319245a708bd158ec3e544719e26" name="ae7ee319245a708bd158ec3e544719e26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7ee319245a708bd158ec3e544719e26">&#9670;&#160;</a></span>TEST_F() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -178,57 +181,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_F </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classCastTests.html">CastTests</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="classSizeTests.html">SizeTests</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">SplitInt</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">ParameterizedConstructor</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="aca3adee3d9420a24c8a446de2d07fcfa" name="aca3adee3d9420a24c8a446de2d07fcfa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca3adee3d9420a24c8a446de2d07fcfa">&#9670;&#160;</a></span>TEST_F() <span class="overload">[4/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TEST_F </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classCastTests.html">CastTests</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SplitString</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a246038b4e148fa8e1a432d548d1d1cac" name="a246038b4e148fa8e1a432d548d1d1cac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a246038b4e148fa8e1a432d548d1d1cac">&#9670;&#160;</a></span>TEST_F() <span class="overload">[5/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TEST_F </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classCastTests.html">CastTests</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespaceunify.html#aed8f9570b0ebedebb19a611422bdc2d7">ToString</a></td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Tests the parameterized constructor of the SIZE class, ensuring it initializes to the provided values. </p>
 
 </div>
 </div>

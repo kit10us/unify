@@ -208,21 +208,14 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="foldopen" id="foldopen00127" data-start="{" data-end="}">
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="namespaceunify.html#a430c6d7f03e2d9c28882e5fd93902933">  127</a></span>    <span class="keyword">inline</span> std::optional&lt;std::string&gt; <a class="code hl_function" href="namespaceunify.html#a2a66909808f76f5cd490dfffe1c22ff4">ToString</a>(<span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1V2.html">V2&lt;T&gt;</a> vec) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="namespaceunify.html#ad144281d06603cae6b6290e0946d6741">  127</a></span>    <span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceunify.html#aed8f9570b0ebedebb19a611422bdc2d7">ToString</a>(<span class="keyword">const</span> <a class="code hl_class" href="classunify_1_1V2.html">V2&lt;T&gt;</a> vec) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    {</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordflow">try</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        {</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <span class="keywordflow">return</span> *<a class="code hl_function" href="namespaceunify.html#a2a66909808f76f5cd490dfffe1c22ff4">ToString&lt;T&gt;</a>(vec.x) + <span class="stringliteral">&quot;, &quot;</span> + *<a class="code hl_function" href="namespaceunify.html#a2a66909808f76f5cd490dfffe1c22ff4">ToString&lt;T&gt;</a>(vec.y);</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        }</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">catch</span>(...)</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        {</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        }</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceunify.html#aed8f9570b0ebedebb19a611422bdc2d7">unify::ToString&lt;T&gt;</a>(vec.x) + <span class="stringliteral">&quot;, &quot;</span> + <a class="code hl_function" href="namespaceunify.html#aed8f9570b0ebedebb19a611422bdc2d7">unify::ToString&lt;T&gt;</a>(vec.y);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
 </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="preprocessor">#include &lt;<a class="code" href="V2_8inl.html">unify/V2.inl</a>&gt;</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>}</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">#include &lt;<a class="code" href="V2_8inl.html">unify/V2.inl</a>&gt;</span></div>
 <div class="ttc" id="aAngle_8h_html"><div class="ttname"><a href="Angle_8h.html">Angle.h</a></div></div>
 <div class="ttc" id="aCast_8h_html"><div class="ttname"><a href="Cast_8h.html">Cast.h</a></div></div>
 <div class="ttc" id="aException_8h_html"><div class="ttname"><a href="Exception_8h.html">Exception.h</a></div></div>
@@ -262,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="ttc" id="aclassunify_1_1V2_html_afcd82609956b57a031111d72284e8076"><div class="ttname"><a href="classunify_1_1V2.html#afcd82609956b57a031111d72284e8076">unify::V2::operator==</a></div><div class="ttdeci">bool operator==(const V2&lt; T &gt; &amp;vec) const</div><div class="ttdef"><b>Definition</b> V2.inl:154</div></div>
 <div class="ttc" id="aclassunify_1_1V3_html"><div class="ttname"><a href="classunify_1_1V3.html">unify::V3</a></div><div class="ttdef"><b>Definition</b> V3.h:37</div></div>
 <div class="ttc" id="anamespaceunify_html"><div class="ttname"><a href="namespaceunify.html">unify</a></div><div class="ttdef"><b>Definition</b> Angle.h:33</div></div>
-<div class="ttc" id="anamespaceunify_html_a2a66909808f76f5cd490dfffe1c22ff4"><div class="ttname"><a href="namespaceunify.html#a2a66909808f76f5cd490dfffe1c22ff4">unify::ToString</a></div><div class="ttdeci">std::optional&lt; std::string &gt; ToString(const TFrom in) noexcept=delete</div></div>
+<div class="ttc" id="anamespaceunify_html_aed8f9570b0ebedebb19a611422bdc2d7"><div class="ttname"><a href="namespaceunify.html#aed8f9570b0ebedebb19a611422bdc2d7">unify::ToString</a></div><div class="ttdeci">std::string ToString(const TFrom in) noexcept=delete</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
