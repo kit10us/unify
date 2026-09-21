@@ -225,14 +225,26 @@ namespace unify
 	}
 
 	inline
-	std::vector< std::string > Path::Split(Slash slash) const
+	std::vector< std::string > Path::Split() const
 	{
+		if (IsEmpty())
+		{
+			return {};
+		}
+
 		std::vector< std::string > parts;
 		char escape {};
 		std::string part;
 		std::string as_string = ToString(); 
-		for (auto&& ch: as_string)
+		int i = 0;
+		if (as_string[0] == '/' || as_string[0] == '\\')
 		{
+			parts.push_back("/");
+		}
+
+		for (i; i < as_string.length(); i++)
+		{
+			char ch = as_string[i];
 			if (escape)
 			{
 				if (ch == escape)
@@ -255,15 +267,6 @@ namespace unify
 					parts.push_back(part);
 					part.clear();
 				}
-				switch(slash)
-				{
-				case Slash::Backward:
-					parts.push_back("\\");
-					break;
-				case Slash::Forward:
-					parts.push_back("/");
-					break;
-				}
 			}
 			else
 			{
@@ -283,7 +286,7 @@ namespace unify
 		m_path = std::string();
 		for ( std::vector< std::string >::const_iterator itr = pathParts.begin(), end = pathParts.end(); itr != end; ++itr )
 		{
-			//Combine( *this, Path( *itr ) );
+			Combine( *this, Path( *itr ) );
 		}
 		return *this;
 	}

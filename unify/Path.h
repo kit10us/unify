@@ -105,7 +105,7 @@ namespace unify
 		/// <summary>
 		/// Splits a path into individual parts.
 		/// </summary>
-		std::vector< std::string > Split(Slash slash = Slash::Forward) const;
+		std::vector< std::string > Split() const;
 
 		/// <summary>
 		/// Joins a vector of path parts, such as that created by Split, into a single path.

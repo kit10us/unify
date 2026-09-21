@@ -150,11 +150,5 @@ TEST_F(V2Tests, CastToString)
 {
     unify::V2<int> v1{3, 4};
     auto str = unify::ToString(v1);    
-    EXPECT_TRUE(str.has_value());
-    if (!str.has_value())
-    {
-        return;
-    }
-    
-    EXPECT_EQ(*str, "3, 4");
+    EXPECT_STREQ(str.c_str(), "3, 4");
 }

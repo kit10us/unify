@@ -67,6 +67,5 @@ TEST_F(ColorTests, ToString)
 
     unify::Color color{10, 20, 40, 255};
     auto color_s = color.ToString();
-    ASSERT_TRUE(color_s.has_value());
-    EXPECT_EQ(*color_s, "10, 20, 40, 255"s);
+    EXPECT_STREQ(color_s.c_str(), "10, 20, 40, 255");
 }

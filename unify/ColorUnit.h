@@ -132,8 +132,8 @@ namespace unify
 		/// <returns></returns>
 		inline
 		ColorUnit Normalize() const;
-
-		std::optional<std::string> ToString( Order order = RGBA ) const;
+	
+		std::string ToString( Order order = RGBA ) const;
 	};
 
 	ColorUnit ColorUnitRGBA( float r, float g, float b, float a );

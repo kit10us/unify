@@ -83,7 +83,7 @@ namespace unify
 	TimeDelta TimeDeltaInDays( float days );
 	TimeDelta TimeDeltaInYears( float years );
 
-	std::optional<std::string> ToString(const TimeDelta in);
+	std::string ToString(const TimeDelta in);
 	std::optional<TimeDelta> FromString(std::string_view text);
 }
 

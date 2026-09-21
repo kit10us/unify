@@ -251,14 +251,19 @@ namespace unify
 	}
 
 	inline
-	std::optional<std::string> ToString(const TimeDelta in)
+	std::string ToString(const TimeDelta in)
 	{
-		return std::nullopt;
+		return std::to_string(in.AsSeconds());
 	}
 	
 	inline
 	std::optional<TimeDelta> FromString(std::string_view text)
 	{
-		return std::nullopt;
+		auto time_in_seconds = unify::FromString<float>(text);
+		if (!time_in_seconds)
+		{
+			return {};
+		}
+		return {TimeDeltaInSeconds(*time_in_seconds)};
 	}
 }

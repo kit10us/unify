@@ -48,91 +48,82 @@ TEST_F(CastTests, ToString)
     using namespace std::string_view_literals;
     using namespace unify;
 
-    EXPECT_STREQ( "0", ToString<Char>('0').value().c_str() );
-    EXPECT_STREQ( "1", ToString<Char>('1').value().c_str() );
-    EXPECT_STREQ( "a", ToString<Char>('a').value().c_str() );
-    EXPECT_STREQ( "Z", ToString<Char>('Z').value().c_str() );
-    EXPECT_STRNE( "a", ToString<Char>('b').value().c_str() );
+    EXPECT_STREQ( "0", ToString<Char>('0').c_str() );
+    EXPECT_STREQ( "1", ToString<Char>('1').c_str() );
+    EXPECT_STREQ( "a", ToString<Char>('a').c_str() );
+    EXPECT_STREQ( "Z", ToString<Char>('Z').c_str() );
+    EXPECT_STRNE( "a", ToString<Char>('b').c_str() );
 
-    EXPECT_STREQ( "Hello, world!", ToString<std::string>("Hello, world!"s).value().c_str() );
-    EXPECT_STRNE( "!dlrow ,olleH", ToString<std::string>("Hello, world!"s).value().c_str() );
+    EXPECT_STREQ( "Hello, world!", ToString<std::string>("Hello, world!"s).c_str() );
+    EXPECT_STRNE( "!dlrow ,olleH", ToString<std::string>("Hello, world!"s).c_str() );
 
-    EXPECT_STREQ( "Hello, world!", ToString<std::string_view>("Hello, world!"sv).value().c_str() );
-    EXPECT_STRNE( "!dlrow ,olleH", ToString<std::string_view>("Hello, world!"sv).value().c_str() );
+    EXPECT_STREQ( "Hello, world!", ToString<std::string_view>("Hello, world!"sv).c_str() );
+    EXPECT_STRNE( "!dlrow ,olleH", ToString<std::string_view>("Hello, world!"sv).c_str() );
 
     {
         auto wide = ToWString("Hello, world!");
-        EXPECT_TRUE(wide);
-
-        if (wide)
-        {
-            auto str = ToString(*wide);
-            EXPECT_TRUE(str);
-            if (str)
-            {
-                EXPECT_STREQ("Hello, world!", (*str).c_str());
-            }
-        }
+        auto str = ToString(wide);
+        EXPECT_STREQ("Hello, world!", str.c_str());
     }
 
-    EXPECT_STREQ( "true", ToString<bool>(true).value().c_str() );
-    EXPECT_STREQ( "false", ToString<bool>(false).value().c_str() );
-    EXPECT_STRNE( "true", ToString<bool>(false).value().c_str() );
-    EXPECT_STRNE( "false", ToString<bool>(true).value().c_str() );
+    EXPECT_STREQ( "true", ToString<bool>(true).c_str() );
+    EXPECT_STREQ( "false", ToString<bool>(false).c_str() );
+    EXPECT_STRNE( "true", ToString<bool>(false).c_str() );
+    EXPECT_STRNE( "false", ToString<bool>(true).c_str() );
 
-    EXPECT_STREQ( "1", ToString<uint8_t>(1).value().c_str() );
-    EXPECT_STREQ( "12", ToString<uint8_t>(12).value().c_str() );
-    EXPECT_STRNE( "21", ToString<uint8_t>(12).value().c_str() );
+    EXPECT_STREQ( "1", ToString<uint8_t>(1).c_str() );
+    EXPECT_STREQ( "12", ToString<uint8_t>(12).c_str() );
+    EXPECT_STRNE( "21", ToString<uint8_t>(12).c_str() );
 
-    EXPECT_STREQ( "97", ToString<char>('a').value().c_str() );
-    EXPECT_STREQ( "90", ToString<char>('Z').value().c_str() );
-    EXPECT_STREQ( "49", ToString<char>('1').value().c_str() );
-    EXPECT_STRNE( "12", ToString<char>('a').value().c_str() );
+    EXPECT_STREQ( "97", ToString<char>('a').c_str() );
+    EXPECT_STREQ( "90", ToString<char>('Z').c_str() );
+    EXPECT_STREQ( "49", ToString<char>('1').c_str() );
+    EXPECT_STRNE( "12", ToString<char>('a').c_str() );
 
-    EXPECT_STREQ( "1", ToString<uint32_t>(1).value().c_str() );
-    EXPECT_STREQ( "1000", ToString<uint32_t>(1000).value().c_str() );
-    EXPECT_STREQ( "1234567", ToString<uint32_t>(1234567).value().c_str() );
-    EXPECT_STREQ( "4294967295", ToString<uint32_t>(std::numeric_limits<uint32_t>::max()).value().c_str() );
-    EXPECT_STRNE( "0", ToString<uint32_t>(1).value().c_str() );
+    EXPECT_STREQ( "1", ToString<uint32_t>(1).c_str() );
+    EXPECT_STREQ( "1000", ToString<uint32_t>(1000).c_str() );
+    EXPECT_STREQ( "1234567", ToString<uint32_t>(1234567).c_str() );
+    EXPECT_STREQ( "4294967295", ToString<uint32_t>(std::numeric_limits<uint32_t>::max()).c_str() );
+    EXPECT_STRNE( "0", ToString<uint32_t>(1).c_str() );
 
-    EXPECT_STREQ( "1", ToString<uint64_t>(1).value().c_str() );
-    EXPECT_STREQ( "1000", ToString<uint64_t>(1000).value().c_str() );
-    EXPECT_STREQ( "1234567", ToString<uint64_t>(1234567).value().c_str() );
-    EXPECT_STREQ( "18446744073709551615", ToString<uint64_t>(std::numeric_limits<uint64_t>::max()).value().c_str() );
-    EXPECT_STRNE( "0", ToString<uint64_t>(1).value().c_str() );
+    EXPECT_STREQ( "1", ToString<uint64_t>(1).c_str() );
+    EXPECT_STREQ( "1000", ToString<uint64_t>(1000).c_str() );
+    EXPECT_STREQ( "1234567", ToString<uint64_t>(1234567).c_str() );
+    EXPECT_STREQ( "18446744073709551615", ToString<uint64_t>(std::numeric_limits<uint64_t>::max()).c_str() );
+    EXPECT_STRNE( "0", ToString<uint64_t>(1).c_str() );
 
-    EXPECT_STREQ( "1", ToString<int32_t>(1).value().c_str() );
-    EXPECT_STREQ( "1000", ToString<int32_t>(1000).value().c_str() );
-    EXPECT_STREQ( "1234567", ToString<int32_t>(1234567).value().c_str() );
-    EXPECT_STREQ( "-2147483648", ToString<int32_t>(std::numeric_limits<int32_t>::min()).value().c_str() );
-    EXPECT_STREQ( "2147483647", ToString<int32_t>(std::numeric_limits<int32_t>::max()).value().c_str() );
-    EXPECT_STRNE( "0", ToString<int32_t>(1).value().c_str() );
+    EXPECT_STREQ( "1", ToString<int32_t>(1).c_str() );
+    EXPECT_STREQ( "1000", ToString<int32_t>(1000).c_str() );
+    EXPECT_STREQ( "1234567", ToString<int32_t>(1234567).c_str() );
+    EXPECT_STREQ( "-2147483648", ToString<int32_t>(std::numeric_limits<int32_t>::min()).c_str() );
+    EXPECT_STREQ( "2147483647", ToString<int32_t>(std::numeric_limits<int32_t>::max()).c_str() );
+    EXPECT_STRNE( "0", ToString<int32_t>(1).c_str() );
 
-    EXPECT_STREQ( "1", ToString<int64_t>(1).value().c_str() );
-    EXPECT_STREQ( "1000", ToString<int64_t>(1000).value().c_str() );
-    EXPECT_STREQ( "1234567", ToString<int64_t>(1234567).value().c_str() );
-    EXPECT_STREQ( "-9223372036854775808", ToString<int64_t>(std::numeric_limits<int64_t>::min()).value().c_str() );    
-    EXPECT_STREQ( "9223372036854775807", ToString<int64_t>(std::numeric_limits<int64_t>::max()).value().c_str() );    
-    EXPECT_STRNE( "0", ToString<int64_t>(1).value().c_str() );
+    EXPECT_STREQ( "1", ToString<int64_t>(1).c_str() );
+    EXPECT_STREQ( "1000", ToString<int64_t>(1000).c_str() );
+    EXPECT_STREQ( "1234567", ToString<int64_t>(1234567).c_str() );
+    EXPECT_STREQ( "-9223372036854775808", ToString<int64_t>(std::numeric_limits<int64_t>::min()).c_str() );    
+    EXPECT_STREQ( "9223372036854775807", ToString<int64_t>(std::numeric_limits<int64_t>::max()).c_str() );    
+    EXPECT_STRNE( "0", ToString<int64_t>(1).c_str() );
 
-    EXPECT_STREQ( "0.000000",  ToString<float>(0.0f).value().c_str() );
-    EXPECT_STREQ( "1.000000",  ToString<float>(1.0f).value().c_str() );
-    EXPECT_STREQ( "12.345600",  ToString<float>(12.3456f).value().c_str() );
-    EXPECT_STREQ( "-12.345600", ToString<float>(-12.3456f).value().c_str() );
-    EXPECT_STRNE( "0.000000",  ToString<float>(1.0f).value().c_str());
+    EXPECT_STREQ( "0.000000",  ToString<float>(0.0f).c_str() );
+    EXPECT_STREQ( "1.000000",  ToString<float>(1.0f).c_str() );
+    EXPECT_STREQ( "12.345600",  ToString<float>(12.3456f).c_str() );
+    EXPECT_STREQ( "-12.345600", ToString<float>(-12.3456f).c_str() );
+    EXPECT_STRNE( "0.000000",  ToString<float>(1.0f).c_str());
 
-    EXPECT_STREQ( "0.000000",  ToString<double>(0.0).value().c_str() );
-    EXPECT_STREQ( "1.000000",  ToString<double>(1.0).value().c_str() );
-    EXPECT_STREQ( "12.345600",  ToString<double>(12.3456).value().c_str() );
-    EXPECT_STREQ( "-12.345600",  ToString<double>(-12.3456).value().c_str() );
-    EXPECT_STRNE( "0.000000",  ToString<double>(1.0).value().c_str() );
+    EXPECT_STREQ( "0.000000",  ToString<double>(0.0).c_str() );
+    EXPECT_STREQ( "1.000000",  ToString<double>(1.0).c_str() );
+    EXPECT_STREQ( "12.345600",  ToString<double>(12.3456).c_str() );
+    EXPECT_STREQ( "-12.345600",  ToString<double>(-12.3456).c_str() );
+    EXPECT_STRNE( "0.000000",  ToString<double>(1.0).c_str() );
 
-    EXPECT_STREQ( "1", ToString<uint16_t>(1).value().c_str() );
-    EXPECT_STREQ( "1000", ToString<uint16_t>(1000).value().c_str() );
-    EXPECT_STREQ( "12345", ToString<uint16_t>(12345).value().c_str() );
-    EXPECT_STREQ( "0", ToString<uint16_t>(std::numeric_limits<uint16_t>::min()).value().c_str() );
-    EXPECT_STREQ( "65535", ToString<uint16_t>(std::numeric_limits<uint16_t>::max()).value().c_str() );
-    EXPECT_STRNE( "0", ToString<uint16_t>(1).value().c_str() );
+    EXPECT_STREQ( "1", ToString<uint16_t>(1).c_str() );
+    EXPECT_STREQ( "1000", ToString<uint16_t>(1000).c_str() );
+    EXPECT_STREQ( "12345", ToString<uint16_t>(12345).c_str() );
+    EXPECT_STREQ( "0", ToString<uint16_t>(std::numeric_limits<uint16_t>::min()).c_str() );
+    EXPECT_STREQ( "65535", ToString<uint16_t>(std::numeric_limits<uint16_t>::max()).c_str() );
+    EXPECT_STRNE( "0", ToString<uint16_t>(1).c_str() );
     
     EXPECT_TRUE( std::string("1") == ToString((uint16_t)1) );
     EXPECT_TRUE( std::string("1000") == ToString((int16_t)1000) );

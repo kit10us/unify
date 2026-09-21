@@ -41,13 +41,33 @@
         {
             "label": "Run Tests SLOW",
             "type": "shell",
-            "command": "ctest --test-dir build -C Debug --output-on-failure",
+            "command": "ctest --test-dir build -C Debug --verbose",
             "group": {
                 "kind": "test",
                 "isDefault": true
             },
             "problemMatcher": ["$msCompile"]
         },
+        {
+            "label": "Run Test Range",
+            "type": "shell",
+            "command": "ctest --test-dir build -C Debug --verbose -I ${input:testRange}",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": ["$msCompile"]
+        },        
+        {
+            "label": "Run Test Regex",
+            "type": "shell",
+            "command": "ctest --test-dir build -C Debug --verbose -R \"${input:testFilter}\"",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": ["$msCompile"]
+        },        
         {
             "label": "Clean Build",
             "type": "shell",
@@ -57,6 +77,18 @@
                 "isDefault": true
             },
             "problemMatcher": ["$msCompile"]
+        },
+    ],
+    "inputs": [
+        {
+            "id": "testRange",
+            "type": "promptString",
+            "description": "Enter test range ([n2-n3])"
+        },
+        {
+            "id": "testFilter",
+            "type": "promptString",
+            "description": "Enter test regex"
         }
-   ]
+    ]
 }

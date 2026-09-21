@@ -69,16 +69,11 @@ namespace unify
 	};
 
 	inline
-	std::optional<std::string> ToString(const TexCoords coords)
+	std::string ToString(const TexCoords coords)
 	{
 		auto coord_u = unify::ToString(coords.u);
 		auto coord_v = unify::ToString(coords.v);
-		if (!coord_u || !coord_v)
-		{
-			return std::nullopt;
-		}
-
-		return *coord_u + ", " + *coord_v;
+		return coord_u + ", " + coord_v;
 	}
 }
 

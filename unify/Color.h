@@ -150,7 +150,7 @@ namespace unify
 		/// <summary>
 		/// Returns a string representation fo a color.
 		/// </summary>
-		std::optional<std::string> ToString(unify::Order order = RGBA) const;
+		std::string ToString(unify::Order order = RGBA) const;
 	};
 
 	inline Color ColorRGBA(Color::Component r, Color::Component g, Color::Component b, Color::Component a);

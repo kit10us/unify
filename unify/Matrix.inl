@@ -986,7 +986,7 @@ namespace unify
 				out += "{";
 				for( int c = 0; c < 4; ++c )
 				{
-					out += *unify::ToString( (*this)(r, c) );
+					out += unify::ToString( (*this)(r, c) );
 					if( c < 3 )
 					{
 						out += ",";

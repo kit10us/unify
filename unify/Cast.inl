@@ -43,45 +43,31 @@ std::optional<unsigned int> unify::FromString(std::string_view text) noexcept;
 /// @return string
 template<>
 inline
-std::optional<std::string> unify::ToString(const Char in) noexcept
+std::string unify::ToString(const Char in) noexcept
 {
-	try
-	{
-		return std::string(1, in.c);
-	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
+	return std::string(1, in.c);
 }
 
 template<>
 inline
-std::optional<std::string> unify::ToString(const std::string in) noexcept
+std::string unify::ToString(const std::string in) noexcept
 {
 	return in;
 }
 
 template<>
 inline
-std::optional<std::string> unify::ToString(const std::string_view in) noexcept
+std::string unify::ToString(const std::string_view in) noexcept
 {
-	try
-	{
-		return {{in.data(), in.data() + in.size()}};
-	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
+	return {in.data(), in.data() + in.size()};
 }
 
 inline
-std::optional<std::wstring> unify::ToWString(std::string input_string)
+std::wstring unify::ToWString(std::string input_string)
 {
     if (input_string.empty())
     {
-        return std::wstring();
+        return std::wstring{};
     }
 
     std::size_t size_needed = 0;
@@ -89,7 +75,7 @@ std::optional<std::wstring> unify::ToWString(std::string input_string)
 
     if (size_needed == 0)
     {
-        return std::wstring();
+        return std::wstring{};
     }
 
     std::wstring output_string(size_needed - 1, 0);
@@ -100,184 +86,94 @@ std::optional<std::wstring> unify::ToWString(std::string input_string)
 
 template<>
 inline
-std::optional<std::string> unify::ToString(const std::wstring in) noexcept
+std::string unify::ToString(const std::wstring in) noexcept
 {
-	try
-	{
-		return {std::string(in.begin(), in.end())};
-	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
+	return {std::string(in.begin(), in.end())};
 }
 
 template<>
 inline
-std::optional<std::string> unify::ToString(const bool in) noexcept
+std::string unify::ToString(const bool in) noexcept
 {
-	try
-	{
-		return {in ? "true" : "false"};
-	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
+	return {in ? "true" : "false"};
 }
 
 template<>
 inline
-std::optional<std::string> unify::ToString(const uint8_t in) noexcept
+std::string unify::ToString(const uint8_t in) noexcept
 {
-	try
-	{
-		return {std::to_string(in)};
-	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
+	return {std::to_string(in)};
 }
 
 template<>
 inline
-std::optional<std::string> unify::ToString(const char in) noexcept
+std::string unify::ToString(const char in) noexcept
 {
-	try
-	{
-		return {std::to_string(in)};
-	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
+	return {std::to_string(in)};
 }
 
 template<>
 inline
-std::optional<std::string> unify::ToString(const uint32_t in) noexcept
+std::string unify::ToString(const uint32_t in) noexcept
 {
-	try
-	{
-		return {std::to_string(in)};
-	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
+	return {std::to_string(in)};
 }
 
 template<>
 inline
-std::optional<std::string> unify::ToString(const uint64_t in) noexcept
+std::string unify::ToString(const uint64_t in) noexcept
 {
-	try
-	{
-		return {std::to_string(in)};
-	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
+	return {std::to_string(in)};
 }
 
 template<>
 inline
-std::optional<std::string> unify::ToString(const int32_t in) noexcept
+std::string unify::ToString(const int32_t in) noexcept
 {
-	try
-	{
-		return {std::to_string(in)};
-	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
+	return {std::to_string(in)};
 }
 
 template<>
 inline
-std::optional<std::string> unify::ToString(const int64_t in) noexcept
+std::string unify::ToString(const int64_t in) noexcept
 {
-	try
-	{
-		return {std::to_string(in)};
-	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
+	return {std::to_string(in)};
 }
 
 template<>
 inline
-std::optional<std::string> unify::ToString(const float in) noexcept
+std::string unify::ToString(const float in) noexcept
 {
-	try
-	{
-		return {std::to_string(in)};
-	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
+	return {std::to_string(in)};
 }
 
 template<>
 inline
-std::optional<std::string> unify::ToString(const double in) noexcept
+std::string unify::ToString(const double in) noexcept
 {
-	try
-	{
-		return {std::to_string(in)};
-	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
+	return {std::to_string(in)};
 }
 
 template<>
 inline
-std::optional<std::string> unify::ToString(const uint16_t in) noexcept
+std::string unify::ToString(const uint16_t in) noexcept
 {
-	try
-	{
-		return std::to_string(in);
-	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
+	return std::to_string(in);
 }
 
 template<>
 inline
-std::optional<std::string> unify::ToString(const int16_t in) noexcept
+std::string unify::ToString(const int16_t in) noexcept
 {
-	try
-	{
-		return std::to_string(in);
-	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
+	return std::to_string(in);
 }
 
 template<>
 inline
-std::optional<std::string> unify::ToString(std::wstring_view in) noexcept
+std::string unify::ToString(std::wstring_view in) noexcept
 {
-	try
-	{
-		return {std::string(in.begin(), in.end())};
-	}
-	catch(...)
-	{
-		return std::nullopt;
-	}
+	return {std::string(in.begin(), in.end())};
+
 }
 
 template<>

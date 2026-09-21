@@ -77,11 +77,5 @@ TEST_F(TexCoordsTests, ToString)
 {
     unify::TexCoords uv{3.1, 4.2};
     auto str = unify::ToString(uv);    
-    EXPECT_TRUE(str.has_value());
-    if (!str.has_value())
-    {
-        return;
-    }
-    
-    EXPECT_EQ(*str, "3.100000, 4.200000");
+    EXPECT_STREQ(str.c_str(), "3.100000, 4.200000");
 }

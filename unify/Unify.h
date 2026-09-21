@@ -23,6 +23,7 @@
 #pragma once
 
 #include <unify/Undef.h>
+#include <string>
 
 namespace unify
 {

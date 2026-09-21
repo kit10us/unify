@@ -67,6 +67,5 @@ TEST_F(ColorUnitTests, ToString)
 
     unify::ColorUnit color{0.10f, 0.20f, 0.40f, 1.0f};
     auto color_s = color.ToString();
-    ASSERT_TRUE(color_s.has_value());
-    EXPECT_EQ(*color_s, "0.100000, 0.200000, 0.400000, 1.000000"s);
+    EXPECT_STREQ(color_s.c_str(), "0.100000, 0.200000, 0.400000, 1.000000");
 }

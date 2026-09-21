@@ -49,10 +49,10 @@ namespace unify
 	TTo Cast(const TFrom in ) noexcept = delete;
 	
 	template<typename TFrom> 
-	std::optional<std::string> ToString(const TFrom in ) noexcept = delete;
+	std::string ToString(const TFrom in ) noexcept = delete;
 
 	inline
-	std::optional<std::wstring> ToWString(std::string input_string);
+	std::wstring ToWString(std::string input_string);
 
 
 	template<typename TTo> 

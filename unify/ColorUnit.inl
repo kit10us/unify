@@ -349,29 +349,24 @@ namespace unify
 	}
 
 	inline
-	std::optional<std::string> ColorUnit::ToString(ColorUnit::Order order) const
+	std::string ColorUnit::ToString(ColorUnit::Order order) const
 	{
 		auto r_s = ::unify::ToString(r);
 		auto g_s = ::unify::ToString(g);
 		auto b_s = ::unify::ToString(b);
 		auto a_s = ::unify::ToString(a);
 
-		if (!r_s || !g_s || !b_s || !a_s)
-		{
-			return std::nullopt;
-		}
-
 		switch (order)
 		{
 		case RGBA:
 		default:
-			return *r_s + ", " + *g_s + ", " + *b_s + ", " + *a_s;
+			return r_s + ", " + g_s + ", " + b_s + ", " + a_s;
 		case ARGB:
-			return *a_s + ", " + *r_s + ", " + *g_s + ", " + *b_s;
+			return a_s + ", " + r_s + ", " + g_s + ", " + b_s;
 		case BGRA:
-			return *b_s + ", " + *g_s + ", " + *r_s + ", " + *a_s;
+			return b_s + ", " + g_s + ", " + r_s + ", " + a_s;
 		case ABGR:
-			return *a_s + ", " + *b_s + ", " + *g_s + ", " + *r_s;
+			return a_s + ", " + b_s + ", " + g_s + ", " + r_s;
 		}
 	}
 }

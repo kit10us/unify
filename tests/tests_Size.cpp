@@ -21,10 +21,9 @@
 
 #include <gtest/gtest.h>
 
-#include <string>
-#include <unify/TimeDelta.h>
+#include <unify/Size.h>
 
-class TimeDeltaTests : public ::testing::Test
+class SizeTests : public ::testing::Test
 { 
 protected:
     void SetUp() override
@@ -39,30 +38,38 @@ protected:
 };
 
 /// <summary>
-/// Tests the default constructor of the TimeDelta class, ensuring it initializes to zero.
+/// Tests the default constructor of the SIZE class, ensuring it initializes to zero.
 /// </summary>
-TEST_F(TimeDeltaTests, DefaultConstructor)
+TEST_F(SizeTests, DefaultConstructor)
 {
-    unify::TimeDelta timeDelta{};
-    EXPECT_FLOAT_EQ(timeDelta.AsSeconds(), 0.0);
-    EXPECT_FLOAT_EQ(timeDelta.AsMS(), 0.0);
-    EXPECT_FLOAT_EQ(timeDelta.AsMicros(), 0.0);
+    unify::Size size{};
+    EXPECT_FLOAT_EQ(size.width, 0.0);
+    EXPECT_FLOAT_EQ(size.height, 0.0);
 }
 
-TEST_F(TimeDeltaTests, ToString)
+/// <summary>
+/// Tests the parameterized constructor of the SIZE class, ensuring it initializes to the provided values.
+/// </summary>
+TEST_F(SizeTests, ParameterizedConstructor)   
 {
-    unify::TimeDelta timeDelta {1.0f};
-    auto result = unify::ToString(timeDelta);
-    std::cout << result << "a\n";
+    unify::Size size{3.0f, 4.0f};
+    EXPECT_FLOAT_EQ(size.wdth, 3.0);
+    EXPECT_FLOAT_EQ(size.height, 4.0);
 }
-    
 
-TEST_F(TimeDeltaTests, FromString)
+/// <summary>
+/// Tests the Cast() function for SIZE, ensuring it correctly converts a SIZE to a string representation.
+/// </summary>
+TEST_F(SizeTests, CastToString)
 {
-    unify::TimeDelta timeDelta{};
-    using namespace std::string_literals;
+    unify::Size<int> size1{3, 4};
+    auto str = size1.ToString();
+    EXPECT_STREQ(
     
-    auto result = unify::FromString("1.0");
-    ASSERT_TRUE(result.has_value());
-    EXPECT_FLOAT_EQ((*result).AsSeconds(), 1.0f);
+    if (str != "3, 4")
+    {
+        return;
+    }
+    
+    EXPECT_EQ(*str, "3, 4");
 }

@@ -144,10 +144,10 @@ namespace unify
 
 	template<>
 	inline
-	std::optional<std::string> ToString(const TexArea in)
+	std::string ToString(const TexArea in)
 	{
 		const auto& ul = in.ul;
 		const auto& dr = in.dr;
-		return "{" + *ToString(ul) + ", " + *ToString(dr) + "}";
+		return "{" + ToString(ul) + ", " + ToString(dr) + "}";
 	}
 }

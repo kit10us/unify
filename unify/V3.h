@@ -103,16 +103,9 @@ namespace unify
 	};
 
 	template<typename T>
-	inline std::optional<std::string> ToString(const V3<T> vec) noexcept
+	std::string ToString(const V3<T> vec) noexcept
 	{
-		try
-		{
-			return *ToString(vec.x) + ", " + *ToString(vec.y) + ", " + *ToString(vec.z);
-		}
-		catch(...)
-		{
-			return std::nullopt;
-		}
+		return ToString(vec.x) + ", " + ToString(vec.y) + ", " + ToString(vec.z);
 	}
 
 	template<typename T>

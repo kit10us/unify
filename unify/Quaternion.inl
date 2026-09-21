@@ -172,14 +172,7 @@ namespace unify
 	inline
 	std::string Quaternion::ToString() const
 	{
-		try
-		{
-			return *unify::ToString(x) + ", " + *unify::ToString(y) + ", " + *unify::ToString(z) + ", " + *unify::ToString(w);
-		}
-		catch(...)
-		{
-			return "";
-		}
+		return unify::ToString(x) + ", " + unify::ToString(y) + ", " + unify::ToString(z) + ", " + unify::ToString(w);
 	}
 
 	inline

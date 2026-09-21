@@ -199,7 +199,7 @@ TEST_F(PathTests, CombineMixedSchemeConstructor)
     EXPECT_STREQ(path_mixed_scheme.ToString(Slash::Forward).c_str(), R"(http://www.example.com/site/documents)");
 }
 
-TEST_F(PathTests, SplitForward)
+TEST_F(PathTests, SplitRootedForwardSlash)
 {
     using namespace unify;
     using namespace std::string_view_literals;
@@ -207,16 +207,14 @@ TEST_F(PathTests, SplitForward)
     Path back_slash_path = {"/one/two/three"};
     auto spliced = back_slash_path.Split();
 
-    ASSERT_EQ(spliced.size(), 6);
+    ASSERT_EQ(spliced.size(), 4);
     EXPECT_STREQ(spliced[0].c_str(), "/");
     EXPECT_STREQ(spliced[1].c_str(), "one");
-    EXPECT_STREQ(spliced[2].c_str(), "/");
-    EXPECT_STREQ(spliced[3].c_str(), "two");
-    EXPECT_STREQ(spliced[4].c_str(), "/");
-    EXPECT_STREQ(spliced[5].c_str(), "three");
+    EXPECT_STREQ(spliced[2].c_str(), "two");
+    EXPECT_STREQ(spliced[3].c_str(), "three");
 }
 
-TEST_F(PathTests, SplitBackward)
+TEST_F(PathTests, SplitRootedBackslash)
 {
     using namespace unify;
     using namespace std::string_view_literals;
@@ -224,13 +222,40 @@ TEST_F(PathTests, SplitBackward)
     Path back_slash_path = {"\\one\\two\\three"};
     auto spliced = back_slash_path.Split();
 
-    ASSERT_EQ(spliced.size(), 6);
+    ASSERT_EQ(spliced.size(), 4);
     EXPECT_STREQ(spliced[0].c_str(), "/");
     EXPECT_STREQ(spliced[1].c_str(), "one");
-    EXPECT_STREQ(spliced[2].c_str(), "/");
-    EXPECT_STREQ(spliced[3].c_str(), "two");
-    EXPECT_STREQ(spliced[4].c_str(), "/");
-    EXPECT_STREQ(spliced[5].c_str(), "three");
+    EXPECT_STREQ(spliced[2].c_str(), "two");
+    EXPECT_STREQ(spliced[3].c_str(), "three");
+}
+
+TEST_F(PathTests, SplitNotRooted)
+{
+    using namespace unify;
+    using namespace std::string_view_literals;
+
+    Path back_slash_path = {"one/two/three/four"};
+    auto spliced = back_slash_path.Split();
+
+    ASSERT_EQ(spliced.size(), 4);
+    EXPECT_STREQ(spliced[0].c_str(), "one");
+    EXPECT_STREQ(spliced[1].c_str(), "two");
+    EXPECT_STREQ(spliced[2].c_str(), "three");
+    EXPECT_STREQ(spliced[3].c_str(), "four");
+}
+
+TEST_F(PathTests, SplitEndsWithSlash)
+{
+    using namespace unify;
+    using namespace std::string_view_literals;
+
+    Path back_slash_path = {"one/two/three/"};
+    auto spliced = back_slash_path.Split();
+
+    ASSERT_EQ(spliced.size(), 3);
+    EXPECT_STREQ(spliced[0].c_str(), "one");
+    EXPECT_STREQ(spliced[1].c_str(), "two");
+    EXPECT_STREQ(spliced[2].c_str(), "three");
 }
 
 TEST_F(PathTests, SplitMixedSlash)
@@ -241,13 +266,11 @@ TEST_F(PathTests, SplitMixedSlash)
     Path back_slash_path = {"/one\\two/three"};
     auto spliced = back_slash_path.Split();
 
-    ASSERT_EQ(spliced.size(), 6);
+    ASSERT_EQ(spliced.size(), 4);
     EXPECT_STREQ(spliced[0].c_str(), "/");
     EXPECT_STREQ(spliced[1].c_str(), "one");
-    EXPECT_STREQ(spliced[2].c_str(), "/");
-    EXPECT_STREQ(spliced[3].c_str(), "two");
-    EXPECT_STREQ(spliced[4].c_str(), "/");
-    EXPECT_STREQ(spliced[5].c_str(), "three");
+    EXPECT_STREQ(spliced[2].c_str(), "two");
+    EXPECT_STREQ(spliced[3].c_str(), "three");
 }
 
 TEST_F(PathTests, SplitNoRoot)
@@ -258,16 +281,12 @@ TEST_F(PathTests, SplitNoRoot)
     Path back_slash_path = {"one/two/three/four/five.ext"};
     auto spliced = back_slash_path.Split();
 
-    ASSERT_EQ(spliced.size(), 9);
+    ASSERT_EQ(spliced.size(), 5);
     EXPECT_STREQ(spliced[0].c_str(), "one");
-    EXPECT_STREQ(spliced[1].c_str(), "/");
-    EXPECT_STREQ(spliced[2].c_str(), "two");
-    EXPECT_STREQ(spliced[3].c_str(), "/");
-    EXPECT_STREQ(spliced[4].c_str(), "three");
-    EXPECT_STREQ(spliced[5].c_str(), "/");
-    EXPECT_STREQ(spliced[6].c_str(), "four");
-    EXPECT_STREQ(spliced[7].c_str(), "/");
-    EXPECT_STREQ(spliced[8].c_str(), "five.ext");
+    EXPECT_STREQ(spliced[1].c_str(), "two");
+    EXPECT_STREQ(spliced[2].c_str(), "three");
+    EXPECT_STREQ(spliced[3].c_str(), "four");
+    EXPECT_STREQ(spliced[4].c_str(), "five.ext");
 }
 
 TEST_F(PathTests, SplitQuoted)
@@ -275,17 +294,14 @@ TEST_F(PathTests, SplitQuoted)
     using namespace unify;
     using namespace std::string_view_literals;
 
-    Path back_slash_path = {R"(c:\one\two\"file with spaces.ext)"};
-    auto spliced = back_slash_path.Split(Slash::Backward);
+    Path path = {R"(c:\one\two\"file with spaces.ext)"};
+    auto path_split = path.Split();
 
-    ASSERT_EQ(spliced.size(), 7);
-    EXPECT_STREQ(spliced[0].c_str(), "c:");
-    EXPECT_STREQ(spliced[1].c_str(), "\\");
-    EXPECT_STREQ(spliced[2].c_str(), "one");
-    EXPECT_STREQ(spliced[3].c_str(), "\\");
-    EXPECT_STREQ(spliced[4].c_str(), "two");
-    EXPECT_STREQ(spliced[5].c_str(), "\\");
-    EXPECT_STREQ(spliced[6].c_str(), "file with spaces.ext");
+    ASSERT_EQ(path_split.size(), 4);
+    EXPECT_STREQ(path_split[0].c_str(), "c:");
+    EXPECT_STREQ(path_split[1].c_str(), "one");
+    EXPECT_STREQ(path_split[2].c_str(), "two");
+    EXPECT_STREQ(path_split[3].c_str(), "file with spaces.ext");
 }
 
 TEST_F(PathTests, LastIsFilename)
@@ -293,11 +309,11 @@ TEST_F(PathTests, LastIsFilename)
     using namespace unify;
     using namespace std::string_view_literals;
 
-    Path back_slash_path = {R"(c:\one\two\"file with spaces.ext)"};
-    auto spliced = back_slash_path.Split(Slash::Backward);
+    Path path = {R"(c:\one\two\"file with spaces.ext)"};
+    auto split = path.Split();
 
-    ASSERT_EQ(spliced.size(), 7);
-    EXPECT_STREQ(spliced.rbegin()->c_str(), "file with spaces.ext");
+    ASSERT_EQ(split.size(), 4);
+    EXPECT_STREQ(split.rbegin()->c_str(), "file with spaces.ext");
 }
 
 TEST_F(PathTests, AsFiletype)
