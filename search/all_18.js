@@ -34,7 +34,7 @@ var searchData=
   ['v4_2eh_31',['V4.h',['../V4_8h.html',1,'']]],
   ['v4_2einl_32',['V4.inl',['../V4_8inl.html',1,'']]],
   ['v4tests_33',['V4Tests',['../classV4Tests.html',1,'']]],
-  ['value_34',['Value',['../classunify_1_1Result.html#a01a1b98f5e091f4174bf88ded8e2a465',1,'unify::Result']]],
+  ['value_34',['Value',['../classunify_1_1Result.html#a3be30a59a88797e50bc325ca1262ab05',1,'unify::Result::Value() const &amp;noexcept'],['../classunify_1_1Result.html#ac4b5e93e12d33080cb643b4ead8b90a7',1,'unify::Result::Value() &amp;noexcept'],['../classunify_1_1Result.html#a1290800858eca2983f7038b8e08c336a',1,'unify::Result::Value() &amp;&amp;noexcept']]],
   ['value_35',['value',['../structunify_1_1KeyValuePair.html#a65203514513932e72cb5d42bad94d0a3',1,'unify::KeyValuePair::value'],['../structunify_1_1Parameter.html#ad32683a8ab30669c30dfbdc3372ed0e4',1,'unify::Parameter::value']]],
   ['value1_36',['Value1',['../tests__Result_8cpp.html#a94beb900defc123803319b326e764a0da7ee5a281b28d7ca1fab06b43d0b7d8ac',1,'tests_Result.cpp']]],
   ['value2_37',['Value2',['../tests__Result_8cpp.html#a94beb900defc123803319b326e764a0da0fe13ed1638da4d4b1ef316729f3bb32',1,'tests_Result.cpp']]],

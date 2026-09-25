@@ -84,7 +84,7 @@ var searchData=
   ['stringminusright_81',['StringMinusRight',['../namespaceunify_1_1String.html#ac0e59273cc24e18f4daed357c1fd9299',1,'unify::String']]],
   ['stringreplace_82',['StringReplace',['../namespaceunify_1_1String.html#a860271d77beead45cafda8d503cc2c9b',1,'unify::String']]],
   ['stringtests_83',['StringTests',['../classStringTests.html',1,'']]],
-  ['success_84',['Success',['../classunify_1_1Success.html',1,'unify::Success'],['../classunify_1_1Success.html#adb1856e4bb284b6af72def715ac2c8aa',1,'unify::Success::Success()'],['../classunify_1_1Result.html#ac7675d4807191a6e283d1edd49b01609',1,'unify::Result::Success()']]],
+  ['success_84',['Success',['../classunify_1_1Success.html',1,'unify::Success'],['../classunify_1_1Success.html#a0a1e8e09e6a854eed8daa3d5489c4df2',1,'unify::Success::Success() noexcept=default'],['../classunify_1_1Success.html#a365eda74a45b85cf41cfde40fa947734',1,'unify::Success::Success(const Success &amp;) noexcept=default'],['../classunify_1_1Success.html#a4af8f14c53cb536fdb7bbca790875d6a',1,'unify::Success::Success(Success &amp;&amp;) noexcept=default'],['../classunify_1_1Result.html#ac01ee69f2581f57cd9b79e774e8482da',1,'unify::Result::Success()']]],
   ['sumcomponents_85',['SumComponents',['../classunify_1_1ColorUnit.html#a71d7d6a1f5760b7624a72e1c1a16fbcd',1,'unify::ColorUnit']]],
   ['sup_86',['sup',['../classunify_1_1BBox.html#a713d7db8b80484376ce41c5453a6287e',1,'unify::BBox']]],
   ['swap_87',['swap',['../classunify_1_1Any.html#ad59e53e2e18dbc0ea13e27c6ff61f955',1,'unify::Any::swap()'],['../namespaceunify.html#a307711de33c218c1d30e4f47da2f14c0',1,'unify::swap()']]]

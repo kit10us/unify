@@ -110,17 +110,27 @@ document.addEventListener('DOMContentLoaded', () => {
 </div><!--header-->
 <div class="contents">
 
+<p>A default failure class for <a class="el" href="classunify_1_1Result.html" title="A templated class meant to convey either a success or a failure via defined types....">Result</a>. It is only meant to support the dualoity of <a class="el" href="classunify_1_1Result.html" title="A templated class meant to convey either a success or a failure via defined types....">Result</a> (which is able to be a <a class="el" href="classunify_1_1Success.html" title="A default success class for Result. It is meant only to support the duality of Result (which is able ...">Success</a> result or <a class="el" href="classunify_1_1Failure.html" title="A default failure class for Result. It is only meant to support the dualoity of Result (which is able...">Failure</a> result).  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Result_8h_source.html">Result.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8eeb938195605eb456455a594c85fc96" id="r_a8eeb938195605eb456455a594c85fc96"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8eeb938195605eb456455a594c85fc96">Failure</a> ()</td></tr>
+<tr class="memitem:ac5499b149b387171d36ac2d35464ee6d" id="r_ac5499b149b387171d36ac2d35464ee6d"><td class="memItemLeft">constexpr&#160;</td><td class="memItemRight"><a class="el" href="#ac5499b149b387171d36ac2d35464ee6d">Failure</a> () noexcept=default</td></tr>
+<tr class="memitem:a1678805428f329e85fb656932220e076" id="r_a1678805428f329e85fb656932220e076"><td class="memItemLeft">constexpr&#160;</td><td class="memItemRight"><a class="el" href="#a1678805428f329e85fb656932220e076">Failure</a> (const Failure &amp;)=default</td></tr>
+<tr class="memitem:a67c2e1431cbe796fa3db4bb01e90154a" id="r_a67c2e1431cbe796fa3db4bb01e90154a"><td class="memItemLeft">constexpr <a class="el" href="#ac5499b149b387171d36ac2d35464ee6d">Failure</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a67c2e1431cbe796fa3db4bb01e90154a">operator=</a> (const <a class="el" href="#ac5499b149b387171d36ac2d35464ee6d">Failure</a> &amp;)=default</td></tr>
+<tr class="memitem:af9683bfc48d6795a582c5cf73b1d7c54" id="r_af9683bfc48d6795a582c5cf73b1d7c54"><td class="memItemLeft">constexpr&#160;</td><td class="memItemRight"><a class="el" href="#af9683bfc48d6795a582c5cf73b1d7c54">Failure</a> (Failure &amp;&amp;) noexcept=default</td></tr>
+<tr class="memitem:ab3cd4fc719e6c58314d3cb33f12649c1" id="r_ab3cd4fc719e6c58314d3cb33f12649c1"><td class="memItemLeft">constexpr <a class="el" href="#ac5499b149b387171d36ac2d35464ee6d">Failure</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab3cd4fc719e6c58314d3cb33f12649c1">operator=</a> (<a class="el" href="#ac5499b149b387171d36ac2d35464ee6d">Failure</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="memitem:aab35f5a784e411c1d8d409530552851d" id="r_aab35f5a784e411c1d8d409530552851d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aab35f5a784e411c1d8d409530552851d">~Failure</a> () noexcept=default</td></tr>
 <tr class="memitem:a9f4f28ad56c445a16c74883c5c713684" id="r_a9f4f28ad56c445a16c74883c5c713684"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9f4f28ad56c445a16c74883c5c713684">Failure</a> (std::string message)</td></tr>
-<tr class="memitem:ae463809242f4dbba2d5120d4e72eced6" id="r_ae463809242f4dbba2d5120d4e72eced6"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#ae463809242f4dbba2d5120d4e72eced6">GetMessage</a> () const</td></tr>
+<tr class="memitem:a1118dc12c975fb8cf506378c3c0356ce" id="r_a1118dc12c975fb8cf506378c3c0356ce"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1118dc12c975fb8cf506378c3c0356ce">GetMessage</a> () const noexcept</td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a8eeb938195605eb456455a594c85fc96" name="a8eeb938195605eb456455a594c85fc96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8eeb938195605eb456455a594c85fc96">&#9670;&#160;</a></span>Failure() <span class="overload">[1/2]</span></h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A default failure class for <a class="el" href="classunify_1_1Result.html" title="A templated class meant to convey either a success or a failure via defined types....">Result</a>. It is only meant to support the dualoity of <a class="el" href="classunify_1_1Result.html" title="A templated class meant to convey either a success or a failure via defined types....">Result</a> (which is able to be a <a class="el" href="classunify_1_1Success.html" title="A default success class for Result. It is meant only to support the duality of Result (which is able ...">Success</a> result or <a class="el" href="classunify_1_1Failure.html" title="A default failure class for Result. It is only meant to support the dualoity of Result (which is able...">Failure</a> result). </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac5499b149b387171d36ac2d35464ee6d" name="ac5499b149b387171d36ac2d35464ee6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5499b149b387171d36ac2d35464ee6d">&#9670;&#160;</a></span>Failure() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -137,7 +147,82 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel default">default</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1678805428f329e85fb656932220e076" name="a1678805428f329e85fb656932220e076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1678805428f329e85fb656932220e076">&#9670;&#160;</a></span>Failure() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unify::Failure::Failure </td>
+          <td>(</td>
+          <td class="paramtype">const Failure &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9683bfc48d6795a582c5cf73b1d7c54" name="af9683bfc48d6795a582c5cf73b1d7c54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9683bfc48d6795a582c5cf73b1d7c54">&#9670;&#160;</a></span>Failure() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unify::Failure::Failure </td>
+          <td>(</td>
+          <td class="paramtype">Failure &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel default">default</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab35f5a784e411c1d8d409530552851d" name="aab35f5a784e411c1d8d409530552851d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab35f5a784e411c1d8d409530552851d">&#9670;&#160;</a></span>~Failure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unify::Failure::~Failure </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -145,7 +230,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a9f4f28ad56c445a16c74883c5c713684" name="a9f4f28ad56c445a16c74883c5c713684"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f4f28ad56c445a16c74883c5c713684">&#9670;&#160;</a></span>Failure() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f4f28ad56c445a16c74883c5c713684">&#9670;&#160;</a></span>Failure() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,7 +247,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -170,8 +255,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ae463809242f4dbba2d5120d4e72eced6" name="ae463809242f4dbba2d5120d4e72eced6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae463809242f4dbba2d5120d4e72eced6">&#9670;&#160;</a></span>GetMessage()</h2>
+<a id="a1118dc12c975fb8cf506378c3c0356ce" name="a1118dc12c975fb8cf506378c3c0356ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1118dc12c975fb8cf506378c3c0356ce">&#9670;&#160;</a></span>GetMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -180,7 +265,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string unify::Failure::GetMessage </td>
+          <td class="memname">const std::string &amp; unify::Failure::GetMessage </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -188,7 +273,57 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67c2e1431cbe796fa3db4bb01e90154a" name="a67c2e1431cbe796fa3db4bb01e90154a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67c2e1431cbe796fa3db4bb01e90154a">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ac5499b149b387171d36ac2d35464ee6d">Failure</a> &amp; unify::Failure::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ac5499b149b387171d36ac2d35464ee6d">Failure</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3cd4fc719e6c58314d3cb33f12649c1" name="ab3cd4fc719e6c58314d3cb33f12649c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3cd4fc719e6c58314d3cb33f12649c1">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ac5499b149b387171d36ac2d35464ee6d">Failure</a> &amp; unify::Failure::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ac5499b149b387171d36ac2d35464ee6d">Failure</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel default">default</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

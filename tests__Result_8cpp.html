@@ -112,6 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="contents">
 <div class="textblock"><code>#include &lt;gtest/gtest.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="Result_8h_source.html">unify/Result.h</a>&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -139,6 +141,11 @@ Functions</h2></td></tr>
 <tr class="memitem:aa5cc1325f7e4ba20aa84404f16502ae2" id="r_aa5cc1325f7e4ba20aa84404f16502ae2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa5cc1325f7e4ba20aa84404f16502ae2">TEST_F</a> (<a class="el" href="classResultTests.html">ResultTests</a>, OperatorValueSuccess)</td></tr>
 <tr class="memitem:af89127e4f01aec540810fd93b298117b" id="r_af89127e4f01aec540810fd93b298117b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af89127e4f01aec540810fd93b298117b">TEST_F</a> (<a class="el" href="classResultTests.html">ResultTests</a>, OperatorValueFailure)</td></tr>
 <tr class="memitem:a3ad36f5b6a325262fb37dc122c078612" id="r_a3ad36f5b6a325262fb37dc122c078612"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3ad36f5b6a325262fb37dc122c078612">TEST_F</a> (<a class="el" href="classResultTests.html">ResultTests</a>, Or)</td></tr>
+<tr class="memitem:a9c2b594a1df93c2321926187fc7f2450" id="r_a9c2b594a1df93c2321926187fc7f2450"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9c2b594a1df93c2321926187fc7f2450">TestReturnBool</a> ()</td></tr>
+<tr class="memitem:ad4002df9cbc864c574f65bf19cdd348f" id="r_ad4002df9cbc864c574f65bf19cdd348f"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ad4002df9cbc864c574f65bf19cdd348f">TestReturnUInt32</a> ()</td></tr>
+<tr class="memitem:acb344ed200c41e59be56a8dbf6101f1f" id="r_acb344ed200c41e59be56a8dbf6101f1f"><td class="memItemLeft"><a class="el" href="classunify_1_1Result.html">unify::Result</a>&#160;</td><td class="memItemRight"><a class="el" href="#acb344ed200c41e59be56a8dbf6101f1f">TestResultReturnSuccess</a> ()</td></tr>
+<tr class="memitem:ab0631b71089189018e137560cdedb46c" id="r_ab0631b71089189018e137560cdedb46c"><td class="memItemLeft"><a class="el" href="classunify_1_1Result.html">unify::Result</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab0631b71089189018e137560cdedb46c">TestResultReturnFailure</a> ()</td></tr>
+<tr class="memitem:a40a9887aa195a210df93ed4d1a617d61" id="r_a40a9887aa195a210df93ed4d1a617d61"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a40a9887aa195a210df93ed4d1a617d61">TEST_F</a> (<a class="el" href="classResultTests.html">ResultTests</a>, SpeedTest)</td></tr>
 </table>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
 <a id="a94beb900defc123803319b326e764a0d" name="a94beb900defc123803319b326e764a0d"></a>
@@ -221,7 +228,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="ac1c697fd0a3a9d835950aad43502b6cb" name="ac1c697fd0a3a9d835950aad43502b6cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1c697fd0a3a9d835950aad43502b6cb">&#9670;&#160;</a></span>TEST_F() <span class="overload">[1/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1c697fd0a3a9d835950aad43502b6cb">&#9670;&#160;</a></span>TEST_F() <span class="overload">[1/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -242,7 +249,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="aba5723125344ab74403290b3b431f7e3" name="aba5723125344ab74403290b3b431f7e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba5723125344ab74403290b3b431f7e3">&#9670;&#160;</a></span>TEST_F() <span class="overload">[2/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aba5723125344ab74403290b3b431f7e3">&#9670;&#160;</a></span>TEST_F() <span class="overload">[2/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -263,7 +270,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a3253f6c470497d9a8676f93321c0c247" name="a3253f6c470497d9a8676f93321c0c247"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3253f6c470497d9a8676f93321c0c247">&#9670;&#160;</a></span>TEST_F() <span class="overload">[3/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3253f6c470497d9a8676f93321c0c247">&#9670;&#160;</a></span>TEST_F() <span class="overload">[3/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,7 +291,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a50c69bf37f98aaa4c284d5526fc8ea2f" name="a50c69bf37f98aaa4c284d5526fc8ea2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50c69bf37f98aaa4c284d5526fc8ea2f">&#9670;&#160;</a></span>TEST_F() <span class="overload">[4/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a50c69bf37f98aaa4c284d5526fc8ea2f">&#9670;&#160;</a></span>TEST_F() <span class="overload">[4/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,7 +312,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="af89127e4f01aec540810fd93b298117b" name="af89127e4f01aec540810fd93b298117b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af89127e4f01aec540810fd93b298117b">&#9670;&#160;</a></span>TEST_F() <span class="overload">[5/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af89127e4f01aec540810fd93b298117b">&#9670;&#160;</a></span>TEST_F() <span class="overload">[5/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -326,7 +333,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="aa5cc1325f7e4ba20aa84404f16502ae2" name="aa5cc1325f7e4ba20aa84404f16502ae2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5cc1325f7e4ba20aa84404f16502ae2">&#9670;&#160;</a></span>TEST_F() <span class="overload">[6/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5cc1325f7e4ba20aa84404f16502ae2">&#9670;&#160;</a></span>TEST_F() <span class="overload">[6/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -347,7 +354,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a3ad36f5b6a325262fb37dc122c078612" name="a3ad36f5b6a325262fb37dc122c078612"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ad36f5b6a325262fb37dc122c078612">&#9670;&#160;</a></span>TEST_F() <span class="overload">[7/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ad36f5b6a325262fb37dc122c078612">&#9670;&#160;</a></span>TEST_F() <span class="overload">[7/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -367,8 +374,29 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a40a9887aa195a210df93ed4d1a617d61" name="a40a9887aa195a210df93ed4d1a617d61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40a9887aa195a210df93ed4d1a617d61">&#9670;&#160;</a></span>TEST_F() <span class="overload">[8/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classResultTests.html">ResultTests</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SpeedTest</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7442ccfceb4774d70b01bb41cecbbe0f" name="a7442ccfceb4774d70b01bb41cecbbe0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7442ccfceb4774d70b01bb41cecbbe0f">&#9670;&#160;</a></span>TEST_F() <span class="overload">[8/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7442ccfceb4774d70b01bb41cecbbe0f">&#9670;&#160;</a></span>TEST_F() <span class="overload">[9/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -382,6 +410,74 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="#a730e656dba6c73a7a3f25892e0534199">ValueSuccess</a></td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0631b71089189018e137560cdedb46c" name="ab0631b71089189018e137560cdedb46c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0631b71089189018e137560cdedb46c">&#9670;&#160;</a></span>TestResultReturnFailure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classunify_1_1Result.html">unify::Result</a> TestResultReturnFailure </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb344ed200c41e59be56a8dbf6101f1f" name="acb344ed200c41e59be56a8dbf6101f1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb344ed200c41e59be56a8dbf6101f1f">&#9670;&#160;</a></span>TestResultReturnSuccess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classunify_1_1Result.html">unify::Result</a> TestResultReturnSuccess </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c2b594a1df93c2321926187fc7f2450" name="a9c2b594a1df93c2321926187fc7f2450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c2b594a1df93c2321926187fc7f2450">&#9670;&#160;</a></span>TestReturnBool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TestReturnBool </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4002df9cbc864c574f65bf19cdd348f" name="ad4002df9cbc864c574f65bf19cdd348f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4002df9cbc864c574f65bf19cdd348f">&#9670;&#160;</a></span>TestReturnUInt32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t TestReturnUInt32 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
