@@ -22,6 +22,8 @@
 #include <gtest/gtest.h>
 
 #include <unify/Result.h>
+#include <chrono>
+#include <iomanip>
 
 class ResultTests : public ::testing::Test
 { 
@@ -68,8 +70,6 @@ unify::Result<TestEnum> ValueFailure()
 {
     return unify::Failure{ "Value failure." };
 }
-
-
 
 TEST_F(ResultTests, DefaultSuccess)
 {
@@ -125,4 +125,106 @@ TEST_F(ResultTests, Or)
 {
     EXPECT_EQ(ValueFailure().Or(TestEnum::Value2), TestEnum::Value2);
     EXPECT_EQ(ValueSuccess().Or(TestEnum::Value3), TestEnum::Value1);
+}
+
+bool TestReturnBool()
+{
+    volatile static uint32_t counter {};
+    counter++;
+    return true;
+}
+
+uint32_t TestReturnUInt32()
+{
+    volatile static uint32_t counter {};
+    counter++;
+    return counter;
+}
+
+unify::Result<> TestResultReturnSuccess()
+{
+    volatile static uint32_t counter {};
+    counter++;
+    return {};
+}
+
+unify::Result<> TestResultReturnFailure()
+{
+    volatile static uint32_t counter {};
+    counter++;
+    return unify::Failure{"Failure"};
+}
+
+TEST_F(ResultTests, SpeedTest)
+{
+    using namespace std::chrono_literals;
+    
+    size_t call_duration_ms = 100;
+    size_t call_iterations = 5;
+    size_t bool_iterations {};
+    size_t uint32_iterations {};
+    size_t success_iterations {};
+    size_t failure_iterations {};
+
+    auto TestFunc = [&]()
+    {
+        {
+            auto begin = std::chrono::steady_clock::now();
+            do
+            {
+                auto result = TestReturnBool();
+                bool_iterations++;
+            } while ((std::chrono::steady_clock::now() - begin) < std::chrono::milliseconds(call_duration_ms));
+        }
+    
+        {
+            auto begin = std::chrono::steady_clock::now();
+            do
+            {
+                auto result = TestReturnUInt32();
+                uint32_iterations++;
+            } while ((std::chrono::steady_clock::now() - begin) < std::chrono::milliseconds(call_duration_ms));
+        }
+        
+        {
+            auto begin = std::chrono::steady_clock::now();
+            do
+            {
+                auto result = TestResultReturnSuccess(); 
+                success_iterations++;
+            } while ((std::chrono::steady_clock::now() - begin) < std::chrono::milliseconds(call_duration_ms));
+        }
+
+        {
+            auto begin = std::chrono::steady_clock::now();
+            do
+            {
+                auto result = TestResultReturnFailure(); 
+                failure_iterations++;
+            } while ((std::chrono::steady_clock::now() - begin) < std::chrono::milliseconds(call_duration_ms));
+        }
+    };
+
+    for (size_t i = 0; i < call_iterations; i++)
+    {
+        TestFunc();
+    }
+
+    std::cout << "\n[ METRIC   ] call iterations:       " << std::setw(10) << std::right << call_iterations << std::flush;
+    ::testing::Test::RecordProperty("Call iterations    ", std::to_string(call_iterations));
+    
+    std::cout << "\n[ METRIC   ] Call duration ms:      " << std::setw(10) << std::right << call_duration_ms << std::flush;
+    ::testing::Test::RecordProperty("Call duration ms   ", std::to_string(call_duration_ms));
+
+    std::cout << "\n[ METRIC   ] Bool iterations:       " << std::setw(10) << std::right << bool_iterations << std::flush;
+    ::testing::Test::RecordProperty("Bool iterations    ", std::to_string(bool_iterations));
+
+    std::cout << "\n[ METRIC   ] UInt32 iterations:     " << std::setw(10) << std::right << uint32_iterations << std::flush;
+    ::testing::Test::RecordProperty("UInt32 iterations  ", std::to_string(uint32_iterations));
+
+    std::cout << "\n[ METRIC   ] Success iterations:    " << std::setw(10) << std::right << success_iterations << std::flush;
+    ::testing::Test::RecordProperty("Success iterations ", std::to_string(success_iterations));
+
+    std::cout << "\n[ METRIC   ] Failure iterations:    " << std::setw(10) << std::right << failure_iterations << "\n" << std::flush;
+    ::testing::Test::RecordProperty("Failure iterations ", std::to_string(failure_iterations));
 }
