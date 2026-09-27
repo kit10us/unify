@@ -93,7 +93,7 @@ namespace unify
 		void SetValue( size_t index, Value value );
 
 		/// <summary>
-		/// Set a vakue by it's key. Returns false if not able to.
+		/// Set a value by it's key. Returns false if not able to.
 		/// Throws std::out_of_bounds if not found.
 		/// </summary>
 		void SetValue( Key key, Value value );

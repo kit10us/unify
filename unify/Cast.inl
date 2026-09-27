@@ -476,7 +476,6 @@ std::optional<std::wstring> unify::FromString(std::string_view text_sv, bool tri
 	return std::wstring(text.begin(), text.end());
 }
 
-
 template<>
 inline
 std::optional<std::string> unify::FromString(std::string_view text_sv, bool trim) noexcept
@@ -494,6 +493,23 @@ std::optional<std::string> unify::FromString(std::string_view text_sv, bool trim
 	return text;
 }
 
+template <>
+inline std::optional<std::string_view> FromString<std::string_view>(std::string_view text, bool trim) noexcept
+{
+    if (trim)
+    {
+        const auto start = text.find_first_not_of(" \t\r\n");
+        if (start == std::string_view::npos) return std::string_view{};
+        text.remove_prefix(start);
+
+        const auto end = text.find_last_not_of(" \t\r\n");
+        if (end != std::string_view::npos)
+        {
+            text.remove_suffix(text.size() - 1 - end);
+        }
+    }
+    return text;
+}
 
 template< typename T >
 inline

@@ -39,7 +39,7 @@ namespace unify
 	inline
 	TexArea::TexArea(const std::string text)
 	{
-		// Named
+		// Named special case
 		if (String::StringIs(text, "full"))
 		{
 			ul.u = 0.0f;

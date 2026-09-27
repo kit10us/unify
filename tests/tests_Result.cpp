@@ -49,9 +49,9 @@ unify::Result<> DefaultFailure()
     return unify::Failure{};
 }
 
-unify::Result<> DefaultFailureMessage()
+unify::Result<> FailureWithMessage()
 {
-    return unify::Failure{ "Default failure." };
+    return unify::Failure{ "Failure Message." };
 }
 
 enum class TestEnum
@@ -83,7 +83,14 @@ TEST_F(ResultTests, DefaultFailure)
 {
     auto default_result = DefaultFailure();
     EXPECT_EQ(default_result.Success(), false);
-    EXPECT_STREQ(default_result.Message().c_str(), "Unspecified failure.");
+    EXPECT_TRUE(default_result.Message().empty());
+}
+
+TEST_F(ResultTests, FailureWithMessage)
+{
+    auto default_result = FailureWithMessage();
+    EXPECT_EQ(default_result.Success(), false);
+    EXPECT_STREQ(default_result.Message().c_str(), "Failure Message.");
 }
 
 TEST_F(ResultTests, ValueSuccess)
@@ -97,14 +104,7 @@ TEST_F(ResultTests, Dereference)
 {
     auto default_result = DefaultFailure();
     EXPECT_TRUE(!default_result);
-    EXPECT_STREQ(default_result.Message().c_str(), "Unspecified failure.");
-}
-
-TEST_F(ResultTests, DefaultFailureMessage)
-{
-    auto default_result = DefaultFailure();
-    EXPECT_FALSE(default_result.Success());
-    EXPECT_STREQ(default_result.Message().c_str(), "Unspecified failure.");
+    EXPECT_TRUE(default_result.Message().empty());
 }
 
 TEST_F(ResultTests, OperatorValueSuccess)
@@ -154,6 +154,57 @@ unify::Result<> TestResultReturnFailure()
     counter++;
     return unify::Failure{"Failure"};
 }
+
+/// @brief Counter used to measure how many times a result success is copy constructed.
+class Counter
+{
+public:
+    static int count;
+
+    Counter()
+    {
+        count++;
+    }
+};
+
+int Counter::count = 0;
+
+unify::Result<Counter> ResultWithCounterOne()
+{
+    Counter::count = 0;
+    return Counter{};
+}
+
+unify::Result<Counter> ResultWithCounterTwo()
+{
+    auto result = ResultWithCounterOne();
+    return result;
+}
+
+unify::Result<Counter> ResultWithCounterThree()
+{
+    auto result = ResultWithCounterTwo();
+    return result;
+}
+
+unify::Result<Counter> ResultWithCounterFour()
+{
+    auto result = ResultWithCounterThree();
+    return result;
+}
+
+TEST_F(ResultTests, CounterTestOnce)
+{
+    auto result = ResultWithCounterOne();
+    EXPECT_EQ(Counter::count, 1);
+}
+
+TEST_F(ResultTests, CounterTestFourTimes)
+{
+    auto result = ResultWithCounterFour();
+    EXPECT_EQ(Counter::count, 1);
+}
+
 
 TEST_F(ResultTests, SpeedTest)
 {

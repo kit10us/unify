@@ -25,6 +25,7 @@
 #include <string>
 #include <functional>
 #include <variant>
+#include <memory>
 
 namespace unify
 {

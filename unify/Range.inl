@@ -94,6 +94,13 @@ T unify::Range< T >::Max() const
 }
 
 template< typename T >
+size_t unify::Range< T >::Size() const
+{
+	// Note: We do not case if max is greater than min - that is up to the caller.
+	return m_max - m_min;
+}
+
+template< typename T >
 bool Range< T >::IsWithin( const T & value ) const
 {
 	return value >= Min() && value <= Max();

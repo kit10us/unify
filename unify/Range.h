@@ -44,6 +44,8 @@ namespace unify
 		T Min() const;
 		T Max() const;
 
+		size_t Size() const;
+
 		/// <summary>
 		/// Test if a value is within the min and max range.
 		/// </summary>
@@ -59,5 +61,12 @@ namespace unify
 		bool m_isSet;
 		T m_min, m_max;
 	};
+
+	template<typename T>
+	std::string ToString(const unify::Range<T>& range)
+	{
+		return unify::ToString(range.Min()) + ", " + unify::ToString(range.Max());
+	}
+
 	#include <unify/Range.inl>
 }
