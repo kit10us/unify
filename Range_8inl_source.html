@@ -202,42 +202,50 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keywordtype">bool</span> Range&lt; T &gt;::IsWithin( <span class="keyword">const</span> T &amp; value )<span class="keyword"> const</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keywordtype">size_t</span> <a class="code hl_function" href="classunify_1_1Range.html#a6c8273f7f4c008748768a38bc4d00f22">unify::Range&lt; T &gt;::Size</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">return</span> value &gt;= Min() &amp;&amp; value &lt;= Max();</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>Range&lt; T &gt; &amp; Range&lt; T &gt;::operator=( <span class="keyword">const</span> Range&lt; T &gt; &amp; range )</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>{</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    m_isSet = range.m_isSet;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    m_min = range.m_min;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    m_max = range.m_max;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="keywordtype">bool</span> <a class="code hl_function" href="classunify_1_1Range.html#a6c1be5bfd525d1ddbe190b9d7b75cb34">unify::Range&lt; T &gt;::operator==</a>( <span class="keyword">const</span> Range&lt; T &gt; &amp; range )<span class="keyword"> const</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">return</span> m_isSet == range.m_isSet &amp;&amp; m_min == range.m_min &amp;&amp; m_max == range.m_max;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>}</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keywordtype">bool</span> <a class="code hl_function" href="classunify_1_1Range.html#a7a3620e9c40906359084d402c3c0cf33">unify::Range&lt; T &gt;::operator!=</a>( <span class="keyword">const</span> Range&lt; T &gt; &amp; range )<span class="keyword"> const</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">return</span> !( *<span class="keyword">this</span> == range );</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keywordtype">void</span> <a class="code hl_function" href="classunify_1_1Range.html#a198bde566ad80cebd424a520a391d1d2">unify::Range&lt; T &gt;::operator+=</a>( <span class="keyword">const</span> T value )</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>{</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    Add( value );</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
-<div class="ttc" id="aCast_8inl_html_ab31a6aa8a253548c7bb95a0568a4d640"><div class="ttname"><a href="Cast_8inl.html#ab31a6aa8a253548c7bb95a0568a4d640">Split</a></div><div class="ttdeci">std::vector&lt; T &gt; Split(std::string_view sourceString, const char delimitor, bool trim)</div><div class="ttdef"><b>Definition</b> Cast.inl:500</div></div>
-<div class="ttc" id="aclassunify_1_1Range_html_a198bde566ad80cebd424a520a391d1d2"><div class="ttname"><a href="classunify_1_1Range.html#a198bde566ad80cebd424a520a391d1d2">unify::Range::operator+=</a></div><div class="ttdeci">void operator+=(const T value)</div><div class="ttdef"><b>Definition</b> Range.h:125</div></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="comment">// Note: We do not case if max is greater than min - that is up to the caller.</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">return</span> m_max - m_min;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>}</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keywordtype">bool</span> Range&lt; T &gt;::IsWithin( <span class="keyword">const</span> T &amp; value )<span class="keyword"> const</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">return</span> value &gt;= Min() &amp;&amp; value &lt;= Max();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>Range&lt; T &gt; &amp; Range&lt; T &gt;::operator=( <span class="keyword">const</span> Range&lt; T &gt; &amp; range )</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>{</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    m_isSet = range.m_isSet;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    m_min = range.m_min;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    m_max = range.m_max;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>}</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keywordtype">bool</span> <a class="code hl_function" href="classunify_1_1Range.html#a6c1be5bfd525d1ddbe190b9d7b75cb34">unify::Range&lt; T &gt;::operator==</a>( <span class="keyword">const</span> Range&lt; T &gt; &amp; range )<span class="keyword"> const</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">return</span> m_isSet == range.m_isSet &amp;&amp; m_min == range.m_min &amp;&amp; m_max == range.m_max;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="keywordtype">bool</span> <a class="code hl_function" href="classunify_1_1Range.html#a7a3620e9c40906359084d402c3c0cf33">unify::Range&lt; T &gt;::operator!=</a>( <span class="keyword">const</span> Range&lt; T &gt; &amp; range )<span class="keyword"> const</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">return</span> !( *<span class="keyword">this</span> == range );</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>}</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="keywordtype">void</span> <a class="code hl_function" href="classunify_1_1Range.html#a198bde566ad80cebd424a520a391d1d2">unify::Range&lt; T &gt;::operator+=</a>( <span class="keyword">const</span> T value )</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>{</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    Add( value );</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}</div>
+<div class="ttc" id="aCast_8inl_html_ab31a6aa8a253548c7bb95a0568a4d640"><div class="ttname"><a href="Cast_8inl.html#ab31a6aa8a253548c7bb95a0568a4d640">Split</a></div><div class="ttdeci">std::vector&lt; T &gt; Split(std::string_view sourceString, const char delimitor, bool trim)</div><div class="ttdef"><b>Definition</b> Cast.inl:516</div></div>
+<div class="ttc" id="aclassunify_1_1Range_html_a198bde566ad80cebd424a520a391d1d2"><div class="ttname"><a href="classunify_1_1Range.html#a198bde566ad80cebd424a520a391d1d2">unify::Range::operator+=</a></div><div class="ttdeci">void operator+=(const T value)</div><div class="ttdef"><b>Definition</b> Range.h:132</div></div>
 <div class="ttc" id="aclassunify_1_1Range_html_a55602af1ef9f6928d0bad18eb6d740d7"><div class="ttname"><a href="classunify_1_1Range.html#a55602af1ef9f6928d0bad18eb6d740d7">unify::Range::Max</a></div><div class="ttdeci">T Max() const</div><div class="ttdef"><b>Definition</b> Range.h:91</div></div>
-<div class="ttc" id="aclassunify_1_1Range_html_a6c1be5bfd525d1ddbe190b9d7b75cb34"><div class="ttname"><a href="classunify_1_1Range.html#a6c1be5bfd525d1ddbe190b9d7b75cb34">unify::Range::operator==</a></div><div class="ttdeci">bool operator==(const Range &amp;range) const</div><div class="ttdef"><b>Definition</b> Range.h:113</div></div>
-<div class="ttc" id="aclassunify_1_1Range_html_a7a3620e9c40906359084d402c3c0cf33"><div class="ttname"><a href="classunify_1_1Range.html#a7a3620e9c40906359084d402c3c0cf33">unify::Range::operator!=</a></div><div class="ttdeci">bool operator!=(const Range &amp;range) const</div><div class="ttdef"><b>Definition</b> Range.h:119</div></div>
+<div class="ttc" id="aclassunify_1_1Range_html_a6c1be5bfd525d1ddbe190b9d7b75cb34"><div class="ttname"><a href="classunify_1_1Range.html#a6c1be5bfd525d1ddbe190b9d7b75cb34">unify::Range::operator==</a></div><div class="ttdeci">bool operator==(const Range &amp;range) const</div><div class="ttdef"><b>Definition</b> Range.h:120</div></div>
+<div class="ttc" id="aclassunify_1_1Range_html_a6c8273f7f4c008748768a38bc4d00f22"><div class="ttname"><a href="classunify_1_1Range.html#a6c8273f7f4c008748768a38bc4d00f22">unify::Range::Size</a></div><div class="ttdeci">size_t Size() const</div><div class="ttdef"><b>Definition</b> Range.h:98</div></div>
+<div class="ttc" id="aclassunify_1_1Range_html_a7a3620e9c40906359084d402c3c0cf33"><div class="ttname"><a href="classunify_1_1Range.html#a7a3620e9c40906359084d402c3c0cf33">unify::Range::operator!=</a></div><div class="ttdeci">bool operator!=(const Range &amp;range) const</div><div class="ttdef"><b>Definition</b> Range.h:126</div></div>
 <div class="ttc" id="aclassunify_1_1Range_html_a8c12de653b937466af1019d531aa3fba"><div class="ttname"><a href="classunify_1_1Range.html#a8c12de653b937466af1019d531aa3fba">unify::Range::Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition</b> Range.h:56</div></div>
 <div class="ttc" id="aclassunify_1_1Range_html_aa4407a93074fbb726deb613f7a067983"><div class="ttname"><a href="classunify_1_1Range.html#aa4407a93074fbb726deb613f7a067983">unify::Range::Range</a></div><div class="ttdeci">Range()</div><div class="ttdef"><b>Definition</b> Range.h:25</div></div>
 <div class="ttc" id="aclassunify_1_1Range_html_acfcb5be86acd3c592e788695d5afe681"><div class="ttname"><a href="classunify_1_1Range.html#acfcb5be86acd3c592e788695d5afe681">unify::Range::Min</a></div><div class="ttdeci">T Min() const</div><div class="ttdef"><b>Definition</b> Range.h:84</div></div>

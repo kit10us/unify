@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Unify Library: unify/Result.h File Reference</title>
+<title>Unify Library: Counter Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -96,39 +96,82 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a href="dir_3959f6a6ed2cb8653cfda10c3caf07cf.html">unify</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
-  <div class="headertitle"><div class="title">Result.h File Reference</div></div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="classCounter-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Counter Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
-<code>#include &lt;functional&gt;</code><br />
-<code>#include &lt;variant&gt;</code><br />
-<code>#include &lt;memory&gt;</code><br />
-</div>
-<p><a href="Result_8h_source.html">Go to the source code of this file.</a></p>
+
+<p><a class="el" href="classCounter.html" title="Counter used to measure how many times a result success is copy constructed.">Counter</a> used to measure how many times a result success is copy constructed.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:unify_3A_3ASuccess" id="r_unify_3A_3ASuccess"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classunify_1_1Success.html">unify::Success</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A default success class for <a class="el" href="classunify_1_1Result.html" title="A templated class meant to convey either a success or a failure via defined types....">Result</a>. It is meant only to support the duality of <a class="el" href="classunify_1_1Result.html" title="A templated class meant to convey either a success or a failure via defined types....">Result</a> (which is able to be a <a class="el" href="classunify_1_1Success.html" title="A default success class for Result. It is meant only to support the duality of Result (which is able ...">Success</a> result or <a class="el" href="classunify_1_1Failure.html" title="A default failure class for Result. It is only meant to support the dualoity of Result (which is able...">Failure</a> result).  <a href="classunify_1_1Success.html#details">More...</a><br /></td></tr>
-<tr class="memitem:unify_3A_3AFailure" id="r_unify_3A_3AFailure"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classunify_1_1Failure.html">unify::Failure</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A default failure class for <a class="el" href="classunify_1_1Result.html" title="A templated class meant to convey either a success or a failure via defined types....">Result</a>. It is only meant to support the dualoity of <a class="el" href="classunify_1_1Result.html" title="A templated class meant to convey either a success or a failure via defined types....">Result</a> (which is able to be a <a class="el" href="classunify_1_1Success.html" title="A default success class for Result. It is meant only to support the duality of Result (which is able ...">Success</a> result or <a class="el" href="classunify_1_1Failure.html" title="A default failure class for Result. It is only meant to support the dualoity of Result (which is able...">Failure</a> result).  <a href="classunify_1_1Failure.html#details">More...</a><br /></td></tr>
-<tr class="memitem:unify_3A_3AResult_3C_20T_5FSuccessType_2C_20T_5FFailure_20_3E" id="r_unify_3A_3AResult_3C_20T_5FSuccessType_2C_20T_5FFailure_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classunify_1_1Result.html">unify::Result&lt; T_SuccessType, T_Failure &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A templated class meant to convey either a success or a failure via defined types. Defaults to either lite weight <a class="el" href="classunify_1_1Success.html" title="A default success class for Result. It is meant only to support the duality of Result (which is able ...">Success</a> or <a class="el" href="classunify_1_1Failure.html" title="A default failure class for Result. It is only meant to support the dualoity of Result (which is able...">Failure</a> class.  <a href="classunify_1_1Result.html#details">More...</a><br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1e05f69b5240fbab3e7ab351672167f0" id="r_a1e05f69b5240fbab3e7ab351672167f0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1e05f69b5240fbab3e7ab351672167f0">Counter</a> ()</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:unify" id="r_unify"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespaceunify.html">unify</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:aeb453b5c197dccb927b513ccd2f062c8" id="r_aeb453b5c197dccb927b513ccd2f062c8"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#aeb453b5c197dccb927b513ccd2f062c8">count</a> = 0</td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classCounter.html" title="Counter used to measure how many times a result success is copy constructed.">Counter</a> used to measure how many times a result success is copy constructed. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a1e05f69b5240fbab3e7ab351672167f0" name="a1e05f69b5240fbab3e7ab351672167f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e05f69b5240fbab3e7ab351672167f0">&#9670;&#160;</a></span>Counter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Counter::Counter </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="aeb453b5c197dccb927b513ccd2f062c8" name="aeb453b5c197dccb927b513ccd2f062c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb453b5c197dccb927b513ccd2f062c8">&#9670;&#160;</a></span>count</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Counter::count = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>tests/<a class="el" href="tests__Result_8cpp.html">tests_Result.cpp</a></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

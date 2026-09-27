@@ -79,11 +79,13 @@ var searchData=
   ['core_20philosophy_76',['Core Philosophy',['../md_README.html#autotoc_md3',1,'']]],
   ['cosof_77',['CosOf',['../classunify_1_1Angle.html#a3fbb23ab3ee92e92c8fd2912cbc3ad03',1,'unify::Angle']]],
   ['count_78',['Count',['../classunify_1_1FrustumCorner.html#a084c2d536c41374f4121bd44b3a1b99fa5b089a57c2b4e593e8416babe0a2cf67',1,'unify::FrustumCorner::Count'],['../classunify_1_1FrustumPlane.html#a945eb2a3eb6d5d38b380bb4f2eeca442afeb31216fefd458b2fe72ec6beefb9f9',1,'unify::FrustumPlane::Count'],['../classunify_1_1FrameSet.html#aff299ad019e0c7ae4192cb272e6f1d73',1,'unify::FrameSet::Count()'],['../classunify_1_1FrameSetInstance.html#a0e2b0f2cd18a8561901f368dec55158e',1,'unify::FrameSetInstance::Count()'],['../classunify_1_1LinkList.html#aeb09109a5e593f6ed4328255d83d3d37',1,'unify::LinkList::Count()'],['../classunify_1_1QList.html#ab4df3718000f95ed6c002ca3f91c8166',1,'unify::QList::Count()'],['../classunify_1_1Lookup.html#a2ff484526b53bb99ecfdbaf2b512acdc',1,'unify::Lookup::Count()'],['../classunify_1_1Parameters.html#ad4e452c9d6ddbb93800bd1eb303cebe2',1,'unify::Parameters::Count()']]],
-  ['create_79',['Create',['../classunify_1_1Owner.html#a723e455607a9204ce40cc471fd1c9548',1,'unify::Owner::Create()'],['../classunify_1_1OwnerProperty.html#a9f182dfe47ae2a6703a1c4b38645a6e8',1,'unify::OwnerProperty::Create()']]],
-  ['createduplicatehierarchy_80',['CreateDuplicateHierarchy',['../classunify_1_1Frame.html#a3ca090593c94fc1e738aedfda52ed4db',1,'unify::Frame']]],
-  ['createindextoframevector_81',['CreateIndexToFrameVector',['../classunify_1_1Frame.html#ac59d80be19c325db101409f62c47c222',1,'unify::Frame']]],
-  ['createnametoindexmap_82',['CreateNameToIndexMap',['../classunify_1_1Frame.html#ad8d94318e9a95efaae033eb4ca11f54e',1,'unify::Frame']]],
-  ['cullbbox_83',['CullBBox',['../classunify_1_1Frustum.html#a7bb6cecd90bf3f21c0ae0f5855036e75',1,'unify::Frustum']]],
-  ['cullstate_84',['CullState',['../namespaceunify.html#af385be843c3779feb4af332ac46d2a3f',1,'unify']]],
-  ['current_85',['Current',['../classunify_1_1LinkList.html#a808e157761ab662f7d15cf4f40f6770c',1,'unify::LinkList']]]
+  ['count_79',['count',['../classCounter.html#aeb453b5c197dccb927b513ccd2f062c8',1,'Counter']]],
+  ['counter_80',['Counter',['../classCounter.html',1,'Counter'],['../classCounter.html#a1e05f69b5240fbab3e7ab351672167f0',1,'Counter::Counter()']]],
+  ['create_81',['Create',['../classunify_1_1Owner.html#a723e455607a9204ce40cc471fd1c9548',1,'unify::Owner::Create()'],['../classunify_1_1OwnerProperty.html#a9f182dfe47ae2a6703a1c4b38645a6e8',1,'unify::OwnerProperty::Create()']]],
+  ['createduplicatehierarchy_82',['CreateDuplicateHierarchy',['../classunify_1_1Frame.html#a3ca090593c94fc1e738aedfda52ed4db',1,'unify::Frame']]],
+  ['createindextoframevector_83',['CreateIndexToFrameVector',['../classunify_1_1Frame.html#ac59d80be19c325db101409f62c47c222',1,'unify::Frame']]],
+  ['createnametoindexmap_84',['CreateNameToIndexMap',['../classunify_1_1Frame.html#ad8d94318e9a95efaae033eb4ca11f54e',1,'unify::Frame']]],
+  ['cullbbox_85',['CullBBox',['../classunify_1_1Frustum.html#a7bb6cecd90bf3f21c0ae0f5855036e75',1,'unify::Frustum']]],
+  ['cullstate_86',['CullState',['../namespaceunify.html#af385be843c3779feb4af332ac46d2a3f',1,'unify']]],
+  ['current_87',['Current',['../classunify_1_1LinkList.html#a808e157761ab662f7d15cf4f40f6770c',1,'unify::LinkList']]]
 ];

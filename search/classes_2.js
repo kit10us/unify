@@ -7,5 +7,6 @@ var searchData=
   ['color_4',['Color',['../classunify_1_1Color.html',1,'unify']]],
   ['colortests_5',['ColorTests',['../classColorTests.html',1,'']]],
   ['colorunit_6',['ColorUnit',['../classunify_1_1ColorUnit.html',1,'unify']]],
-  ['colorunittests_7',['ColorUnitTests',['../classColorUnitTests.html',1,'']]]
+  ['colorunittests_7',['ColorUnitTests',['../classColorUnitTests.html',1,'']]],
+  ['counter_8',['Counter',['../classCounter.html',1,'']]]
 ];
