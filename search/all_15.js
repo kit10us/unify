@@ -49,7 +49,7 @@ var searchData=
   ['source_20code_20requirements_46',['Source Code Requirements',['../md_README.html#autotoc_md14',1,'']]],
   ['span_47',['span',['../classunify_1_1span.html',1,'unify::span&lt; T, T_Extent &gt;'],['../classunify_1_1span.html#ae5e2625b22eedd1daaf3d98a5d9edb22',1,'unify::span::span()=default'],['../classunify_1_1span.html#a90cd67893e5055665dc99cae88d5263f',1,'unify::span::span(T *data, std::size_t size)']]],
   ['span_2eh_48',['Span.h',['../Span_8h.html',1,'']]],
-  ['split_49',['Split',['../classunify_1_1Path.html#a5b6f5f3da5dd2c7dc2afd255d6faf4b6',1,'unify::Path::Split()'],['../namespaceunify.html#a6fb354079e0852facdecdc4b2db77ee4',1,'unify::Split()'],['../Cast_8inl.html#ab31a6aa8a253548c7bb95a0568a4d640',1,'Split():&#160;Cast.inl']]],
+  ['split_49',['Split',['../classunify_1_1Path.html#a5b6f5f3da5dd2c7dc2afd255d6faf4b6',1,'unify::Path::Split()'],['../namespaceunify.html#ab4ab0ec16cc6213dee243410463a12ea',1,'unify::Split()']]],
   ['splitwhitespace_50',['SplitWhitespace',['../namespaceunify_1_1String.html#a1641241be7ff1ad2dd0a418071c1da19',1,'unify::String']]],
   ['standards_51',['Documentation Standards',['../md_README.html#autotoc_md16',1,'']]],
   ['standards_20and_20practices_52',['Standards and Practices',['../md_README.html#autotoc_md8',1,'']]],

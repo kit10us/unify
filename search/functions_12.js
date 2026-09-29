@@ -34,7 +34,7 @@ var searchData=
   ['slide_31',['Slide',['../classunify_1_1Frame.html#ad74b5b7b6877f16b8388bddd1c9cd332',1,'unify::Frame']]],
   ['sortvalue_32',['SortValue',['../classunify_1_1Query.html#a9a0bab07be932104c9ac243e8aa43077',1,'unify::Query']]],
   ['span_33',['span',['../classunify_1_1span.html#ae5e2625b22eedd1daaf3d98a5d9edb22',1,'unify::span::span()=default'],['../classunify_1_1span.html#a90cd67893e5055665dc99cae88d5263f',1,'unify::span::span(T *data, std::size_t size)']]],
-  ['split_34',['Split',['../classunify_1_1Path.html#a5b6f5f3da5dd2c7dc2afd255d6faf4b6',1,'unify::Path::Split()'],['../namespaceunify.html#a6fb354079e0852facdecdc4b2db77ee4',1,'unify::Split()'],['../Cast_8inl.html#ab31a6aa8a253548c7bb95a0568a4d640',1,'Split():&#160;Cast.inl']]],
+  ['split_34',['Split',['../classunify_1_1Path.html#a5b6f5f3da5dd2c7dc2afd255d6faf4b6',1,'unify::Path::Split()'],['../namespaceunify.html#ab4ab0ec16cc6213dee243410463a12ea',1,'unify::Split()']]],
   ['splitwhitespace_35',['SplitWhitespace',['../namespaceunify_1_1String.html#a1641241be7ff1ad2dd0a418071c1da19',1,'unify::String']]],
   ['stream_36',['Stream',['../classunify_1_1Stream.html#ab46205e3557df2b5afddf4c9752f8ff0',1,'unify::Stream']]],
   ['stringis_37',['StringIs',['../namespaceunify_1_1String.html#adba068aa5f02364291caba4c558bd85f',1,'unify::String::StringIs(std::string_view a, std::string_view b)'],['../namespaceunify_1_1String.html#a83df5f55c4002b23f70822c2c48d2864',1,'unify::String::StringIs(std::string_view a, std::string_view b, std::string_view rest...)'],['../namespaceunify_1_1String.html#a83df5f55c4002b23f70822c2c48d2864',1,'unify::String::StringIs(std::string_view a, std::string_view b, std::string_view rest...)']]],

@@ -62,12 +62,11 @@ var searchData=
   ['framesetinstance_2eh_59',['FrameSetInstance.h',['../FrameSetInstance_8h.html',1,'']]],
   ['framesetinstance_2einl_60',['FrameSetInstance.inl',['../FrameSetInstance_8inl.html',1,'']]],
   ['fromstring_61',['FromString',['../classunify_1_1Matrix.html#af074de0227d2c4bca98b080f40e8df9d',1,'unify::Matrix::FromString()'],['../structunify_1_1NinePoint.html#a59a1366c54dd510a5debf53baeddcfeb',1,'unify::NinePoint::FromString()'],['../namespaceunify.html#a5d3cf7930f09883f7f5952c3dad67594',1,'unify::FromString(std::string_view in, bool trim=true) noexcept=delete'],['../namespaceunify.html#a60d492209dd306954924e08619832444',1,'unify::FromString(std::string_view text)']]],
-  ['fromstring_3c_20std_3a_3astring_5fview_20_3e_62',['FromString&lt; std::string_view &gt;',['../namespaceunify.html#a9fbd84cc7c676470b6f36d8c97a4f27b',1,'unify::FromString&lt; std::string_view &gt;()'],['../Cast_8inl.html#ab7aca3e0f1c8bde50d16617b828112e0',1,'FromString&lt; std::string_view &gt;():&#160;Cast.inl']]],
-  ['frustum_63',['Frustum',['../classunify_1_1Frustum.html',1,'unify::Frustum'],['../classunify_1_1Frustum.html#aed46398857660b76f50f1362293061be',1,'unify::Frustum::Frustum()'],['../classunify_1_1Frustum.html#aa6d3c955395d538818cc532f9b427bd3',1,'unify::Frustum::Frustum(const unify::Matrix &amp;worldViewProjection)']]],
-  ['frustum_2eh_64',['Frustum.h',['../Frustum_8h.html',1,'']]],
-  ['frustum_2einl_65',['Frustum.inl',['../Frustum_8inl.html',1,'']]],
-  ['frustumcorner_66',['FrustumCorner',['../classunify_1_1FrustumCorner.html',1,'unify']]],
-  ['frustumplane_67',['FrustumPlane',['../classunify_1_1FrustumPlane.html',1,'unify']]],
-  ['fstream_2eh_68',['FStream.h',['../FStream_8h.html',1,'']]],
-  ['fstream_2einl_69',['FStream.inl',['../FStream_8inl.html',1,'']]]
+  ['frustum_62',['Frustum',['../classunify_1_1Frustum.html',1,'unify::Frustum'],['../classunify_1_1Frustum.html#aed46398857660b76f50f1362293061be',1,'unify::Frustum::Frustum()'],['../classunify_1_1Frustum.html#aa6d3c955395d538818cc532f9b427bd3',1,'unify::Frustum::Frustum(const unify::Matrix &amp;worldViewProjection)']]],
+  ['frustum_2eh_63',['Frustum.h',['../Frustum_8h.html',1,'']]],
+  ['frustum_2einl_64',['Frustum.inl',['../Frustum_8inl.html',1,'']]],
+  ['frustumcorner_65',['FrustumCorner',['../classunify_1_1FrustumCorner.html',1,'unify']]],
+  ['frustumplane_66',['FrustumPlane',['../classunify_1_1FrustumPlane.html',1,'unify']]],
+  ['fstream_2eh_67',['FStream.h',['../FStream_8h.html',1,'']]],
+  ['fstream_2einl_68',['FStream.inl',['../FStream_8inl.html',1,'']]]
 ];

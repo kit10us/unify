@@ -17,7 +17,7 @@ var searchData=
   ['and_20practices_14',['Standards and Practices',['../md_README.html#autotoc_md8',1,'']]],
   ['and_20register_20optimization_15',['Memory and Register Optimization',['../md_README.html#autotoc_md13',1,'']]],
   ['and_20vision_16',['Evolution and Vision',['../md_README.html#autotoc_md2',1,'']]],
-  ['angle_17',['Angle',['../classunify_1_1Angle.html',1,'unify::Angle'],['../classunify_1_1Angle.html#a24eb400316a7895edae18de6857e93f2',1,'unify::Angle::Angle()'],['../classunify_1_1Angle.html#a5e3fad530d1bb858403ea721e15788c9',1,'unify::Angle::Angle(const Angle &amp;angle)'],['../classunify_1_1Angle.html#a669b7f19dfb951c8ffed00c6b574190d',1,'unify::Angle::Angle(const std::string_view angle)'],['../classunify_1_1V2.html#ad11226ae1747d5908f199ea45ece6e6a',1,'unify::V2::Angle()']]],
+  ['angle_17',['Angle',['../classunify_1_1Angle.html',1,'unify::Angle'],['../classunify_1_1Angle.html#a24eb400316a7895edae18de6857e93f2',1,'unify::Angle::Angle()'],['../classunify_1_1Angle.html#a5e3fad530d1bb858403ea721e15788c9',1,'unify::Angle::Angle(const Angle &amp;angle)'],['../classunify_1_1Angle.html#a669b7f19dfb951c8ffed00c6b574190d',1,'unify::Angle::Angle(const std::string_view angle)']]],
   ['angle_2eh_18',['Angle.h',['../Angle_8h.html',1,'']]],
   ['angle_2einl_19',['Angle.inl',['../Angle_8inl.html',1,'']]],
   ['angleindegrees_20',['AngleInDegrees',['../classunify_1_1Angle.html#aaef77280f0f320d6a87ac07b474b3815',1,'unify::Angle::AngleInDegrees()'],['../namespaceunify.html#a2b470b9178b6fd7e9a660c8db1ce08d3',1,'unify::AngleInDegrees()']]],

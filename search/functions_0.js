@@ -9,7 +9,7 @@ var searchData=
   ['addsibling_6',['AddSibling',['../classunify_1_1Frame.html#a7458d257ba44a56951d4961d24a29e4f',1,'unify::Frame']]],
   ['addtoregion_7',['AddToRegion',['../classunify_1_1Rect.html#ac37e737bcdbd7e980639f7a23e6fbb3c',1,'unify::Rect']]],
   ['and_8',['And',['../classunify_1_1Rect.html#a198bec30f94b732de092f9c14be286bf',1,'unify::Rect']]],
-  ['angle_9',['Angle',['../classunify_1_1Angle.html#a24eb400316a7895edae18de6857e93f2',1,'unify::Angle::Angle()'],['../classunify_1_1Angle.html#a5e3fad530d1bb858403ea721e15788c9',1,'unify::Angle::Angle(const Angle &amp;angle)'],['../classunify_1_1Angle.html#a669b7f19dfb951c8ffed00c6b574190d',1,'unify::Angle::Angle(const std::string_view angle)'],['../classunify_1_1V2.html#ad11226ae1747d5908f199ea45ece6e6a',1,'unify::V2::Angle()']]],
+  ['angle_9',['Angle',['../classunify_1_1Angle.html#a24eb400316a7895edae18de6857e93f2',1,'unify::Angle::Angle()'],['../classunify_1_1Angle.html#a5e3fad530d1bb858403ea721e15788c9',1,'unify::Angle::Angle(const Angle &amp;angle)'],['../classunify_1_1Angle.html#a669b7f19dfb951c8ffed00c6b574190d',1,'unify::Angle::Angle(const std::string_view angle)']]],
   ['angleindegrees_10',['AngleInDegrees',['../namespaceunify.html#a2b470b9178b6fd7e9a660c8db1ce08d3',1,'unify']]],
   ['angleinradians_11',['AngleInRadians',['../namespaceunify.html#a310ca2f10f67a5acb3780afac5efeced',1,'unify']]],
   ['anglepi_12',['AnglePI',['../namespaceunify.html#a5811d2f2a2ab0ca412a8521d3988cb21',1,'unify']]],
