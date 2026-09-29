@@ -2,6 +2,23 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "windows": {
+                "type": "shell",
+                "command": "cmake --build build --config Debug --target unit_tests",
+                "problemMatcher": ["$msCompile"]
+            },
+            "linux": {
+             "type": "shell",
+             "command": "cmake",
+             "args": ["--build", "build"]
+            }   
+        },
+        {
             "label": "Generate VS2022",
             "type": "shell",
             "command": "cmake -B build -G 'Visual Studio 17 2022' -A x64",

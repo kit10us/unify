@@ -129,28 +129,28 @@ TEST_F(ResultTests, Or)
 
 bool TestReturnBool()
 {
-    volatile static uint32_t counter {};
+    static uint32_t counter {};
     counter++;
     return true;
 }
 
 uint32_t TestReturnUInt32()
 {
-    volatile static uint32_t counter {};
+    static uint32_t counter {};
     counter++;
     return counter;
 }
 
 unify::Result<> TestResultReturnSuccess()
 {
-    volatile static uint32_t counter {};
+    static uint32_t counter {};
     counter++;
     return {};
 }
 
 unify::Result<> TestResultReturnFailure()
 {
-    volatile static uint32_t counter {};
+    static uint32_t counter {};
     counter++;
     return unify::Failure{"Failure"};
 }

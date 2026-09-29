@@ -225,7 +225,7 @@ namespace unify
 	}
 
 	template< typename T >
-	Angle V2< T >::Angle(const V2< T >& a) const
+	Angle V2< T >::GetAngle(const V2< T >& a) const
 	{
 		return AngleInRadians(acos(Dot(a) / (Length() * a.Length())));
 	}

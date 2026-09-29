@@ -126,7 +126,7 @@ TEST_F(PathTests, CombineSameSchemeConstructor)
     using namespace unify;
     using namespace std::string_view_literals;
 
-    Path path_combine = Path::Path(Path("file:///home/user"), Path("file://documents"));
+    Path path_combine = Path(Path("file:///home/user"), Path("file://documents"));
 
     EXPECT_FALSE(path_combine.IsEmpty());
 
@@ -147,7 +147,7 @@ TEST_F(PathTests, CombineLeftSchemeConstructor)
     using namespace unify;
     using namespace std::string_view_literals;
     
-    Path path_left_scheme = Path::Path(Path("file:///home/user"), Path("documents"));
+    Path path_left_scheme = Path(Path("file:///home/user"), Path("documents"));
 
     EXPECT_FALSE(path_left_scheme.IsEmpty());
 
@@ -162,7 +162,7 @@ TEST_F(PathTests, CombineLeftSchemeConstructor)
 
     EXPECT_STREQ(path_left_scheme.ToString(Slash::Backward).c_str(), R"(file://\home\user\documents)");
 
-    Path path_right_scheme = Path::Path(Path("/home/user"), Path("file://documents"));
+    Path path_right_scheme = Path(Path("/home/user"), Path("file://documents"));
 
     EXPECT_FALSE(path_right_scheme.IsEmpty());
 
@@ -183,7 +183,7 @@ TEST_F(PathTests, CombineMixedSchemeConstructor)
     using namespace unify;
     using namespace std::string_view_literals;
 
-    Path path_mixed_scheme = Path::Path(Path("http://www.example.com/site"), Path("file://documents"));
+    Path path_mixed_scheme = Path(Path("http://www.example.com/site"), Path("file://documents"));
 
     EXPECT_FALSE(path_mixed_scheme.IsEmpty());
 

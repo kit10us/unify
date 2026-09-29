@@ -107,8 +107,8 @@ TEST_F(V2Tests, Angle)
 {
     unify::V2 v1{1.0f, 0.0f};
     unify::V2 v2{0.0f, 1.0f};
-    unify::Angle angle = v1.Angle(v2);
-    EXPECT_FLOAT_EQ(angle.ToDegrees(), 90.0);
+    unify::Angle angle = v1.GetAngle(v2);
+    EXPECT_FLOAT_EQ(angle.ToDegrees(), 90.0f);
 }
 
 /// <summary>
@@ -118,7 +118,7 @@ TEST_F(V2Tests, Distance)
 {
     unify::V2 v1{1.0f, 2.0f};
     unify::V2 v2{4.0f, 6.0f};
-    EXPECT_FLOAT_EQ(v1.Distance(v2), 5.0);
+    EXPECT_FLOAT_EQ(v1.Distance(v2), 5.0f);
 }
 
 /// <summary>

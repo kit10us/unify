@@ -70,18 +70,32 @@ std::wstring unify::ToWString(std::string input_string)
         return std::wstring{};
     }
 
-    std::size_t size_needed = 0;
+	#if defined(_WIN32)
+    size_t size_needed = 0;
+	#else
+	char size_needed = 0;
+	#endif
+	
+	#if defined(_WIN32)
     mbstowcs_s(&size_needed, nullptr, 0, input_string.c_str(), _TRUNCATE);
+	#else
+    size_needed = mbstowcs(nullptr, input_string.c_str(), 0);
+	#endif
 
     if (size_needed == 0)
     {
         return std::wstring{};
     }
 
-    std::wstring output_string(size_needed - 1, 0);
-    mbstowcs_s(nullptr, output_string.data(), size_needed, input_string.c_str(), _TRUNCATE);
+    std::wstring output_string(size_needed, 0);
 
-    return output_string;
+	#if defined(_WIN32)
+	mbstowcs_s(nullptr, output_string.data(), size_needed, input_string.c_str(), _TRUNCATE);
+	#else
+	mbstowcs(output_string.data(), input_string.c_str(), size_needed);
+    #endif
+
+	return output_string;
 }
 
 template<>
@@ -493,6 +507,7 @@ std::optional<std::string> unify::FromString(std::string_view text_sv, bool trim
 	return text;
 }
 
+/*
 template <>
 inline std::optional<std::string_view> FromString<std::string_view>(std::string_view text, bool trim) noexcept
 {
@@ -510,13 +525,13 @@ inline std::optional<std::string_view> FromString<std::string_view>(std::string_
     }
     return text;
 }
+*/
 
 template< typename T >
 inline
-std::vector<T> Split(std::string_view sourceString, const char delimitor, bool trim)
+std::vector<T> unify::Split(std::string_view sourceString, char delimitor, bool trim)
 {
 	std::vector<T> results;
-	std::string item;
 	size_t front = 0;
 	size_t i = 0;
 	const auto end = sourceString.size();
@@ -564,4 +579,4 @@ std::vector<T> Split(std::string_view sourceString, const char delimitor, bool t
 	return results;
 }
 	
-	#pragma warning(pop)
+#pragma warning(pop)

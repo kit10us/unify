@@ -77,7 +77,8 @@ namespace unify
 	/// @param trim true to ignore white-spaces
 	/// @return vector of each value
 	template< typename T >
-	std::vector< T > Split( std::string_view sourceString, const char delimitor = ',', bool trim = true );
-
-	#include <unify/Cast.inl>
+	inline
+	std::vector< T > Split( std::string_view sourceString, char delimitor = ',', bool trim = true );
 }
+
+#include <unify/Cast.inl>

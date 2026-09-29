@@ -169,7 +169,8 @@ namespace unify::String
 		return TrimRight(TrimLeft(stringIn, chr), chr);
 	}
 
-	inline [[nodiscard]]
+	[[nodiscard]]
+	inline
 	std::string TrimWhitespace(std::string_view text)
 	{
 		if (text.empty())

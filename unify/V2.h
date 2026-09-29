@@ -105,7 +105,7 @@ namespace unify
 		/// <summary>
 		/// Returns the angle of a vector.
 		/// </summary>
-		Angle Angle(const V2< T > & a) const;
+		Angle GetAngle(const V2< T > & a) const;
 
 		/// <summary>
 		/// Tests wether all elements of a vector are zero.

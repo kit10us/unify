@@ -245,7 +245,7 @@ namespace unify
 
 	template<>
 	inline
-	std::string Cast(const TimeDelta in)
+	std::string Cast(const TimeDelta in) noexcept
 	{
 		return std::to_string(in.AsSeconds());
 	}
