@@ -54,6 +54,12 @@ unify::Result<> FailureWithMessage()
     return unify::Failure{ "Failure Message." };
 }
 
+unify::Result<> FailureFromFailure()
+{
+    auto failure = FailureWithMessage();
+    return failure;
+}
+
 enum class TestEnum
 {
     Value1,
@@ -90,7 +96,15 @@ TEST_F(ResultTests, FailureWithMessage)
 {
     auto default_result = FailureWithMessage();
     EXPECT_EQ(default_result.Success(), false);
+    EXPECT_EQ(default_result.Failure(), true);
     EXPECT_STREQ(default_result.Message().c_str(), "Failure Message.");
+}
+
+TEST_F(ResultTests, FailureFromFailure)
+{
+    auto failure = FailureFromFailure();
+    EXPECT_EQ(failure.Success(), false);
+    EXPECT_STREQ(failure.Message().c_str(), "Failure Message.");
 }
 
 TEST_F(ResultTests, ValueSuccess)
