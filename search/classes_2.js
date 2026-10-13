@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['caseinsensitivelessthanequaltest_0',['CaseInsensitiveLessThanEqualTest',['../classunify_1_1String_1_1CaseInsensitiveLessThanEqualTest.html',1,'unify::String']]],
-  ['caseinsensitivelessthanequaltestcharptr_1',['CaseInsensitiveLessThanEqualTestCharPtr',['../classunify_1_1String_1_1CaseInsensitiveLessThanEqualTestCharPtr.html',1,'unify::String']]],
-  ['casttests_2',['CastTests',['../classCastTests.html',1,'']]],
-  ['char_3',['Char',['../structunify_1_1Char.html',1,'unify']]],
-  ['color_4',['Color',['../classunify_1_1Color.html',1,'unify']]],
-  ['colortests_5',['ColorTests',['../classColorTests.html',1,'']]],
-  ['colorunit_6',['ColorUnit',['../classunify_1_1ColorUnit.html',1,'unify']]],
-  ['colorunittests_7',['ColorUnitTests',['../classColorUnitTests.html',1,'']]],
-  ['counter_8',['Counter',['../classCounter.html',1,'']]]
+  ['bad_5fany_5fcast_0',['bad_any_cast',['../classunify_1_1bad__any__cast.html',1,'unify']]],
+  ['badcast_1',['BadCast',['../classunify_1_1BadCast.html',1,'unify']]],
+  ['bbox_2',['BBox',['../classunify_1_1BBox.html',1,'unify']]],
+  ['bboxtests_3',['BBoxTests',['../classBBoxTests.html',1,'']]],
+  ['brectangle_4',['BRectangle',['../classunify_1_1BRectangle.html',1,'unify']]],
+  ['brectangletests_5',['BRectangleTests',['../classBRectangleTests.html',1,'']]],
+  ['bsphere_6',['BSphere',['../classunify_1_1BSphere.html',1,'unify']]]
 ];

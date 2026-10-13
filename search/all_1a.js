@@ -1,13 +1,12 @@
 var searchData=
 [
-  ['x_0',['x',['../classunify_1_1Quaternion.html#a4385f0b63d6f75e5940dffac3a9cf389',1,'unify::Quaternion::x'],['../classunify_1_1V2.html#a3765c751d0bfbae6b3d665910d16a637',1,'unify::V2::x'],['../classunify_1_1V3.html#a15d0e150b950e286ef4e9d57b075399d',1,'unify::V3::x'],['../classunify_1_1V4.html#a693f0f7f7e271a5dd467122ba60d6f9d',1,'unify::V4::x']]],
-  ['xyz_1',['XYZ',['../classunify_1_1FrustumCorner.html#a084c2d536c41374f4121bd44b3a1b99faa2f74387efa942e76a332b19960f1768',1,'unify::FrustumCorner']]],
-  ['xyz_2',['XYz',['../classunify_1_1FrustumCorner.html#a084c2d536c41374f4121bd44b3a1b99fa70a6c20d52f28e5ddf55439b4df26137',1,'unify::FrustumCorner']]],
-  ['xyz_3',['XyZ',['../classunify_1_1FrustumCorner.html#a084c2d536c41374f4121bd44b3a1b99faed01a1927e89a4358e41449f29f3d5ff',1,'unify::FrustumCorner']]],
-  ['xyz_4',['Xyz',['../classunify_1_1FrustumCorner.html#a084c2d536c41374f4121bd44b3a1b99faa982d2a59af125545448451bbd73afd3',1,'unify::FrustumCorner']]],
-  ['xyz_5',['xYZ',['../classunify_1_1FrustumCorner.html#a084c2d536c41374f4121bd44b3a1b99fa55d4c2db7ff0656f9289b1ac64593608',1,'unify::FrustumCorner']]],
-  ['xyz_6',['xYz',['../classunify_1_1FrustumCorner.html#a084c2d536c41374f4121bd44b3a1b99fa34b2bdedef4ba7404ed6a8641e6ddda0',1,'unify::FrustumCorner']]],
-  ['xyz_7',['xyZ',['../classunify_1_1FrustumCorner.html#a084c2d536c41374f4121bd44b3a1b99fa3b3da7f8eb2aab12be56ab63c2a60b2b',1,'unify::FrustumCorner']]],
-  ['xyz_8',['xyz',['../classunify_1_1FrustumCorner.html#a084c2d536c41374f4121bd44b3a1b99fa764dcde55dc1ce07c5ab41f72a3eebda',1,'unify::FrustumCorner::xyz'],['../classunify_1_1V3.html#a33b11f0d75f7ad32bdbda25494aecfb7',1,'unify::V3::xyz() const']]],
-  ['xzy_9',['xzy',['../classunify_1_1V3.html#acc59e1dd4f1ec9ccf5ebc2d405334146',1,'unify::V3']]]
+  ['w_0',['w',['../classunify_1_1Quaternion.html#ae63503428f38ba23e731eb770d674e88',1,'unify::Quaternion::w'],['../classunify_1_1V4.html#aa88d125d7fe63b38c38b8f1235de8f39',1,'unify::V4::w']]],
+  ['weak_5fptr_1',['weak_ptr',['../classunify_1_1IExceptionHandler.html#a81941bd4921a5d227185530e9f03a5b8',1,'unify::IExceptionHandler::weak_ptr'],['../classunify_1_1Owner.html#a8144f3d94a6faa659e9cbaf20e83e00d',1,'unify::Owner::weak_ptr']]],
+  ['weekperms_2',['WeekPerMS',['../TimeDelta_8inl.html#abc5ce79d466e042bc69d34706ccc57e6',1,'TimeDelta.inl']]],
+  ['what_3',['what',['../classunify_1_1bad__any__cast.html#a2265a18ff782b77ffefe58f1445bfaaf',1,'unify::bad_any_cast::what()'],['../classunify_1_1Exception.html#a5d95e4dbf362c8c567f9df225344f0c9',1,'unify::Exception::what()']]],
+  ['width_4',['Width',['../classunify_1_1Rect.html#a943ab9af3f33da4abadb97820ec60e20',1,'unify::Rect::Width()'],['../classunify_1_1Size.html#a70e698af7c44623e79a012811749c61d',1,'unify::Size::Width()'],['../classunify_1_1TexArea.html#acd679555e72330a2a45f6675586c4048',1,'unify::TexArea::Width()']]],
+  ['width_5',['width',['../classunify_1_1Size.html#a9a451f9030bd55408acd1343a550af7c',1,'unify::Size::width'],['../classunify_1_1Size3.html#a3a05612aa745529e8c11f0ac4dec1c6a',1,'unify::Size3::width']]],
+  ['workflow_6',['Developer Workflow',['../dir_59425e443f801f1f2fd8bbe4959a3ccf.html#autotoc_md29',1,'']]],
+  ['write_7',['Write',['../classunify_1_1FileStream.html#a8565025944c04ae2826df7c98b6209d1',1,'unify::FileStream::Write(const void *source, unsigned int length) override'],['../classunify_1_1FileStream.html#ae5574a25c44b3e3cabe590e9a2c489ae',1,'unify::FileStream::Write(std::string out)'],['../classunify_1_1Stream.html#afc7bc64489be0649c48e674ca722bacc',1,'unify::Stream::Write()']]],
+  ['writepack_8',['WritePack',['../classunify_1_1FileStream.html#a036eb4ef6798ee811ef0e80ff7b5cf90',1,'unify::FileStream::WritePack()'],['../classunify_1_1Stream.html#ae767bdddd271db5a06f21a7d8a5d9be6',1,'unify::Stream::WritePack()']]]
 ];

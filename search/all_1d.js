@@ -1,19 +1,7 @@
 var searchData=
 [
-  ['_7eany_0',['~Any',['../classunify_1_1Any.html#a8a8b2880c016dad7983f48238f6d353f',1,'unify::Any']]],
-  ['_7efailure_1',['~Failure',['../classunify_1_1Failure.html#aab35f5a784e411c1d8d409530552851d',1,'unify::Failure']]],
-  ['_7efilestream_2',['~FileStream',['../classunify_1_1FileStream.html#a7823c29c408fd9ee5093dddfac12f920',1,'unify::FileStream']]],
-  ['_7eforeachfunctor_3',['~ForEachFunctor',['../classunify_1_1FrameSet_1_1ForEachFunctor.html#a4601f9d50fae9cb23c87a7a8f17a4df3',1,'unify::FrameSet::ForEachFunctor']]],
-  ['_7eframe_4',['~Frame',['../classunify_1_1Frame.html#a9c2a83fd40de03e06489f7e1d584cc78',1,'unify::Frame']]],
-  ['_7eframelite_5',['~FrameLite',['../classunify_1_1FrameLite.html#a0af7dc3333419f81847302622cf734e6',1,'unify::FrameLite']]],
-  ['_7eframeset_6',['~FrameSet',['../classunify_1_1FrameSet.html#a83e5724e1d51fa7426056477daa7a2a8',1,'unify::FrameSet']]],
-  ['_7eframesetinstance_7',['~FrameSetInstance',['../classunify_1_1FrameSetInstance.html#ab4003ebbc83cc8219b50b523b2bb15e0',1,'unify::FrameSetInstance']]],
-  ['_7elinklist_8',['~LinkList',['../classunify_1_1LinkList.html#afef034533765cd2a70f9bc87a7814d11',1,'unify::LinkList']]],
-  ['_7ematrix_9',['~Matrix',['../classunify_1_1Matrix.html#a5885badeb0c4e4d46aa0375a7324b3e0',1,'unify::Matrix']]],
-  ['_7eoptional_10',['~Optional',['../classunify_1_1Optional.html#ae77aae6dba550b166802ee5ed2ac3fdc',1,'unify::Optional']]],
-  ['_7eparameters_11',['~Parameters',['../classunify_1_1Parameters.html#a768d0f2e419ee5db9be4fc954de862b9',1,'unify::Parameters']]],
-  ['_7estream_12',['~Stream',['../classunify_1_1Stream.html#a96998b73da6dbb0c9ad83370b43e4ea2',1,'unify::Stream']]],
-  ['_7esuccess_13',['~Success',['../classunify_1_1Success.html#ae49851303fe88a007b14640fd18a6490',1,'unify::Success']]],
-  ['_7etlink_14',['~TLink',['../classunify_1_1TLink.html#aa22a34d780e454d276beea7020c7549a',1,'unify::TLink']]],
-  ['_7etree_15',['~Tree',['../classunify_1_1Tree.html#a4e36125b1fe2e4dea10fdc2b00d4a260',1,'unify::Tree']]]
+  ['z_0',['z',['../classunify_1_1Quaternion.html#aaca0e13b5954ce3eabdf8015cbb9248d',1,'unify::Quaternion::z'],['../classunify_1_1V3.html#a7943b8e5e21f6568d12ea662ad3f7caf',1,'unify::V3::z'],['../classunify_1_1V4.html#a8c47a2b25ea8e2ad0c538057c58bced2',1,'unify::V4::z']]],
+  ['zero_1',['Zero',['../classunify_1_1Matrix.html#a78f63f0f371696f26a5d7c316390dadb',1,'unify::Matrix::Zero()'],['../classunify_1_1RowColumn.html#a3e095eee7718a54cc494f65aa7a4e62f',1,'unify::RowColumn::Zero()'],['../classunify_1_1Size.html#a0d567c78d04a6757f6d9ec6e924e9546',1,'unify::Size::Zero()'],['../classunify_1_1Size3.html#aa62351c6038d87b12a065b596ed00e16',1,'unify::Size3::Zero()'],['../classunify_1_1V4.html#af9957f799236b6acd4a3982d88b093ba',1,'unify::V4::Zero()']]],
+  ['zxy_2',['zxy',['../classunify_1_1V3.html#a81859e887d3865f153c71eb3f1addbdb',1,'unify::V3']]],
+  ['zyx_3',['zyx',['../classunify_1_1V3.html#a296ed773c5dccf8d49df74216cb74059',1,'unify::V3']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['r_0',['r',['../classunify_1_1Color.html#a85d9a557abcf184f1478bc008c5273e5',1,'unify::Color::r'],['../classunify_1_1ColorUnit.html#a112d364c9c42ee4f4262d1ed34b42eaa',1,'unify::ColorUnit::r']]],
+  ['r_0',['r',['../structunify_1_1Color_1_1_0fstruct_0e_8____unnamed0_____8____unnamed0____.html#ad3cddd8bccd6766ed88ad5981a39fe33',1,'unify::Color::[union].__unnamed0__::[struct].__unnamed0__.__unnamed0__::r'],['../structunify_1_1ColorUnit_1_1_0fstruct_0e_8____unnamed0_____8____unnamed0____.html#ac08b83ee3807d642d2ae8ee4712b37a5',1,'unify::ColorUnit::[union].__unnamed0__::[struct].__unnamed0__.__unnamed0__::r']]],
   ['radius_1',['radius',['../classunify_1_1BSphere.html#afdbb8ae4d3181ad2c0cc49fb642c077f',1,'unify::BSphere']]],
   ['rate_2',['rate',['../structme_1_1stats_1_1RateCapture.html#a9f8a3bad3f68e715fa0dbf1db0415c84',1,'me::stats::RateCapture']]],
   ['right_3',['right',['../classunify_1_1Rect.html#a37183a91897c57e05cedbe62328a5d3c',1,'unify::Rect']]],

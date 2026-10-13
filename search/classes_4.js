@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['exception_0',['Exception',['../classunify_1_1Exception.html',1,'unify']]]
+  ['defaultexceptionhandler_0',['DefaultExceptionHandler',['../classunify_1_1DefaultExceptionHandler.html',1,'unify']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['m_0',['m',['../classunify_1_1Matrix.html#a0c7f003ced6290e646bd46f9f0785f75',1,'unify::Matrix']]],
+  ['m_0',['m',['../unionunify_1_1Matrix_1_1_0funion_0e_8____unnamed0____.html#ad80d5663b60996ea913721c0a179a7e5',1,'unify::Matrix::[union].__unnamed0__']]],
   ['median_1',['median',['../structme_1_1stats_1_1RateCapture.html#aaea755d96db2479ffcc27763a93c83d2',1,'me::stats::RateCapture']]],
   ['microsperms_2',['MicrosPerMS',['../TimeDelta_8inl.html#a4937800c509e098dc582b24a0ef970df',1,'TimeDelta.inl']]],
   ['minuteperms_3',['MinutePerMS',['../TimeDelta_8inl.html#ad6b91ef74010d4d540e62a2f7c31305e',1,'TimeDelta.inl']]],

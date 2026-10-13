@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['key_0',['key',['../structunify_1_1KeyValuePair.html#a20bcbd75e793704af72250905715283e',1,'unify::KeyValuePair']]],
-  ['keyvaluepair_1',['KeyValuePair',['../structunify_1_1KeyValuePair.html',1,'unify::KeyValuePair&lt; Key, Value &gt;'],['../structunify_1_1KeyValuePair.html#aafb8f696cc85bd9b727fd7f2d7f83537',1,'unify::KeyValuePair::KeyValuePair(const KeyValuePair&lt; Key, Value &gt; &amp;keyValue)'],['../structunify_1_1KeyValuePair.html#a6b75bbb2e6e151d9d8991ff2449ca6b7',1,'unify::KeyValuePair::KeyValuePair(Key key, Value value)']]],
-  ['keyvaluepair_2eh_2',['KeyValuePair.h',['../KeyValuePair_8h.html',1,'']]]
+  ['join_0',['Join',['../classunify_1_1Path.html#a3d379f00b82a01df20e5d78434bc610e',1,'unify::Path']]],
+  ['june_202007_1',['June 2007',['../md_README.html',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)'],['../dir_59425e443f801f1f2fd8bbe4959a3ccf.html#autotoc_md27',1,'GNU GENERAL PUBLIC LICENSE (Version 3, 29 June 2007)']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
   ['left_0',['left',['../classunify_1_1Rect.html#ad34a7614482d6e1b9d0106ce206614c5',1,'unify::Rect']]],
-  ['linear_1',['linear',['../classunify_1_1Color.html#afe59af40c892654bbc3b36641d97399f',1,'unify::Color::linear'],['../classunify_1_1ColorUnit.html#a241acb381db44b83008eb1a1537185b0',1,'unify::ColorUnit::linear'],['../classunify_1_1Matrix.html#a65acc2ed4035204e5fff0ed64e240438',1,'unify::Matrix::linear']]]
+  ['linear_1',['linear',['../unionunify_1_1Matrix_1_1_0funion_0e_8____unnamed0____.html#a90d0ff6542ef27ffc708bb1d3b24e30b',1,'unify::Matrix::[union].__unnamed0__::linear'],['../unionunify_1_1Color_1_1_0funion_0e_8____unnamed0____.html#a2fdc39fa38286d2cc78b1e2d32cf7d8c',1,'unify::Color::[union].__unnamed0__::linear'],['../unionunify_1_1ColorUnit_1_1_0funion_0e_8____unnamed0____.html#aa62ea21ac5afc2754a6c90fffebe457c',1,'unify::ColorUnit::[union].__unnamed0__::linear']]]
 ];

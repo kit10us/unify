@@ -1,11 +1,13 @@
 var searchData=
 [
-  ['size_0',['Size',['../classunify_1_1Size.html',1,'unify']]],
-  ['size3_1',['Size3',['../classunify_1_1Size3.html',1,'unify']]],
-  ['size_3c_20unsigned_20long_20_3e_2',['Size&lt; unsigned long &gt;',['../classunify_1_1Size.html',1,'unify']]],
-  ['sizetests_3',['SizeTests',['../classSizeTests.html',1,'']]],
-  ['span_4',['span',['../classunify_1_1span.html',1,'unify']]],
-  ['stream_5',['Stream',['../classunify_1_1Stream.html',1,'unify']]],
-  ['stringtests_6',['StringTests',['../classStringTests.html',1,'']]],
-  ['success_7',['Success',['../classunify_1_1Success.html',1,'unify']]]
+  ['range_0',['Range',['../classunify_1_1Range.html',1,'unify']]],
+  ['rate_1',['Rate',['../classme_1_1stats_1_1Rate.html',1,'me::stats']]],
+  ['ratecapture_2',['RateCapture',['../structme_1_1stats_1_1RateCapture.html',1,'me::stats']]],
+  ['ray_3',['Ray',['../classunify_1_1Ray.html',1,'unify']]],
+  ['rayhit_4',['RayHit',['../structunify_1_1RayHit.html',1,'unify']]],
+  ['raytests_5',['RayTests',['../classRayTests.html',1,'']]],
+  ['rect_6',['Rect',['../classunify_1_1Rect.html',1,'unify']]],
+  ['result_7',['Result',['../classunify_1_1Result.html',1,'unify']]],
+  ['resulttests_8',['ResultTests',['../classResultTests.html',1,'']]],
+  ['rowcolumn_9',['RowColumn',['../classunify_1_1RowColumn.html',1,'unify']]]
 ];
