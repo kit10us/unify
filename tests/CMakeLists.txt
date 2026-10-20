@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.29.0)
+cmake_minimum_required(VERSION 3.22.0)
 project(UnifyTests LANGUAGES CXX)
 
 enable_testing()

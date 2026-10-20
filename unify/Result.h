@@ -45,11 +45,10 @@ namespace unify
 	class Failure
 	{
 	public:
-		constexpr Failure() noexcept = default;
-		constexpr Failure(const Failure&) = default;
-		constexpr Failure& operator=(const Failure&) = default;
-		constexpr Failure(Failure&&) noexcept = default;
-		constexpr Failure& operator=(Failure&&) noexcept = default;
+		Failure() noexcept = default;
+		Failure& operator=(const Failure&) = default;
+		Failure(Failure&&) noexcept = default;
+		Failure& operator=(Failure&&) noexcept = default;
 		~Failure() noexcept = default;
 
 		explicit Failure(std::string message) : m_message{ std::move(message) } {}
