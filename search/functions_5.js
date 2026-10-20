@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['failure_0',['Failure',['../classunify_1_1Failure.html#ac5499b149b387171d36ac2d35464ee6d',1,'unify::Failure::Failure() noexcept=default'],['../classunify_1_1Failure.html#a1678805428f329e85fb656932220e076',1,'unify::Failure::Failure(const Failure &amp;)=default'],['../classunify_1_1Failure.html#af9683bfc48d6795a582c5cf73b1d7c54',1,'unify::Failure::Failure(Failure &amp;&amp;) noexcept=default'],['../classunify_1_1Failure.html#a9f4f28ad56c445a16c74883c5c713684',1,'unify::Failure::Failure(std::string message)'],['../classunify_1_1Result.html#aaf640982aceb3701ea870b7e08155466',1,'unify::Result::Failure()']]],
+  ['failure_0',['Failure',['../classunify_1_1Failure.html#a6d559c88c488b6a5adfefefaa1574266',1,'unify::Failure::Failure() noexcept=default'],['../classunify_1_1Failure.html#af746977526086494ff415bea68db2ba2',1,'unify::Failure::Failure(Failure &amp;&amp;) noexcept=default'],['../classunify_1_1Failure.html#a9f4f28ad56c445a16c74883c5c713684',1,'unify::Failure::Failure(std::string message)'],['../classunify_1_1Result.html#aaf640982aceb3701ea870b7e08155466',1,'unify::Result::Failure()']]],
   ['failurefromfailure_1',['FailureFromFailure',['../tests__Result_8cpp.html#ab8750305dbd8728996bf95c5d510524d',1,'tests_Result.cpp']]],
   ['failurewithmessage_2',['FailureWithMessage',['../tests__Result_8cpp.html#a85535ff1ff548167e92048dde9aeed49',1,'tests_Result.cpp']]],
   ['filelength_3',['FileLength',['../namespaceunify.html#a80717e5d5b266ccba5ecaa0fe350cc27',1,'unify']]],
